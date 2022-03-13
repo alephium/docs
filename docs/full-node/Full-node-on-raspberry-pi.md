@@ -11,7 +11,7 @@ This first section will detail my personal way of installing Ubuntu 20.04 server
 It requires to have a Raspberry Pi 4 (obviously), a SD Card (8 GB is the minimum) and an SD Card reader to flash the SD Card.
 It will be illustrated using shell command from macOS, but you'll find the equivalent in Windows.
 
-![Getting ready for the hard work](media/flashing.jpeg)
+![Getting ready for the hard work](/media/flashing.jpeg)
 
 First of all we will configure the installation Ubuntu. We're using cloud-init for that since it is built in Ubuntu 20.04 and above.
 This configuration creates a user (different from the `ubuntu` default) and installs a few packages.
@@ -92,7 +92,7 @@ And that's it, your Raspberry Pi is running Ubuntu 20.04 with Docker, and is rea
 
 🚀
 
-![Raspberry pi 4](media/pies.jpeg)
+![Raspberry pi 4](/media/pies.jpeg)
 
 ## How to run a docker'ized instance of Alephium full node
 
