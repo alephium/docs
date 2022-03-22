@@ -41,7 +41,7 @@ For mining tutorial, you can follow our [Solo Mining Guide](Solo-Mining-Guide.md
 
 ### Wallet
 
-You could download the desktop wallet from here: [https://github.com/alephium/alephium-wallet/releases](https://github.com/alephium/alephium-wallet/releases)
+You could download the desktop wallet from here [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
 
 Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](Wallet-Guide.md) to learn how to use it.
 
