@@ -40,7 +40,7 @@ const config = {
         title: "Alephium",
         logo: {
           alt: "Alephium logo",
-          src: "img/logo.svg",
+          src: "img/alephium-logo.svg",
         },
         items: [
           {
@@ -72,12 +72,12 @@ const config = {
             title: "Community",
             items: [
               {
-                label: "Telegram",
-                href: "https://t.me/alephiumgroup",
-              },
-              {
                 label: "Discord",
                 href: "https://discord.gg/JErgRBfRSB",
+              },
+              {
+                label: "Telegram",
+                href: "https://t.me/alephiumgroup",
               },
               {
                 label: "Reddit",
