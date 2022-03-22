@@ -37,13 +37,13 @@ import the `openapi.json` file from our repository ([download](https://github.co
 
 ### Mining
 
-For mining tutorial, you can follow our [Solo Mining Guide](Solo-Mining-Guide.md) or [Pool Mining Guide](Pool-Mining-Guide.md).
+For mining tutorial, you can follow our [Solo Mining Guide](mining/Solo-Mining-Guide.md) or [Pool Mining Guide](mining/Pool-Mining-Guide.md).
 
 ### Wallet
 
 You could download the desktop wallet from here [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
 
-Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](Wallet-Guide.md) to learn how to use it.
+Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](wallet/Wallet-Guide.md) to learn how to use it.
 
 [^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
 
