@@ -7,7 +7,8 @@ const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: "Alephium Documentation",
-  tagline: "Make programmable money scalable and secure",
+  tagline:
+    "The 1st operational sharded blockchain scaling and improving on PoW & UTXO to deliver a highly performant, secure and energy efficient DeFi & dApps platform.",
   url: "https://wiki.alephium.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
