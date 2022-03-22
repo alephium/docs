@@ -1,8 +1,8 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -18,7 +18,7 @@ const config = {
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
@@ -32,7 +32,7 @@ const config = {
           editUrl: 'https://github.com/alephium/new-wiki/tree/main/packages/create-docusaurus/templates/shared/',
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -54,7 +54,6 @@ const config = {
             position: 'left',
             label: 'Documentation',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
             href: 'https://github.com/alephium',
             label: 'GitHub',
@@ -63,10 +62,10 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Docs',
+            title: "Docs",
             items: [
               {
                 label: 'Documentation',
@@ -75,7 +74,7 @@ const config = {
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
                 label: 'Discord',
@@ -96,7 +95,7 @@ const config = {
             ],
           },
           {
-            title: 'More',
+            title: "More",
             items: [
               {
                 label: 'Blog',
