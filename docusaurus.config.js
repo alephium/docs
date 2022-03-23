@@ -23,6 +23,7 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
+          routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
           editUrl: "https://github.com/alephium/new-wiki/tree/main/packages/create-docusaurus/templates/shared/",
@@ -45,12 +46,6 @@ const config = {
         },
         items: [
           {
-            type: "doc",
-            docId: "intro",
-            position: "left",
-            label: "Documentation",
-          },
-          {
             href: "https://github.com/alephium",
             label: "GitHub",
             position: "right",
@@ -60,15 +55,6 @@ const config = {
       footer: {
         style: "dark",
         links: [
-          {
-            title: "Docs",
-            items: [
-              {
-                label: "Documentation",
-                to: "/docs/intro",
-              },
-            ],
-          },
           {
             title: "Community",
             items: [
