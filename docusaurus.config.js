@@ -83,6 +83,16 @@ const config = {
                 label: "GitHub",
                 href: "https://github.com/alephium",
               },
+              {
+                href: "https://alephium.org",
+                label: "Alephium Website",
+                position: "right",
+              },
+              {
+                href: "https://medium.com/@alephium",
+                label: "Blog",
+                position: "right",
+              },
             ],
           },
         ],
