@@ -28,16 +28,6 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 
 ### Here is a list of mining pools in alphabetic order.
 
-### Alephium-pool (Community pool)
-- Website: [https://alephium-pool.com/](https://alephium-pool.com/)
-- Telegram: [https://t.me/alephium_pool](https://t.me/alephium_pool)
-- Discord: [https://discord.gg/ZXYU2NGx](https://discord.gg/ZXYU2NGx)
-
-### Coinhunters Pool
-- Website: [https://alph.coinhunters.space](https://alph.coinhunters.space/)
-- Telegram (EN): [https://t.me/alph_coinhunters_en](https://t.me/alph_coinhunters_en)
-- Telegram (RU): [https://t.me/alph_gravitsapapool_ru](https://t.me/alph_gravitsapapool_ru)
-
 ### Metapool (Community pool)
 - Website: [https://www.metapool.tech](https://www.metapool.tech)
 - Calculator: [https://metapool.tech/dashboard#calculator](https://metapool.tech/dashboard#calculator)
@@ -55,17 +45,10 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 - Discord: [https://discord.com/invite/gvWSs84](https://discord.com/invite/gvWSs84)
 - Telegram: [https://t.me/HeroMinersPool](https://t.me/HeroMinersPool)
 
-### e4p1k0 ALPH Pool
-- Website: [https://alph.e4pool.com/](https://alph.e4pool.com/)
-- Telegram: [https://t.me/E4piko](https://t.me/E4piko)
-
 ### Enigma Pool
 - Website: [https://enigmapool.com/](https://enigmapool.com/)
 - Discord: [https://discord.com/invite/enigmapool](https://discord.com/invite/enigmapool)
 - Calculator: [https://enigmapool.com/tools/calculator](https://enigmapool.com/tools/calculator)
-
-### Soloblocks
-- Website: [https://soloblocks.org/alph/](https://soloblocks.org/alph/)
 
 ## Make sure you use the latest version of the mining software
 
