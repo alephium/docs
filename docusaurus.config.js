@@ -70,7 +70,7 @@ const config = {
               },
               {
                 label: "Reddit",
-                href: "https://www.reddit.com/r/alephiumg",
+                href: "https://www.reddit.com/r/alephium",
                 postion: "left",
               },
               {
@@ -85,7 +85,7 @@ const config = {
             items: [
               {
                 label: "Explorer",
-                href: "https://explorer.alpehium.org",
+                href: "https://explorer.alephium.org",
               },
               {
                 label: "Alephium in 5 minutes",
