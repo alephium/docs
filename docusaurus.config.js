@@ -61,18 +61,47 @@ const config = {
               {
                 label: "Discord",
                 href: "https://discord.gg/JErgRBfRSB",
+                postion: "left",
               },
               {
                 label: "Telegram",
                 href: "https://t.me/alephiumgroup",
+                postion: "left",
               },
               {
                 label: "Reddit",
                 href: "https://www.reddit.com/r/alephiumg",
+                postion: "left",
               },
               {
                 label: "Twitter",
                 href: "https://twitter.com/alephium",
+                postion: "left",
+              },
+            ],
+          },
+          {
+            title: "Resources",
+            items: [
+              {
+                label: "Explorer",
+                href: "https://explorer.alpehium.org",
+              },
+              {
+                label: "Alephium in 5 minutes",
+                href: "https://medium.com/@alephium/welcome-to-alephium-alph-48dfb72aa458/",
+              },
+              {
+                label: "Tokenomics",
+                href: "https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c",
+              },
+              {
+                label: "BlockFlow white paper",
+                href: "https://github.com/alephium/white-paper/blob/master/alephium.pdf",
+              },
+              {
+                label: "PoLW white paper",
+                href: "https://github.com/alephium/white-paper/blob/master/polw.pdf",
               },
             ],
           },
@@ -82,15 +111,16 @@ const config = {
               {
                 label: "GitHub",
                 href: "https://github.com/alephium",
-              },
-              {
-                href: "https://alephium.org",
-                label: "Alephium Website",
                 position: "right",
               },
               {
-                href: "https://medium.com/@alephium",
+                label: "Alephium Website",
+                href: "https://alephium.org",
+                position: "right",
+              },
+              {
                 label: "Blog",
+                href: "https://medium.com/@alephium",
                 position: "right",
               },
             ],
