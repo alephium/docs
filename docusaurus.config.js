@@ -88,6 +88,10 @@ const config = {
                 href: "https://explorer.alephium.org",
               },
               {
+                label: "Get the wallet",
+                href: "https://github.com/alephium/desktop-wallet/releases/latest",
+              },
+              {
                 label: "Alephium in 5 minutes",
                 href: "https://medium.com/@alephium/welcome-to-alephium-alph-48dfb72aa458/",
               },
@@ -96,12 +100,8 @@ const config = {
                 href: "https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c",
               },
               {
-                label: "BlockFlow white paper",
-                href: "https://github.com/alephium/white-paper/blob/master/alephium.pdf",
-              },
-              {
-                label: "PoLW white paper",
-                href: "https://github.com/alephium/white-paper/blob/master/polw.pdf",
+                label: "White papers",
+                href: "https://github.com/alephium/white-paper/",
               },
             ],
           },
