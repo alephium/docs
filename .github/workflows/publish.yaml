@@ -15,7 +15,7 @@ env:
   AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
