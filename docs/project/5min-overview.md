@@ -141,7 +141,7 @@ Meet the rest of the team on our website or on Linkedin : https://www.linkedin.c
 
 - Gate.io : https://www.gate.io/fr/trade/ALPH_USDT
 
-## Our partners
+## 🤝 Our partners
 
 - UTXO Alliance : https://utxo-alliance.org/
 - Bitcoin Association Switzerland : https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9
