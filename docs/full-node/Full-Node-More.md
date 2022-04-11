@@ -36,3 +36,14 @@ To fix the problem:
 1. Delete the folder .alephium `rm .alephium`
 
 2. Restart the node and wait for synchronization `java -jar alephium-1.2.6.jar`
+
+## Moving the Alephium data folder
+
+Many users prefer to keep the Alephium data folder on a different disk than the primary boot disk. To do so with the Alephium full node jar, you can use the `ALEPHIUM_HOME` environment variable:
+
+1. Stop the Alephium full node jar
+2. Move the Alephium data folder (normally at `%userprofile%\.alephium` for Windows or `~/.alephium` for Linux and macOS) to the new location
+3. Add an environment variable `ALEPHIUM_HOME` to the system pointing to the new location. You can either do this at the system level or simply create a batch file that sets the variable prior to starting the Alephium jar.
+4. Restart the Alephium node
+
+If using the docker full node, then simply change the mounted folder definitions in the docker file to point to the new home then restart.
