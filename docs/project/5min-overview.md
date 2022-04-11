@@ -15,7 +15,7 @@ Alephium is the first live Layer 1 sharded blockchain scaling and improving on B
 
 ## 💎 Why is Alephium special?
 
-On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities :
+On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
 
 **It scales through sharding**. Alephium is built on a novel and complete sharding algorithm called BlockFlow. It improves on the UTXO model of BTC to make it scalable, and uses DAG data structure to reach consensus between different shards. This will allow up to 10’000 Transactions Per Second (currently more than 400 TPS vs Bitcoins 7 TPS).
 
@@ -29,7 +29,7 @@ On top of an awesome team, an outstanding community and a lot of energy, here ar
 
 Putting all these innovations together, Alephium delivers a highly demanded solution in the industry: a scalable blockchain improving on mature ideas from Bitcoin to deliver reliable, powerful and secure DeFi and dApps capabilities. And we’re live!
 
-**Our whitepapers are here: https://github.com/alephium/white-paper**
+**Check out our [whitepapers][whitepaper]!**
 
 ## 🚀 Milestones & Roadmap
 
@@ -82,7 +82,7 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 ## 🛡 Our tokenomics
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the years. Of these 140M tokens :
+The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the years. Of these 140M tokens:
 
 80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
 
@@ -94,7 +94,7 @@ The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet 
 
 In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
 
-**More details here: https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c**
+**Find more details in our [Tokenomics Medium article][tokenomics-medium].**
 
 ## 🏋️‍♀️ Our team
 
@@ -106,65 +106,67 @@ The core team counts 14 members. 9 are tech team members and the remaining 5 are
 
 **@setto#4764** 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
 
-Meet the rest of the team on our website or on Linkedin : https://www.linkedin.com/company/alephium/people/
+Meet the rest of the team on our [website][website] or on [Linkedin](https://www.linkedin.com/company/alephium/people/).
 
 ## 🎯 Meet us, join us, talk to us!
 
 ### Talk with us
 
-- Discord : https://discord.gg/JErgRBfRSB
-- Telegram : https://t.me/alephiumgroup
-- Reddit : https://www.reddit.com/r/Alephium/
+- [Discord][discord]
+- [Telegram][telegram]
+- [Reddit][reddit]
 
 ### Connect with us
 
-- Twitter : https://twitter.com/alephium
-- LinkedIn : https://www.linkedin.com/company/alephium
-- Facebook : https://www.facebook.com/alephium
+- [Twitter][twitter]
+- [LinkedIn][linkedin]
+- [Facebook][facebook]
 
 ### Read, setup, explore, contribute
 
-- Website : https://alephium.org/
-- Whitepapers : https://github.com/alephium/white-paper
-- Medium : https://medium.com/@alephium
-- Github: https://github.com/alephium
+- [Website][website]
+- [Whitepapers][whitepaper]
+- [Medium][medium]
+- [GitHub][github]
 
-### Non-official Content & Communities (not moderated, endorsed or managed by Alephium)
+### Non-official Content & Communities
 
-- Telegram 🇷🇺: https://t.me/alephiumgroup_ru
-- Telegram 🇹🇷: https://t.me/alephium_tr
+> Not moderated, endorsed or managed by Alephium
+
+- [Telegram 🇷🇺](https://t.me/alephiumgroup_ru)
+- [Telegram 🇹🇷](https://t.me/alephium_tr)
 - [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
 - [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
 - [Youtube videos 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
 
-### Buy/sell (Jan 12th onward)
+### Buy/sell
 
-- Gate.io : https://www.gate.io/fr/trade/ALPH_USDT
+- [Gate.io][gateio]
 
 ## 🤝 Our partners
 
-- UTXO Alliance : https://utxo-alliance.org/
-- Bitcoin Association Switzerland : https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9
-- Market Across PR : https://marketacross.com/
+- [UTXO Alliance][utxo-alliance]
+- [Bitcoin Association Switzerland][bas]
+- [Market Across PR][market-across]
 
-## 🛠 If you’re a dev, start here:
+## 🛠 If you’re a dev, start here
 
-Here’s our latest code update: https://github.com/alephium/alephium/releases/latest/
+Find our latest [node release on GitHub][node-release].
 
-Come commit and pull request with us: https://github.com/alephium
+Come commit and pull request with us in any of our [projects on GitHub](https://github.com/alephium):
 
-Full node : https://github.com/alephium/alephium  
-Wallet : https://github.com/alephium/alephium-wallet/releases/latest  
-Explorer : https://github.com/alephium/explorer  
-JS/TS lib : https://github.com/alephium/js-sdk  
-Wiki : https://github.com/alephium/wiki  
-Awesome Alphium: https://github.com/alephium/awesome-alephium
+- [Full node][full-node]
+- [Desktop wallet][desktop-wallet]
+- [Explorer][explorer]
+- [JS/TS SDK][sdk]
+- [Wiki][wiki]
+- [Awesome Alephium][awesome]
 
-## ⛏ If you’re a miner, start here:
+## ⛏ If you’re a miner, start here
 
-Start by joining the dedicated Mining channel on discord: https://discord.gg/53QSMpKZyR
+Start by joining the dedicated [Mining channel on Discord][mining-discord].
 
-Find our Miner starter pack on Github: https://github.com/alephium/alephium-miner-getting-started
+Find our [Miner starter pack on Github][miner-starter-pack].
 
 and the specific repos:
 
@@ -172,6 +174,32 @@ and the specific repos:
 - https://github.com/alephium/fpga-miner
 - https://github.com/alephium/mining-pool
 
-Here is a video of how to get started for solo mining : https://www.youtube.com/watch?v=hdPH6inWjhc
+Here is a video of [how to get started for solo mining][solo-mining-video].
 
 And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](../mining/Pool-Mining-Guide).
+
+[whitepaper]: https://github.com/alephium/white-paper
+[tokenomics-medium]: https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
+[website]: https://alephium.org/
+[discord]: https://discord.gg/JErgRBfRSB
+[telegram]: https://t.me/alephiumgroup
+[twitter]: https://twitter.com/alephium
+[linkedin]: https://www.linkedin.com/company/alephium
+[facebook]: https://www.facebook.com/alephium
+[medium]: https://medium.com/@alephium
+[github]: https://github.com/alephium
+[gateio]: https://www.gate.io/fr/trade/ALPH_USDT
+[utxo-alliance]: https://utxo-alliance.org/
+[bas]: https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9
+[market-across]: https://marketacross.com/
+[node-release]: https://github.com/alephium/alephium/releases/latest/
+[full-node]: https://github.com/alephium/alephium
+[desktop-wallet]: https://github.com/alephium/desktop-wallet
+[explorer]: https://github.com/alephium/explorer
+[sdk]: https://github.com/alephium/js-sdk
+[wiki]: https://github.com/alephium/wiki
+[awesome]: https://github.com/alephium/awesome-alephium
+[mining-discord]: https://discord.gg/53QSMpKZyR
+[miner-starter-pack]: https://github.com/alephium/alephium-miner-getting-started
+[solo-mining-video]: https://www.youtube.com/watch?v=hdPH6inWjhc
+[reddit]: https://www.reddit.com/r/Alephium/
