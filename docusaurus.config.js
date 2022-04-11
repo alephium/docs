@@ -133,6 +133,86 @@ const config = {
         darkTheme: darkCodeTheme,
       },
     }),
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          { from: "/Introduction.html", to: "/" },
+          {
+            from: "/Frequently-Asked-Questions.html",
+            to: "/frequently-asked-questions",
+          },
+          {
+            from: "/Full-Node-Starter-Guide.html",
+            to: "/full-node/Full-Node-Starter-Guide",
+          },
+          {
+            from: "/Docker-Guide.html",
+            to: "/full-node/Docker-Guide",
+          },
+          {
+            from: "/Full-Node-More.html",
+            to: "/full-node/Full-Node-More",
+          },
+          {
+            from: "/Full-node-on-raspberry-pi.html",
+            to: "/full-node/Full-node-on-raspberry-pi",
+          },
+          {
+            from: "/Solo-Mining-Guide.html",
+            to: "/mining/Solo-Mining-Guide",
+          },
+          {
+            from: "/Pool-Mining-Guide.html",
+            to: "/mining/Pool-Mining-Guide",
+          },
+          {
+            from: "/Miner-Troubleshooting.html",
+            to: "/mining/Miner-Troubleshooting",
+          },
+          {
+            from: "/Alephium-Stratum.html",
+            to: "/mining/Alephium-Stratum",
+          },
+          { from: "/Wallet-Guide.html", to: "/wallet/Wallet-Guide" },
+          {
+            from: "/Multisig-Guide.html",
+            to: "/wallet/Multisig-Guide",
+          },
+          {
+            from: "/Smart-Contract-Guide.html",
+            to: "/smart-contract/Smart-Contract-Guide",
+          },
+          {
+            from: "/Smart-Contract-More.html",
+            to: "/smart-contract/Smart-Contract-More",
+          },
+          { from: "/Roadmap.html", to: "/5min-overview" },
+          {
+            from: "/Testnet-Guide.html",
+            to: "/testnet-and-devnet/Testnet-Guide",
+          },
+          {
+            from: "/Devnet-Guide.html",
+            to: "/testnet-and-devnet/Devnet-Guide",
+          },
+          {
+            from: "/CPU-Miner-Guide.html",
+            to: "/testnet-and-devnet/CPU-Miner-Guide",
+          },
+          {
+            from: "/On-dust-outputs-and-state-explosion.html",
+            to: "/misc/On-dust-outputs-and-state-explosion",
+          },
+          {
+            from: "/Internationalization-and-Localization.html",
+            to: "/misc/Internationalization-and-Localization",
+          },
+        ],
+      },
+    ],
+  ],
 };
 
 module.exports = config;
