@@ -77,7 +77,7 @@ I'm using the tool [flash](https://github.com/hypriot/flash/) for this, which do
 curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash
 chmod +x flash
 
-./flash --userdata user-data.yml https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-20.04.3-preinstalled-server-arm64+raspi.img.xz
+./flash --userdata user-data.yml https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz
 ```
 
 The command above will ask for confirmation that `/dev/disk2` is the SD Card and not your harddrive, and will ask your password
