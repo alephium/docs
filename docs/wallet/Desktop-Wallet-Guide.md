@@ -14,7 +14,7 @@ The desktop wallet is the most user-friendly Alephium wallet available today. Yo
 1. On macOS, you'll need to go to the Application folder, click right on the Alephium app and then click on _Open_ (don't double click, as the application isn't signed yet, it won't work unless you allow it from the System Preferences).
 1. By default, the wallet will be connected to the Alephium public node (please note that your mnemonic or your private key will never be uploaded to the public node). Should you want to use your personal node or generate the wallet offline, you can do so by clicking the setting wheel on the top right of the app and changing the Node Host to your localhost or simply leaving it blank to create the wallet offline.
 1. Click on _Create/Import a wallet_, then click _New wallet_.
-1. Choose an account name. You might want to choose a name that allows you to identify your wallet easily.
+1. Choose a wallet name. You might want to choose a name that allows you to identify your wallet easily.
 1. Pick a password to protect your wallet on your computer. This password does not replace your wallet's 24 secret words. It is only used to log in and out of the created wallet easily.
 1. Click _Continue_.
 1. You now see your new wallet's information 🎉

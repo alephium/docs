@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 0
 slug: /
 title: Intro
 ---
@@ -10,7 +10,7 @@ This wiki contains the documentation of [Alephium](https://github.com/alephium/a
 
 Here, you will find information on how to set up a full node and get started with mining, troubleshooting sections, guides for our wallets, a guide on building smart contracts, the roadmap of our projects, FAQs, and more.
 
-## Alephium overview
+## Alephium protocol overview
 
 The protocol's innovations extend battle-tested ideas from [Bitcoin](https://bitcoin.org/bitcoin.pdf) and [Ethereum](https://ethereum.org/en/whitepaper/):
 
