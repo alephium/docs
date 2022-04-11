@@ -28,9 +28,9 @@ const config = {
           // Please change this to your repo.
           editUrl: "https://github.com/alephium/new-wiki/tree/master/",
         },
-        theme: {
-          customCss: require.resolve("./src/css/custom.css"),
-        },
+        // theme: {
+        //   customCss: require.resolve("./src/css/custom.css"),
+        // },
       }),
     ],
   ],
