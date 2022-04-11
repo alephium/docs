@@ -1,4 +1,9 @@
-# Running a dockeri'zed full node on a Raspberry Pi 4
+---
+sidebar_position: 30
+title: Full Node on Raspberry Pi
+---
+
+# Running a dockerized full node on a Raspberry Pi 4
 
 In this guide we'll learn:
 

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 2
+sidebar_position: 20
+title: Devnet Guide
 ---
-# Devnet Guide
 
 It's dev-friendly to start a local devnet with empty block history and arbitrary amount of coins.
 
@@ -14,6 +14,7 @@ Please note that the default address and port for the REST API is [http://127.0.
 ## Configuration
 
 In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have to add:
+
 ```
 // in most cases, modify the following two lines
 alephium.genesis.allocations = [{address = "<your-own-address>", amount = 1000000000000000000000000, lock-duration = 0 seconds}] // 1 million token allocated for your address
@@ -32,6 +33,7 @@ alephium.mining.miner-addresses = [
 "16fZKYPCZJv2TP3FArA9FLUQceTS9U8xVnSjxFG9MBKyY"
 ]
 ```
+
 Please put your own addresses for genesis allocations. You could also reduce `num-zeros-at-least-in-hash` to make mining faster.
 
 More configurations can be found in `$HOME/.alephium/network-4/`, and logs can be found in `$HOME/.alephium/logs/`.

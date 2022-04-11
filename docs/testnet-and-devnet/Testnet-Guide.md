@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
+title: Testnet Guide
 ---
-# Testnet Guide
 
 The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
 
@@ -12,12 +12,14 @@ Please note that the default address and port for the REST API is [http://127.0.
 ## Configuration
 
 In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have to add:
+
 ```
 alephium.network.network-id = 1
 alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
 ```
 
 ## Mining
+
 In the testnet you can use the [CPU Miner Guide](CPU-Miner-Guide.md) to get some ALPH
 
 Append your miner addresses in `$HOME/.alephium/user.conf` like:

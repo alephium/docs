@@ -1,4 +1,7 @@
-# Full Node More
+---
+sidebar_position: 40
+title: More and Troubleshooting
+---
 
 ## API Key
 

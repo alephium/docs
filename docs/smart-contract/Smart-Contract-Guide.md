@@ -1,4 +1,7 @@
-# Smart Contract Guide
+---
+sidebar_position: 10
+title: Smart Contract Guide
+---
 
 This document guides you through the creation, deployment and usage of smart contracts on Alephium mainnet.
 
@@ -8,6 +11,7 @@ This document is based on the [Chinese smart contract tutorial and documentation
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [Requirements](#requirements)
 - [Create and deploy a token contract](#create-and-deploy-a-token-contract)
   - [Create a token Contract](#create-a-token-contract)
@@ -37,6 +41,7 @@ We will use a wallet named `demo-1` in this tutorial.
 In this section we will create, build, sign and submit a contract transaction.
 
 ### Create a token Contract
+
 First, we create a token contract as shown below:
 
 ```rust
@@ -54,10 +59,10 @@ TxContract MyToken(owner: Address, mut remain: U256) {
 
 This simple token contract allows users to buy tokens by paying **ALPH** to the contract owner at a rate `1:1000`. It uses the following built-in functions:
 
-* `assert!(pred)` Causes the contract execution to fail when `pred` evaluates to `false`
-* `selfTokenId!(a)` Returns the current token id which is also the current contract id
-* `transferAlph!(from, to, alphAmount)` Transfers `alphAmount` **ALPH** from address `from` to `to`.
-* `transferTokenFromSelf!(to, tokenId, tokenAmount)` Transfers `tokenAmount` tokens of `MyToken` to address `to`.
+- `assert!(pred)` Causes the contract execution to fail when `pred` evaluates to `false`
+- `selfTokenId!(a)` Returns the current token id which is also the current contract id
+- `transferAlph!(from, to, alphAmount)` Transfers `alphAmount` **ALPH** from address `from` to `to`.
+- `transferTokenFromSelf!(to, tokenId, tokenAmount)` Transfers `tokenAmount` tokens of `MyToken` to address `to`.
 
 **Note**: The `remain` variable is not necessary but helps understanding state variables of the contract. We will explain how the contract state is stored later.
 
@@ -83,6 +88,7 @@ We receive the binary code of the contract as a response:
 ```
 
 ### Build an unsigned contract transaction
+
 Now we need to create the contract transaction. First we obtain the publicKey of the address currently in use. We use address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`.
 
 ```bash
@@ -115,11 +121,11 @@ curl -X 'POST' \
 
 The parameters are:
 
-* `fromPublicKey`  Public key from the address currently in use
-* `code` Contract binary code
-* `gas` Manually specified gas as the default gas may not be enough for contract related operations
-* `state` List of initial state variables passed to the contract constructor
-* `issueTokenAmount` The total number of tokens issued by the contract
+- `fromPublicKey` Public key from the address currently in use
+- `code` Contract binary code
+- `gas` Manually specified gas as the default gas may not be enough for contract related operations
+- `state` List of initial state variables passed to the contract constructor
+- `issueTokenAmount` The total number of tokens issued by the contract
 
 We get the following response:
 
@@ -131,9 +137,10 @@ We get the following response:
   "fromGroup": 0,
   "toGroup": 0
 }
-
 ```
+
 ### Sign a contract
+
 Next, we sign the previously obtained transaction hash.
 
 ```bash
@@ -144,6 +151,7 @@ curl -X 'POST' \
   "data": "8d01198f2ec74b1e5cfd8c8a37d6542d16ee692df47700ce2293e0a22b6d4c22"
 }'
 ```
+
 The response contains the signature.
 
 ```json
@@ -151,7 +159,9 @@ The response contains the signature.
   "signature": "6bc932a4c9c8c4e8a38fe7f93bd5d43bfe19a3aea2f9d976376951ec7499f5b472e299a12b52e459d66ef13a5aa9de195b2fa97d461e9853eae2281dda4d3cba"
 }
 ```
+
 ### Submit a contract
+
 Finally we submit the contract transaction to the Alephium network.
 
 ```bash
@@ -163,6 +173,7 @@ curl -X 'POST' \
   "signature": "6bc932a4c9c8c4e8a38fe7f93bd5d43bfe19a3aea2f9d976376951ec7499f5b472e299a12b52e459d66ef13a5aa9de195b2fa97d461e9853eae2281dda4d3cba"
 }'
 ```
+
 If the request is valid, a response similar to the following is returned.
 
 ```json
@@ -267,7 +278,7 @@ We obtain a list of transactions (here we only show 2 out of 5 transactions for 
       ],
       "gasAmount": 80000,
       "gasPrice": "100000000000"
-    },
+    }
   ]
 }
 ```
@@ -314,26 +325,30 @@ We only focus on the transaction with id `8d01198f2ec74b1e5cfd8c8a37d6542d16ee69
 ```
 
 This transaction has one input and two outputs. Below is the description of the some fields:
-* `outputRef` pointer to UTXO
-* `outputRef.key` UTXO hash
-* `type` the type of the tx output, `contract` or `asset`
-* `address` base58 encoding of the `contract` or `asset` address
-* `amount` the amount of ALPH owned by the address
-* `tokens` list of tokens owned by the address
-* `tokens.id` contract id
-* `tokens.amount` the amount of tokens owned
+
+- `outputRef` pointer to UTXO
+- `outputRef.key` UTXO hash
+- `type` the type of the tx output, `contract` or `asset`
+- `address` base58 encoding of the `contract` or `asset` address
+- `amount` the amount of ALPH owned by the address
+- `tokens` list of tokens owned by the address
+- `tokens.id` contract id
+- `tokens.amount` the amount of tokens owned
 
 The first output is the contract we just created. We see that the contract address owns `10000000000000000000000000000` tokens which is exactly the `issueTokenAmount` we previously defined.
 
 The second output is the UTXO output of the transaction submitted by our address `1Bw9NuSufuvi1EgWFe9uCQS3xi1gkZ81mtdPRhPbSqw5r`. This address doesn't own any tokens.
 
 ## Create and deploy a script
+
 Now that the contract has been successfully created, we will deploy a `TxScript` which calls the `Mytoken.buy` method to obtain tokens by paying **ALPH** to the contract. For this example, we will pay using address `1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9` which is different than the one used to create the contract.
 
 If you also want to pay with an address different than the one used to submit the contract, please make sure that your address belongs to the same group as the contract. You can obtain the contract group by checking the `chainFrom` field of its transaction block. In our example, the contract is in group 0, but it might be in a different group for you. You can verify the group of an address at endpoint `GET addresses/{address}/group`. If it is not the case, you can use `POST/wallets/{wallet_name}/derive-next-address` until you obtain an address in the correct group. As new addresses are initialized with balance `0`, you should transfer some **ALPH** to this new address. Finally, change your active address at endpoint `POST wallets/{wallet_name}/change-active-address`.
 
 ### Create a TxScript
+
 We first create the `TxScript` to buy some tokens.
+
 ```rust
 TxScript Main {
   pub payable fn main() -> () {
@@ -343,15 +358,17 @@ TxScript Main {
   }
 }
 ```
+
 Here is a brief explanation of this code:
 
-* `approveAlph!(address, amount)` authorizes the specified amount of `ALPH` from the address to be used in the script.
-* The contract is loaded by its `id`
-* Call `MyToken.buy` to buy 1000 tokens for 1 **ALPH**
+- `approveAlph!(address, amount)` authorizes the specified amount of `ALPH` from the address to be used in the script.
+- The contract is loaded by its `id`
+- Call `MyToken.buy` to buy 1000 tokens for 1 **ALPH**
 
 The next steps are very similar to the previous sections. We will compile, build, sign and submit the script.
 
 ### Compile a Script
+
 We query the node API to compile the script to binary code. **Make sure you append the source code of the `MyToken` contract after your `TxScript` code.**
 
 ```bash
@@ -362,6 +379,7 @@ curl -X 'POST' \
   "code": "TxScript Main {\n  pub payable fn main() -> () {\n    approveAlph!(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n    let contract = MyToken(#109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba25)\n    contract.buy(@1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9, 1000000000000000000)\n  }\n}\nTxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlph!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
 }'
 ```
+
 A response similar to the following will be returned:
 
 ```json
@@ -369,12 +387,15 @@ A response similar to the following will be returned:
   "code": "010101000100091500c632fb35c006d09c104c9a1075c03adde92636de8a5ea3be934a65cfebb0321813c40de0b6b3a7640000a2144020109b05391a240a0d21671720f62fe39138aaca562676053900b348a51e11ba2517001500c632fb35c006d09c104c9a1075c03adde92636de8a5ea3be934a65cfebb0321813c40de0b6b3a764000016000100"
 }
 ```
+
 ### Build an unsigned script transaction
+
 We first obtain the publicKey of the active address:
 
 ```bash
 curl 'http://127.0.0.1:12973/wallets/demo-1/addresses/1ELgp7U4D1QL82G9q9dAdp43k45onPDezGLjHSFGcwCj9'
 ```
+
 We get a response similar to:
 
 ```json
@@ -407,7 +428,9 @@ We obtain the following response:
   "toGroup": 0
 }
 ```
+
 ### Sign a script
+
 Next, we sign the transaction hash:
 
 ```bash
@@ -418,6 +441,7 @@ curl -X 'POST' \
   "data": "3fb33e83cf246fff900c5ff59d2ce3f835816dcf936922471337a7df893325bf"
 }'
 ```
+
 And we receive the signature:
 
 ```json
@@ -427,6 +451,7 @@ And we receive the signature:
 ```
 
 ### Submit a script
+
 Finally we can submit the transaction.
 
 ```bash
@@ -438,6 +463,7 @@ curl -X 'POST' \
   "signature": "1aa1aa909fca1b24dbf95bc105eceab08992ff88622424d8055531d06ce56d0832d4d468b23c9484bb471c193f912ad96dc3378c670e32527598479de721c750"
 }'
 ```
+
 And we receive the `txId` and groups information:
 
 ```json
@@ -528,6 +554,7 @@ We can see that there is a contract input, with the `outputRef.key` pointing to 
   }
 }
 ```
+
 This time we have three outputs: two assets and a contract. The first output is the new UTXO for the 1 **ALPH** payed to the contract owner.
 
 ```json
@@ -581,9 +608,9 @@ Congratulations! You have deployed and used your first smart contract on Alephiu
 
 From the previous sections, we can see that:
 
-* When a contract is created, a contract output will be generated regardless of whether a token is issued or not. If a token is issued, there will be an initial number of tokens in the output tokens list.
-* Calling the contract will consume the contract output and generate a new contract output. In the above example, we can see that the contract output generated when the contract is created is consumed, and then a new contract output is generated.
-* Calling the contract may also modify the state of the contract. In the above example, it will be modified after calling `MyToken.buy`.
+- When a contract is created, a contract output will be generated regardless of whether a token is issued or not. If a token is issued, there will be an initial number of tokens in the output tokens list.
+- Calling the contract will consume the contract output and generate a new contract output. In the above example, we can see that the contract output generated when the contract is created is consumed, and then a new contract output is generated.
+- Calling the contract may also modify the state of the contract. In the above example, it will be modified after calling `MyToken.buy`.
 
 Let's take a look at what the contract state specifically includes:
 
@@ -595,13 +622,13 @@ final case class ContractState private (
     contractOutputRef: ContractOutputRef
 )
 ```
+
 where the fields are:
 
-* `code`: Contract code half-decoded. Since only part of the code may be involved when calling the contract, there is no need to completely decode it.
-* `initialStateHash`: The hash of the initial contract state
-* `fields`: Vector of state values. `AVector(owner, remain)` in the `MyToken` example.
-* `contractOutputRef`: Pointer to contract output
-
+- `code`: Contract code half-decoded. Since only part of the code may be involved when calling the contract, there is no need to completely decode it.
+- `initialStateHash`: The hash of the initial contract state
+- `fields`: Vector of state values. `AVector(owner, remain)` in the `MyToken` example.
+- `contractOutputRef`: Pointer to contract output
 
 The process of calling and changing the state of the contract is roughly as follows:
 
@@ -610,11 +637,10 @@ The process of calling and changing the state of the contract is roughly as foll
 3. When the contract execution involves modifications of the contract state, the contract state in WorldState will be updated
 4. If the contract generates a new contract output, the contract state will be updated and the old contract output will be deleted
 
-
 In addition, we will briefly mention the errors and solutions that may be encountered when creating and calling contracts:
 
-* NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others.
-* OutOfGas: The default gas is relatively small and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed.
-* AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](misc/On-dust-outputs-and-state-explosion.md).
+- NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others.
+- OutOfGas: The default gas is relatively small and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed.
+- AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](misc/On-dust-outputs-and-state-explosion.md).
 
 Interested people can try to create various contracts on the mainnet and migrate ETH applications to Alephium.

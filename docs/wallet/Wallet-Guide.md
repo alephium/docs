@@ -1,7 +1,7 @@
 ---
-sidebar_position: 1
+sidebar_position: 10
+title: Full Node Wallet Guide
 ---
-# Full-node Wallet Guide
 
 The wallet API can be called using our Swagger UI at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) or by using `curl`. Make sure that your full node is running so you could access the Swagger UI.
 

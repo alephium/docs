@@ -1,7 +1,12 @@
+---
+sidebar_position: 40
+title: Alephium Stratum
+---
+
 # Alephium Stratum Proposal
 
 The proposal is based on: [https://eips.ethereum.org/EIPS/eip-1571](https://eips.ethereum.org/EIPS/eip-1571).
-Messages follow EIP-1571's JSON-RPC-2.0 specification. 
+Messages follow EIP-1571's JSON-RPC-2.0 specification.
 
 ? - denotes that a property is optional
 
