@@ -92,10 +92,6 @@ const config = {
                 href: "https://github.com/alephium/desktop-wallet/releases/latest",
               },
               {
-                label: "Alephium in 5 minutes",
-                href: "https://medium.com/@alephium/welcome-to-alephium-alph-48dfb72aa458/",
-              },
-              {
                 label: "Tokenomics",
                 href: "https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c",
               },
