@@ -46,7 +46,7 @@ const config = {
         },
         items: [
           {
-            href: "https://github.com/alephium",
+            href: "https://github.com/alephium/new-wiki",
             label: "GitHub",
             position: "right",
           },

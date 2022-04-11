@@ -42,7 +42,4 @@ If you modify `user.conf`, then better to wipe out `$HOME/.alephium/network-4/` 
 
 ## Mining
 
-You will need to mine new blocks to include your transactions into the blockchain.
-
-In the devnet you can use the [CPU Miner Guide](CPU-Miner-Guide.md) to start mining and stop mining.
-You can also use the endpoint `/transactions/status` to track the status of your submitted transactions.
+Devnet with the sample configuration file is able to automatically mine new blocks for all new transactions. There is no need to use CPU for mining.
