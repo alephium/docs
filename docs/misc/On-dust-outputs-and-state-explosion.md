@@ -1,3 +1,8 @@
+---
+sidebar_position: 20
+title: On dust outputs and state explosion
+---
+
 This article follows a brainstorm between [Cheng](https://github.com/polarker) and [Tom](https://github.com/tshabs)
 
 Let’s consider mainly UTXO-based blockchain. The state of such kind of blockchains is mainly about the number of UTXOs. To ease the state explosion issue, we will need a proper design to invalidate UTXOs with small value.
@@ -11,4 +16,3 @@ However, it’s nearly impossible to find a fixed lower bound for the coin amoun
 @Cheng suggested designing the lower bound based on the hash rate of the blockchain. Theoretically, hash rate is a good index for energy consumption and block reward in fiat. In practice, when using a simple and efficient mining algorithm like Sha256, the cost per hash rate is pretty stable and predictable in the long run. The lower bound can be inversely proportional to (hash_rate / coinbase_reward) if follow this design.
 
 As noted by @Tom, there is an edge case that one UTXO might be above the lower bound when it’s created, but later might be invalid with a new lower bound. There are two ways to deal with it: 1) actively removing those invalid UTXOs, but this will probably make users angry and also make the system complicated; 2) just leave it there and users will still be able to use it as each tx can include multiple inputs. Note that this is not possible for Ethreum's native token, as there can be only one caller for each Eth tx.
-

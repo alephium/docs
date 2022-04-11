@@ -1,13 +1,13 @@
 ---
-sidebar_position: 3
+sidebar_position: 30
+title: CPU Miner Guide
 ---
-# CPU Miner Guide
 
-> Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](testnet-and-devnet/Testnet-Guide.md)
-> 
+> Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](testnet-and-devnet/Testnet-Guide.md).
+
 > For mining in production please visit [Solo Mining Guide](mining/Solo-Mining-Guide.md) or [Pool Mining Guide](mining/Pool-Mining-Guide.md).
 
-You must first follow the steps in the [Full-node Guide](full-node/Full-Node-Starter-Guide.md), in order to download, configure, start your node and use Swagger (or any other openapi clients).
+You must first follow the steps in the [Full-node Guide](full-node/Full-Node-Starter-Guide.md), in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
 
 Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 

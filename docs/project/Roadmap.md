@@ -1,4 +1,7 @@
-# Roadmap
+---
+sidebar_position: 10
+title: Roadmap
+---
 
 The network is young and growing rapidly. We will update the roadmap to reflect the latest priorities.
 
