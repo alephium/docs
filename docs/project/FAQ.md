@@ -43,6 +43,7 @@ Before diving in deeper, we recommend that you check the following resources as 
   - [How long does it takes for deposits to show up on exchanges?](#how-long-does-it-takes-for-deposits-to-show-up-on-exchanges)
   - [When Binance?](#when-binance)
 - [Miscellaneous](#miscellaneous)
+  - [Do you have a Grant & Reward Program?](#do-you-have-a-grant--reward-program)
   - [How many Transactions Per Second (TPS)](#how-many-transactions-per-second-tps)
   - [Why is the project named Alephium?](#why-is-the-project-named-alephium)
   - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
@@ -135,6 +136,9 @@ Currently, 120 confirmations are needed for deposits, which is around 2hours (12
 We don't have an exact date on this. But we are working on it. However, you will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
 
 ## Miscellaneous
+
+### Do you have a Grant & Reward Program? 
+Yes, see [this document](https://github.com/alephium/community/blob/master/Grant&RewardProgram.md) for the details.
 
 ### How many Transactions Per Second (TPS)
 
