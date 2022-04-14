@@ -50,6 +50,10 @@ const config = {
             label: "GitHub",
             position: "right",
           },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -209,6 +213,19 @@ const config = {
       },
     ],
   ],
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'fr'],
+    localeConfigs: {
+      en: {
+        htmlLang: 'en-GB',
+      },
+      // You can omit a locale (e.g. fr) if you don't need to override the defaults
+      fa: {
+        direction: 'rtl',
+      },
+    },
+  },
 };
 
 module.exports = config;
