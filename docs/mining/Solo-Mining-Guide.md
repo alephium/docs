@@ -7,23 +7,6 @@ title: Solo Mining Guide
 
 You must first follow the steps in the [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
-- [Mining information](#mining-information)
-- [Miner wallet](#miner-wallet)
-    - [Create your miner wallet](#create-your-miner-wallet)
-    - [List your miner addresses](#list-your-miner-addresses)
-- [Configure miner addresses](#configure-miner-addresses)
-- [Security](#security)
-- [Start mining](#start-mining)
-  - [Make sure your full node is synced](#make-sure-your-full-node-is-synced)
-  - [Nvidia GPU](#nvidia-gpu)
-  - [AMD GPU](#amd-gpu)
-- [More info on miner wallet](#more-info-on-miner-wallet)
-    - [Get your balance](#get-your-balance)
-    - [Change your active address](#change-your-active-address)
-    - [Transfer all your funds on the active address to another address](#transfer-all-your-funds-on-the-active-address-to-another-address)
-    - [Unlock your wallet](#unlock-your-wallet)
-    - [Restore your miner wallet](#restore-your-miner-wallet)
-
 ## Mining information
 
 - 4 address groups and 16 chains in total
