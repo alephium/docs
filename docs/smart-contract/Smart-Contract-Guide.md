@@ -9,24 +9,6 @@ We will first deploy a contract which allows any user to exchange **ALPH** for t
 
 This document is based on the [Chinese smart contract tutorial and documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) by [Lbqds](https://github.com/Lbqds).
 
-## Table of Contents
-
-- [Table of Contents](#table-of-contents)
-- [Requirements](#requirements)
-- [Create and deploy a token contract](#create-and-deploy-a-token-contract)
-  - [Create a token Contract](#create-a-token-contract)
-  - [Compile a Contract](#compile-a-contract)
-  - [Build an unsigned contract transaction](#build-an-unsigned-contract-transaction)
-  - [Sign a contract](#sign-a-contract)
-  - [Submit a contract](#submit-a-contract)
-- [Create and deploy a script](#create-and-deploy-a-script)
-  - [Create a TxScript](#create-a-txscript)
-  - [Compile a Script](#compile-a-script)
-  - [Build an unsigned script transaction](#build-an-unsigned-script-transaction)
-  - [Sign a script](#sign-a-script)
-  - [Submit a script](#submit-a-script)
-- [Contract State](#contract-state)
-
 ## Requirements
 
 For this tutorial you will need to have a node running locally and a wallet. Here are the related tutorials:
