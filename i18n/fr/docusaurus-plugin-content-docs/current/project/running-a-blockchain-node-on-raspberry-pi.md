@@ -7,13 +7,21 @@ title: Démarrage d'un fullnode sur Raspberry Pi
 
 # Démarrage d'un fullnode sur Raspberry Pi
 
+![image](resources/img/1.jpg)
+
 ## Le goulot d'étranglement de la décentralisation
 La décentralisation est l'une des plus grandes promesses de la crypto-économie. 
 C'est la donnée qui dessine une perpendiculaire au système contemporain de banque centralisée. Avec un peu de compétences et un peu de matériel, tout le monde peut participer à la maintenance d'une blockchain décentralisée. Et nous y sommes invités ! Distribuer efficacement le pouvoir du consensus à travers de nombreux petits acteurs, comme vous et moi. Cependant, si cette décentralisation existe en théorie, elle comporte un goulot d'étranglement : si, par exemple, seules quelques personnes unies devaient réellement faire fonctionner une blockchain en réseau, elle deviendrait en pratique un système centralisé. Cela signifie que la décentralisation repose sur un facteur social : notre volonté de participer à la maintenance de l'infrastructure.
+
+![image](resources/img/2.png)
+
 Lorsque l'on parle de l'infrastructure d'une blockchain, il n'est pas rare que les mineurs et le processus de minage retiennent l'attention. Il y a de bonnes raisons à cela, car cette partie du processus peut être potentiellement lucrative. On entend aussi souvent dire que les mineurs sécurisent le réseau, ce qui est certainement une fonction très importante dans un système proposé pour soutenir l'échange et le transport de valeur monétaire. Les malentendus ne manquent pas dans le domaine de la crypto-monnaie et beaucoup de gens pensent que le minage est une activité qui vise à créer de l'argent à partir de rien. S'il est vrai que le minage produit des "pièces", une telle affirmation est exagérée et jette une grande ombre sur un aspect très important d'une blockchain saine : les nœuds.
 
 ## Pourquoi un démarrer un full-node
 Un "full-node" est un participant du réseau qui a validé de manière indépendante la copie complète de la blockchain, et qui a donc vérifié toutes les transactions depuis le début. Cela garantit que l'état actuel de la blockchain est le même pour tous. Un facteur très important, car si cette copie n'existait que dans les ordinateurs de quelques participants, ceux-ci pourraient potentiellement coordonner des transactions illégitimes. Par conséquent, la meilleure façon de s'assurer que cette copie est la même pour tous et que personne ne l'altère, est de la distribuer à autant de nœuds que possible.
+
+![image](resources/img/3.jpg)
+
 Comprendre le fonctionnement théorique d'une blockchain est un défi pour un profane. Savoir comment utiliser le logiciel en est un autre. Certaines blockchains sont plus faciles à utiliser que d'autres. Et beaucoup d'entre elles ne nécessitent pas seulement une certaine magie du terminal, mais aussi la possession d'une machine puissante pour fonctionner 24 heures sur 24 et 7 jours sur 7, consommant une bonne part d'énergie.
 
 
