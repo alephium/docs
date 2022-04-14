@@ -1,3 +1,10 @@
+---
+sidebar_position: 10
+sidebar_label: Apperçu
+slug: /running-a-blockchain-node-on-raspberry-pi
+title: Démarrage d'un fullnode sur Raspberry Pi
+---
+
 # Démarrage d'un fullnode sur Raspberry Pi
 
 ## Le goulot d'étranglement de la décentralisation
