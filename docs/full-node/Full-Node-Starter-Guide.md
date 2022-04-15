@@ -11,7 +11,7 @@ title: Full Node Starter Guide
 
 Ensure that Java (11 or 17 is recommended) is installed on your computer:
 
-- Windows or Macos: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
+- Windows or macOS: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 - Ubuntu: run `sudo apt install default-jdk` in Terminal
 
 ## Download Application File
