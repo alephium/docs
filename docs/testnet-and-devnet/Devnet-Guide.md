@@ -7,7 +7,7 @@ It's dev-friendly to start a local devnet with empty block history and arbitrary
 
 The installation of full node for devnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
 
-**The user.conf must be modified before starting the full node**
+**The `user.conf` must be modified before starting the full node**.
 
 Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
