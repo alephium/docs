@@ -48,5 +48,5 @@ alephium.mining.miner-addresses = [
 "193maApeJWrz9GFwWCfa982ccLARVE9Y1WgKSJaUs7UAx",
 "16fZKYPCZJv2TP3FArA9FLUQceTS9U8xVnSjxFG9MBKyY"
 ]
-
+alephium.api.api-key-enabled = false
 ```
