@@ -11,20 +11,20 @@ title: Full Node Starter Guide
 
 Ensure that Java (11 or 17 is recommended) is installed on your computer:
 
-- Windows or Macos: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
+- Windows or macOS: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
 - Ubuntu: run `sudo apt install default-jdk` in Terminal
 
 ## Download Application File
 
-Download file `alephium-1.2.6.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
+Download file `alephium-1.3.2.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
 
 ## Start your node
 
 1. Open the search and type in `Terminal` (for Mac and Ubuntu) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.2.6.jar** file is saved.
+2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.3.2.jar** file is saved.
 3. Type the following command and press Enter to launch the full node:
    ```shell
-   java -jar alephium-1.2.6.jar
+   java -jar alephium-1.3.2.jar
    ```
 
 🎉 _**Tada, your node is running**_
