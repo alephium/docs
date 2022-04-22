@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: dApps
+title: Introduction
 ---
 
 Playing with dApps on Alephium is currently a more technical undertaking. This
@@ -62,7 +62,7 @@ Go back to the dApp and create your first contract!
 
 Enter the appropriate information.
 
-You will notice when you input your admin address, a "G<number>" appears. This
+You will notice when you input your admin address, a G"number" appears. This
 is the group your address is part of. Voter addresses will need to have the same
 group number.
 
