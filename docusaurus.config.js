@@ -181,8 +181,16 @@ const config = {
             to: "/smart-contract/Smart-Contract-Guide",
           },
           {
+            from: "/smart-contract/Smart-Contract-Guide",
+            to: "/dapps/Technical-Guide-With-A-Fullnode",
+          },
+          {
             from: "/Smart-Contract-More.html",
             to: "/smart-contract/Smart-Contract-More",
+          },
+          {
+            from: "/smart-contract/Smart-Contract-More",
+            to: "/dapps/Additional-Information",
           },
           { from: "/Roadmap.html", to: "/5min-overview" },
           {
