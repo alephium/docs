@@ -27,7 +27,7 @@ The current dApp functionality is heavily under development, so you must build
 a test version of the wallet. This is quite simple:
 
 * Open a terminal
-* Run `git clone https://github.com/alephium/desktop-wallet/tree/walletconnect && cd desktop-wallet && npm install && npm run electron-dev`
+* Run `git clone https://github.com/alephium/desktop-wallet.git  && cd desktop-wallet && git checkout walletconnect && npm install && npm run electron-dev`
 
 The wallet will open.
 
