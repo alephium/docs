@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: Introduction
+title: A primer with the desktop wallet
 ---
 
 Playing with dApps on Alephium is currently a more technical undertaking. This

@@ -1,6 +1,6 @@
 ---
-sidebar_position: 10
-title: Smart Contract Guide
+sidebar_position: 11
+title: Technical guide with a fullnode
 ---
 
 This document guides you through the creation, deployment and usage of smart contracts on Alephium mainnet.
