@@ -73,6 +73,11 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Calculator: https://enigmapool.com/tools/calculator
 #### Soloblocks
 - Website: https://soloblocks.org/alph/
+#### Solopool.org
+- Website: https://alph.solopool.org/
+- Telegram: https://t.me/solopool_org
+- Twitter: https://twitter.com/solopool_org
+- Email: support@solopool.org
 
 ### Pools no longer active
 #### e4p1k0 ALPH Pool (TLS Cert is expired)
