@@ -31,7 +31,17 @@ On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
 
 Now you could use Swagger UI as if there is no API key.
 
-### Error "java.lang.AssertionError: assumption failed"
+## How to access the Swagger UI of my full node on another computer in the same subnet ?
+
+1. Add the following to your `user.conf` and restart your full node.
+
+```
+alephium.api.network-interface = "0.0.0.0"
+```
+
+2. Change the `host` of Swagger UI to be the IP of your full node.
+
+## Error "java.lang.AssertionError: assumption failed"
 
 This error often occurs due to connection loss during node synchronization and means that some of the files are corrupted.
 To fix the problem:
