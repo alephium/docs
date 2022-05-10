@@ -2,7 +2,7 @@
 sidebar_position: 10
 sidebar_label: Apperçu
 slug: /5min-overview
-title: Alephium
+title: Alephium en 5 minutes
 ---
 
 ## 🐥 Qu'est-ce qu'Alephium ?
@@ -19,15 +19,15 @@ Alephium est la première blockchain sharded de couche 1, extensible et amélior
 
 En plus d'une équipe formidable, d'une communauté exceptionnelle et de beaucoup d'énergie, voici nos spécificités techniques :
 
-**Il évolue grâce au sharding.** Alephium est construit sur un nouvel algorithme de sharding appelé BlockFlow. Il améliore le modèle UTXO de BTC pour le rendre évolutif, et utilise la structure de données DAG pour atteindre le consensus entre les différents shards. Cela permettra jusqu'à 10 000 transactions par seconde (actuellement plus de 400 TPS contre 7 TPS pour les Bitcoins).
+**Elle évolue grâce au sharding.** Alephium est construit sur un nouvel algorithme de sharding appelé BlockFlow. Elle améliore le modèle UTXO de BTC pour le rendre évolutif, et utilise la structure de données DAG pour atteindre le consensus entre les différents shards. Cela permettra jusqu'à 10 000 transactions par seconde (actuellement plus de 400 TPS contre 7 TPS pour les Bitcoins).
 
-**Il est programmable et sécurisé.** Alephium propose un modèle UTXO à état offrant une évolutivité de niveau 1 et le même niveau de programmabilité que le modèle de compte mis en œuvre sur ETH, tout en étant plus sécurisé.
+**Elle est programmable et sécurisé.** Alephium propose un modèle UTXO à état offrant une évolutivité de niveau 1 et le même niveau de programmabilité que le modèle de compte mis en œuvre sur ETH, tout en étant plus sécurisé.
 
-**Il est moins consommateur d'énergie grâce au POLW.** Proof of Less Work combine le travail physique et l'économie du ALPH pour ajuster dynamiquement le travail nécessaire au minage de nouveaux blocs. Dans les mêmes conditions de réseau, Alephium ne consomme que ⅛ de l'énergie par rapport au Bitcoin.
+**Elle est moins consommateur d'énergie grâce au POLW.** Proof of Less Work (Preuve de travail moindre) combine le travail physique et l'économie du ALPH pour ajuster dynamiquement le travail nécessaire au minage de nouveaux blocs. Dans les mêmes conditions de réseau, Alephium ne consomme que ⅛ de l'énergie par rapport au Bitcoin.
 
-**Il améliore la structure de la chaîne avec sa propre VM personnalisée (Alphred).** Il résout de nombreux problèmes critiques des plateformes dApps actuelles avec d'énormes améliorations sur la sécurité, l'expérience de développement et l'introduction de nouveaux paradigmes tels que les transactions P2P smart contracts sans confiance.
+**Elle améliore la structure de la chaîne avec sa propre VM personnalisée (Alphred).** Elle résout de nombreux problèmes critiques des plateformes dApps actuelles avec d'énormes améliorations sur la sécurité, l'expérience de développement et l'introduction de nouveaux paradigmes tels que les transactions P2P smart contracts sans confiance.
 
-**Il possède son propre langage de programmation pour les dApps.** Ralph est similaire à la syntaxe Rust, d'où son nom. Il permet de construire des smart contracts efficaces et sécurisés plus facilement que Solidity par exemple. Il est spécifiquement conçu pour faciliter la création d'applications de finance décentralisée !
+**Elle possède son propre langage de programmation pour les dApps.** Ralph est un language avec une syntaxe similaire à celle de Rust, d'où son nom. Il permet de construire des smart contracts (contracts intélligents) efficaces et sécurisés plus facilement que Solidity par exemple. Il est spécifiquement conçu pour faciliter la création d'applications de finance décentralisée !
 
 En réunissant toutes ces innovations, Alephium propose une solution très demandée dans le secteur : une blockchain évolutive améliorant les idées matures de Bitcoin pour offrir des capacités DeFi et dApps fiables, puissantes et sécurisées. Et Alephium est déjà lancée!
 
@@ -141,14 +141,8 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 
 ## 🦄 Contenu non officiel et communautés (qui ne sont pas modérées, approuvées ou gérées par Alephium)
 
-### Telegram
-- [Telegram NL 🇳🇱](https://t.me/AlephiumgroupNL)
-- [Telegram PT 🇧🇷🇵🇹](https://t.me/Alephium_pt)
-- [Telegram RU 🇷🇺](https://t.me/alephiumgroup_ru)
-- [Telegram SP 🇪🇸](https://t.me/minerosAlephium)
-- [Telegram TR 🇹🇷](https://t.me/alephium_tr)
-- [Telegram VN 🇻🇳](https://t.me/alephiumvn)
-
+### Chattez en votre langue
+Vous trouverez la list complète des cannaux de chats internationaux [ici](https://wiki.alephium.org/misc/Internationalization-and-Localization)
 ### Youtube
 - [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
 - [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
@@ -162,9 +156,10 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 
 ## 🤝 Nos partenaires
 
-- [UTXO Alliance](https://utxo-alliance.org/)
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
+- [Cetacean Capital](https://cetacean.capital/)
 - [Market Across PR](https://marketacross.com)
+- [UTXO Alliance](https://utxo-alliance.org/)
 
 ## 🛠 Si vous êtes un dev, commencez ic:
 
@@ -175,7 +170,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 - [Full node](https://github.com/alephium/alephium)
 - [Wallet](https://github.com/alephium/alephium-wallet/releases/latest)
 - [Explorateur](https://github.com/alephium/explorer)
-- [JS/TS lib](https://github.com/alephium/alephium-js)
+- [JS-SDK](https://github.com/alephium/js-sdk)
 - [Awesome Alephium](https://github.com/alephium/awesome-alephium)
 
 ## ⛏ Si vous êtes un mineur, commencez ici !
@@ -192,4 +187,4 @@ Et les dépôts spécifiques :
 
 Et voici une vidéo sur la façon de démarrer le minage en solo : <https://www.youtube.com/watch?v=hdPH6inWjhc>
 
-Et si vous préférez rejoindre un pool, vous trouverez la liste des pools disponibles au moment de l'écriture [ici](https://wiki.alephium.org/Pool-Mining-Guide.html#community-pools).
+Et si vous préférez rejoindre un pool, vous trouverez la liste des pools disponibles au moment de l'écriture [ici](https://wiki.alephium.org/mining/Pool-Mining-Guide#community-pools).
