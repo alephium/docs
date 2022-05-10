@@ -106,9 +106,9 @@ De plus, la moitié des frais de transaction sont brûlés avec chaque bloc et l
 
 L'équipe centrale compte 14 membres. 9 sont des membres de l'équipe technique et les 5 autres font partie de l'équipe des opérations. Venez nous saluer sur Discord !
 
-[@ChengWang#1571](http://twitter.com/Cheng) 🛠 est notre fondateur, core dev, double doctorant en maths et CS, grand sorcier d'Alephium, travaillant depuis Lausanne, Suisse 🇨🇭.
+[@ChengWang#1571](https://twitter.com/wachmc) 🛠 est notre fondateur, core dev, double doctorant en maths et CS, grand sorcier d'Alephium, travaillant depuis Lausanne, Suisse 🇨🇭.
 
-[@s0ukie#8277](http://twitter.com/s0ukie) ⚙️ est notre chef du personnel, sans qui rien ne bouge, précédemment [@Lykke](http://twitter.com/Lykke) et [@Bestmile](http://twitter.com/Bestmile). Elle travaille depuis Zürich, en Suisse 🇨🇭.
+[@s0ukie#8277](https://twitter.com/s0ukie) ⚙️ est notre chef du personnel, sans qui rien ne bouge, précédemment [@Lykke](http://twitter.com/Lykke) et [@Bestmile](http://twitter.com/Bestmile). Elle travaille depuis Zürich, en Suisse 🇨🇭.
 
 [@setto#4764](http://twitter.com/heptazoid) 🕹 est notre magicien de la communauté ! Créatif, attentif et une présence constante sur notre Discord & Telegram, travaillant depuis la Suède 🇸🇪.
 
@@ -150,7 +150,7 @@ Vous trouverez la list complète des cannaux de chats internationaux [ici](https
 
 ---
 
-## 🪙 Vente/achat (Dès 12 Jan 2022)
+## 🪙 Vente/achat
 
 - [Gate.io](https://www.gate.io/fr/trade/ALPH_USDT)
 
@@ -171,6 +171,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 - [Wallet](https://github.com/alephium/alephium-wallet/releases/latest)
 - [Explorateur](https://github.com/alephium/explorer)
 - [JS-SDK](https://github.com/alephium/js-sdk)
+- [Wiki][https://wiki.alephium.org]
 - [Awesome Alephium](https://github.com/alephium/awesome-alephium)
 
 ## ⛏ Si vous êtes un mineur, commencez ici !
