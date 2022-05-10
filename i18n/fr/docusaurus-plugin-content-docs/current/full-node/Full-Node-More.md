@@ -3,6 +3,8 @@ sidebar_position : 40
 titre : Plus d'information et dépannage
 ---
 
+# Plus d'information et dépannage Full-node
+
 ## Clé API
 
 C'est une bonne pratique d'utiliser une clé API pour limiter l'accès aux endpoints REST de votre fullnode.
