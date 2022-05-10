@@ -145,9 +145,10 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 
 ## 🤝 Our partners
 
-- [UTXO Alliance][utxo-alliance]
-- [Bitcoin Association Switzerland][bas]
-- [Market Across PR][market-across]
+- [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
+- [Cetacean Capital](https://cetacean.capital/)
+- [Market Across PR](https://marketacross.com)
+- [UTXO Alliance](https://utxo-alliance.org/)
 
 ## 🛠 If you’re a dev, start here
 
