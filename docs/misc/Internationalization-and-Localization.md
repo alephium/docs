@@ -22,6 +22,7 @@ Find the following languages in [the official Discord](https://discord.gg/JErgRB
 
 ### Telegram groups
 
+- ID 🇮🇩 [https://t.me/AlephiumID](https://t.me/AlephiumID)
 - NL 🇳🇱 [https://t.me/AlephiumgroupNL](https://t.me/AlephiumgroupNL)
 - PT 🇧🇷🇵🇹 [https://t.me/Alephium_pt](https://t.me/Alephium_pt)
 - RU 🇷🇺 [https://t.me/alephiumgroup_ru](https://t.me/alephiumgroup_ru)
