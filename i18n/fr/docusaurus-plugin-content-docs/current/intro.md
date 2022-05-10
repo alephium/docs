@@ -6,7 +6,7 @@ title: Intro
 
 # Alephium Wiki
 
-> ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 
 This wiki contains the documentation of [Alephium](https://github.com/alephium/alephium), a sharded blockchain that makes programmable money scalable and secure.
 

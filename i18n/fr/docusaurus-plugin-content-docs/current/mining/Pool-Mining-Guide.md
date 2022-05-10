@@ -5,7 +5,7 @@ title: Pool Mining Guide
 
 # Pool Mining Guide
 
-> ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 
 You will find a complete list of known mining pools [on this link.](#community-pools)
 

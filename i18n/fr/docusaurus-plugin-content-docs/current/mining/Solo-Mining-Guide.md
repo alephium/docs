@@ -5,7 +5,7 @@ title: Solo Mining Guide
 
 # Solo Mining Guide
 
-> ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 
 You must first follow the steps in the [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 

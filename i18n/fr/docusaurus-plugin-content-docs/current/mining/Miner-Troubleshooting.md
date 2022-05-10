@@ -5,7 +5,7 @@ title: Troubleshooting
 
 # Troubleshooting
 
-> ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 
 #### Why I can only restore 1 of my 4 miner addresses ?
 

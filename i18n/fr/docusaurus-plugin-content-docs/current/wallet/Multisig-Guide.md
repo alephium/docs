@@ -3,7 +3,7 @@ sidebar_position: 20
 title: Multisig Guide
 ---
 
-> ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 
 Alephium is supporting `m-of-n` multi-signature addresses.
 

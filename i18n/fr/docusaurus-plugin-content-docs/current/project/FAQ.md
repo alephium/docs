@@ -6,7 +6,7 @@ title: FAQ
 
 # Frequently Asked Questions
 
-> ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 
 > 📚 Learn everything about Alephium in this [5min overview](5min-overview).
 
