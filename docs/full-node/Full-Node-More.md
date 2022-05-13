@@ -61,7 +61,7 @@ Many users prefer to keep the Alephium data folder on a different disk than the 
 
 If using the docker full node, then simply change the mounted folder definitions in the docker file to point to the new home then restart.
 
-## Customize configuration
+## Customize Logging
 
 There are several environment variables used for logging:
 
