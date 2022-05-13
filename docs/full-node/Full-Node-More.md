@@ -60,3 +60,23 @@ Many users prefer to keep the Alephium data folder on a different disk than the 
 4. Restart the Alephium node
 
 If using the docker full node, then simply change the mounted folder definitions in the docker file to point to the new home then restart.
+
+## Customize configuration
+
+There are several environment variables used for logging:
+
+* `ALEPHIUM_LOG_LEVEL` could change the console log level.
+* `ALEPHIUM_ENABLE_DEBUG_LOGGING` could enable debug logging.
+* `ALEPHIUM_HOME` could change the home folder of the full node, therefore the folder of logs
+
+Below is an example with all of the possible logging options:
+
+```
+ALEPHIUM_HOM=<folder> ALEPHIUM_LOG_LEVEL=<DEBUG | INFO | WARN | ERROR> ALEPHIUM_ENABLE_DEBUG_LOGGING=<true | false> java -jar alephium-1.x.x.jar
+```
+
+It's also possible to override the [logging configuration file]((https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml)) of Alephium.
+
+```
+java -Dlogback.configurationFile=/path/to/config.xml alephium-1.x.x.jar
+```
