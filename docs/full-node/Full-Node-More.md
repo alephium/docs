@@ -75,7 +75,7 @@ Below is an example with all of the possible logging options:
 ALEPHIUM_HOM=<folder> ALEPHIUM_LOG_LEVEL=<DEBUG | INFO | WARN | ERROR> ALEPHIUM_ENABLE_DEBUG_LOGGING=<true | false> java -jar alephium-1.x.x.jar
 ```
 
-It's also possible to override the [logging configuration file]((https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml)) of Alephium.
+It's also possible to override the [logging configuration file](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml) of Alephium.
 
 ```
 java -Dlogback.configurationFile=/path/to/config.xml alephium-1.x.x.jar
