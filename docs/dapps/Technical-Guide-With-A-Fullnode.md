@@ -55,10 +55,14 @@ This simple token contract allows users to buy tokens by paying
 following built-in functions:
 
 
-- `assert!(pred)` Causes the contract execution to fail when `pred` evaluates to `false`
-- `selfTokenId!(a)` Returns the current token id which is also the current contract id
-- `transferAlph!(from, to, alphAmount)` Transfers `alphAmount` **ALPH** from address `from` to `to`.
-- `transferTokenFromSelf!(to, tokenId, tokenAmount)` Transfers `tokenAmount` tokens of `MyToken` to address `to`.
+- `assert!(pred)` Causes the contract execution to fail when `pred`
+  evaluates to `false`
+- `selfTokenId!(a)` Returns the current token id which is also the
+  current contract id
+- `transferAlph!(from, to, alphAmount)` Transfers `alphAmount`
+  **ALPH** from address `from` to `to`.
+- `transferTokenFromSelf!(to, tokenId, tokenAmount)` Transfers
+  `tokenAmount` tokens of `MyToken` to address `to`.
 
 **Note**: The `remain` variable is not necessary but helps
 understanding state variables of the contract. We will explain how the
@@ -149,8 +153,10 @@ The parameters are:
 
 - `fromPublicKey` Public key from the address currently in use
 - `bytecode` Contract binary code
-- `gasAmount` Manually specified gas as the default gas may not be enough for contract related operations
-- `initialFields` List of initial state variables passed to the contract constructor
+- `gasAmount` Manually specified gas as the default gas may not be
+  enough for contract related operations
+- `initialFields` List of initial state variables passed to the
+  contract constructor
 - `issueTokenAmount` The total number of tokens issued by the contract
 
 We get the following response:
@@ -792,9 +798,16 @@ on Alephium! 🚀
 
 From the previous sections, we can see that:
 
-- When a contract is created, a contract output will be generated regardless of whether a token is issued or not. If a token is issued, there will be an initial number of tokens in the output tokens list.
-- Calling the contract will consume the contract output and generate a new contract output. In the above example, we can see that the contract output generated when the contract is created is consumed, and then a new contract output is generated.
-- Calling the contract may also modify the state of the contract. In the above example, it will be modified after calling `MyToken.buy`.
+- When a contract is created, a contract output will be generated
+  regardless of whether a token is issued or not. If a token is
+  issued, there will be an initial number of tokens in the output
+  tokens list.
+- Calling the contract will consume the contract output and generate a
+  new contract output. In the above example, we can see that the
+  contract output generated when the contract is created is consumed,
+  and then a new contract output is generated.
+- Calling the contract may also modify the state of the contract. In
+  the above example, it will be modified after calling `MyToken.buy`.
 
 Let's take a look at what the contract state specifically includes:
 
@@ -811,21 +824,33 @@ where the fields are:
 
 - `codeHash`: The hash of the contract code.
 - `initialStateHash`: The hash of the initial contract state
-- `fields`: Vector of state values. `AVector(owner, remain)` in the `MyToken` example.
+- `fields`: Vector of state values. `AVector(owner, remain)` in the
+  `MyToken` example.
 - `contractOutputRef`: Pointer to contract output
 
 The process of calling and changing the state of the contract is
 roughly as follows:
 
-1. Load the contract state from the WorldState, which is a storage for UTXOs, smart contracts state and code.
-2. Load contract output pointed by `contractOutputRef` according to the contract state (executed when method is payable)
-3. When the contract execution involves modifications of the contract state, the contract state in WorldState will be updated
-4. If the contract generates a new contract output, the contract state will be updated and the old contract output will be deleted
+1. Load the contract state from the WorldState, which is a storage for
+   UTXOs, smart contracts state and code.
+2. Load contract output pointed by `contractOutputRef` according to
+   the contract state (executed when method is payable)
+3. When the contract execution involves modifications of the contract
+   state, the contract state in WorldState will be updated
+4. If the contract generates a new contract output, the contract state
+   will be updated and the old contract output will be deleted
 
-In addition, we will briefly mention the errors and solutions that may be encountered when creating and calling contracts:
+In addition, we will briefly mention the errors and solutions that may
+be encountered when creating and calling contracts:
 
-- NotEnoughBalance: This can only be solved by obtaining mining rewards or transfers by others.
-- OutOfGas: The default gas is relatively small and it is usually not enough when creating and calling contracts, so it is generally necessary to manually specify the gas consumed.
-- AmountIsDustOrZero: In order to avoid being attacked, the system will reject outputs with too small amount. If you want to know more, please refer to [here](misc/On-dust-outputs-and-state-explosion.md).
+- NotEnoughBalance: This can only be solved by obtaining mining
+  rewards or transfers by others.
+- OutOfGas: The default gas is relatively small and it is usually not
+  enough when creating and calling contracts, so it is generally
+  necessary to manually specify the gas consumed.
+- AmountIsDustOrZero: In order to avoid being attacked, the system
+  will reject outputs with too small amount. If you want to know more,
+  please refer to [here](misc/On-dust-outputs-and-state-explosion.md).
 
-Interested people can try to create various contracts on the mainnet and migrate ETH applications to Alephium.
+Interested people can try to create various contracts on the mainnet
+and migrate ETH applications to Alephium.
