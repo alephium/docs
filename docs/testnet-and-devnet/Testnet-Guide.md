@@ -5,7 +5,7 @@ title: Testnet Guide
 
 The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
 
-**The user.conf must be modified before starting the full node**
+**The `user.conf` must be modified before starting the full node**.
 
 Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
@@ -33,6 +33,8 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
+> 💡 You can easily generate mining addresses by installing the [desktop wallet](../wallet/Desktop-Wallet-Guide.md), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
+
 ## Configuration example
 
 ```
@@ -46,5 +48,5 @@ alephium.mining.miner-addresses = [
 "193maApeJWrz9GFwWCfa982ccLARVE9Y1WgKSJaUs7UAx",
 "16fZKYPCZJv2TP3FArA9FLUQceTS9U8xVnSjxFG9MBKyY"
 ]
-
+alephium.api.api-key-enabled = false
 ```

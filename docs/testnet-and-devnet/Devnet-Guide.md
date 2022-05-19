@@ -7,7 +7,7 @@ It's dev-friendly to start a local devnet with empty block history and arbitrary
 
 The installation of full node for devnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
 
-**The user.conf must be modified before starting the full node**
+**The `user.conf` must be modified before starting the full node**.
 
 Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
@@ -43,3 +43,9 @@ If you modify `user.conf`, then better to wipe out `$HOME/.alephium/network-4/` 
 ## Mining
 
 Devnet with the sample configuration file is able to automatically mine new blocks for all new transactions. There is no need to use CPU for mining.
+
+If you want to use devnet for mining tests, please set a relative high difficulty as follows:
+
+```
+alephium.consensus.num-zeros-at-least-in-hash = 24
+```
