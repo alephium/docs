@@ -29,7 +29,7 @@ Before diving in deeper, we recommend that you check the following resources as 
   - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
   - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses)
   - [Is there a group for Alephium miners?](#is-there-a-group-for-alephium-miners)
-  - [How many coins are mined per day?]
+  - [How many coins are mined per day?](#how-many-coins-are-mined-per-day)
 - [dApps](#dapps)
   - [What are stateful UTXOs and how are they different from the other UTXOs models?](#what-are-stateful-utxos-and-how-are-they-different-from-the-other-utxos-models)
   - [What is the reason for making a new language instead of using an existing language like Solidity?](#what-is-the-reason-for-making-a-new-language-instead-of-using-an-existing-language-like-solidity)
