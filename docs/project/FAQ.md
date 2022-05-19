@@ -29,6 +29,7 @@ Before diving in deeper, we recommend that you check the following resources as 
   - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
   - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses)
   - [Is there a group for Alephium miners?](#is-there-a-group-for-alephium-miners)
+  - [How many coins are mined per day?]
 - [dApps](#dapps)
   - [What are stateful UTXOs and how are they different from the other UTXOs models?](#what-are-stateful-utxos-and-how-are-they-different-from-the-other-utxos-models)
   - [What is the reason for making a new language instead of using an existing language like Solidity?](#what-is-the-reason-for-making-a-new-language-instead-of-using-an-existing-language-like-solidity)
@@ -79,6 +80,18 @@ On the mainnet, we currently have 4 Groups and 16 shards. It's why you have 4 mi
 ### Is there a group for Alephium miners?
 
 On [the Discord,](https://discord.gg/JErgRBfRSB) there is a special mining channel, where you can find active groups.
+
+### How many coins are mined per day?
+
+Every day approximately 72k ALPH are mined.
+To know how many coins are mined per day, we can use this formula:
+```
+3600 seconds / 64 seconds (block time) == 56.25 blocks per hour, per shard.
+56.25 x 16 shards == 900 blocks total per~ hour.
+900 x 24 heures == 21600 blocks per day.
+21600 x ~3.3 ALPH reward per block ~= 72k ALPH reward per day.
+```
+This is not an exact calculation, because the number of ALPH issued per block can vary. But it is close enough.
 
 ## dApps
 
