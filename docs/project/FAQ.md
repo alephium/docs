@@ -87,8 +87,8 @@ Every day approximately 72k ALPH are mined.
 To know how many coins are mined per day, we can use this formula:
 ```
 3600 seconds / 64 seconds (block time) == 56.25 blocks per hour, per shard.
-56.25 x 16 shards == 900 blocks total per~ hour.
-900 x 24 heures == 21600 blocks per day.
+56.25 x 16 shards == 900 blocks total per hour.
+900 x 24 hours == 21600 blocks per day.
 21600 x ~3.3 ALPH reward per block ~= 72k ALPH reward per day.
 ```
 This is not an exact calculation, because the number of ALPH issued per block can vary. But it is close enough.
