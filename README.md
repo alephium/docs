@@ -37,6 +37,8 @@ You are welcome to submit translations of the wiki pages. So far we only have a 
 
 If your translation is a mere Google translation without any correction, the Pull Request will likely not be accepted.
 
+**Before you begin translating, please consider your submission as *commitment* to maintain the pages in sync with any changes happening in the english version**
+
 ### Enable a new language for translation
 
 1. Create a folder for the documents inside the `i18n` folder. For example german: `mkdir -p i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current` (*note that you will need replace `<two-letter-international-code>` with the actual two-letter international code*).
@@ -48,4 +50,4 @@ Now you can start translating any and all file in `i18n/<two-letter-internationa
 
 To test your content, run the following command: `npm run start -- --locale <two-letter-international-code>` 
 
-This will only load the wiki in the language you are translating. To locally test the whole site, you can first do `npm run build && npm run serve`)
+This will only load the wiki in the language you are translating. To locally test the whole site, you can do `npm run build && npm run serve`)
