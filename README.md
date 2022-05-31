@@ -32,6 +32,7 @@ You are welcome to submit translations of the wiki pages. So far we only have a 
 
 - French
 - German
+- Swedish
 - Turkish
 
 If your translation is a mere Google translation without any correction, the Pull Request will likely not be accepted.
