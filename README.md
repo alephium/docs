@@ -48,4 +48,4 @@ Now you can start translating any and all file in `i18n/<two-letter-internationa
 
 To test your content, run the following command: `npm run start -- --locale <two-letter-international-code>` 
 
-This will only load the wiki in the language you are translating. To locally test the whole site, you can first do `npm run build` and then `npm run serve`)
+This will only load the wiki in the language you are translating. To locally test the whole site, you can first do `npm run build && npm run serve`)
