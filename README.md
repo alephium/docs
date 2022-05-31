@@ -40,7 +40,7 @@ If your translation is a mere Google translation without any correction, the Pul
 ### Enable a new language for translation
 
 1. Create a folder for the documents inside the `i18n` folder. For example german: `mkdir -p i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current` (*note that you will need replace `<two-letter-international-code>` with the actual two-letter international code*).
-2. Copy all the content from `/docs` into the new folder: `cp -r docs i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current` (*again, note that you will need replace `<two-letter-international-code>` with the actual two-letter international code*).
+2. Copy all the content from `/docs` into the new folder: `cp -r docs i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current/` (*again, note that you will need replace `<two-letter-international-code>` with the actual two-letter international code*).
 3. Remove all the `_category_.json` files from the subfolders inside `i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current`.
 4. Build the translation files for the navbar and the footer: `npm run write-translations -- --locale <two-letter-international-code>`.
 
