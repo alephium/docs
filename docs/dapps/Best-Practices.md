@@ -1,4 +1,7 @@
-# Best practices
+---
+sidebar_position: 13
+title: Best practices
+---
 
 Every language has its own idioms, and Ralph is no different. It's important to
 follow these idioms so that others who can read Ralph are able to understand

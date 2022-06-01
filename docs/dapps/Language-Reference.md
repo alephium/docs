@@ -1,11 +1,19 @@
-# Ralph Language Reference
+---
+sidebar_position: 14
+title: Ralph language reference
+---
+
 A reference for the Ralph smart contract language.
 
+:::note
 The following documentation is derived from the alephium/alephium source code.
+:::
 
+:::caution
 **It could become out of date at any time**, so double-check with other developers
 if you think something has changed, and if it has, [fork this wiki](git@github.com:alephium/wiki.git)
 and [open a PR](https://github.com/alephium/wiki/compare)!
+:::
 
 ## Notation used in this document
 
@@ -20,7 +28,7 @@ Ralph has a nice small core of primitives.
 
 | Type        | Constructor                                                     |
 | -----------:| --------------------------------------------------------------- |
-| **Unit**    | `()`                                                            |
+| **()**      | None                                                            |
 | **Bool**    | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code> |
 | **I256**    | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
 | **U256**    | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
