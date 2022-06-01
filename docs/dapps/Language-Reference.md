@@ -45,8 +45,9 @@ to muscle memory.
 | Token           | Constructor                                                                        |
 | ---------------:| ---------------------------------------------------------------------------------- |
 | **Comment**     | `//`                                                                               |
-| **Variable**    | `let <name> = ...`                                                                 |
-| **Function**    | `fn <name>(arg: <type>) -> <type> { return <thing> }`                              |
+| **Assignment**  | `let <name> = ...`                                                                 |
+| **Assignment**  | `<arg1>, <arg2>, <argN> = <value>`                                                 |
+| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thing> }`              |
 | **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                   |
 | **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code> |
 | **Iteration**   | `while <boolean expression> { <statements> }`                                      |
@@ -57,6 +58,9 @@ to muscle memory.
 | **Structure**   | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
 
 ### Array iteration (index variable)
+
+Iteration in smart contracts is kind of a dangerous operation. It's easy to eat
+gas, or use a lot of space. Ralph does its best to make this a safe operation.
 
 `loop`'s current index can be accessed using the `?` token, which is the main
 way to iterate through an array.
@@ -74,12 +78,17 @@ statement). Anything else will be prohibitively expensive. The reason for this
 is because arrays are compiled to constants and so the indices must be "fixed".
 :::
 
+:::caution
+Because loop unrolling is space consuming, there is an upper limit which must be
+considered when using it.
+:::
+
 
 ### Interfaces, TxContracts, and TxScripts
 
-Below is a "code template" of what TxContracts and TxScripts typically look like
-with and without modifiers.
-
+Below is a "code template" of the general structure of what smart contracts will
+look like. They take on a class-like appearance, similar to JavaScript, C#, and
+other OOP languages.
 
 ```
 // To create an interface:
@@ -119,8 +128,10 @@ that modify the contract / script state.
 
 `pub` means the function can be called outside the contract / script.
 
+:::note
 You can call contract methods right after the contract constructor, i.e.
 `ContractName(...).function()`.
+:::
  
 ## Built-in functions
 
