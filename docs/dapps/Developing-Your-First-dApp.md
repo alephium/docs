@@ -1,18 +1,19 @@
 ---
-sidebar_position: 12
+sidebar_position: 11
 title: Developing your first dApp
 ---
 
-# Overview
+The document segments development of smart contracts into two sections: server
+and client.
 
-The document tries to segment development of smart contracts into two sections.
-You can imagine this as being similar to client/server architecture. The contract
-on the blockchain is the server, waiting to be called by other code. The web
-browser is the client, using code to call the contract. Note that contracts can
-be called from anything, as long as it supports HTTP and JSON. For a traditional
-dApp though we expect to be able to see something visual!
+You can imagine contract interaction as being similar to the client-server
+architecture of web development. The contract on the blockchain is the server,
+waiting to be called. The web browser is the client, using code to call the
+contract. Contracts can be called from anything, as long as it supports HTTP and
+JSON. For an interactive dApp though we'll use web technologies to build an
+interface which communicates with its contract(s).
 
-# Requirements
+## Requirements
 
 There are **only two requirements** to write and deploy a dApp:
 
@@ -23,14 +24,14 @@ and one temporary requirement until the hardfork happens:
 
 * alephium/alephium:1.4.0-leman8
 
-## Setup
+### Setup
 
 * Start the desktop wallet
 * Make sure the wallet is using the testnet
 * Create a new wallet
 * Request testnet ALPH from the Discord or mine it
 
-# Section 1 - The pieces of a smart contract
+## The pieces of a smart contract
 
 At its heart there is really only one piece to a smart contract, and that's the
 **TxContract**. The reality is though one more component is needed to utilise it:
@@ -44,11 +45,13 @@ understand the semantics a bit more as we continue. If the semantics were
 explained alongside everything, it would add too much new information at once to
 learn.
 
-## 
+### TxContract
 
-# Section 2 - The web browser, smart contract, and wallet trifecta
+### TxScript
 
-## @alephium/web3
-## WalletConnect
-## Composing them together (development and interaction)
+## The web browser, smart contract, and wallet triad
+
+### @alephium
+### WalletConnect
+### Composing them together (development and interaction)
 

@@ -14,37 +14,88 @@ example, `<number>` means type a literal number value: 6, 7, 44, etc.
 
 `[thing]` means the text is optional unless otherwise specified (like array syntax).
 
-## Types, their constructors, and a few other things
+## Primitive types
 
-* Empty / Nothing
-  * `()`
-* Bool
-  * `false, true`
-* I256
-  * `<number>i, -<number>`
-* U256
-  * `<number>u,  <number>`
-* Address
-  * `@<address>`
-* ByteVec
-  * `#<hex-string>`
-* `[<type>; <size>]` for a fixed array
-  * Example: `[Address; 6]` for 6 addresses
-* Comment
-  * `//`
-* Variable
-  * `let <name> = ...`
+Ralph has a nice small core of primitives.
 
+| Type        | Constructor                                                     |
+| -----------:| --------------------------------------------------------------- |
+| **Unit**    | `()`                                                            |
+| **Bool**    | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code> |
+| **I256**    | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
+| **U256**    | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
+| **Address** | `@<address>`                                                    |
+| **ByteVec** | `#<hex-string>, ++`                                             |
+| **Array**   | `[<type>; <size>]`, example: `[Address; 6]`                     |
+
+You'll notice there is no `String` type. Instead the `ByteVec` type can be used
+to hold onto textual data.
+
+## Everything else
+
+Ralph as you'll soon learn is a simple language. So simple that it can be summed
+up in this table below, which presents various mechanisms which are normally
+available in programming languages.
+
+:::note
 **Ralph does not use semi-colons!** It can be easy to accidentally add them due
 to muscle memory.
+:::
 
-## General program structure
+| Token           | Constructor                                                                        |
+| ---------------:| ---------------------------------------------------------------------------------- |
+| **Comment**     | `//`                                                                               |
+| **Variable**    | `let <name> = ...`                                                                 |
+| **Function**    | `fn <name>(arg: <type>) -> <type> { return <thing> }`                              |
+| **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                   |
+| **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code> |
+| **Iteration**   | `while <boolean expression> { <statements> }`                                      |
+| **Event**       | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`           |
+| **Event**       | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                              |
+| **Structure**   | `interface <InterfaceName> { ... }`                                                |
+| **Structure**   | `TxContract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
+| **Structure**   | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
+
+### Array iteration (index variable)
+
+`loop`'s current index can be accessed using the `?` token, which is the main
+way to iterate through an array.
+
+For example: `loop(1, 6, 1, array[?] = 0)` which zeros out array elements.
+
+`?` can be used anywhere in the statement. **This placeholder value is passed
+down as far as necessary**. Imagine it's a kind of global variable, but scoped
+to everything within a `loop` call.
+
+:::note
+`loop` in reality is an unrolled loop, and is why its usage should be restricted
+to only assignments like in the example (but it can take anything that's a
+statement). Anything else will be prohibitively expensive. The reason for this
+is because arrays are compiled to constants and so the indices must be "fixed".
+:::
+
+
+### Interfaces, TxContracts, and TxScripts
+
+Below is a "code template" of what TxContracts and TxScripts typically look like
+with and without modifiers.
+
 
 ```
+// To create an interface:
+interface InterfaceName {
+  event TupleName(field1: U256, field2: U256)
+  pub fn foo() -> ()
+}
+
 // To create a contract:
-TxContract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) {
+TxContract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) extends InterfaceName {
   [pub] [payable] fn functionName(arg1: <type>, ...etc) -> (<return type>) {
     return <thing>
+  }
+
+  fn foo() {
+    emit TupleName(1, 2)
   }
 }
 
