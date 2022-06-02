@@ -50,19 +50,19 @@ available in programming languages.
 to muscle memory.
 :::
 
-| Token           | Constructor                                                                        |
-| ---------------:| ---------------------------------------------------------------------------------- |
-| **Comment**     | `//`                                                                               |
-| **Assignment**  | `let [mut] <name> = ...`                                                           |
-| **Assignment**  | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                    |
-| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`        |
-| **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                   |
-| **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code> |
-| **Iteration**   | `while <boolean expression> { <statements> }`                                      |
-| **Event**       | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`           |
-| **Event**       | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                              |
-| **Structure**   | `interface <InterfaceName> { ... }`                                                |
-| **Structure**   | `TxContract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
+| Token           | Constructor                                                                                                      |
+| ---------------:| ---------------------------------------------------------------------------------------------------------------- |
+| **Comment**     | `//`                                                                                                             |
+| **Assignment**  | `let [mut] <name> = ...`                                                                                         |
+| **Assignment**  | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                                                  |
+| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`                                      |
+| **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                                                 |
+| **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code>                               |
+| **Iteration**   | `while <boolean expression> { <statements> }`                                                                    |
+| **Event**       | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`                                         |
+| **Event**       | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                                                            |
+| **Structure**   | `interface <InterfaceName> { ... }`                                                                              |
+| **Structure**   | `TxContract ContractName([mut] fieldN: <type>) [extends <TxContractName>] [implements <InterfaceName>] { ... }`  |
 | **Structure**   | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
 
 ### Array iteration (index variable)
@@ -110,7 +110,7 @@ interface InterfaceName {
 }
 
 // To create a contract:
-TxContract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) extends InterfaceName {
+TxContract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) implements InterfaceName {
   [pub] [payable] fn functionName(arg1: <type>, ...etc) -> (<return type>) {
     return <thing>
   }
