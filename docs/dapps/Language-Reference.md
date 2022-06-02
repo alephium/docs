@@ -37,7 +37,7 @@ Ralph has a nice small core of primitives.
 | **[type; size]**     | `[<value...>]`, type example: `[Address; 6]`                    |
 
 You'll notice there is no `String` type. Instead the `ByteVec` type can be used
-to hold onto textual data.
+to hold onto textual data, or a `[U256; N]` array if you need to modify it.
 
 ## Everything else
 
