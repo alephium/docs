@@ -157,34 +157,53 @@ different each time, or it will modify the contract state.
 
 When you see `!` it means the function is built-in to Ralph.
 
-### Stateless functions
+## Stateless functions
+
+
+### Assertions
+
+* `assert!(input: Bool) -> ()`
+  * Will halt execution if false
+* `isAssetAddress!(input: Address) -> (Bool)`
+* `isContractAddress!(input: Address) -> (Bool)`
+
+### Hashing
 
 * `blake2b!(input: ByteVec) -> (ByteVec)`
 * `keccak256!(input: ByteVec) -> (ByteVec)`
 * `sha256!(input: ByteVec) -> (ByteVec)`
 * `sha3!(input: ByteVec) -> (ByteVec)`
-* `assert!(input: Bool) -> ()`
+
+### Verification
+
 * `verifyTxSignature!(signature: ByteVec) -> ()`
 * `verifySecP256K1!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
 * `verifyED25519!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
+* `verifyAbsoluteLocktime!(unixTimestampMillis: U256) -> ()`
+* `verifyRelativeLocktime!(txHash: U256, timestampMillisRelative: U256) -> ()`
 * `ethEcRecover!(messageHash: ByteVec, sigBytes: ByteVec) -> (ByteVec)`
+
+### Network
 * `networkId!() -> (ByteVec)`
 * `blockTimeStamp!() -> (U256)`
 * `blockTarget!() -> (U256)`
+
+### Transactions
 * `txId!() -> (ByteVec)`
 * `txCaller!(txHash: U256) -> (Address)`
 * `txCallerSize!(txHash: U256) -> (U256)`
-* `verifyAbsoluteLocktime!(unixTimestampMillis: U256) -> ()`
-* `verifyRelativeLocktime!(txHash: U256, timestampMillisRelative: U256) -> ()`
+
+### Integer conversion
 * `toI256!(input: U256) -> (I256)`
 * `toU256!(input: I256) -> (U256)`
-* `toByteVec!(input: (Bool|I256|U256|Address)) -> (ByteVec)`
-* `size!(input: ByteVec) -> (U256)`
-* `isAssetAddress!(input: Address) -> (Bool)`
-* `isContractAddress!(input: Address) -> (Bool)`
+ 
+### ByteVec functions
 * `byteVecSlice!(input: ByteVec, start: U256, end: U256) -> (ByteVec)`
-* `encodeToByteVec!(fields...) -> (ByteVec)`
+* `size!(input: ByteVec) -> (U256)`
 * `zeros!(amountOfZeros: U256) -> (ByteVec)`
+* `byteVecToAddress!(input: ByteVec) -> Address`
+* `encodeToByteVec!(fields...) -> (ByteVec)`
+* `toByteVec!(input: (Bool|I256|U256|Address)) -> (ByteVec)`
 * `u256To1Byte!(a: U256) -> (ByteVec)`
 * `u256To2Byte!(a: U256) -> (ByteVec)`
 * `u256To4Byte!(a: U256) -> (ByteVec)`
@@ -197,23 +216,32 @@ When you see `!` it means the function is built-in to Ralph.
 * `u256From8Byte!(a: U256) -> (ByteVec)`
 * `u256From16Byte!(a: U256) -> (ByteVec)`
 * `u256From32Byte!(a: U256) -> (ByteVec)`
-* `byteVecToAddress!(input: ByteVec) -> Address`
 
-### Stateful functions
+## Stateful functions
 
+### Assertions
+* `isPaying!(address: Address) -> (Bool)`
+* `isCalledFromTxScript!() -> (Bool)`
+
+### Asset transfer approval
 * `approveAlph!(forAddress: Address, amount: U256)) -> ()`
 * `approveToken!(forAddress: Address, tokenId: ByteVec, amount:U256)) -> ()`
+
+### Account balance
 * `alphRemaining!(address: Address) -> (U256)`
 * `tokenRemaining!(address: Address, tokenId: ByteVec) -> (U256)`
-* `isPaying!(address: Address) -> (Bool)`
+
+### Transfers
 * `transferAlph!(from: Address, to: Address, amount: U256) -> ()`
 * `transferAlphFromSelf!(toBeneficiary: Address, amount: U256) -> ()`
 * `transferAlphToSelf!(fromBeneficiary: Address, amount: U256) -> ()`
-  * From what I understand, this pair of `transferAlph` functions are useful to avoid accidentally sending or receiving money to another address.
+  * This pair of `transferAlph` functions are useful to avoid accidentally sending or receiving money to another address.
 * `transferToken!(from: Address, to: Address, tokenId: ByteVec, amount: U256) -> ()`
 * `transferTokenFromSelf!(toBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
 * `transferTokenToSelf!(fromBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
-  `* Same usage as the other pair of `transferAlph` functions.`
+  * Same usage as the other pair of `transferAlph` functions.
+
+### Contracts
 * `createContract!(codeCompiled: ByteVec, state: ByteVec) -> ()`
 * `createContractWithToken!(codeCompiled: ByteVec, state: ByteVec, tokenAmount: U256) -> ()`
   * `state` is the state as its passed to the build-contract endpoint.
@@ -223,14 +251,19 @@ When you see `!` it means the function is built-in to Ralph.
 * `migrate!(codeCompiled: ByteVec)`
   * Updates the contract in-place
 * `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)`
+
+### Internal
 * `selfAddress!() -> (Address)`
 * `selfContractId!() -> (ByteVec)`
 * `selfTokenId!() -> (ByteVec)`
+
+### Caller
 * `callerContractId!() -> (ByteVec)`
 * `callerAddress!() -> (Address)`
-* `isCalledFromTxScript!() -> (Bool)`
 * `callerInitialStateHash!() -> (ByteVec)`
 * `callerCodeHash!() -> (ByteVec)`
+
+### Hashes
 * `contractInitialStateHash!(contractId: ByteVec) -> (ByteVec)`
 * `contractCodeHash!() -> (contractId: ByteVec) -> (ByteVec)`
 
