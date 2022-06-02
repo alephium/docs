@@ -54,8 +54,8 @@ to muscle memory.
 | ---------------:| ---------------------------------------------------------------------------------- |
 | **Comment**     | `//`                                                                               |
 | **Assignment**  | `let [mut] <name> = ...`                                                           |
-| **Assignment**  | `<arg1>, <arg2>, <argN> = <value>`                                                 |
-| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thing> }`              |
+| **Assignment**  | `<arg> = <value>` or `<arg1>, <argN> = funcMultipleRetVals()`                      |
+| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`        |
 | **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                   |
 | **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code> |
 | **Iteration**   | `while <boolean expression> { <statements> }`                                      |
@@ -69,6 +69,11 @@ to muscle memory.
 
 Iteration in smart contracts is kind of a dangerous operation. It's easy to eat
 gas, or use a lot of space. Ralph does its best to make this a safe operation.
+
+Ralph **does not** let you dynamically access arrays. For example, `a[b]` will
+result in a syntax error (but `a[0]` is valid). This is because arrays in Ralph
+aren't actually arrays but a list of constants that are built-up and
+manipulated. To account for this, the `loop` function is provided.
 
 `loop`'s current index can be accessed using the `?` token, which is the main
 way to iterate through an array.
@@ -90,7 +95,6 @@ is because arrays are compiled to constants and so the indices must be "fixed".
 Because loop unrolling is space consuming, there is an upper limit which must be
 considered when using it.
 :::
-
 
 ### Interfaces, TxContracts, and TxScripts
 
@@ -163,6 +167,7 @@ When you see `!` it means the function is built-in to Ralph.
 * `verifyTxSignature!(signature: ByteVec) -> ()`
 * `verifySecP256K1!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
 * `verifyED25519!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
+* `ethEcRecover!(messageHash: ByteVec, sigBytes: ByteVec) -> (ByteVec)`
 * `networkId!() -> (ByteVec)`
 * `blockTimeStamp!() -> (U256)`
 * `blockTarget!() -> (U256)`
@@ -176,7 +181,23 @@ When you see `!` it means the function is built-in to Ralph.
 * `toByteVec!(input: (Bool|I256|U256|Address)) -> (ByteVec)`
 * `size!(input: ByteVec) -> (U256)`
 * `isAssetAddress!(input: Address) -> (Bool)`
-* `isContractAddres!(input: Address) -> (Bool)`
+* `isContractAddress!(input: Address) -> (Bool)`
+* `byteVecSlice!(input: ByteVec, start: U256, end: U256) -> (ByteVec)`
+* `encodeToByteVec!(fields...) -> (ByteVec)`
+* `zeros!(amountOfZeros: U256) -> (ByteVec)`
+* `u256To1Byte!(a: U256) -> (ByteVec)`
+* `u256To2Byte!(a: U256) -> (ByteVec)`
+* `u256To4Byte!(a: U256) -> (ByteVec)`
+* `u256To8Byte!(a: U256) -> (ByteVec)`
+* `u256To16Byte!(a: U256) -> (ByteVec)`
+* `u256To32Byte!(a: U256) -> (ByteVec)`
+* `u256From1Byte!(a: U256) -> (ByteVec)`
+* `u256From2Byte!(a: U256) -> (ByteVec)`
+* `u256From4Byte!(a: U256) -> (ByteVec)`
+* `u256From8Byte!(a: U256) -> (ByteVec)`
+* `u256From16Byte!(a: U256) -> (ByteVec)`
+* `u256From32Byte!(a: U256) -> (ByteVec)`
+* `byteVecToAddress!(input: ByteVec) -> Address`
 
 ### Stateful functions
 
@@ -199,6 +220,9 @@ When you see `!` it means the function is built-in to Ralph.
 * `copyCreateContract!(contractId: ByteVec, state: ByteVec) -> ()`
 * `copyCreateContractWithToken!(contractId: ByteVec, state: ByteVec, tokenAmount: U256) -> ()`
 * `destroySelf!(address: Address) -> ()`
+* `migrate!(codeCompiled: ByteVec)`
+  * Updates the contract in-place
+* `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)`
 * `selfAddress!() -> (Address)`
 * `selfContractId!() -> (ByteVec)`
 * `selfTokenId!() -> (ByteVec)`
