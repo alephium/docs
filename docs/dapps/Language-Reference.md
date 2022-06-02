@@ -53,7 +53,7 @@ to muscle memory.
 | Token           | Constructor                                                                        |
 | ---------------:| ---------------------------------------------------------------------------------- |
 | **Comment**     | `//`                                                                               |
-| **Assignment**  | `let <name> = ...`                                                                 |
+| **Assignment**  | `let [mut] <name> = ...`                                                           |
 | **Assignment**  | `<arg1>, <arg2>, <argN> = <value>`                                                 |
 | **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thing> }`              |
 | **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                   |
