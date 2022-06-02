@@ -3,97 +3,106 @@ sidebar_position: 10
 title: A primer with the desktop wallet
 ---
 
-Playing with dApps on Alephium is currently a more technical undertaking. This
-workshop does not handhold for non-technical users, but given some effort, they
-too should be able to play along.
+This short primer is to familiarize you with the dApp user experience on Alephium.
 
-The reward for this is learning how dApps work in general, and possibly having
-some influence with your votes!
+:::note
+If you're a developer and already familiar with the experience, then [navigate](./Developing-Your-First-dApp)
+to the chapter on developing your first dApp!
+:::
+
+:::note
+For visual learners, this video is available:
+
+video-here
+:::
+
+## Requirements
 
 There are some requirements before you can start:
 
-* git
-* NodeJS
-* Alephium testnet ALPH
-* A buddy (optional)
+* The Alephium team's [desktop wallet](https://github.com/alephium/desktop-wallet/releases)
+* Testnet ALPH
 
-In order to get testnet ALPH you can either mine (it'll take about an hour)
-or ping @lee in the Discord server, and if not available, ask openly for some
-in #general.
+In order to get testnet ALPH you can:
 
-## Building the test wallet
+* [Mine some](/mining/Solo-Mining-Guide) (it'll take about an hour)
+* Ping `@Moderators` or ask in `#general` on the [Discord server](https://discord.gg/QYWRbkCx)
 
-The current dApp functionality is heavily under development, so you must build
-a test version of the wallet. This is quite simple:
+:::note
+There are currently no available [faucets](https://coinmarketcap.com/alexandria/article/what-is-a-crypto-faucet)
+due to their nature of being easily drained.
+:::
 
-* Open a terminal
-* Run `git clone https://github.com/alephium/desktop-wallet.git  && cd desktop-wallet && git checkout walletconnect && npm install && npm run electron-dev`
+## Setup a wallet test account
 
-The wallet will open.
+Start the wallet as you normally would.
 
 Set the wallet's network to testnet by clicking the gear in the top right and
 navigating to "networks".
 
-Create a wallet, and make sure to check the "Using for DeFi" option. This will
-generate an address for each chain, which is required for dApps to function.
+Create a wallet, and *make sure to toggle the **Using for DeFi** option*. This is
+vital for using your wallet with dApps on Alephium because of how sharding works.
+This generates a number of addresses. This is normal, as each address is
+associated with a shard.
 
-At this point ask for some testnet ALPH.
+Now go get some testnet ALPH!
 
-## Playing with voting-demo
+## You feeling lucky, (crypto) punk?
 
-Open https://testnet-voting-demo.alephium.org/ , and you'll be presented with
-a message to select a network: select testnet. Mainnet will work but it is
-**highly discouraged**. I condem it! We don't want people using unstable
-software seriously.
+Welcome to the crypto-saloon! Step right up over here and have yourself a bet.
 
-When you see the QR code, copy the link below it. **Be sure you copy the full
-link!** It's easy to accidentally partial-copy.
+https://coinflip.dapp.alephium.org/ is a simple dApp where, you guessed it,
+you place a bet on heads or tails. The twist is: there's a 1% chance it could land on
+its edge!
 
-Go back to your wallet and click the WalletConnect logo.
+### Connect to the dApp
 
-Paste the WalletConnect URI and continue. Approve the dApp. Your wallet and the
-dApp are now connected! In the near future this process will be removed
-entirely, and will be handled using a technique called "deep linking". In fact
-the UX in general will improve since our UX expert has not even touched it yet.
+After the selection, go back to the wallet and a new [WalletConnect](https://docs.walletconnect.com/#introduction)
+prompt will ask you to authorize a connection with the dApp. This technology is
+used so dApps never have control of your wallet.
 
-Go back to the dApp and create your first contract!
+:::tip
+Make it a habit to carefully read what you are authorizing!
+:::
 
-### Create a poll
+Go back to the dApp to have your first real interaction.
 
-Enter the appropriate information.
+### Placing a bet
 
-You will notice when you input your admin address, a G"number" appears. This
-is the group your address is part of. Voter addresses will need to have the same
-group number.
+Enter how much you'd like to bet. If you win, you get back twice as much, covering
+the initial bet and giving you some winnings.
 
-Make sure your voters have funds on the address they provide by asking them.
+Click `flip`!
 
-Click "Create" and navigate back to your wallet to confirm the transaction.
+And navigate back to the wallet once again. Now a prompt to make a transaction is
+presented.
 
-The transaction doesn't require any to-address or amount.
+:::caution
+The dApp sets the transaction fields for a reason! It will set everything properly
+so that you won't overpay and lose money, or accidentally set something incorrectly.
+:::
 
-You may have to adjust the gas price.
+This transaction will do two things:
 
-Click "Check", review the transaction details and send. You will notice there is
-a minimal amount of ALPH being sent: this is required as a "storage fee" for
-contracts.
+* Send your bet to the contract
+* Run the contract's flip functionality
 
-Go back to the dApp and wait for the transaction to confirm.
 
-### Allocate voting tokens
+Once you send the transaction head back to the dApp.
 
-Click on "Allocate voter tokens" and follow the same process for sending a
-transaction.
 
-Give out the URL given by the dApp to your voters.
+### Waiting for the result
 
-Save the contract transaction id, as you'll need it again to do additional
-operations like closing the poll.
+The result *should be* near instant to get back, but your winnings may take around
+a minute to finalize into your wallet. This is because contracts use an event
+system to communicate information back to dApps, which is separate from the
+financial part of the Alephium system.
 
-Once everyone has told you they have voted, close the poll.
+## Writing your own first dApp!
 
-Tell all your voters the poll is now closed and they can check the voting
-results by going back to the voting page. Reshare the voting URL in case anyone
-has lost or forgot it.
+So as you see, it's quite simple to interact with dApps on Alephium. The core
+team has made its best effort, through long and tense discussions, to bring
+cryptocurrency to people in the most approachable and safe way it believes.
 
-Review the results and have a discussion! 🙂
+This same philosophy extends to all aspects of Alephium, as you'll see, when
+you [begin writing your first dApp](./Developing-Your-First-dApp)!
