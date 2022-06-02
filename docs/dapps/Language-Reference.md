@@ -11,7 +11,7 @@ The following documentation is derived from the alephium/alephium source code.
 
 :::caution
 **It could become out of date at any time**, so double-check with other developers
-if you think something has changed, and if it has, [fork this wiki](git@github.com:alephium/wiki.git)
+if you think something has changed, and if it has, [fork this wiki](https://github.com/alephium/wiki.git)
 and [open a PR](https://github.com/alephium/wiki/compare)!
 :::
 
