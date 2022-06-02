@@ -54,7 +54,7 @@ to muscle memory.
 | ---------------:| ---------------------------------------------------------------------------------- |
 | **Comment**     | `//`                                                                               |
 | **Assignment**  | `let [mut] <name> = ...`                                                           |
-| **Assignment**  | `<arg> = <value>` or `<arg1>, <argN> = funcMultipleRetVals()`                      |
+| **Assignment**  | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                    |
 | **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`        |
 | **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                   |
 | **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code> |
