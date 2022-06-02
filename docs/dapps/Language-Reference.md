@@ -26,15 +26,15 @@ example, `<number>` means type a literal number value: 6, 7, 44, etc.
 
 Ralph has a nice small core of primitives.
 
-| Type        | Constructor                                                     |
-| -----------:| --------------------------------------------------------------- |
-| **()**      | None                                                            |
-| **Bool**    | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code> |
-| **I256**    | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
-| **U256**    | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
-| **Address** | `@<address>`                                                    |
-| **ByteVec** | `#<hex-string>, ++`                                             |
-| **Array**   | `[<type>; <size>]`, example: `[Address; 6]`                     |
+| Type                 | Constructor                                                     |
+| --------------------:| --------------------------------------------------------------- |
+| **()**               | None (a return statement with nothing)                          |
+| **Bool**             | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code> |
+| **I256**             | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
+| **U256**             | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
+| **Address**          | `@<address>`                                                    |
+| **ByteVec**          | `#<hex-string>, ++`                                             |
+| **[type; size]**     | `[<value...>]`, type example: `[Address; 6]`                    |
 
 You'll notice there is no `String` type. Instead the `ByteVec` type can be used
 to hold onto textual data.
