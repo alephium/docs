@@ -6,7 +6,7 @@ title: A primer with the desktop wallet
 This short primer is to familiarize you with the dApp user experience on Alephium.
 
 :::note
-If you're a developer and already familiar with the experience, then [navigate](./Developing-Your-First-dApp)
+If you're a developer and already familiar with the experience, then [navigate](/dapps/Developing-Your-First-dApp)
 to the chapter on developing your first dApp!
 :::
 
@@ -105,4 +105,4 @@ team has made its best effort, through long and tense discussions, to bring
 cryptocurrency to people in the most approachable and safe way it believes.
 
 This same philosophy extends to all aspects of Alephium, as you'll see, when
-you [begin writing your first dApp](./Developing-Your-First-dApp)!
+you [begin writing your first dApp](/dapps/Developing-Your-First-dApp)!
