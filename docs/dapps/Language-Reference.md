@@ -190,8 +190,11 @@ When you see `!` it means the function is built-in to Ralph.
 
 ### Transactions
 * `txId!() -> (ByteVec)`
-* `txCaller!(txHash: U256) -> (Address)`
-* `txCallerSize!(txHash: U256) -> (U256)`
+* `txCaller!(utxoIndex: U256) -> (Address)`
+  * Returns the address of the utxo at an index (since multiple utxo can exist in a transaction)
+  * This is usually used to check if the original / top most caller is the creator or owner of a contract
+  * (along with checking if `txCallerSize!() == 0`.
+* `txCallerSize!() -> (U256)`
 
 ### Integer conversion
 * `toI256!(input: U256) -> (I256)`
@@ -260,6 +263,7 @@ When you see `!` it means the function is built-in to Ralph.
 ### Caller
 * `callerContractId!() -> (ByteVec)`
 * `callerAddress!() -> (Address)`
+  * This is the **last** caller, in case of chained calls across contracts, scripts and users.
 * `callerInitialStateHash!() -> (ByteVec)`
 * `callerCodeHash!() -> (ByteVec)`
 
