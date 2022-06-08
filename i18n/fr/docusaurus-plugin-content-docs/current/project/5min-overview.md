@@ -171,7 +171,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 - [Wallet](https://github.com/alephium/alephium-wallet/releases/latest)
 - [Explorateur](https://github.com/alephium/explorer)
 - [JS-SDK](https://github.com/alephium/js-sdk)
-- [Wiki][https://wiki.alephium.org]
+- [Wiki](https://wiki.alephium.org)
 - [Awesome Alephium](https://github.com/alephium/awesome-alephium)
 
 ## ⛏ Si vous êtes un mineur, commencez ici !
