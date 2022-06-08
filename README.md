@@ -37,7 +37,7 @@ You are welcome to submit translations of the wiki pages. So far we only have a 
 
 If your translation is a mere Google translation without any correction, the Pull Request will likely not be accepted.
 
-**Before you begin translating, please consider your submission as *commitment* to maintain the pages in sync with any changes happening in the english version**
+**Before you begin translating, please consider your submission as *commitment* to maintain the pages in sync with any changes happening in the English version**
 
 ### Enable a new language for translation
 
