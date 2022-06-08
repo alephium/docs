@@ -50,6 +50,6 @@ Vous pouvez télécharger le wallet de bureau à partir d'ici [GitHub](https://g
 
 Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](wallet/Wallet-Guide.md) pour apprendre à l'utiliser.
 
-[^1] : Le dossier d'accueil dépend de votre système : `C:\Users\<votre-username>` sous Windows, `/Users/<votre-username>` sous macOS, `/home/<votre-username>` sous Linux.
+[^1]: Le dossier d'accueil dépend de votre système : `C:\Users\<votre-username>` sous Windows, `/Users/<votre-username>` sous macOS, `/home/<votre-username>` sous Linux.
 
 [explorer]: https://explorer.alephium.org
