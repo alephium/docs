@@ -50,51 +50,19 @@ available in programming languages.
 to muscle memory.
 :::
 
-| Token           | Constructor                                                                                                      |
-| ---------------:| ---------------------------------------------------------------------------------------------------------------- |
-| **Comment**     | `//`                                                                                                             |
-| **Assignment**  | `let [mut] <name> = ...`                                                                                         |
-| **Assignment**  | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                                                  |
-| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`                                      |
-| **Conditional** | `if <boolean expression> { <statements> } else { <statements> }`                                                 |
-| **Iteration**   | <code>loop (startAt: U256, endAt: U256, step: U256 &#124; I256, assignment)</code>                               |
-| **Iteration**   | `while <boolean expression> { <statements> }`                                                                    |
-| **Event**       | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`                                         |
-| **Event**       | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                                                            |
-| **Structure**   | `interface <InterfaceName> { ... }`                                                                              |
-| **Structure**   | `TxContract ContractName([mut] fieldN: <type>) [extends <TxContractName>] [implements <InterfaceName>] { ... }`  |
+| Token           | Constructor                                                                        |
+| ---------------:| ---------------------------------------------------------------------------------- |
+| **Comment**     | `//`                                                                               |
+| **Assignment**  | `let [mut] <name> = ...`                                                           |
+| **Assignment**  | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                      |
+| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`        |
+| **Conditional** | `if <boolean expression> { <statements> } [else if { <statements> } else { ... }]` |
+| **Iteration**   | `while <boolean expression> { <statements> }`                                      |
+| **Event**       | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`           |
+| **Event**       | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                              |
+| **Structure**   | `interface <InterfaceName> { ... }`                                                |
+| **Structure**   | `TxContract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
 | **Structure**   | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
-
-### Array iteration (index variable)
-
-Iteration in smart contracts is kind of a dangerous operation. It's easy to eat
-gas, or use a lot of space. Ralph does its best to make this a safe operation.
-
-Ralph **does not** let you dynamically access arrays. For example, `a[b]` will
-result in a syntax error (but `a[0]` is valid). This is because arrays in Ralph
-aren't actually arrays but a list of constants that are built-up and
-manipulated. To account for this, the `loop` function is provided.
-
-`loop`'s current index can be accessed using the `?` token, which is the main
-way to iterate through an array.
-
-For example: `loop(1, 6, 1, array[?] = 0)` which zeros out array elements.
-
-`?` can be used anywhere in the statement. **This placeholder value is passed
-down as far as necessary**. Imagine it's a kind of global variable, but scoped
-to everything within a `loop` call.
-
-:::note
-`loop` in reality is an unrolled loop, and is why its usage should be restricted
-to only assignments like in the example (but it can take anything that's a
-statement). Anything else will be prohibitively expensive. The reason for this
-is because arrays are compiled to constants and so the indices must be "fixed".
-:::
-
-:::caution
-Because loop unrolling is space consuming, there is an upper limit which must be
-considered when using it.
-:::
 
 ### Interfaces, TxContracts, and TxScripts
 
@@ -111,7 +79,8 @@ interface InterfaceName {
 
 // To create a contract:
 TxContract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) implements InterfaceName {
-  [pub] [payable] fn functionName(arg1: <type>, ...etc) -> (<return type>) {
+  [@using(preapprovedAssets = <Bool>, assetsInContract = <Bool>)]
+  [pub] fn functionName(arg1: <type>, ...etc) -> (<return type>) {
     return <thing>
   }
 
@@ -135,10 +104,12 @@ TxScript ScriptNameCanBeAnything {
 }
 ```
 
-`payable` means the function can use [stateful functions](#stateful-functions)
-that modify the contract / script state.
-
 `pub` means the function can be called outside the contract / script.
+
+`@using` is a function annotation.
+
+To understand `preapprovedAssets` and `assetsInContract` please go read about
+the [Asset Permission System](/dapps/Asset-Permission-System].
 
 :::note
 You can call contract methods right after the contract constructor, i.e.
@@ -190,11 +161,10 @@ When you see `!` it means the function is built-in to Ralph.
 
 ### Transactions
 * `txId!() -> (ByteVec)`
-* `txCaller!(utxoIndex: U256) -> (Address)`
+* `txInputAddressAt!(utxoIndex: U256) -> (Address)`
   * Returns the address of the utxo at an index (since multiple utxo can exist in a transaction)
-  * This is usually used to check if the original / top most caller is the creator or owner of a contract
-  * (along with checking if `txCallerSize!() == 0`.
-* `txCallerSize!() -> (U256)`
+* `txInputsSize!() -> (U256)`
+* `uniqueTxInputAddress!() -> (Address)`
 
 ### Integer conversion
 * `toI256!(input: U256) -> (I256)`
@@ -245,11 +215,11 @@ When you see `!` it means the function is built-in to Ralph.
   * Same usage as the other pair of `transferAlph` functions.
 
 ### Contracts
-* `createContract!(codeCompiled: ByteVec, state: ByteVec) -> ()`
-* `createContractWithToken!(codeCompiled: ByteVec, state: ByteVec, tokenAmount: U256) -> ()`
+* `createContract!(codeCompiled: ByteVec, state: ByteVec) -> (ByteVec)`
+* `createContractWithToken!(codeCompiled: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
   * `state` is the state as its passed to the build-contract endpoint.
-* `copyCreateContract!(contractId: ByteVec, state: ByteVec) -> ()`
-* `copyCreateContractWithToken!(contractId: ByteVec, state: ByteVec, tokenAmount: U256) -> ()`
+* `copyCreateContract!(contractId: ByteVec, state: ByteVec) -> (ByteVec)`
+* `copyCreateContractWithToken!(contractId: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
 * `destroySelf!(address: Address) -> ()`
 * `migrate!(codeCompiled: ByteVec)`
   * Updates the contract in-place
