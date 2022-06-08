@@ -1,6 +1,6 @@
 ---
-sidebar_position : 40
-titre : Plus d'information et dépannage
+sidebar_position: 40
+titre: Plus d'information et dépannage
 ---
 
 # Plus d'information et dépannage Full-node
