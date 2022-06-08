@@ -52,4 +52,4 @@ Alternativement, notre noeud complet possède un wallet intégré avec des fonct
 
 [^1] : Le dossier d'accueil dépend de votre système : `C:\Users\<votre-username>` sous Windows, `/Users/<votre-username>` sous macOS, `/home/<votre-username>` sous Linux.
 
-[explorer] : https://explorer.alephium.org
+[explorer]: https://explorer.alephium.org
