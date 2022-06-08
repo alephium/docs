@@ -3,7 +3,9 @@ sidebar_position: 10
 title: A primer with the desktop wallet
 ---
 
-> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
 
 Playing with dApps on Alephium is currently a more technical undertaking. This
 workshop does not handhold for non-technical users, but given some effort, they
