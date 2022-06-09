@@ -3,7 +3,9 @@ sidebar_position: 20
 title: Devnet Guide
 ---
 
-> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
 
 It's dev-friendly to start a local devnet with empty block history and arbitrary amount of coins.
 

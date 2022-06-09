@@ -2,7 +2,9 @@
 sidebar_position: 11
 title: Technical guide with a fullnode
 ---
-> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
 
 This document guides you through the creation, deployment and usage of
 smart contracts on Alephium mainnet.

@@ -3,7 +3,9 @@ sidebar_position: 20
 title: More on Smart Contracts
 ---
 
-> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
 
 We will provide more documentation soon. For the moment, there are several parts of our source code where you can learn about our contract language:
 

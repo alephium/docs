@@ -3,7 +3,9 @@ sidebar_position: 10
 title: Full Node Wallet Guide
 ---
 
-> ## ⚠️ Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
 
 The wallet API can be called using our Swagger UI at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) or by using `curl`. Make sure that your full node is running so you could access the Swagger UI.
 
