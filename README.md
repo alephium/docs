@@ -40,14 +40,14 @@ If your translation is a mere Google translation without any correction, the Pul
 **Before you begin translating, please consider your submission as *commitment* to maintain the pages in sync with any changes happening in the English version**
 
 ### Enable a new language for translation
+1. Find the ISO 689-1 two-letter code for your language [here](https://www.loc.gov/standards/iso639-2/php/English_list.php)
+2. Create a folder for the documents inside the `i18n` folder. For example german: `mkdir -p i18n/<ISO639-1>/docusaurus-plugin-content-docs/current` (*note that you will need replace `<ISO639-1>` with the actual two-letter international code*).
+3. Copy all the content from `/docs` into the new folder: `cp -r docs i18n/<ISO639-1>/docusaurus-plugin-content-docs/current/` (*again, note that you will need replace `<ISO639-1>` with the actual two-letter international code*).
+4. Remove all the `_category_.json` files from the subfolders inside `i18n/<ISO639-1>/docusaurus-plugin-content-docs/current`.
+5. Build the translation files for the navbar and the footer: `npm run write-translations -- --locale <ISO639-1>`.
 
-1. Create a folder for the documents inside the `i18n` folder. For example german: `mkdir -p i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current` (*note that you will need replace `<two-letter-international-code>` with the actual two-letter international code*).
-2. Copy all the content from `/docs` into the new folder: `cp -r docs i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current/` (*again, note that you will need replace `<two-letter-international-code>` with the actual two-letter international code*).
-3. Remove all the `_category_.json` files from the subfolders inside `i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current`.
-4. Build the translation files for the navbar and the footer: `npm run write-translations -- --locale <two-letter-international-code>`.
+Now you can start translating any and all file in `i18n/<ISO639-1>/docusaurus-plugin-content-docs/current`
 
-Now you can start translating any and all file in `i18n/<two-letter-international-code>/docusaurus-plugin-content-docs/current`
-
-To test your content, run the following command: `npm run start -- --locale <two-letter-international-code>` 
+To test your content, run the following command: `npm run start -- --locale <ISO639-1>` 
 
 This will only load the wiki in the language you are translating. To locally test the whole site, you can do `npm run build && npm run serve`)
