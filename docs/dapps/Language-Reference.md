@@ -32,14 +32,25 @@ Ralph has a nice small core of primitives.
 | **Bool**             | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code> |
 | **I256**             | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
 | **U256**             | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
-| **Address**          | `@<address>`                                                    |
+| **Address**          | `@<address>`, `nullAddress!()`                                  |
 | **ByteVec**          | `#<hex-string>, ++`                                             |
 | **[type; size]**     | `[<value...>]`, type example: `[Address; 6]`                    |
 
 You'll notice there is no `String` type. Instead the `ByteVec` type can be used
 to hold onto textual data, or a `[U256; N]` array if you need to modify it.
 
-## Everything else
+:::note
+For numbers you can also use the following:
+
+* 1_000_000_000
+* 0.000_001
+* 1e18
+* 1e-18
+* 1_000e9
+:::
+
+
+## Syntax
 
 Ralph as you'll soon learn is a simple language. So simple that it can be summed
 up in this table below, which presents various mechanisms which are normally
@@ -161,7 +172,7 @@ When you see `!` it means the function is built-in to Ralph.
 
 ### Transactions
 * `txId!() -> (ByteVec)`
-* `txInputAddressAt!(utxoIndex: U256) -> (Address)`
+* `txInputAddress!(utxoIndex: U256) -> (Address)`
   * Returns the address of the utxo at an index (since multiple utxo can exist in a transaction)
 * `txInputsSize!() -> (U256)`
 * `uniqueTxInputAddress!() -> (Address)`
