@@ -7,48 +7,42 @@ and `transfer` functions it can then become confusing, even overwhelming. What
 are those built-in functions actually doing? Well it all has to do with
 understanding the flow of funds and what happens between function calls.
 
-## The tale of two properties
+A very important point to internalize is that the "flow of funds" always starts
+from a `TxScript`.
 
-The "flow of funds" always starts from a `TxScript`. A user will send funds
-along with the TxScript in a transaction typically.
-
-At this point the funds can flow into a contract, or to another user's address.
+Using the `TxScript` the funds can flow into a contract, or to another user's
+address.
 
 :::note
 That's right! Unlike in Ethereum, you *don't* send funds directly to contract
 addresses!
 :::
 
-When a contract method is called, it creates a "frame". A frame is state that belongs
-to a method during runtime. The state we care about for understanding the APS are the
-internal `approvedAssets` and `remainingAssets` properties.
+A way to think the system are the two states of "staged" and "commited" funds.
+Funds are staged when approved, and they are commited when a contract method
+is called.
 
-A way to think about these are "staged" and "commited" funds, respectively. This
-also means funds can be from many sources, not just one! Just like how you
-can stage many files for a commit in version control, you can stage many address
-balances in Ralph.
+Now let's look at some code to see the details and the full picture.
 
-The initial state of `approvedAssets` is an empty set (no funds) of addresses.
-The initial state of `remainingAssets` though **is what was sent with the
-transaction containing this TxScript**!
-
-From here on it's just about staging and commiting funds between the two
-properties using `approve*` functions and function calls. `transfer*` functions
-are used to actually transact the funds from `remainingAssets` to or
-from an address.
+:::note
+Funds can be from many sources, not just one! Just like how you can stage many
+files for a commit in version control, you can stage many address balances in
+Ralph.
+:::
 
 :::note
 There are also some built-ins which also commit funds and use them immediately.
 
 These built-ins are:
-
 * `createContract!`
 :::
 
 
 ## A concrete demonstration
 
-Let's use some code now since the problem is tightly related to it!
+Since code partially dictates the flow of funds, the explanation is tightly
+coupled to it. The best way to explain then is to use code and comments.
+
 
 ```rust
 // User sends 10 ALPH along with this TxScript
@@ -88,7 +82,8 @@ TxContract SomeContractIWrote() {
   //
   @using(preapprovedAssets = true)
   pub doStuff() -> () {
-    // 5 ALPH will be taken from `remainingAssets`, meaning now it's empty 🙂
+    // 5 ALPH will be taken from `remainingAssets` and put into the contract's
+    // funds (meaning `remainingAssets` is now empty).
     transferAlphToSelf!(callerAddress!(), 5)
   }
 
