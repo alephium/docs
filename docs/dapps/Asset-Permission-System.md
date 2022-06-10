@@ -1,3 +1,8 @@
+---
+sidebar_position: 15
+title: Asset Permission System (APS)
+---
+
 The Asset Permission System (APS) is one of Ralph's defining features. It gives
 developers a safety net and the ability to build with confidence on Alephium.
 
@@ -44,7 +49,7 @@ Since code partially dictates the flow of funds, the explanation is tightly
 coupled to it. The best way to explain then is to use code and comments.
 
 
-```rust
+```javascript
 // User sends 10 ALPH along with this TxScript
 TxScript MyScriptWithAName() {
   let myAddress = callerAddress!()
