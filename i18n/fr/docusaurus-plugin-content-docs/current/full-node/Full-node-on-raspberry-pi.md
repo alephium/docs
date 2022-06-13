@@ -1,6 +1,6 @@
 ---
-sidebar_position : 30
-titre : Full Node sur Raspberry Pi
+sidebar_position: 30
+titre: Full Node sur Raspberry Pi
 ---
 
 # Exécution d'un noeud complet dockerisé sur un Raspberry Pi 4
@@ -147,12 +147,12 @@ des volumes, plus de ports, des variables d'environnement, etc...
 Donc, ci-dessous est la définition du service que vous pouvez mettre dans un fichier `docker-compose.yml`, et simplement appeler `docker-compose up -d` pour démarrer votre noeud complet à partir de cette définition.
 
 ```yaml
-version : "3"
-services :
-  broker :
-    image : "alephium/alephium:v1.2.6"
-    restart : unless-stopped
-    ports :
+version: "3"
+services:
+  broker:
+    image: "alephium/alephium:v1.2.6"
+    restart: unless-stopped
+    ports:
       - 9973:9973/tcp
       - 9973:9973/udp
       - 10973:10973/tcp

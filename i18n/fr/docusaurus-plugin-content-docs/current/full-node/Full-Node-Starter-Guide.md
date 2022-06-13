@@ -1,6 +1,6 @@
 ---
-sidebar_position : 10
-titre : Guide complet de démarrage du fullnode
+sidebar_position: 10
+titre: Guide complet de démarrage du fullnode
 ---
 
 # Guide de démarrage : Comment lancer votre Node

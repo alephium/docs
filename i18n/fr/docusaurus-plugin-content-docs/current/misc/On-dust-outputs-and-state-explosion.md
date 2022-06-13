@@ -1,6 +1,6 @@
 ---
-sidebar_position : 20
-title : Sur les poussières d'output et l'explosion des états
+sidebar_position: 20
+title: Sur les poussières d'output et l'explosion des états
 ---
 Cet article fait suite à un brainstorming entre [Cheng](https://github.com/polarker) et [Tom](https://github.com/tshabs)
 
