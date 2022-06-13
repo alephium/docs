@@ -13,7 +13,7 @@ The wallet API can be called using our Swagger UI at [http://127.0.0.1:12973/doc
 
 You can create a new wallet by doing a POST with the following data on `/wallets`.
 
-```json
+```js
 {
   "password": "123456",
   "walletName": "foo" //optional (wallet-x) by default
