@@ -25,9 +25,12 @@ const config = {
         docs: {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
-          editUrl: "https://github.com/alephium/wiki/tree/master/",
+          editUrl: ({ locale, versionDocsDirPath, docPath }) =>
+            `https://github.com/alephium/wiki/tree/master${
+              locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
+            }/${docPath}`,
         },
+        blog: false,
         // theme: {
         //   customCss: require.resolve("./src/css/custom.css"),
         // },
@@ -48,6 +51,10 @@ const config = {
           {
             href: "https://github.com/alephium/wiki",
             label: "GitHub",
+            position: "right",
+          },
+          {
+            type: "localeDropdown",
             position: "right",
           },
         ],
@@ -209,6 +216,10 @@ const config = {
       },
     ],
   ],
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fr"],
+  },
 };
 
 module.exports = config;

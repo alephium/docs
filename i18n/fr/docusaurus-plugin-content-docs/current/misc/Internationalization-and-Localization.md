@@ -1,13 +1,13 @@
 ---
 sidebar_position: 20
-title: Internationalization and Localization
+title: Internationalisation et localisation
 ---
 
-# Internationalization and Localization (i18n)
+# Internationalisation et localisation (i18n)
 
 ## Discord
 
-Find the following languages in [the official Discord](https://discord.gg/JErgRBfRSB)
+Trouvez les différentes langues [sur le Discord officiel](https://discord.gg/JErgRBfRSB)
 
 - AR 🌙العربية
 - CN 🐼 中文
@@ -18,9 +18,9 @@ Find the following languages in [the official Discord](https://discord.gg/JErgRB
 - SP 🌮español
 - TR 🐺türkçe
 
-## Known localized community driven user-groups
+## Groupes d'utilisateur·trice·s connus et animés par la communauté.
 
-### Telegram groups
+### Groupes Telegram
 
 - ID 🇮🇩 [https://t.me/AlephiumID](https://t.me/AlephiumID)
 - NL 🇳🇱 [https://t.me/AlephiumgroupNL](https://t.me/AlephiumgroupNL)

@@ -1,0 +1,30 @@
+{
+  "sidebar.tutorialSidebar.category.Project": {
+    "message": "Projet",
+    "description": "The label for category Project in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Full-Node": {
+    "message": "Full-Node",
+    "description": "The label for category Full-Node in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Mining": {
+    "message": "Mining",
+    "description": "The label for category Mining in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallet": {
+    "message": "Wallet",
+    "description": "The label for category Wallet in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Smart Contracts": {
+    "message": "Smart Contracts",
+    "description": "The label for category Smart Contracts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Testnet & Devnet": {
+    "message": "Testnet & Devnet",
+    "description": "The label for category Testnet & Devnet in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Misc": {
+    "message": "Misc",
+    "description": "The label for category Misc in sidebar tutorialSidebar"
+  }
+}

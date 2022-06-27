@@ -13,6 +13,8 @@ Alephium is the first live Layer 1 sharded blockchain scaling and improving on B
 - Like Ethereum, but more secure & scalable.
 - Like Solana, but more decentralised & trustless.
 
+---
+
 ## 💎 Why is Alephium special?
 
 On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
@@ -31,11 +33,13 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 
 **Check out our [whitepapers][whitepaper]!**
 
-## 🚀 Milestones & Roadmap
+---
 
-### Completed Milestones
+## Milestones & Roadmap
 
-#### Core Platform
+### 🚀 Completed Milestones
+
+**Core Platform**
 
 - 02.2019 — Whitepapers publicly released
 - Q1.2020 — Alpha version of the core sharding protocol implemented and tested on AWS
@@ -45,7 +49,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 - 08.11.2021 — Mainnet launch & 3rd party cloud mining service
 - 01.2022–1st dApp proof-of-concept
 
-#### Ecosystem
+**Ecosystem**
 
 - 11.2021 — Joined the UTXO alliance & Bitcoin Association Switzerland
 - Q4.2021 — Mining ecosystem development: miners development, reference mining pool and pool integration.
@@ -53,11 +57,11 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 - 12.01.2022 — First exchange listing: Gate.io
 - 02.2022 — 9 mining pools on Alephium
 
-### Roadmap
+### 🛣️ Roadmap
 
 The network is young and growing rapidly. We will update the roadmap to reflect the latest priorities.
 
-#### Core Platform
+**Core Platform**
 
 - Improve the robustness, efficiency and dev-experience of the full node
 - Improve documentation of the core infrastructure
@@ -71,7 +75,7 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 - Mobile wallet
 - Hardware wallet integration
 
-#### Ecosystem
+**Ecosystem**
 
 - Website revamp
 - Build-up community engagement & marketing initiatives (hackathon, AMAs, community competitions, campaigns, etc)
@@ -96,17 +100,21 @@ In addition, half of the transaction fees are burned with each block and Proof o
 
 **Find more details in our [Tokenomics Medium article][tokenomics-medium].**
 
+---
+
 ## 🏋️‍♀️ Our team
 
 The core team counts 14 members. 9 are tech team members and the remaining 5 are part of the operations team. Come say hello on Discord!
 
-**@Cheng Wang#1571** 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
+[@ChengWang#1571](https://twitter.com/wachmc) 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
 
-**@s0ukie#8277** ⚙️ is our Chief of Staff, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
+[@s0ukie#8277](https://twitter.com/s0ukie)  ⚙️ is our Chief of Staff, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
 
-**@setto#4764** 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
+[@setto#4764](http://twitter.com/heptazoid) 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
 
 Meet the rest of the team on our [website][website] or on [Linkedin](https://www.linkedin.com/company/alephium/people/).
+
+---
 
 ## 🎯 Meet us, join us, talk to us!
 
@@ -129,25 +137,31 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 - [Medium][medium]
 - [GitHub][github]
 
-### Non-official Content & Communities
+---
+
+## 🦄 Non-official Content & Communities
 
 > Not moderated, endorsed or managed by Alephium
 
-- [Telegram 🇷🇺](https://t.me/alephiumgroup_ru)
-- [Telegram 🇹🇷](https://t.me/alephium_tr)
+You will find the complete list of internationalized channel [here](https://wiki.alephium.org/misc/Internationalization-and-Localization)
+
+### Youtube
 - [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
 - [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
 - [Youtube videos 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
 
-### Buy/sell
+---
+
+## 🪙 Buy/sell
 
 - [Gate.io][gateio]
 
 ## 🤝 Our partners
 
-- [UTXO Alliance][utxo-alliance]
-- [Bitcoin Association Switzerland][bas]
-- [Market Across PR][market-across]
+- [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
+- [Cetacean Capital](https://cetacean.capital/)
+- [Market Across PR](https://marketacross.com)
+- [UTXO Alliance](https://utxo-alliance.org/)
 
 ## 🛠 If you’re a dev, start here
 
