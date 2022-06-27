@@ -10,12 +10,6 @@ If you're a developer and already familiar with the experience, then [navigate](
 to the chapter on developing your first dApp!
 :::
 
-:::note
-For visual learners, this video is available:
-
-video-here
-:::
-
 ## Requirements
 
 There are some requirements before you can start:
