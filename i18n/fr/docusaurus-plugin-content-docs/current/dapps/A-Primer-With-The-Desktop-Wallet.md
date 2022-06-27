@@ -16,10 +16,10 @@ some influence with your votes!
 
 There are some requirements before you can start:
 
-* git
-* NodeJS
-* Alephium testnet ALPH
-* A buddy (optional)
+- git
+- NodeJS
+- Alephium testnet ALPH
+- A buddy (optional)
 
 In order to get testnet ALPH you can either mine (it'll take about an hour)
 or ping @lee in the Discord server, and if not available, ask openly for some
@@ -30,8 +30,8 @@ in #general.
 The current dApp functionality is heavily under development, so you must build
 a test version of the wallet. This is quite simple:
 
-* Open a terminal
-* Run `git clone https://github.com/alephium/desktop-wallet.git  && cd desktop-wallet && git checkout walletconnect && npm install && npm run electron-dev`
+- Open a terminal
+- Run `git clone https://github.com/alephium/desktop-wallet.git && cd desktop-wallet && git checkout walletconnect && npm install && npm run electron-dev`
 
 The wallet will open.
 

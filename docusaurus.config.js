@@ -27,7 +27,9 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
             `https://github.com/alephium/wiki/tree/master${
-              locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
+              locale !== "en"
+                ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
+                : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,

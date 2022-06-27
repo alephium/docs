@@ -14,13 +14,13 @@ to the chapter on developing your first dApp!
 
 There are some requirements before you can start:
 
-* The Alephium team's [desktop wallet](https://github.com/alephium/desktop-wallet/releases)
-* Testnet ALPH
+- The Alephium team's [desktop wallet](https://github.com/alephium/desktop-wallet/releases)
+- Testnet ALPH
 
 In order to get testnet ALPH you can:
 
-* [Mine some](/mining/Solo-Mining-Guide) (it'll take about an hour)
-* Ping `@Moderators` or ask in `#general` on the [Discord server](https://discord.gg/QYWRbkCx)
+- [Mine some](/mining/Solo-Mining-Guide) (it'll take about an hour)
+- Ping `@Moderators` or ask in `#general` on the [Discord server](https://discord.gg/QYWRbkCx)
 
 :::note
 There are currently no available [faucets](https://coinmarketcap.com/alexandria/article/what-is-a-crypto-faucet)
@@ -34,7 +34,7 @@ Start the wallet as you normally would.
 Set the wallet's network to testnet by clicking the gear in the top right and
 navigating to "networks".
 
-Create a wallet, and *make sure to toggle the **Using for DeFi** option*. This is
+Create a wallet, and _make sure to toggle the **Using for DeFi** option_. This is
 vital for using your wallet with dApps on Alephium because of how sharding works.
 This generates a number of addresses. This is normal, as each address is
 associated with a shard.
@@ -78,16 +78,14 @@ so that you won't overpay and lose money, or accidentally set something incorrec
 
 This transaction will do two things:
 
-* Send your bet to the contract
-* Run the contract's flip functionality
-
+- Send your bet to the contract
+- Run the contract's flip functionality
 
 Once you send the transaction head back to the dApp.
 
-
 ### Waiting for the result
 
-The result *should be* near instant to get back, but your winnings may take around
+The result _should be_ near instant to get back, but your winnings may take around
 a minute to finalize into your wallet. This is because contracts use an event
 system to communicate information back to dApps, which is separate from the
 financial part of the Alephium system.

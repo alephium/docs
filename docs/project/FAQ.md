@@ -85,12 +85,14 @@ On [the Discord,](https://discord.gg/JErgRBfRSB) there is a special mining chann
 
 Every day approximately 72k ALPH are mined.
 To know how many coins are mined per day, we can use this formula:
+
 ```
 3600 seconds / 64 seconds (block time) == 56.25 blocks per hour, per shard.
 56.25 x 16 shards == 900 blocks total per hour.
 900 x 24 hours == 21600 blocks per day.
 21600 x ~3.3 ALPH reward per block ~= 72k ALPH reward per day.
 ```
+
 This is not an exact calculation, because the number of ALPH issued per block can vary. But it is close enough.
 
 ## dApps
@@ -150,7 +152,8 @@ We don't have an exact date on this. But we are working on it. However, you will
 
 ## Miscellaneous
 
-### Do you have a Grant & Reward Program? 
+### Do you have a Grant & Reward Program?
+
 Yes, see [this document](https://github.com/alephium/community/blob/master/Grant&RewardProgram.md) for the details.
 
 ### How many Transactions Per Second (TPS)

@@ -6,16 +6,13 @@ title: Technical guide with a fullnode
 This document guides you through the creation, deployment and usage of
 smart contracts on Alephium mainnet.
 
-
 We will first deploy a contract which allows any user to exchange
 **ALPH** for tokens. Then we will deploy a script which calls the
 contract to buy tokens.
 
-
 This document is based on the [Chinese smart contract tutorial and
 documentation](https://github.com/Lbqds/alephium-docs/blob/master/contract.md)
 by [Lbqds](https://github.com/Lbqds).
-
 
 ## Requirements
 
@@ -31,7 +28,6 @@ We will use a wallet named `demo-1` in this tutorial.
 
 In this section we will create, build, sign and submit a contract
 transaction.
-
 
 ### Create a token Contract
 
@@ -54,7 +50,6 @@ This simple token contract allows users to buy tokens by paying
 **ALPH** to the contract owner at a rate `1:1000`. It uses the
 following built-in functions:
 
-
 - `assert!(pred)` Causes the contract execution to fail when `pred`
   evaluates to `false`
 - `selfTokenId!(a)` Returns the current token id which is also the
@@ -67,7 +62,6 @@ following built-in functions:
 **Note**: The `remain` variable is not necessary but helps
 understanding state variables of the contract. We will explain how the
 contract state is stored later.
-
 
 ### Compile a Contract
 
@@ -92,19 +86,13 @@ We receive the binary code of the contract as a response:
   },
   "fields": {
     "signature": "TxContract MyToken(owner:Address,mut remain:U256)",
-    "types": [
-      "Address",
-      "U256"
-    ]
+    "types": ["Address", "U256"]
   },
   "functions": [
     {
       "name": "buy",
       "signature": "pub payable buy(from:Address,alphAmount:U256)->()",
-      "argTypes": [
-        "Address",
-        "U256"
-      ],
+      "argTypes": ["Address", "U256"],
       "returnTypes": []
     }
   ],
@@ -117,7 +105,6 @@ We receive the binary code of the contract as a response:
 Now we need to create the contract transaction. First we obtain the
 publicKey of the address currently in use. We use address
 `1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG`.
-
 
 ```bash
 curl 'http://127.0.0.1:12973/wallets/demo-1/addresses/1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG'
@@ -207,10 +194,9 @@ curl -X 'POST' \
 If the request is valid, a response similar to the following is
 returned.
 
-
 ```json
 {
-  "txId":"a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2",
+  "txId": "a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2",
   "fromGroup": 3,
   "toGroup": 3
 }
@@ -223,14 +209,12 @@ so we need fetch the block containing the transaction via the node
 API. (You can obtain the block hash of a transaction either via the
 explorer or the endpoint `GET /transaction/status?txId={txId}`)
 
-
 ```bash
 curl 'http://127.0.0.1:12973/blockflow/blocks/08041abb8bc8d06c6b840ceb345a4f8953a9fbf9c32c08be34a63c93fd8dfcdf \
 ```
 
 We obtain a list of transactions (here we only show 2 out of 5
 transactions for readability):
-
 
 ```json
 {
@@ -408,11 +392,9 @@ The first output is the contract we just created. We see that the
 contract address owns `10000000000000000000000000000` tokens which is
 exactly the `issueTokenAmount` we previously defined.
 
-
 The second output is the UTXO output of the transaction submitted by
 our address `1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG`. This
 address doesn't own any tokens.
-
 
 ## Create and deploy a script
 
@@ -422,20 +404,16 @@ paying **ALPH** to the contract. For this example, we will pay using
 address `1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h` which is
 different than the one used to create the contract.
 
-
 If you also want to pay with an address different than the one used to
 submit the contract, please make sure that your address belongs to the
 same group as the contract. You can obtain the contract group by
 checking the `chainFrom` field of its transaction block. In our
 example, the contract is in group 3, but it might be in a different
-group for you. You can verify the group of an address at endpoint `GET
-addresses/{address}/group`. If it is not the case, you can use
+group for you. You can verify the group of an address at endpoint `GET addresses/{address}/group`. If it is not the case, you can use
 `POST/wallets/{wallet_name}/derive-next-address` until you obtain an
 address in the correct group. As new addresses are initialized with
 balance `0`, you should transfer some **ALPH** to this new
-address. Finally, change your active address at endpoint `POST
-wallets/{wallet_name}/change-active-address`.
-
+address. Finally, change your active address at endpoint `POST wallets/{wallet_name}/change-active-address`.
 
 ### Create a TxScript
 
@@ -460,13 +438,11 @@ Here is a brief explanation of this code:
 The next steps are very similar to the previous sections. We will
 compile, build, sign and submit the script.
 
-
 ### Compile a Script
 
 We query the node API to compile the script to binary code. **Make
 sure you append the source code of the `MyToken` contract after your
 `TxScript` code.**
-
 
 ```bash
 curl -X 'POST' \
@@ -588,7 +564,6 @@ And we receive the `txId` and groups information:
 Again, we can find the transaction on the mainnet by query the block
 containing the transaction. We observe the following transaction
 content:
-
 
 ```json
 {
@@ -716,7 +691,6 @@ content:
 We can see that there is a contract input, with the `outputRef.key`
 pointing to the contract we created earlier.
 
-
 ```json
 "contractInputs": [
   {
@@ -769,7 +743,6 @@ The third output is the contract after the exchange. We observe that
 the amount of tokens changed from `10000000000000000000000000000` to
 `9999999000000000000000000000`. The difference is equivalent to the
 amount of tokens we bought.
-
 
 ```json
 {

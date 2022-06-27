@@ -26,15 +26,15 @@ example, `<number>` means type a literal number value: 6, 7, 44, etc.
 
 Ralph has a nice small core of primitives.
 
-| Type                 | Constructor                                                     |
-| --------------------:| --------------------------------------------------------------- |
-| **()**               | None (a return statement with nothing)                          |
-| **Bool**             | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code> |
-| **I256**             | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
-| **U256**             | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, *, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, &, ^, &#124;</code> |
-| **Address**          | `@<address>`, `nullAddress!()`                                  |
-| **ByteVec**          | `#<hex-string>, ++`                                             |
-| **[type; size]**     | `[<value...>]`, type example: `[Address; 6]`                    |
+|             Type | Constructor                                                                                                   |
+| ---------------: | ------------------------------------------------------------------------------------------------------------- |
+|           **()** | None (a return statement with nothing)                                                                        |
+|         **Bool** | <code>false, true, <, >, >=, <=, ==, !=, &&, &#124;&#124;, !</code>                                           |
+|         **I256** | <code>-&lt;number&gt;, &lt;number&gt;i, +, -, \*, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, >, ^, &#124;</code>      |
+|         **U256** | <code>&nbsp;&lt;number&gt;, &lt;number&gt;u, +, -, \*, /, %, ⊕, ⊖, ⊗, &lt;&lt;, &gt;&gt;, >, ^, &#124;</code> |
+|      **Address** | `@<address>`, `nullAddress!()`                                                                                |
+|      **ByteVec** | `#<hex-string>, ++`                                                                                           |
+| **[type; size]** | `[<value...>]`, type example: `[Address; 6]`                                                                  |
 
 You'll notice there is no `String` type. Instead the `ByteVec` type can be used
 to hold onto textual data, or a `[U256; N]` array if you need to modify it.
@@ -42,13 +42,12 @@ to hold onto textual data, or a `[U256; N]` array if you need to modify it.
 :::note
 For numbers you can also use the following:
 
-* 1_000_000_000
-* 0.000_001
-* 1e18
-* 1e-18
-* 1_000e9
-:::
-
+- 1_000_000_000
+- 0.000_001
+- 1e18
+- 1e-18
+- 1_000e9
+  :::
 
 ## Syntax
 
@@ -61,19 +60,19 @@ available in programming languages.
 to muscle memory.
 :::
 
-| Token           | Constructor                                                                        |
-| ---------------:| ---------------------------------------------------------------------------------- |
-| **Comment**     | `//`                                                                               |
-| **Assignment**  | `let [mut] <name> = ...`                                                           |
-| **Assignment**  | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                      |
-| **Function**    | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`        |
+|           Token | Constructor                                                                        |
+| --------------: | ---------------------------------------------------------------------------------- |
+|     **Comment** | `//`                                                                               |
+|  **Assignment** | `let [mut] <name> = ...`                                                           |
+|  **Assignment** | `<arg> = <value>` or `(<arg1>, <argN>) = funcMultipleRetVals()`                    |
+|    **Function** | `[pub] [payable] fn <name>(arg: <type>) -> <type> { return <thingN, ...> }`        |
 | **Conditional** | `if <boolean expression> { <statements> } [else if { <statements> } else { ... }]` |
-| **Iteration**   | `while <boolean expression> { <statements> }`                                      |
-| **Event**       | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`           |
-| **Event**       | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                              |
-| **Structure**   | `interface <InterfaceName> { ... }`                                                |
-| **Structure**   | `TxContract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
-| **Structure**   | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
+|   **Iteration** | `while <boolean expression> { <statements> }`                                      |
+|       **Event** | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`           |
+|       **Event** | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                              |
+|   **Structure** | `interface <InterfaceName> { ... }`                                                |
+|   **Structure** | `TxContract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
+|   **Structure** | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
 
 ### Interfaces, TxContracts, and TxScripts
 
@@ -108,7 +107,7 @@ TxScript ScriptNameCanBeAnything {
     result = contract.functionName(arg)
     anotherFunc()
   }
-  
+
   fn anotherFunc() -> () {
     ...
   }
@@ -126,7 +125,7 @@ the [Asset Permission System](/dapps/Asset-Permission-System].
 You can call contract methods right after the contract constructor, i.e.
 `ContractName(...).function()`.
 :::
- 
+
 ## Built-in functions
 
 There are two types of functions: stateless and stateful.
@@ -141,114 +140,124 @@ When you see `!` it means the function is built-in to Ralph.
 
 ## Stateless functions
 
-
 ### Assertions
 
-* `assert!(input: Bool) -> ()`
-  * Will halt execution if false
-* `isAssetAddress!(input: Address) -> (Bool)`
-* `isContractAddress!(input: Address) -> (Bool)`
+- `assert!(input: Bool) -> ()`
+  - Will halt execution if false
+- `isAssetAddress!(input: Address) -> (Bool)`
+- `isContractAddress!(input: Address) -> (Bool)`
 
 ### Hashing
 
-* `blake2b!(input: ByteVec) -> (ByteVec)`
-* `keccak256!(input: ByteVec) -> (ByteVec)`
-* `sha256!(input: ByteVec) -> (ByteVec)`
-* `sha3!(input: ByteVec) -> (ByteVec)`
+- `blake2b!(input: ByteVec) -> (ByteVec)`
+- `keccak256!(input: ByteVec) -> (ByteVec)`
+- `sha256!(input: ByteVec) -> (ByteVec)`
+- `sha3!(input: ByteVec) -> (ByteVec)`
 
 ### Verification
 
-* `verifyTxSignature!(signature: ByteVec) -> ()`
-* `verifySecP256K1!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
-* `verifyED25519!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
-* `verifyAbsoluteLocktime!(unixTimestampMillis: U256) -> ()`
-* `verifyRelativeLocktime!(txHash: U256, timestampMillisRelative: U256) -> ()`
-* `ethEcRecover!(messageHash: ByteVec, sigBytes: ByteVec) -> (ByteVec)`
+- `verifyTxSignature!(signature: ByteVec) -> ()`
+- `verifySecP256K1!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
+- `verifyED25519!(input: ByteVec, publicKey: ByteVec, signature: ByteVec) -> ()`
+- `verifyAbsoluteLocktime!(unixTimestampMillis: U256) -> ()`
+- `verifyRelativeLocktime!(txHash: U256, timestampMillisRelative: U256) -> ()`
+- `ethEcRecover!(messageHash: ByteVec, sigBytes: ByteVec) -> (ByteVec)`
 
 ### Network
-* `networkId!() -> (ByteVec)`
-* `blockTimeStamp!() -> (U256)`
-* `blockTarget!() -> (U256)`
+
+- `networkId!() -> (ByteVec)`
+- `blockTimeStamp!() -> (U256)`
+- `blockTarget!() -> (U256)`
 
 ### Transactions
-* `txId!() -> (ByteVec)`
-* `txInputAddress!(utxoIndex: U256) -> (Address)`
-  * Returns the address of the utxo at an index (since multiple utxo can exist in a transaction)
-* `txInputsSize!() -> (U256)`
-* `uniqueTxInputAddress!() -> (Address)`
+
+- `txId!() -> (ByteVec)`
+- `txInputAddress!(utxoIndex: U256) -> (Address)`
+  - Returns the address of the utxo at an index (since multiple utxo can exist in a transaction)
+- `txInputsSize!() -> (U256)`
+- `uniqueTxInputAddress!() -> (Address)`
 
 ### Integer conversion
-* `toI256!(input: U256) -> (I256)`
-* `toU256!(input: I256) -> (U256)`
- 
+
+- `toI256!(input: U256) -> (I256)`
+- `toU256!(input: I256) -> (U256)`
+
 ### ByteVec functions
-* `byteVecSlice!(input: ByteVec, start: U256, end: U256) -> (ByteVec)`
-* `size!(input: ByteVec) -> (U256)`
-* `zeros!(amountOfZeros: U256) -> (ByteVec)`
-* `byteVecToAddress!(input: ByteVec) -> Address`
-* `encodeToByteVec!(fields...) -> (ByteVec)`
-* `toByteVec!(input: (Bool|I256|U256|Address)) -> (ByteVec)`
-* `u256To1Byte!(a: U256) -> (ByteVec)`
-* `u256To2Byte!(a: U256) -> (ByteVec)`
-* `u256To4Byte!(a: U256) -> (ByteVec)`
-* `u256To8Byte!(a: U256) -> (ByteVec)`
-* `u256To16Byte!(a: U256) -> (ByteVec)`
-* `u256To32Byte!(a: U256) -> (ByteVec)`
-* `u256From1Byte!(a: U256) -> (ByteVec)`
-* `u256From2Byte!(a: U256) -> (ByteVec)`
-* `u256From4Byte!(a: U256) -> (ByteVec)`
-* `u256From8Byte!(a: U256) -> (ByteVec)`
-* `u256From16Byte!(a: U256) -> (ByteVec)`
-* `u256From32Byte!(a: U256) -> (ByteVec)`
+
+- `byteVecSlice!(input: ByteVec, start: U256, end: U256) -> (ByteVec)`
+- `size!(input: ByteVec) -> (U256)`
+- `zeros!(amountOfZeros: U256) -> (ByteVec)`
+- `byteVecToAddress!(input: ByteVec) -> Address`
+- `encodeToByteVec!(fields...) -> (ByteVec)`
+- `toByteVec!(input: (Bool|I256|U256|Address)) -> (ByteVec)`
+- `u256To1Byte!(a: U256) -> (ByteVec)`
+- `u256To2Byte!(a: U256) -> (ByteVec)`
+- `u256To4Byte!(a: U256) -> (ByteVec)`
+- `u256To8Byte!(a: U256) -> (ByteVec)`
+- `u256To16Byte!(a: U256) -> (ByteVec)`
+- `u256To32Byte!(a: U256) -> (ByteVec)`
+- `u256From1Byte!(a: U256) -> (ByteVec)`
+- `u256From2Byte!(a: U256) -> (ByteVec)`
+- `u256From4Byte!(a: U256) -> (ByteVec)`
+- `u256From8Byte!(a: U256) -> (ByteVec)`
+- `u256From16Byte!(a: U256) -> (ByteVec)`
+- `u256From32Byte!(a: U256) -> (ByteVec)`
 
 ## Stateful functions
 
 ### Assertions
-* `isPaying!(address: Address) -> (Bool)`
-* `isCalledFromTxScript!() -> (Bool)`
+
+- `isPaying!(address: Address) -> (Bool)`
+- `isCalledFromTxScript!() -> (Bool)`
 
 ### Asset transfer approval
-* `approveAlph!(forAddress: Address, amount: U256)) -> ()`
-* `approveToken!(forAddress: Address, tokenId: ByteVec, amount:U256)) -> ()`
+
+- `approveAlph!(forAddress: Address, amount: U256)) -> ()`
+- `approveToken!(forAddress: Address, tokenId: ByteVec, amount:U256)) -> ()`
 
 ### Account balance
-* `alphRemaining!(address: Address) -> (U256)`
-* `tokenRemaining!(address: Address, tokenId: ByteVec) -> (U256)`
+
+- `alphRemaining!(address: Address) -> (U256)`
+- `tokenRemaining!(address: Address, tokenId: ByteVec) -> (U256)`
 
 ### Transfers
-* `transferAlph!(from: Address, to: Address, amount: U256) -> ()`
-* `transferAlphFromSelf!(toBeneficiary: Address, amount: U256) -> ()`
-* `transferAlphToSelf!(fromBeneficiary: Address, amount: U256) -> ()`
-  * This pair of `transferAlph` functions are useful to avoid accidentally sending or receiving money to another address.
-* `transferToken!(from: Address, to: Address, tokenId: ByteVec, amount: U256) -> ()`
-* `transferTokenFromSelf!(toBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
-* `transferTokenToSelf!(fromBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
-  * Same usage as the other pair of `transferAlph` functions.
+
+- `transferAlph!(from: Address, to: Address, amount: U256) -> ()`
+- `transferAlphFromSelf!(toBeneficiary: Address, amount: U256) -> ()`
+- `transferAlphToSelf!(fromBeneficiary: Address, amount: U256) -> ()`
+  - This pair of `transferAlph` functions are useful to avoid accidentally sending or receiving money to another address.
+- `transferToken!(from: Address, to: Address, tokenId: ByteVec, amount: U256) -> ()`
+- `transferTokenFromSelf!(toBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
+- `transferTokenToSelf!(fromBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
+  - Same usage as the other pair of `transferAlph` functions.
 
 ### Contracts
-* `createContract!(codeCompiled: ByteVec, state: ByteVec) -> (ByteVec)`
-* `createContractWithToken!(codeCompiled: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
-  * `state` is the state as its passed to the build-contract endpoint.
-* `copyCreateContract!(contractId: ByteVec, state: ByteVec) -> (ByteVec)`
-* `copyCreateContractWithToken!(contractId: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
-* `destroySelf!(address: Address) -> ()`
-* `migrate!(codeCompiled: ByteVec)`
-  * Updates the contract in-place
-* `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)`
+
+- `createContract!(codeCompiled: ByteVec, state: ByteVec) -> (ByteVec)`
+- `createContractWithToken!(codeCompiled: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
+  - `state` is the state as its passed to the build-contract endpoint.
+- `copyCreateContract!(contractId: ByteVec, state: ByteVec) -> (ByteVec)`
+- `copyCreateContractWithToken!(contractId: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
+- `destroySelf!(address: Address) -> ()`
+- `migrate!(codeCompiled: ByteVec)`
+  - Updates the contract in-place
+- `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)`
 
 ### Internal
-* `selfAddress!() -> (Address)`
-* `selfContractId!() -> (ByteVec)`
-* `selfTokenId!() -> (ByteVec)`
+
+- `selfAddress!() -> (Address)`
+- `selfContractId!() -> (ByteVec)`
+- `selfTokenId!() -> (ByteVec)`
 
 ### Caller
-* `callerContractId!() -> (ByteVec)`
-* `callerAddress!() -> (Address)`
-  * This is the **last** caller, in case of chained calls across contracts, scripts and users.
-* `callerInitialStateHash!() -> (ByteVec)`
-* `callerCodeHash!() -> (ByteVec)`
+
+- `callerContractId!() -> (ByteVec)`
+- `callerAddress!() -> (Address)`
+  - This is the **last** caller, in case of chained calls across contracts, scripts and users.
+- `callerInitialStateHash!() -> (ByteVec)`
+- `callerCodeHash!() -> (ByteVec)`
 
 ### Hashes
-* `contractInitialStateHash!(contractId: ByteVec) -> (ByteVec)`
-* `contractCodeHash!() -> (contractId: ByteVec) -> (ByteVec)`
 
+- `contractInitialStateHash!(contractId: ByteVec) -> (ByteVec)`
+- `contractCodeHash!() -> (contractId: ByteVec) -> (ByteVec)`

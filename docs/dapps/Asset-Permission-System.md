@@ -19,7 +19,7 @@ Using the `TxScript` the funds can flow into a contract, or to another user's
 address.
 
 :::note
-That's right! Unlike in Ethereum, you *don't* send funds directly to contract
+That's right! Unlike in Ethereum, you _don't_ send funds directly to contract
 addresses!
 :::
 
@@ -39,21 +39,20 @@ Ralph.
 There are also some built-ins which also commit funds and use them immediately.
 
 These built-ins are:
-* `createContract!`
-:::
 
+- `createContract!`
+  :::
 
 ## A concrete demonstration
 
 Since code partially dictates the flow of funds, the explanation is tightly
 coupled to it. The best way to explain then is to use code and comments.
 
-
 ```javascript
 // User sends 10 ALPH along with this TxScript
 TxScript MyScriptWithAName() {
   let myAddress = callerAddress!()
-  
+
   // Stage 5 ALPH into the `approvedAssets` property.
   approveAlph!(myAddress, 5)
   let contract = SomeContractIWrote(<contract-id-goes-here>)

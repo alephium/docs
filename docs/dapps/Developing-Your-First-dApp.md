@@ -17,19 +17,19 @@ interface which communicates with its contract(s).
 
 There are **only two requirements** to write and deploy a dApp:
 
-* alephium/desktop-wallet:cheng-walletconnect
-* nodejs
+- alephium/desktop-wallet:cheng-walletconnect
+- nodejs
 
 and one temporary requirement until the hardfork happens:
 
-* alephium/alephium:1.4.0-leman8
+- alephium/alephium:1.4.0-leman8
 
 ### Setup
 
-* Start the desktop wallet
-* Make sure the wallet is using the testnet
-* Create a new wallet
-* Request testnet ALPH from the Discord or mine it
+- Start the desktop wallet
+- Make sure the wallet is using the testnet
+- Create a new wallet
+- Request testnet ALPH from the Discord or mine it
 
 ## The pieces of a smart contract
 
@@ -52,6 +52,7 @@ learn.
 ## The web browser, smart contract, and wallet triad
 
 ### @alephium
-### WalletConnect
-### Composing them together (development and interaction)
 
+### WalletConnect
+
+### Composing them together (development and interaction)

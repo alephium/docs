@@ -27,14 +27,16 @@ alephium.mining.miner-addresses = [4 miner addresses]
 alephium.api.network-interface = "0.0.0.0"
 alephium.api.api-key = "<api key>"
 ```
+
 ## Community Pools
+
 ### ⚠️ Disclaimer
 
 This is a non-exhaustive list of mining-pools that are driven by the community. These pools are in no way endorsed by Alephium and Alephium cannot be held responsible for your choice of Pool. While the pools listed here have behaved as expected so far, keep in mind that choosing a pool requires you to do some research regarding the security, reputation and general safety of the pool. A good place to start is to [ask the community on the Discord](https://discord.gg/JErgRBfRSB)
 
 ### Using pools and how to get support
 
-We’re happy to see this list of pools grow and diversify. Please give them a try. If one pool grows too big, consider switching to a different pool to enhance decentralization. 
+We’re happy to see this list of pools grow and diversify. Please give them a try. If one pool grows too big, consider switching to a different pool to enhance decentralization.
 
 Alephium is still very new and it is important that you keep an eye on updates. This is also valid for the software needed to join the mining pools. Remember that each pool has a thriving community with channels welcoming your support requests and questions. Therefore it is always best to ask your pool related questions in the concerned pool’s group. You may also find instructions in your own language in one of our [community playlists available here.](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists)
 
@@ -43,44 +45,58 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 ### Currently known and active pools
 
 #### Alephium-pool (Community pool)
+
 - Website: https://alephium-pool.com/
 - Telegram: https://t.me/alephium_pool
 - Discord: https://discord.gg/ZXYU2NGx
 
 #### Coinhunters Pool
+
 - Website: https://alph.coinhunters.space
 - Telegram (EN): https://t.me/alph_coinhunters_en
 - Telegram (RU): https://t.me/alph_gravitsapapool_ru
 
 #### Metapool (Community pool)
+
 - Website: https://www.metapool.tech
 - Calculator: https://metapool.tech/dashboard#calculator
 - Telegram: https://t.me/metapool1
 - Discord: https://discord.gg/5TTzMDzJ
 
 #### Wooly Pooly
+
 - Website: https://woolypooly.com/en/coin/alph
 - Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
+
 #### Herominers Pool
+
 - Website: https://alephium.herominers.com/
 - Discord: https://discord.com/invite/gvWSs84
 - Telegram: https://t.me/HeroMinersPool
+
 #### Enigma Pool
+
 - Website: https://enigmapool.com/
 - Discord: https://discord.com/invite/enigmapool
 - Calculator: https://enigmapool.com/tools/calculator
+
 #### Soloblocks
+
 - Website: https://soloblocks.org/alph/
+
 #### Solopool.org
+
 - Website: https://alph.solopool.org/
 - Telegram: https://t.me/solopool_org
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
 
 ### Pools no longer active
+
 #### e4p1k0 ALPH Pool (TLS Cert is expired)
+
 - Website: https://alph.e4pool.com/
 - Telegram: https://t.me/E4piko
 
