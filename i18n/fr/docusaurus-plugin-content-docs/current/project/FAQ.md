@@ -141,7 +141,8 @@ We don't have an exact date on this. But we are working on it. However, you will
 
 ## Miscellaneous
 
-### Do you have a Grant & Reward Program? 
+### Do you have a Grant & Reward Program?
+
 Yes, see [this document](https://github.com/alephium/community/blob/master/Grant&RewardProgram.md) for the details.
 
 ### How many Transactions Per Second (TPS)

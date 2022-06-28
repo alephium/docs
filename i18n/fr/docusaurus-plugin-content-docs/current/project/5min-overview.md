@@ -41,46 +41,46 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 
 **Coeur de la plateforme**
 
--   02.2019 — Publication des livres blancs
--   T1.2020 — Mise en œuvre et test de la version alpha du protocole de sharding principal sur AWS.
--   12.2020 — Lancement du Testnet
--   T1.2021 — Prise en charge des contrats intelligents
--   09.2021 — Sortie publique du wallet et de l'explorateur
--   08.11.2021 — Lancement du Mainnet et service de "cloud-mining" tiers
--   01.2022 — 1ère dApp proof-of-concept
+- 02.2019 — Publication des livres blancs
+- T1.2020 — Mise en œuvre et test de la version alpha du protocole de sharding principal sur AWS.
+- 12.2020 — Lancement du Testnet
+- T1.2021 — Prise en charge des contrats intelligents
+- 09.2021 — Sortie publique du wallet et de l'explorateur
+- 08.11.2021 — Lancement du Mainnet et service de "cloud-mining" tiers
+- 01.2022 — 1ère dApp proof-of-concept
 
 **Ecosystème**
 
--   11.2021 — Adhésion à l'alliance UTXO et à la Bitcoin Association Switzerland
--   Q4.2021 — Développement de l'écosystème de minage: développement des logiciels de minage, pool minage Alephium et intégration.
--   13.12.2021 — Premier pool de minage communautaire.
--   12.01.2022 — Première listing sur un échange: Gate.io
--   02.2022 — 9 pools de minage sur Alephium
+- 11.2021 — Adhésion à l'alliance UTXO et à la Bitcoin Association Switzerland
+- Q4.2021 — Développement de l'écosystème de minage: développement des logiciels de minage, pool minage Alephium et intégration.
+- 13.12.2021 — Premier pool de minage communautaire.
+- 12.01.2022 — Première listing sur un échange: Gate.io
+- 02.2022 — 9 pools de minage sur Alephium
 
 ### 🛣️ Roadmap
 
 **Coeur de la plateforme**
 
--   Améliorer la robustesse, l'efficacité et l'expérience de développement du nœud complet.
--   Améliorer la documentation de l'infrastructure de base
--   Améliorer le SDK Alephium avec plus de fonctionnalités
--   Améliorer la robustesse et l'efficacité du backend de l'explorateur
--   Inclure des statistiques et des informations sur la chaîne dans l'explorateur
--   Développement, test et lancement de la passerelle
--   Mise à niveau du réseau Leman pour l'interopérabilité inter-chaînes
--   Support des dApps dans le wallet
--   Développement, test et lancement du DEX
--   Wallet sur Android, iOS
--   Intégration du support pour wallet hardware
+- Améliorer la robustesse, l'efficacité et l'expérience de développement du nœud complet.
+- Améliorer la documentation de l'infrastructure de base
+- Améliorer le SDK Alephium avec plus de fonctionnalités
+- Améliorer la robustesse et l'efficacité du backend de l'explorateur
+- Inclure des statistiques et des informations sur la chaîne dans l'explorateur
+- Développement, test et lancement de la passerelle
+- Mise à niveau du réseau Leman pour l'interopérabilité inter-chaînes
+- Support des dApps dans le wallet
+- Développement, test et lancement du DEX
+- Wallet sur Android, iOS
+- Intégration du support pour wallet hardware
 
 **Ecosystème**
 
--   Refonte du site web
--   Renforcement de l'engagement communautaire et des initiatives de marketing (hackathon, AMA, concours communautaires, campagnes, etc.)
--   Participations aux événements clés du secteur (PBWS, EthCCet autres)
--   Listing sur des DEX (après le déploiement de la passerelle)
--   Listing supplémentaire aux CEX
--   dApps tiers (NFT, DEX, stablecoin) sur Alephium
+- Refonte du site web
+- Renforcement de l'engagement communautaire et des initiatives de marketing (hackathon, AMA, concours communautaires, campagnes, etc.)
+- Participations aux événements clés du secteur (PBWS, EthCCet autres)
+- Listing sur des DEX (après le déploiement de la passerelle)
+- Listing supplémentaire aux CEX
+- dApps tiers (NFT, DEX, stablecoin) sur Alephium
 
 ---
 
@@ -142,8 +142,11 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 ## 🦄 Contenu non officiel et communautés (qui ne sont pas modérées, approuvées ou gérées par Alephium)
 
 ### Chattez en votre langue
+
 Vous trouverez la list complète des cannaux de chats internationaux [ici](https://wiki.alephium.org/misc/Internationalization-and-Localization)
+
 ### Youtube
+
 - [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
 - [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
 - [Youtube videos 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)

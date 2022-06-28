@@ -65,9 +65,9 @@ If using the docker full node, then simply change the mounted folder definitions
 
 There are several environment variables used for logging:
 
-* `ALEPHIUM_LOG_LEVEL` could change the console log level.
-* `ALEPHIUM_ENABLE_DEBUG_LOGGING` could enable debug logging.
-* `ALEPHIUM_HOME` could change the home folder of the full node, therefore the folder of logs
+- `ALEPHIUM_LOG_LEVEL` could change the console log level.
+- `ALEPHIUM_ENABLE_DEBUG_LOGGING` could enable debug logging.
+- `ALEPHIUM_HOME` could change the home folder of the full node, therefore the folder of logs
 
 Below is an example with all of the possible logging options:
 

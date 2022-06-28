@@ -108,7 +108,7 @@ The core team counts 14 members. 9 are tech team members and the remaining 5 are
 
 [@ChengWang#1571](https://twitter.com/wachmc) 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
 
-[@s0ukie#8277](https://twitter.com/s0ukie)  ⚙️ is our Chief of Staff, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
+[@s0ukie#8277](https://twitter.com/s0ukie) ⚙️ is our Chief of Staff, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
 
 [@setto#4764](http://twitter.com/heptazoid) 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
 
@@ -146,6 +146,7 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 You will find the complete list of internationalized channel [here](https://wiki.alephium.org/misc/Internationalization-and-Localization)
 
 ### Youtube
+
 - [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
 - [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
 - [Youtube videos 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
