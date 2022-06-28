@@ -185,14 +185,6 @@ const config = {
             from: "/Multisig-Guide.html",
             to: "/wallet/Multisig-Guide",
           },
-          {
-            from: "/Smart-Contract-Guide.html",
-            to: "/dapps/Technical-Guide-With-A-Fullnode",
-          },
-          {
-            from: "/Smart-Contract-More.html",
-            to: "/dapps/Additional-Information",
-          },
           { from: "/Roadmap.html", to: "/5min-overview" },
           {
             from: "/Testnet-Guide.html",
