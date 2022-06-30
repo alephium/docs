@@ -1,7 +1,11 @@
 ---
-sidebar_position: 13
+sidebar_position: 50
 title: Best practices
 ---
+
+:::info
+This page is WIP until our dApps stack is more stable 🚧
+:::
 
 Every language has its own idioms, and Ralph is no different. It's important to
 follow these idioms so that others who can read Ralph are able to understand
@@ -28,4 +32,6 @@ for errors.
 
 ## Safety techniques
 
-None at the moment
+:::note
+TODO
+:::

@@ -1,7 +1,11 @@
 ---
-sidebar_position: 30
+sidebar_position: 20
 title: Technical guide with a fullnode
 ---
+
+:::info
+This page is WIP until our dApps stack is more stable 🚧
+:::
 
 This document guides you through the creation, deployment and usage of
 smart contracts on Alephium mainnet.

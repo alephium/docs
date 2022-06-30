@@ -1,7 +1,11 @@
 ---
-sidebar_position: 11
+sidebar_position: 40
 title: Developing your first dApp
 ---
+
+:::info
+This page is WIP until our dApps stack is more stable 🚧
+:::
 
 The document segments development of smart contracts into two sections: server
 and client.
@@ -22,7 +26,7 @@ There are **only two requirements** to write and deploy a dApp:
 
 and one temporary requirement until the hardfork happens:
 
-- alephium/alephium:1.4.0-leman8
+- alephium/alephium:1.4.x
 
 ### Setup
 
@@ -47,12 +51,36 @@ learn.
 
 ### TxContract
 
+:::note
+TODO
+:::
+
 ### TxScript
+
+:::note
+TODO
+:::
 
 ## The web browser, smart contract, and wallet triad
 
+:::note
+TODO
+:::
+
 ### @alephium
+
+:::note
+TODO
+:::
 
 ### WalletConnect
 
+:::note
+TODO
+:::
+
 ### Composing them together (development and interaction)
+
+:::note
+TODO
+:::

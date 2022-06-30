@@ -1,19 +1,15 @@
 ---
-sidebar_position: 14
+sidebar_position: 30
 title: Ralph language reference
 ---
 
-A reference for the Ralph smart contract language.
-
-:::note
-The following documentation is derived from the alephium/alephium source code.
-:::
-
-:::caution
-**It could become out of date at any time**, so double-check with other developers
+:::info
+This page is WIP until our dApps stack is more stable 🚧. It is derived from the alephium/alephium source code. **It could become out of date at any time**, so double-check with other developers
 if you think something has changed, and if it has, [fork this wiki](https://github.com/alephium/wiki.git)
 and [open a PR](https://github.com/alephium/wiki/compare)!
 :::
+
+A reference for the Ralph smart contract language.
 
 ## Notation used in this document
 

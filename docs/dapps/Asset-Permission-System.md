@@ -1,7 +1,11 @@
 ---
-sidebar_position: 15
+sidebar_position: 60
 title: Asset Permission System (APS)
 ---
+
+:::info
+This page is WIP until our dApps stack is more stable 🚧
+:::
 
 The Asset Permission System (APS) is one of Ralph's defining features. It gives
 developers a safety net and the ability to build with confidence on Alephium.
@@ -41,7 +45,8 @@ There are also some built-ins which also commit funds and use them immediately.
 These built-ins are:
 
 - `createContract!`
-  :::
+
+:::
 
 ## A concrete demonstration
 
