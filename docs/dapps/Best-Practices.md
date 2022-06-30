@@ -3,7 +3,7 @@ sidebar_position: 50
 title: Best practices
 ---
 
-:::info
+:::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::
 

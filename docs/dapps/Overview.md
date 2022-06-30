@@ -3,7 +3,7 @@ sidebar_position: 10
 title: dApps Overview
 ---
 
-:::info
+:::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::
 

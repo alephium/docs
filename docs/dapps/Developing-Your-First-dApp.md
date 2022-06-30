@@ -3,7 +3,7 @@ sidebar_position: 40
 title: Developing your first dApp
 ---
 
-:::info
+:::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::
 

@@ -3,7 +3,7 @@ sidebar_position: 60
 title: Asset Permission System (APS)
 ---
 
-:::info
+:::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::
 
