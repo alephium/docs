@@ -1,10 +1,14 @@
 ---
-sidebar_position: 11
+sidebar_position: 20
 title: Technical guide with a fullnode
 ---
 
 :::info
 Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
+
+:::caution
+This page is WIP until our dApps stack is more stable 🚧
 :::
 
 This document guides you through the creation, deployment and usage of

@@ -3,6 +3,10 @@ sidebar_position: 30
 title: Ralph language reference
 ---
 
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
+
 :::caution
 This page is WIP until our dApps stack is more stable 🚧. It is derived from the alephium/alephium source code. **It could become out of date at any time**, so double-check with other developers
 if you think something has changed, and if it has, [fork this wiki](https://github.com/alephium/wiki.git)

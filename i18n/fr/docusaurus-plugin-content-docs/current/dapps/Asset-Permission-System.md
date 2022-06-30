@@ -3,6 +3,10 @@ sidebar_position: 60
 title: Asset Permission System (APS)
 ---
 
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
+
 :::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::

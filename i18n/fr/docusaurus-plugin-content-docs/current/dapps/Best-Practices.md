@@ -3,6 +3,10 @@ sidebar_position: 50
 title: Best practices
 ---
 
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
+
 :::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::
