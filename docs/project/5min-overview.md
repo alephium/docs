@@ -2,7 +2,7 @@
 sidebar_position: 10
 sidebar_label: Overview
 slug: /5min-overview
-title: Alephium overiew
+title: Alephium overview
 ---
 
 ## 🐥 What is Alephium?
