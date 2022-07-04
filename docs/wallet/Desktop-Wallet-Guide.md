@@ -15,15 +15,15 @@ The desktop wallet is the most user-friendly Alephium wallet available today. Yo
 1. By default, the wallet will be connected to the Alephium public node (please note that your mnemonic or your private key will never be uploaded to the public node). Should you want to use your personal node or generate the wallet offline, you can do so by clicking the setting wheel on the top right of the app and changing the Node Host to your localhost or simply leaving it blank to create the wallet offline.
 1. Click on _Create/Import a wallet_, then click _New wallet_.
 1. Choose a wallet name. You might want to choose a name that allows you to identify your wallet easily.
-1. Pick a password to protect your wallet on your computer. This password does not replace your wallet's 24 secret words. It is only used to log in and out of the created wallet easily.
+1. Pick a password to protect your wallet on your computer. This password does not replace your wallet's 24-word secret phrase. It is only used to log in and out of the created wallet easily.
 1. Click _Continue_.
 1. You now see your new wallet's information 🎉
 1. Your address is a long string of characters. It is what identifies your wallet on the Alephium network.
-1. In the highlighted box, you will see 24 words. These are your wallet's 24 secret words. This is your most precious piece of information, and you must store it wisely, safely, and carefully.
-1. Copy and store your 24 secret words safely on several offline mediums such as paper and metal and store them in different places.
-1. You will now be asked to verify that you got the 24 secret words right by listing the words in the correct order. Click _Ready_ and reenter the words with the selection box.
+1. In the highlighted box, you will see 24 words. These are your wallet's 24-word secret phrase. This is your most precious piece of information, and you must store it wisely, safely, and carefully.
+1. Copy and store your 24-word secret phrase safely on several offline mediums such as paper and metal and store them in different places.
+1. You will now be asked to verify that you got the 24-word secret phrase right by listing the words in the correct order. Click _Ready_ and reenter the words with the selection box.
 1. When all the words are in the correct order, you will be prompted visually to continue.
-1. Everything is ready! Your wallet is now created (and you've made sure to save your 24 words).
+1. Everything is ready! Your wallet is now created (and you've made sure to save your 24-word secret phrase).
 
 ## Creating a mining wallet with 4 addresses
 
