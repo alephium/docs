@@ -89,7 +89,7 @@ An attacker threatens you to reveal the password to your _My Alephium Wallet_ wa
 
 ### Best practices when using a Passphrase
 
-You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet. As a result, is imperative to:
+You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet. As a result, it is imperative to:
 
 1. Choose a Passphrase that you can remember and enter it correctly before sending any funds to the generated wallet.
 2. Remember it character by character.
