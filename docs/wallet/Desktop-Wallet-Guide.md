@@ -85,7 +85,7 @@ In the unfortunate scenario where an attacker forces you to reveal your wallet p
 - You have created a "hidden wallet" with the passphrase _letsUnlockAHiddenWallet_. You have transferred 900 ALPH to it.
 - You have created yet another "hidden wallet" with the passphrase _youCanNeverGuessThat!_. You have transferred the remaining 9'000 ALPH to it.
 
-An attacker threatens you to reveal the password to your _My Alephium Wallet_ wallet. You give it and the attacker steals the 100 ALPH in it. The attacker notices that the wallet offers the Passphrase feature and once again threatens you to reveal any additional Passphrases. At this point, you can deny that you use this feature and there will be no way for the attacker to prove whether you use it or not. Nevertheless, you decide to give them the passphrase _letsUnlockAHiddenWallet_ and the attacker steals the 900 ALPH. The attacker is happy that they stole all your funds and leaves you in peace. You have successfully managed to secure your safety and most of your funds' safety.
+An attacker threatens you to reveal the password to your _My Alephium Wallet_ wallet. You give it and the attacker steals the 100 ALPH in it. The attacker notices that the wallet offers the Passphrase feature and once again threatens you to reveal any additional Passphrases. At this point, you can deny that you use this feature and there will be no way for the attacker to prove whether you use it or not. Nevertheless, you decide to give them the passphrase _letsUnlockAHiddenWallet_ and the attacker steals the 900 ALPH. Convinced that they have stolen all your funds, the attacker is no longer interested in extorting you. You have successfully managed to secure your safety and most of your funds' safety.
 
 ### Best practices when using a Passphrase
 
@@ -93,8 +93,6 @@ You must remember your Passphrase perfectly. Changing a single character (even, 
 
 1. Choose a Passphrase that you can remember and enter it correctly before sending any funds to the generated wallet.
 2. Remember it character by character.
-
-[bip39-spec]: https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed
 
 ### Limitations of Passphrase-enabled wallets
 
@@ -105,3 +103,5 @@ The desktop wallet allows you to generate multiple addresses and select a colore
 To guarantee the benefit of plausible deniability for our users, we cannot store metadata related to the Passphrase-enabled wallets, since we assume that an attacker has access to your wallet password, your 24-word secret phrase, as well as to the local storage of the app. If we did, the attacker could then prove whether you use the Passphrase feature or not, voiding plausible deniability. Thus, the Passphrase-enabled wallets cannot remember which addresses you have generated and what labels and colors you assign to each of them.
 
 In the future, we will be able to bring the metadata storage feature to the Passphrase-enabled wallets, once we implement the feature that will allow importing of Extended Public Keys. Then, you will be able to store additional addresses together with their labels and colors in the Passphrase-enabled wallets. Stay tuned and always keep your desktop wallet app up to date!
+
+[bip39-spec]: https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed
