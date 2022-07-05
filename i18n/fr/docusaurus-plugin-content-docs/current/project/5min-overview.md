@@ -9,9 +9,9 @@ title: Alephium en 5 minutes
 
 Alephium est la première blockchain sharded de couche 1, extensible et améliore les technologies de base du bitcoin, Proof of Work & UTXO. Elle fournit une plateforme DeFi et Dapps hautement performante et sécurisée avec une efficacité énergétique améliorée.
 
--> Comme Bitcoin, mais plus programmable et plus économe en énergie.\
--> Comme Ethereum, mais plus sûr et plus évolutif.\
--> Comme Solana, mais plus décentralisé et plus fiable.
+- Comme Bitcoin, mais plus programmable et plus économe en énergie.
+- Comme Ethereum, mais plus sûr et plus évolutif.
+- Comme Solana, mais plus décentralisé et plus fiable.
 
 ---
 
@@ -56,6 +56,7 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 - 13.12.2021 — Premier pool de minage communautaire.
 - 12.01.2022 — Première listing sur un échange: Gate.io
 - 02.2022 — 9 pools de minage sur Alephium
+- 06.2022 — Inclure des statistiques et des informations sur la chaîne dans l'explorateur
 
 ### 🛣️ Roadmap
 
@@ -65,7 +66,6 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 - Améliorer la documentation de l'infrastructure de base
 - Améliorer le SDK Alephium avec plus de fonctionnalités
 - Améliorer la robustesse et l'efficacité du backend de l'explorateur
-- Inclure des statistiques et des informations sur la chaîne dans l'explorateur
 - Développement, test et lancement de la passerelle
 - Mise à niveau du réseau Leman pour l'interopérabilité inter-chaînes
 - Support des dApps dans le wallet
@@ -147,9 +147,19 @@ Vous trouverez la list complète des cannaux de chats internationaux [ici](https
 
 ### Youtube
 
-- [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
-- [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
-- [Youtube videos 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
+- [Youtube 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
+- [Youtube 🇧🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PiisJCIWqeOsd20dsMtJIg)
+- [Youtube 🇨🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1O931vGMfFb0Qx3gFKhd4bD)
+- [Youtube 🇩🇪](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OtYdw8lKeke6nNSSfASzZq)
+- [Youtube 🇮🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PBoCF0L2TfeWYC8b7DeTAn)
+- [Youtube 🇮🇩](https://www.youtube.com/playlist?list=PL8q8n0BHJS1MEOKbcmicEO0uTuz67D5Fz)
+- [Youtube 🇮🇹](https://www.youtube.com/playlist?list=PL8q8n0BHJS1O749KEPqfnwlr-RDlqJ20U)
+- [Youtube 🇯🇵](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PS9PGIYJd8pjK6fw8AKZO4)
+- [Youtube 🇲🇾](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OkFwspCxIVfFS2sVeGEC4K)
+- [Youtube 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
+- [Youtube 🇹🇭](https://www.youtube.com/playlist?list=PL8q8n0BHJS1MhpbWV3PI4xoXhjB06az_M)
+- [Youtube 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
+- [Youtube 🇻🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PJq68hRBfw3xeXGlfVDWVr)
 
 ---
 
@@ -185,10 +195,10 @@ Trouvez notre pack de démarrage pour miner sur Github : <https://github.com/ale
 
 Et les dépôts spécifiques :
 
-- <https://github.com/alephium/gpu-miner>
-- <https://github.com/alephium/fpga-miner>
-- <https://github.com/alephium/mining-pool>
+- https://github.com/alephium/gpu-miner
+- https://github.com/alephium/fpga-miner
+- https://github.com/alephium/mining-pool
 
 Et voici une vidéo sur la façon de démarrer le minage en solo : <https://www.youtube.com/watch?v=hdPH6inWjhc>
 
-Et si vous préférez rejoindre un pool, vous trouverez la liste des pools disponibles au moment de l'écriture [ici](https://wiki.alephium.org/mining/Pool-Mining-Guide#community-pools).
+Et si vous préférez rejoindre un pool, vous trouverez la liste des pools disponibles au moment de l'écriture [ici](https://wiki.alephium.org/fr/mining/Pool-Mining-Guide#community-pools).

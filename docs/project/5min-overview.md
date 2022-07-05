@@ -56,6 +56,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 - 13.12.2021 — First community mining pool
 - 12.01.2022 — First exchange listing: Gate.io
 - 02.2022 — 9 mining pools on Alephium
+- 06.2022 — Include chain statistics and information on the explorer
 
 ### 🛣️ Roadmap
 
@@ -67,7 +68,6 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 - Improve documentation of the core infrastructure
 - Improve the Alephium SDK with more features
 - Improve the robustness and efficiency of the explorer backend
-- Include chain statistics and information on the explorer
 - Bridge development, testing, and launch
 - Leman Network Upgrade for cross-chain interoperability
 - dApp support in the desktop wallet
@@ -83,6 +83,8 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 - DEX listing (after the deployment of the bridge)
 - Additional CEX listing
 - 3rd party dApps (NFT, DEX, stablecoin) on Alephium
+
+---
 
 ## 🛡 Our tokenomics
 
@@ -147,9 +149,19 @@ You will find the complete list of internationalized channel [here](https://wiki
 
 ### Youtube
 
-- [Youtube videos 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
-- [Youtube videos 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
-- [Youtube videos 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
+- [Youtube 🌎](https://www.youtube.com/playlist?list=PL8q8n0BHJS1Nd0nxGfsNJzNnAeHoXhezz)
+- [Youtube 🇧🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PiisJCIWqeOsd20dsMtJIg)
+- [Youtube 🇨🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1O931vGMfFb0Qx3gFKhd4bD)
+- [Youtube 🇩🇪](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OtYdw8lKeke6nNSSfASzZq)
+- [Youtube 🇮🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PBoCF0L2TfeWYC8b7DeTAn)
+- [Youtube 🇮🇩](https://www.youtube.com/playlist?list=PL8q8n0BHJS1MEOKbcmicEO0uTuz67D5Fz)
+- [Youtube 🇮🇹](https://www.youtube.com/playlist?list=PL8q8n0BHJS1O749KEPqfnwlr-RDlqJ20U)
+- [Youtube 🇯🇵](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PS9PGIYJd8pjK6fw8AKZO4)
+- [Youtube 🇲🇾](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OkFwspCxIVfFS2sVeGEC4K)
+- [Youtube 🇷🇺](https://www.youtube.com/playlist?list=PL8q8n0BHJS1P4-22OaT_w3vwNZVwiQt6s)
+- [Youtube 🇹🇭](https://www.youtube.com/playlist?list=PL8q8n0BHJS1MhpbWV3PI4xoXhjB06az_M)
+- [Youtube 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
+- [Youtube 🇻🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PJq68hRBfw3xeXGlfVDWVr)
 
 ---
 
