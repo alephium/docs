@@ -70,7 +70,7 @@ Let's assume that you created a new wallet, you gave it the name _My Alephium Wa
 
 #### The "hidden wallet"
 
-The next time you open your wallet, you select that you want to login to _My Alephium Wallet_ and you provide your password _myVeryStrongPassw0rd_. Instead of clicking _Login_ directly, however, you enter the Passphrase _letsUnlockAHiddenWallet_, and then click _Login_. This gives you access to a completely new wallet (let's call it "hidden wallet"). You will not be able to see your balance of 100 ALPH there, since the wallet you transferred your 100 ALPH to was the one that did not use the Passphrase _letsUnlockAHiddenWallet_ (a.k.a. the "normal wallet"). You decide to transfer 10'000 ALPH to the "hidden wallet".
+The next time you open your wallet, you select that you want to login to _My Alephium Wallet_ and you provide your password _myVeryStrongPassw0rd_. Instead of clicking _Login_ directly, however, you click on the _"Optional passphrase"_ link, enter the Passphrase _letsUnlockAHiddenWallet_, and then click _Login_. This gives you access to a completely new wallet (let's call it "hidden wallet"). You will not be able to see your balance of 100 ALPH there, since the wallet you transferred your 100 ALPH to was the one that did not use the Passphrase _letsUnlockAHiddenWallet_ (a.k.a. the "normal wallet"). You decide to transfer 10'000 ALPH to the "hidden wallet".
 
 #### The other "hidden wallets"
 
