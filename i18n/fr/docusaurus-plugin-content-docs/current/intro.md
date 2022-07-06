@@ -10,27 +10,28 @@ title: Intro
 Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 :::
 
-This wiki contains the documentation of [Alephium](https://github.com/alephium/alephium), a sharded blockchain that makes programmable money scalable and secure.
+Ce wiki contient la documentation de [Alephium](https://github.com/alephium/alephium), une blockchain partionnée qui rend la monnaie programmable évolutive et sécurisée.
 
-Here, you will find information on how to set up a full node and get started with mining, troubleshooting sections, guides for our wallets, a guide on building smart contracts, the roadmap of our projects, FAQs, and more.
+Vous y trouverez des informations sur la façon de configurer un nœud complet et de commencer le minage, des sections de support, des guides pour nos portefeuilles, un guide sur la construction de contrats intelligents, la feuille de route de nos projets, des FAQ, et plus encore.
 
-## Alephium protocol overview
 
-The protocol's innovations extend battle-tested ideas from [Bitcoin](https://bitcoin.org/bitcoin.pdf) and [Ethereum](https://ethereum.org/en/whitepaper/):
+## Aperçu du protocole Alephium
 
-- BlockFlow algorithm based on UTXO model enables sharding and scalability for today (code + [algorithm paper](https://github.com/alephium/research/blob/master/alephium.pdf))
-  - The first sharding algorithm that supports `single-step cross-shard transactions`, offering the same user experience as single chain.
-  - Simple and elegant `PoW based sharding`, does not rely on beacon chain.
-- `Stateful UTXO model` combines the advantages of both eUTXO model and account model (see code, wiki to come).
-  - Tokens are first-class citizens and UTXO-based, which are `owned by users` directly instead of contracts.
-  - Offer the same expressiveness as `account model`. DApps can be easily built on top of it with better security.
-  - Support `multiple participants` in a single smart contract transaction. Multiple calls can be packed into a single transaction too.
-- Novel VM design resolves many critical challenges of dApp platforms (see code, wiki to come).
-  - Less IO intensive.
-  - Flash loan is not available by design.
-  - Eliminate many attack vectors of EVM, including unlimited authorization, double dip issue, reentrancy attack, etc.
-  - UTXO style `fine-grained execution model` reduces risk-free arbitrage.
-- `Front-running mitigation` through random execution of transactions (see code, wiki to come).
-- PoLW algorithm reduces the energy consumption of PoW in the long term ([research paper](https://github.com/alephium/research/blob/master/polw.pdf)).
-  - Adaptive rewards based on hashrate and timestamp are designed and implemented.
-  - Internal mining cost through burning will be added when hashrate and energy consumption is significantly high.
+Les innovations du protocole prolongent les idées éprouvées du [Bitcoin] (https://bitcoin.org/bitcoin.pdf) et de l'[Ethereum] (https://ethereum.org/en/whitepaper/) :
+
+- L'algorithme BlockFlow basé sur le modèle UTXO permet le partionnement et l'évolutivité (code + [document sur l'algorithme](https://github.com/alephium/research/blob/master/alephium.pdf))
+  - Le premier algorithme de partionnement qui prend en charge les `transactions cross-shard en une seule étape`, offrant la même expérience utilisateur que sur une chaîne unique.
+  - Simple et élégant `PoW sharding based`, ne repose pas sur la chaîne de référence.
+- Le modèle UTXO statique combine les avantages du modèle eUTXO et du modèle de compte (voir le code, wiki à venir).
+  - Les jetons sont des citoyens de première classe et basés sur UTXO, qui sont `propriétés par les utilisateurs` directement au lieu de contrats.
+  - Ils offrent la même expressivité que le `modèle de compte`. Les DApps peuvent être facilement construites par dessus avec une meilleure sécurité.
+  - Supporte les `multiples participants` dans une seule transaction de contrat intelligent. Des appels multiples peuvent également être regroupés dans une seule transaction.
+- La conception novatrice de la VM résout de nombreux problèmes critiques des plateformes d'applications numériques (voir le code, wiki à venir).
+  - Moins d'IO intensive.
+  - Le prêt flash `flash loan` n'est pas disponible par conception.
+  - Élimine de nombreux vecteurs d'attaque d'EVM, notamment l'autorisation illimitée, le problème du double dip, l'attaque par réentrance, etc.
+  - UTXO style `fine-grained execution model` réduit l'arbitrage sans risque.
+- Atténuation du front-running par l'exécution aléatoire des transactions (voir le code, wiki à venir).
+- L'algorithme PoLW réduit la consommation d'énergie du PoW à long terme ([research paper](https://github.com/alephium/research/blob/master/polw.pdf)).
+  - Des récompenses adaptatives basées sur le hashrate et le timestamp sont conçues et implémentées.
+  - Un coût interne de minage par combustion sera ajouté lorsque le hashrate et la consommation d'énergie sont significativement élevés.
