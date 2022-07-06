@@ -48,6 +48,12 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 - 09.2021 — Sortie publique du wallet et de l'explorateur
 - 08.11.2021 — Lancement du Mainnet et service de "cloud-mining" tiers
 - 01.2022 — 1ère dApp proof-of-concept
+- 04.2022 — Mise-à-jour du Desktop wallet
+- 05-06.2022 — Optimisation de l'Explorer & ajout des statistiques de chaîne.
+- 06.2022 — Full node 1.4.0 comprenant l'implémentation de toutes les fonctionalités majeures pour la mise-à-jour Leman
+- 06.2022 — Version beta du SDK pour les contrats (alephium-web3)
+- 06.2022 — Lancement du nouveau testnet 
+- 06.2022 — Deploiement de la mise-à-jour Leman sur le testnet
 
 **Ecosystème**
 
@@ -56,7 +62,8 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 - 13.12.2021 — Premier pool de minage communautaire.
 - 12.01.2022 — Première listing sur un échange: Gate.io
 - 02.2022 — 9 pools de minage sur Alephium
-- 06.2022 — Inclure des statistiques et des informations sur la chaîne dans l'explorateur
+- 04.2022 — Première plateforme NFT a être construite sur Alephium
+- 06.2022 — Mise-à-jour du site web.
 
 ### 🛣️ Roadmap
 

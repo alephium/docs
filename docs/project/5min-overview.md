@@ -47,7 +47,13 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 - Q1.2021 — Smart contract support
 - 09.2021 — Desktop wallet & explorer public release
 - 08.11.2021 — Mainnet launch & 3rd party cloud mining service
-- 01.2022–1st dApp proof-of-concept
+- 01.2022 — 1st dApp proof-of-concept
+- 04.2022 — Desktop wallet upgrade
+- 05-06.2022 — Explorer optimization & addition of Chain statistics
+- 06.2022 — Full node 1.4.0 with all of the major features for the Leman network upgrade implemented
+- 06.2022 — Beta version of contract SDK (alephium-web3)
+- 06.2022 — Launch new testnet 
+- 06.2022 — Leman Network Upgrade deployed on the testnet
 
 **Ecosystem**
 
@@ -56,7 +62,8 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 - 13.12.2021 — First community mining pool
 - 12.01.2022 — First exchange listing: Gate.io
 - 02.2022 — 9 mining pools on Alephium
-- 06.2022 — Include chain statistics and information on the explorer
+- 04.2022 — First NFT platform to be built on Alephium
+- 06.2022 — Website Revamp
 
 ### 🛣️ Roadmap
 
