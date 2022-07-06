@@ -43,7 +43,8 @@ For numbers you can also use the following:
 - 1e18
 - 1e-18
 - 1_000e9
-  :::
+
+:::
 
 ## Syntax
 
