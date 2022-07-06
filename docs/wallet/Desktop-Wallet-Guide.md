@@ -51,8 +51,9 @@ Please, read the following documentation before deciding to use this feature.
 
 - The Passphrase is an advanced security feature that adds an **additional word** that you choose to your existing secret phrase.
 - Using a Passphrase will cause an **entirely new wallet** to be created which cannot be accessed via the secret phrase alone.
+- The desktop wallet password is different than the Passphrase. The password is only used on your computer to encrypt and store the secret phrase. The Passphrase is an additional word to that secret phrase and is not stored in the wallet.
 - Apart from adding another layer of security, the Passphrase grants you **plausible deniability** when under duress.
-- If you decide to use a Passphrase, it is vital to store it securely and to **remember it perfectly**, character by character.
+- If you decide to use a Passphrase, it is vital to store it and back it up securely in a different physical location than the secret phrase and to **remember it perfectly**, character by character.
 
 :::
 
