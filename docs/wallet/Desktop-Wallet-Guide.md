@@ -97,7 +97,12 @@ You must remember your Passphrase perfectly. Changing a single character (even, 
 
 ### Limitations of Passphrase-enabled wallets
 
-**You cannot (yet) use colored labels for your generated addresses. Any additionally generated addresses will need to be re-generated after every login.**
+:::caution Limitations
+
+1. You cannot (yet) use colored labels for your generated addresses.
+2. Any additionally generated addresses will need to be re-generated after every login.
+
+:::
 
 The desktop wallet allows you to generate multiple addresses and select a colored label for each. This is helpful for organizing your funds into different "buckets". The metadata information about the addresses that you generated as well as their labels and their colors is stored in the local storage of the desktop wallet app.
 
