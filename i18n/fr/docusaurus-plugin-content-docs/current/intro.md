@@ -6,10 +6,6 @@ title: Intro
 
 # Alephium Wiki
 
-:::info
-Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
-:::
-
 Ce wiki contient la documentation de [Alephium](https://github.com/alephium/alephium), une blockchain partionnée qui rend la monnaie programmable évolutive et sécurisée.
 
 Vous y trouverez des informations sur la façon de configurer un nœud complet et de commencer le minage, des sections de support, des guides pour nos portefeuilles, un guide sur la construction de contrats intelligents, la feuille de route de nos projets, des FAQ, et plus encore.
