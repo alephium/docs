@@ -13,7 +13,7 @@ Vous y trouverez des informations sur la façon de configurer un nœud complet e
 
 ## Aperçu du protocole Alephium
 
-Les innovations du protocole prolongent les idées éprouvées du [Bitcoin] (https://bitcoin.org/bitcoin.pdf) et de l'[Ethereum] (https://ethereum.org/en/whitepaper/) :
+Les innovations du protocole prolongent les idées éprouvées du [Bitcoin](https://bitcoin.org/bitcoin.pdf) et de l'[Ethereum](https://ethereum.org/en/whitepaper/) :
 
 - L'algorithme BlockFlow basé sur le modèle UTXO permet le partionnement et l'évolutivité (code + [document sur l'algorithme](https://github.com/alephium/research/blob/master/alephium.pdf))
   - Le premier algorithme de partionnement qui prend en charge les `transactions cross-shard en une seule étape`, offrant la même expérience utilisateur que sur une chaîne unique.
