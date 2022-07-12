@@ -43,6 +43,10 @@ Some could consider the desktop wallet slightly less privacy-preserving and secu
 
 ## Passphrase
 
+:::note
+Introduced in version 1.3.0
+:::
+
 :::info Advanced security feature
 Please, read the following documentation before deciding to use this feature.
 :::
