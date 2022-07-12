@@ -93,6 +93,11 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
 
+#### ALPH-pool.com
+
+- Website: https://alph-pool.com/
+- Telegram: https://t.me/ALPH_pool_chat
+
 ### Pools no longer active
 
 #### e4p1k0 ALPH Pool (TLS Cert is expired)
