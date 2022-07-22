@@ -200,6 +200,13 @@ When you see `!` it means the function is built-in to Ralph.
 - `u256From16Byte!(a: U256) -> (ByteVec)`
 - `u256From32Byte!(a: U256) -> (ByteVec)`
 
+### Utils functions
+
+- `dustAmount!() -> (U256)`
+- `nullAddress!() -> (Address)`
+- `contractIdToAddress!(contractId: ByteVec) -> (Address)`
+- `panic!([input: U256])`
+
 ## Stateful functions
 
 ### Assertions
@@ -211,6 +218,7 @@ When you see `!` it means the function is built-in to Ralph.
 
 - `approveAlph!(forAddress: Address, amount: U256)) -> ()`
 - `approveToken!(forAddress: Address, tokenId: ByteVec, amount:U256)) -> ()`
+- `lockApprovedAssets(address: Address, tokenId: ByteVec, amount: U256) -> ()`
 
 ### Account balance
 
@@ -227,6 +235,7 @@ When you see `!` it means the function is built-in to Ralph.
 - `transferTokenFromSelf!(toBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
 - `transferTokenToSelf!(fromBeneficiary: Address, tokenId: ByteVec, amount: U256) -> ()`
   - Same usage as the other pair of `transferAlph` functions.
+- `burnToken!() -> (Address, ByteVec, U256)`
 
 ### Contracts
 
@@ -238,7 +247,10 @@ When you see `!` it means the function is built-in to Ralph.
 - `destroySelf!(address: Address) -> ()`
 - `migrate!(codeCompiled: ByteVec)`
   - Updates the contract in-place
-- `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)`
+- `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)` // Deprecated
+- `migrateWithFields!(codeCompiled: ByteVec, field: ByteVec)`
+- `subContractId!(id: ByteVec) -> (ByteVec)`
+- `subContractIdOf(contract: Contract, id: ByteVec) -> (ByteVec)`
 
 ### Internal
 
