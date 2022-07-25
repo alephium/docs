@@ -244,13 +244,17 @@ When you see `!` it means the function is built-in to Ralph.
   - `state` is the state as its passed to the build-contract endpoint.
 - `copyCreateContract!(contractId: ByteVec, state: ByteVec) -> (ByteVec)`
 - `copyCreateContractWithToken!(contractId: ByteVec, state: ByteVec, tokenAmount: U256) -> (ByteVec)`
+- `createSubContract!(path: ByteVec, byteCode: ByteVec, state: ByteVec) -> (ByteVec)`
+- `createSubContractWithToken!(path: ByteVec, byteCode: ByteVec, state: ByteVec, amount: U256) -> (ByteVec)`
+- `copyCreateSubContract!(path: ByteVec, byteCode: ByteVec, state: ByteVec) -> (ByteVec)`
+- `copyCreateSubContractWithToken!(path: ByteVec, byteCode: ByteVec, state: ByteVec, amount: U256) -> (ByteVec)`
 - `destroySelf!(address: Address) -> ()`
 - `migrate!(codeCompiled: ByteVec)`
   - Updates the contract in-place
 - `migrateWithState!(codeCompiled: ByteVec, state: ByteVec)` // Deprecated
 - `migrateWithFields!(codeCompiled: ByteVec, field: ByteVec)`
 - `subContractId!(id: ByteVec) -> (ByteVec)`
-- `subContractIdOf(contract: Contract, id: ByteVec) -> (ByteVec)`
+- `subContractIdOf!(contract: Contract, id: ByteVec) -> (ByteVec)`
 
 ### Internal
 
