@@ -27,5 +27,4 @@ Find the following languages in [the official Discord](https://discord.gg/JErgRB
 - PT 🇧🇷🇵🇹 [https://t.me/Alephium_pt](https://t.me/Alephium_pt)
 - RU 🇷🇺 [https://t.me/alephiumgroup_ru](https://t.me/alephiumgroup_ru)
 - SP 🇪🇸 [https://t.me/minerosAlephium](https://t.me/minerosAlephium)
-- TR 🇹🇷 [https://t.me/alephium_tr](https://t.me/alephium_tr)
 - VN 🇻🇳 [https://t.me/alephiumvn](https://t.me/alephiumvn)
