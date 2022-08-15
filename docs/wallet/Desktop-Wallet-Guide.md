@@ -15,15 +15,15 @@ The desktop wallet is the most user-friendly Alephium wallet available today. Yo
 1. By default, the wallet will be connected to the Alephium public node (please note that your mnemonic or your private key will never be uploaded to the public node). Should you want to use your personal node or generate the wallet offline, you can do so by clicking the setting wheel on the top right of the app and changing the Node Host to your localhost or simply leaving it blank to create the wallet offline.
 1. Click on _Create/Import a wallet_, then click _New wallet_.
 1. Choose a wallet name. You might want to choose a name that allows you to identify your wallet easily.
-1. Pick a password to protect your wallet on your computer. This password does not replace your wallet's 24-word secret phrase. It is only used to log in and out of the created wallet easily.
+1. Pick a password to protect your wallet on your computer. This password does not replace your wallet's 24-word Secret Recovery Phrase. It is only used to log in and out of the created wallet easily.
 1. Click _Continue_.
 1. You now see your new wallet's information 🎉
 1. Your address is a long string of characters. It is what identifies your wallet on the Alephium network.
-1. In the highlighted box, you will see 24 words. These are your wallet's 24-word secret phrase. This is your most precious piece of information, and you must store it wisely, safely, and carefully.
-1. Copy and store your 24-word secret phrase safely on several offline mediums such as paper and metal and store them in different places.
-1. You will now be asked to verify that you got the 24-word secret phrase right by listing the words in the correct order. Click _Ready_ and reenter the words with the selection box.
+1. In the highlighted box, you will see 24 words. These are your wallet's 24-word Secret Recovery Phrase. This is your most precious piece of information, and you must store it wisely, safely, and carefully.
+1. Copy and store your 24-word Secret Recovery Phrase safely on several offline mediums such as paper and metal and store them in different places.
+1. You will now be asked to verify that you got the 24-word Secret Recovery Phrase right by listing the words in the correct order. Click _Ready_ and reenter the words with the selection box.
 1. When all the words are in the correct order, you will be prompted visually to continue.
-1. Everything is ready! Your wallet is now created (and you've made sure to save your 24-word secret phrase).
+1. Everything is ready! Your wallet is now created (and you've made sure to save your 24-word Secret Recovery Phrase).
 
 ## Creating a mining wallet with 4 addresses
 
@@ -53,15 +53,15 @@ Please, read the following documentation before deciding to use this feature.
 
 :::tip Important takeaways
 
-- The Passphrase is an advanced security feature that adds an **additional word** that you choose to your existing secret phrase.
-- Using a Passphrase will cause an **entirely new wallet** to be created which cannot be accessed via the secret phrase alone.
-- The desktop wallet password is different than the Passphrase. The password is only used on your computer to encrypt and store the secret phrase. The Passphrase is an additional word to that secret phrase and is not stored in the wallet.
+- The Passphrase is an advanced security feature that adds an **additional word** that you choose to your existing Secret Recovery Phrase.
+- Using a Passphrase will cause an **entirely new wallet** to be created which cannot be accessed via the Secret Recovery Phrase alone.
+- The desktop wallet password is different than the Passphrase. The password is only used on your computer to encrypt and store the Secret Recovery Phrase. The Passphrase is an additional word to that Secret Recovery Phrase and is not stored in the wallet.
 - Apart from adding another layer of security, the Passphrase grants you **plausible deniability** when under duress.
-- If you decide to use a Passphrase, it is vital to store it and back it up securely in a different physical location than the secret phrase and to **remember it perfectly**, character by character.
+- If you decide to use a Passphrase, it is vital to store it and back it up securely in a different physical location than the Secret Recovery Phrase and to **remember it perfectly**, character by character.
 
 :::
 
-Assuming you have created a wallet using the desktop wallet app, you have a list of 24 words referred to as your _secret phrase_. This phrase can be used to restore your wallet and access your funds. If this 24-word secret phrase gets stolen, the attacker will be able to steal your funds. To enhance the security of our desktop wallet users and to prevent loss of funds due to theft of the 24-word secret phrase, we implemented the [BIP39 passphrase][bip39-spec] feature.
+Assuming you have created a wallet using the desktop wallet app, you have a list of 24 words referred to as your _Secret Recovery Phrase_. This phrase can be used to restore your wallet and access your funds. If this 24-word Secret Recovery Phrase gets stolen, the attacker will be able to steal your funds. To enhance the security of our desktop wallet users and to prevent loss of funds due to theft of the 24-word Secret Recovery Phrase, we implemented the [BIP39 passphrase][bip39-spec] feature.
 
 The Passphrase is an additional optional 25th word that you are free to choose for yourself. It can be composed of any lower/upper-case character, number, and/or signs and be as long as you want.
 
@@ -71,7 +71,7 @@ Once you create a wallet into the desktop wallet app, the next time you open the
 
 #### The "normal wallet"
 
-Let's assume that you created a new wallet, you gave it the name _My Alephium Wallet_ and the password _myVeryStrongPassw0rd_. Let's also assume that the generated 24-word secret phrase is `scan pause slender around cube flavor neck shrug gadget ramp rude lend capable tone nose unhappy gift across cluster minor tragic fever detail script`. You decide to transfer 100 ALPH to it. We'll call this the "normal wallet".
+Let's assume that you created a new wallet, you gave it the name _My Alephium Wallet_ and the password _myVeryStrongPassw0rd_. Let's also assume that the generated 24-word Secret Recovery Phrase is `scan pause slender around cube flavor neck shrug gadget ramp rude lend capable tone nose unhappy gift across cluster minor tragic fever detail script`. You decide to transfer 100 ALPH to it. We'll call this the "normal wallet".
 
 #### The "hidden wallet"
 
@@ -83,7 +83,7 @@ When you logout and you try to login into your "hidden wallet" again, if you ent
 
 ### Plausible deniability use-case
 
-In the unfortunate scenario where an attacker forces you to reveal your wallet password and your 24-word secret phrase (also known as the "$5 wrench attack"), the Passphrase feature can help you secure your physical safety as well as most of your wealth by convincing the attacker that they have access to all your funds. Let's explore this with the use of an example:
+In the unfortunate scenario where an attacker forces you to reveal your wallet password and your 24-word Secret Recovery Phrase (also known as the "$5 wrench attack"), the Passphrase feature can help you secure your physical safety as well as most of your wealth by convincing the attacker that they have access to all your funds. Let's explore this with the use of an example:
 
 - You are a proud owner of 10'000 ALPH.
 - You have created a "normal wallet" (no Passphrase) with the name _My Alephium Wallet_ and the password _myVeryStrongPassw0rd_. You have transferred 100 ALPH to it.
@@ -110,7 +110,7 @@ You must remember your Passphrase perfectly. Changing a single character (even, 
 
 The desktop wallet allows you to generate multiple addresses and select a colored label for each. This is helpful for organizing your funds into different "buckets". The metadata information about the addresses that you generated as well as their labels and their colors is stored in the local storage of the desktop wallet app.
 
-To guarantee the benefit of plausible deniability for our users, we cannot store metadata related to the Passphrase-enabled wallets, since we assume that an attacker has access to your wallet password, your 24-word secret phrase, as well as to the local storage of the app. If we did, the attacker could then prove whether you use the Passphrase feature or not, voiding plausible deniability. Thus, the Passphrase-enabled wallets cannot remember which addresses you have generated and what labels and colors you assign to each of them.
+To guarantee the benefit of plausible deniability for our users, we cannot store metadata related to the Passphrase-enabled wallets, since we assume that an attacker has access to your wallet password, your 24-word Secret Recovery Phrase, as well as to the local storage of the app. If we did, the attacker could then prove whether you use the Passphrase feature or not, voiding plausible deniability. Thus, the Passphrase-enabled wallets cannot remember which addresses you have generated and what labels and colors you assign to each of them.
 
 In the future, we will be able to bring the metadata storage feature to the Passphrase-enabled wallets, once we implement the feature that will allow importing of Extended Public Keys. Then, you will be able to store additional addresses together with their labels and colors in the Passphrase-enabled wallets. Stay tuned and always keep your desktop wallet app up to date!
 
