@@ -136,7 +136,7 @@ docker ps
 Maintenant, nous pouvons exécuter le noeud complet, en une seule ligne, comme suit :
 
 ```shell
-docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:v1.2.6
+docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:latest
 ```
 
 ### Docker-compose
@@ -150,7 +150,7 @@ Donc, ci-dessous est la définition du service que vous pouvez mettre dans un fi
 version: "3"
 services:
   broker:
-    image: "alephium/alephium:v1.2.6"
+    image: "alephium/alephium:latest"
     restart: unless-stopped
     ports:
       - 9973:9973/tcp

@@ -48,7 +48,7 @@ To fix the problem:
 
 1. Delete the folder .alephium `rm .alephium`
 
-2. Restart the node and wait for synchronization `java -jar alephium-1.3.2.jar`
+2. Restart the node and wait for synchronization `java -jar alephium-1.x.x.jar`
 
 ## Moving the Alephium data folder
 
