@@ -11,7 +11,9 @@ This is a list of useful concepts for understanding Alephium in particular and B
 
 ### Alephium
 
-Alephium is the first live layer 1 sharded blockchain scaling and improving on Bitcoin core technologies, Proof of Work and UTXO. It delivers a highly performant, secure DeFi & dApps platform with enhanced energy efficiency. From its technical design to its interfaces, Alephium has been created to address the challenges of accessibility, scalability, and security encountered by decentralized applications today.
+Alephium is the first live layer 1 sharded blockchain scaling and improving on Bitcoin core technologies, Proof of Work and UTXO. It delivers a highly performant, secure DeFi & dApps platform with enhanced energy efficiency. 
+
+From its technical design to its interfaces, Alephium has been created to address the challenges of accessibility, scalability, and security encountered by decentralized applications today.
 
 ## B
 
