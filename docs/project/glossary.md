@@ -29,11 +29,15 @@ The block reward is an economic incentive for the miners to do their job of secu
 
 Gas Spent is the amount of computations the miner uses to execute the transactions. The more functions the transaction has, the more complex its execution, and the more gas is spent. 
 
-For now, and as an anti-spam measure, there is a minimum value of 20’000 gas in the Alephium blockchain, meaning your transaction fee will always cost at least 0.002 ALPH. As the network matures, this will be relaxed, and the market will define the price of transaction fees. 
+For now, and as an anti-spam measure, there is a minimum value of 20’000 gas for any transaction on Alephium, meaning that your transaction fee will cost at least 0.002 ALPH. 
+
+As the network matures, this will be relaxed, and the market will define the price of transaction fees.
 
 ### Gas Price
 
-This is the monetary value of the gas. Gas is defined as the computational effort to execute a command in a blockchain. The gas price is the monetary counterpart to pay for the work done by the miner. At Alephium, we have a minimal value of 0.0000001 ALPH per transaction or 1 phi, and you can change it for a higher value.
+This is the monetary value of the gas. Gas is defined as the computational effort to execute a command in a blockchain. The gas price is the monetary counterpart to pay for the work done by the miner. 
+
+At Alephium, the smallest price denomination is 0.0000001 ALPH, also called 1 phi.
 
 ## H
 
