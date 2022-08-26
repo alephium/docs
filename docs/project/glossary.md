@@ -19,7 +19,7 @@ AMA on PoLW with Cheng Wang Video & Recap
 
 ### Mining reward
 
-![](https://github.com/JKtranslator/wiki/blob/glossary-page/docs/project/Block%20reward.png)
+![](media/Block%20reward.png)
 
 The mining reward is the payment to the miner for the computational work needed to validate the transactions and put them into a block. On Alephium, The mining reward has two components: Transactions Fees and Block Rewards or new token emissions. The transaction rewarding the miner and issuing the newly minted ALPH is called a coinbase transaction.
 
@@ -28,7 +28,7 @@ The following equation defines it:
 
 Total Mining Reward = Block Reward + min(max(Block Reward, 1 ALPH), Transaction Fee / 2)
 
-![image](https://user-images.githubusercontent.com/88235023/186885966-b8d746fb-612b-433e-8f79-47e5a87ea375.png)
+![image](media/186885966-b8d746fb-612b-433e-8f79-47e5a87ea375.png)
 
 Half of the transaction fees component is burnt to act as a deflationary mechanism.  
 
@@ -36,7 +36,7 @@ Additional resources: [Alephium Block Rewards](https://medium.com/@alephium/alep
 
 ### Transaction fee 
 
-![image](https://user-images.githubusercontent.com/88235023/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
+![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
 
 When someone does a transaction in Alephium, there’s a price to be paid to the miners for including it in a block. 
 
