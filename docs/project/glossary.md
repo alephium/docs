@@ -23,6 +23,13 @@ The block reward is an economic incentive for the miners to do their job of secu
 
 [Block Reward GitHub Implementation](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
 
+### Block size
+
+Block size is the limit of transactions each block can handle. It can be measured in different ways. In some blockchains, it is expressed in how much data the block can carry (for example, in Zcash, the block size is 2MB). In other blockchains, the block size is related to the computational processing limit it can consume from the network. Ethereum’s and Alephium’s block sizes are measured this way.
+
+
+
+
 ## C
 
 ## D
@@ -58,6 +65,11 @@ At Alephium, the smallest price denomination is 0.0000001 ALPH, also called 1 ph
 ## L
 
 ## M
+
+### Merkle tree
+
+A Merkle tree is a structure used in a blockchain to encode data more efficiently and securely. The blockchain algorithm runs the transactions and generates a hash. This hash is used to verify that a data set is the same as the original set of transactions without accessing the transactions themselves. When visualized, this structure resembles a tree, and it can also be called a "binary hash tree."
+
 
 ### Mining reward
 
@@ -95,6 +107,15 @@ Additional resources: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work
 
 ## S
 
+### Sharding 
+
+Sharding is a strategy of database management that splits large databases into smaller, faster, more easily managed sections. These smaller parts are called “shards”, which means "a small part of a whole." In the blockchain context, it breaks up the main blockchain into separate segments, and the nodes verify only a subset of transactions, allowing parallel transaction validation. This can increase the network throughput. Alephium’s blockchain is divided into shard groups, and the management of them is done by the Blockflow algorithm. Currently, we have four groups with four shards in each one.
+
+### State
+
+The state is a computer science concept where a machine can have multiple states, but only one at any given time. A blockchain is considered to be a state machine. The state describes the system's current situation, and the transactions (inputs and outputs) trigger state transitions. As the transactions are bundled in blocks to make the process more efficient, the addition of a block is what changes the actual blockchain state.
+
+
 ## T
 
 ### Transaction fee 
@@ -112,6 +133,11 @@ Additional resources: [Transaction fee GitHub Implementation](https://github.com
 ## U
 
 ## V
+
+### Virtual Machine
+
+A Virtual Machine (VM) is a software emulation of a physical computer to run programs and deploy apps. A virtual machine runs its own operating system and functions. In the blockchain context, each blockchain node runs a copy of that blockchain’s VM, to run the programs (smart contracts) and allow them to interact with each other and the blockchain itself. Alephium’s Virtual machine is called Alphred.
+
 
 ## W
 
