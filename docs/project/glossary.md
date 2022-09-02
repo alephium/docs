@@ -19,13 +19,17 @@ From its technical design to its interfaces, Alephium has been created to addres
 
 ### Block Reward
 
-The block reward is an economic incentive for the miners to do their job of securing the network. It is paid in the blockchain’s native token. It is usually higher when the network is small and new and decreases over time as it matures.
+The block reward is an economic incentive for the miners to do their job of securing the network.
+
+It is paid in the blockchain’s native token. It is usually higher when the network is small and new and decreases over time as it matures.
 
 [Block Reward GitHub Implementation](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
 
 ### Block size
 
-Block size is the limit of transactions each block can handle. It can be measured in different ways. In some blockchains, it is expressed in how much data the block can carry (for example, in Zcash, the block size is 2MB). In other blockchains, the block size is related to the computational processing limit it can consume from the network. Ethereum’s and Alephium’s block sizes are measured this way.
+Block size is the data limit each block can handle. 
+
+It can be measured in different ways. In some blockchains, it is expressed in how much actual data the block can carry (for example, in Zcash, the block size is 2MB). In other blockchains, the block size is related to the computational processing limit it can consume from the network (usually expressed in gas). Ethereum’s and Alephium’s block sizes are measured this way.
 
 
 
@@ -68,7 +72,10 @@ At Alephium, the smallest price denomination is 0.0000001 ALPH, also called 1 ph
 
 ### Merkle tree
 
-A Merkle tree is a structure used in a blockchain to encode data more efficiently and securely. The blockchain algorithm runs the transactions and generates a hash. This hash is used to verify that a data set is the same as the original set of transactions without accessing the transactions themselves. When visualized, this structure resembles a tree, and it can also be called a "binary hash tree."
+A Merkle tree [is a structure](https://en.wikipedia.org/wiki/Merkle_tree) used in a blockchain to compress data more efficiently and securely.
+The blockchain packs the transactions in blocks. Each block has a header, and this header has a hash. This hash is stored on the Merkle Tree. The hash from the Merkle Tree is used to verify that a data set is the same as the original set of transactions without accessing the content inside the block. When visualized, this structure resembles a tree and can also be called a "binary hash tree."
+
+For example, Alephium uses three Merkle trees per group to store assets-UTXOs, contract logic, and contract state. 
 
 
 ### Mining reward
@@ -95,6 +102,7 @@ Additional resources: [Alephium Block Rewards](https://medium.com/@alephium/alep
 ## P
 
 ### Proof of Less Work (or PoLW)
+
 Similar to Proof-of-Work for Bitcoin, or Proof-of-Stake for Ethereum (post-merge), PoLW is Alephium’s consensus algorithm. It optimizes the network's energy consumption without compromising its security & decentralisation. It is activated when the network surpasses 1 Eh/s of accumulated hashrate. 
 
 After that, it partially internalizes the cost to mine a new block, by adding a coin-burning mechanism into the block validation process, incentivizing a cap on the processing power needed overall. Given the same network conditions, Alephium would only use ⅛ of the energy consumed by Bitcoin mining.
@@ -109,11 +117,19 @@ Additional resources: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work
 
 ### Sharding 
 
-Sharding is a strategy of database management that splits large databases into smaller, faster, more easily managed sections. These smaller parts are called “shards”, which means "a small part of a whole." In the blockchain context, it breaks up the main blockchain into separate segments, and the nodes verify only a subset of transactions, allowing parallel transaction validation. This can increase the network throughput. Alephium’s blockchain is divided into shard groups, and the management of them is done by the Blockflow algorithm. Currently, we have four groups with four shards in each one.
+Sharding is a strategy of database management that splits large databases into smaller, faster, more easily managed sections. 
+
+These smaller parts are called [“shards”](https://en.wikipedia.org/wiki/Shard_(database_architecture)), which means "a small part of a whole." Sharding is used when the power needed to run the database exceeds the processing capacity of a single computer. Sharding becomes necessary when the size of the blockchain exceeds the processing power of the Virtual Machine and the network. Sharding breaks up the main blockchain into separate segments, and the nodes verify only a subset of transactions, allowing parallel transaction validation. This increases the network throughput. 
+
+Alephium’s blockchain is sharded, and the Blockflow algorithm manages this. Currently, we have four groups with four shards in each one.
 
 ### State
 
-The state is a computer science concept where a machine can have multiple states, but only one at any given time. A blockchain is considered to be a state machine. The state describes the system's current situation, and the transactions (inputs and outputs) trigger state transitions. As the transactions are bundled in blocks to make the process more efficient, the addition of a block is what changes the actual blockchain state.
+The state is a [computer science concept](https://en.wikipedia.org/wiki/State_(computer_science)) where a machine can have multiple states, but only one at any given time.
+
+A blockchain is considered to be a state machine. The state describes the system's current situation, and the transactions (inputs and outputs) trigger state transitions. As the transactions are bundled in blocks to make the process more efficient, the addition of a block is what changes the actual blockchain state.
+
+Alephium uses the stateful UTXO model, which, compared to other UTXO accounting models, allows it to benefit from a full-featured state. 
 
 
 ## T
@@ -136,7 +152,11 @@ Additional resources: [Transaction fee GitHub Implementation](https://github.com
 
 ### Virtual Machine
 
-A Virtual Machine (VM) is a software emulation of a physical computer to run programs and deploy apps. A virtual machine runs its own operating system and functions. In the blockchain context, each blockchain node runs a copy of that blockchain’s VM, to run the programs (smart contracts) and allow them to interact with each other and the blockchain itself. Alephium’s Virtual machine is called Alphred.
+A Virtual Machine (VM) is a software emulation of a physical computer to run programs and deploy apps.
+
+A virtual machine runs its own operating system and functions. Each node runs a copy of the VM to run the programs (smart contracts) and allow them to interact with each other and the blockchain itself. 
+
+Alephium’s Virtual machine is called Alphred and has a lot of very [interesting properties.](https://www.youtube.com/watch?v=VVYH9rBJAdA&list=PLqL60kqgLPBBrc64K-1Gs771FBTiLtYZE&index=29)
 
 
 ## W
