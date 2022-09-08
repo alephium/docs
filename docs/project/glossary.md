@@ -37,9 +37,9 @@ Block Time is the time needed to compute the transactions inside a block and sen
 
 Transactions are gathered inside a block and checked by the miners (or validators on PoS blockchains). Usually, the Block Time is impacted by the mining difficulty, as it is adjusted to reflect the network's computational capacity (hashrate) over a given time.
 
-Alephium network has a difficult adjustment on every block and has an expected block time of **64 seconds**.
+Alephium network has a difficulty adjustment on every block and has an expected block time of **64 seconds**.
 
-Adittional resources: [Block Time and Block Size Article](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
+Additional resources: [Block Time and Block Size Article](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
 
 ### Bridge
 
@@ -73,7 +73,7 @@ At Alephium, the smallest price denomination is 0.0000001 ALPH, also called 1 ph
 
 ### Genesis Block
 
-A Genesis Block is the name of a blockchain’s first block ever mined. As the blocks get layered—one on top of the other, the Genesis Block is the foundation or beginning of it.
+A Genesis Block is the name of a blockchain’s first block ever mined. As the blocks get layered one on top of the other, the Genesis Block is the foundation or beginning of it.
 
 It is also occasionally referred to as Block 0 or Block 1. When a block is broadcasted to the blockchain, it references the previous block. Because there is no previous block to reference, genesis blocks are generally hardcoded into the software.
 
@@ -174,7 +174,7 @@ Additional resources: [Transaction fee GitHub Implementation](https://github.com
 
 ### UTXO
 
-[UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) (unspent transaction output) is the term for the amount of a specific currency that remains unspent after a cryptocurrency transaction.
+[UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) (Unspent Transaction Output) is the term for the amount of a specific currency that remains unspent after a cryptocurrency transaction.
 
 On a UTXO account model blockchain, the portion of what was sent and not spent in a transaction is used as an accounting method. Like double-entry accounting, each transaction has an input and output.
 
