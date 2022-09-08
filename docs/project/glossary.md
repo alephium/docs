@@ -97,14 +97,14 @@ As the upgrade is optional, sometimes some of the nodes or users decide not to d
 
 ## M
 
-### Merkle tree
+### Merkle Tree
 
 A Merkle tree [is a structure](https://en.wikipedia.org/wiki/Merkle_tree) used in a blockchain to compress data more efficiently and securely.
 The blockchain packs the transactions in blocks. Each block has a header, and this header has a hash. This hash is stored on the Merkle Tree. The hash from the Merkle Tree is used to verify that a data set is the same as the original set of transactions without accessing the content inside the block. When visualized, this structure resembles a tree and can also be called a "binary hash tree."
 
 For example, Alephium uses three Merkle trees per group to store assets-UTXOs, contract logic, and contract state. 
 
-### Mining reward
+### Mining Reward
 
 ![](media/Block%20reward.png)
 
@@ -158,7 +158,7 @@ Alephium uses the stateful UTXO model, which, compared to other UTXO accounting 
 
 ## T
 
-### Transaction fee 
+### Transaction Fee 
 
 ![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
 
