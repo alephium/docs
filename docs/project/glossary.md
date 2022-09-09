@@ -25,14 +25,27 @@ It is paid in the blockchain’s native token. It is usually higher when the net
 
 [Block Reward GitHub Implementation](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
 
-### Block size
+### Block Size
 
 Block size is the data limit each block can handle. 
 
 It can be measured in different ways. In some blockchains, it is expressed in how much actual data the block can carry (for example, in Zcash, the block size is 2MB). In other blockchains, the block size is related to the computational processing limit it can consume from the network (usually expressed in gas). Ethereum’s and Alephium’s block sizes are measured this way.
 
+### Block Time
 
+Block Time is the time needed to compute the transactions inside a block and send it to the network.
 
+Transactions are gathered inside a block and checked by the miners (or validators on PoS blockchains). Usually, the Block Time is impacted by the mining difficulty, as it is adjusted to reflect the network's computational capacity (hashrate) over a given time.
+
+Alephium network has a difficulty adjustment on every block and has an expected block time of **64 seconds**.
+
+Additional resources: [Block Time and Block Size Article](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
+
+### Bridge
+
+A bridge is a protocol connecting separate blockchains to enable interactions between them. Each blockchain usually has its own technological features and doesn’t have a native way to communicate with other protocols. So the bridge is a set of smart contracts that links these different ecosystems.
+ 
+A bridge can be more specialized, only allowing one type of interaction (like token transfers, for instance), or it can be more generalistic, allowing any kind of data transfer between the bridged blockchains.
 
 ## C
 
@@ -58,7 +71,21 @@ This is the monetary value of the gas. Gas is defined as the computational effor
 
 At Alephium, the smallest price denomination is 0.0000001 ALPH, also called 1 phi.
 
+### Genesis Block
+
+A Genesis Block is the name of a blockchain’s first block ever mined. As the blocks get layered one on top of the other, the Genesis Block is the foundation or beginning of it.
+
+It is also occasionally referred to as Block 0 or Block 1. When a block is broadcasted to the blockchain, it references the previous block. Because there is no previous block to reference, genesis blocks are generally hardcoded into the software.
+
+Alephium’s genesis block was mined on November 8th, 2021
+
 ## H
+
+### Hard Fork
+
+A hard fork happens when a major upgrade on a network's protocol makes nodes or users running the previous version unable to send or validate transactions on the network after it.
+
+As the upgrade is optional, sometimes some of the nodes or users decide not to do it, thus creating a different version of the blockchain from that point on. That happened with Ethereum and Ethereum Classic, for example.
 
 ## I
 
@@ -70,20 +97,18 @@ At Alephium, the smallest price denomination is 0.0000001 ALPH, also called 1 ph
 
 ## M
 
-### Merkle tree
+### Merkle Tree
 
 A Merkle tree [is a structure](https://en.wikipedia.org/wiki/Merkle_tree) used in a blockchain to compress data more efficiently and securely.
 The blockchain packs the transactions in blocks. Each block has a header, and this header has a hash. This hash is stored on the Merkle Tree. The hash from the Merkle Tree is used to verify that a data set is the same as the original set of transactions without accessing the content inside the block. When visualized, this structure resembles a tree and can also be called a "binary hash tree."
 
 For example, Alephium uses three Merkle trees per group to store assets-UTXOs, contract logic, and contract state. 
 
-
-### Mining reward
+### Mining Reward
 
 ![](media/Block%20reward.png)
 
 The mining reward is the payment to the miner for the computational work needed to validate the transactions and put them into a block. On Alephium, The mining reward has two components: [Transaction Fee](#transaction-fee) and [Block Reward](#block-reward) or new token emissions. The transaction rewarding the miner and issuing the newly minted ALPH is called a coinbase transaction.
-
 
 The following equation defines it:
 
@@ -131,10 +156,9 @@ A blockchain is considered to be a state machine. The state describes the system
 
 Alephium uses the stateful UTXO model, which, compared to other UTXO accounting models, allows it to benefit from a full-featured state. 
 
-
 ## T
 
-### Transaction fee 
+### Transaction Fee 
 
 ![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
 
@@ -147,6 +171,14 @@ Transaction fee = Gas Price * Gas Amount Spent
 Additional resources: [Transaction fee GitHub Implementation](https://github.com/alephium/alephium/blob/v1.4.2/protocol/src/main/scala/org/alephium/protocol/model/Transaction.scala#L230-L239)
 
 ## U
+
+### UTXO
+
+[UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) (Unspent Transaction Output) is the term for the amount of a specific currency that remains unspent after a cryptocurrency transaction.
+
+On a UTXO account model blockchain, the portion of what was sent and not spent in a transaction is used as an accounting method. Like double-entry accounting, each transaction has an input and output.
+
+Improved versions were built over it, like eUTXO, Cell System, or Alephium’s sUTXO.
 
 ## V
 
