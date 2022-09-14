@@ -25,7 +25,7 @@ Before diving in deeper, we recommend that you check the following resources as 
 - [FAQ](#faq)
 - [Mining](#mining)
   - [What is the Mining Reward?](#what-is-the-mining-reward)
-  - [I have GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
+  - [I have a GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
   - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
   - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses)
   - [Is there a group for Alephium miners?](#is-there-a-group-for-alephium-miners)
@@ -63,13 +63,13 @@ Total Block Reward = Mining Reward + min(max(MR, 1 ALPH), Transaction Fee / 2)
 
 You will find a more elaborate explanation of the Block Reward [in this article from the Official Alephium Medium](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 
-### I have GPU model XYZ, what is my profit per day?
+### I have a GPU model XYZ, what is my profit per day?
 
 A community member has made a spreadsheet with different GPUs [available here](https://docs.google.com/spreadsheets/d/10eUjwGU-Kmw1XM1dDOKfdscOeShakSnjcBGzBT46rmc/)
 
 ### What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?
 
-The 500min lock was implemented to prevent re-org attacks. Similar to Bitcoin, which has ~1000 minutes lock for mined rewards.
+The 500min lock was implemented to prevent re-org attacks. Similar to Bitcoin, which has a ~1000 minutes lock for mined rewards.
 
 ### Why do I have 4 mining addresses?
 
@@ -107,7 +107,7 @@ In our stateful UTXO model, we support ETH-like mutable states. It allows us to 
 Multiple reasons:
 
 1. We are based on the stateful UTXO model, which is very different from ETH's account model. It is incompatible with Solidity.
-2. Solidity & EVM designs are not optimal and known security issues. We want to do better.
+2. Solidity & EVM designs are not optimal and have known security issues. We want to do better.
 3. We focused on development experience when designing our own language, to ensure it is easy to get started!
 
 ### Is anyone already building a DEX on ALPH?
@@ -142,7 +142,7 @@ The actual fee will depend on the number of inputs (utxo) and on the number of s
 
 ## Exchanges
 
-### How long does it takes for deposits to show up on exchanges?
+### How long does it take for deposits to show up on exchanges?
 
 Currently, 120 confirmations are needed for deposits, which is around 2hours (120 blocks \* block time 64s). PoW chains usually require a higher number of confirmation to ensure sufficient security. For reference, it is still around 1 hour for Bitcoin.
 
@@ -172,14 +172,14 @@ In an homage to the technical promises of Ethereum, we followed the same naming 
 
 Blockchain technology is still at an early stage and one of the most prevalent questions is: what blockchain infrastructure is needed for the next 10 years for Dapps, including DeFi ?
 
-We believe need a blockchain that is scalable with high throughput and low transaction fees. We want a high level of programmability like on Ethereum. And we need it to be as reliable and secure as Bitcoin is.
+We believe we need a blockchain that is scalable with high throughput and low transaction fees. We want a high level of programmability like on Ethereum. And we need it to be as reliable and secure as Bitcoin is.
 As a result, Alephium was developed on the idea to build a scalable Bitcoin with a reliable DeFi solution.
 
 According to the Lindy effect’s theory, and despite POS recent successes, it’s very likely that the Bitcoin model and sharding + PoW is still the most robust and decentralized way to build a scalable blockchain. Specifically:
 
 1. PoW is simple and robust. It's much easier to design sharding algorithm with PoW
 2. PoS is not tested by time yet, we look forward to see how PoS will evolve after ETH's PoS switch
-3. PoS tends to be more centralized and more vulnerable to censure
+3. PoS tends to be more centralized and more vulnerable to censorship
 4. PoS tends to reduce trustlessness as the cost of running a node can be significantly higher
 5. PoS is more vulnerable to some DeFi attacks like MEV
 
