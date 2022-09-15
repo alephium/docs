@@ -104,6 +104,12 @@ The blockchain packs the transactions in blocks. Each block has a header, and th
 
 For example, Alephium uses three Merkle trees per group to store assets-UTXOs, contract logic, and contract state. 
 
+### Maximal Extractble Value (MEV)
+
+Miner or [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/) refers to the value obtained from a block mining in excess of the standard block reward and gas fees by changing, including, or removing transactions in a block.
+
+This difference is offered by actors referred to as “searchers” that analyze the mempool looking for profit opportunities by replacing the information on a given transaction, like the sender or receive address. To increase the likelihood of their transaction being chosen by the miner to be part of the next block produced, they are willing to pay a much higher gas fee than the average one, giving away or “sharing” part of the profit.
+
 ### Mining Reward
 
 ![](media/Block%20reward.png)
@@ -119,6 +125,14 @@ Total Mining Reward = Block Reward + min(max(Block Reward, 1 ALPH), Transaction 
 Half of the transaction fees component is burnt to act as a deflationary mechanism.  
 
 Additional resources: [Alephium Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
+
+### Multisig
+
+Multisig or Multisignature is the process of requesting more than one private key to co-sign a transaction for it to be broadcast to the network. It is used as an additional security step.
+
+Usually, the multisig setup is done in a way that requires a minimal quorum of signers for a specific transaction to be approved and sent. For instance, a multisig of 5 out of 9 will require a quorum of 5 signers (among nine potential co-signers) to co-sign a transaction before it can be sent.
+
+Alephium’s [Full Node Wallet](https://wiki.alephium.org/wallet/Wallet-Guide) supports multisig addresses
 
 ## N
 
@@ -158,6 +172,14 @@ Alephium uses the stateful UTXO model, which, compared to other UTXO accounting 
 
 ## T
 
+### Token
+
+A token is a registry entry in a blockchain that follows a set of rules encoded by the smart contract issuing it. This definition makes it different from a cryptocurrency as the latter is the native asset of a blockchain like BTC or ETH, whereas tokens are built on an existing blockchain using smart contracts.
+
+Tokens can be categorized as fungible or non-fungible. Fungible tokens are identical and can seamlessly replace one another. On the other hand, non-fungible tokens (NFTs) are unique and provably scarce, meaning their histories can be traced down to the individual level.
+
+Tokens can also be categorized by their intended function: Utility, Security, or Currency Tokens. Currency tokens are created to be traded, like MakerDAO’s DAI or USDC. Utility tokens are focused on practical use, representing access to a given product or service. Security tokens are a digital representation of an underlying asset, such as a share in a company, voting right in a company or other centralized organization, or some tangible or digital article of value.
+
 ### Transaction Fee 
 
 ![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
@@ -169,6 +191,16 @@ This price is composed of two elements: the [Gas Price](#gas-price) in the netwo
 Transaction fee = Gas Price * Gas Amount Spent
 
 Additional resources: [Transaction fee GitHub Implementation](https://github.com/alephium/alephium/blob/v1.4.2/protocol/src/main/scala/org/alephium/protocol/model/Transaction.scala#L230-L239)
+
+### Transactions Per Second (TPS)
+
+Transactions Per Second (TPS) is a measure that comes from the [database systems](https://en.wikipedia.org/wiki/Transactions_per_second) environment, and it means how many transactions theoretically can happen in one second in a given system.
+
+In the blockchain context, it is used as a synonym for speed: how fast a transaction can be broadcasted to the network. The following equation calculates it:
+ 
+TPS = (Block Size / Transaction Size ) /Block Time
+
+Additional resources:[Transactions Per Second Article](https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39)
 
 ## U
 
