@@ -137,6 +137,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      algolia: {
+        appId: "BN8IMFOF55",
+        apiKey: "5c67e9428dfb189c4f9afbb895dc0917",
+        indexName: "alephium",
+      },
     }),
   plugins: [
     [
