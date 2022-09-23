@@ -17,6 +17,13 @@ From its technical design to its interfaces, Alephium has been created to addres
 
 ## B
 
+### Blake 3 Algorithm (Hash Function)
+[Blake 3 Algorithm](https://github.com/BLAKE3-team/BLAKE3) is a cryptographic hash function. A hash function is a mathematical function that takes an input string of any length and converts it to a fixed-length output string. The fixed-length output is known as the hash value.
+
+Hash functions have a lot of use cases on a blockchain: in the [Merkle Tree](#merkle-tree), Proof of Work Consensus, Digital Signatures, and on the Blockchain itself (as each block header in a block in the blockchain contains the hash of the previous block header). Bitcoin, for example, uses the [SHA-256.](https://en.wikipedia.org/wiki/SHA-2)
+
+Alephium uses the Blake 3 Algorithm as its cryptographic hash function for mining.
+
 ### Block Reward
 
 The block reward is an economic incentive for the miners to do their job of securing the network.
@@ -162,6 +169,14 @@ These smaller parts are called [“shards”](https://en.wikipedia.org/wiki/Shar
 
 Alephium’s blockchain is sharded, and the Blockflow algorithm manages this. Currently, we have four groups with four shards in each one.
 
+### Smart Contract 
+
+[Smart Contract (SC)](https://en.wikipedia.org/wiki/Smart_contract) is a computer program that enables transactions to be executed by rules predefined, without needing to rely on a third party, central authority or external mechanisms. In the blockchain context, a smart contract is written using the native Programing Language or is compiled (translated) to it and usually runs on the blockchain’s [Virtual Machine.](#virtual-machine)
+
+SCs on a blockchain can store arbitrary [state](#state) and execute arbitrary transactions. End clients also use transactions to interact with it. And the SC transactions can also invoke other SCs. These transactions might result in changing the state and sending coins from one smart contract to another or from one account to another.
+
+In Alephium, the smart contracts are written using the Ralph language and run on Alphred Virtual Machine.
+
 ### State
 
 The state is a [computer science concept](https://en.wikipedia.org/wiki/State_(computer_science)) where a machine can have multiple states, but only one at any given time.
@@ -171,6 +186,16 @@ A blockchain is considered to be a state machine. The state describes the system
 Alephium uses the stateful UTXO model, which, compared to other UTXO accounting models, allows it to benefit from a full-featured state. 
 
 ## T
+
+### Time to Finality
+
+Time to Finality is the time between when a transaction is submitted to the network and when it’s considered final (and immutable). There are two main categories of finality: probabilistic finality and deterministic finality.
+
+Most blockchain systems offer probabilistic transaction finality — this means that the probability that a transaction is valid and cannot be reversed increases with adding more blocks on the chain, but it’s never absolutely final. The network agrees that the transaction is final with enough time and blocks. This is how Bitcoin achieves finality, for example, a transaction is considered final after 6 blocks.
+
+Other blockchains use a deterministic transaction finality (sometimes called absolute finality) — this means that the transaction is considered final when it is added to the blockchain. Fantom is one example of it.
+
+Additional resource: [Time to Finality Article](https://medium.com/@alephium/time-to-finality-17d64eeffd25)
 
 ### Token
 
