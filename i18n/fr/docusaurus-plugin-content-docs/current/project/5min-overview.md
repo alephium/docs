@@ -190,7 +190,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 - [Full node](https://github.com/alephium/alephium)
 - [Wallet](https://github.com/alephium/alephium-wallet/releases/latest)
 - [Explorateur](https://github.com/alephium/explorer)
-- [JS-SDK](https://github.com/alephium/js-sdk)
+- [JS/TS SDK](https://github.com/alephium/alephium-web3)
 - [Wiki](https://wiki.alephium.org)
 - [Awesome Alephium](https://github.com/alephium/awesome-alephium)
 

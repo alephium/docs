@@ -230,7 +230,7 @@ And if you’d rather join a pool, you will find list of available pools in the 
 [full-node]: https://github.com/alephium/alephium
 [desktop-wallet]: https://github.com/alephium/desktop-wallet
 [explorer]: https://github.com/alephium/explorer
-[sdk]: https://github.com/alephium/js-sdk
+[sdk]: https://github.com/alephium/alephium-web3
 [wiki]: https://github.com/alephium/wiki
 [awesome]: https://github.com/alephium/awesome-alephium
 [mining-discord]: https://discord.gg/53QSMpKZyR
