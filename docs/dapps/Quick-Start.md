@@ -74,7 +74,7 @@ npx @alephium/cli@latest deploy
 
 This will deploy the token faucet to all of the 4 groups of Alephium blockchain.
 
-To learn more about deployment, read the comments of `scripts/0_deploy_faucet`.
+To learn more about deployment, read the comments of `scripts/0_deploy_faucet.ts`.
 
 ### Interacting with the deployed contract
 
