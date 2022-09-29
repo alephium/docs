@@ -84,7 +84,7 @@ You could read the comments of `scripts/0_deploy_faucet` to learn more about dep
 Now, you could build the source code `src/token.ts`:
 
 ```
-npm run build
+npm install && npm run build
 ```
 
 and interact with the deployed token faucet:
