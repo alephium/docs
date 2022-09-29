@@ -4,7 +4,7 @@ Built using [Docusaurus 2](https://docusaurus.io/).
 
 ## Development
 
-Install depedencies:
+Install dependencies:
 
 ```shell
 npm i
