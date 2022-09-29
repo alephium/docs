@@ -10,7 +10,7 @@ This guide will explore the basics of creating an Alephium dApp project.
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
-- Operate a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
+- Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
 
 ### Creating a new dApp project
 
