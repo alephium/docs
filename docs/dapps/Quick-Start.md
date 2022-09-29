@@ -1,13 +1,13 @@
 ---
 sidebar_position: 5
-title: Quick Start
+title: Getting started
 ---
 
 This guide will explore the basics of creating an Alephium dApp project.
 
 Prerequisites:
 
-- Write code in [Typescript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html)
+- Write code in [Typescript](https://www.typescriptlang.org/)
 - Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
 
 ### Creating a new dApp project
@@ -22,13 +22,13 @@ This will create a new directory `alephium-tutorial` and initialize a sample pro
 
 ### Launching a local development network
 
-To compile and test your contracts, it's necessary to launch a local network by running:
+To compile and test your contracts, it's necessary to launch a local development network by running:
 
 ```
 npx @alephium/cli@latest devnet start
 ```
 
-The Typescript SDK then is able to interact with the network through REST endpoints.
+The Typescript SDK is then able to interact with the network through REST endpoints.
 
 ### Compiling your contracts
 
@@ -46,8 +46,7 @@ npx @alephium/cli@latest compile
 
 If you take a look at `contracts/`, you should be able to find `token.ral`. The compiled artifacts are in the directory `artifacts`.
 
-You could read the comments of `contracts/token.ral` to learn more about Ralph language and contracts on Alephium.
-
+To learn more about Ralph language and contracts on Alephium, read the comments of `contracts/token.ral`.
 
 ### Testing your contract
 
@@ -63,7 +62,7 @@ or
 npx @alephium/cli@latest test
 ```
 
-You could read the comments of `test/token.test.ts` to learn more about testing and debugging.
+To learn more about testing and debugging, read the comments of `test/token.test.ts`.
 
 ### Deploying your contracts to Devnet/Testnet/Mainnet
 
@@ -75,11 +74,11 @@ npx @alephium/cli@latest deploy
 
 This will deploy the token faucet to all of the 4 groups of Alephium blockchain.
 
-You could read the comments of `scripts/0_deploy_faucet` to learn more about deployment.
+To learn more about deployment, read the comments of `scripts/0_deploy_faucet`.
 
 ### Interacting with the deployed contract
 
-Now, you could build the source code `src/token.ts`:
+Now, you can build the source code `src/token.ts` with:
 
 ```
 npm run build
@@ -91,7 +90,7 @@ and interact with the deployed token faucet:
 node dist/src/token.js
 ```
 
-You could read the comments of `src/token.ts` to learn more about the web3 SDK.
+To learn more about the web3 SDK, read the comments of `src/token.ts`.
 
 ### Connect to the wallets
 
