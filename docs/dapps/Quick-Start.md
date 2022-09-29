@@ -35,7 +35,7 @@ The Typescript SDK then is able to interact with the network through REST endpoi
 Next, change the workspace to the tutorial project:
 
 ```
-cd alephium-tutorial
+cd alephium-tutorial && npm install
 ```
 
 and compile your contracts:
@@ -82,7 +82,7 @@ You could read the comments of `scripts/0_deploy_faucet` to learn more about dep
 Now, you could build the source code `src/token.ts`:
 
 ```
-npm install && npm run build
+npm run build
 ```
 
 and interact with the deployed token faucet:
