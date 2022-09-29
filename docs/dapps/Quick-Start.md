@@ -3,8 +3,6 @@ sidebar_position: 5
 title: Quick Start
 ---
 
-## Quick Start
-
 This guide will explore the basics of creating an Alephium dApp project.
 
 Prerequisites:
