@@ -17,7 +17,7 @@ Prerequisites:
 To create the tutorial project, open a new terminal and run:
 
 ```
-npx @alephium/cli@latest init -d alephium-tutorial
+npx @alephium/cli@latest init alephium-tutorial
 ```
 
 This will create a new directory `alephium-tutorial` and initialize a sample project inside that directory.
