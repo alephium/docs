@@ -35,7 +35,7 @@ The Typescript SDK is then able to interact with the network through REST endpoi
 Next, change the workspace to the tutorial project:
 
 ```
-cd alephium-tutorial && npm install
+cd alephium-tutorial
 ```
 
 and compile your contracts:
