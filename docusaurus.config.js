@@ -192,7 +192,7 @@ const config = {
           },
           {
             from: "/Smart-Contract-Guide.html",
-            to: "/dapps/Technical-Guide-With-A-Fullnode",
+            to: "/dapps/Getting-Started",
           },
           {
             from: "/Smart-Contract-More.html",
