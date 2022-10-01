@@ -12,5 +12,5 @@ Our dApps stack is under active development and things change every day. We are 
 - dockerized devnet (explorer included): https://github.com/alephium/alephium-stack/tree/master/devnet
 - alephium v1.5.0-rc10: https://github.com/alephium/alephium/releases
 - explorer-backend v1.8.0-rc0: https://github.com/alephium/explorer-backend/releases
-- @alephium/web3 v0.2.0-rc.24: https://github.com/alephium/alephium-web3/tree/v0.2.0-rc.24
+- @alephium/web3 v0.2.0-rc.24: https://github.com/alephium/alephium-web3/tree/v0.2.0-rc.27
 - @alephium/walletconnect v0.2.0-rc.1: https://github.com/alephium/walletconnect/tree/v0.2.0-rc.1
