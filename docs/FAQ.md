@@ -1,12 +1,12 @@
 ---
-sidebar_position: 20
+sidebar_position: 1
 slug: /frequently-asked-questions
 title: FAQ
 ---
 
 # Frequently Asked Questions
 
-> 📚 Learn everything about Alephium in this [5min overview](5min-overview).
+> 📚 Learn everything about Alephium in this [5min overview](/).
 
 Before diving in deeper, we recommend that you check the following resources as they provide useful information about Alephium:
 
