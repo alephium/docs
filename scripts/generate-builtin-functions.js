@@ -42,13 +42,7 @@ function extractCategory(json) {
     return [categories, map]
 }
 
-async function main() {
-    const url = 'https://raw.githubusercontent.com/alephium/alephium/master/protocol/src/main/resources/ralph-built-in-functions.json' 
-    const response = await fetch(url)
-    const json = await response.json()
-    // const json = require('./builtin.json')
-
-    const stream = fs.createWriteStream('./docs/ralph/built-in-functions.md')
+function writeHeader(stream, categories) {
     stream.write(`
 ---
 sidebar_position: 20
@@ -60,20 +54,21 @@ This file is auto-generated with "scripts/generate-builtin-functions.js"
 -->
 
 The built-in functions are divided into several categories:
-[Contract](#contract-functions),
-[SubContract](#subcontract-functions),
-[Asset](#asset-functions),
-[Utils](#utils-functions),
-[Chain](#chain-functions),
-[Conversion](#conversion-functions),
-[ByteVec](#bytevec-functions),
-[Cryptography](#cryptography-functions).
-All built-in functions are suffixed with \`!\`.
-
     `.trim())
+    stream.write(categories.map(category => `\n[${category}](#${category.toLowerCase()}-functions)`).join(','))
+    stream.write(`.\nAll built-in functions are suffixed with \`!\`.`)
     stream.write('\n\n')
+}
+
+async function main() {
+    const url = 'https://raw.githubusercontent.com/alephium/alephium/master/protocol/src/main/resources/ralph-built-in-functions.json' 
+    const response = await fetch(url)
+    const json = await response.json()
+    // const json = require('./builtin.json')
+
+    const stream = fs.createWriteStream('./docs/ralph/built-in-functions.md')
     const [categories, map] = extractCategory(json)
-    // json.forEach(f => writeFunction(f, stream))
+    writeHeader(stream, categories)
     categories.forEach(category => {
         stream.write(`## ${category} Functions\n---\n`)
         const functions = map.get(category)
