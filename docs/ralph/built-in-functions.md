@@ -1,6 +1,7 @@
 ---
 sidebar_position: 20
-title: Built-in functions
+title: Built-in Functions
+sidebar_label: Built-in functions
 ---
 
 <!---
