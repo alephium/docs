@@ -210,7 +210,7 @@ and the specific repos:
 
 Here is a video of [how to get started for solo mining][solo-mining-video].
 
-And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](../mining/Pool-Mining-Guide).
+And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](../mining/pool-mining-guide).
 
 [whitepaper]: https://github.com/alephium/white-paper
 [tokenomics-medium]: https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
