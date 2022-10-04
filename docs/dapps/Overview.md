@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: dApps Overview
+title: Stack overview
 ---
 
 :::caution

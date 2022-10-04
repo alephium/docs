@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-title: Full Node on Raspberry Pi
+title: Full node on Raspberry Pi
 ---
 
 # Running a dockerized full node on a Raspberry Pi 4

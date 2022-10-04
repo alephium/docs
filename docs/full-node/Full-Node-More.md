@@ -1,6 +1,6 @@
 ---
 sidebar_position: 40
-title: More and Troubleshooting
+title: More and troubleshooting
 ---
 
 ## API Key
