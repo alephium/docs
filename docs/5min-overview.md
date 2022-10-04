@@ -5,7 +5,7 @@ slug: /
 title: Alephium overview
 ---
 
-## 🐥 What is Alephium?
+## What is Alephium?
 
 Alephium is the first live Layer 1 sharded blockchain scaling and improving on Bitcoin core technologies, Proof of Work & UTXO. It delivers a highly performant, secure DeFi & Dapps platform with enhanced energy efficiency.
 
@@ -15,7 +15,7 @@ Alephium is the first live Layer 1 sharded blockchain scaling and improving on B
 
 ---
 
-## 💎 Why is Alephium special?
+## Why is Alephium special?
 
 On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
 
@@ -37,7 +37,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 
 ## Milestones & Roadmap
 
-### 🚀 Completed Milestones
+### Completed Milestones
 
 **Core Platform**
 
@@ -93,9 +93,9 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 ---
 
-## 🛡 Our tokenomics
+## Our tokenomics
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the years. Of these 140M tokens:
+The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~ 80 years. Of these 140M tokens:
 
 80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
 
@@ -103,7 +103,7 @@ The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet 
 
 30M tokens (3%) 🧑‍💻 **Treasury & Team**. Locked on-chain for 3 years, and vested quarterly.
 
-860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
+860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
 
 In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
 
@@ -113,11 +113,11 @@ In addition, half of the transaction fees are burned with each block and Proof o
 
 ## 🏋️‍♀️ Our team
 
-The core team counts 14 members. 9 are tech team members and the remaining 5 are part of the operations team. Come say hello on Discord!
+The core team counts 16 members. 9 are tech team members and the remaining 7 are part of the operations team. Come say hello on Discord!
 
 [@ChengWang#1571](https://twitter.com/wachmc) 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
 
-[@s0ukie#8277](https://twitter.com/s0ukie) ⚙️ is our Chief of Staff, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
+[@s0ukie#8277](https://twitter.com/s0ukie) ⚙️ is our COO, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
 
 [@setto#4764](http://twitter.com/heptazoid) 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
 
@@ -180,7 +180,6 @@ You will find the complete list of internationalized channel [here](https://wiki
 
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
 - [Cetacean Capital](https://cetacean.capital/)
-- [Market Across PR](https://marketacross.com)
 - [UTXO Alliance](https://utxo-alliance.org/)
 
 ## 🛠 If you’re a dev, start here
