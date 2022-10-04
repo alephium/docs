@@ -1,7 +1,7 @@
 ---
-sidebar_position: 10
+sidebar_position: 0
 sidebar_label: Overview
-slug: /5min-overview
+slug: /
 title: Alephium overview
 ---
 

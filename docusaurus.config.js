@@ -198,7 +198,7 @@ const config = {
             from: "/Smart-Contract-More.html",
             to: "/dapps/Additional-Information",
           },
-          { from: "/Roadmap.html", to: "/5min-overview" },
+          { from: "/Roadmap.html", to: "/" },
           {
             from: "/Testnet-Guide.html",
             to: "/testnet-and-devnet/Testnet-Guide",
