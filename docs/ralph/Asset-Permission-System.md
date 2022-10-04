@@ -1,6 +1,7 @@
 ---
 sidebar_position: 60
-title: Asset permission system (APS)
+title: Asset Permission System (APS)
+sidebar_label: Asset permission system (APS)
 ---
 
 :::caution

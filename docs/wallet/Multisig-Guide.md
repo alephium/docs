@@ -1,6 +1,7 @@
 ---
 sidebar_position: 20
-title: Multisig guide
+title: Multisig Guide
+sidebar_label: Multisig guide
 ---
 
 Alephium is supporting `m-of-n` multi-signature addresses.

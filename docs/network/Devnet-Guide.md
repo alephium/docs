@@ -1,11 +1,12 @@
 ---
 sidebar_position: 20
-title: Devnet guide
+title: Devnet Guide
+sidebar_label: Devnet guide
 ---
 
 It's dev-friendly to start a local devnet with empty block history and arbitrary amount of coins.
 
-The installation of full node for devnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
+The installation of full node for devnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
 
 **The `user.conf` must be modified before starting the full node**.
 

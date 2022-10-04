@@ -1,11 +1,12 @@
 ---
 sidebar_position: 10
 title: Solo Mining Guide
+sidebar_label: Solo mining guide
 ---
 
 # Solo Mining Guide
 
-You must first follow the steps in the [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+You must first follow the steps in the [Full Node Starter Guide](full-node/getting-started.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
 ## Mining information
 
@@ -17,7 +18,7 @@ You must first follow the steps in the [Full Node Starter Guide](full-node/Full-
 
 For more information about mining rewards, please read this article [Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33).
 
-You could get the estimated network hashrate from the log of your full node, or from the Grafana dashboard of the full node if you run it with [docker-compose](full-node/Docker-Guide.md).
+You could get the estimated network hashrate from the log of your full node, or from the Grafana dashboard of the full node if you run it with [docker-compose](full-node/docker-guide.md).
 
 ## Miner wallet
 
@@ -55,7 +56,7 @@ Please restart your node to make these new configs take effect. Please be sure t
 
 ## Security
 
-By default, the API interface of Alephium is bound to localhost, your API endpoints are secure. However, if you configured `alephium.api.network-interface`, your endpoints might be exposed to public network. This can be dangerous as anyone would be able to access your miner wallet. Please consider to configure API Key following this guide: [API Key](full-node/Full-Node-More.md#api-key).
+By default, the API interface of Alephium is bound to localhost, your API endpoints are secure. However, if you configured `alephium.api.network-interface`, your endpoints might be exposed to public network. This can be dangerous as anyone would be able to access your miner wallet. Please consider to configure API Key following this guide: [API Key](full-node/full-node-more.md#api-key).
 
 Please also consider to create another secure wallet and move your funds to that wallet using `sweep-all-addresses` endpoint regularly.
 

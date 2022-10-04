@@ -1,6 +1,7 @@
 ---
 sidebar_position: 20
 title: Pool Mining Guide
+sidebar_label: Pool mining guide
 ---
 
 # Pool Mining Guide
@@ -40,7 +41,7 @@ We’re happy to see this list of pools grow and diversify. Please give them a t
 
 Alephium is still very new and it is important that you keep an eye on updates. This is also valid for the software needed to join the mining pools. Remember that each pool has a thriving community with channels welcoming your support requests and questions. Therefore it is always best to ask your pool related questions in the concerned pool’s group. You may also find instructions in your own language in one of our [community playlists available here.](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists)
 
-Below is a list of mining pools in alphabetic order. We encourage you to [send a pull request](https://github.com/alephium/wiki/tree/master/docs/mining/Pool-Mining-Guide.md) to add up-and-coming pools to this wiki and/or to report their disappearance as well as potential misbehavior.
+Below is a list of mining pools in alphabetic order. We encourage you to [send a pull request](https://github.com/alephium/wiki/tree/master/docs/mining/pool-mining-guide.md) to add up-and-coming pools to this wiki and/or to report their disappearance as well as potential misbehavior.
 
 ### Currently known and active pools
 

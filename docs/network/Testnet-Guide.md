@@ -1,9 +1,10 @@
 ---
 sidebar_position: 10
-title: Testnet guide
+title: Testnet Guide
+sidebar_label: Testnet guide
 ---
 
-The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
+The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
 
 **The `user.conf` must be modified before starting the full node**.
 
@@ -20,7 +21,7 @@ alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-
 
 ## Mining
 
-In the testnet you can use the [CPU Miner Guide](CPU-Miner-Guide.md) to get some ALPH
+In the testnet you can use the [CPU Miner Guide](cpu-miner-guide.md) to get some ALPH
 
 Append your miner addresses in `$HOME/.alephium/user.conf` like:
 
@@ -33,7 +34,7 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
-> 💡 You can easily generate mining addresses by installing the [desktop wallet](../wallet/Desktop-Wallet-Guide.md), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
+> 💡 You can easily generate mining addresses by installing the [desktop wallet](../wallet/desktop-wallet-guide.md), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
 
 ## Configuration example
 

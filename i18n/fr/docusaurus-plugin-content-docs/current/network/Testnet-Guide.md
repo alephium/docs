@@ -7,7 +7,7 @@ title: Testnet Guide
 Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
 :::
 
-The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)
+The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
 
 **The user.conf must be modified before starting the full node**
 
@@ -24,7 +24,7 @@ alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-
 
 ## Mining
 
-In the testnet you can use the [CPU Miner Guide](CPU-Miner-Guide.md) to get some ALPH
+In the testnet you can use the [CPU Miner Guide](cpu-miner-guide.md) to get some ALPH
 
 Append your miner addresses in `$HOME/.alephium/user.conf` like:
 

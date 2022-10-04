@@ -42,13 +42,13 @@ importer le fichier `openapi.json` de notre dépôt ([download](https://github.c
 
 ### Exploitation minière
 
-Pour le tutoriel sur le minage, vous pouvez suivre notre [Guide du minage en solo](mining/Solo-Mining-Guide.md) ou [Guide du minage en pool](mining/Pool-Mining-Guide.md).
+Pour le tutoriel sur le minage, vous pouvez suivre notre [Guide du minage en solo](mining/solo-mining-guide.md) ou [Guide du minage en pool](mining/pool-mining-guide.md).
 
 ### wallet
 
 Vous pouvez télécharger le wallet de bureau à partir d'ici [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
 
-Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](wallet/Wallet-Guide.md) pour apprendre à l'utiliser.
+Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](wallet/wallet-guide.md) pour apprendre à l'utiliser.
 
 [^1]: Le dossier d'accueil dépend de votre système : `C:\Users\<votre-username>` sous Windows, `/Users/<votre-username>` sous macOS, `/home/<votre-username>` sous Linux.
 

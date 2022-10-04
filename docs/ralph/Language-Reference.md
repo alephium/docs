@@ -1,12 +1,11 @@
 ---
 sidebar_position: 10
-title: Ralph language reference
+title: Ralph Language Reference
+sidebar_label: Ralph language reference
 ---
 
 :::caution
-This page is WIP until our dApps stack is more stable 🚧. It is derived from the alephium/alephium source code. **It could become out of date at any time**, so double-check with other developers
-if you think something has changed, and if it has, [fork this wiki](https://github.com/alephium/wiki.git)
-and [open a PR](https://github.com/alephium/wiki/compare)!
+This page is WIP until our dApps stack is more stable 🚧.
 :::
 
 A reference for the Ralph smart contract language.
@@ -68,10 +67,10 @@ to muscle memory.
 |       **Event** | `event <TupleName>(field1: <type>, field2: <type>, fieldN: <type>, ...)`           |
 |       **Event** | `emit <TupleName>(<value1>, <value2>, <valueN>, ...)`                              |
 |   **Structure** | `interface <InterfaceName> { ... }`                                                |
-|   **Structure** | `TxContract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
+|   **Structure** | `Contract ContractName([mut] fieldN: <type>) [extends <InterfaceName>] { ... }`  |
 |   **Structure** | `TxScript <ScriptName>([mut] fieldN: <type>) { ... }`                              |
 
-### Interfaces, TxContracts, and TxScripts
+### Interfaces, Contracts, and TxScripts
 
 Below is a "code template" of the general structure of what smart contracts will
 look like. They take on a class-like appearance, similar to JavaScript, C#, and
@@ -85,7 +84,7 @@ interface InterfaceName {
 }
 
 // To create a contract:
-TxContract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) implements InterfaceName {
+Contract ContractName([mut] arg1: <type>, [mut] arg2: <type>, ...etc) implements InterfaceName {
   [@using(preapprovedAssets = <Bool>, assetsInContract = <Bool>)]
   [pub] fn functionName(arg1: <type>, ...etc) -> (<return type>) {
     return <thing>

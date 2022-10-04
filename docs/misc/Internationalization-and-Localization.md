@@ -1,6 +1,7 @@
 ---
 sidebar_position: 20
 title: Internationalization and Localization
+sidebar_label: Internationalization and localization
 ---
 
 # Internationalization and Localization (i18n)

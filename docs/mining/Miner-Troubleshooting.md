@@ -7,7 +7,7 @@ title: Troubleshooting
 
 #### Why I can only restore 1 of my 4 miner addresses ?
 
-You have to specify `isMiner = true` when restoring your miner address. Please checkout the example here: [Restore-Miner-Wallet](Solo-Mining-Guide.md#restore-your-miner-wallet)
+You have to specify `isMiner = true` when restoring your miner address. Please checkout the example here: [Restore-Miner-Wallet](solo-mining-guide.md#restore-your-miner-wallet)
 
 #### How to connect my miner to my full node on another computer in the same subnet ?
 

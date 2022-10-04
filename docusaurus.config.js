@@ -155,69 +155,65 @@ const config = {
           },
           {
             from: "/Full-Node-Starter-Guide.html",
-            to: "/full-node/Full-Node-Starter-Guide",
+            to: "/full-node/getting-started",
           },
           {
             from: "/Docker-Guide.html",
-            to: "/full-node/Docker-Guide",
+            to: "/full-node/docker-guide",
           },
           {
             from: "/Full-Node-More.html",
-            to: "/full-node/Full-Node-More",
+            to: "/full-node/full-node-more",
           },
           {
             from: "/Full-node-on-raspberry-pi.html",
-            to: "/full-node/Full-node-on-raspberry-pi",
+            to: "/full-node/raspberry-pi",
           },
           {
             from: "/Solo-Mining-Guide.html",
-            to: "/mining/Solo-Mining-Guide",
+            to: "/mining/solo-mining-guide",
           },
           {
             from: "/Pool-Mining-Guide.html",
-            to: "/mining/Pool-Mining-Guide",
+            to: "/mining/pool-mining-guide",
           },
           {
             from: "/Miner-Troubleshooting.html",
-            to: "/mining/Miner-Troubleshooting",
+            to: "/mining/miner-troubleshooting",
           },
           {
             from: "/Alephium-Stratum.html",
-            to: "/mining/Alephium-Stratum",
+            to: "/mining/alephium-stratum",
           },
-          { from: "/Wallet-Guide.html", to: "/wallet/Wallet-Guide" },
+          { from: "/Wallet-Guide.html", to: "/wallet/wallet-guide" },
           {
             from: "/Multisig-Guide.html",
-            to: "/wallet/Multisig-Guide",
+            to: "/wallet/multisig-guide",
           },
           {
             from: "/Smart-Contract-Guide.html",
-            to: "/dapps/Getting-Started",
+            to: "/dapps/getting-started",
           },
           {
             from: "/Smart-Contract-More.html",
-            to: "/dapps/Additional-Information",
+            to: "/ralph/language-reference",
           },
           { from: "/Roadmap.html", to: "/" },
           {
             from: "/Testnet-Guide.html",
-            to: "/network/Testnet-Guide",
+            to: "/network/testnet-guide",
           },
           {
             from: "/Devnet-Guide.html",
-            to: "/network/Devnet-Guide",
+            to: "/network/devnet-guide",
           },
           {
             from: "/CPU-Miner-Guide.html",
-            to: "/network/CPU-Miner-Guide",
-          },
-          {
-            from: "/On-dust-outputs-and-state-explosion.html",
-            to: "/misc/On-dust-outputs-and-state-explosion",
+            to: "/network/cpu-miner-guide",
           },
           {
             from: "/Internationalization-and-Localization.html",
-            to: "/misc/Internationalization-and-Localization",
+            to: "/misc/internationalization-and-localization",
           },
         ],
       },
