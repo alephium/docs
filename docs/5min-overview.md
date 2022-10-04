@@ -5,9 +5,9 @@ slug: /
 title: Alephium overview
 ---
 
-## 🐥 What is Alephium?
+## What is Alephium?
 
-Alephium is the first live Layer 1 sharded blockchain scaling and improving on Bitcoin core technologies, Proof of Work & UTXO. It delivers a highly performant, secure DeFi & Dapps platform with enhanced energy efficiency.
+Alephium is the first operational sharded L1 blockchain scaling and enhancing PoW & UTXO concepts. Decentralization, self-sovereignty and security meet high-performance, accessibility and energy efficiency in a dev-friendly network optimized for DeFi & smart contract applications.
 
 - Like Bitcoin, but more programmable & energy efficient.
 - Like Ethereum, but more secure & scalable.
@@ -15,7 +15,7 @@ Alephium is the first live Layer 1 sharded blockchain scaling and improving on B
 
 ---
 
-## 💎 Why is Alephium special?
+## Why is Alephium special?
 
 On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
 
@@ -37,7 +37,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 
 ## Milestones & Roadmap
 
-### 🚀 Completed Milestones
+### Completed Milestones
 
 **Core Platform**
 
@@ -65,7 +65,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 - 04.2022 — First NFT platform to be built on Alephium
 - 06.2022 — Website Revamp
 
-### 🛣️ Roadmap
+### Roadmap
 
 The network is young and growing rapidly. We will update the roadmap to reflect the latest priorities.
 
@@ -93,9 +93,9 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 ---
 
-## 🛡 Our tokenomics
+## Our tokenomics
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the years. Of these 140M tokens:
+The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
 
 80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
 
@@ -103,7 +103,7 @@ The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet 
 
 30M tokens (3%) 🧑‍💻 **Treasury & Team**. Locked on-chain for 3 years, and vested quarterly.
 
-860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
+860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
 
 In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
 
@@ -111,29 +111,29 @@ In addition, half of the transaction fees are burned with each block and Proof o
 
 ---
 
-## 🏋️‍♀️ Our team
+## Our team
 
-The core team counts 14 members. 9 are tech team members and the remaining 5 are part of the operations team. Come say hello on Discord!
+The core team counts 17 members. 10 are tech team members and the remaining 7 are part of the operations team. Come say hello on Discord!
 
-[@ChengWang#1571](https://twitter.com/wachmc) 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
+[@ChengWang#1571] 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
 
-[@s0ukie#8277](https://twitter.com/s0ukie) ⚙️ is our Chief of Staff, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
+[@s0ukie#8277] ⚙️ is our COO, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
 
-[@setto#4764](http://twitter.com/heptazoid) 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
+[@setto#4764] 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
 
 Meet the rest of the team on our [website][website] or on [Linkedin](https://www.linkedin.com/company/alephium/people/).
 
 ---
 
-## 🎯 Meet us, join us, talk to us!
+## 🎯 Join the Alephium Community!
 
-### Talk with us
+### Talk
 
 - [Discord][discord]
 - [Telegram][telegram]
 - [Reddit][reddit]
 
-### Connect with us
+### Connect 
 
 - [Twitter][twitter]
 - [LinkedIn][linkedin]
@@ -148,7 +148,7 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 
 ---
 
-## 🦄 Non-official Content & Communities
+## Non-official Content & Communities
 
 > Not moderated, endorsed or managed by Alephium
 
@@ -172,18 +172,18 @@ You will find the complete list of internationalized channel [here](https://wiki
 
 ---
 
-## 🪙 Buy/sell
+## Buy/sell
 
 - [Gate.io][gateio]
 
-## 🤝 Our partners
+## Our partners
 
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
 - [Cetacean Capital](https://cetacean.capital/)
 - [Market Across PR](https://marketacross.com)
 - [UTXO Alliance](https://utxo-alliance.org/)
 
-## 🛠 If you’re a dev, start here
+## If you’re a dev, start here
 
 Find our latest [node release on GitHub][node-release].
 
@@ -196,7 +196,7 @@ Come commit and pull request with us in any of our [projects on GitHub](https://
 - [Wiki][wiki]
 - [Awesome Alephium][awesome]
 
-## ⛏ If you’re a miner, start here
+## If you’re a miner, start here
 
 Start by joining the dedicated [Mining channel on Discord][mining-discord].
 
