@@ -125,7 +125,7 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 
 ---
 
-## 🎯 Join the Alephium Community!
+## Join the Alephium Community!
 
 ### Talk
 
