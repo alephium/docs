@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: Testnet Guide
+title: Testnet guide
 ---
 
 The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/Full-Node-Starter-Guide.md)

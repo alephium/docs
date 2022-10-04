@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: Full Node Starter Guide
+title: Getting started
 ---
 
 # Starter Guide: How to Launch your Node

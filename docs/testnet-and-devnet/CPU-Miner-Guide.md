@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-title: CPU Miner Guide
+title: CPU miner guide
 ---
 
 > Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](testnet-and-devnet/Testnet-Guide.md).
