@@ -201,15 +201,15 @@ const config = {
           { from: "/Roadmap.html", to: "/" },
           {
             from: "/Testnet-Guide.html",
-            to: "/testnet-and-devnet/Testnet-Guide",
+            to: "/network/Testnet-Guide",
           },
           {
             from: "/Devnet-Guide.html",
-            to: "/testnet-and-devnet/Devnet-Guide",
+            to: "/network/Devnet-Guide",
           },
           {
             from: "/CPU-Miner-Guide.html",
-            to: "/testnet-and-devnet/CPU-Miner-Guide",
+            to: "/network/CPU-Miner-Guide",
           },
           {
             from: "/On-dust-outputs-and-state-explosion.html",

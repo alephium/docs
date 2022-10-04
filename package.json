@@ -4,15 +4,16 @@
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
-    "start": "docusaurus start",
-    "build": "docusaurus build",
+    "start": "npm run generate-builtin-functions && docusaurus start",
+    "build": "npm run generate-builtin-functions && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clear": "docusaurus clear",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\""
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "generate-builtin-functions": "node scripts/generate-builtin-functions.js"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.18",
@@ -37,6 +38,7 @@
     ]
   },
   "devDependencies": {
+    "node-fetch": "^2.6.7",
     "prettier": "2.6.0"
   }
 }

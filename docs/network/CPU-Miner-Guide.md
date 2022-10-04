@@ -3,7 +3,7 @@ sidebar_position: 30
 title: CPU miner guide
 ---
 
-> Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](testnet-and-devnet/Testnet-Guide.md).
+> Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](network/Testnet-Guide.md).
 
 > For mining in production please visit [Solo Mining Guide](mining/Solo-Mining-Guide.md) or [Pool Mining Guide](mining/Pool-Mining-Guide.md).
 
