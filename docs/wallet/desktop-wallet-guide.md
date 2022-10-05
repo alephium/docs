@@ -1,7 +1,7 @@
 ---
 sidebar_position: 30
 title: Desktop Wallet Guide
-sidebar_label: Desktop wallet guide
+sidebar_label: Desktop wallet
 ---
 
 The desktop wallet is the most user-friendly Alephium wallet available today. You can download its latest version from our [GitHub][latest-release].
