@@ -1,6 +1,6 @@
 ---
 sidebar_position: 10
-title: Node Wallet Guide
+title: Node Wallet
 sidebar_label: Node wallet
 ---
 

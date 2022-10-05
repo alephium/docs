@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-title: Desktop Wallet Guide
+title: Desktop Wallet
 sidebar_label: Desktop wallet
 ---
 

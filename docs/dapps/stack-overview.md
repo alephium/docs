@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
-title: Stack Overview
-sidebar_label: Stack overview
+title: dApp Stack Overview
+sidebar_label: Overview
 ---
 
 :::caution
