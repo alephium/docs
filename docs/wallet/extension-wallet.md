@@ -26,8 +26,8 @@ package.
 npm install --save @alephium/get-extension-wallet
 ```
 
-The following code shows how to connect to the extension wallet, get accounts, listen
-to events to detect account and network updates:
+The following code shows how to connect to the extension wallet, get accounts as well as
+listen to events to detect account and network updates:
 
 ```ts
 import { connect } from "@alephium/get-extension-wallet"
@@ -60,6 +60,12 @@ async function tryConnect() {
   }
 }
 ```
+
+User will be prompted to connect to the current web page when `windowAlephium.enable()` method is called:
+<img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="300" />
+
+After user clicks the `Connect` button, the extension wallet will be returned all the available accounts
+to the dApp.
 
 #### 2. Sign Transactions
 
@@ -125,6 +131,10 @@ async function callScript() {
 }
 ```
 
-That is it! Other methods can be executed in a similiar way. When signature is needed, user will
-be prompted to approve the transaction.
+That is it! When signature is needed, user will be prompted to approve the transaction as follows:
 
+<img src={require("./media/execute-txscript.png").default} alt="Execute Transction Script" width="300" />
+
+
+After user clicks the `Approve` button, the transction will be signed and submitted to the Alephium blockchain
+by the extension wallet. Other methods can be executed in a similiar way.
