@@ -1,7 +1,7 @@
 ---
-sidebar_position: 40
-title: Extension Wallet
-sidebar_label: Extension wallet
+sidebar_position: 20
+title: Extension Wallet for dApps
+sidebar_label: dApp integration
 ---
 
 Extension wallet can be used in a web browser to interact with the Alephium blockchain.

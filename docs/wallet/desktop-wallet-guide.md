@@ -1,5 +1,5 @@
 ---
-sidebar_position: 30
+sidebar_position: 10
 title: Desktop Wallet
 sidebar_label: Desktop wallet
 ---

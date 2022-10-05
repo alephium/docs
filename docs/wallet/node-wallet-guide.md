@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 40
 title: Node Wallet
 sidebar_label: Node wallet
 ---
