@@ -55,7 +55,7 @@ async function tryConnect() {
 User will be prompted to connect to the current web page when `windowAlephium.enable()` method is called:
 <img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="250" />
 
-After user clicks the `Connect` button, the extension wallet will be returned all the available accounts
+After user clicks the `Connect` button, the extension wallet will return all the available accounts
 to the dApp.
 
 ### 2. Sign Transactions
