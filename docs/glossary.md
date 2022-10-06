@@ -139,7 +139,7 @@ Multisig or Multisignature is the process of requesting more than one private ke
 
 Usually, the multisig setup is done in a way that requires a minimal quorum of signers for a specific transaction to be approved and sent. For instance, a multisig of 5 out of 9 will require a quorum of 5 signers (among nine potential co-signers) to co-sign a transaction before it can be sent.
 
-Alephium’s [Full Node Wallet](https://wiki.alephium.org/wallet/Wallet-Guide) supports multisig addresses
+Alephium’s [Full Node Wallet](https://wiki.alephium.org/wallet/Node-Wallet-Guide) supports multisig addresses
 
 ## N
 
