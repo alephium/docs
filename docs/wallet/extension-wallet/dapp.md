@@ -1,17 +1,8 @@
 ---
-sidebar_position: 20
+sidebar_position: 40
 title: Extension Wallet for dApps
 sidebar_label: dApp integration
 ---
-
-Extension wallet can be used in a web browser to interact with the Alephium blockchain.
-It enables dApps to interact with user wallets securely right in the browser.
-
-### Installation
-
-### User Guide
-
-### dApp
 
 The Alephium extension wallet injects a global object `window.alephium` into the websites
 that the user interacts with. dApps can use this object to authenticate the user, request
@@ -20,7 +11,7 @@ various transactions. To detect the `window.alephium` object, we recommand to us
 [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
 package.
 
-#### 1. Basic Setup
+### 1. Basic Setup
 
 ```
 npm install --save @alephium/get-extension-wallet
@@ -62,12 +53,12 @@ async function tryConnect() {
 ```
 
 User will be prompted to connect to the current web page when `windowAlephium.enable()` method is called:
-<img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="300" />
+<img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="250" />
 
 After user clicks the `Connect` button, the extension wallet will be returned all the available accounts
 to the dApp.
 
-#### 2. Sign Transactions
+### 2. Sign Transactions
 
 `windowAlephium` object [implements](https://github.com/alephium/extension-wallet/blob/4f29c8f10843b737cda87ddc689b71c298a42e57/packages/get-extension-wallet/src/types.ts#L138)
 the [SignerProvider](https://github.com/alephium/alephium-web3/blob/ad4401d9ef87eced37d03762324297aeba07e03d/packages/web3/src/signer/signer.ts#L154), which exposes the following
@@ -133,7 +124,7 @@ async function callScript() {
 
 That is it! When signature is needed, user will be prompted to approve the transaction as follows:
 
-<img src={require("./media/execute-txscript.png").default} alt="Execute Transction Script" width="300" />
+<img src={require("./media/execute-txscript.png").default} alt="Execute Transction Script" width="250" />
 
 
 After user clicks the `Approve` button, the transction will be signed and submitted to the Alephium blockchain
