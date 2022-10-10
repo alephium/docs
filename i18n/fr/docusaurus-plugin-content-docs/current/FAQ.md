@@ -4,6 +4,10 @@ slug: /frequently-asked-questions
 title: FAQ
 ---
 
+:::info
+Cette page n'a pas encore été traduite. Vous pouvez le faire en suivant le lien en pied de page.
+:::
+
 # Frequently Asked Questions
 
 > 📚 Learn everything about Alephium in this [5min overview](/).
