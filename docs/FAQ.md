@@ -169,6 +169,11 @@ Sharded blockchain could have security concerns if not designed well. Vitalik co
 
 Alephium solved it with blockflow algorithm. Mining work of different shards is accumulated due to block dependencies. If an attacker wants to reorg one shard, one needs to reorg all of the dependencies. One intuitive way to view this is that all of the shards merged-mine with each other. 
 
+### Can I use my mainnet address on the testnet? 
+
+Alephium addresses are algorithmically created and are independent from any network (testnet, mainnet, devnet, etc). Even if you disconnect from the internet, for example, you can still use the desktop wallet or the node wallet and generate a wallet and multiple addresses in it. You don't need to connect to a network node to create a wallet and addresses. So, in a sense, every Alephium address exists in every network, even ones that have not been created yet.
+
+Once you connect your wallet to a network, say testnet for example, you can then query a node of the testnet to ask for the balance of your address on testnet. Switching the network settings of your wallet to connect to mainnet, a mainnet node will then tell you the balance of your address on the mainnet network. So, it's kinda like every address having a balance in every network, and based on which network you chose to connect to, you'll see the balance of your address on that specific network 
 
 ## Tokenomics
 
