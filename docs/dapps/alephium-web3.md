@@ -328,7 +328,7 @@ const contract = Project.contract('TokenFaucet')
 // `initialFields` is required if the contract has fields
 // `initialAttoAlphAmount` must be greater than or equal to 1 ALPH, assets will be sent to the contract from the transaction sender account
 // `issueTokenAmount` specifies the amount of tokens to issue
-const deployTx = await contract.transactionForDeployment(wallet, {
+const deployTx = await contract.deploy(wallet, {
   initialFields: {
     'supply': 10,
     'balance': 10
@@ -336,19 +336,24 @@ const deployTx = await contract.transactionForDeployment(wallet, {
   initialAttoAlphAmount: 1e18.toString(),
   issueTokenAmount: 10
 })
-
-// The wallet will sign the transaction and submit the signed transaction to the Alephium network
-await wallet.signAndSubmitUnsignedTx({
-  signerAddress: wallet.account.address,
-  unsignedTx: deployTx.unsignedTx
-})
+// {
+//   fromGroup: 0,
+//   toGroup: 0,
+//   unsignedTx: '000401010103000000081500bee85f379545a2ed9f6cceb331288842f378cf0f04012ad4ac8824aae7d6f80a13c40de0b6b3a7640000a214403502030912402f010000000102a00002010000000102a0010201020101001116000e320c7bb4b11600aba00116002ba10105b416005f140502020a020a130aae188000df5ac1174876e8000137a44447ee63cc28681ca03ed7d42e22b54c7be08b9d57b0795b39d50fe8676fe16caecb000381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b000',
+//   gasAmount: 57178,
+//   gasPrice: 100000000000,
+//   txId: '502d2d6ac7538c673d487d1c0afe8010f1191e1df22986416aa076e8e6e95b00',
+//   contractAddress: 'v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX',
+//   contractId: '15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a',
+//   signature: '48a9154faefc1d20baf475257bbf16da8dcb2eaf168e262a74391b5ce4eaffca121f1c2ab3b42991628bd6f8eec823d1ac69392ef0a3fa537aa33c34e94a2d3f'
+// }
 
 // Get the contract state
 const contractState = await contract.fetchState(deployTx.contractAddress, deployTx.fromGroup)
 console.log(JSON.stringify(contractState, null, 2))
 // {
-//   "address": "27bbNJrvKCMXEtLk6kJ9LGjEb8raRzou48r2hfR3mdG8L",
-//   "contractId": "bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165",
+//   "address": "v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX",
+//   "contractId": "15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a",
 //   "bytecode": "02030912402f010000000102a00002010000000102a0010201020101001116000e320c7bb4b11600aba00116002ba10105b416005f",
 //   "initialStateHash": "60bc4f3efc3b6666012912b72f225ea195f975997798e9430d1e31c22ef9b1f9",
 //   "codeHash": "2fc7b82e947f4dbb0f44d16fd60ff022ed7f34de120b4c1fea2926231c8d3595",
@@ -374,7 +379,7 @@ console.log(JSON.stringify(contractState, null, 2))
 //     "alphAmount": "1000000000000000000",
 //     "tokens": [
 //       {
-//         "id": "bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165",
+//         "id": "15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a",
 //         "amount": 10
 //       }
 //     ]
@@ -394,27 +399,30 @@ const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aab
 await Project.build()
 
 // Contract address from the deploy output
-const contractAddress = '27bbNJrvKCMXEtLk6kJ9LGjEb8raRzou48r2hfR3mdG8L'
+const contractAddress = 'v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX'
 
 // Contract id from the deploy output
-const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'
+const contractId = '15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a'
 
 // Get the script by script name
 const script = Project.script('Withdraw')
 
 // Create a call contract transaction, `initialFields` is required if the script has fields
-const callTx = await script.transactionForDeployment(wallet, {
+const callTx = await script.execute(wallet, {
   initialFields: {
     'token': contractId,
     'amount': 1
   }
 })
-
-// The wallet will sign the transaction and submit the signed transaction to the Alephium network
-await wallet.signAndSubmitUnsignedTx({
-  signerAddress: wallet.account.address,
-  unsignedTx: callTx.unsignedTx
-})
+// {
+//   fromGroup: 0,
+//   toGroup: 0,
+//   unsignedTx: '0004010101030000000513010d0c14402015be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a0102800092cac1174876e8000137a444476ee5158bbb205cad1f836e36740e72fe181bae5f45b331993e2444b2ae8cdd05000381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b000',
+//   gasAmount: 37578,
+//   gasPrice: 100000000000,
+//   txId: 'd693775c8c60baa1f0e46ce11ab559da91059eef37acfffa491279035d6e9cfa',
+//   signature: '96c351c696539c6d97d3b9ea0e9ab1a00fcdd6f6964d62db7c76235ae7d2c27b72440261edde026d49a25b33839059bd7d84c4de547114befc1ab00c658c167e'
+// }
 
 // Get the account balance
 const balance = await wallet.nodeProvider.addresses.getAddressesAddressBalance(wallet.account.address)
@@ -426,7 +434,7 @@ console.log(balance)
 //   lockedBalanceHint: '0 ALPH',
 //   tokenBalances: [
 //     {
-//       id: 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165',
+//       id: '15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a',
 //       amount: '1'
 //     }
 //   ],
@@ -438,8 +446,8 @@ const contract = Project.contract('TokenFaucet')
 const contractState = await contract.fetchState(contractAddress, wallet.account.group)
 console.log(JSON.stringify(contractState, null, 2))
 // {
-//   "address": "27bbNJrvKCMXEtLk6kJ9LGjEb8raRzou48r2hfR3mdG8L",
-//   "contractId": "bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165",
+//   "address": "v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX",
+//   "contractId": "15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a",
 //   "bytecode": "02030912402f010000000102a00002010000000102a0010201020101001116000e320c7bb4b11600aba00116002ba10105b416005f",
 //   "initialStateHash": "60bc4f3efc3b6666012912b72f225ea195f975997798e9430d1e31c22ef9b1f9",
 //   "codeHash": "2fc7b82e947f4dbb0f44d16fd60ff022ed7f34de120b4c1fea2926231c8d3595",
@@ -465,7 +473,7 @@ console.log(JSON.stringify(contractState, null, 2))
 //     "alphAmount": "1000000000000000000",
 //     "tokens": [
 //       {
-//         "id": "bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165",
+//         "id": "15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a",
 //         "amount": 9
 //       }
 //     ]
@@ -480,7 +488,7 @@ Contract events are indexed by counters, and you can query historic events by sp
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
 // Contract address from deploy output
-const contractAddress = '27bbNJrvKCMXEtLk6kJ9LGjEb8raRzou48r2hfR3mdG8L'
+const contractAddress = 'v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX'
 
 // Query events from index 0, and the `limit` cannot be greater than 100
 const result = await nodeProvider.events.getEventsContractContractaddress(
@@ -493,7 +501,7 @@ console.log(JSON.stringify(result, null, 2))
 //   "events": [
 //     {
 //       "blockHash": "0cb24e242082ca2cc9520ef371bd846e9c29af5b25857fd88bea78da2f05d540",
-//       "txId": "e4a255c1915d5e5cff28a95e7b8d04d02f43a3167957c7712f5191bcdd24d75f",
+//       "txId": "d693775c8c60baa1f0e46ce11ab559da91059eef37acfffa491279035d6e9cfa",
 //       "eventIndex": 0,
 //       "fields": [
 //         {
@@ -510,7 +518,7 @@ console.log(JSON.stringify(result, null, 2))
 //   "nextStart": 1
 // }
 
-// Sometimes events might come from non-canonical blocks because of reorg, you can check if the block in the main chain
+// Sometimes events might comes from non-canonical blocks because of reorg, you can check if the block in the main chain
 await nodeProvider.blockflow.getBlockflowIsBlockInMainChain({blockHash: events[0].blockHash})
 // true
 
@@ -519,12 +527,12 @@ await nodeProvider.events.getEventsContractContractaddressCurrentCount(contractA
 // 1
 
 // You can also get events by transaction id if `alephium.node.event-log.index-by-tx-id` is enabled in your full node configs
-await nodeProvider.events.getEventsTxIdTxid('e4a255c1915d5e5cff28a95e7b8d04d02f43a3167957c7712f5191bcdd24d75f')
+await nodeProvider.events.getEventsTxIdTxid('d693775c8c60baa1f0e46ce11ab559da91059eef37acfffa491279035d6e9cfa')
 // {
 //   "events": [
 //     {
 //       "blockHash": "0cb24e242082ca2cc9520ef371bd846e9c29af5b25857fd88bea78da2f05d540",
-//       "contractAddress": "27bbNJrvKCMXEtLk6kJ9LGjEb8raRzou48r2hfR3mdG8L",
+//       "contractAddress": "v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX",
 //       "eventIndex": 0,
 //       "fields": [
 //         {
@@ -547,7 +555,7 @@ In addition to querying events one by one, you can also get events by subscribin
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
-const contractAddress = '27bbNJrvKCMXEtLk6kJ9LGjEb8raRzou48r2hfR3mdG8L'
+const contractAddress = 'v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX'
 const events: node.ContractEvent[] = []
 const subscriptOptions = {
   // It will check for new events from the full node every `pollingInterval`
@@ -572,7 +580,7 @@ console.log(JSON.stringify(events, null, 2))
 // [
 //   {
 //     "blockHash": "0cb24e242082ca2cc9520ef371bd846e9c29af5b25857fd88bea78da2f05d540",
-//     "txId": "e4a255c1915d5e5cff28a95e7b8d04d02f43a3167957c7712f5191bcdd24d75f",
+//     "txId": "d693775c8c60baa1f0e46ce11ab559da91059eef37acfffa491279035d6e9cfa",
 //     "eventIndex": 0,
 //     "fields": [
 //       {
