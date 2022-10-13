@@ -46,6 +46,17 @@ There are also some built-ins which also commit funds and use them immediately.
 These built-ins are:
 
 - `createContract!`
+- `createContractWithToken!`
+- `createContractAndTransferToken!`
+- `copyCreateContract!`
+- `copyCreateContractWithToken!`
+- `copyCreateContractAndTransferToken!`
+- `createSubContract!`
+- `createSubContractWithToken!`
+- `createSubContractAndTransferToken!`
+- `copyCreateSubContract!`
+- `copyCreateSubContractWithToken!`
+- `copyCreateSubContractAndTransferToken!`
 
 :::
 
