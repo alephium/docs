@@ -45,7 +45,7 @@ For mining tutorial, you can follow our [Solo Mining Guide](mining/solo-mining-g
 
 You could download the desktop wallet from here [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
 
-Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](wallet/wallet-guide.md) to learn how to use it.
+Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](wallet/node-wallet-guide.md) to learn how to use it.
 
 [^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
 

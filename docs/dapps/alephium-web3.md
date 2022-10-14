@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
-title: Alephium Web3
-sidebar_label: Alephium Web3
+title: Web3 SDK
+sidebar_label: Web3 SDK
 ---
 
 ## Installing
@@ -18,16 +18,22 @@ npm install --save @alephium/web3
 const nodeProvider = new NodeProvider('http://localhost:22973')
 ```
 
-Or specify the `API_KEY` if you have `alephium.api.api-key` in your full node config:
+Or specify the `API_KEY` if you have `alephium.api.api-key` in your full node configuration file:
 
 ```typescript
 const API_KEY = // alephium.api.api-key from your full node config
 const nodeProvider = new NodeProvider('http://localhost:22973', API_KEY)
 ```
 
+Sometimes, it's convenient to setup a global `NodeProvider` for your project:
+
+```typescript
+web3.setCurrentNodeProvider(<nodeURL>)
+```
+
 ## Querying the Blockchain
 
-Once you have a `NodeProvider`, you have a connection to the blockchain, which you can use to query the current state, fetch historic logs, look up deployed contracts and so on.
+Once you have a `NodeProvider`, you have a connection to the blockchain, which you can use to query the current contract state, fetch historic contract events, look up deployed contracts and so on.
 
 ```typescript
 // Get the blockchain height from the given chain index
@@ -111,9 +117,13 @@ Transactions are used to change the state of the blockchain. Every transaction n
 npm install --save @alephium/web3-wallet
 ```
 
+:::note
+Both wallets are used for contract development and deployment, please don't use them to store large amount of tokens.
+:::
+
 ### NodeWallet
 
-Please follow the [guide](https://wiki.alephium.org/wallet/wallet-guide) to create the full node wallet.
+Please follow the [guide](/wallet/node-wallet-guide) to create a full node wallet.
 
 ```typescript
 // Create a node wallet by wallet name
@@ -188,7 +198,7 @@ await wallet.signAndSubmitTransferTx({
 
 ## Contracts
 
-Similar to Ethereum, a contract is an abstraction of program code which lives on the Alephium blockchain. Let's use the following example to illustrate how to test, deploy and call the contract, please follow the [guide](https://wiki.alephium.org/dapps/getting-started) to create the project.
+Similar to Ethereum, a contract is an abstraction of program code which lives on the Alephium blockchain. Let's use the following example to illustrate how to test, deploy and call a contract, please follow the [guide](/dapps/getting-started) to create a project.
 
 ### Test the contract
 
@@ -200,7 +210,7 @@ const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aab
 // Build the project first
 await Project.build()
 
-// Get the contract by contract name
+// Get the contract by contract name. The contract is already compiled in the getting-started guide
 const contract = Project.contract('TokenFaucet')
 
 // Test the `withdraw` method of the `TokenFaucet` contract, it will NOT change the blockchain state
@@ -324,7 +334,7 @@ const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aab
 await Project.build()
 const contract = Project.contract('TokenFaucet')
 
-// Create a deploy contract transaction:
+// Create a transaction to deploy the contract and submit the transaction to the Alephium network:
 // `initialFields` is required if the contract has fields
 // `initialAttoAlphAmount` must be greater than or equal to 1 ALPH, assets will be sent to the contract from the transaction sender account
 // `issueTokenAmount` specifies the amount of tokens to issue
@@ -391,7 +401,7 @@ From the output we can see that we have successfully deployed the contract, and 
 
 ### Call the contract
 
-You can use scripts to call contracts in Alephium blockchain, the script code will be executed when the transaction is submitted to the Alephium network, but the script code will not be saved to the blockchain.
+You can use scripts to call contracts on the Alephium blockchain, the script code will be executed when the transaction is submitted to the Alephium network, but the script code will not be stored in the blockchain's state.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -404,7 +414,7 @@ const contractAddress = 'v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX'
 // Contract id from the deploy output
 const contractId = '15be9537456726c336a3cd1aa36074759c457f151ac253a500085920afe3838a'
 
-// Get the script by script name
+// Get the script by script name. The script is already compiled in the getting-started guide
 const script = Project.script('Withdraw')
 
 // Create a call contract transaction, `initialFields` is required if the script has fields
@@ -481,16 +491,16 @@ console.log(JSON.stringify(contractState, null, 2))
 // }
 ```
 
-### Query historic events
+### Query historic contract events
 
-Contract events are indexed by counters, and you can query historic events by specifying the offset and limit.
+Contract events are indexed by contract address with offsets, and you can query historic events of a contract address by specifying the offset and limit (optional).
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
-// Contract address from deploy output
+// Contract address from the contract deployment output
 const contractAddress = 'v9qE7FA4Exh3nSJ7KdrjfFFcCS8e69NF5WrBmeUh5vDX'
 
-// Query events from index 0, and the `limit` cannot be greater than 100
+// Query contract events from index 0, and the `limit` cannot be greater than 100
 const result = await nodeProvider.events.getEventsContractContractaddress(
   contractAddress, {start: 0, limit: 100}
 )
@@ -518,15 +528,15 @@ console.log(JSON.stringify(result, null, 2))
 //   "nextStart": 1
 // }
 
-// Sometimes events might comes from non-canonical blocks because of reorg, you can check if the block in the main chain
+// Sometimes, events might be emitted from non-canonical blocks because of block reorg, you can check if the block in the main chain
 await nodeProvider.blockflow.getBlockflowIsBlockInMainChain({blockHash: events[0].blockHash})
 // true
 
-// Get current contract events counter
+// Get the current contract event counter
 await nodeProvider.events.getEventsContractContractaddressCurrentCount(contractAddress)
 // 1
 
-// You can also get events by transaction id if `alephium.node.event-log.index-by-tx-id` is enabled in your full node configs
+// You can also get events by transaction id if `alephium.node.event-log.index-by-tx-id` is enabled in your full node configuration file
 await nodeProvider.events.getEventsTxIdTxid('d693775c8c60baa1f0e46ce11ab559da91059eef37acfffa491279035d6e9cfa')
 // {
 //   "events": [
@@ -551,7 +561,7 @@ await nodeProvider.events.getEventsTxIdTxid('d693775c8c60baa1f0e46ce11ab559da910
 
 ### Listening to events
 
-In addition to querying events one by one, you can also get events by subscribing. It will periodically query and get new events.
+In addition to querying events one by one, you can also get events by event subscription. It will periodically query and get new events.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -610,7 +620,7 @@ console(binToHex(contractIdFromAddress(contractAddress)) === contractId)
 // true
 ```
 
-### Get group of address
+### Get the group of an address
 
 ```typescript
 const group = groupOfAddress('1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH')
@@ -618,7 +628,7 @@ console.log(group)
 // 0
 ```
 
-### Get sub contract id
+### Get the sub-contract id
 
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'

@@ -152,7 +152,7 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 
 > Not moderated, endorsed or managed by Alephium
 
-You will find the complete list of internationalized channel [here](https://wiki.alephium.org/misc/Internationalization-and-Localization)
+You will find the complete list of internationalized channel [here](/misc/Internationalization-and-Localization)
 
 ### Youtube
 

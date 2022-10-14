@@ -20,38 +20,68 @@ Before diving in deeper, we recommend that you check the following resources as 
   - [Alephium's Q1 2022 Update](https://medium.com/@alephium/alephium-q1-project-update-50f4a7b354b0)
   - [Alephium's 1st AMA](https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672)
 
-## FAQ
+## Chain Data
 
-- [FAQ](#faq)
-- [Mining](#mining)
-  - [What is the Mining Reward?](#what-is-the-mining-reward)
-  - [I have a GPU model XYZ, what is my profit per day?](#i-have-gpu-model-xyz-what-is-my-profit-per-day)
-  - [What is the reason to hold the block reward for 500 minutes, given the block time is only 64 seconds?](#what-is-the-reason-to-hold-the-block-reward-for-500-minutes-given-the-block-time-is-only-64-seconds)
-  - [Why do I have 4 mining addresses?](#why-do-i-have-4-mining-addresses)
-  - [Is there a group for Alephium miners?](#is-there-a-group-for-alephium-miners)
-  - [How many coins are mined per day?](#how-many-coins-are-mined-per-day)
-- [dApps](#dapps)
-  - [What are stateful UTXOs and how are they different from the other UTXOs models?](#what-are-stateful-utxos-and-how-are-they-different-from-the-other-utxos-models)
-  - [What is the reason for making a new language instead of using an existing language like Solidity?](#what-is-the-reason-for-making-a-new-language-instead-of-using-an-existing-language-like-solidity)
-  - [Is anyone already building a DEX on ALPH?](#is-anyone-already-building-a-dex-on-alph)
-- [Wallet](#wallet)
-  - [Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?](#is-there-a-way-to-distinguish-between-a-bitcoin-legacy-address-and-an-alephium-address)
-  - [Is there a planned integration with Ledger Nano?](#is-there-a-planned-integration-with-ledger-nano)
-- [Tokenomics](#tokenomics)
-  - [If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?](#if-tokens-are-burnt-will-there-be-a-time-in-the-future-where-the-amount-of-existing-alph-will-be-close-to-zero)
-  - [What is the minimum Transaction Fee (TF)?](#what-is-the-minimum-transaction-fee-tf)
-- [Exchanges](#exchanges)
-  - [How long does it takes for deposits to show up on exchanges?](#how-long-does-it-takes-for-deposits-to-show-up-on-exchanges)
-  - [When Binance?](#when-binance)
-- [Miscellaneous](#miscellaneous)
-  - [Do you have a Grant & Reward Program?](#do-you-have-a-grant--reward-program)
-  - [How many Transactions Per Second (TPS)](#how-many-transactions-per-second-tps)
-  - [Why is the project named Alephium?](#why-is-the-project-named-alephium)
-  - [Why did you choose PoLW, not PoS?](#why-did-you-choose-polw-not-pos)
-  - [Why not have 1M shards?](#why-not-have-1m-shards)
-  - [What is your token symbol?](#what-is-your-token-symbol)
-  - [Where can I learn everything about Alephium in 5min?](#where-can-i-learn-everything-about-alephium-in-5min)
-  - [WHEN MOON?](#when-moon)
+### How much ALPH in circulation?
+
+You can find the circulating supply on our explorer: https://explorer.alephium.org or by using this endpoint: https://mainnet-backend.alephium.org/infos/supply/circulating-alph
+
+### Is there a way to check which wallet holds how much alph? Top addresses ? 
+
+"This website created by a community member lists the top 256 addresses: https://alph-top.web.app/ For specific wallets, the Explorer is your goto.
+https://explorer.alephium.org"
+
+### How many seconds for a transaction?
+
+1sec should be fine to see the incoming tx in the mempool. One block is ~64sec. Economic finality is depending on the amount and your risk management. For a small TX - mempool is probably enough, 1 - 4 blocks are enough for most TXs If you are an exchange on the other hand, you will probably wait from a few dozens to hundreds of blocks for large amounts.
+
+### What is the minimum Transaction Fee (TF)?
+
+Currently, the minimum transaction fee is currently 0.002 ALPH. This is enforced at the node level to avoid DoS attacks on the network. Later on, the minimum will be reduced. The lowest minimum transaction fee possible is at 0.00000000000001 ALPH. The actual fee will depend on the number of inputs (utxo) and on the number of signers.
+
+### How many Transactions Per Second (TPS)
+
+Currently up to 400 TPS with 16 shards. Alephium can scale up to 10k TPS by increasing the number of shards as necessary.
+
+## dApps
+
+### Is anyone already building a DEX on ALPH?
+
+We have a simple [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170)
+We could also support order-book style DEX, which would avoid the well-known impermanent loss problem thanks to the UTXO model.
+
+We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications.
+Our VM and language are really dev-friendly and if you're familiar with Solidity, you can easily build similar applications on Alephium.
+
+## Development
+
+### Where is the roadmap?
+
+You will find it on the Wiki: https://wiki.alephium.org/#roadmap and on the website: https://alephium.org/#what's_next. You can also follow our weekly development updates on Discord, Twitter or Reddit.
+
+### Where can i query an API?
+
+First, you need to be running a full node (https://wiki.alephium.org/full-node/Full-Node-Starter-Guide). 
+We use OpenAPI to interact with the full node. You can directly open Swagger UI through http://127.0.0.1:12973/docs once your full node is running.
+Alternatively, you can use any OpenAPI client to import the openapi.json file from our repository.
+
+### Do you have a Grant, Reward or Bountie Program?
+
+Yes, Alephium has a Grants and Reward program, meaning that your contribution, as small or big as it may be, might be eligible for a reward. [Read about it here](https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md)
+
+## Listings & Exchanges
+
+### How long does it take for deposits to show up on exchanges?
+
+Currently, 120 confirmations are needed for deposits, which is around 2hours (120 blocks \* block time 64s). PoW chains usually require a higher number of confirmation to ensure sufficient security. For reference, it is still around 1 hour for Bitcoin.
+
+### When Binance?
+
+We don't have an exact date on this. But we are working on it. However, you will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
+
+### What is your token symbol?
+
+ALPH
 
 ## Mining
 
@@ -77,10 +107,6 @@ Alephium is a sharded blockchain with G groups and G\*G shards. Due to this desi
 
 On the mainnet, we currently have 4 Groups and 16 shards. It's why you have 4 mining addresses, one for each group.
 
-### Is there a group for Alephium miners?
-
-On [the Discord,](https://discord.gg/JErgRBfRSB) there is a special mining channel, where you can find active groups.
-
 ### How many coins are mined per day?
 
 Every day approximately 72k ALPH are mined.
@@ -95,7 +121,11 @@ To know how many coins are mined per day, we can use this formula:
 
 This is not an exact calculation, because the number of ALPH issued per block can vary. But it is close enough.
 
-## dApps
+## Tech
+
+### Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?
+
+Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 bytes hash.
 
 ### What are stateful UTXOs and how are they different from the other UTXOs models?
 
@@ -107,66 +137,12 @@ In our stateful UTXO model, we support ETH-like mutable states. It allows us to 
 Multiple reasons:
 
 1. We are based on the stateful UTXO model, which is very different from ETH's account model. It is incompatible with Solidity.
-2. Solidity & EVM designs are not optimal and have known security issues. We want to do better.
+2. Solidity & EVM designs are not optimal and have known security issues. We want to propose a better alternative.
 3. We focused on development experience when designing our own language, to ensure it is easy to get started!
 
-### Is anyone already building a DEX on ALPH?
+### Are flash loans possible on alephium ?
 
-We have a simple [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170)
-We could also support order-book style DEX, which would avoid the well-known impermanent loss problem thanks to the UTXO model.
-
-We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications.
-Our VM and language are really dev-friendly and if you're familiar with Solidity, you can easily build similar applications on Alephium.
-
-## Wallet
-
-### Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?
-
-Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 bytes hash.
-
-### Is there a planned integration with Ledger Nano?
-
-The plan is that once the design of desktop wallet and browser wallet get stable, we will work on Ledger integration. Right now, we are introducing breaking changes which might affect the design of Ledger app
-
-## Tokenomics
-
-### If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?
-
-Theoretically yes, the future is not really projectable beyond 80 years. However, it is not uncommon for open-source community-driven blockchains such as Alephium to change their policies along their evolution. If the community decides to alter a cap, then that cap will be altered.
-
-### What is the minimum Transaction Fee (TF)?
-
-Currently, the minimum transaction fee is currently 0.002 ALPH. This is enforced at the node level to avoid DoS attacks on the network.
-Later on, the minimum will be reduced. The lowest minimum transaction fee possible is at 0.00000000000001 ALPH.
-The actual fee will depend on the number of inputs (utxo) and on the number of signers.
-
-## Exchanges
-
-### How long does it take for deposits to show up on exchanges?
-
-Currently, 120 confirmations are needed for deposits, which is around 2hours (120 blocks \* block time 64s). PoW chains usually require a higher number of confirmation to ensure sufficient security. For reference, it is still around 1 hour for Bitcoin.
-
-### When Binance?
-
-We don't have an exact date on this. But we are working on it. However, you will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
-
-## Miscellaneous
-
-### Do you have a Grant & Reward Program?
-
-Yes, see [this document](https://github.com/alephium/community/blob/master/Grant&RewardProgram.md) for the details.
-
-### How many Transactions Per Second (TPS)
-
-Currently up to 400 TPS with 16 shards. Alephium can scale up to 10k TPS by increasing the number of shards as necessary.
-
-### Why is the project named Alephium?
-
-For those of you less familiar with set theory and mathematics the origin of the name “Alephium” might not be so evident. It is made from the name “Aleph” which is defined on Wikipedia: “Aleph numbers are a sequence of numbers used to represent the cardinality of infinite sets that can be well-ordered. They were introduced by the mathematician Georg Cantor and are named after the symbol he used to denote them, the Hebrew letter aleph ( ℵ )”
-
-In fact, the logotype for Alephium is a stylisation of the letter Aleph.
-
-In an homage to the technical promises of Ethereum, we followed the same naming pattern and the name Alephium was coined.
+No, our virtual machine Alphred doesn't allow flash loans by design.
 
 ### Why did you choose PoLW, not PoS?
 
@@ -185,15 +161,53 @@ According to the Lindy effect’s theory, and despite POS recent successes, it�
 
 ### Why not have 1M shards?
 
-The groupsize G is not very big. Each node needs to maintain 2G - 1 other shards for consistency. We want to keep things small. 2G-1 cannot be too large. Given the average network bandwidth is enough, G can be set as high as 32. There is some computation overhead as well, but networking is the main bottleneck to push G higher.
+Networking is the main bottleneck to increase the number of shards. Each node needs to maintain 2G - 1 other shards for consistency. If the average network bandwidth is sufficient, G can be set as high as 32. There is some computation overhead as well, but networking is the main bottleneck. 
 
-### What is your token symbol?
+### Can a sharded network, specifically Alephium, be attacked with less than 51% hashrate? As in just compromising one shard group?
 
-ALPH
+Sharded blockchain could have security concerns if not designed well. Vitalik coined the "1% attack" terminology for such concerns. ETH's sharding approach solved the issue with validator shuffling.
+
+Alephium solved it with blockflow algorithm. Mining work of different shards is accumulated due to block dependencies. If an attacker wants to reorg one shard, one needs to reorg all of the dependencies. One intuitive way to view this is that all of the shards merged-mine with each other. 
+
+### Can I use my mainnet address on the testnet? 
+
+Alephium addresses are algorithmically created and are independent from any network (testnet, mainnet, devnet, etc). You don't need to connect to a network node (or internet) to create a wallet and addresses. In a sense, every Alephium address exists in every network, even ones that have not been created yet. In many early crypto-networks when a transaction was created it had no information about the network and the transaction could be ""replayed"" on other networks. Therefore it was a bad practice to use the same addresses on different networks. In Alephium, we have network-id as part of transactions so it's perfectly fine to use the same address in different networks.
+
+Once you connect your wallet to a network, say testnet for example, you can then query a node of the testnet to ask for the balance of your address on testnet. Switching the network settings of your wallet to connect to mainnet, a mainnet node will then tell you the balance of your address on the mainnet network. So every address has a balance in every network, and based on which network you chose to connect to, you'll see the balance of your address on that specific network. 
+
+## Tokenomics
+
+### If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?
+
+Theoretically yes, the future is not really projectable beyond 80 years. However, it is not uncommon for open-source community-driven blockchains such as Alephium to change their policies along their evolution. If the community decides to alter a cap, then that cap will be altered.
+
+## Wallet
+
+### Is there a planned integration with Ledger Nano?
+
+The plan is that once the design of desktop wallet and browser wallet get stable, we will work on Ledger integration. Right now, we are introducing breaking changes which might affect the design of Ledger app
+
+### What type of wallet do you offer? Is it plan to offer hardware wallets?
+
+We currently have a desktop [wallet](https://github.com/alephium/desktop-wallet/releases/latest) and the team is working on mobile and [web extension wallets](https://github.com/alephium/extension-wallet/releases/latest). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
+
+## Miscellaneous
+
+### What's new?
+
+You can check our announcement channels on Telegram or Discord. We also have developments update every week on [Discord](https://discord.gg/GxfzPBKJcy), [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) & [Twitter](https://twitter.com/alephium).
+
+### Why is the project named Alephium?
+
+For those of you less familiar with set theory and mathematics the origin of the name “Alephium” might not be so evident. It is made from the name “Aleph” which is defined on Wikipedia: “Aleph numbers are a sequence of numbers used to represent the cardinality of infinite sets that can be well-ordered. They were introduced by the mathematician Georg Cantor and are named after the symbol he used to denote them, the Hebrew letter aleph ( ℵ )”
+
+In fact, the logotype for Alephium is a stylisation of the letter Aleph.
+
+In an homage to the technical promises of Ethereum, we followed the same naming pattern and the name Alephium was coined.
 
 ### Where can I learn everything about Alephium in 5min?
 
-You can quickly get a very good overview about everything regarding Alephium in [this Medium post](https://medium.com/@alephium/welcome-to-alephium-alph-48dfb72aa458)
+You can quickly get a very good overview about everything regarding Alephium in the [landing page of the wiki](/)
 
 ### WHEN MOON?
 
