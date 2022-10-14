@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: Getting Started
-sidebar_label: Getting Started
+sidebar_label: Getting started
 ---
 
 ## Introduction
