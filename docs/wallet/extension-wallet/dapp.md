@@ -99,9 +99,9 @@ TxScript HelloWorld() {
 }
 ```
 
-Please refer to the [Getting Started](../../dapps/getting-started#compiling-your-contracts) page
+Please refer to the [Getting Started](/dapps/getting-started#compiling-your-contracts) page
 for more details about how to compile smart contracts into artifacts that can be used in your
-dApp. More on the Ralph programming language, check out the [language reference](../../ralph/language-reference).
+dApp. More on the Ralph programming language, check out the [language reference](/ralph/getting-started).
 In this case, we assume that the compiled artifact for `HelloWorld` is located at
 `../artifacts/hello_world.ral.json`
 

@@ -195,7 +195,7 @@ const config = {
           },
           {
             from: "/Smart-Contract-More.html",
-            to: "/ralph/language-reference",
+            to: "/ralph/getting-started",
           },
           { from: "/Roadmap.html", to: "/" },
           {
