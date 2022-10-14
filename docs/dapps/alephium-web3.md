@@ -123,7 +123,7 @@ Both wallets are used for contract development and deployment, please don't use 
 
 ### NodeWallet
 
-Please follow the [guide](/wallet/wallet-guide) to create a full node wallet.
+Please follow the [guide](/wallet/node-wallet-guide) to create a full node wallet.
 
 ```typescript
 // Create a node wallet by wallet name

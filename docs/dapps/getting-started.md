@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 10
 title: Getting Started
 sidebar_label: Getting started
 ---
@@ -95,4 +95,6 @@ To learn more about the web3 SDK, read the comments of `src/token.ts`.
 
 ## Connect to the wallets
 
-TODO
+dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
+such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
+and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
