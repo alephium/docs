@@ -8,38 +8,6 @@ sidebar_label: Getting Started
 
 Ralph is the smart contract programming language for the Alephium blockchain, which focuses on three goals: security, simplicity and efficiency. This tutorial gives tips for writing clear, idiomatic, and secure Ralph smart contracts.
 
-## Structure of a Contract
-
-Contracts in Ralph are similar to classes in object-oriented languages. Each contract can contain declarations of contract fields, events, constants, enums, and functions. All these declarations must be inside a contract. Furthermore, contracts can inherit from other contracts.
-
-```rust
-// This is a comment, and currently Ralph only supports line comments.
-// Contract should be named in upper camel case.
-// Contract fields are permanently stored in the contract storage.
-Contract MyToken(supply: U256, name: ByteVec) {
-
-  // Events should be named in upper camel case.
-  // Events allow for logging of activities on the blockchain.
-  // Applications can listen to these events through the REST API of an Alephium client.
-  event Transfer(to: Address, amount: U256)
-
-  // Constant variables should be named in upper camel case.
-  const Version = 0
-
-  // Enums can be used to create a finite set of constant values.
-  enum ErrorCodes {
-    // Enum constants should be named in upper camel case.
-    InvalidCaller = 0
-  }
-
-  // Functions, parameters, and local variables should be named in lower camel case.
-  pub fn transferTo(toAddress: Address) -> () {
-    let payloadId = #00
-    // ...
-  }
-}
-```
-
 ## Types
 
 Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to the compiler type inference. Currently Ralph only supports the following data types:
@@ -119,33 +87,6 @@ Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like
 ### Struct
 
 Currently, Ralph does not support user-defined data types, but it will be supported in the future.
-
-## Contract Fields
-
-Contract fields are permanently stored in the contract storage, and the fields can be changed by the contract code. Applications can get the contract fields through the REST API of an Alephium client.
-
-```rust
-// Contract `Foo` has two fields:
-// `a`: immutable, it can not be changed by the contract code
-// `b`: mutable, it can be changed by the contract code
-Contract Foo(a: U256, mut b: Boolean) {
-  // ...
-}
-
-// Contract fields can also be other contract.
-// It will store the contract id of `Bar` in the contract storage of `Foo`.
-Contract Foo(bar: Bar) {
-  // ...
-}
-
-Contract Bar() {
-  // ...
-}
-```
-
-## Built-in Functions
-
-Ralph provides lots of built-in functions, you can refer to [here](/ralph/built-in-functions).
 
 ## Functions
 
@@ -270,6 +211,30 @@ fn foo() -> () {
 ```
 :::
 
+### Error Handling
+
+Ralph provides two builtin assertion functions for error handling: [assert!](/ralph/built-in-functions#assert) and [panic!](/ralph/built-in-functions#panic). Assertion failure will revert all changes made to the world state by the transaction and stop the execution of the transaction immediately.
+
+```rust
+enum ErrorCodes {
+  InvalidContractState = 0
+}
+
+fn foo(cond: Boolean) -> () {
+  // It will stop the transaction if `cond` is false.
+  // The Alephium client will return the error code if the transaction fails.
+  assert!(cond, ErrorCodes.InvalidContractState)
+}
+
+fn bar(cond: Boolean) -> U256 {
+  if (!cond) {
+    // The difference between `panic!` and `asset!` is that the return type of `panic!` is bottom type
+    panic!(ErrorCodes.InvalidContractState)
+  }
+  return 0
+}
+```
+
 ### Function Calls
 
 Functions of the current contract can be called directly ('internally') or recursively:
@@ -311,6 +276,10 @@ Contract Foo() {
   }
 }
 ```
+
+### Builtin Functions
+
+Ralph provides lots of builtin functions, you can refer to [here](/ralph/built-in-functions).
 
 ### Annotations
 
@@ -452,7 +421,62 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
 }
 ```
 
-## Events
+## Contracts
+
+Contracts in Ralph are similar to classes in object-oriented languages. Each contract can contain declarations of contract fields, events, constants, enums, and functions. All these declarations must be inside a contract. Furthermore, contracts can inherit from other contracts.
+
+```rust
+// This is a comment, and currently Ralph only supports line comments.
+// Contract should be named in upper camel case.
+// Contract fields are permanently stored in the contract storage.
+Contract MyToken(supply: U256, name: ByteVec) {
+
+  // Events should be named in upper camel case.
+  // Events allow for logging of activities on the blockchain.
+  // Applications can listen to these events through the REST API of an Alephium client.
+  event Transfer(to: Address, amount: U256)
+
+  // Constant variables should be named in upper camel case.
+  const Version = 0
+
+  // Enums can be used to create a finite set of constant values.
+  enum ErrorCodes {
+    // Enum constants should be named in upper camel case.
+    InvalidCaller = 0
+  }
+
+  // Functions, parameters, and local variables should be named in lower camel case.
+  pub fn transferTo(toAddress: Address) -> () {
+    let payloadId = #00
+    // ...
+  }
+}
+```
+
+### Fields
+
+Contract fields are permanently stored in the contract storage, and the fields can be changed by the contract code. Applications can get the contract fields through the REST API of an Alephium client.
+
+```rust
+// Contract `Foo` has two fields:
+// `a`: immutable, it can not be changed by the contract code
+// `b`: mutable, it can be changed by the contract code
+Contract Foo(a: U256, mut b: Boolean) {
+  // ...
+}
+
+// Contract fields can also be other contract.
+// It will store the contract id of `Bar` in the contract storage of `Foo`.
+Contract Foo(bar: Bar) {
+  // ...
+}
+
+Contract Bar() {
+  // ...
+}
+```
+
+### Events
 
 Events are dispatched signals that contracts can fire. Applications can listen to these events through the REST API of an Alephium client.
 
@@ -470,27 +494,63 @@ Contract Token() {
 }
 ```
 
-## Error Handling
+### SubContract
 
-Ralph provides two builtin assertion functions for error handling: [assert!](/ralph/built-in-functions#assert) and [panic!](/ralph/built-in-functions#panic). Assertion failure will revert all changes made to the world state by the transaction and stop the execution of the transaction immediately.
+Alephium's virtual machine supports subcontract. Subcontracts can be used as map-like data structure but they are less prone to the state bloat issue. A subcontract can be created by a parent contract with a unique subcontract path.
 
 ```rust
-enum ErrorCodes {
-  InvalidContractState = 0
-}
-
-fn foo(cond: Boolean) -> () {
-  // It will stop the transaction if `cond` is false.
-  // The Alephium client will return the error code if the transaction fails.
-  assert!(cond, ErrorCodes.InvalidContractState)
-}
-
-fn bar(cond: Boolean) -> U256 {
-  if (!cond) {
-    // The difference between `panic!` and `asset!` is that the return type of `panic!` is bottom type
-    panic!(ErrorCodes.InvalidContractState)
+Contract Bar(value: U256) {
+  @using(readonly = true, externalCallCheck = false)
+  pub fn getValue() -> U256 {
+    return value
   }
-  return 0
+}
+
+Contract Foo(barTemplateId: ByteVec) {
+  emit SubContractCreated(key: U256, contractId: ByteVec)
+
+  @using(preapprovedAssets = true, externalCallCheck = false)
+  pub fn set(caller: Address, key: U256, value: U256) -> () {
+    let path = u256To8Bytes!(key)
+    let encodedFields = encodeToByteVec!(value)
+    // Create a sub contract from the given key and value.
+    // The sub contract id is `blake2b(blake2b(selfContractId!() ++ path))`.
+    // It will fail if the sub contract already exists.
+    let contractId = copyCreateSubContract!{caller -> 1 alph}(
+      u256To8Bytes!(path),
+      barTemplateId,
+      encodedFields
+    )
+    emit SubContractCreated(key, contractId)
+  }
+
+  @using(readonly = true)
+  pub fn get(key: U256) -> U256 {
+    const path = u256To8Bytes(key)
+    // Get the sub contract id by the `subContractId!` built-in function
+    const contractId =  subContractId!(path)
+    return Bar(contractId).getValue()
+  }
+}
+```
+
+### Contract Creation inside a Contract
+
+Ralph supports creating contracts programmatically within contracts, Ralph provides some builtin functions to create contracts, you can find more information at [here](/ralph/built-in-functions#contract-functions).
+
+If you want to create multiple instances of a contract, then you should use the `copyCreateContract!` builtin functions, which will reduce a lot of on-chain storage and transaction gas fee.
+
+```rust
+Contract Foo(a: ByteVec, b: Address, c: U256) {
+  // ...
+}
+
+// We want to create multiple instances of contract `Foo`.
+// First we need to deploy a template contract of `Foo`, which contract id is `fooTemplateId`.
+// Then we can use `copyCreateContract!` to create multiple instances.
+TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
+  let encodedFields = encodeToBytes!(a, b, c)
+  copyCreateContract!(fooTemplateId, encodedFields)
 }
 ```
 
@@ -573,66 +633,6 @@ And you can instantiate a contract with interface:
 let bazId = // The contract id of `Baz`
 Foo(bazId).foo()
 let _ = Bar(bazId).bar()
-```
-
-## Creating Contracts
-
-Ralph supports creating contracts programmatically within contracts, Ralph provides some builtin functions to create contracts, you can find more information at [here](https://wiki.alephium.org/ralph/built-in-functions#contract-functions).
-
-If you want to create multiple instances of a contract, then you should use the `copyCreateContract!` builtin functions, which will reduce a lot of on-chain storage and transaction gas fee.
-
-```rust
-Contract Foo(a: ByteVec, b: Address, c: U256) {
-  // ...
-}
-
-// We want to create multiple instances of contract `Foo`.
-// First we need to deploy a template contract of `Foo`, which contract id is `fooTemplateId`.
-// Then we can use `copyCreateContract!` to create multiple instances.
-TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
-  let encodedFields = encodeToBytes!(a, b, c)
-  copyCreateContract!(fooTemplateId, encodedFields)
-}
-```
-
-## SubContract
-
-Alephium's virtual machine supports subcontract. Subcontracts can be used as map-like data structure but they are less prone to the state bloat issue. A subcontract can be created by a parent contract with a unique subcontract path.
-
-```rust
-Contract Bar(value: U256) {
-  @using(readonly = true, externalCallCheck = false)
-  pub fn getValue() -> U256 {
-    return value
-  }
-}
-
-Contract Foo(barTemplateId: ByteVec) {
-  emit SubContractCreated(key: U256, contractId: ByteVec)
-
-  @using(preapprovedAssets = true, externalCallCheck = false)
-  pub fn set(caller: Address, key: U256, value: U256) -> () {
-    let path = u256To8Bytes!(key)
-    let encodedFields = encodeToByteVec!(value)
-    // Create a sub contract from the given key and value.
-    // The sub contract id is `blake2b(blake2b(selfContractId!() ++ path))`.
-    // It will fail if the sub contract already exists.
-    let contractId = copyCreateSubContract!{caller -> 1 alph}(
-      u256To8Bytes!(path),
-      barTemplateId,
-      encodedFields
-    )
-    emit SubContractCreated(key, contractId)
-  }
-
-  @using(readonly = true)
-  pub fn get(key: U256) -> U256 {
-    const path = u256To8Bytes(key)
-    // Get the sub contract id by the `subContractId!` built-in function
-    const contractId =  subContractId!(path)
-    return Bar(contractId).getValue()
-  }
-}
 ```
 
 :::note
