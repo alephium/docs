@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
-title: Get started
-sidebar_label: Get started
+title: Getting Started
+sidebar_label: Getting started
 ---
 
 ### 1. Installation
