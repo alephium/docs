@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
-title: Alephium Web3
-sidebar_label: Alephium Web3
+title: Web3 SDK
+sidebar_label: Web3 SDK
 ---
 
 ## Installing
