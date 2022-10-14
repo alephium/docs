@@ -13,9 +13,9 @@ Ralph is the smart contract programming language for the Alephium blockchain, wh
 Contracts in Ralph are similar to classes in object-oriented languages. Each contract can contain declarations of contract fields, events, constants, enums, and functions. All these declarations must be inside a contract. Furthermore, contracts can inherit from other contracts.
 
 ```rust
-// This is a comment, and currently Ralph only support line comments.
+// This is a comment, and currently Ralph only supports line comments.
 // Contract should be named in upper camel case.
-// Contract fields are permanently stored in contract storage.
+// Contract fields are permanently stored in the contract storage.
 Contract MyToken(supply: U256, name: ByteVec) {
 
   // Events should be named in upper camel case.
@@ -44,23 +44,29 @@ Contract MyToken(supply: U256, name: ByteVec) {
 
 Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to the compiler type inference. Currently Ralph only supports the following data types:
 
-### U256
+### Primitive Types
+
+#### U256
 
 ```rust
-// The type of `a` and `b` is U256.
+// The type of `a` ... `d` is U256.
 let a = 10
 let b = 10u
+let c = 1_000_000_000
+let d = 1e18
 ```
 
-### I256
+#### I256
 
 ```rust
-// The type of `a` and `b` is I256.
+// The type of `a` ... `d` is I256.
 let a = -10
 let b = 10i
+let c = -1_000_000_000
+let d = -1e18
 ```
 
-### Boolean
+#### Boolean
 
 ```rust
 // The type fo `a` and `b` is Boolean.
@@ -68,7 +74,7 @@ let a = false
 let b = true
 ```
 
-### ByteVec
+#### ByteVec
 
 ```rust
 // ByteVec literals must start with `#` followed by a hex string.
@@ -79,7 +85,7 @@ let b = #0011 ++ #2233 // `b` is #00112233
 let c = #
 ```
 
-### Address
+#### Address
 
 ```rust
 // Address literals must start with `@` followed by a valid base58 encoded Alephium address.
@@ -106,11 +112,17 @@ let a3 = [#00, #11, #22, #33]
 
 These types are also called value types because variables of these types will always be passed by value, i.e. they are always copied when they are used as function arguments or in assignments.
 
-Currently Ralph does not support user-defined data types, but it maybe supported in the future.
+### Mapping
+
+Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like data structure to provide map-like functionality and mitigate the state bloat issue.
+
+### Struct
+
+Currently, Ralph does not support user-defined data types, but it will be supported in the future.
 
 ## Contract Fields
 
-Contract fields are permanently stored in contract storage, and the fields can be changed by the contract code. Applications can get the contract fields through the REST API of an Alephium client.
+Contract fields are permanently stored in the contract storage, and the fields can be changed by the contract code. Applications can get the contract fields through the REST API of an Alephium client.
 
 ```rust
 // Contract `Foo` has two fields:
@@ -133,13 +145,13 @@ Contract Bar() {
 
 ## Built-in Functions
 
-Ralph provides lots of built-in functions, you can refer to [here](https://wiki.alephium.org/ralph/built-in-functions).
+Ralph provides lots of built-in functions, you can refer to [here](/ralph/built-in-functions).
 
-## Function Definitions
+## Functions
 
 Functions are the executable units of code, you can also define functions inside a contract.
 
-### Function Signature
+### Function Signatures
 
 ```rust
 // Public function, which can be called by anyone
@@ -148,17 +160,17 @@ pub fn foo() -> ()
 // Private function, which can only be called inside the contract
 fn foo() -> ()
 
-// Function take 1 parameter and have no return values
+// Function takes 1 parameter and has no return values
 fn foo(a: U256) -> ()
 
-// Function take 2 parameters and return 1 value
+// Function takes 2 parameters and returns 1 value
 fn foo(a: U256, b: Boolean) -> U256
 
-// Function take 2 parameters and return multiple values
+// Function takes 2 parameters and returns multiple values
 fn foo(a: U256, b: Boolean) -> (U256, ByteVec, Address)
 ```
 
-### Local Variable Definitions
+### Local Variables
 
 A function cannot have duplicate variable definitions, and the variable name in the function cannot be the same as the contract field name.
 
@@ -182,19 +194,24 @@ fn baz() -> () {
   let (a, b) = bar()
   // `c` is immutable, but `d` is mutable
   let (c, mut d) = bar()
-  // Ignore the first return value of function `bar`
+  // Ignore the first return value of the function `bar`
   let (_, e) = bar()
 }
 ```
 
 ### Control Structures
 
+#### Return statements
+
 ```rust
-// Return statement
 fn foo() -> (U256, Boolean, ByteVec) {
   return 1, false, #00
 }
+```
 
+#### If-else statements/expressions
+
+```
 fn foo() -> ByteVec {
   // If else statement
   if (a == 0) {
@@ -209,14 +226,22 @@ fn foo() -> ByteVec {
 fn foo() -> ByteVec {
   return if (a == 0) #00 else if (a == 1) #01 else #02
 }
+```
 
+#### For loop
+
+```
 // For loop
 fn foo() -> () {
   for (let mut index = 0; index <= 4; index = index + 1) {
     bar(index)
   }
 }
+```
 
+#### While loop
+
+```
 // While loop
 fn foo() -> () {
   let mut index = 0
@@ -245,20 +270,20 @@ fn foo() -> () {
 ```
 :::
 
-### Function Call
+### Function Calls
 
-Functions of the current contract can be called directly ('internally'), also recursively:
+Functions of the current contract can be called directly ('internally') or recursively:
 
 ```rust
 Contract Foo() {
-  fn f1(v: U256) -> () {
+  fn foo(v: U256) -> () {
     if (v == 0) {
       return
     }
     // Internal function call
     bar()
     // Recursive function call
-    f1(v - 1)
+    foo(v - 1)
   }
 
   fn bar() -> () {
@@ -267,7 +292,7 @@ Contract Foo() {
 }
 ```
 
-Functions can also be called using the `bar.func()` notation ('externally'), where `bar` is a contract instance and `func` is a function belonging to `bar`:
+Functions can also be called externally using the `bar.func()` notation, where `bar` is a contract instance and `func` is a function belonging to `bar`:
 
 ```rust
 Contract Bar() {
@@ -291,20 +316,20 @@ Contract Foo() {
 
 The Ralph function also supports annotations, currently the only valid annotation is the `@using` annotation, and user-defined annotations will be supported in the future if necessary.
 
-The `@using` annotation have four optional fields:
+The `@using` annotation has four optional fields:
 
-* `preapprovedAssets = true/false`: whether the function uses user-approved assets
-* `assetsInContract = true/false`: whether the function uses contract assets
-* `externalCallCheck = true/false`: whether the function checks the caller
-* `readonly = true/false`: whether the function changes the world state
+* `preapprovedAssets = true/false`: whether the function uses user-approved assets. The default value is `false` for contracts, `true` for scripts.
+* `assetsInContract = true/false`: whether the function uses contract assets. The default value is `false` for contracts
+* `externalCallCheck = true/false`: whether the function checks the caller. The default value is `true` for contracts
+* `readonly = true/false`: whether the function changes the world state. The default value is `false` for contracts
 
 #### Using Approved Assets
 
-In Ralph, if a function use assets, then the caller needs to explicitly approve assets. And all functions in the call stack must annotated with `@using(approvedAssets = true)`.
+In Ralph, if a function uses assets, then the caller needs to explicitly approve assets. And all functions in the call stack must be annotated with `@using(approvedAssets = true)`.
 
 ```rust
 Contract Foo() {
-  // Function `foo` uses approved assets, and it will transfer 1 alph and 1 token to the contract from `caller`
+  // Function `foo` uses approved assets, and it will transfer 1 ALPH and 1 token to the contract from the `caller`
   @using(approvedAssets = true)
   fn foo(caller: Address, tokenId: ByteVec) -> () {
     transferAlphToSelf!(caller, 1 alph)
@@ -330,7 +355,7 @@ Contract Foo() {
     transferAlphFromSelf!(caler, 1 alph)
   }
 
-  // Function `bar` must NOT annotated with `@using(assetsInContract = true)`
+  // Function `bar` must NOT be annotated with `@using(assetsInContract = true)`
   // because the contract assets will be removed after use
   fn bar(caller: Address) -> () {
     // ...
@@ -339,11 +364,11 @@ Contract Foo() {
 }
 ```
 
-You can find more information about asset permission at [here](https://wiki.alephium.org/ralph/asset-permission-system).
+You can find more information about asset permission at [here](/ralph/asset-permission-system).
 
 #### Readonly
 
-Readonly functions will never change the world state. If a function is readonly but without the `@using(readonly = true)` annotation, the compiler will report a warning; if a function is non-readonly but annotated with `@using(readonly = true)`, the compiler will report an error.
+Readonly functions will never change the world state of the blockchain. If a function is readonly but without the `@using(readonly = true)` annotation, the compiler will report a warning; if a function is non-readonly but annotated with `@using(readonly = true)`, the compiler will report an error.
 
 ```rust
 Contract Foo(a: U256, mut b: Boolean) {
@@ -372,7 +397,7 @@ Contract Foo(a: U256, mut b: Boolean) {
     assert!(alphRemaining!(caller) >= 1 alph, 0)
   }
 
-  // Function `f4` is readonly because emit events will not change the world state
+  // Function `f4` is readonly because event emission will not change the world state
   fn f4() -> () {
     emit State(a, b)
   }
@@ -381,11 +406,13 @@ Contract Foo(a: U256, mut b: Boolean) {
 
 #### External Call Check
 
-In smart contracts, we often need to check whether the caller of the contract function is valid. To avoid bugs caused by invalid callers, the compiler will report warnings for public functions that do not check for external calls, unless the function is annotated with `@using(externalCallCheck = false)`.
+In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for public functions that do not check for external calls. The warning can be suppressed with annotation `@using(externalCallCheck = false)`.
+
+To check the caller of a function, the built-in function [checkCaller!](/ralph/built-in-functions#checkcaller) has to be used.
 
 ```rust
 Contract Foo(barId: ByteVec, mut b: Boolean) {
-  enum ErrorCodess {
+  enum ErrorCodes {
     InvalidCaller = 0
   }
 
@@ -393,7 +420,7 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
   // the `externalCallCheck` is true by default for public functions.
   pub fn f0() -> () {
     // The `checkCaller!` built-in function is used to check if the caller is valid.
-    checkCaller!(callerContractId!() == barId, ErrorCodess.InvalidCaller)
+    checkCaller!(callerContractId!() == barId, ErrorCodes.InvalidCaller)
     b = !b
     // ...
   }
@@ -414,12 +441,12 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
   // The compiler will NOT report warnings if the `f3` is caller by
   // other contract, because we checked the caller in function`f4`.
   pub fn f3() -> () {
-    f4()
+    f4(callerContractId!())
     // ...
   }
 
-  fn f4() -> () {
-    checkCaller!(callerContractId == barId, Errors.InvalidCaller)
+  fn f4(callerContractId: ByteVec) -> () {
+    checkCaller!(callerContractId == barId, ErrorCodes.InvalidCaller)
     // ...
   }
 }
@@ -427,7 +454,7 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
 
 ## Events
 
-Events allow for logging of activities on the blockchain. Applications can listen to these events through the REST API of an Alephium client.
+Events are dispatched signals that contracts can fire. Applications can listen to these events through the REST API of an Alephium client.
 
 ```rust
 Contract Token() {
@@ -445,7 +472,7 @@ Contract Token() {
 
 ## Error Handling
 
-Ralph provides two builtin functions for error handling: `assert!` and `panic!`, it will revert all changes made to the state and stop the transaction.
+Ralph provides two builtin assertion functions for error handling: [assert!](/ralph/built-in-functions#assert) and [panic!](/ralph/built-in-functions#panic). Assertion failure will revert all changes made to the world state by the transaction and stop the execution of the transaction immediately.
 
 ```rust
 enum ErrorCodes {
@@ -568,9 +595,9 @@ TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
 }
 ```
 
-## Map
+## SubContract
 
-Ralph has no `Map` data type, but `Map` is useful in some scenarios, Ralph provides `subContract` to solve this.
+Alephium's virtual machine supports subcontract. Subcontracts can be used as map-like data structure but they are less prone to the state bloat issue. A subcontract can be created by a parent contract with a unique subcontract path.
 
 ```rust
 Contract Bar(value: U256) {
@@ -609,7 +636,7 @@ Contract Foo(barTemplateId: ByteVec) {
 ```
 
 :::note
-Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph), so creating a large number of sub-contracts is not a good idea.
+Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph), so creating a large number of sub-contracts is not practical.
 :::
 
 ## TxScript
@@ -629,7 +656,7 @@ Contract Foo() {
 // `TxScript` fields are more like function parameters, and these
 // fields need to be specified every time the script is executed.
 TxScript Main(fooId: ByteVec) {
-  // The body of `TxScript` consist of statements
+  // The body of `TxScript` consists of statements
   bar()
   Foo(fooId).foo(0)
 
