@@ -10,7 +10,9 @@ Ralph is the smart contract programming language for the Alephium blockchain, wh
 
 ## Types
 
-Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to the compiler type inference. Currently Ralph only supports the following data types:
+Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to the compiler type inference.
+All types of Ralph are value types, i.e. they are always copied when they are used as function arguments or assigned.
+Currently, Ralph only supports the following data types:
 
 ### Primitive Types
 
@@ -77,8 +79,6 @@ let a2 = [0i; 3]
 // The type of `a3` is [ByteVec; 4]
 let a3 = [#00, #11, #22, #33]
 ```
-
-These types are also called value types because variables of these types will always be passed by value, i.e. they are always copied when they are used as function arguments or in assignments.
 
 ### Mapping
 
