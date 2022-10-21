@@ -24,7 +24,7 @@ TODO: write after package is published
 Now your wallet is empty without any assets. In the next step, let's transfer some ALPH
 to this wallet.
 
-### 2. Transfer ALPH
+### 3. Transfer ALPH
 
 <img src={require("./media/transfer-alph-1.png").default} alt="Transfer page" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -44,7 +44,7 @@ below:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/received-alph-2.png").default} alt="Send page" width="250" />
 
-### 3. Manage Addresses
+### 4. Manage Addresses
 
 <img src={require("./media/manage-addresses-1.png").default} alt="Address tab" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
