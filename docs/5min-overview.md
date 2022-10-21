@@ -185,7 +185,9 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 ## Non-official Content & Communities
 
-> Not moderated, endorsed or managed by Alephium
+:::info
+Not moderated, endorsed or managed by Alephium
+:::
 
 You will find the complete list of internationalized channel [here](/misc/Internationalization-and-Localization)
 
