@@ -57,26 +57,26 @@ In addition, half of the transaction fees are burned with each block and Proof o
 
 Find our latest [node release on GitHub][node-release].
 
-Discover and contribute to our main projects[on GitHub](https://github.com/alephium):
+Discover and contribute to our main projects [on GitHub][github]:
 
 - [Full node][full-node]
 - [Desktop wallet][desktop-wallet]
 - [Explorer][explorer]
 - [JS/TS SDK][sdk]
-- [Mobile Wallet](https://github.com/alephium/mobile-wallet)
-- [Extension Wallet](https://github.com/alephium/extension-wallet)
-- [Wallet Connect](https://github.com/alephium/walletconnect) 
-- [Bridge](https://github.com/alephium/wormhole-fork)
+- [Mobile Wallet][mobile-wallet-repo]
+- [Extension Wallet][extension-wallet-repo]
+- [Wallet Connect][walletconnect-repo]
+- [Bridge][wormhole-fork-repo]
 - [Wiki][wiki]
 - [Awesome Alephium][awesome]
 
 ### Building something on Alephium?
 
-Start with the [JS/TS SDK][sdk] and if you’re building a dApp, head over [here](https://wiki.alephium.org/dapps/Getting-Started). 
+Start with the [JS/TS SDK][sdk] and if you’re building a dApp, head over [here](./dapps/Getting-Started). 
 Once released, let everyone know by sending a PR to add your project to [Awesome Alephium][awesome]!
-The Alephium [Brand Guide]([https://github.com/alephium](https://github.com/alephium/alephium-brand-guide) might also come in handy.
+The Alephium [Brand Guide][brand-guide] might also come in handy.
 
-[Reward & Grant Program](https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md)
+[Reward & Grant Program][reward-grant]
 
 ## If you’re a miner, start here
 
@@ -92,7 +92,7 @@ and the specific repos:
 
 Here is a video of [how to get started for solo mining][solo-mining-video].
 
-And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](../mining/pool-mining-guide).
+And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](./mining/pool-mining-guide).
 
 ---
 
@@ -189,7 +189,7 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 Not moderated, endorsed or managed by Alephium
 :::
 
-You will find the complete list of internationalized channel [here](/misc/Internationalization-and-Localization)
+You will find the complete list of internationalized channel [here](./misc/Internationalization-and-Localization)
 
 ### Youtube
 
@@ -242,3 +242,9 @@ You will find the complete list of internationalized channel [here](/misc/Intern
 [miner-starter-pack]: https://github.com/alephium/alephium-miner-getting-started
 [solo-mining-video]: https://www.youtube.com/watch?v=hdPH6inWjhc
 [reddit]: https://www.reddit.com/r/Alephium/
+[mobile-wallet-repo]: https://github.com/alephium/mobile-wallet
+[extension-wallet-repo]: https://github.com/alephium/extension-wallet
+[walletconnect-repo]: https://github.com/alephium/walletconnect
+[wormhole-fork-repo]: https://github.com/alephium/wormhole-fork
+[brand-guide]: https://github.com/alephium/alephium-brand-guide
+[reward-grant]: https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md
