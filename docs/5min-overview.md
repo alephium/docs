@@ -35,6 +35,67 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 
 ---
 
+## Our tokenomics
+
+The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
+
+80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
+
+30M tokens (3%) 💡 **Community and ecosystem development**. Locked on-chain for 4 years and vested quarterly.
+
+30M tokens (3%) 🧑‍💻 **Treasury & Team**. Locked on-chain for 3 years, and vested quarterly.
+
+860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
+
+In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
+
+**Find more details in our [Tokenomics Medium article][tokenomics-medium].**
+
+---
+
+## If you’re a dev, start here
+
+Find our latest [node release on GitHub][node-release].
+
+Discover and contribute to our main projects [on GitHub][github]:
+
+- [Full node][full-node]
+- [Desktop wallet][desktop-wallet]
+- [Explorer][explorer]
+- [JS/TS SDK][sdk]
+- [Mobile Wallet][mobile-wallet-repo]
+- [Extension Wallet][extension-wallet-repo]
+- [Wallet Connect][walletconnect-repo]
+- [Bridge][wormhole-fork-repo]
+- [Wiki][wiki]
+- [Awesome Alephium][awesome]
+
+### Building something on Alephium?
+
+Start with the [JS/TS SDK][sdk] and if you’re building a dApp, head over [here](./dapps/Getting-Started). 
+Once released, let everyone know by sending a PR to add your project to [Awesome Alephium][awesome]!
+The Alephium [Brand Guide][brand-guide] might also come in handy.
+
+[Reward & Grant Program][reward-grant]
+
+## If you’re a miner, start here
+
+Start by joining the dedicated [Mining channel on Discord][mining-discord].
+
+Find our [Miner starter pack on Github][miner-starter-pack].
+
+and the specific repos:
+
+- https://github.com/alephium/gpu-miner
+- https://github.com/alephium/fpga-miner
+- https://github.com/alephium/mining-pool
+
+Here is a video of [how to get started for solo mining][solo-mining-video].
+
+And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](./mining/pool-mining-guide).
+
+---
+
 ## Milestones & Roadmap
 
 ### Completed Milestones
@@ -93,35 +154,9 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 ---
 
-## Our tokenomics
+## Buy/sell
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
-
-80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
-
-30M tokens (3%) 💡 **Community and ecosystem development**. Locked on-chain for 4 years and vested quarterly.
-
-30M tokens (3%) 🧑‍💻 **Treasury & Team**. Locked on-chain for 3 years, and vested quarterly.
-
-860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
-
-In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
-
-**Find more details in our [Tokenomics Medium article][tokenomics-medium].**
-
----
-
-## Our team
-
-The core team counts 17 members. 10 are tech team members and the remaining 7 are part of the operations team. Come say hello on Discord!
-
-[@ChengWang#1571] 🛠 is our founder, core dev, double PhD dropout in Math & CS, grand wizard of Alephium, working from Lausanne, Switzerland 🇨🇭
-
-[@s0ukie#8277] ⚙️ is our COO, without whom nothing moves, previously @Lykke and @Bestmile. Working from Zürich, Switzerland 🇨🇭
-
-[@setto#4764] 🕹 is our community magician ! Creative, attentive and a constant presence on our Discord & Telegram, working from Sweden 🇸🇪
-
-Meet the rest of the team on our [website][website] or on [Linkedin](https://www.linkedin.com/company/alephium/people/).
+- [Gate.io][gateio]
 
 ---
 
@@ -150,9 +185,11 @@ Meet the rest of the team on our [website][website] or on [Linkedin](https://www
 
 ## Non-official Content & Communities
 
-> Not moderated, endorsed or managed by Alephium
+:::info
+Not moderated, endorsed or managed by Alephium
+:::
 
-You will find the complete list of internationalized channel [here](https://wiki.alephium.org/misc/Internationalization-and-Localization)
+You will find the complete list of internationalized channel [here](./misc/Internationalization-and-Localization)
 
 ### Youtube
 
@@ -172,45 +209,13 @@ You will find the complete list of internationalized channel [here](https://wiki
 
 ---
 
-## Buy/sell
-
-- [Gate.io][gateio]
-
 ## Our partners
 
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
 - [Cetacean Capital](https://cetacean.capital/)
-- [Market Across PR](https://marketacross.com)
 - [UTXO Alliance](https://utxo-alliance.org/)
 
-## If you’re a dev, start here
 
-Find our latest [node release on GitHub][node-release].
-
-Come commit and pull request with us in any of our [projects on GitHub](https://github.com/alephium):
-
-- [Full node][full-node]
-- [Desktop wallet][desktop-wallet]
-- [Explorer][explorer]
-- [JS/TS SDK][sdk]
-- [Wiki][wiki]
-- [Awesome Alephium][awesome]
-
-## If you’re a miner, start here
-
-Start by joining the dedicated [Mining channel on Discord][mining-discord].
-
-Find our [Miner starter pack on Github][miner-starter-pack].
-
-and the specific repos:
-
-- https://github.com/alephium/gpu-miner
-- https://github.com/alephium/fpga-miner
-- https://github.com/alephium/mining-pool
-
-Here is a video of [how to get started for solo mining][solo-mining-video].
-
-And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](../mining/pool-mining-guide).
 
 [whitepaper]: https://github.com/alephium/white-paper
 [tokenomics-medium]: https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
@@ -237,3 +242,9 @@ And if you’d rather join a pool, you will find list of available pools in the 
 [miner-starter-pack]: https://github.com/alephium/alephium-miner-getting-started
 [solo-mining-video]: https://www.youtube.com/watch?v=hdPH6inWjhc
 [reddit]: https://www.reddit.com/r/Alephium/
+[mobile-wallet-repo]: https://github.com/alephium/mobile-wallet
+[extension-wallet-repo]: https://github.com/alephium/extension-wallet
+[walletconnect-repo]: https://github.com/alephium/walletconnect
+[wormhole-fork-repo]: https://github.com/alephium/wormhole-fork
+[brand-guide]: https://github.com/alephium/alephium-brand-guide
+[reward-grant]: https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md

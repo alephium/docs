@@ -208,4 +208,4 @@ Et les dépôts spécifiques :
 
 Et voici une vidéo sur la façon de démarrer le minage en solo : <https://www.youtube.com/watch?v=hdPH6inWjhc>
 
-Et si vous préférez rejoindre un pool, vous trouverez la liste des pools disponibles au moment de l'écriture [ici](https://wiki.alephium.org/fr/mining/pool-mining-guide#community-pools).
+Et si vous préférez rejoindre un pool, vous trouverez la liste des pools disponibles au moment de l'écriture [ici](/fr/mining/pool-mining-guide#community-pools).

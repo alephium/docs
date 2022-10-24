@@ -26,10 +26,9 @@ const config = {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
-            `https://github.com/alephium/wiki/tree/master${
-              locale !== "en"
-                ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
-                : `/${versionDocsDirPath}`
+            `https://github.com/alephium/wiki/tree/master${locale !== "en"
+              ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
+              : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
@@ -185,10 +184,10 @@ const config = {
             from: "/Alephium-Stratum.html",
             to: "/mining/alephium-stratum",
           },
-          { from: "/Wallet-Guide.html", to: "/wallet/wallet-guide" },
+          { from: "/Node-Wallet-Guide.html", to: "/wallet/node-wallet-guide" },
           {
             from: "/Multisig-Guide.html",
-            to: "/wallet/multisig-guide",
+            to: "/misc/multisig-guide",
           },
           {
             from: "/Smart-Contract-Guide.html",
@@ -196,7 +195,7 @@ const config = {
           },
           {
             from: "/Smart-Contract-More.html",
-            to: "/ralph/language-reference",
+            to: "/ralph/getting-started",
           },
           { from: "/Roadmap.html", 
             to: "/",

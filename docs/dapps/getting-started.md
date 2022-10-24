@@ -1,5 +1,5 @@
 ---
-sidebar_position: 5
+sidebar_position: 10
 title: Getting Started
 sidebar_label: Getting started
 ---
@@ -31,7 +31,7 @@ npx @alephium/cli@latest devnet start
 
 The Typescript SDK is then able to interact with the network through REST endpoints.
 
-## Compiling your contracts
+## Compiling your contract
 
 Next, change the workspace to the tutorial project:
 
@@ -47,8 +47,6 @@ npx @alephium/cli@latest compile
 
 If you take a look at `contracts/`, you should be able to find `token.ral`. The compiled artifacts are in the directory `artifacts`.
 
-To learn more about Ralph language and contracts on Alephium, read the comments of `contracts/token.ral`.
-
 ## Testing your contract
 
 The sample project comes with tests `test/token.test.ts` for your contract. You can run your tests with:
@@ -63,9 +61,7 @@ or
 npx @alephium/cli@latest test
 ```
 
-To learn more about testing and debugging, read the comments of `test/token.test.ts`.
-
-## Deploying your contracts to Devnet/Testnet/Mainnet
+## Deploying your contract
 
 Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`. You can run it using:
 
@@ -73,9 +69,7 @@ Next, to deploy the contract we will use Alephium CLI and a deployment script `s
 npx @alephium/cli@latest deploy
 ```
 
-This will deploy the token faucet to all of the 4 groups of Alephium blockchain.
-
-To learn more about deployment, read the comments of `scripts/0_deploy_faucet.ts`.
+This will deploy the token faucet to all of the 4 groups of Devnet. You could configure `alephium.config.ts` to deploy the contract to different networks.
 
 ## Interacting with the deployed contract
 
@@ -91,8 +85,14 @@ and interact with the deployed token faucet:
 node dist/src/token.js
 ```
 
-To learn more about the web3 SDK, read the comments of `src/token.ts`.
-
 ## Connect to the wallets
 
-TODO
+dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
+such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
+and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
+
+## Learn more
+
+To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
+
+To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
