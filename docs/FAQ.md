@@ -193,6 +193,13 @@ The plan is that once the design of desktop wallet and browser wallet get stable
 
 We currently have a desktop [wallet](https://github.com/alephium/desktop-wallet/releases/latest) and the team is working on mobile and [web extension wallets](https://github.com/alephium/extension-wallet/releases/latest). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
 
+### When importing my seed to another desktop wallet, is there a way to import all generated addresses with it?
+
+At the moment, when using the desktop wallet, one will have to manually re-generate each address when restoring a mnemonic into a new wallet. 
+Assuming a wallet had generated X active addresses (an address is considered active when it has had at least one transaction), when the mnemonic of this wallet is restored and X addresses are generated, those addresses will be the same addresses as before and will have the same balance.
+
+Automatic address discovery will be added in the near future. That way, when restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
+
 ## Miscellaneous
 
 ### What's new?
