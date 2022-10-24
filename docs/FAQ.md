@@ -6,7 +6,9 @@ title: FAQ
 
 # Frequently Asked Questions
 
-> 📚 Learn everything about Alephium in this [5min overview](/).
+:::info 
+📚 Learn everything about Alephium in this [5min overview](/).
+:::
 
 Before diving in deeper, we recommend that you check the following resources as they provide useful information about Alephium:
 
