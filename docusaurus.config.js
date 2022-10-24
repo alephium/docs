@@ -197,6 +197,10 @@ const config = {
             from: "/Smart-Contract-More.html",
             to: "/ralph/getting-started",
           },
+          {
+            from: "/Explorer-Backend-Starter-Guide.html",
+            to: "/explorer-backend/getting-started",
+          },
           { from: "/Roadmap.html", to: "/" },
           {
             from: "/Testnet-Guide.html",
