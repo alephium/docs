@@ -6,8 +6,7 @@ sidebar_label: Configure a Mining Wallet
 
 # Configure a Mining Wallet 
 
-A mining wallet is slightly different and needs to have **one address per group**.  \
-Currently, Alephium is running 4 groups, meaning it is needed to have 4 addresses. The desktop wallet can generate them easily for you.
+A mining wallet is slightly different and needs to have **one address per group**. Currently, Alephium is running 4 groups, meaning it is needed to have 4 addresses. The desktop wallet can generate them easily for you.
 
 <img src={require("./media/mw1.png").default} alt="Landing page" width="500"/> 
 
