@@ -8,10 +8,17 @@ sidebar_label: Advanced Features
 
 ## 1. UTXO consolidation
 
-_Due to the nature of UTXO, every time a transaction is made, a couple of new Unspent Transaction Outputs are created, each containing various amounts of ALPH. If these UTXOs aren't consolidated every now and then, a UTXO can reach a point where it becomes so-called "dust". Meaning that if the amount in a UTXO is smaller than the cost of GAS to send the ALPHs it contains, these ALPHs cannot be moved anymore.  \
-To make sure this doesn't happen, the wallet allows you to easily consolidate your UTXOs with the click of a button._
+:::info
 
-<img height="300" alt="image" src="https://user-images.githubusercontent.com/52083111/197763106-d713d628-8aec-430c-a5ed-cd0c0cb9fcf1.png"> <img height="300" alt="image" src="https://user-images.githubusercontent.com/52083111/197763187-82c0a0d7-d392-4ada-9f54-541b1984e1f3.png">
+Due to the nature of UTXO, every time a transaction is made, a couple of new Unspent Transaction Outputs are created, each containing various amounts of ALPH. If these UTXOs aren't consolidated every now and then, a UTXO can reach a point where it becomes so-called "dust". Meaning that if the amount in a UTXO is smaller than the cost of GAS to send the ALPHs it contains, these ALPHs cannot be moved anymore.
+
+To make sure this doesn't happen, the wallet allows you to easily consolidate your UTXOs with the click of a button.
+
+:::
+
+<img src={require("./media/af1.png").default} alt="Landing page" width="300"/> 
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src={require("./media/af2.png").default} alt="Landing page" width="300"/> 
 
 In the `Addresses` tab, click on `Show Operations` in the `Advanced Management` section and choose `Consolidate UTXOs`. Select the address from which you want to consolidate the UTXOs and select the destination address (it can be the same address). Click on `Consolidate` and your UTXOs will be consolidated. 
 
@@ -19,7 +26,9 @@ In the `Addresses` tab, click on `Show Operations` in the `Advanced Management` 
 
 Introduced in version 1.3.0
 
+:::caution
 Please, read the following documentation and this [article](https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59) before deciding to use this feature.
+:::
 
 ### 1. Important Takeaways
 * The Passphrase is an advanced security feature that adds an additional word that you choose to your existing Secret Recovery Phrase.
@@ -34,11 +43,15 @@ The Passphrase is an additional optional 25th word that you are free to choose f
 
 ### 2. How to use a passphrase
 
-<img height="300" alt="image" src="https://user-images.githubusercontent.com/52083111/197763405-9f4925f9-5c19-4dea-bed8-359f766a6706.png">
+<img src={require("./media/af3.png").default} alt="Landing page" width="500"/> 
 
 To use a Passphrase, simply tick the `Use optional passphrase (advanced)` and enter the optional Passphrase of your choice.
 
-_It is important to remember that any unique Passphrase will generate and give access to a completely new wallet. It is vital to store and back up the Passphrase securely in a different physical location than the Secret Recovery Phrase. You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet._
+:::warning
+
+It is important to remember that any unique Passphrase will generate and give access to a completely new wallet. It is vital to store and back up the Passphrase securely in a different physical location than the Secret Recovery Phrase. **You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet.**
+
+:::
 
 
 ### 3. Limitations of Passphrase-enabled wallets
