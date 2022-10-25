@@ -1,5 +1,6 @@
 import React from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import Translate from "@docusaurus/Translate";
 
 export default function UntranslatedPageText() {
   const { i18n } = useDocusaurusContext();
@@ -20,7 +21,11 @@ export default function UntranslatedPageText() {
         </h5>
       </div>
       <div className="admonition-content">
-        <p>This page is not translated. Please, help us translate it with the link at the bottom of the page.</p>
+        <p>
+          <Translate id="untranslated-page-text">
+            This page is not translated. Please, help us translate it with the link at the bottom of the page.
+          </Translate>
+        </p>
       </div>
     </div>
   ) : null;
