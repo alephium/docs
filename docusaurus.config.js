@@ -214,6 +214,10 @@ const config = {
             from: "/Internationalization-and-Localization.html",
             to: "/misc/internationalization-and-localization",
           },
+          {
+            from: "/wallet/desktop-wallet-guide",
+            to: "/wallet/desktop-wallet/overview",
+          },
         ],
       },
     ],
