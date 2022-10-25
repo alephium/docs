@@ -1,3 +1,9 @@
+---
+sidebar_position: 20
+title: Overview
+sidebar_label: Overview
+---
+
 # Overview
 
 The desktop wallet is the most user-friendly Alephium wallet available today. It allows users to store and manage their assets on the Alephium blockchain.
