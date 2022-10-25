@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 30
 title: Configure a Mining Wallet
 sidebar_label: Configure a Mining Wallet
 ---

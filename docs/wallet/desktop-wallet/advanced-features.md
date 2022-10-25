@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 40
 title: Advanced Features
 sidebar_label: Advanced Features
 ---
