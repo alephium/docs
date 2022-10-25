@@ -1,6 +1,7 @@
 {
   "untranslated-page-text": {
-    "message": "Cette page n'est pas traduite. S'il vous plaît, participez à sa traduction en suivant le lien en bas de page."
+    "message": "Cette page n'est pas traduite. S'il vous plaît, participez à sa traduction en suivant le lien en bas de page.",
+    "description": "Message for untranslated pages saying: This page is not translated. Please participate in its translation by following the link at the bottom of the page."
   },
   "theme.ErrorPageContent.title": {
     "message": "Cette page a planté.",
