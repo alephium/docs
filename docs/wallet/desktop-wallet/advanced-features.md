@@ -16,11 +16,17 @@ To make sure this doesn't happen, the wallet allows you to easily consolidate yo
 
 :::
 
-<img src={require("./media/af1.png").default} alt="Landing page" width="300"/> 
-&nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/af2.png").default} alt="Landing page" width="300"/> 
 
-In the `Addresses` tab, click on `Show Operations` in the `Advanced Management` section and choose `Consolidate UTXOs`. Select the address from which you want to consolidate the UTXOs and select the destination address (it can be the same address). Click on `Consolidate` and your UTXOs will be consolidated. 
+
+
+
+In the `Addresses` tab, click on `Show Operations` in the `Advanced Management` section and choose `Consolidate UTXOs`. 
+
+<img src={require("./media/af1.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} /> 
+
+Select the address from which you want to consolidate the UTXOs and select the destination address (it can be the same address). Click on `Consolidate` and your UTXOs will be consolidated. 
+
+<img src={require("./media/af2.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} /> 
 
 ## 2. Passphrase (ADVANCED SECURITY FEATURE) 
 
@@ -43,16 +49,15 @@ The Passphrase is an additional optional 25th word that you are free to choose f
 
 ### 2. How to use a passphrase
 
-<img src={require("./media/af3.png").default} alt="Landing page" width="500"/> 
-
-To use a Passphrase, simply tick the `Use optional passphrase (advanced)` and enter the optional Passphrase of your choice.
-
 :::warning
 
 It is important to remember that any unique Passphrase will generate and give access to a completely new wallet. It is vital to store and back up the Passphrase securely in a different physical location than the Secret Recovery Phrase. **You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet.**
 
 :::
 
+To use a Passphrase, simply tick the `Use optional passphrase (advanced)` and enter the optional Passphrase of your choice.
+
+<img src={require("./media/af3.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} /> 
 
 ### 3. Limitations of Passphrase-enabled wallets
 
