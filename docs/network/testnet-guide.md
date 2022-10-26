@@ -4,6 +4,10 @@ title: Testnet Guide
 sidebar_label: Testnet guide
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
 
 **The `user.conf` must be modified before starting the full node**.

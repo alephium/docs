@@ -4,6 +4,10 @@ title: Getting Started
 sidebar_label: Getting started
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 This guide will explore the basics of creating an Alephium dApp project.
 
 Prerequisites:

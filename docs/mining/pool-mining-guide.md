@@ -4,6 +4,10 @@ title: Pool Mining Guide
 sidebar_label: Pool mining guide
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 # Pool Mining Guide
 
 You will find a complete list of known mining pools [on this link.](#community-pools)

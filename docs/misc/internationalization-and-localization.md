@@ -4,6 +4,10 @@ title: Internationalization and Localization
 sidebar_label: Internationalization and localization
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 # Internationalization and Localization (i18n)
 
 ## Discord

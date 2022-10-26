@@ -4,6 +4,10 @@ title: More and Troubleshooting
 sidebar_label: More and troubleshooting
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 ## API Key
 
 It's a good practice to use API key to limit the access to your full node's rest endpoints.

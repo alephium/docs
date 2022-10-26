@@ -1,9 +1,7 @@
 ---
 sidebar_position: 20
-title: Internationalisation et localisation
+title: Internationalisation et localisation (i18n)
 ---
-
-# Internationalisation et localisation (i18n)
 
 ## Discord
 

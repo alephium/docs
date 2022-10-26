@@ -4,6 +4,10 @@ slug: /frequently-asked-questions
 title: FAQ
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 # Frequently Asked Questions
 
 :::info 
