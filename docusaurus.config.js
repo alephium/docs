@@ -141,6 +141,17 @@ const config = {
         apiKey: "5c67e9428dfb189c4f9afbb895dc0917",
         indexName: "alephium",
       },
+      zoom: {
+        selector: ".markdown img",
+        config: {
+          // options you can specify via https://github.com/francoischalifour/medium-zoom#usage
+          background: {
+            light: "rgb(255, 255, 255)",
+            dark: "rgb(50, 50, 50)",
+          },
+          margin: 60,
+        },
+      },
     }),
   plugins: [
     [
@@ -220,9 +231,14 @@ const config = {
             from: "/Internationalization-and-Localization.html",
             to: "/misc/internationalization-and-localization",
           },
+          {
+            from: "/wallet/desktop-wallet-guide",
+            to: "/wallet/desktop-wallet/overview",
+          },
         ],
       },
     ],
+    require.resolve("docusaurus-plugin-image-zoom"),
   ],
   i18n: {
     defaultLocale: "en",

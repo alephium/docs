@@ -38,7 +38,11 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
-> 💡 You can easily generate mining addresses by installing the [desktop wallet](../wallet/desktop-wallet-guide.md), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
+:::info 
+
+You can easily generate mining addresses by installing the [desktop wallet](../wallet/desktop-wallet/configure-mining-wallet), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
+
+:::
 
 ## Configuration example
 
