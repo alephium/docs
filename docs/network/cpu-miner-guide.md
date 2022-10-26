@@ -4,9 +4,17 @@ title: CPU Miner Guide
 sidebar_label: CPU miner guide
 ---
 
-> Note: CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](network/testnet-guide.md).
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
-> For mining in production please visit [Solo Mining Guide](mining/solo-mining-guide.md) or [Pool Mining Guide](mining/pool-mining-guide.md).
+<UntranslatedPageText />
+
+:::info
+
+CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](network/testnet-guide.md).
+
+For mining in production please visit [Solo Mining Guide](mining/solo-mining-guide.md) or [Pool Mining Guide](mining/pool-mining-guide.md).
+
+:::
 
 You must first follow the steps in the [Full-node Guide](full-node/getting-started.md), in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
 

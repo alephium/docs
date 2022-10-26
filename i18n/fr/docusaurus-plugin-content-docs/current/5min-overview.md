@@ -1,13 +1,13 @@
 ---
-sidebar_position: 10
+sidebar_position: 1
 sidebar_label: Apperçu
-slug: /5min-overview
+slug: /
 title: Alephium en 5 minutes
 ---
 
-## 🐥 Qu'est-ce qu'Alephium ?
+## Qu'est-ce qu'Alephium ?
 
-Alephium est la première blockchain sharded de couche 1, extensible et améliore les technologies de base du bitcoin, Proof of Work & UTXO. Elle fournit une plateforme DeFi et Dapps hautement performante et sécurisée avec une efficacité énergétique améliorée.
+Alephium est la première blockchain fragmentée de couche 1 extensible qui améliore les concepts de Proof of Work & UTXO. La décentralisation, l'auto-souveraineté et la sécurité rencontrent l'efficacité énergétique dans un réseau adapté aux développeurs optimisé pour les applications DeFi et les contrats intelligents.
 
 - Comme Bitcoin, mais plus programmable et plus économe en énergie.
 - Comme Ethereum, mais plus sûr et plus évolutif.
@@ -15,7 +15,7 @@ Alephium est la première blockchain sharded de couche 1, extensible et amélior
 
 ---
 
-## 💎 Pourquoi Alephium est spéciale ?
+## Pourquoi Alephium est spéciale ?
 
 En plus d'une équipe formidable, d'une communauté exceptionnelle et de beaucoup d'énergie, voici nos spécificités techniques :
 
@@ -37,7 +37,7 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 
 ## Etapes & Roadmap
 
-### 🚀 Etapes complétées
+### Etapes complétées
 
 **Coeur de la plateforme**
 
@@ -65,7 +65,7 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 - 04.2022 — Première plateforme NFT à être construite sur Alephium
 - 06.2022 — Mise-à-jour du site web.
 
-### 🛣️ Roadmap
+### Roadmap
 
 **Coeur de la plateforme**
 
@@ -91,7 +91,7 @@ En réunissant toutes ces innovations, Alephium propose une solution très deman
 
 ---
 
-## 🛡Nos tokenomics
+## Nos tokenomics
 
 L'offre de jetons sur Alephium est limitée avec un hardcap de 1 milliard. Lors du lancement du Mainnet (11.8.21), un stock initial de 140 millions de jetons (14 % du hardcap) a été extrait avec le bloc genesis. Le reste des jetons ALPH sera extrait au fil des ans. Sur ces 140 millions de jetons :
 
@@ -109,21 +109,21 @@ De plus, la moitié des frais de transaction sont brûlés avec chaque bloc et l
 
 ---
 
-## 🏋️‍♀️**Notre équipe**
+## **Notre équipe**
 
 L'équipe centrale compte 14 membres. 9 sont des membres de l'équipe technique et les 5 autres font partie de l'équipe des opérations. Venez nous saluer sur Discord !
 
-[@ChengWang#1571](https://twitter.com/wachmc) 🛠 est notre fondateur, core dev, double doctorant en maths et CS, grand sorcier d'Alephium, travaillant depuis Lausanne, Suisse 🇨🇭.
+@ChengWang#1571 🛠 est notre fondateur, core dev, double doctorant en maths et CS, grand sorcier d'Alephium, travaillant depuis Lausanne, Suisse 🇨🇭.
 
-[@s0ukie#8277](https://twitter.com/s0ukie) ⚙️ est notre chef du personnel, sans qui rien ne bouge, précédemment [@Lykke](http://twitter.com/Lykke) et [@Bestmile](http://twitter.com/Bestmile). Elle travaille depuis Zürich, en Suisse 🇨🇭.
+@s0ukie#8277 ⚙️ est notre chef du personnel, sans qui rien ne bouge, précédemment [@Lykke](http://twitter.com/Lykke) et [@Bestmile](http://twitter.com/Bestmile). Elle travaille depuis Zürich, en Suisse 🇨🇭.
 
-[@setto#4764](http://twitter.com/heptazoid) 🕹 est notre magicien de la communauté ! Créatif, attentif et une présence constante sur notre Discord & Telegram, travaillant depuis la Suède 🇸🇪.
+@setto#4764 🕹 est notre magicien de la communauté ! Créatif, attentif et une présence constante sur notre Discord & Telegram, travaillant depuis la Suède 🇸🇪.
 
 Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://www.linkedin.com/company/alephium/people/>
 
 ---
 
-## 🎯 Rencontrez-nous, rejoignez-nous, parlez-nous !
+## Rencontrez-nous, rejoignez-nous, parlez-nous !
 
 ### Echangez avec nous
 
@@ -146,7 +146,7 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 
 ---
 
-## 🦄 Contenu non officiel et communautés (qui ne sont pas modérées, approuvées ou gérées par Alephium)
+## Contenu non officiel et communautés (qui ne sont pas modérées, approuvées ou gérées par Alephium)
 
 ### Chattez en votre langue
 
@@ -170,18 +170,18 @@ Vous trouverez la list complète des cannaux de chats internationaux [ici](https
 
 ---
 
-## 🪙 Vente/achat
+## Vente/achat
 
 - [Gate.io](https://www.gate.io/fr/trade/ALPH_USDT)
 
-## 🤝 Nos partenaires
+## Nos partenaires
 
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
 - [Cetacean Capital](https://cetacean.capital/)
 - [Market Across PR](https://marketacross.com)
 - [UTXO Alliance](https://utxo-alliance.org/)
 
-## 🛠 Si vous êtes un dev, commencez ic:
+## Si vous êtes un dev, commencez ic:
 
 Voici notre dernière mise à jour de code : <https://github.com/alephium/alephium/releases/latest/>
 
@@ -194,7 +194,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 - [Wiki](https://wiki.alephium.org)
 - [Awesome Alephium](https://github.com/alephium/awesome-alephium)
 
-## ⛏ Si vous êtes un mineur, commencez ici !
+## Si vous êtes un mineur, commencez ici !
 
 Commencez par rejoindre le canal dédié aux mineurs sur discord : <https://discord.gg/53QSMpKZyR>
 

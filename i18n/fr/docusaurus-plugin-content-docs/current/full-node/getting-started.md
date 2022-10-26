@@ -1,11 +1,14 @@
 ---
 sidebar_position: 10
 titre: Guide complet de démarrage du fullnode
+sidebar_label: Guide complet de démarrage du fullnode
 ---
 
 # Guide de démarrage : Comment lancer votre Node
 
-> Explorateur de bloc : [https://explorer.alephium.org][explorateur]
+:::info 
+Explorateur de bloc : [https://explorer.alephium.org][explorer]
+:::
 
 ## Configuration requise
 
@@ -48,7 +51,7 @@ Pour le tutoriel sur le minage, vous pouvez suivre notre [Guide du minage en sol
 
 Vous pouvez télécharger le wallet de bureau à partir d'ici [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
 
-Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](wallet/wallet-guide.md) pour apprendre à l'utiliser.
+Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](wallet/desktop-wallet-guide.md) pour apprendre à l'utiliser.
 
 [^1]: Le dossier d'accueil dépend de votre système : `C:\Users\<votre-username>` sous Windows, `/Users/<votre-username>` sous macOS, `/home/<votre-username>` sous Linux.
 

@@ -4,6 +4,10 @@ title: Alephium Stratum
 sidebar_label: Alephium stratum
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 The proposal is based on: [https://eips.ethereum.org/EIPS/eip-1571](https://eips.ethereum.org/EIPS/eip-1571).
 Messages follow EIP-1571's JSON-RPC-2.0 specification.
 

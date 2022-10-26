@@ -1,6 +1,7 @@
 ---
 sidebar_position: 30
 titre: Full Node sur Raspberry Pi
+sidebar_label: Noeud complet dockerisé sur Raspberry Pi
 ---
 
 # Exécution d'un noeud complet dockerisé sur un Raspberry Pi 4

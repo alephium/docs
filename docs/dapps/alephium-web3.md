@@ -4,6 +4,10 @@ title: Web3 SDK
 sidebar_label: Web3 SDK
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 ## Installing
 
 ```

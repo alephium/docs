@@ -4,6 +4,10 @@ title: Devnet Guide
 sidebar_label: Devnet guide
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 It's dev-friendly to start a local devnet with empty block history and arbitrary amount of coins.
 
 The installation of full node for devnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)

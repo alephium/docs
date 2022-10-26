@@ -4,6 +4,10 @@ title: Testnet Faucet
 sidebar_label: Testnet faucet
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 To receive testnet tokens, simply tweet “#alephium” followed by your wallet address (the one you use on testnet).
 
 ```

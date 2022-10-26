@@ -4,6 +4,10 @@ title: Full Node on Raspberry Pi
 sidebar_label: Full node on Raspberry Pi
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 In this guide we'll learn:
 
 - How to install a Raspberry Pi 4

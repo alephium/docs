@@ -197,7 +197,13 @@ const config = {
             from: "/Smart-Contract-More.html",
             to: "/ralph/getting-started",
           },
-          { from: "/Roadmap.html", to: "/" },
+          { from: "/Roadmap.html", 
+            to: "/",
+          },
+          {
+            from: "/5min-overview",
+            to: "/",
+          },
           {
             from: "/Testnet-Guide.html",
             to: "/network/testnet-guide",
