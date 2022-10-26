@@ -1,6 +1,6 @@
 {
   "name": "website",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -16,13 +16,11 @@
     "generate-builtin-functions": "node scripts/generate-builtin-functions.js"
   },
   "dependencies": {
-    "@docusaurus/core": "2.0.0-beta.18",
-    "@docusaurus/plugin-client-redirects": "^2.0.0-beta.18",
-    "@docusaurus/preset-classic": "2.0.0-beta.18",
-    "@mdx-js/react": "^1.6.22",
-    "clsx": "^1.1.1",
+    "@docusaurus/core": "2.1.0",
+    "@docusaurus/plugin-client-redirects": "2.1.0",
+    "@docusaurus/preset-classic": "2.1.0",
     "docusaurus-plugin-image-zoom": "^0.1.1",
-    "prism-react-renderer": "^1.2.1",
+    "prism-react-renderer": "1.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1"
   },
