@@ -4,6 +4,10 @@ title: Getting Started
 sidebar_label: Getting started
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 ## Requirements
 
 Ensure that Java (11 or 17 is recommended) is installed on your computer:

@@ -4,6 +4,10 @@ title: Getting Started
 sidebar_label: Getting started
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 ## Introduction
 
 Ralph is the smart contract programming language for the Alephium blockchain, which focuses on three goals: security, simplicity and efficiency. This tutorial gives tips for writing clear, idiomatic, and secure Ralph smart contracts.

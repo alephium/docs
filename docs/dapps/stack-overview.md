@@ -4,6 +4,10 @@ title: Stack Overview
 sidebar_label: Stack overview
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 :::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::

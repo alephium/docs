@@ -4,6 +4,10 @@ title: Asset Permission System (APS)
 sidebar_label: Asset permission system (APS)
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 :::caution
 This page is WIP until our dApps stack is more stable 🚧
 :::
