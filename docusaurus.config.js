@@ -42,6 +42,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
+      image: 'img/wiki-metadataimage.jpg',
       navbar: {
         title: "Alephium",
         logo: {
