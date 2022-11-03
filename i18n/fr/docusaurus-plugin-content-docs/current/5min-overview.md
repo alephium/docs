@@ -148,7 +148,7 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 
 ## Contenu non officiel et communautés (qui ne sont pas modérées, approuvées ou gérées par Alephium)
 
-### Chattez en votre langue
+### Chattez dans votre langue
 
 Vous trouverez la list complète des cannaux de chats internationaux [ici](https://docs.alephium.org/misc/Internationalization-and-Localization)
 
