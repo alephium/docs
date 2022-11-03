@@ -63,11 +63,11 @@ Our VM and language are really dev-friendly and if you're familiar with Solidity
 
 ### Where is the roadmap?
 
-You will find it on the Wiki: https://wiki.alephium.org/#roadmap and on the website: https://alephium.org/#what's_next. You can also follow our weekly development updates on Discord, Twitter or Reddit.
+You will find it on the Wiki: https://docs.alephium.org/#roadmap and on the website: https://alephium.org/#what's_next. You can also follow our weekly development updates on Discord, Twitter or Reddit.
 
 ### Where can i query an API?
 
-First, you need to be running a full node (https://wiki.alephium.org/full-node/Full-Node-Starter-Guide). 
+First, you need to be running a full node (https://docs.alephium.org/full-node/Full-Node-Starter-Guide). 
 We use OpenAPI to interact with the full node. You can directly open Swagger UI through http://127.0.0.1:12973/docs once your full node is running.
 Alternatively, you can use any OpenAPI client to import the openapi.json file from our repository.
 
