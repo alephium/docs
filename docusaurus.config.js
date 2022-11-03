@@ -9,7 +9,7 @@ const config = {
   title: "Alephium Documentation",
   tagline:
     "The 1st operational sharded blockchain scaling and improving on PoW & UTXO to deliver a highly performant, secure and energy efficient DeFi & dApps platform.",
-  url: "https://wiki.alephium.org",
+  url: "https://docs.alephium.org",
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",

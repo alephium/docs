@@ -148,9 +148,9 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 
 ## Contenu non officiel et communautés (qui ne sont pas modérées, approuvées ou gérées par Alephium)
 
-### Chattez en votre langue
+### Chattez dans votre langue
 
-Vous trouverez la list complète des cannaux de chats internationaux [ici](https://wiki.alephium.org/misc/Internationalization-and-Localization)
+Vous trouverez la list complète des cannaux de chats internationaux [ici](https://docs.alephium.org/misc/Internationalization-and-Localization)
 
 ### Youtube
 
@@ -191,7 +191,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 - [Wallet](https://github.com/alephium/alephium-wallet/releases/latest)
 - [Explorateur](https://github.com/alephium/explorer)
 - [JS/TS SDK](https://github.com/alephium/alephium-web3)
-- [Wiki](https://wiki.alephium.org)
+- [Wiki](https://docs.alephium.org)
 - [Awesome Alephium](https://github.com/alephium/awesome-alephium)
 
 ## Si vous êtes un mineur, commencez ici !
