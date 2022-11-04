@@ -20,9 +20,9 @@ By default, the wallet will be connected to the Alephium public node. Should you
 :::
 
 <img src={require("./media/gs1.png").default} alt="Desktop Wallet Landing page" width="auto" style={{ height: '200px' }} />
-   &nbsp;&nbsp;&nbsp;&nbsp;
+   
 <img src={require("./media/gs2.png").default} alt="Prompt to create new wallet" width="auto" style={{ height: '200px' }} />
-   &nbsp;&nbsp;&nbsp;&nbsp;
+   
 <img src={require("./media/gs3.png").default} alt="Prompt to chose a name and set a password" width="auto" style={{ height: '200px' }} />
 
 
@@ -32,9 +32,9 @@ By default, the wallet will be connected to the Alephium public node. Should you
    Click `Continue`.
 
 <img src={require("./media/gs4.png").default} alt="Display of the 24 secret words" width="auto" style={{ height: '200px' }} />
-   &nbsp;&nbsp;&nbsp;&nbsp;
+
 <img src={require("./media/gs5.png").default} alt="Prompt to verify annotation of the 24 secret words was correct" width="auto" style={{ height: '200px' }} />
-   &nbsp;&nbsp;&nbsp;&nbsp;
+
 <img src={require("./media/gs6.png").default} alt="Landing page of a brand new wallet" width="auto" style={{ height: '200px' }} />
 
 
@@ -48,7 +48,7 @@ By default, the wallet will be connected to the Alephium public node. Should you
 ## 3. Transfer ALPH
 
 <img src={require("./media/gs7.png").default} alt="Landing page of Desktop Wallet" width="auto" style={{ height: '200px' }} />
-   &nbsp;&nbsp;&nbsp;&nbsp;
+
 <img src={require("./media/gs8.png").default} alt="Prompt to enter destination address and amount of transaction" width="auto" style={{ height: '200px' }} />
 
 
