@@ -147,9 +147,9 @@ Returns the contract id of the caller.
 fn callerAddress!() -> (Address)
 ```
 
-Returns the address of the caller.
+Returns the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails.
 
-> @returns *the address of the caller*
+> @returns *the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails*
 
 ---
 
@@ -780,6 +780,42 @@ fn txInputsSize!() -> (U256)
 Returns the number of transaction inputs.
 
 > @returns *the number of transaction inputs*
+
+---
+
+### txGasPrice
+
+```Rust
+fn txGasPrice!() -> (U256)
+```
+
+Returns the current transaction gas price.
+
+> @returns *the current transaction gas price*
+
+---
+
+### txGasAmount
+
+```Rust
+fn txGasAmount!() -> (U256)
+```
+
+Returns the current transaction gas amount.
+
+> @returns *the current transaction gas amount*
+
+---
+
+### txGasFee
+
+```Rust
+fn txGasFee!() -> (U256)
+```
+
+Returns the current transaction gas fee.
+
+> @returns *the current transaction gas fee*
 
 ---
 
