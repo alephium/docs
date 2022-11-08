@@ -13,8 +13,8 @@ The very first run of a full node, as described in the [getting started](./getti
 it is fully in sync with the other nodes in the network, or said differently, until it downloads a copy of the entire blockchain.
 
 In order to speed up this initial sync process, snapshots are available in the
-[dedicated Alephium archive repository](https://archives.alephium.org). An automated process upload snapshots
-for both testnet and mainnet networks.
+[dedicated Alephium Archives repository](https://archives.alephium.org). An automated process upload snapshots
+for both [testnet](https://archives.alephium.org/#testnet/) and [mainnet](https://archives.alephium.org/#mainnet/) networks.
 
 When preparing the full node for its first run, just before launching it, you can download the latest snapshot and
 extract (it's a `tar` file) it at the right location. The snippet below even does this inline, i.e. without doubling the
@@ -34,7 +34,7 @@ provides all the required details around its usage.
 
 # Explorer database
 
-[Alephium archive repository](https://archives.alephium.org) is also populated with explorer database snapshots. The snapshot
+[Alephium Archives repository](https://archives.alephium.org) is also populated with explorer database snapshots. The snapshot
 can be loaded in the postgresql database of the explorer backend at the first run, using the command below:
 
 ```shell
