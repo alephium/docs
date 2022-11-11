@@ -38,7 +38,7 @@ database in an inconsistent state. Luckily a ready-to-use script will help you w
 
 ```shell
 ALEPHIUM_HOME=/tmp
-ALEPHIUM_NETWORK=testnet
+ALEPHIUM_NETWORK=mainnet
 curl -L https://github.com/touilleio/alephium-standalone/raw/main/snapshot-loader.sh | env ALEPHIUM_HOME=${ALEPHIUM_HOME} ALEPHIUM_NETWORK=${ALEPHIUM_NETWORK} sh
 ```
 
@@ -52,7 +52,7 @@ A quick reference command to run the standalone container is given below for con
 
 ```
 ALEPHIUM_HOME=/tmp
-ALEPHIUM_NETWORK=testnet
+ALEPHIUM_NETWORK=mainnet
 docker run -p 39973:39973 -p 127.0.0.1:12973:12973 \
   -v ${ALEPHIUM_HOME}:/alephium-home/.alephium \
   -e ALEPHIUM_NETWORK=${ALEPHIUM_NETWORK} touilleio/alephium-standalone:latest
