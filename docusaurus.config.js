@@ -26,9 +26,8 @@ const config = {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
-            `https://github.com/alephium/wiki/tree/master${locale !== "en"
-              ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
-              : `/${versionDocsDirPath}`
+            `https://github.com/alephium/wiki/tree/master${
+              locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
@@ -42,7 +41,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/wiki-metadataimage.jpg',
+      image: "img/wiki-metadataimage.jpg",
       navbar: {
         title: "Alephium",
         logo: {
@@ -209,9 +208,7 @@ const config = {
             from: "/Smart-Contract-More.html",
             to: "/ralph/getting-started",
           },
-          { from: "/Roadmap.html", 
-            to: "/",
-          },
+          { from: "/Roadmap.html", to: "/" },
           {
             from: "/5min-overview",
             to: "/",
@@ -234,6 +231,10 @@ const config = {
           },
           {
             from: "/wallet/desktop-wallet-guide",
+            to: "/wallet/desktop-wallet/overview",
+          },
+          {
+            from: "/wallet/Desktop-Wallet-Guide",
             to: "/wallet/desktop-wallet/overview",
           },
         ],
