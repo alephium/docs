@@ -65,5 +65,5 @@ can be loaded in the postgresql database of the explorer backend at the first ru
 
 ```shell
 ALEPHIUM_NETWORK=mainnet
-curl -L $(curl -L -s https://s3.eu-central-1.amazonaws.com/archives.alephium.org/archives/${ALEPHIUM_NETWORK}/full-node-data/_latest.txt) | gunzip -c | psql -U $pg_user -d $database
+curl -L $(curl -L -s https://s3.eu-central-1.amazonaws.com/archives.alephium.org/archives/${ALEPHIUM_NETWORK}/explorer-db/_latest.txt) | gunzip -c | psql -U $pg_user -d $database
 ```
