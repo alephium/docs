@@ -58,7 +58,7 @@ In addition, half of the transaction fees are burned with each block and Proof o
 
 The Total Supply is calculated by adding the tokens mined at the Genesis Block (see breakdown above) and the block rewards since the Mainnet Launch.
 
-The Current Supply can be verified on our [explorer](https://explorer.alephium.org/#/blocks) and on the [CoinMarketCap](https://coinmarketcap.com/currencies/alephium/) page. It is calculated using Total Supply and subtracting the effectively locked tokens or the ones that still remain untouched (without an outbound transaction recorded) at the private sales or team’s addresses, following the [CoinMarketCap methodology](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-).
+The Circulating Supply can be verified on our [explorer](https://explorer.alephium.org/#/blocks) and on the [CoinMarketCap](https://coinmarketcap.com/currencies/alephium/) page. It is calculated using Total Supply and subtracting the effectively locked tokens or the ones that still remain untouched (without an outbound transaction recorded) at the private sales or team’s addresses, following the [CoinMarketCap methodology](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-).
 
 If you need the endpoints, find them here: [Total Supply](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Circulating Supply](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserved Supply](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Locked ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
 
