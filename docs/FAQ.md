@@ -35,7 +35,9 @@ You can find the circulating supply on our explorer: https://explorer.alephium.o
 ### How is the circulating supply calculated? 
 
 It is calculated according to CoinMarketCap methodology https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-. 
-The circulating supply is equal to number existing ALPH minus the full balance (locked & unlocked) of private sale investors, project and team-controlled addresses as well as all locked ALPH from other addresses.
+The circulating supply is equal to number existing ALPH minus:
+-  the full balance (locked & unlocked) of private sale participants, project and team-controlled addresses. According to CMC: "tokens are generally only counted as circulating after they leave the original reserve wallet (i.e. outbound transfers are more representative of an intent to bring the coin into circulation rather than a mere unlock)",
+- all locked ALPH from other addresses.
 
 ### Is there a way to check which wallet holds how much Alph? Top addresses ? 
 
