@@ -54,7 +54,7 @@ The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet 
 In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
 
 
-### Total Supply and Current Supply
+### Total Supply and Circulating Supply
 
 The Total Supply is calculated by adding the tokens mined at the Genesis Block (see breakdown above) and the block rewards since the Mainnet Launch.
 
