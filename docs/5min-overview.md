@@ -224,8 +224,14 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 ---
 
 ## Our partners
-c
 
+- [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
+- [Cetacean Capital](https://cetacean.capital/)
+- [Crypto Valley Association](https://cryptovalley.swiss/)
+- [Dappnode](https://dappnode.io)
+- [Ergo](https://ergoplatform.org/)
+- [Hodling SA](https://www.hodling.ch/)
+- [UTXO Alliance](https://utxo-alliance.org/)
 
 
 [whitepaper]: https://github.com/alephium/white-paper
