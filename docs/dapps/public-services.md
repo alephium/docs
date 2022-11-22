@@ -11,10 +11,10 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 ## Node and Explorer APIs
 
 Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
-* `wallet-v15.mainnet.alephium.org` for mainnet with node v1.5.X
-* `wallet-v15.testnet.alephium.org` for testnet with node v1.5.X
-* `backend-v19.mainnet.alephium.org` for mainnet with explorer backend v1.9.X
-* `backend-v19.testnet.alephium.org` for testnet with explorer backend v1.9.X
+* `https://wallet-v15.mainnet.alephium.org` for mainnet with node v1.5.X ([Test](https://wallet-v15.mainnet.alephium.org/infos/version))
+* `https://wallet-v15.testnet.alephium.org` for testnet with node v1.5.X ([Test](https://wallet-v15.testnet.alephium.org/infos/version))
+* `https://backend-v19.mainnet.alephium.org` for mainnet with explorer backend v1.9.X ([Test](https://backend-v19.mainnet.alephium.org/infos))
+* `https://backend-v19.testnet.alephium.org` for testnet with explorer backend v1.9.X ([Test](https://backend-v19.testnet.alephium.org/infos))
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
