@@ -230,6 +230,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 - [Crypto Valley Association](https://cryptovalley.swiss/)
 - [Dappnode](https://dappnode.io)
 - [Ergo](https://ergoplatform.org/)
+- [Flux Labs](https://runonflux.io/fluxlabs.html)
 - [Hodling SA](https://www.hodling.ch/)
 - [UTXO Alliance](https://utxo-alliance.org/)
 
