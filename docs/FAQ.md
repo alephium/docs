@@ -1,14 +1,13 @@
 ---
 sidebar_position: 1
 slug: /frequently-asked-questions
-title: FAQ
+sidebar_label: FAQ
+title: Frequently Asked Questions
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
-
-# Frequently Asked Questions
 
 :::info 
 📚 Learn everything about Alephium in this [5min overview](/).
