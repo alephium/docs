@@ -41,8 +41,8 @@ The circulating supply is equal to number existing ALPH minus:
 
 ### Is there a way to check which wallet holds how much Alph? Top addresses ? 
 
-"This website created by a community member lists the top 256 addresses: https://alph-top.web.app/ For specific wallets, the Explorer is your goto.
-https://explorer.alephium.org"
+This website created by a community member lists the top 256 addresses: https://alph-top.web.app/ For specific wallets, the Explorer is your goto.
+https://explorer.alephium.org
 
 ### How many seconds for a transaction?
 
