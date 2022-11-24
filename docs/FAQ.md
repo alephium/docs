@@ -65,6 +65,14 @@ We could also support order-book style DEX, which would avoid the well-known imp
 We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications.
 Our VM and language are really dev-friendly and if you're familiar with Solidity, you can easily build similar applications on Alephium.
 
+### Any dApps?
+
+Most of what has been built on Alephium so far can be found here: https://github.com/alephium/awesome-alephium 
+
+Alephium is still very early stage and the infrastructure (including a bridge) and documentation to ease the development of dApps is being worked on. There is a Voting dApp example and proof of concepts for NFT platforms, DEX, and a name service are being worked on. 
+
+If you want to build a dApp, head here: https://wiki.alephium.org/dapps/Quick-Start (WIP)!
+
 ## Development
 
 ### Where is the roadmap?
@@ -81,6 +89,12 @@ Alternatively, you can use any OpenAPI client to import the openapi.json file fr
 
 Yes, Alephium has a Grants and Reward program, meaning that your contribution, as small or big as it may be, might be eligible for a reward. [Read about it here](https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md)
 
+### What is being built on Alephium?
+
+Most of what has been built on Alephium can be found here: https://github.com/alephium/awesome-alephium
+
+If you have built something, feel free to add it to this list by sending a Pull Request.
+
 ## Listings & Exchanges
 
 ### How long does it take for deposits to show up on exchanges?
@@ -94,6 +108,18 @@ We don't have an exact date on this. But we are working on it. However, you will
 ### What is your token symbol?
 
 ALPH
+
+## Full node
+
+### Is there a reward for running a fullnode?
+
+Alephium is using Proof of (Less) Work. As a result, there is no native monetary reward for running a full-node as there is on Proof of Stake for example. 
+However, there is number of other incentives to run your own node such as desintermediation,  trust-less independent verification, privacy and economic self-sovereignty. ""Not your Node, not your network"" emphasize if you don't run your own node, you need to connect to someone else's node and therefore rely on a 3rd party in order to view and interact with the blockchain. While it is generally safe to connect to a 3rd party node, depending on your personal levels of required trust and privacy, it might not be your prefered solution.
+
+### What do I need to run a full-node?
+
+Alephium full-node is really lightweight and can run on most machines, even on a Raspberry-Pi or a phone. 
+To run your own node, follow the instructions.
 
 ## Mining
 
@@ -194,10 +220,6 @@ Once you connect your wallet to a network, say testnet for example, you can then
 Theoretically yes, the future is not really projectable beyond 80 years. However, it is not uncommon for open-source community-driven blockchains such as Alephium to change their policies along their evolution. If the community decides to alter a cap, then that cap will be altered.
 
 ## Wallet
-
-### Is there a planned integration with Ledger Nano?
-
-The plan is that once the design of desktop wallet and browser wallet get stable, we will work on Ledger integration. Right now, we are introducing breaking changes which might affect the design of Ledger app
 
 ### What type of wallet do you offer? Is it plan to offer hardware wallets?
 
