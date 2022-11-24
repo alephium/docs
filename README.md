@@ -1,4 +1,4 @@
-# Alephium Wiki
+# Alephium Docs
 
 Built using [Docusaurus 2](https://docusaurus.io/).
 
@@ -28,7 +28,7 @@ This command generates static content into the `build` directory and can be serv
 
 ## Internationalization (i18n)
 
-You are welcome to submit translations of the wiki pages. So far we only have a small portion of the wiki translated to French. We currently only have capacity to review the following languages:
+You are welcome to submit translations of the docs pages. So far we only have a small portion of the docs translated to French. We currently only have capacity to review the following languages:
 
 - French
 - German
