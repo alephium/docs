@@ -38,22 +38,23 @@ The circulating supply is equal to number existing ALPH minus:
 -  the full balance (locked & unlocked) of private sale participants, project and team-controlled addresses. According to CMC: "tokens are generally only counted as circulating after they leave the original reserve wallet (i.e. outbound transfers are more representative of an intent to bring the coin into circulation rather than a mere unlock)",
 - all locked ALPH from other addresses.
 
-### Is there a way to check which wallet holds how much Alph? Top addresses ? 
+### How can I check wallets balances and which are the top holding addresses? 
 
-This website created by a community member lists the top 256 addresses: https://alph-top.web.app/ For specific wallets, the Explorer is your goto.
-https://explorer.alephium.org
+To check the balance of a specific wallet, the Explorer (https://explorer.alephium.org) is your go-to.
 
-### How many seconds for a transaction?
+Community members have created a web-app that lists the top 256 addresses: https://alph-top.web.app/
+
+### How long does it take for a transaction to go through?
 
 1sec should be fine to see the incoming tx in the mempool. One block is ~64sec. Economic finality is depending on the amount and your risk management. For a small TX - mempool is probably enough, 1 - 4 blocks are enough for most TXs If you are an exchange on the other hand, you will probably wait from a few dozens to hundreds of blocks for large amounts.
 
-### What is the minimum Transaction Fee (TF)?
+### What is the minimum Transaction Fee?
 
 Currently, the minimum transaction fee is currently 0.002 ALPH. This is enforced at the node level to avoid DoS attacks on the network. Later on, the minimum will be reduced. The lowest minimum transaction fee possible is at 0.00000000000001 ALPH. The actual fee will depend on the number of inputs (utxo) and on the number of signers.
 
-### How many Transactions Per Second (TPS)
+### How many Transactions Per Second (TPS) are possible on Alephium?
 
-Currently up to 400 TPS with 16 shards. Alephium can scale up to 10k TPS by increasing the number of shards as necessary.
+Alephium Mainnet can currently support over 400 TPS with 16 shards. It can scale up over 10k TPS by increasing the number of shards as necessary.
 
 ## dApps
 
