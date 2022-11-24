@@ -27,7 +27,7 @@ Before diving in deeper, we recommend that you check the following resources as 
 
 ## Chain Data
 
-### How much ALPH in circulation?
+### How much ALPH are in circulation?
 
 You can find the circulating supply on our explorer: https://explorer.alephium.org or by using this endpoint: https://mainnet-backend.alephium.org/infos/supply/circulating-alph
 
@@ -35,8 +35,8 @@ You can find the circulating supply on our explorer: https://explorer.alephium.o
 
 It is calculated according to CoinMarketCap methodology https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-. 
 The circulating supply is equal to number existing ALPH minus:
--  the full balance (locked & unlocked) of private sale participants, project and team-controlled addresses. According to CMC: "tokens are generally only counted as circulating after they leave the original reserve wallet (i.e. outbound transfers are more representative of an intent to bring the coin into circulation rather than a mere unlock)",
-- all locked ALPH from other addresses.
+-  The full balance (locked & unlocked) of private sale participants, project and team-controlled addresses. According to CMC: "tokens are generally only counted as circulating after they leave the original reserve wallet (i.e. outbound transfers are more representative of an intent to bring the coin into circulation rather than a mere unlock)",
+- All locked ALPH from other addresses.
 
 ### How can I check wallets balances and which are the top holding addresses? 
 
@@ -58,15 +58,15 @@ Alephium Mainnet can currently support over 400 TPS with 16 shards. It can scale
 
 ## dApps
 
-### Is anyone already building a DEX on ALPH?
+### Is there a DEX on Alephium?
 
-We have a simple [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170)
-We could also support order-book style DEX, which would avoid the well-known impermanent loss problem thanks to the UTXO model.
+We have a simple  [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170) We could also support order-book style DEX, which would avoid the well-known impermanent loss problem thanks to the UTXO model.
 
-We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications.
+We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications. 
+
 Our VM and language are really dev-friendly and if you're familiar with Solidity, you can easily build similar applications on Alephium.
 
-### Any dApps?
+### Is there any dApps on Alephium?
 
 Most of what has been built on Alephium so far can be found here: https://github.com/alephium/awesome-alephium 
 
@@ -104,11 +104,11 @@ Currently, 120 confirmations are needed for deposits, which is around 2hours (12
 
 ### When Binance?
 
-We don't have an exact date on this. But we are working on it. However, you will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
+We are working toward additional listings and working our way up towards Binance. You will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
 
-### What is your token symbol?
+### What is your token ticker?
 
-ALPH
+The Alephium token ticker is [ALPH].(https://medium.com/@alephium/introducing-alph-8381dbd9f88d)
 
 ## Full node
 
@@ -121,6 +121,10 @@ However, there is number of other incentives to run your own node such as desint
 
 Alephium full-node is really lightweight and can run on most machines, even on a Raspberry-Pi or a phone. 
 To run your own node, follow the instructions.
+
+### Is it possible to stake on Alephium?
+
+Alephium is not a PoS blockchain, so there is no native stacking. However, in the future, there will be opportunities for returns with liquidity pools in DeFi.
 
 ## Mining
 
@@ -168,8 +172,7 @@ Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 by
 
 ### What are stateful UTXOs and how are they different from the other UTXOs models?
 
-There are two types of states: mutable state (e.g. ETH) and immutable state (e.g. UTXO, Extended UTXO). Mutable state is much more expressive as you can see from the ecosystem of ETH, while eUTXO can be used to build some applications with limitations.
-In our stateful UTXO model, we support ETH-like mutable states. It allows us to easily build dApps as powerful as on Ethereum without the security concerns of the account model.
+There are two types of states: mutable state (e.g. ETH) and immutable state (e.g. UTXO, Extended UTXO). Mutable state is much more expressive as demonstrated by the ecosystem of ETH. While  eUTXO can be used to build some applications it still has limitations. In our stateful UTXO model, we support ETH-like mutable states. It  allows us to easily build dApps as powerful as on Ethereum without the  security concerns of the account model. https://www.youtube.com/watch?v=VVYH9rBJAdA
 
 ### What is the reason for making a new language instead of using an existing language like Solidity?
 
@@ -213,6 +216,10 @@ Alephium solved it with blockflow algorithm. Mining work of different shards is 
 Alephium addresses are algorithmically created and are independent from any network (testnet, mainnet, devnet, etc). You don't need to connect to a network node (or internet) to create a wallet and addresses. In a sense, every Alephium address exists in every network, even ones that have not been created yet. In many early crypto-networks when a transaction was created it had no information about the network and the transaction could be ""replayed"" on other networks. Therefore it was a bad practice to use the same addresses on different networks. In Alephium, we have network-id as part of transactions so it's perfectly fine to use the same address in different networks.
 
 Once you connect your wallet to a network, say testnet for example, you can then query a node of the testnet to ask for the balance of your address on testnet. Switching the network settings of your wallet to connect to mainnet, a mainnet node will then tell you the balance of your address on the mainnet network. So every address has a balance in every network, and based on which network you chose to connect to, you'll see the balance of your address on that specific network. 
+
+### Are you quantum resistant?
+
+Like both Bitcoin and Ethereum, we believe that for now quantum computers are not an imminent threat. Hashing and signing algorithms, as well as ways to construct an address can be upgraded, so when it become more of a concrete threat, it will be addressed. 
 
 ## Tokenomics
 
