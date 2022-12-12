@@ -221,6 +221,10 @@ Once you connect your wallet to a network, say testnet for example, you can then
 
 Like both Bitcoin and Ethereum, we believe that for now quantum computers are not an imminent threat. Hashing and signing algorithms, as well as ways to construct an address can be upgraded, so when it become more of a concrete threat, it will be addressed. 
 
+### What is the process to increase the number of shards on Alephium?
+
+A network upgrade is necessary to increase the number of shards. Such upgrade will only happen when the existing number of shards isn't sufficient to handle the network load.
+
 ## Tokenomics
 
 ### If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?
