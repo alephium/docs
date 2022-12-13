@@ -1,0 +1,14 @@
+[
+    {
+        "from": "https://wallet-v18.mainnet.alephium.org",
+        "to": "https://wallet-v15.mainnet.alephium.org"
+    },
+    {
+        "from": "https://wallet-v19.mainnet.alephium.org",
+        "to": "https://wallet-v15.mainnet.alephium.org"
+    },
+    {
+        "from": "https://backend-v19.mainnet.alephium.org",
+        "to": "https://backend-v110.mainnet.alephium.org"
+    }
+]

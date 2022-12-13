@@ -8,20 +8,36 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
+## Testnet Faucet
+
+To receive testnet tokens, simply tweet `#alephium` followed by your wallet address (the one you use on testnet).
+
+```
+#alephium 1H1GPLkoMGVUfxQcJgtjWTrKV1KJCQooEV5WxPMhP4Zjy
+```
+
 ## Node and Explorer APIs
 
 Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
 * `https://wallet-v15.mainnet.alephium.org` for mainnet with node v1.5.X ([Test](https://wallet-v15.mainnet.alephium.org/infos/version))
 * `https://wallet-v15.testnet.alephium.org` for testnet with node v1.5.X ([Test](https://wallet-v15.testnet.alephium.org/infos/version))
-* `https://backend-v19.mainnet.alephium.org` for mainnet with explorer backend v1.9.X ([Test](https://backend-v19.mainnet.alephium.org/infos))
-* `https://backend-v19.testnet.alephium.org` for testnet with explorer backend v1.9.X ([Test](https://backend-v19.testnet.alephium.org/infos))
+* `https://backend-v110.mainnet.alephium.org` for mainnet with explorer backend v1.10.X ([Test](https://backend-v110.mainnet.alephium.org/infos))
+* `https://backend-v110.testnet.alephium.org` for testnet with explorer backend v1.10.X ([Test](https://backend-v110.testnet.alephium.org/infos))
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
-## Testnet Faucet
+## API Redirects
 
-To receive testnet tokens, simply tweet “#alephium” followed by your wallet address (the one you use on testnet).
+We also maintain the following API redirects to give users time to migrate from the old API.
 
-```
-#alephium 1H1GPLkoMGVUfxQcJgtjWTrKV1KJCQooEV5WxPMhP4Zjy
-```
+import redirects from "./api-redirects.json";
+
+<ul>{redirects && redirects.map((redirection) => {
+    const from = redirection['from'];
+    let testFrom = from + '/infos/version';
+    if (from.includes('backend')) {
+        testFrom = from + '/infos';
+    }
+    const to = redirection['to'];
+    return <li key={from}><code>{from}</code> (<a href={testFrom}>Test</a>) -> <code>{redirection['to']}</code></li>;
+})}</ul>
