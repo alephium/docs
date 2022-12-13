@@ -34,10 +34,7 @@ import redirects from "./api-redirects.json";
 
 <ul>{redirects && redirects.map((redirection) => {
     const from = redirection['from'];
-    let testFrom = from + '/infos/version';
-    if (from.includes('backend')) {
-        testFrom = from + '/infos';
-    }
     const to = redirection['to'];
-    return <li key={from}><code>{from}</code> (<a href={testFrom}>Test</a>) -> <code>{redirection['to']}</code></li>;
+    const additionalPath = from.includes('wallet') ? '/infos/version' : from.includes('backend') ? '/infos' : '';
+    return <li key={from}><code>{from}</code> (<a href={`${from}${additionalPath}`}>Test</a>) -> <code>{to}</code></li>;
 })}</ul>
