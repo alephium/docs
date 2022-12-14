@@ -26,15 +26,15 @@ Currently, the following API services are maintained. Note that all APIs are rat
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
-## API Redirects
+## API Alias
 
-We also maintain the following API redirects to give users time to migrate from the old API.
+We also maintain the following API aliases to give users time to migrate from the old API.
 
-import redirects from "./api-redirects.json";
+import aliases from "./api-alias.json";
 
-<ul>{redirects && redirects.map((redirection) => {
-    const from = redirection['from'];
-    const to = redirection['to'];
+<ul>{aliases && aliases.map((alias) => {
+    const from = alias['from'];
+    const to = alias['to'];
     const additionalPath = from.includes('wallet') ? '/infos/version' : from.includes('backend') ? '/infos' : '';
     return <li key={from}><code>{from}</code> (<a href={`${from}${additionalPath}`}>Test</a>) -> <code>{to}</code></li>;
 })}</ul>
