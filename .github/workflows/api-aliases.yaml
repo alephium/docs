@@ -1,7 +1,7 @@
-name: Redirect
+name: API Aliases
 
 on:
-  # Run this workflow to setup all of the API redirects
+  # Run this workflow to setup all of the API aliases
   workflow_dispatch:
 
 env:
@@ -22,5 +22,5 @@ jobs:
         with:
           node-version: 16
 
-      - name: Setup redirects
-        run: # setup all of the redirects in `docs/dapps/api-redirects.json`
+      - name: Setup Aliases
+        run: echo TODO # setup all of the aliases defined in `docs/dapps/api-redirects.json`

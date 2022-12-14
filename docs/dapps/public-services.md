@@ -26,7 +26,7 @@ Currently, the following API services are maintained. Note that all APIs are rat
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
-## API Alias
+## API Aliases
 
 We maintain the following API aliases to give users time to migrate from the old API.
 
