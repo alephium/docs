@@ -28,13 +28,21 @@ As the project is still under active development, all APIs are versioned. Typica
 
 ## API Alias
 
-We also maintain the following API aliases to give users time to migrate from the old API.
+We maintain the following API aliases to give users time to migrate from the old API.
 
-import aliases from "./api-alias.json";
+import aliases from "./api-aliases.json";
 
-<ul>{aliases && aliases.map((alias) => {
-    const from = alias['from'];
-    const to = alias['to'];
-    const additionalPath = from.includes('wallet') ? '/infos/version' : from.includes('backend') ? '/infos' : '';
-    return <li key={from}><code>{from}</code> (<a href={`${from}${additionalPath}`}>Test</a>) -> <code>{to}</code></li>;
-})}</ul>
+export const Aliases = ({aliases, type}) => (
+    <Box>
+        {aliases.length > 0 && <h3>{type} Aliases</h3>}
+        <ul>{aliases && aliases.map((alias) => {
+            const from = alias['from'];
+            const to = alias['to'];
+            const additionalPath = from.includes('wallet') ? '/infos/version' : from.includes('backend') ? '/infos' : '';
+            return <li key={from}><code>{from}</code> (<a href={`${from}${additionalPath}`}>Test</a>) -> <code>{to}</code></li>;
+        })}</ul>
+    </Box>
+)
+
+<Aliases aliases={aliases['current']} type='Current' />
+<Aliases aliases={aliases['deprecated']} type='Deprecated' />
