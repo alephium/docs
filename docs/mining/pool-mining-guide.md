@@ -49,6 +49,11 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 
 ### Currently known and active pools
 
+#### ALPH.city
+
+- Website: https://alph.city/
+- Telegram: https://t.me/alphcity
+
 #### Alephium-pool (Community pool)
 
 - Website: https://alephium-pool.com/
