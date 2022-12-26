@@ -1,26 +1,25 @@
-name: API Aliases
+name: API Endpoint Aliases
 
 on:
-  # Run this workflow to setup all of the API aliases
   workflow_dispatch:
-
-env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  AWS_DEFAULT_REGION: eu-central-1
-  AWS_DISTRIBUTION_ID: ${{ secrets.AWS_DISTRIBUTION_ID }}
-  AWS_BUCKET_NAME: ${{ secrets.AWS_BUCKET_NAME }}
+    inputs:
+      environment:
+        description: 'Environment to deploy to'
+        required: true
+        default: 'testnet'
+        type: choice
+        options:
+          - 'testnet'
+          - 'mainnet'
 
 jobs:
   publish:
     runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment }}
     steps:
-      - uses: actions/checkout@v2
-
-      - name: Setup node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16
-
-      - name: Setup Aliases
-        run: echo TODO # setup all of the aliases defined in `docs/dapps/api-redirects.json`
+      - name: Invoke API endpoint aliasing hook on ${{ github.event.inputs.environment }}
+        uses: distributhor/workflow-webhook@v2
+        env:
+          webhook_url: ${{ secrets.WEBHOOK_URL }}
+          webhook_secret: ${{ secrets.WEBHOOK_SECRET }}
+          data: '{"environment": "${{ github.event.inputs.environment }}"}'
