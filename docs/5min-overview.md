@@ -76,7 +76,7 @@ Discover and contribute to our main projects [on GitHub][github]:
 - [Full node][full-node]
 - [Desktop wallet][desktop-wallet]
 - [Explorer][explorer]
-- [JS/TS SDK][sdk]
+- [Web3 SDK][web3-sdk]
 - [Mobile Wallet][mobile-wallet-repo]
 - [Extension Wallet][extension-wallet-repo]
 - [Wallet Connect][walletconnect-repo]
@@ -86,7 +86,7 @@ Discover and contribute to our main projects [on GitHub][github]:
 
 ### Building something on Alephium?
 
-Start with the [JS/TS SDK][sdk] and if you’re building a dApp, head over [here](./dapps/Getting-Started). 
+Start with the [Web3 SDK][web3-sdk] and if you’re building a dApp, head over [here](./dapps/Getting-Started). 
 Once released, let everyone know by sending a PR to add your project to [Awesome Alephium][awesome]!
 The Alephium [Brand Guide][brand-guide] might also come in handy.
 
@@ -126,7 +126,7 @@ And if you’d rather join a pool, you will find list of available pools in the 
 - 04.2022 — Desktop wallet upgrade
 - 05-06.2022 — Explorer optimization & addition of Chain statistics
 - 06.2022 — Full node 1.4.0 with all of the major features for the Leman network upgrade implemented
-- 06.2022 — Beta version of contract SDK (alephium-web3)
+- 06.2022 — Beta version of dApp SDK (alephium-web3)
 - 06.2022 — Launch new testnet 
 - 06.2022 — Leman Network Upgrade deployed on the testnet
 
@@ -253,7 +253,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [full-node]: https://github.com/alephium/alephium
 [desktop-wallet]: https://github.com/alephium/desktop-wallet
 [explorer]: https://github.com/alephium/explorer
-[sdk]: https://github.com/alephium/alephium-web3
+[web3-sdk]: https://github.com/alephium/alephium-web3
 [wiki]: https://github.com/alephium/wiki
 [awesome]: https://github.com/alephium/awesome-alephium
 [mining-discord]: https://discord.gg/53QSMpKZyR
