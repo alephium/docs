@@ -49,16 +49,16 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 
 ### Currently known and active pools
 
-#### ALPH.city
-
-- Website: https://alph.city/
-- Telegram: https://t.me/alphcity
-
 #### Alephium-pool (Community pool)
 
 - Website: https://alephium-pool.com/
 - Telegram: https://t.me/alephium_pool
 - Discord: https://discord.gg/ZXYU2NGx
+
+#### ALPH.city
+
+- Website: https://alph.city/
+- Telegram: https://t.me/alphcity
 
 #### ALPH-pool.com
 
@@ -71,19 +71,11 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Telegram (EN): https://t.me/alph_coinhunters_en
 - Telegram (RU): https://t.me/alph_gravitsapapool_ru
 
-#### Metapool (Community pool)
+#### Enigma Pool
 
-- Website: https://www.metapool.tech
-- Calculator: https://metapool.tech/dashboard#calculator
-- Telegram: https://t.me/metapool1
-- Discord: https://discord.gg/5TTzMDzJ
-
-#### Wooly Pooly
-
-- Website: https://woolypooly.com/en/coin/alph
-- Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
-- Discord: https://woolypooly.com/discord
-- Telegram: https://woolypooly.com/telegram
+- Website: https://enigmapool.com/
+- Discord: https://discord.com/invite/enigmapool
+- Calculator: https://enigmapool.com/tools/calculator
 
 #### Herominers Pool
 
@@ -91,11 +83,12 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Discord: https://discord.com/invite/gvWSs84
 - Telegram: https://t.me/HeroMinersPool
 
-#### Enigma Pool
+#### Metapool (Community pool)
 
-- Website: https://enigmapool.com/
-- Discord: https://discord.com/invite/enigmapool
-- Calculator: https://enigmapool.com/tools/calculator
+- Website: https://www.metapool.tech
+- Calculator: https://metapool.tech/dashboard#calculator
+- Telegram: https://t.me/metapool1
+- Discord: https://discord.gg/5TTzMDzJ
 
 #### Soloblocks
 
@@ -107,6 +100,13 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Telegram: https://t.me/solopool_org
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
+
+#### Wooly Pooly
+
+- Website: https://woolypooly.com/en/coin/alph
+- Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
+- Discord: https://woolypooly.com/discord
+- Telegram: https://woolypooly.com/telegram
 
 ### Pools no longer active
 
