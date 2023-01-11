@@ -258,6 +258,10 @@ In fact, the logotype for Alephium is a stylisation of the letter Aleph.
 
 In an homage to the technical promises of Ethereum, we followed the same naming pattern and the name Alephium was coined.
 
+### Where can I monitor the status of Alephium maintained public service?
+
+You can monitor Alephium's public service on:  https://status.mainnet.alephium.org
+
 ### Where can I learn everything about Alephium in 5min?
 
 You can quickly get a very good overview about everything regarding Alephium in the [landing page of the wiki](/)
