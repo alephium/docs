@@ -72,7 +72,7 @@ Most of what has been built on Alephium so far can be found here: https://github
 
 Alephium is still very early stage and the infrastructure (including a bridge) and documentation to ease the development of dApps is being worked on. There is a Voting dApp example and proof of concepts for NFT platforms, DEX, and a name service are being worked on. 
 
-If you want to build a dApp, head here: https://wiki.alephium.org/dapps/Quick-Start (WIP)!
+If you want to build a dApp, head here: [https://docs.alephium.org/dapps/getting-started](https://docs.alephium.org/dapps/getting-started)(WIP)!
 
 ## Development
 
