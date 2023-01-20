@@ -73,7 +73,7 @@ Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.
 
 The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
 
-Test the next versions of the wallets here -> github
+Test the next versions of the wallets here -> *Comming Soon*
 
 Where can I test? What can I do? 
 
