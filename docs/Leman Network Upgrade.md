@@ -4,8 +4,8 @@ title: Leman Network Upgrade
 sidebar_label: Leman Network Upgrade
 ---
 
-:::caution
-This page is a WIP 🚧
+:::info
+This page is being constantly updated
 :::
 
 On this page you will find all information regarding the Leman Network Upgrade. The Leman Network Upgrade is the next step in the development of Alephium and will bring new functionalities and features to the blockchain.
@@ -20,7 +20,7 @@ You can find a full write up on the reasoning and implications on the Leman Upgr
 
 As well as an update on the state of preparation for the upgrade itself [here](https://medium.com/@alephium/the-leman-upgrade-2-232e3374abc4).
 
-
+And a Technical Talk about the features introduced with the Leman Network Upgrade [here](https://www.youtube.com/watch?v=n7ycJUIfbVg)
 
 ## Improved devX experience for developers
 
@@ -73,9 +73,9 @@ Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.
 
 The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
 
-Test the next versions of the wallets here -> *Comming Soon*
-
-Where can I test? What can I do? 
+:::info
+*Comming soon:* Test the nec=xt versions of the wallets is being constantly updated
+:::
 
 Got questions? Join our discord https://discord.gg/h7cXXy4FEY
 
