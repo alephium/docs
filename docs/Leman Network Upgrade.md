@@ -120,9 +120,3 @@ Tutorial on How to interact with the DEX: *Coming Soon*
 
 How to mint a token on Alephium testnet: *Coming Soon*
 
-
-## Videos
-
-Technical Talk about the features introduced with the Leman Network Upgrade
-
-TT Leman Network Upgrade - 19/01/2023: https://www.youtube.com/watch?v=n7ycJUIfbVg 
