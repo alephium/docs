@@ -59,7 +59,7 @@ Github: [alephium/alephium-nft#1](alephium/alephium-nft#1)
 
 - DEX: Swap tokens or become a Liquidity Provider (LP) on a Decentralized Exchange (DEX)
 
-Github: ttps://github.com/Lbqds/alephium-dex/tree/master/contracts
+Github: https://github.com/Lbqds/alephium-dex/tree/master/contracts
 
 
 ### Public Services
