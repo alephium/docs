@@ -30,9 +30,9 @@ And a Technical Talk about the features introduced with the Leman Network Upgrad
 Set of tools to interact to and develop dApps on Alephium
 
 
-Github: [https://github.com/alephium/alephium-web3](https://github.com/alephium/alephium-web3)
+- Github: [https://github.com/alephium/alephium-web3](https://github.com/alephium/alephium-web3)
 
-Docs: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/dapps/alephium-web3)
+- Docs: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/dapps/alephium-web3)
  
 
 ### Ralph
@@ -40,9 +40,9 @@ Docs: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/
 Alephium's programming language for dApps development
 
 
-Github: [https://github.com/alephium/ralphc](https://github.com/alephium/ralphc)
+- Github: [https://github.com/alephium/ralphc](https://github.com/alephium/ralphc)
 
-Docs:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
+- Docs:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
 
 
 ### dApps Prototypes
@@ -87,7 +87,7 @@ The Core Team developed a Bridge between Alephium and Ethereum.
 
 Its code can be found in the following link: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
 
-The Alephium-Ethereum Bridge is deployed in the testnet
+The Alephium-Ethereum Bridge is deployed in the testnet.
 
 # Testnet 
 
@@ -96,27 +96,29 @@ You can connect to the testnet and interact with the following applications & to
 
 ### **Extension Wallet**
 
-Docs: https://docs.alephium.org/wallet/extension-wallet/overview
+- Docs: https://docs.alephium.org/wallet/extension-wallet/overview
 
-Github: https://github.com/alephium/extension-wallet/releases
+- Github: https://github.com/alephium/extension-wallet/releases
 
-Tutorial on How to Download the Wallet: *Coming Soon*
+- Tutorial on How to Download the Wallet: *Coming Soon*
 
 
 ### Testnet Block Explorer
-Link: https://testnet.alephium.org/
+
+- Link: https://testnet.alephium.org/
 
 
 ### NFT Marketplace
 
-Link: https://alephium-nft.softfork.se/my-nfts
+- Link: https://alephium-nft.softfork.se/my-nfts
 
-Tutorial on How to interact with the NFT Marketplace: *Coming Soon*
+- Tutorial on How to interact with the NFT Marketplace: *Coming Soon*
 
 
 ### DEX on Alephium Testnet
 
-Tutorial on How to interact with the DEX: *Coming Soon*
+- Link: 
 
-How to mint a token on Alephium testnet: *Coming Soon*
+- Tutorial on How to interact with the DEX: *Coming Soon*
 
+- How to mint a token on Alephium testnet: *Coming Soon*
