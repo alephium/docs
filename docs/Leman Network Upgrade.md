@@ -74,7 +74,7 @@ Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.
 The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
 
 :::info
-*Comming soon:* Test the nec=xt versions of the wallets is being constantly updated
+*Coming soon:* Test the nec=xt versions of the wallets is being constantly updated
 :::
 
 Got questions? Join our discord https://discord.gg/h7cXXy4FEY
@@ -111,14 +111,14 @@ Link: https://testnet.alephium.org/
 
 Link: https://alephium-nft.softfork.se/my-nfts
 
-Tutorial on How to interact with the NFT Marketplace: *Comming Soon*
+Tutorial on How to interact with the NFT Marketplace: *Coming Soon*
 
 
 ### DEX on Alephium Testnet
 
-Tutorial on How to interact with the DEX: *Comming Soon*
+Tutorial on How to interact with the DEX: *Coming Soon*
 
-How to mint a token on Alephium testnet: *Comming Soon*
+How to mint a token on Alephium testnet: *Coming Soon*
 
 
 ## Videos
