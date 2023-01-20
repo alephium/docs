@@ -74,7 +74,7 @@ Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.
 The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
 
 :::info
-*Coming soon:* Test the nec=xt versions of the wallets is being constantly updated
+*Coming soon:* Test the next versions of the wallets
 :::
 
 Got questions? Join our discord https://discord.gg/h7cXXy4FEY
