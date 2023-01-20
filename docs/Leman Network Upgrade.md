@@ -59,7 +59,7 @@ Github: [alephium/alephium-nft#1](alephium/alephium-nft#1)
 
 - DEX: Swap tokens or become a Liquidity Provider (LP) on a Decentralized Exchange (DEX)
 
-Github: [https://github.com/Lbqds/alephium-dex/tree/master/contracts]([https://github.com/Lbqds/alephium-dex/tree/master/contracts)
+Github: ttps://github.com/Lbqds/alephium-dex/tree/master/contracts
 
 
 ### Public Services
@@ -69,10 +69,60 @@ Faucet and APIs
 Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.alephium.org/dapps/public-services)
 
 
+## Expanding the user experience
+
+The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
+
+Test the next versions of the wallets here -> github
+
+Where can I test? What can I do? 
+
+Got questions? Join our discord https://discord.gg/h7cXXy4FEY
+
+
 
 ## Foundations for bridging to other chains
 
-The Alephium-Ethereum Bridge is currently deployed on the testnet. Its code can be found in the following link: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
+The Core Team developed a Bridge between Alephium and Ethereum.
+
+Its code can be found in the following link: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
+
+The Alephium-Ethereum Bridge is deployed in the testnet
+
+# Testnet 
+
+Currently, you can connect to the testnet and interact with the following applications & tools:
+
+
+### **Extension Wallet:**
+
+Docs: https://docs.alephium.org/wallet/extension-wallet/overview
+
+Github: https://github.com/alephium/extension-wallet/releases
+
+Tutorial on How to Download the Wallet: *Coming Soon*
+
+
+### **Testnet Block Explorer: https://testnet.alephium.org/**
+
+
+### **NFT Marketplace: https://alephium-nft.softfork.se/my-nfts**
+
+Tutorial on How to interact with the NFT Marketplace: *Comming Soon*
+
+
+### **DEX on Alephium Testnet:**
+
+Tutorial on How to interact with the DEX: *Comming Soon*
+
+How to mint a token on Alephium testnet: *Comming Soon*
+
+
+## Videos
+
+Technical Talk about the features introduced with the Leman Network Upgrade
+
+Tech Talk Leman Network Upgrade - 19/01/2023: https://www.youtube.com/watch?v=n7ycJUIfbVg 
 
 
 
