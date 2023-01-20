@@ -4,67 +4,79 @@ title: Leman Network Upgrade
 sidebar_label: Leman Network Upgrade
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
 :::caution
-This page is WIP until our dApps stack is more stable 🚧
+This page is a WIP 🚧
 :::
 
+On this page you will find all information regarding the Leman Network Upgrade. The Leman Network Upgrade is the next step in the development of Alephium and will bring new functionalities and features to the blockchain.
+
+## Why the Leman Upgrade?
+
+Alephium has been live on mainnet since Nov 8th 2021. The core dev team has since focused on increasing the performance and security of the whole stack, as well as enabling a top-of-the-class dApp developer experience.
+
+After a time on testnet, the Leman Upgrade brings these important improvements to the mainnet. As these changes are significant, the upgrade will introduce new features and changes that are not be backward-compatible, requiring an upgrade of all nodes.
+
+You can find a full write up on the reasoning and implications on the Leman Upgrade (reasoning) [here](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e).
+
+As well as an update on the state of preparation for the upgrade itself [here](https://medium.com/@alephium/the-leman-upgrade-2-232e3374abc4).
 
 
 
-## Glossary Sections
-
-- [General Glossary](#general-glossary)
-- [Economics Glossary](#economics-glossary)
-- [Technical Glossary](#technical-glossary)
-
----
-
-## General Glossary
+## Improved devX experience for developers
 
 
-### Account
-A kind of basic object in distributed ledger used to keep the balance and other information of users.
+### SDK
 
----
+Set of tools to interact to and develop dApps on Alephium
 
-### Address
-A label consists of string of letters and numbers that anonymously represents user's identity on chain. Crypto assets can be sent to and/or from addresses.
 
-#### Synonyms
-- [Payment Address](#payment-address)
+Github: [https://github.com/alephium/alephium-web3](https://github.com/alephium/alephium-web3)
 
----
+Docs: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/dapps/alephium-web3)
+ 
 
-### Asset
-A piece of data that has value or that represents an entity having value.
+### Ralph
 
-#### Synonyms
-- [Digital Asset](#digital-asset)
-- [Token](#token)
+Alephium's programming language for dApps development
 
----
 
-### Block
-A grouping of transactions, marked with a timestamp, and a fingerprint of the previous block. The block header is hashed to produce a proof of work, thereby validating the transactions. Valid blocks are added to the main blockchain by network consensus.
+Github: [https://github.com/alephium/ralphc](https://github.com/alephium/ralphc)
 
-#### See Also
-- [Blockchain](#blockchain)
-- [Confirmation](#confirmation)
-- [Transaction](#transaction)
+Docs:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
 
----
 
-### Block Height
-Block height is the total number of blocks that have been confirmed on the blockchain, also used to identify a unique block when specifying a particular block height, as there is always an exact block at any block height.
+### dApps Prototypes
 
-#### Synonyms
-- [Height](#height)
+Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/dapps/getting-started
 
-#### See Also
-- [Block](#block)
-- [Blockchain](#blockchain)
-- [Confirmation](#confirmation)
+
+Examples of dApps already built:
+
+- NFT Marketplace: Mint, buy and sell NFTs
+
+Github: [alephium/alephium-nft#1](alephium/alephium-nft#1)
+
+
+- DEX: Swap tokens or become a Liquidity Provider (LP) on a Decentralized Exchange (DEX)
+
+Github: [https://github.com/Lbqds/alephium-dex/tree/master/contracts]([https://github.com/Lbqds/alephium-dex/tree/master/contracts)
+
+
+### Public Services
+
+Faucet and APIs
+
+Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.alephium.org/dapps/public-services)
+
+
+
+## Foundations for bridging to other chains
+
+The Alephium-Ethereum Bridge is currently deployed on the testnet. Its code can be found in the following link: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
+
+
+
+
+
+
+
