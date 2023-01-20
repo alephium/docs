@@ -91,10 +91,10 @@ The Alephium-Ethereum Bridge is deployed in the testnet
 
 # Testnet 
 
-Currently, you can connect to the testnet and interact with the following applications & tools:
+You can connect to the testnet and interact with the following applications & tools:
 
 
-### **Extension Wallet:**
+### **Extension Wallet**
 
 Docs: https://docs.alephium.org/wallet/extension-wallet/overview
 
@@ -103,15 +103,18 @@ Github: https://github.com/alephium/extension-wallet/releases
 Tutorial on How to Download the Wallet: *Coming Soon*
 
 
-### **Testnet Block Explorer: https://testnet.alephium.org/**
+### Testnet Block Explorer
+Link: https://testnet.alephium.org/
 
 
-### **NFT Marketplace: https://alephium-nft.softfork.se/my-nfts**
+### NFT Marketplace
+
+Link: https://alephium-nft.softfork.se/my-nfts
 
 Tutorial on How to interact with the NFT Marketplace: *Comming Soon*
 
 
-### **DEX on Alephium Testnet:**
+### DEX on Alephium Testnet
 
 Tutorial on How to interact with the DEX: *Comming Soon*
 
@@ -122,11 +125,4 @@ How to mint a token on Alephium testnet: *Comming Soon*
 
 Technical Talk about the features introduced with the Leman Network Upgrade
 
-Tech Talk Leman Network Upgrade - 19/01/2023: https://www.youtube.com/watch?v=n7ycJUIfbVg 
-
-
-
-
-
-
-
+TT Leman Network Upgrade - 19/01/2023: https://www.youtube.com/watch?v=n7ycJUIfbVg 
