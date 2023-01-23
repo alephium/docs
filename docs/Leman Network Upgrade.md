@@ -122,3 +122,12 @@ You can connect to the testnet and interact with the following applications & to
 - Tutorial on How to interact with the DEX: *Coming Soon*
 
 - How to mint a token on Alephium testnet: *Coming Soon*
+
+
+### Alephium Ethereum Bridge
+
+- Link: [https://portal-bridge.wormhole-testnet.softfork.se/](https://portal-bridge.wormhole-testnet.softfork.se/)
+
+- Tutorial on How to Interact with the Bridge: *Coming Soon*
+
+- Tutorial on How to Connect with Ethereum Goerli Testnet: *Coming Soon*
