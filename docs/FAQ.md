@@ -16,14 +16,17 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 Before diving in deeper, we recommend that you check the following resources as they provide useful information about Alephium:
 
 - [Official Website](https://alephium.org)
+- [Official Twitter](https://twitter.com/alephium)
 - [Official Discord](https://discord.gg/JErgRBfRSB)
 - [Official Telegram](https://t.me/alephiumgroup)
+- [Official Reddit](https://reddit.com/r/Alephium)
 - [Official Medium](https://medium.com/@alephium), specifically:
   - [Alephium's Tokenomics](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
   - [Alephium's Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
   - [Alephium's Community Reward Program](https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf)
-  - [Alephium's Q1 2022 Update](https://medium.com/@alephium/alephium-q1-project-update-50f4a7b354b0)
-  - [Alephium's 1st AMA](https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672)
+  - [Introduction to sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
+  - [ALPHred, the Virtual Machine](https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025)
+  - [Leman Upgrade](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e)
 
 ## Chain Data
 
