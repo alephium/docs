@@ -185,13 +185,13 @@ Multiple reasons:
 2. Solidity & EVM designs are not optimal and have known security issues. We want to propose a better alternative.
 3. We focused on development experience when designing our own language, to ensure it is easy to get started!
 
-### Are flash loans possible on alephium ?
+### Are flash loans possible on alephium?
 
 No, our virtual machine Alphred doesn't allow flash loans by design.
 
 ### Why did you choose PoLW, not PoS?
 
-Blockchain technology is still at an early stage and one of the most prevalent questions is: what blockchain infrastructure is needed for the next 10 years for Dapps, including DeFi ?
+Blockchain technology is still at an early stage and one of the most prevalent questions is: what blockchain infrastructure is needed for the next 10 years for Dapps, including DeFi?
 
 We believe we need a blockchain that is scalable with high throughput and low transaction fees. We want a high level of programmability like on Ethereum. And we need it to be as reliable and secure as Bitcoin is.
 As a result, Alephium was developed on the idea to build a scalable Bitcoin with a reliable DeFi solution.
@@ -222,7 +222,7 @@ Once you connect your wallet to a network, say testnet for example, you can then
 
 ### Are you quantum resistant?
 
-Like both Bitcoin and Ethereum, we believe that for now quantum computers are not an imminent threat. Hashing and signing algorithms, as well as ways to construct an address can be upgraded, so when it become more of a concrete threat, it will be addressed. 
+Like both Bitcoin and Ethereum, we believe that for now quantum computers are not an imminent threat. Hashing and signing algorithms, as well as ways to construct an address can be upgraded, so when it becomes more of a concrete threat, it will be addressed. 
 
 ### What is the process to increase the number of shards on Alephium?
 
@@ -236,7 +236,7 @@ Theoretically yes, the future is not really projectable beyond 80 years. However
 
 ## Wallet
 
-### What type of wallet do you offer? Is it plan to offer hardware wallets?
+### What type of wallet do you offer? Is it planned to offer hardware wallets?
 
 We currently have a desktop [wallet](https://github.com/alephium/desktop-wallet/releases/latest) and the team is working on mobile and [web extension wallets](https://github.com/alephium/extension-wallet/releases/latest). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
 
