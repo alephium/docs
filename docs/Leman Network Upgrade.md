@@ -24,31 +24,23 @@ And a Technical Talk about the features introduced with the Leman Network Upgrad
 
 ## Improved devX experience for developers
 
-
 ### SDK
 
 Set of tools to interact to and develop dApps on Alephium
 
-
 - Github: [https://github.com/alephium/alephium-web3](https://github.com/alephium/alephium-web3)
-
 - Docs: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/dapps/alephium-web3)
  
-
 ### Ralph
 
 Alephium's programming language for dApps development
 
-
 - Github: [https://github.com/alephium/ralphc](https://github.com/alephium/ralphc)
-
 - Docs:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
-
 
 ### dApps Prototypes
 
 Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/dapps/getting-started
-
 
 Examples of dApps already built:
 
@@ -56,18 +48,15 @@ Examples of dApps already built:
 
 Github: [alephium/alephium-nft#1](https://github.com/alephium/alephium-nft)
 
-
 - DEX: Swap tokens or become a Liquidity Provider (LP) on a Decentralized Exchange (DEX)
 
 Github: https://github.com/Lbqds/alephium-dex/tree/master/contracts
-
 
 ### Public Services
 
 Faucet and APIs
 
 Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.alephium.org/dapps/public-services)
-
 
 ## Expanding the user experience
 
@@ -78,8 +67,6 @@ The Front End gets a complete revamp of everything + new tools! https://medium.c
 :::
 
 Got questions? Join our discord https://discord.gg/h7cXXy4FEY
-
-
 
 ## Foundations for bridging to other chains
 
@@ -93,41 +80,29 @@ The Alephium-Ethereum Bridge is deployed in the testnet.
 
 You can connect to the testnet and interact with the following applications & tools:
 
-
 ### **Extension Wallet**
 
 - Docs: https://docs.alephium.org/wallet/extension-wallet/overview
-
 - Github: https://github.com/alephium/extension-wallet/releases
-
 - Tutorial on How to Download the Wallet: *Coming Soon*
-
 
 ### Testnet Block Explorer
 
 - Link: https://testnet.alephium.org/
 
-
 ### NFT Marketplace
 
 - Link: https://alephium-nft.softfork.se/my-nfts
-
 - Tutorial on How to interact with the NFT Marketplace: *Coming Soon*
-
 
 ### DEX on Alephium Testnet
 
 - Link: 
-
 - Tutorial on How to interact with the DEX: *Coming Soon*
-
 - How to mint a token on Alephium testnet: *Coming Soon*
-
 
 ### Alephium Ethereum Bridge
 
 - Link: [https://portal-bridge.wormhole-testnet.softfork.se/](https://portal-bridge.wormhole-testnet.softfork.se/)
-
 - Tutorial on How to Interact with the Bridge: *Coming Soon*
-
 - Tutorial on How to Connect with Ethereum Goerli Testnet: *Coming Soon*
