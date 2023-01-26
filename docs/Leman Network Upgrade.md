@@ -54,7 +54,7 @@ Examples of dApps already built:
 
 - NFT Marketplace: Mint, buy and sell NFTs
 
-Github: [alephium/alephium-nft#1](alephium/alephium-nft#1)
+Github: [alephium/alephium-nft#1](https://github.com/alephium/alephium-nft)
 
 
 - DEX: Swap tokens or become a Liquidity Provider (LP) on a Decentralized Exchange (DEX)
