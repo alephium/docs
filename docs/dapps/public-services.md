@@ -21,8 +21,10 @@ To receive testnet tokens, simply tweet `#alephium` followed by your wallet addr
 Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
 * `https://wallet-v15.mainnet.alephium.org` for mainnet with node v1.5.X ([Test](https://wallet-v15.mainnet.alephium.org/infos/version))
 * `https://wallet-v15.testnet.alephium.org` for testnet with node v1.5.X ([Test](https://wallet-v15.testnet.alephium.org/infos/version))
+* `https://wallet-v16.testnet.alephium.org` for testnet-v16 with node v1.6.X ([Test](https://wallet-v16.testnet.alephium.org/infos/version))
 * `https://backend-v111.mainnet.alephium.org` for mainnet with explorer backend v1.11.X ([Test](https://backend-v111.mainnet.alephium.org/infos))
 * `https://backend-v111.testnet.alephium.org` for testnet with explorer backend v1.11.X ([Test](https://backend-v111.testnet.alephium.org/infos))
+* `https://backend-v112.testnet.alephium.org` for testnet-v16 with explorer backend v1.12.X ([Test](https://backend-v112.testnet.alephium.org/infos))
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
