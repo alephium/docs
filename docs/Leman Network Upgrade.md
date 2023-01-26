@@ -5,16 +5,16 @@ sidebar_label: Leman Network Upgrade
 ---
 
 :::info
-This page is being constantly updated
+This page may be subject to future updates
 :::
 
-On this page you will find all information regarding the Leman Network Upgrade. The Leman Network Upgrade is the next step in the development of Alephium and will bring new functionalities and features to the blockchain.
+On this page you will find all information regarding the Leman Network Upgrade. The Leman Network Upgrade is next step in the development of Alephium and will bring new functionalities and features to the blockchain.
 
 ## Why the Leman Upgrade?
 
-Alephium has been live on mainnet since Nov 8th 2021. The core dev team has since focused on increasing the performance and security of the whole stack, as well as enabling a top-of-the-class dApp developer experience.
+Alephium has been live on mainnet since Nov 8th 2021. The core devs have since focused on increasing the performance and security of the whole stack, as well as enabling a top-of-the-class dApp developer experience.
 
-After a time on testnet, the Leman Upgrade brings these important improvements to the mainnet. As these changes are significant, the upgrade will introduce new features and changes that are not be backward-compatible, requiring an upgrade of all nodes.
+After being tested sufficiently on testnet, the Leman Upgrade brings these important improvements to the mainnet. As these changes are significant, the upgrade will introduce new features and changes that are not be backward-compatible, requiring an upgrade of all nodes.
 
 You can find a full write up on the reasoning and implications on the Leman Upgrade (reasoning) [here](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e).
 
@@ -83,7 +83,7 @@ Got questions? Join our discord https://discord.gg/h7cXXy4FEY
 
 ## Foundations for bridging to other chains
 
-The Core Team developed a Bridge between Alephium and Ethereum.
+The core devs are developing a Bridge between Alephium and Ethereum.
 
 Its code can be found in the following link: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
 
