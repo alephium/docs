@@ -389,22 +389,6 @@ Returns the id of the sub contract.
 
 ## Asset Functions
 ---
-### approveAlph
-
-```Rust
-fn approveAlph!(fromAddress:Address, amount:U256) -> ()
-```
-
-Approves the usage of certain amount of ALPH from the given address
-
-> @param **fromAddress** *the address to approve ALPH from*
->
-> @param **amount** *the amount of attoALPH to be approved*
->
-> @returns
-
----
-
 ### approveToken
 
 ```Rust
@@ -420,20 +404,6 @@ Approves the usage of certain amount of token from the given address
 > @param **amount** *the amount of the token to be approved*
 >
 > @returns
-
----
-
-### alphRemaining
-
-```Rust
-fn alphRemaining!(address:Address) -> (U256)
-```
-
-Returns the amount of the remaining ALPH for an address.
-
-> @param **address** *the input address*
->
-> @returns *the amount of the remaining ALPH for an address*
 
 ---
 
@@ -453,56 +423,6 @@ Returns the amount of the remaining token amount in the input assets of the func
 
 ---
 
-### transferAlph
-
-```Rust
-fn transferAlph!(fromAddress:Address, toAddress:Address, amount:U256) -> ()
-```
-
-Transfers certain amount of ALPH from one address to another
-
-> @param **fromAddress** *the address to transfer ALPH from*
->
-> @param **toAddress** *the address to transfer ALPH to*
->
-> @param **amount** *the amount of attoALPH to be transferred*
->
-> @returns
-
----
-
-### transferAlphFromSelf
-
-```Rust
-fn transferAlphFromSelf!(toAddress:Address, amount:U256) -> ()
-```
-
-Transfers the contract's ALPH from the input assets of the function.
-
-> @param **toAddress** *the address to transfer ALPH to*
->
-> @param **amount** *the amount of attoALPH to be transferred*
->
-> @returns
-
----
-
-### transferAlphToSelf
-
-```Rust
-fn transferAlphToSelf!(fromAddress:Address, amount:U256) -> ()
-```
-
-Transfers ALPH to the contract from the input asset of the function.
-
-> @param **fromAddress** *the address to transfer ALPH from*
->
-> @param **amount** *the amount of attoALPH to be transferred*
->
-> @returns
-
----
-
 ### transferToken
 
 ```Rust
@@ -511,9 +431,9 @@ fn transferToken!(fromAddress:Address, toAddress:Address, tokenId:ByteVec, amoun
 
 Transfers token from the input assets of the function.
 
-> @param **fromAddress** *the address to transfer ALPH from*
+> @param **fromAddress** *the address to transfer token from*
 >
-> @param **toAddress** *the address to transfer ALPH to*
+> @param **toAddress** *the address to transfer token to*
 >
 > @param **tokenId** *the token to be transferred*
 >
@@ -531,7 +451,7 @@ fn transferTokenFromSelf!(toAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 
 Transfers the contract's token from the input assets of the function.
 
-> @param **toAddress** *the address to transfer ALPH to*
+> @param **toAddress** *the address to transfer token to*
 >
 > @param **tokenId** *the token to be transferred*
 >
@@ -549,7 +469,7 @@ fn transferTokenToSelf!(fromAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 
 Transfers token to the contract from the input assets of the function.
 
-> @param **fromAddress** *the address to transfer ALPH from*
+> @param **fromAddress** *the address to transfer token from*
 >
 > @param **tokenId** *the token to be transferred*
 >
@@ -825,11 +745,11 @@ Returns the current transaction gas fee.
 fn verifyAbsoluteLocktime!(lockUntil:U256) -> ()
 ```
 
-Verifies the absolute locktime with the block timestamp.
+Verifies that the absolute locktime is before the block timestamp, otherwise it fails.
 
 > @param **lockUntil** *the timestamp until which the lock is valid*
 >
-> @returns *true if the lock timestamp is before the block timestamp, false otherwise*
+> @returns
 
 ---
 
@@ -839,13 +759,13 @@ Verifies the absolute locktime with the block timestamp.
 fn verifyRelativeLocktime!(txInputIndex:U256, lockDuration:U256) -> ()
 ```
 
-Verifies the relative locktime for transaction input.
+Verifies that the input's creation timestamp + lock duration is before the block timestamp, otherwise it fails.
 
 > @param **txInputIndex** *the index of the transaction input*
 >
 > @param **lockDuration** *the duration that the input is locked for*
 >
-> @returns *true if the input's creation timestamp + lock duration is before the block timestamp, false otherwise*
+> @returns
 
 ---
 
@@ -953,7 +873,7 @@ Converts U256 to 1 byte.
 fn u256To2Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 2 bytes.
+Converts U256 to 2 big-endian bytes.
 
 > @param **u256** *the input U256*
 >
@@ -967,7 +887,7 @@ Converts U256 to 2 bytes.
 fn u256To4Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 4 bytes.
+Converts U256 to 4 big-endian bytes.
 
 > @param **u256** *the input U256*
 >
@@ -981,7 +901,7 @@ Converts U256 to 4 bytes.
 fn u256To8Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 8 bytes.
+Converts U256 to 8 big-endian bytes.
 
 > @param **u256** *the input U256*
 >
@@ -995,7 +915,7 @@ Converts U256 to 8 bytes.
 fn u256To16Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 16 bytes.
+Converts U256 to 16 big-endian bytes.
 
 > @param **u256** *the input U256*
 >
@@ -1009,7 +929,7 @@ Converts U256 to 16 bytes.
 fn u256To32Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 32 bytes.
+Converts U256 to 32 big-endian bytes.
 
 > @param **u256** *the input U256*
 >
@@ -1037,7 +957,7 @@ Converts 1 byte to U256.
 fn u256From2Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 2 byte to U256.
+Converts 2 big-endian bytes to U256.
 
 > @param **bytes** *the input ByteVec*
 >
@@ -1051,7 +971,7 @@ Converts 2 byte to U256.
 fn u256From4Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 4 byte to U256.
+Converts 4 big-endian bytes to U256.
 
 > @param **bytes** *the input ByteVec*
 >
@@ -1065,7 +985,7 @@ Converts 4 byte to U256.
 fn u256From8Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 8 byte to U256.
+Converts 8 big-endian bytes to U256.
 
 > @param **bytes** *the input ByteVec*
 >
@@ -1079,7 +999,7 @@ Converts 8 byte to U256.
 fn u256From16Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 16 byte to U256.
+Converts 16 big-endian bytes to U256.
 
 > @param **bytes** *the input ByteVec*
 >
@@ -1093,7 +1013,7 @@ Converts 16 byte to U256.
 fn u256From32Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 32 byte to U256.
+Converts 32 big-endian bytes to U256.
 
 > @param **bytes** *the input ByteVec*
 >
