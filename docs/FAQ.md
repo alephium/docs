@@ -111,7 +111,7 @@ We are working toward additional listings and working our way up towards Binance
 
 ### What is your token ticker?
 
-The Alephium token ticker is [ALPH].(https://medium.com/@alephium/introducing-alph-8381dbd9f88d)
+The Alephium token ticker is [ALPH](https://medium.com/@alephium/introducing-alph-8381dbd9f88d)
 
 ## Full node
 
