@@ -230,6 +230,10 @@ A network upgrade is necessary to increase the number of shards. Such upgrade wi
 
 ## Tokenomics
 
+### What is the lowest possible GAS fee?
+
+The current lowest possible gas price is 10^-7 ALPH or 0.0000001 ALPH.
+
 ### If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?
 
 Theoretically yes, the future is not really projectable beyond 80 years. However, it is not uncommon for open-source community-driven blockchains such as Alephium to change their policies along their evolution. If the community decides to alter a cap, then that cap will be altered.
@@ -248,6 +252,10 @@ Assuming a wallet had generated X active addresses (an address is considered act
 Automatic address discovery will be added in the near future. That way, when restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
 
 ## Miscellaneous
+
+### What is Alephium's smallest denomination?
+
+Alephium allows 18 decimals and its smallest denomination is called Phi. Phi = 0.000000000000000001 = 10^-18 ALPH and 1 ALPH = 10^18 Phi.
 
 ### What's new?
 
