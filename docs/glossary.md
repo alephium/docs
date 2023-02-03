@@ -80,7 +80,7 @@ As the network matures, this will be relaxed, and the market will define the pri
 
 This is the monetary value of the gas. Gas is defined as the computational effort to execute a command in a blockchain. The gas price is the monetary counterpart to pay for the work done by the miner. 
 
-At Alephium, the smallest price that can be set up is 0.0000001 ALPH.
+The current lowest possible gas price on Alephium is 10^-7 ALPH or 0.0000001 ALPH..
 
 ### Genesis Block
 
