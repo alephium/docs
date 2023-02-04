@@ -40,10 +40,10 @@ let c = -1_000_000_000
 let d = -1e18
 ```
 
-#### Boolean
+#### Bool
 
 ```rust
-// The type fo `a` and `b` is Boolean.
+// The type fo `a` and `b` is Bool.
 let a = false
 let b = true
 ```
