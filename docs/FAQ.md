@@ -59,6 +59,10 @@ Currently, the minimum transaction fee is currently 0.002 ALPH. This is enforced
 
 Alephium Mainnet can currently support over 400 TPS with 16 shards. It can scale up over 10k TPS by increasing the number of shards as necessary.
 
+### What is Alephium's smallest denomination?
+
+Alephium allows 18 decimals and its smallest denomination is called Phi. Phi = 0.000000000000000001 = 10^-18 ALPH and 1 ALPH = 10^18 Phi.
+
 ## dApps
 
 ### Is there a DEX on Alephium?
@@ -82,6 +86,12 @@ If you want to build a dApp, head here: [https://docs.alephium.org/dapps/getting
 ### Where is the roadmap?
 
 You will find it on the Wiki: https://docs.alephium.org/#roadmap and on the website: https://alephium.org/#what's_next. You can also follow our weekly development updates on Discord, Twitter or Reddit.
+
+### Where can I monitor the status of Alephium maintained public service?
+
+You can monitor Alephium's public service for:  
+- the mainnet on https://status.mainnet.alephium.org/
+- the testnet on https://status.testnet.alephium.org/
 
 ### Where can I query an API?
 
@@ -253,10 +263,6 @@ Automatic address discovery will be added in the near future. That way, when res
 
 ## Miscellaneous
 
-### What is Alephium's smallest denomination?
-
-Alephium allows 18 decimals and its smallest denomination is called Phi. Phi = 0.000000000000000001 = 10^-18 ALPH and 1 ALPH = 10^18 Phi.
-
 ### What's new?
 
 You can check our announcement channels on Telegram or Discord. We also have developments update every week on [Discord](https://discord.gg/GxfzPBKJcy), [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) & [Twitter](https://twitter.com/alephium).
@@ -268,10 +274,6 @@ For those of you less familiar with set theory and mathematics the origin of the
 In fact, the logotype for Alephium is a stylisation of the letter Aleph.
 
 In an homage to the technical promises of Ethereum, we followed the same naming pattern and the name Alephium was coined.
-
-### Where can I monitor the status of Alephium maintained public service?
-
-You can monitor Alephium's public service on:  https://status.mainnet.alephium.org
 
 ### Where can I learn everything about Alephium in 5min?
 
