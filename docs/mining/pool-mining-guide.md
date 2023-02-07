@@ -90,6 +90,13 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Telegram: https://t.me/metapool1
 - Discord: https://discord.gg/5TTzMDzJ
 
+#### p1pool.com
+
+- Website: https://p1pool.com/en/coin/alph/
+- Discord: https://discord.gg/UJ26Bxxe
+- Telegram: https://t.me/p1pool_com
+- Email: info@p1pool.com
+
 #### Soloblocks
 
 - Website: https://soloblocks.org/alph/
