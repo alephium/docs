@@ -35,7 +35,7 @@ npx @alephium/cli@latest devnet start
 
 The Typescript SDK is then able to interact with the network through REST endpoints.
 
-Alternatively, if you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack/tree/master/devnet#start).
+Alternatively, if you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
 
 ## Compiling your contract
 
