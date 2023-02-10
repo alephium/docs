@@ -108,6 +108,6 @@ To learn more about Ralph language, please visit the [guide of Ralph](/ralph/get
 
 Here are some well-maintained dApps that can be a great source of inspiration for building new dApps.
 
-* NFT: https://github.com/alephium/alephium-nft/pull/1
+* NFT: https://github.com/alephium/alephium-nft
 * DEX: https://github.com/Lbqds/alephium-dex/tree/master/contracts
 * Wormhole Bridge Integration: https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium
