@@ -24,14 +24,16 @@ All built-in functions are suffixed with `!`.
 ### createContract
 
 ```Rust
-fn createContract!(bytecode:ByteVec, encodedFields:ByteVec) -> (ByteVec)
+fn createContract!(bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
 Creates a new contract without token issuance.
 
 > @param **bytecode** *the bytecode of the contract to be created*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @returns *the id of the created contract*
 
@@ -40,14 +42,16 @@ Creates a new contract without token issuance.
 ### createContractWithToken
 
 ```Rust
-fn createContractWithToken!(bytecode:ByteVec, encodedFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
+fn createContractWithToken!(bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
 Creates a new contract with token issuance.
 
 > @param **bytecode** *the bytecode of the contract to be created*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @param **issueTokenAmount** *the amount of token to be issued*
 >
@@ -60,14 +64,16 @@ Creates a new contract with token issuance.
 ### copyCreateContract
 
 ```Rust
-fn copyCreateContract!(contractId:ByteVec, encodedFields:ByteVec) -> (ByteVec)
+fn copyCreateContract!(contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
 Creates a new contract without token issuance by copying another contract's code. This costs less gas than createContract!(...).
 
 > @param **contractId** *the id of the contract to be copied*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @returns *the id of the created contract*
 
@@ -76,14 +82,16 @@ Creates a new contract without token issuance by copying another contract's code
 ### copyCreateContractWithToken
 
 ```Rust
-fn copyCreateContractWithToken!(contractId:ByteVec, encodedFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
+fn copyCreateContractWithToken!(contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
 Creates a new contract with token issuance by copying another contract's code. This costs less gas than createContractWithToken!(...).
 
 > @param **contractId** *the id of the contract to be copied*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @param **issueTokenAmount** *the amount of token to be issued*
 >
@@ -250,14 +258,16 @@ Migrates the code of the contract.
 ### migrateWithFields
 
 ```Rust
-fn migrateWithFields!(newBytecode:ByteVec, newEncodedFields:ByteVec) -> ()
+fn migrateWithFields!(newBytecode:ByteVec, newEncodedImmFields:ByteVec, newEncodedMutFields:ByteVec) -> ()
 ```
 
 Migrates both the code and the fields of the contract.
 
 > @param **newBytecode** *the bytecode for the contract to migrate to*
 >
-> @param **newEncodedFields** *the new fields for the contract to migrate to*
+> @param **newEncodedImmFields** *the encoded immutable fields for the contract to migrate to*
+>
+> @param **newEncodedMutFields** *the encoded mutable fields for the contract to migrate to*
 >
 > @returns
 
@@ -280,7 +290,7 @@ Checks whether the function is called by a TxScript.
 ### createSubContract
 
 ```Rust
-fn createSubContract!(subContractPath:ByteVec, bytecode:ByteVec, encodedFields:ByteVec) -> (ByteVec)
+fn createSubContract!(subContractPath:ByteVec, bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
 Creates a new sub-contract without token issuance.
@@ -289,7 +299,9 @@ Creates a new sub-contract without token issuance.
 >
 > @param **bytecode** *the bytecode of the sub-contract to be created*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @returns *the id of the created contract*
 
@@ -298,7 +310,7 @@ Creates a new sub-contract without token issuance.
 ### createSubContractWithToken
 
 ```Rust
-fn createSubContractWithToken!(subContractPath:ByteVec, bytecode:ByteVec, encodedFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
+fn createSubContractWithToken!(subContractPath:ByteVec, bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
 Creates a new sub-contract with token issuance.
@@ -307,7 +319,9 @@ Creates a new sub-contract with token issuance.
 >
 > @param **bytecode** *the bytecode of the sub-contract to be created*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @param **issueTokenAmount** *the amount of token to be issued*
 >
@@ -320,7 +334,7 @@ Creates a new sub-contract with token issuance.
 ### copyCreateSubContract
 
 ```Rust
-fn copyCreateSubContract!(subContractPath:ByteVec, contractId:ByteVec, encodedFields:ByteVec) -> (ByteVec)
+fn copyCreateSubContract!(subContractPath:ByteVec, contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
 Creates a new sub-contract without token issuance by copying another contract's code. This costs less gas than createSubContract!(...).
@@ -329,7 +343,9 @@ Creates a new sub-contract without token issuance by copying another contract's 
 >
 > @param **contractId** *the id of the contract to be copied*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @returns *the id of the created contract*
 
@@ -338,7 +354,7 @@ Creates a new sub-contract without token issuance by copying another contract's 
 ### copyCreateSubContractWithToken
 
 ```Rust
-fn copyCreateSubContractWithToken!(subContractPath:ByteVec, contractId:ByteVec, encodedFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
+fn copyCreateSubContractWithToken!(subContractPath:ByteVec, contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
 Creates a new sub-contract with token issuance by copying another contract's code. This costs less gas than createSubContractWithToken!(...).
@@ -347,7 +363,9 @@ Creates a new sub-contract with token issuance by copying another contract's cod
 >
 > @param **contractId** *the id of the contract to be copied*
 >
-> @param **encodedFields** *the encoded fields as a ByteVec*
+> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+>
+> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
 >
 > @param **issueTokenAmount** *the amount of token to be issued*
 >
@@ -1133,9 +1151,9 @@ Computes the Sha3 hash of the input.
 fn verifyTxSignature!(publicKey:ByteVec) -> ()
 ```
 
-Verifies the transaction signature of a public key. The signature is signed against the transaction id.
+Verifies the transaction SecP256K1 signature of a public key. The signature is signed against the transaction id.
 
-> @param **publicKey** *the public key of the signer*
+> @param **publicKey** *the public key (33 bytes) of the signer*
 >
 > @returns *true if the signature is valid, false otherwise*
 
@@ -1149,11 +1167,11 @@ fn verifySecP256K1!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 
 Verifies the SecP256K1 signature of the input and public key.
 
-> @param **data** *the data that was supposed to have been signed*
+> @param **data** *the data (32 bytes) that was supposed to have been signed*
 >
-> @param **publicKey** *the public key of the signer*
+> @param **publicKey** *the public key (33 bytes) of the signer*
 >
-> @param **signature** *the signature value*
+> @param **signature** *the signature (64 bytes) value*
 >
 > @returns *true if the signature is valid, false otherwise*
 
@@ -1167,11 +1185,29 @@ fn verifyED25519!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 
 Verifies the ED25519 signature of the input and public key.
 
-> @param **data** *the data that was supposed to have been signed*
+> @param **data** *the data (32 bytes) that was supposed to have been signed*
 >
-> @param **publicKey** *the public key of the signer*
+> @param **publicKey** *the public key (32 bytes) of the signer*
 >
-> @param **signature** *the signature value*
+> @param **signature** *the signature value (64 bytes)*
+>
+> @returns *true if the signature is valid, false otherwise*
+
+---
+
+### verifyBIP340Schnorr
+
+```Rust
+fn verifyBIP340Schnorr!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
+```
+
+Verifies the BIP340 Schnorr signature of the input and public key.
+
+> @param **data** *the data (32 bytes) that was supposed to have been signed*
+>
+> @param **publicKey** *the public key (32 bytes) of the signer*
+>
+> @param **signature** *the signature value (64 bytes)*
 >
 > @returns *true if the signature is valid, false otherwise*
 
