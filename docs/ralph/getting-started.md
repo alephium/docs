@@ -569,6 +569,29 @@ TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
 }
 ```
 
+### Migration
+
+Alephium's contracts can be upgraded with two migration functions: [migrate!](/ralph/built-in-functions#migrate) and [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Here are the three typical ways to use them:
+
+```Rust
+fn upgrade(newCode: ByteVec) -> () {
+  checkOwner(...)
+  migrate!(newCode)
+}
+
+fn upgrade(newCode: ByteVec, newImmFieldsEncoded: ByteVec, newMutFieldsEncoded: ByteVec) -> () {
+  checkOwner(...)
+  migrate!(newCode, newImmFieldsEncoded, newMutFieldsEncoded)
+}
+
+fn upgrade(newCode: ByteVec) -> () {
+  checkOwner(...)
+  let newImmFieldsEncoded = encode!(immField0, immField1, ...)
+  let newMutFieldsEncoded = encode!(mutField0, mutField1, ...)
+  migrate!(newCode, newMutFieldsEncoded, newMutFieldsEncoded)
+}
+```
+
 ## Inheritance
 
 Ralph also supports multiple inheritance, when a contract inherits from other contracts, only a single contract is created on the blockchain, and the code from all the parent contracts is compiled into the created contract.
