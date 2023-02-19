@@ -581,14 +581,14 @@ fn upgrade(newCode: ByteVec) -> () {
 
 fn upgrade(newCode: ByteVec, newImmFieldsEncoded: ByteVec, newMutFieldsEncoded: ByteVec) -> () {
   checkOwner(...)
-  migrate!(newCode, newImmFieldsEncoded, newMutFieldsEncoded)
+  migrateWithFields!(newCode, newImmFieldsEncoded, newMutFieldsEncoded)
 }
 
 fn upgrade(newCode: ByteVec) -> () {
   checkOwner(...)
   let newImmFieldsEncoded = encode!(immField0, immField1, ...)
   let newMutFieldsEncoded = encode!(mutField0, mutField1, ...)
-  migrate!(newCode, newMutFieldsEncoded, newMutFieldsEncoded)
+  migrateWithFields!(newCode, newMutFieldsEncoded, newMutFieldsEncoded)
 }
 ```
 
