@@ -295,8 +295,8 @@ The `@using` annotation has four optional fields:
 
 * `preapprovedAssets = true/false`: whether the function uses user-approved assets. The default value is `false` for contracts, `true` for scripts.
 * `assetsInContract = true/false`: whether the function uses contract assets. The default value is `false` for contracts
-* `externalCallCheck = true/false`: whether the function checks the caller. The default value is `true` for contracts
-* `readonly = true/false`: whether the function changes the world state. The default value is `false` for contracts
+* `checkExternalCaller = true/false`: whether the function checks the caller. The default value is `true` for contracts
+* `updateFields = true/false`: whether the function changes contract fields. The default value is `false` for contracts
 
 #### Using Approved Assets
 
@@ -341,47 +341,35 @@ Contract Foo() {
 
 You can find more information about asset permission at [here](/ralph/asset-permission-system).
 
-#### Readonly
+#### Update Fields
 
-Readonly functions will never change the world state of the blockchain. If a function is readonly but without the `@using(readonly = true)` annotation, the compiler will report a warning; if a function is non-readonly but annotated with `@using(readonly = true)`, the compiler will report an error.
+Update fields functions will change the current contract fields. If a function changes the contract fields but without the `@using(updateFields = true)` annotation, the compiler will report a warning; if a function does not change the contract fields but annotated with `@using(updateFields = true)`, the compiler will report a warning as well.
 
 ```rust
 Contract Foo(a: U256, mut b: Boolean) {
-  event State(a: U256, b: Boolean)
-
-  // Function `f0` is readonly
-  @using(readonly = true)
+  // Function `f0` does not changes the contract fields
   fn f0() -> U256 {
     return a
   }
 
-  // Function `f1` is not readonly because it changes the contract state
+  // Function `f1` changes the contract fields
+  @using(updateFields = true)
   fn f1() -> () {
     b = false
   }
 
-  // Function `f2` is not readonly because it changes the contract assets
-  @using(approvedAssets = true)
-  fn f2(caller: Address) -> () {
-    transferAlphToSelf!(caller, 1 alph)
-  }
-
-  // Function `f3` is readonly because it changes nothing
-  @using(approvedAssets = true, readonly = true)
-  fn f3(caller: Address) -> () {
-    assert!(alphRemaining!(caller) >= 1 alph, 0)
-  }
-
-  // Function `f4` is readonly because event emission will not change the world state
-  fn f4() -> () {
-    emit State(a, b)
+  // Function f2 calls function f1, even if function f1 changes the contract fields,
+  // function f2 still does not need to be annotated with `@using(updateFields = true)`,
+  // because function f2 does not directly change the contract fields
+  fn f2() -> () {
+    f1()
   }
 }
 ```
 
-#### External Call Check
+#### Check External Caller
 
-In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for public functions that do not check for external calls. The warning can be suppressed with annotation `@using(externalCallCheck = false)`.
+In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for public functions that do not check for external calls. The warning can be suppressed with annotation `@using(checkExternalCaller = false)`.
 
 To check the caller of a function, the built-in function [checkCaller!](/ralph/built-in-functions#checkcaller) has to be used.
 
@@ -391,8 +379,8 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
     InvalidCaller = 0
   }
 
-  // We don't need to add the `@using(externalCallCheck = true)` because
-  // the `externalCallCheck` is true by default for public functions.
+  // We don't need to add the `@using(checkExternalCaller = true)` because
+  // the `checkExternalCaller` is true by default for public functions.
   pub fn f0() -> () {
     // The `checkCaller!` built-in function is used to check if the caller is valid.
     checkCaller!(callerContractId!() == barId, ErrorCodes.InvalidCaller)
@@ -400,17 +388,17 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
     // ...
   }
 
-  // Function `f1` is readonly, so it does not need to check the caller.
-  // We need to explicitly add the `@using(externalCallCheck = false)` annotation.
-  @using(externalCallCheck = false, readonly = true)
+  // The compiler will report warnings if the `f1` is called by other contract.
   pub fn f1() -> () {
+    b = !b
     // ...
   }
 
-  // The compiler will report warnings if the `f2` is called by other contract.
-  pub fn f2() -> () {
-    b = !b
-    // ...
+  // Function `f2` is a view function, which does not use any assets,
+  // does not update contract fields, and has no sub function call.
+  // We don't need to add the `using(checkExternalCaller = false)` for view functions.
+  pub fn f2() -> ByteVec {
+    return barId
   }
 
   // The compiler will NOT report warnings if the `f3` is caller by
@@ -515,7 +503,6 @@ Alephium's virtual machine supports subcontract. Subcontracts can be used as map
 
 ```rust
 Contract Bar(value: U256) {
-  @using(readonly = true, externalCallCheck = false)
   pub fn getValue() -> U256 {
     return value
   }
@@ -524,7 +511,7 @@ Contract Bar(value: U256) {
 Contract Foo(barTemplateId: ByteVec) {
   emit SubContractCreated(key: U256, contractId: ByteVec)
 
-  @using(preapprovedAssets = true, externalCallCheck = false)
+  @using(preapprovedAssets = true, checkExternalCaller = false)
   pub fn set(caller: Address, key: U256, value: U256) -> () {
     let path = u256To8Bytes!(key)
     let encodedFields = encodeToByteVec!(value)
@@ -539,7 +526,6 @@ Contract Foo(barTemplateId: ByteVec) {
     emit SubContractCreated(key, contractId)
   }
 
-  @using(readonly = true)
   pub fn get(key: U256) -> U256 {
     const path = u256To8Bytes(key)
     // Get the sub contract id by the `subContractId!` built-in function
@@ -645,7 +631,6 @@ Interface Foo {
 }
 
 Interface Bar extends Foo {
-  @using(readonly = true)
   pub fn bar() -> U256
 }
 
@@ -658,7 +643,6 @@ Contract Baz() implements Bar {
     // ...
   }
 
-  @using(readonly = true)
   pub fn bar() -> U256 {
     // ...
   }
