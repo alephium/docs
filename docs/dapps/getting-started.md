@@ -53,6 +53,8 @@ npx @alephium/cli@latest compile
 
 If you take a look at `contracts/`, you should be able to find `token.ral`. The compiled artifacts are in the directory `artifacts`.
 
+This command also generates typescript code based on the compiled artifacts. The generated typescript code are in the directory `artifacts/ts`. You can interact with the alephium blockchain more conveniently by using the generated typescript code.
+
 ## Testing your contract
 
 The sample project comes with tests `test/token.test.ts` for your contract. You can run your tests with:
