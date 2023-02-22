@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 30
 title: Web3 SDK
 sidebar_label: Web3 SDK
 ---

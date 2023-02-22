@@ -99,15 +99,8 @@ and [WalletConnect](../wallet/walletconnect). Please refer to the respective pag
 
 ## Learn more
 
+To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
+
 To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
 
 To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-
-
-### Prototypes
-
-Here are some well-maintained dApps that can be a great source of inspiration for building new dApps.
-
-* NFT: https://github.com/alephium/alephium-nft
-* DEX: https://github.com/Lbqds/alephium-dex/tree/master/contracts
-* Wormhole Bridge Integration: https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium
