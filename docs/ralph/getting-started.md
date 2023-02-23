@@ -552,8 +552,8 @@ Contract Foo(a: ByteVec, b: Address, mut c: U256) {
 // First we need to deploy a template contract of `Foo`, which contract id is `fooTemplateId`.
 // Then we can use `copyCreateContract!` to create multiple instances.
 TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
-  let encodedImmFields = encodeToBytes!(a, b)
-  let encodedMutFields = encodeToBytes!(c)
+  let encodedImmFields = encodeToByteVec!(a, b)
+  let encodedMutFields = encodeToByteVec!(c)
   copyCreateContract!(fooTemplateId, encodedImmFields, encodedMutFields)
 }
 ```
@@ -575,8 +575,8 @@ fn upgrade(newCode: ByteVec, newImmFieldsEncoded: ByteVec, newMutFieldsEncoded: 
 
 fn upgrade(newCode: ByteVec) -> () {
   checkOwner(...)
-  let newImmFieldsEncoded = encode!(immField0, immField1, ...)
-  let newMutFieldsEncoded = encode!(mutField0, mutField1, ...)
+  let newImmFieldsEncoded = encodeToByteVec!(immField0, immField1, ...)
+  let newMutFieldsEncoded = encodeToByteVec!(mutField0, mutField1, ...)
   migrateWithFields!(newCode, newMutFieldsEncoded, newMutFieldsEncoded)
 }
 ```
