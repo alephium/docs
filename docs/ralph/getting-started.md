@@ -343,7 +343,7 @@ You can find more information about asset permission at [here](/ralph/asset-perm
 
 #### Update Fields
 
-Update fields functions will change the current contract fields. If a function changes the contract fields but without the `@using(updateFields = true)` annotation, the compiler will report a warning; if a function does not change the contract fields but annotated with `@using(updateFields = true)`, the compiler will report a warning as well.
+Functions that update fields will change the current contract fields. If a function changes the contract fields but without the `@using(updateFields = true)` annotation, the compiler will report a warning; if a function does not change the contract fields but annotated with `@using(updateFields = true)`, the compiler will report a warning as well.
 
 ```rust
 Contract Foo(a: U256, mut b: Boolean) {
