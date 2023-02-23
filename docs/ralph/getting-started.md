@@ -10,11 +10,14 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Introduction
 
-Ralph is the smart contract programming language for the Alephium blockchain, which focuses on three goals: security, simplicity and efficiency. This tutorial gives tips for writing clear, idiomatic, and secure Ralph smart contracts.
+Ralph is the smart contract programming language for the Alephium blockchain, which focuses on three goals: security, simplicity and efficiency. This tutorial provides tips for writing clean, idiomatic, and secure Ralph smart contracts. We follow the following principles when designing Ralph:
+1. Make the smart contract DSL as simple as possible.
+2. There should be one-- and preferably only one --obvious way to do it.
+3. Make good practices built-in.
 
 ## Types
 
-Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to the compiler type inference.
+Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to type inference.
 All types of Ralph are value types, i.e. they are always copied when they are used as function arguments or assigned.
 Currently, Ralph only supports the following data types:
 
@@ -198,21 +201,20 @@ fn foo() -> () {
 ```
 
 :::note
-`break` and `continue` statements are not supported in `for-loop` and `while-loop`.
+`break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert](/ralph/built-in-functions#assert).
 :::
 
 :::note
 In Ralph, each function has only one scope, so you can not define duplicated variables in the `while` or `for` block:
 
 ```rust
-fn foo() -> () {
-  let value = 0
-  for (let mut index = 0; index <= 4; index = index + 1) {
-    let value = 0 // ERROR, duplicated variable definitions
-    // ...
-  }
+let value = 0
+while (true) {
+  let value = 0 // ERROR, duplicated variable definitions
+  // ...
 }
 ```
+This is an on-purpose design since variable shadowing is generally not a good practice.
 :::
 
 ### Error Handling
@@ -427,6 +429,15 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
 
 ## Contracts
 
+:::info
+Each Alephium's contract has 3 forms of unique identification:
+1. **Address**: each contract has a unique address
+2. **Contract ID**: each contract has a unique contract ID
+3. **Token ID**: each contract can issue a token with the same ID as its own contract ID
+
+In Ralph, the contract ID is used more frequently. Contract ids can be converted from/to other forms with Ralph's built-in functions or web3 SDK.
+:::
+
 Contracts in Ralph are similar to classes in object-oriented languages. Each contract can contain declarations of contract fields, events, constants, enums, and functions. All these declarations must be inside a contract. Furthermore, contracts can inherit from other contracts.
 
 ```rust
@@ -555,6 +566,29 @@ Contract Foo(a: ByteVec, b: Address, c: U256) {
 TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
   let encodedFields = encodeToBytes!(a, b, c)
   copyCreateContract!(fooTemplateId, encodedFields)
+}
+```
+
+### Migration
+
+Alephium's contracts can be upgraded with two migration functions: [migrate!](/ralph/built-in-functions#migrate) and [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Here are the three typical ways to use them:
+
+```Rust
+fn upgrade(newCode: ByteVec) -> () {
+  checkOwner(...)
+  migrate!(newCode)
+}
+
+fn upgrade(newCode: ByteVec, newImmFieldsEncoded: ByteVec, newMutFieldsEncoded: ByteVec) -> () {
+  checkOwner(...)
+  migrateWithFields!(newCode, newImmFieldsEncoded, newMutFieldsEncoded)
+}
+
+fn upgrade(newCode: ByteVec) -> () {
+  checkOwner(...)
+  let newImmFieldsEncoded = encode!(immField0, immField1, ...)
+  let newMutFieldsEncoded = encode!(mutField0, mutField1, ...)
+  migrateWithFields!(newCode, newMutFieldsEncoded, newMutFieldsEncoded)
 }
 ```
 

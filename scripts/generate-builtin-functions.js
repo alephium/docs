@@ -58,6 +58,7 @@ The built-in functions are divided into several categories:
     `.trim())
     stream.write(categories.map(category => `\n[${category}](#${category.toLowerCase()}-functions)`).join(','))
     stream.write(`.\nAll built-in functions are suffixed with \`!\`.`)
+    stream.write(`\nAll of the byte encoding use Big Endian byte order.`)
     stream.write('\n\n')
 }
 

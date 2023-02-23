@@ -18,6 +18,7 @@ The built-in functions are divided into several categories:
 [ByteVec](#bytevec-functions),
 [Cryptography](#cryptography-functions).
 All built-in functions are suffixed with `!`.
+All of the byte encoding use Big Endian byte order.
 
 ## Contract Functions
 ---
