@@ -514,14 +514,16 @@ Contract Foo(barTemplateId: ByteVec) {
   @using(preapprovedAssets = true, checkExternalCaller = false)
   pub fn set(caller: Address, key: U256, value: U256) -> () {
     let path = u256To8Bytes!(key)
-    let encodedFields = encodeToByteVec!(value)
+    let encodedImmFields = encodeToByteVec!(value) // There is one immutable field
+    let encodedMutFields = # // There is no mutable field
     // Create a sub contract from the given key and value.
     // The sub contract id is `blake2b(blake2b(selfContractId!() ++ path))`.
     // It will fail if the sub contract already exists.
     let contractId = copyCreateSubContract!{caller -> 1 alph}(
       u256To8Bytes!(path),
       barTemplateId,
-      encodedFields
+      encodedImmFields,
+      encodedMutFields
     )
     emit SubContractCreated(key, contractId)
   }
@@ -542,7 +544,7 @@ Ralph supports creating contracts programmatically within contracts, Ralph provi
 If you want to create multiple instances of a contract, then you should use the `copyCreateContract!` builtin functions, which will reduce a lot of on-chain storage and transaction gas fee.
 
 ```rust
-Contract Foo(a: ByteVec, b: Address, c: U256) {
+Contract Foo(a: ByteVec, b: Address, mut c: U256) {
   // ...
 }
 
@@ -550,8 +552,9 @@ Contract Foo(a: ByteVec, b: Address, c: U256) {
 // First we need to deploy a template contract of `Foo`, which contract id is `fooTemplateId`.
 // Then we can use `copyCreateContract!` to create multiple instances.
 TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
-  let encodedFields = encodeToBytes!(a, b, c)
-  copyCreateContract!(fooTemplateId, encodedFields)
+  let encodedImmFields = encodeToBytes!(a, b)
+  let encodedMutFields = encodeToBytes!(c)
+  copyCreateContract!(fooTemplateId, encodedImmFields, encodedMutFields)
 }
 ```
 
