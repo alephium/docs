@@ -179,9 +179,33 @@ This is not an exact calculation, because the number of ALPH issued per block ca
 
 ## Tech
 
-### Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?
+### Why another L1 blockchain? Isn't there too many already?
 
-Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 bytes hash.
+There are a few key motivations for building a new blockchain:  
+
+1. To scale horizontally with sharding, similar to what Ethereum is attempting to do but has yet to fully achieve.  
+
+2. Many new Layer 1 (L1) blockchains are resource intensive, making it costly to run a full node, which is not ideal for decentralization in the long term. Alephium took a similar approach to Bitcoin, where everyone can run a full node and ""verify, rather than trust"".
+
+3. Most of the new L1s are using the account model or are Ethereum Virtual Machine (EVM) compatible, which inherits all of the weaknesses of the EVM. Alephium created a new Virtual Machine (VM) built on the Unspent Transaction Output (UTXO) model that provides a higher level of security for decentralized applications (dApps) by default.
+
+4. Most new L1s are based on the Proof of Stake (PoS) consensus mechanism. The Alephium's take is that the Proof of Work (PoW) consensus mechanism is simpler, more consistent, and more robust for achieving decentralization.
+
+### Why is the blocktime 64 seconds? Is there a particular reason for that?
+
+For Proof-of-Work (PoW) blockchains, finality is not related to the block time, but rather the amount of work accumulated in the new blocks. In other words, if a transaction needs N blocks (with block time T) to be confirmed, then with a block time of T/2, it will need 2N blocks to be confirmed, which will take the same amount of time.
+
+Although shorter block time offers a better user experience, it also has some drawbacks:
+1. More orphan blocks will be produced. The rate of uncle blocks on PoW Ethereum is 10% or higher, while Bitcoin's orphan rate is less than 1%.
+2. There will be more overhead in the P2P network. This problem is exacerbated for PoS blockchains, as some reports suggest that up to 90% of transactions on Solana are validator messages.
+
+In order to make the chain lightweight and efficient in the long run, these types of overheads should be avoided. Thus, Alephium began with a block time of 64 seconds, as it provides a balance between Bitcoin and newer blockchains with shorter block times. This can be reduced in the future if the blockchain matures or internet speed increases.
+
+For those who are focused on block times and instant finality, Layer 2 solutions can be built on top of Alephium. Ultimately, a lightweight, scalable, and efficient Layer 1 is essential for the cryptocurrency space.
+
+### How are Alephium addresses generated? Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?
+
+To generate addresses, Alephium uses the same curve as Bitcoin (secp256k1 curve) but a different hashing algortim (blake2b). Alephium addresses are usually longer, as it uses 32 bytes hash instead of 20 bytes hash.
 
 ### What are stateful UTXOs and how are they different from the other UTXOs models?
 
