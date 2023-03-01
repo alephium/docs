@@ -5,7 +5,7 @@ title: Internationalisation et localisation (i18n)
 
 ## Discord
 
-Trouvez les différentes langues [sur le Discord officiel](https://discord.gg/JErgRBfRSB)
+Trouvez les différentes langues [sur le Discord officiel](https://alephium.org/discord)
 
 - AR 🌙العربية
 - CN 🐼 中文

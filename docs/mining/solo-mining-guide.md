@@ -84,7 +84,7 @@ Alternatively, you could run the gpu-miner with docker by following the document
 
 Please follow the instructions on [https://github.com/alephium/amd-miner](https://github.com/alephium/amd-miner#readme) to run the gpu miner for AMD GPUs. Note that the performance of AMD miner is not in par with Nvidia miner.
 
-If you have any questions, feel free to reach out to the developers on [Discord](https://discord.gg/JErgRBfRSB).
+If you have any questions, feel free to reach out to the developers on [Discord](https://alephium.org/discord).
 
 ## More info on miner wallet
 
