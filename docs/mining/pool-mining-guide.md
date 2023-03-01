@@ -37,7 +37,7 @@ alephium.api.api-key = "<api key>"
 
 ### ⚠️ Disclaimer
 
-This is a non-exhaustive list of mining-pools that are driven by the community. These pools are in no way endorsed by Alephium and Alephium cannot be held responsible for your choice of Pool. While the pools listed here have behaved as expected so far, keep in mind that choosing a pool requires you to do some research regarding the security, reputation and general safety of the pool. A good place to start is to [ask the community on the Discord](https://discord.gg/JErgRBfRSB)
+This is a non-exhaustive list of mining-pools that are driven by the community. These pools are in no way endorsed by Alephium and Alephium cannot be held responsible for your choice of Pool. While the pools listed here have behaved as expected so far, keep in mind that choosing a pool requires you to do some research regarding the security, reputation and general safety of the pool. A good place to start is to [ask the community on the Discord](https://alephium.org/discord)
 
 ### Using pools and how to get support
 
@@ -127,7 +127,7 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 ### Alephium GPU-Miner
 
 - Download: [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner)
-- Support: [https://discord.gg/JErgRBfRSB](https://discord.gg/JErgRBfRSB)
+- Support: [https://alephium.org/discord](https://alephium.org/discord)
 
 ### bzMiner
 
