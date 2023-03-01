@@ -17,7 +17,7 @@ Before diving in deeper, we recommend that you check the following resources as 
 
 - [Official Website](https://alephium.org)
 - [Official Twitter](https://twitter.com/alephium)
-- [Official Discord](https://alephium.org/discord)
+- [Official Discord](https://discord.gg/JErgRBfRSB)
 - [Official Telegram](https://t.me/alephiumgroup)
 - [Official Reddit](https://reddit.com/r/Alephium)
 - [Official Medium](https://medium.com/@alephium), specifically:
@@ -117,7 +117,7 @@ Currently, 120 confirmations are needed for deposits, which is around 2hours (12
 
 ### When Binance?
 
-We are working toward additional listings and working our way up towards Binance. You will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://alephium.org/discord) or if you follow our [Twitter account](https://twitter.com/alephium).
+We are working toward additional listings and working our way up towards Binance. You will be among the first to know by joining the [Telegram group](https://t.me/alephiumgroup), the [Alephium Discord](https://discord.gg/JErgRBfRSB) or if you follow our [Twitter account](https://twitter.com/alephium).
 
 ### What is your token ticker?
 
@@ -265,7 +265,7 @@ Automatic address discovery will be added in the near future. That way, when res
 
 ### What's new?
 
-You can check our announcement channels on Telegram or Discord. We also have developments update every week on [Discord](https://alephium.org/discord), [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) & [Twitter](https://twitter.com/alephium).
+You can check our announcement channels on Telegram or Discord. We also have developments update every week on [Discord](https://discord.gg/GxfzPBKJcy), [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) & [Twitter](https://twitter.com/alephium).
 
 ### Why is the project named Alephium?
 

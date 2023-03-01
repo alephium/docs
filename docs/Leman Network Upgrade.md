@@ -66,7 +66,7 @@ The Front End gets a complete revamp of everything + new tools! https://medium.c
 *Coming soon:* Test the next versions of the wallets
 :::
 
-Got questions? Join our [Discord](https://alephium.org/discord)
+Got questions? Join our discord https://discord.gg/h7cXXy4FEY
 
 ## Foundations for bridging to other chains
 

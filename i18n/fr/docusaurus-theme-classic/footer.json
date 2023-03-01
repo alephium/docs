@@ -13,7 +13,7 @@
   },
   "link.item.label.Discord": {
     "message": "Discord",
-    "description": "The label of footer link with label=Discord linking to https://alephium.org/discord"
+    "description": "The label of footer link with label=Discord linking to https://discord.gg/JErgRBfRSB"
   },
   "link.item.label.Telegram": {
     "message": "Telegram",

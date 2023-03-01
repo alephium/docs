@@ -238,7 +238,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [whitepaper]: https://github.com/alephium/white-paper
 [tokenomics-medium]: https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 [website]: https://alephium.org/
-[discord]: https://alephium.org/discord
+[discord]: https://discord.gg/JErgRBfRSB
 [telegram]: https://t.me/alephiumgroup
 [twitter]: https://twitter.com/alephium
 [linkedin]: https://www.linkedin.com/company/alephium
@@ -256,7 +256,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [web3-sdk]: https://github.com/alephium/alephium-web3
 [wiki]: https://github.com/alephium/wiki
 [awesome]: https://github.com/alephium/awesome-alephium
-[mining-discord]: https://alephium.org/discord
+[mining-discord]: https://discord.gg/53QSMpKZyR
 [miner-starter-pack]: https://github.com/alephium/alephium-miner-getting-started
 [solo-mining-video]: https://www.youtube.com/watch?v=hdPH6inWjhc
 [reddit]: https://www.reddit.com/r/Alephium/
