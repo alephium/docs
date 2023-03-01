@@ -11,7 +11,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 This is a continuation of the [getting started](/dapps/getting-started.md)
 guide. By the end of this guide, you should be able to build a simple
 [Nextjs](https://nextjs.org/) dApp that interacts with the token faucet
-smart contracts discussed in the [getting started](/dapps/getting-started.md) guide.
+smart contracts discussed in the [getting started](/dapps/getting-started.md) guide
 
 Prerequisites:
 
