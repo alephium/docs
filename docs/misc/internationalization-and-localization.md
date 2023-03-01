@@ -12,7 +12,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Discord
 
-Find the following languages in [the official Discord](https://alephium.org/discord)
+Find the following languages in [the official Discord](https://discord.gg/JErgRBfRSB)
 
 - AR 🌙العربية
 - CN 🐼 中文

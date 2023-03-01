@@ -127,7 +127,7 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 
 ### Echangez avec nous
 
-- [Discord](https://alephium.org/discord)
+- [Discord](https://discord.gg/JErgRBfRSB)
 - [Telegram](https://t.me/alephiumgroup)
 - [Reddit](https://www.reddit.com/r/Alephium)
 
@@ -196,7 +196,7 @@ Venez commiter et faire une pull request avec nous : <https://github.com/alephiu
 
 ## Si vous êtes un mineur, commencez ici !
 
-Commencez par rejoindre le canal dédié aux mineurs sur discord : <https://alephium.org/discord>
+Commencez par rejoindre le canal dédié aux mineurs sur discord : <https://discord.gg/53QSMpKZyR>
 
 Trouvez notre pack de démarrage pour miner sur Github : <https://github.com/alephium/alephium-miner-getting-started>
 
