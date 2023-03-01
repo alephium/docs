@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Network
 
-- Local Devnet (explorer included): https://github.com/alephium/alephium-stack/tree/master/devnet
+- Local Devnet (explorer included): https://github.com/alephium/alephium-stack#devnet
 - Testnet and Mainnet APIs are [documented here](/dapps/public-services#api-aliases)
 
 ## Dapp SDK
