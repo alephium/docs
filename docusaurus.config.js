@@ -68,7 +68,7 @@ const config = {
             items: [
               {
                 label: "Discord",
-                href: "https://discord.gg/JErgRBfRSB",
+                href: "https://alephium.org/discord",
                 postion: "left",
               },
               {
