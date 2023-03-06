@@ -101,6 +101,11 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 
 - Website: https://soloblocks.org/alph/
 
+#### Alph2Mine
+
+- Website: https://alph2mine.com/
+- Email: alph2mine@gmail.com
+
 #### Solopool.org
 
 - Website: https://alph.solopool.org/
