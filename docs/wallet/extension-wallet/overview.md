@@ -10,6 +10,6 @@ execute smart contracts, etc right in the browser.
 
 <img src={require("./media/landing.png").default} alt="Execute Transction Script" width="250" />
 
-In the [Getting Started](getting-started) page, you can find out the installation guide as well as some
+In the [Getting Started](/wallet/extension-wallet/getting-started) page, you can find out the installation guide as well as some
 common use cases for the extension wallet such as managing accounts, transferring assets, etc. For
-more information on dApps integration, please check out the [dApps](dapp) page.
+more information on dApps integration, please check out the [dApps](/wallet/extension-wallet/dapp) page.
