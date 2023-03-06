@@ -142,7 +142,7 @@ Rencontrez le reste de l'équipe sur notre site web ou sur Linkedin : <https://w
 - [Website](https://alephium.org/)
 - [Whitepapers](https://github.com/alephium/white-paper)
 - [Medium](https://medium.com/@alephium)
-- [Github: <https://github.com/alephium)
+- [Github(https://github.com/alephium)
 
 ---
 
