@@ -21,23 +21,24 @@ Prerequisites:
 
 In this tutorial we will write our first dApp: A token faucet.
 
-Create a directory for tuto.
+Create a new project folder and navigate into it:
 
 ```sh
 mkdir alephium-faucet-tuto
 cd alephium-faucet-tuto
 ```
 
-Let's now create a `contracts` folder where we'll store all our contracts
+Let's now create a `contracts` folder where we'll store all our contracts:
 
 ```sh
 mkdir contracts
 ```
 
-Our first contract we'll be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral), you can copy it into your `contracts` folder.
-Let's dive into it.
+Our first contract we'll be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
 
-```
+Let's inspect it, piece by piece:
+
+```rust
 import "std/token_interface"
 
 Contract TokenFaucet(
@@ -49,14 +50,14 @@ Contract TokenFaucet(
 ) implements IToken {
 ```
 
-The first four fields will be immutable values that store the data required to served our [IToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/token_interface.ral).
-`mut balance` is a mutable value that keep track on how many tokens are left in this faucet.
+The first four fields will be immutable values that store the data required to serve our [IToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/token_interface.ral).
+`mut balance` is a mutable value that keeps track of how many tokens are left in this faucet.
 
-You can see that our contract is emitting some `event` and define an `error` code. Read the following for more info on the [events](https://wiki.alephium.org/ralph/getting-started#events) and the [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
+You can see that our contract emits an `event` and defines an `error` code. Read the following for more info on [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
 
-This is followed by five access method for the different contract's arguments.
+This is followed by 5 access methods for the different contract's arguments.
 
-The latest function is where the magic happen:
+The last method is where the magic happens:
 
 ```rust
 @using(assetsInContract = true, updateFields = true)
@@ -76,13 +77,13 @@ pub fn withdraw(amount: U256) -> () {
 }
 ```
 
-With the `assert!` We make sure no one take more than 2 tokens at the same time.
-`transferTokenFromSelf` will actually perform the transfer of token.
-We update the `mut balance` field with the new balance, if it goes underflow and error will be raised and the transaction won't be perform.
-
+With the `assert!` we make sure no one takes more than 2 tokens at the same time.  
+`transferTokenFromSelf` will actually perform the transfer of the tokens.  
+We update the `mut balance` field with the new balance. In the case of underflow, an error will be raised and the transaction won't be performed.
+`callerAddress!()` and `selfTokenId!()` are built-in functions, you can read more about them in our [built-in functions page](/ralph/built-in-functions).
 ## Compile your contract
 
-The compiler needs to contact the full node in order to compile, we define the node url using with the following config file: `alephium.config.ts`
+The compiler needs to contact the full node in order to compile the contract. We define the node URL using the following config file: `alephium.config.ts`. Create this file in the root directory of your project and paste the following code:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
@@ -103,18 +104,18 @@ export default configuration
 
 Make sure to use the correct host and port.
 
-Now let's compile:
+Now, let's compile:
 
 ```sh
 npx @alephium/cli@latest compile
 ```
 
-It may ask you some confirmation to install the latest `@alephium/cli` package.
+It may ask you for some confirmation to install the latest `@alephium/cli` package. Select yes to proceed.
 
-You can check the produced result into `artifacts`. For example `artifacts/ts/TokenFaucet.ts` produce lots of helper functions: `at, fetchState, call*, etc`, as well as test functions.
+Once the above command succeeds, you will notice that a new folder called `artifacts` was created. It contains several files related to your contract. For example, `artifacts/ts/TokenFaucet.ts` produces lots of helper functions like `at`, `fetchState`, `call*`, etc, as well as many test functions.
 
 ## Test your contract
-The SDK provides unit test functionalities, which calls the contract like a normal transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+The SDK provides unit test functionalities, which call the contract by sending a transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
 
 Install the test framework:
 
@@ -122,7 +123,7 @@ Install the test framework:
 npm install ts-jest @types/jest
 ```
 
-You'll also need our `web3` package
+You'll also need our `@alephium/web3` package:
 
 ```sh
 npm install @alephium/web3 @alephium/web3-test
@@ -134,7 +135,7 @@ Create a `test` folder:
 mkdir test
 ```
 
-and add this minimal test: `test/token.test.ts`
+and create the `test/token.test.ts` minimalistic test file with the following contents:
 
 ```typescript
 import { web3, Project, addressFromContractId } from '@alephium/web3'
@@ -142,7 +143,7 @@ import { randomContractId, testAddress } from '@alephium/web3-test'
 import { TokenFaucet } from '../artifacts/ts'
 
 describe('unit tests', () => {
-  it('test withdraw', async () => {
+  it('Withdraws 1 token from TokenFaucet', async () => {
 
     // Use the correct host and port
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
@@ -174,9 +175,9 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found [here](https://github.com/alephium/nextjs-template/blob/main/test/token.test.ts)
+A more complex test can be found in our [alephium/nextjs-template](https://github.com/alephium/nextjs-template/blob/main/test/token.test.ts) project.
 
-Without entering to much into details, `Typescript` needs some configuration to run the test, just copy the following into `tsconfig.json`
+Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
 
 ```json
 {
@@ -198,20 +199,22 @@ You can now run the test:
 npx @alephium/cli@latest test
 ```
 
-Congratulations, you should see what result would produce a withdraw.
+You should be able to see on your terminal the output of calling the withdraw method.
+
+🎉 Congratulations! Have created your first contract and written a test to call it and test it locally! It's time to deploy your contract.
 
 ## Deploy your contract
 
 Now things are getting serious, we will deploy our contract on our `devnet` :rocket:
 
-The `deploy` command will deploy everything which is inside the `scripts` folder.
+The `deploy` command will execute all deployment scripts it finds inside the `scripts` folder. Create the `scripts` folder in the root folder of the project:
 
 ```sh
 mkdir scripts
 ```
 
-Let's create this file into this folder: `scripts/0_deploy_faucet.ts`
-Note that deployment scripts should prefixed with numbers (starting from 0)
+Let's create a deployment script file called `0_deploy_faucet.ts` into the `scripts` folder and paste the following code.  
+Note that deployment scripts should always be prefixed with numbers (starting from `0`).
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
@@ -243,13 +246,13 @@ const deployFaucet: DeployFunction<Settings> = async (
 export default deployFaucet
 ```
 
-[deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) takes our contract and deploy it with the correct arguments, you can also add a `taskTag` arguments, to tag your deployment with a specific name. By default it will use the contract name, but if you deploy multiple time the same contract with different initial fields, your `.deployement` file will get override, using a specific `taskTag` solve this issue.
+The [deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) of the `Deployer` takes our contract and deploys it with the correct arguments. You can also add a `taskTag` argument to tag your deployment with a specific name. By default, it will use the contract name, but if you deploy the same contract multiple times with different initial fields, your `.deployment` file will get overridden. Using a specific `taskTag` solves this issue.
 
 From the [DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293) interface, we can see that `initialFields` is mandatory as it contains the arguments for our `TokenFaucet` contract.
 
 With `issueTokenAmount` you can define how many tokens you want to issue, this is required if you want to create a token, otherwise no token-id will be created.
 
-Now let's deploy!!!
+Now, let's deploy!
 
 ```sh
 npx @alephium/cli@latest deploy
@@ -295,14 +298,13 @@ Token faucet contract address: 28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA
 ✅ Deployment scripts executed!
 ```
 
-Congratulations! Your contract is deployed. We can check the balance of the contract:
-Change the contract address base on your deployment result
+Congratulations! Your contract is deployed. We can check the balance of the contract. Use `curl` and change the contract address based on your deployment result:
 
 ```sh
 curl 'http://localhost:22973/addresses/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/balance'
 ```
 
-Response:
+The response should look like this:
 
 ```json
 {
@@ -320,15 +322,15 @@ Response:
 }
 ```
 
-We can see our token id, with the 100 token we decided to issue.
+We can see our token id, with the 100 tokens we decided to issue.
 
-Let's check the contract state:
+Let's check the contract state by first getting the group of our address: 
 
 ```sh
+curl 'http://localhost:22973/addresses/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/group'
 curl 'http://localhost:22973/contracts/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/state?group=1'
 ```
 
-The `group` value may vary depending of your deploying address. You can always get your group number with the `curl 'http://localhost:22973/addresses/<your-address>/group'`  endpoint.
 
 Contract state response:
 ```json
@@ -373,9 +375,9 @@ Contract state response:
 }
 ```
 
-In the `immFields` we can find back our `TokenFaucet` initial arguments, `symbol/name/decimals/supply` and the `mutFields` contains the current token balance, we'll check latter that field after calling the faucet.
+In the `immFields` we can see our initial `TokenFaucet` arguments (`symbol`, `name`, `decimals`, `supply`). We can also see that `mutFields` contains the current token balance. We'll check that field later after calling the faucet.
 
-The `deploy` command also create a `.deployments.devnet.json` file, with the deployment result. It's important to keep that file to easily interact latter with the contract, even tho all informations can be found back on the blockchain.
+The `deploy` command also created a `.deployments.devnet.json` file, with the deployment result. It's important to keep that file to easily interact with the contract, even though all information can be found on the blockchain.
 
 # Interact with the deployed contract
 
@@ -389,7 +391,7 @@ We'll need to install our `cli` package and the `typescript` dependency if it's 
 npm install @alephium/cli typescript
 ```
 
-We will now see another way to interact with the blockchain, previously we were using the `DeployFunction` with our `scripts/x_*` files. Which are automatically deploy with the cli tool.
+We will now see another way to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
 
 The next way is a skeleton of what you could do for a web-application.
 This will be a `TypeScript` application and code goes into the `src` folder.
@@ -460,7 +462,7 @@ async function withdraw() {
 withdraw()
 ```
 
-For the attentive people, you'll see something new coming from our `artifacts`: [Withdraw](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [TxScript](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple, you can add this to you `contracts/withdraw.ral`
+For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -468,7 +470,7 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 }
 ```
 
-We now need to recompile our contracts to get the artifact for `Withdraw`
+We now need to recompile our contracts to get the artifact for `Withdraw`:
 
 ```sh
 npx @alephium/cli@latest compile
@@ -476,7 +478,7 @@ npx @alephium/cli@latest compile
 
 The code of `token.ts` should be self-explanatory, you can read more on our [web3-sdk here](https://wiki.alephium.org/dapps/alephium-web3)
 
-You can now try to compile.
+You can now compile the TypeScript code to JavaScript with:
 
 ```sh
 npx tsc --build .
@@ -531,7 +533,7 @@ You should now be a proud owner of the token you created.
 
 ## What's next?
 
-You can find a more complex example of the token faucet tutorial [here](https://github.com/alephium/nextjs-template)
+You can find a more complex example of the token faucet tutorial [in the alephium/nextjs-template](https://github.com/alephium/nextjs-template) project.
 
 ## Connect to the wallets
 
