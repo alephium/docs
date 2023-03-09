@@ -16,6 +16,8 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 npx @alephium/cli@latest devnet start
 ```
 
+This launch a devnet with [this configuration](https://github.com/alephium/alephium-web3/blob/master/packages/cli/devnet-user.conf)
+
 The Typescript SDK is then able to interact with the network through REST endpoints.
 
 Alternatively, if you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).

@@ -16,6 +16,8 @@ Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
+- [nodejs](https://nodejs.org/en/) version >= 16 installed
+- `npm` version >= 8 installed
 
 ## Create a new dApp project: Token Faucet
 
@@ -83,16 +85,20 @@ We update the `mut balance` field with the new balance. In the case of underflow
 `callerAddress!()` and `selfTokenId!()` are built-in functions, you can read more about them in our [built-in functions page](/ralph/built-in-functions).
 ## Compile your contract
 
-The compiler needs to contact the full node in order to compile the contract. We define the node URL using the following config file: `alephium.config.ts`. Create this file in the root directory of your project and paste the following code:
+The compiler needs to contact the full node in order to compile the contract, you'll need to use the right information defined while [creating your devnet](/full-node/devnet). If you haven't start it, now it's the time.
+We define the node URL using the following config file: `alephium.config.ts`. 
+Create this file in the root directory of your project and paste the following code:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
 
-const configuration: Configuration<void> = {
+export type Settings = {}
+
+const configuration: Configuration<Settings> = {
   defaultNetwork: 'devnet',
   networks: {
     devnet: {
-      //Make sure the two values match what's in your `~/.alephium/user.conf
+      //Make sure the two values match what's in your devnet configuration
       nodeUrl: 'http://localhost:22973',
       networkId: 2
     }
@@ -101,8 +107,6 @@ const configuration: Configuration<void> = {
 
 export default configuration
 ```
-
-Make sure to use the correct host and port.
 
 Now, let's compile:
 
@@ -260,12 +264,14 @@ npx @alephium/cli@latest deploy
 
 ...OOPS... It doesn't work???
 
-`NO UTXO found` ???
+If you got the error `The node chain id x is different from configured chain id y`, go check your `networkId` in the devnet configuration and the `alephium.config.ts` file.
+
+`No UTXO found` ???
 
 Of course we didn't provide the `how-to-use-my-utxos`, we need to define our [privateKeys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46).
 
-
-You'll need to export the private keys from our wallet extension (might do it from our other wallets latter), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet.
+You'll need to export the private keys from our wallet extension (might do it from our other wallets later), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
+If you used the docker way to launch your devnet, it might have work as we are defining [a default private key in our cli package](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) based on the genesis allocation.
 
 Let's update our `alephium.config.ts`
 
@@ -391,16 +397,9 @@ We'll need to install our `cli` package and the `typescript` dependency if it's 
 npm install @alephium/cli typescript
 ```
 
-We will now see another way to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
+We will now see a different option to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
 
-The next way is a skeleton of what you could do for a web-application.
-This will be a `TypeScript` application and code goes into the `src` folder.
-
-```sh
-mkdir src
-```
-
-Let's create the following file, `src/token.ts`:
+Another way is to create a skeleton web application project using TypeScript. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -476,8 +475,6 @@ We now need to recompile our contracts to get the artifact for `Withdraw`:
 npx @alephium/cli@latest compile
 ```
 
-The code of `token.ts` should be self-explanatory, you can read more on our [web3-sdk here](https://wiki.alephium.org/dapps/alephium-web3)
-
 You can now compile the TypeScript code to JavaScript with:
 
 ```sh
@@ -496,7 +493,7 @@ const configuration: Configuration<Settings> = {
   networks: {
     devnet: {
       nodeUrl: 'http://localhost:22973',
-      networkId: 2, //Use the same as in your `~/.alephium/user.conf
+      networkId: 2, //Use the same as in your devnet configuration
       privateKeys: ['672c8292041176c9056bb0dd1d91d34711ceed2493b5afc83f2012b27df2c559'],
       settings: {}
     },
