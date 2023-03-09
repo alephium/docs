@@ -23,6 +23,8 @@ Prerequisites:
 
 In this tutorial we will write our first dApp: A token faucet.
 
+The code here is taken from our [getting started page](/dapps/getting-started), but we will see step by step how we build this guide.
+
 Create a new project folder and navigate into it:
 
 ```sh
