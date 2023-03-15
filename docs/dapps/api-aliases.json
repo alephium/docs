@@ -39,10 +39,6 @@
             "to": "https://wallet-v15.mainnet.alephium.org"
         },
         {
-            "from": "https://wallet-v18.testnet.alephium.org",
-            "to": "https://wallet-v17.testnet.alephium.org"
-        },
-        {
             "from": "https://wallet-v15.testnet.alephium.org",
             "to": "https://wallet-v17.testnet.alephium.org"
         },
