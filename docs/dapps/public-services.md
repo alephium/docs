@@ -40,8 +40,6 @@ Currently, the following API services are maintained. Note that all APIs are rat
 * `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Test](https://backend-v113.mainnet.alephium.org/infos))
 * `https://backend-v112.testnet.alephium.org` for testnet with explorer backend v1.12.X, deprecated ([Test](https://backend-v112.testnet.alephium.org/infos))
 * `https://backend-v113.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Test](https://backend-v113.testnet.alephium.org/infos))
-* `https://wallet-v15.testnet.alephium.org` for _old_ testnet with node v1.5.X, deprecated ([Test](https://wallet-v15.testnet.alephium.org/infos/version))
-* `https://backend-v111.testnet.alephium.org` for _old_ testnet with explorer backend v1.11.X, deprecated ([Test](https://backend-v111.testnet.alephium.org/infos))
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 

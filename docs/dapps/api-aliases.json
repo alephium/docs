@@ -2,7 +2,7 @@
     "current": [
         {
             "from": "https://wallet.mainnet.alephium.org",
-            "to": "https://wallet-v15.mainnet.alephium.org"
+            "to": "https://wallet-v17.mainnet.alephium.org"
         },
         {
             "from": "https://wallet.testnet.alephium.org",
@@ -10,7 +10,7 @@
         },
         {
             "from": "https://backend.mainnet.alephium.org",
-            "to": "https://backend-v111.mainnet.alephium.org"
+            "to": "https://backend-v113.mainnet.alephium.org"
         },
         {
             "from": "https://backend.testnet.alephium.org",
@@ -18,7 +18,7 @@
         },
         {
             "from": "https://explorer.mainnet.alephium.org",
-            "to": "https://explorer-v111.mainnet.alephium.org"
+            "to": "https://explorer-v113.mainnet.alephium.org"
         },
         {
             "from": "https://explorer.testnet.alephium.org",
@@ -26,7 +26,7 @@
         },
         {
             "from": "https://explorer.alephium.org",
-            "to": "https://explorer-v111.mainnet.alephium.org"
+            "to": "https://explorer-v113.mainnet.alephium.org"
         },
         {
             "from": "https://testnet.alephium.org",
@@ -40,7 +40,11 @@
         },
         {
             "from": "https://wallet-v18.testnet.alephium.org",
-            "to": "https://wallet-v15.testnet.alephium.org"
+            "to": "https://wallet-v17.testnet.alephium.org"
+        },
+        {
+            "from": "https://wallet-v16.testnet.alephium.org",
+            "to": "https://wallet-v17.testnet.alephium.org"
         },
         {
             "from": "https://backend-v18.mainnet.alephium.org",
@@ -48,7 +52,7 @@
         },
         {
             "from": "https://backend-v18.testnet.alephium.org",
-            "to": "https://backend-v111.testnet.alephium.org"
+            "to": "https://backend-v112.testnet.alephium.org"
         },
         {
             "from": "https://backend-v19.mainnet.alephium.org",
@@ -56,7 +60,7 @@
         },
         {
             "from": "https://backend-v19.testnet.alephium.org",
-            "to": "https://backend-v111.testnet.alephium.org"
+            "to": "https://backend-v112.testnet.alephium.org"
         },
         {
             "from": "https://backend-v110.mainnet.alephium.org",
@@ -64,7 +68,7 @@
         },
         {
             "from": "https://backend-v110.testnet.alephium.org",
-            "to": "https://backend-v111.testnet.alephium.org"
+            "to": "https://backend-v112.testnet.alephium.org"
         },
         {
             "from": "https://explorer-v18.mainnet.alephium.org",
@@ -72,7 +76,7 @@
         },
         {
             "from": "https://explorer-v18.testnet.alephium.org",
-            "to": "https://explorer-v111.testnet.alephium.org"
+            "to": "https://explorer-v112.testnet.alephium.org"
         },
         {
             "from": "https://explorer-v19.mainnet.alephium.org",
@@ -80,7 +84,7 @@
         },
         {
             "from": "https://explorer-v19.testnet.alephium.org",
-            "to": "https://explorer-v111.testnet.alephium.org"
+            "to": "https://explorer-v112.testnet.alephium.org"
         },
         {
             "from": "https://explorer-v110.mainnet.alephium.org",
@@ -88,11 +92,11 @@
         },
         {
             "from": "https://explorer-v110.testnet.alephium.org",
-            "to": "https://explorer-v111.testnet.alephium.org"
+            "to": "https://explorer-v112.testnet.alephium.org"
         },
         {
-            "from": "https://wallet-v16.testnet.alephium.org",
-            "to": "https://wallet-v17.testnet.alephium.org"
+            "from": "https://explorer-v111.testnet.alephium.org",
+            "to": "https://explorer-v112.testnet.alephium.org"
         }
     ]
 }
