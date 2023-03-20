@@ -53,7 +53,7 @@ To fix the problem:
 
 1. Delete the folder .alephium `rm .alephium`
 
-2. Restart the node and wait for synchronization `java -jar alephium-1.x.x.jar`
+2. Restart the node and wait for synchronization `java -jar alephium-x.x.x.jar`
 
 ## Moving the Alephium data folder
 
@@ -77,11 +77,11 @@ There are several environment variables used for logging:
 Below is an example with all of the possible logging options:
 
 ```
-ALEPHIUM_HOM=<folder> ALEPHIUM_LOG_LEVEL=<DEBUG | INFO | WARN | ERROR> ALEPHIUM_ENABLE_DEBUG_LOGGING=<true | false> java -jar alephium-1.x.x.jar
+ALEPHIUM_HOM=<folder> ALEPHIUM_LOG_LEVEL=<DEBUG | INFO | WARN | ERROR> ALEPHIUM_ENABLE_DEBUG_LOGGING=<true | false> java -jar alephium-x.x.x.jar
 ```
 
 It's also possible to override the [logging configuration file](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml) of Alephium.
 
 ```
-java -Dlogback.configurationFile=/path/to/config.xml alephium-1.x.x.jar
+java -Dlogback.configurationFile=/path/to/config.xml alephium-x.x.x.jar
 ```

@@ -17,15 +17,15 @@ Ensure that Java (11 or 17 is recommended) is installed on your computer:
 
 ## Download Application File
 
-Download file `alephium-1.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
+Download file `alephium-x.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
 
 ## Start your node
 
 1. Open the search and type in `Terminal` (for Mac and Ubuntu) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-1.x.x.jar** file is saved.
+2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-x.x.x.jar** file is saved.
 3. Type the following command and press Enter to launch the full node:
    ```shell
-   java -jar alephium-1.x.x.jar
+   java -jar alephium-x.x.x.jar
    ```
 
 🎉 _**Tada, your node is running**_

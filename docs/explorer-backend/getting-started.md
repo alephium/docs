@@ -12,7 +12,7 @@ sidebar_label: Getting started
 
 ## Download Application File
 
-Download file `explorer-backend-1.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest).
+Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest).
 
 ## Create the database:
 
@@ -38,7 +38,7 @@ Download file `explorer-backend-1.x.x.jar` from [Github release](https://github.
 ## Start your exlporer-backend
 
 ```shell
-java -jar explorer-backend-1.x.x.jar
+java -jar explorer-backend-x.x.x.jar
 ```
 
 Your explorer-backend will start to sync with the full node. It might take long the first time
