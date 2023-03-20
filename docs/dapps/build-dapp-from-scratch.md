@@ -8,8 +8,6 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-#Dapps Getting started
-
 This guide will explore the basics of creating an Alephium dApp project.
 
 Prerequisites:
