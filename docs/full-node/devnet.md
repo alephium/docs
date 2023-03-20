@@ -10,6 +10,10 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 # Create a local Devnet
 
+## Using Docker
+
+If you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
+
 ## Automatically with our development tool
 
 ```sh
@@ -119,7 +123,3 @@ export BLOCKFLOW_PORT=22973
 export DB_NAME=devnet
 java -jar explorer-backend-x.x.x.jar
 ```
-
-## Using Docker
-
-If you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
