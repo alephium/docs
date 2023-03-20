@@ -38,7 +38,7 @@ Let's now create a `contracts` folder where we'll store all our contracts:
 mkdir contracts
 ```
 
-Our first contract we'll be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
+Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
 
 Let's inspect it, piece by piece:
 
@@ -155,8 +155,8 @@ describe('unit tests', () => {
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
     await Project.build()
 
-    let testContractId = randomContractId()
-    let testParams = {
+    const testContractId = randomContractId()
+    const testParams = {
       // a random address that the test contract resides in the tests
       address: addressFromContractId(testContractId),
       // assets owned by the test contract before a test

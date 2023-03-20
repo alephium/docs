@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Overview
 
-Alephium proposes multiple tools and package to help you build your dApps.
+Alephium proposes multiple tools and packages to help you build your dApps.
 
 This guide will help you install our recommended setup.
 
@@ -39,7 +39,7 @@ To compile and test your contracts, it's necessary to launch a local development
 npx @alephium/cli@latest devnet start
 ```
 
-Your new network is now launched using [this configuration](https://github.com/alephium/alephium-web3/blob/master/packages/cli/devnet-user.conf)
+Your new network is now launched using [this configuration](https://github.com/alephium/alephium-web3/blob/master/packages/cli/devnet-user.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
 
 The Typescript SDK is then able to interact with the network through REST endpoints.
 
