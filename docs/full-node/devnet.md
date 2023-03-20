@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 # Create a local Devnet
 
-## Using Docker
+## Automatically with our development tool
 
 ```sh
 npx @alephium/cli@latest devnet start
@@ -20,9 +20,7 @@ This launch a devnet with [this configuration](https://github.com/alephium/aleph
 
 The Typescript SDK is then able to interact with the network through REST endpoints.
 
-Alternatively, if you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
-
-## Using jar files
+## Manually using jar files
 
 ### Full node
 
@@ -120,3 +118,8 @@ export BLOCKFLOW_NETWORK_ID=2
 export BLOCKFLOW_PORT=22973
 export DB_NAME=devnet
 java -jar explorer-backend-x.x.x.jar
+```
+
+## Using Docker
+
+If you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
