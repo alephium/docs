@@ -40,7 +40,7 @@ Pour résoudre le problème :
 
 1. Supprimez le dossier .alephium `rm .alephium`.
 
-2. Redémarrez le noeud et attendez la synchronisation `java -jar alephium-1.x.x.jar`.
+2. Redémarrez le noeud et attendez la synchronisation `java -jar alephium-x.x.x.jar`.
 
 ## Déplacer le dossier de données d'Alephium
 

@@ -19,15 +19,15 @@ Assurez-vous que Java (11 ou 17 est recommandé) est installé sur votre ordinat
 
 ## Télécharger le fichier d'application
 
-Téléchargez le fichier `alephium-1.x.x.jar` depuis [Github release](https://github.com/alephium/alephium/releases/latest) (ne double-cliquez pas dessus, il ne peut pas être lancé de cette façon).
+Téléchargez le fichier `alephium-x.x.x.jar` depuis [Github release](https://github.com/alephium/alephium/releases/latest) (ne double-cliquez pas dessus, il ne peut pas être lancé de cette façon).
 
 ## Démarrez votre noeud
 
 1. Ouvrez la recherche et tapez `Terminal` (pour Mac et Ubuntu) ou `Command Prompt` (pour Windows).
-2. Dans le programme Terminal/Command Prompt, tapez `cd your-jar-file-path` pour entrer dans le dossier dans lequel le fichier **alephium-1.x.x.jar** est enregistré.
+2. Dans le programme Terminal/Command Prompt, tapez `cd your-jar-file-path` pour entrer dans le dossier dans lequel le fichier **alephium-x.x.x.jar** est enregistré.
 3. Tapez la commande suivante et appuyez sur Entrée pour lancer le nœud complet :
    ```shell
-   java -jar alephium-1.x.x.jar
+   java -jar alephium-x.x.x.jar
    ```
 
 🎉 _**Tada, votre nœud est en cours d'exécution**_

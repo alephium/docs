@@ -26,7 +26,7 @@ Alternatively, if you want to create a local development network with explorer s
 
 ### Full node
 
-Download file `alephium-1.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
+Download file `alephium-x.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
 
 Write the minimum config file `~/.alephium/user.conf`
 
@@ -77,7 +77,7 @@ You can now access the full node's API at: `http://localhost:22973/docs`
 
 Requirement: https://www.postgresql.org/
 
-Download file `explorer-backend-1.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest)
+Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest)
 
 Connect to PostgreSQL and create a database for your devnet
 
@@ -91,4 +91,4 @@ You can check [the configuration file](https://github.com/alephium/explorer-back
 export BLOCKFLOW_NETWORK_ID=2
 export BLOCKFLOW_PORT=22973
 export DB_NAME=devnet
-java -jar explorer-backend-1.13.0.jar
+java -jar explorer-backend-x.x.x.jar
