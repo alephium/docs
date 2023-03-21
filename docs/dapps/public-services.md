@@ -37,7 +37,7 @@ Currently, the following API services are maintained. Note that all APIs are rat
 * `https://wallet-v17.mainnet.alephium.org` for mainnet with node v1.7.X, removed after Leman upgrade. ([Test](https://wallet-v17.mainnet.alephium.org/infos/version))
 * `https://wallet-v20.mainnet.alephium.org` for mainnet with node v2.X ([Test](https://wallet-v20.mainnet.alephium.org/infos/version))
 * `https://wallet-v17.testnet.alephium.org` for testnet with node v1.7.X, deprecated ([Test](https://wallet-v17.testnet.alephium.org/infos/version))
-* `https://wallet-v20.testnet.alephium.org` for testnet with node v1.7.X ([Test](https://wallet-v207.testnet.alephium.org/infos/version))
+* `https://wallet-v20.testnet.alephium.org` for testnet with node v2.X ([Test](https://wallet-v20.testnet.alephium.org/infos/version))
 * `https://backend-v112.mainnet.alephium.org` for mainnet with explorer backend v1.12.X, deprecated ([Test](https://backend-v112.mainnet.alephium.org/infos))
 * `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Test](https://backend-v113.mainnet.alephium.org/infos))
 * `https://backend-v112.testnet.alephium.org` for testnet with explorer backend v1.12.X, deprecated ([Test](https://backend-v112.testnet.alephium.org/infos))
