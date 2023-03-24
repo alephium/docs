@@ -23,6 +23,10 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 - @alephium/walletconnect `0.0.3` (to be updated): https://www.npmjs.com/package/@alephium/walletconnect-provider
 - @alephium/token-list `0.0.5`: https://www.npmjs.com/package/@alephium/token-list
 
+## Ralph Tools
+- Vscode extension: https://marketplace.visualstudio.com/items?itemName=alephium.ralph-vscode-alephium
+- Vim: https://github.com/tdroxler/ralph.vim
+
 ## Dapp Wallets
 - Extension wallet: [Google Chrome Store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) or [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 - Desktop wallet: https://github.com/alephium/desktop-wallet/releases/latest
