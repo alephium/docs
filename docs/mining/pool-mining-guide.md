@@ -65,6 +65,11 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Website: https://alph-pool.com/
 - Telegram: https://t.me/ALPH_pool_chat
 
+#### Alph2Mine.com
+
+- Website: https://alph2mine.com/
+- Email: alph2mine@gmail.com
+
 #### Coinhunters Pool
 
 - Website: https://alph.coinhunters.space
