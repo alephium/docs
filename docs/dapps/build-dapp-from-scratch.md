@@ -41,7 +41,7 @@ Our first contract will be `token.ral` which can be found [here](https://github.
 Let's inspect it, piece by piece:
 
 ```rust
-import "std/token_interface"
+import "std/fungible_token_interface"
 
 Contract TokenFaucet(
     symbol: ByteVec,
@@ -49,10 +49,10 @@ Contract TokenFaucet(
     decimals: U256,
     supply: U256,
     mut balance: U256
-) implements IToken {
+) implements IFungibleToken {
 ```
 
-The first four fields will be immutable values that store the data required to serve our [IToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/token_interface.ral).
+The first four fields will be immutable values that store the data required to serve our [IFungibleToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral).
 `mut balance` is a mutable value that keeps track of how many tokens are left in this faucet.
 
 You can see that our contract emits an `event` and defines an `error` code. Read the following for more info on [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
@@ -173,7 +173,7 @@ describe('unit tests', () => {
       inputAssets: [{ address: testAddress, asset: { alphAmount: 10n ** 18n } }]
     }
 
-    const testResult = await TokenFaucet.testWithdrawMethod(testParams)
+    const testResult = await TokenFaucet.tests.withdraw(testParams)
     console.log(testResult)
   })
 })

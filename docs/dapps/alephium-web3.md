@@ -218,7 +218,7 @@ await Project.build()
 // Test the `withdraw` method of the `TokenFaucet` contract, it will NOT change the blockchain state
 const testContractAddress = randomContractAddress()
 // The `TokenFaucet` is generated in the getting-started guide
-const result = await TokenFaucet.testWithdrawMethod({
+const result = await TokenFaucet.tests.withdraw({
   address: testContractAddress,
   // Initial state of the test contract
   initialFields: {
