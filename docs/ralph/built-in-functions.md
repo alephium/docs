@@ -138,6 +138,20 @@ Returns the token id (ByteVec) of the contract.
 
 ---
 
+### tokenId
+
+```Rust
+fn tokenId!(contract:<Contract>) -> (ByteVec)
+```
+
+Returns the id of the contract
+
+> @param **contract** *the contract variable*
+>
+> @returns *the id of the contract*
+
+---
+
 ### callerContractId
 
 ```Rust
@@ -622,6 +636,78 @@ Terminates the application immediately.
 
 ---
 
+### mulModN
+
+```Rust
+fn mulModN!(x:U256, y:U256, n:U256) -> (U256)
+```
+
+Returns compute the x * y % n.
+
+> @param **x** *x*
+>
+> @param **y** *y*
+>
+> @param **n** *n*
+>
+> @returns *compute the x * y % n*
+
+---
+
+### addModN
+
+```Rust
+fn addModN!(x:U256, y:U256, n:U256) -> (U256)
+```
+
+Returns compute the (x + y) % n.
+
+> @param **x** *x*
+>
+> @param **y** *y*
+>
+> @param **n** *n*
+>
+> @returns *compute the (x + y) % n*
+
+---
+
+### u256Max
+
+```Rust
+fn u256Max!() -> (U256)
+```
+
+Returns the max value of U256.
+
+> @returns *the max value of U256*
+
+---
+
+### i256Max
+
+```Rust
+fn i256Max!() -> (I256)
+```
+
+Returns the max value of I256.
+
+> @returns *the max value of I256*
+
+---
+
+### i256Min
+
+```Rust
+fn i256Min!() -> (I256)
+```
+
+Returns the min value of I256.
+
+> @returns *the min value of I256*
+
+---
+
 ### nullContractAddress
 
 ```Rust
@@ -953,6 +1039,48 @@ Converts U256 to 32 big-endian bytes.
 > @param **u256** *the input U256*
 >
 > @returns *32 bytes*
+
+---
+
+### u256ToString
+
+```Rust
+fn u256ToString!(u256:U256) -> (ByteVec)
+```
+
+Converts U256 to string in ByteVec.
+
+> @param **u256** *the input U256*
+>
+> @returns *Converted string in ByteVec*
+
+---
+
+### i256ToString
+
+```Rust
+fn i256ToString!(i256:I256) -> (ByteVec)
+```
+
+Converts I256 to string in ByteVec.
+
+> @param **i256** *the input I256*
+>
+> @returns *Converted string in ByteVec*
+
+---
+
+### boolToString
+
+```Rust
+fn boolToString!(bool:Bool) -> (ByteVec)
+```
+
+Converts Bool to string in ByteVec.
+
+> @param **bool** *the input Bool*
+>
+> @returns *Converted string in ByteVec*
 
 ---
 

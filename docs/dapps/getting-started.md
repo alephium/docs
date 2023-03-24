@@ -56,7 +56,7 @@ cd alephium-tutorial
 Have a look in the `contracts/` folder, you can find `token.ral`:
 
 ```rust
-import "std/token_interface"
+import "std/fungible_token_interface"
 
 // Defines a contract named `TokenFaucet`.
 // A contract is a collection of fields (its state) and functions.
@@ -69,7 +69,7 @@ Contract TokenFaucet(
     decimals: U256,
     supply: U256,
     mut balance: U256
-) implements IToken {
+) implements IFungibleToken {
 
     // Events allow for logging of activities on the blockchain.
     // Alephium clients can listen to events in order to react to contract state changes.
