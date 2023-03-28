@@ -40,7 +40,7 @@ Alephium's programming language for dApps development
 
 ### dApps Prototypes
 
-Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/dapps/getting-started
+Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/dapps/build-dapp-from-scratch
 
 Examples of dApps already built:
 
@@ -63,7 +63,7 @@ Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.
 The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
 
 :::info
-*Coming soon:* Test the next versions of the wallets
+Coming Soon: Test the next versions of the wallets (Desktop and Mobile)
 :::
 
 Got questions? Join our [Discord](https://alephium.org/discord)
@@ -83,8 +83,9 @@ You can connect to the testnet and interact with the following applications & to
 ### **Extension Wallet**
 
 - Docs: https://docs.alephium.org/wallet/extension-wallet/overview
-- Github: https://github.com/alephium/extension-wallet/releases
-- Tutorial on How to Download the Wallet: *Coming Soon*
+⬇️ Download the extension wallet
+🔵 [Google Chrome store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
+🟠 [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 
 ### Testnet Block Explorer
 
@@ -93,12 +94,12 @@ You can connect to the testnet and interact with the following applications & to
 ### NFT Marketplace
 
 - Link: https://alephium-nft.softfork.se/my-nfts
-- Tutorial on How to interact with the NFT Marketplace: *Coming Soon*
+- Tutorial on How to interact with the NFT Marketplace: https://medium.com/@alephium/alephium-launches-browser-extension-wallet-706dfeda98f5
 
 ### DEX on Alephium Testnet
 
-- Link: 
-- Tutorial on How to interact with the DEX: *Coming Soon*
+- Link: https://alephium.github.io/alephium-dex
+- Tutorial on How to interact with the DEX: https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
 - How to mint a token on Alephium testnet: *Coming Soon*
 
 ### Alephium Ethereum Bridge
