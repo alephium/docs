@@ -279,7 +279,7 @@ Theoretically yes, the future is not really projectable beyond 80 years. However
 
 ### What type of wallet do you offer? Is it planned to offer hardware wallets?
 
-We currently have a desktop [wallet](https://github.com/alephium/desktop-wallet/releases/latest) and the team is working on mobile and [web extension wallets](https://github.com/alephium/extension-wallet/releases/latest). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
+We currently have a [desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest) and a [web extension wallet](https://github.com/alephium/extension-wallet/releases/latest). The team is actively working on a [mobile wallet](https://github.com/alephium/mobile-wallet). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
 
 ### When importing my seed to another desktop wallet, is there a way to import all generated addresses with it?
 
@@ -287,7 +287,7 @@ Yes! When restoring a wallet, the app will automatically start a scanning proces
 
 ### What analytics does the desktop wallet collect?
 
-In Alephium, we take your concerns about privacy and user experience seriously. Enabling analytics can actually help us improve your experience without compromising your privacy. Rest assured that the information we collect is completely anonymous. When you launch your wallet for the first time, we generate a unique ID (for example, `vCJGCsDPrZ8WJaIKZMWjU`) which is the only identification information we require. We don't collect IPs or any identifiable data. We only collect data on button clicks, number of wallets, number of addresses, number of contacts, and wallet preferences. This helps us understand which features are useful to our users and which ones are not. We encourage you to check out our open-source code base and [look for the `posthog?.capture` keyword](https://github.com/alephium/desktop-wallet/search?q=posthog%3F.capture) to see exactly which events we capture.
+In Alephium, we take your concerns about privacy and user experience seriously. Enabling analytics can actually help us improve your experience without compromising your privacy. Rest assured that the information we collect is completely anonymous. When you launch your wallet for the first time, we generate a unique ID (for example, `vCJGCsDPrZ8WJaIKZMWjU`) which is the only identification information we require. We don't collect IPs or any other [personal data](https://posthog.com/blog/what-is-personal-data-pii). We only collect data on button clicks, number of wallets, number of addresses, number of contacts, and wallet preferences. This helps us understand which features are useful to our users and which ones are not. We encourage you to check out our open-source code base and [look for the `posthog?.capture` keyword](https://github.com/alephium/desktop-wallet/search?q=posthog%3F.capture) to see exactly which events we capture.
 
 ## Miscellaneous
 
