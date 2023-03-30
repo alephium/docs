@@ -288,6 +288,10 @@ Assuming a wallet had generated X active addresses (an address is considered act
 
 Automatic address discovery will be added in the near future. That way, when restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
 
+### What analytics does the desktop wallet collect?
+
+In Alephium, we take your concerns about privacy and user experience seriously. Enabling analytics can actually help us improve your experience without compromising your privacy. Rest assured that the information we collect is completely anonymous. When you launch your wallet for the first time, we generate a unique ID (for example, `vCJGCsDPrZ8WJaIKZMWjU`) which is the only identification information we require. We don't collect IPs or any identifiable data. We only collect data on button clicks, number of wallets, number of addresses, number of contacts, and wallet preferences. This helps us understand which features are useful to our users and which ones are not. We encourage you to check out our open-source code base and [look for the `posthog?.capture` keyword](https://github.com/alephium/desktop-wallet/search?q=posthog%3F.capture) to see exactly which events we capture.
+
 ## Miscellaneous
 
 ### How can I find translated content?
