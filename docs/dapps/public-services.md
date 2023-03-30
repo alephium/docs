@@ -14,7 +14,7 @@ The Testnet Faucet is a way to receive testnet-v1 tokens into a given wallet.
 
 ### Via Twitter
 
-To receive testnet-v16 tokens, simply tweet `#alephium` followed by your wallet address (the one you use on testnet).
+To receive testnet tokens, simply tweet `#alephium` followed by your wallet address (the one you use on testnet).
 
 ```
 #alephium 1H1GPLkoMGVUfxQcJgtjWTrKV1KJCQooEV5WxPMhP4Zjy
