@@ -26,7 +26,7 @@ Before diving in deeper, we recommend that you check the following resources as 
   - [Alephium's Community Reward Program](https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf)
   - [Introduction to sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
   - [ALPHred, the Virtual Machine](https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025)
-  - [Leman Upgrade](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e)
+  - [The Leman Network Upgrade is Live!](https://medium.com/@alephium/the-leman-network-upgrade-is-live-f52c89b7dd6a)
 
 ## Chain Data
 
