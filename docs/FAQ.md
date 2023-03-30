@@ -24,9 +24,10 @@ Before diving in deeper, we recommend that you check the following resources as 
   - [Alephium's Tokenomics](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)
   - [Alephium's Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
   - [Alephium's Community Reward Program](https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf)
+  - [The Ultimate guide to Proof-of-Less-Work, the universe and everything…](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
   - [Introduction to sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
   - [ALPHred, the Virtual Machine](https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025)
-  - [Leman Upgrade](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e)
+  - [The Leman Network Upgrade is Live!](https://medium.com/@alephium/the-leman-network-upgrade-is-live-f52c89b7dd6a)
 
 ## Chain Data
 
