@@ -283,10 +283,7 @@ We currently have a desktop [wallet](https://github.com/alephium/desktop-wallet/
 
 ### When importing my seed to another desktop wallet, is there a way to import all generated addresses with it?
 
-At the moment, when using the desktop wallet, one will have to manually re-generate each address when restoring a mnemonic into a new wallet. 
-Assuming a wallet had generated X active addresses (an address is considered active when it has had at least one transaction), when the mnemonic of this wallet is restored and X addresses are generated, those addresses will be the same addresses as before and will have the same balance.
-
-Automatic address discovery will be added in the near future. That way, when restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
+Yes! When restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
 
 ### What analytics does the desktop wallet collect?
 
