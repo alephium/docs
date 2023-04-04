@@ -288,6 +288,15 @@ Automatic address discovery will be added in the near future. That way, when res
 
 ## Miscellaneous
 
+### How can I find translated content?
+
+Translators are encouraged to use the following hashtag structure when they publish translated content: `#Alephium[i18n]`
+For example, you can find translation on Medium, Twitter and other channels with the following hashtags: 
+- Spanish: `#AlephiumES`
+- Portugese: `#AlephiumPT`
+- French: `#AlephiumFR`
+- German: `#AlephiumDE`
+
 ### What's new?
 
 You can check our announcement channels on Telegram or Discord. We also have developments update every week on [Discord](https://alephium.org/discord), [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) & [Twitter](https://twitter.com/alephium).
