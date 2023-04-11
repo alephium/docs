@@ -279,7 +279,7 @@ curl -X 'GET' \
 
 ### Wallet generation
 
-To generate multiple addresses for users, you can use the [HD-wallet in our web3 SDK](https://github.com/alephium/alephium-web3/blob/v0.6.2/packages/web3-wallet/src/hd-wallet.ts#L113-L185)
+To generate multiple addresses for users, you can use the [HD-wallet in our web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185)
 
 ### Sharding
 
