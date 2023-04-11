@@ -9,7 +9,7 @@ Note that this guide is based on pure UTXO model, another alternative integratio
 
 ## Run a local development network
 
-An exchange needs to run a full node to integrate Alephium. In addition, one might run the `explorer-backend` as the blockchain indexer for the sake of efficiency.
+An exchange needs to run a full node to integrate Alephium. In addition, one might run the `explorer-backend` as the blockchain indexer for debugging and additional indexes.
 
 You can create a local development network with explorer support by following the instructions in [alephium-stack](https://github.com/alephium/alephium-stack#devnet).
 Once it is launched, you will be able to access Swagger UI, the API interface of the full node, and the explorer backend.
@@ -132,25 +132,9 @@ curl -X 'POST' \
 # }
 ```
 
-## Block APIs
+## Get block hash with transaction ID
 
-You could fetch the block hash of the confirmed transaction by using either the explorer backend API:
-
-```shell
-curl -X 'GET' \
-  'http://127.0.0.1:9090/transactions/a6c14ad03597ce96ebf78b336aded654395f38e0274c810183c4847d9af3d617' \
-  -H 'accept: application/json'
-
-# Response
-# {
-#   "type": "Accepted",
-#   "hash": "a6c14ad03597ce96ebf78b336aded654395f38e0274c810183c4847d9af3d617",
-#   "blockHash": "1d616d33a7aadc3cf49f5db1cc484b22a642140673f66020c13dc7648b9382d1",
-#   ...
-# }
-```
-
-or the full node API
+You could fetch the block hash of the confirmed transaction by using either the full node API:
 
 ```shell
 curl -X 'GET' \
@@ -168,15 +152,71 @@ curl -X 'GET' \
 # }
 ```
 
-With the block hash, you will be able to fetch information about the block with APIs from either explorer backend or front-end. 
+## Get block with block hash
 
-## More information
+```shell
+curl -X 'GET' \
+  'http://127.0.0.1:22973/blockflow/blocks-with-events/ecbc7a3115eb0da1f82902db226b80950e861ef8cbb6623ed02fc42a6eeb69cb' \
+  -H 'accept: application/json'
 
-### Wallet generation
+# Response
+# {
+#   "block": {
+#     "hash": "ecbc7a3115eb0da1f82902db226b80950e861ef8cbb6623ed02fc42a6eeb69cb",
+#     "timestamp": 1231006505000,
+#     "chainFrom": 2,
+#     "chainTo": 3,
+#     "height": 0,
+#     ...
+#   },
+#   "events": []
+# }
+```
 
-To generate multiple addresses for users, you can use the [HD-wallet in our web3 SDK](https://github.com/alephium/alephium-web3/blob/v0.6.2/packages/web3-wallet/src/hd-wallet.ts#L113-L185)
+## Polling for blocks
 
-### UTXO
+In Alephium, since it is a sharded blockchain with several chains operating simultaneously at varying heights,
+it is possible to retrieve all the blocks from all the chains during a specific time interval.
+
+```shell
+curl -X 'GET' \
+  'http://127.0.0.1:22973/blockflow/blocks?fromTs=0&toTs=30' \
+  -H 'accept: application/json'
+
+# Response: there are 16 chains, therefore 16 lists of block hashes
+# {
+#   "blocks": [
+#     [],
+#     ...
+#     []
+#   ]
+# }
+```
+
+One could also poll blocks for each chain separately with the following endpoint:
+```shell
+curl -X 'GET' \
+  'http://127.0.0.1:22973/blockflow/chain-info?fromGroup=2&toGroup=3' \
+  -H 'accept: application/json'
+
+# Response
+# {
+#   "currentHeight": 0
+# }
+
+curl -X 'GET' \
+  'http://127.0.0.1:22973/blockflow/hashes?fromGroup=2&toGroup=3&height=0' \
+  -H 'accept: application/json'
+
+# Response
+# {
+#   "headers": [
+#     "ecbc7a3115eb0da1f82902db226b80950e861ef8cbb6623ed02fc42a6eeb69cb"
+#   ]
+# }
+```
+
+## UTXO Management
 
 Alephium is based on the UTXO model, like Bitcoin. To build transactions efficiently, the exchange could maintain the set of UTXOs of the chain and then provide specified UTXOs in the API:
 
@@ -202,13 +242,44 @@ curl -X 'POST' \
 }'
 ```
 
-`hint` and `key` for the UTXO are fetched from the first output of the first transaction we made:
+`hint` and `key` for the UTXO are fetched from the first output of the first transaction we made. `key` is unique and can be used to index the UTXO.
 
 ```shell
 curl -X 'GET' \
-  'http://127.0.0.1:9090/transactions/a6c14ad03597ce96ebf78b336aded654395f38e0274c810183c4847d9af3d617' \
+  'http://127.0.0.1:22973/transactions/details/a6c14ad03597ce96ebf78b336aded654395f38e0274c810183c4847d9af3d617' \
   -H 'accept: application/json'
+
+# Response
+# {
+#   "unsigned": {
+#     "txId": "a6c14ad03597ce96ebf78b336aded654395f38e0274c810183c4847d9af3d617",
+#     ...
+#     "fixedOutputs": [
+#       {
+#         "hint": 714242201,
+#         "key": "3bfdeea82a5702cdd98426546d9eeecd744cc540aaffc5ec8ea998dc105da46f",
+#         "attoAlphAmount": "1230000000000000000",
+#         "address": "1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3",
+#         ...
+#       },
+#       {
+#         "hint": 933512263,
+#         "key": "087ee967733900cc7f7beada612ba514dd134ddffc2ad1b6ad8b6998915089c4",
+#         "attoAlphAmount": "999998768000000000000000",
+#         "address": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH",
+#         ...
+#       }
+#     ]
+#   },
+#   ...
+# }
 ```
+
+## More information
+
+### Wallet generation
+
+To generate multiple addresses for users, you can use the [HD-wallet in our web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185)
 
 ### Sharding
 
