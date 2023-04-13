@@ -6,7 +6,9 @@ sidebar_label: Exchange
 
 This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
 
-## Run a local development network
+## Getting started
+
+### Local development network
 
 To integrate Alephium, an exchange must run a full node. Additionally, the explorer-backend can be run for debugging and additional indexing. 
 
@@ -16,13 +18,13 @@ To create a local development network with explorer support, follow the instruct
 * Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
 * Explorer front-end: [http://localhost:23000](http://localhost:23000)
 
-## APIs
+### APIs
 
 To keep the guide concise, relevant API queries will be provided in the doc instead of Swagger UI screenshots.
 
 The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains generated Typescript APIs for both the [full node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) and [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
 
-## Test wallet
+### Test wallet
 
 Let's recover the test wallet by executing the following API. The test wallet has 1million ALPH for the address `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH`.
 
@@ -61,6 +63,8 @@ curl -X 'GET' \
 
 ## Transaction APIs
 
+### Create a transaction
+
 Let's build a transaction to send `1.23 ALPH` to address `1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3`.
 
 ```shell
@@ -91,6 +95,8 @@ curl -X 'POST' \
 # }
 ```
 
+### Sign a transaction
+
 Let's sign the transaction id:
 
 ```shell
@@ -107,6 +113,8 @@ curl -X 'POST' \
 #   "signature": "78a607ec26165b5a63d7e30a0c85657e8a0fe3b7efccdba78166e51b52c32c9020f921e0a29b6a436ec330c3b3eb2222ee851e718e3504b1a70d73ba45cd503c"
 # }
 ```
+
+### Submit a transaction
 
 Let's submit the transaction to the network:
 
@@ -131,7 +139,9 @@ curl -X 'POST' \
 # }
 ```
 
-## Get block hash with transaction ID
+## Block APIs
+
+### Get block hash with transaction ID
 
 To get the block hash of a confirmed transaction, you can use the full node API:
 
@@ -151,7 +161,7 @@ curl -X 'GET' \
 # }
 ```
 
-## Get block with block hash
+### Get block with block hash
 
 ```shell
 curl -X 'GET' \
@@ -172,7 +182,7 @@ curl -X 'GET' \
 # }
 ```
 
-## Polling for blocks
+### Polling for blocks
 
 In Alephium, you can fetch all the blocks from all the chains for a given time interval because it is a sharded blockchain with multiple chains operating at different heights simultaneously.
 
