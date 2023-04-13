@@ -12,13 +12,15 @@ To integrate Alephium, an exchange must run a full node. Additionally, the explo
 
 To create a local development network with explorer support, follow the instructions in the [alephium-stack](https://github.com/alephium/alephium-stack#devnet) repository. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
 
-Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
+* Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
+* Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
+* Explorer front-end: [http://localhost:23000](http://localhost:23000)
 
-Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
+## APIs
 
-Explorer front-end: [http://localhost:3000](http://localhost:3000)
+To keep the guide concise, relevant API queries will be provided in the doc instead of Swagger UI screenshots.
 
-Relevant API queries will be posted instead of Swagger UI screenshots to keep the guide concise, but the correct Swagger commands should be easy to locate based on these queries.
+The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains generated Typescript APIs for both the [full node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) and [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
 
 ## Test wallet
 
