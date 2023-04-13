@@ -275,7 +275,7 @@ curl -X 'GET' \
 
 ### Wallet generation
 
-To generate multiple addresses for users, you can use the [HD-wallet in our web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185)
+To generate multiple addresses for users, you can use the [HD-wallet in the web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185).
 
 ### Sharding
 
@@ -284,13 +284,7 @@ Alephium is a sharded blockchain and its addresses are split into 4 groups on th
 - Send ALPH from multiple addresses that belong to the same address group in a single transaction. All the sending addresses must belong to the same group.
 - Send ALPH from multiple addresses that belong to the same group to multiple addresses that belong to another group. All the sending addresses must belong to the same group, and all the destination addresses must belong to the same group too.
 
-To get the group of an address:
-
-```shell
-curl -X 'GET' \
-  'http://127.0.0.1:22973/addresses/1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3/group' \
-  -H 'accept: application/json'
-```
+To get the group of an address, you can refer to the web3 SDK function [groupOfAddress(address)](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/utils/utils.ts#L85-L103).
 
 ### Gas Computation
 
