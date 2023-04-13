@@ -4,15 +4,13 @@ title: Exchange
 sidebar_label: Exchange
 ---
 
-This guide covers the common APIs that are essential to integrate Alephium to a crypto exchange.
-Note that this guide is based on pure UTXO model, another alternative integration guide leveraging smart contracts will be published after the Leman upgrade.
+This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
 
 ## Run a local development network
 
-An exchange needs to run a full node to integrate Alephium. In addition, one might run the `explorer-backend` as the blockchain indexer for debugging and additional indexes.
+To integrate Alephium, an exchange must run a full node. Additionally, the explorer-backend can be run for debugging and additional indexing. 
 
-You can create a local development network with explorer support by following the instructions in [alephium-stack](https://github.com/alephium/alephium-stack#devnet).
-Once it is launched, you will be able to access Swagger UI, the API interface of the full node, and the explorer backend.
+To create a local development network with explorer support, follow the instructions in the [alephium-stack](https://github.com/alephium/alephium-stack#devnet) repository. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
 
 Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
 
@@ -20,8 +18,7 @@ Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/
 
 Explorer front-end: [http://localhost:3000](http://localhost:3000)
 
-All of the available APIs can be queried directly from Swagger UI. To make this guide succinct, we will only post the relevant API queries instead of the Swagger UI screenshots.
-It should be easy to find the right Swagger commands based on those queries.
+Relevant API queries will be posted instead of Swagger UI screenshots to keep the guide concise, but the correct Swagger commands should be easy to locate based on these queries.
 
 ## Test wallet
 
@@ -134,7 +131,7 @@ curl -X 'POST' \
 
 ## Get block hash with transaction ID
 
-You could fetch the block hash of the confirmed transaction by using either the full node API:
+To get the block hash of a confirmed transaction, you can use the full node API:
 
 ```shell
 curl -X 'GET' \
@@ -175,8 +172,7 @@ curl -X 'GET' \
 
 ## Polling for blocks
 
-In Alephium, since it is a sharded blockchain with several chains operating simultaneously at varying heights,
-it is possible to retrieve all the blocks from all the chains during a specific time interval.
+In Alephium, you can fetch all the blocks from all the chains for a given time interval because it is a sharded blockchain with multiple chains operating at different heights simultaneously.
 
 ```shell
 curl -X 'GET' \
@@ -193,7 +189,7 @@ curl -X 'GET' \
 # }
 ```
 
-One could also poll blocks for each chain separately with the following endpoint:
+You can retrieve blocks for each chain individually using this endpoint:
 ```shell
 curl -X 'GET' \
   'http://127.0.0.1:22973/blockflow/chain-info?fromGroup=2&toGroup=3' \
@@ -218,7 +214,7 @@ curl -X 'GET' \
 
 ## UTXO Management
 
-Alephium is based on the UTXO model, like Bitcoin. To build transactions efficiently, the exchange could maintain the set of UTXOs of the chain and then provide specified UTXOs in the API:
+Like Bitcoin, Alephium uses the UTXO model. To create transactions more efficiently, an exchange can store the set of UTXOs of the chain and then provide specific UTXOs through the API.
 
 ```shell
 curl -X 'POST' \
@@ -284,9 +280,9 @@ To generate multiple addresses for users, you can use the [HD-wallet in our web3
 ### Sharding
 
 Alephium is a sharded blockchain and its addresses are split into 4 groups on the mainnet. However, one can: 
-- Send ALPH to multiple addresses of the same group in a single transaction. It requires all the destination addresses to be in the same address group. 
-- Send ALPH from multiple addresses of the same group in a single transaction. It requires all the sending addresses to be in the same address group.
-- Send ALPH from multiple addresses of the same group to multiple addresses of another group. It requires all the sending addresses to be in the same address group AND all the destination addresses to be in the same group.
+- Send ALPH to multiple addresses that belong to the same address group in a single transaction. All the destination addresses must belong to the same group.
+- Send ALPH from multiple addresses that belong to the same address group in a single transaction. All the sending addresses must belong to the same group.
+- Send ALPH from multiple addresses that belong to the same group to multiple addresses that belong to another group. All the sending addresses must belong to the same group, and all the destination addresses must belong to the same group too.
 
 To get the group of an address:
 
