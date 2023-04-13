@@ -295,3 +295,23 @@ curl -X 'GET' \
   'http://127.0.0.1:22973/addresses/1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3/group' \
   -H 'accept: application/json'
 ```
+
+### Gas Computation
+
+Alephium's transaction fees are determined by the amount of gas allocated and the gas price. A maximum gas amount of 625,000 can be assigned to each transaction.
+The default gas price is set at `1e11` attoALPH per gas unit. When conducting a simple transfer transaction, the gas amount can be computed using the following pseudo code:
+
+```Typescript
+txInputBasGas = 2000
+txOutputBaseGas = 4500
+inputGas = txInputBasGas * tx.inputs.length
+outputGas = txOutputBaseGas * tx.outputs.length
+
+txBaseGas = 1000
+p2pkUnlockGas = 2060 // Currently there is only one signature
+
+txGas = inputGas + outputGas + txBaseGas + p2pkUnlockGas
+minimalGas = 20000
+
+gas = max(minimalGas, txGas)
+```
