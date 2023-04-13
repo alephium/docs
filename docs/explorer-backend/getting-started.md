@@ -35,7 +35,7 @@ Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.
    postgres=# CREATE DATABASE explorer;
    ```
 
-## Start your exlporer-backend
+## Start your explorer-backend
 
 ```shell
 java -jar explorer-backend-x.x.x.jar
@@ -49,7 +49,7 @@ To reduce the first syncing time, you can restore one of our snapshot.
 
 Snapshots are available at https://archives.alephium.org/#mainnet/explorer-db/
 
-Download the latest one and run:
+Download the latest one, extract it, and run:
 
 ```shell
 psql explorer < explorer-db-xxx.pg_dump
