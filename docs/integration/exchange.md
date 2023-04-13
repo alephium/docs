@@ -302,9 +302,9 @@ Alephium's transaction fees are determined by the amount of gas allocated and th
 The default gas price is set at `1e11` attoALPH per gas unit. When conducting a simple transfer transaction, the gas amount can be computed using the following pseudo code:
 
 ```Typescript
-txInputBasGas = 2000
+txInputBaseGas = 2000
 txOutputBaseGas = 4500
-inputGas = txInputBasGas * tx.inputs.length
+inputGas = txInputBaseGas * tx.inputs.length
 outputGas = txOutputBaseGas * tx.outputs.length
 
 txBaseGas = 1000
