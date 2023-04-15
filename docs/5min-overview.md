@@ -112,39 +112,39 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 **Core Platform**
 
-02.2019 - Whitepapers publicly released
-Q1.2020 - Alpha version of the core sharding protocol implemented and tested on AWS
-12.2020 - Testnet Launch
-Q1.2021 - Smart contract support
-09.2021 - Desktop wallet & explorer public release
-**08.11.2021 - Mainnet launch**
-01.2022 - 1st dApp prototype
-06.2022 - Beta version of contract SDK (alephium-web3)
-06.2022 - Leman Network Upgrade deployed on the testnet
-11.2022 - Alpha version of multi-guardians bridge on the Testnet 
-Q4.2022 - NFT prototype alpha released
-03.2023 - DEX prototype Released
-03.2023 - Launch Browser Wallet Extension
-**27.03.2023 - Leman Network Upgrade on Mainnet**
-03.2023 - Schnorr signatures and cross chain interoperability
-03.2023 - New  Asset Permission System and set of Virtual Machine (VM) instructions and building functions
-03.2023 - Improved node APIs and SDK
-03.2023 - Improved difficulty adjustment algorithm (DAA)
+- 02.2019 - Whitepapers publicly released
+- Q1.2020 - Alpha version of the core sharding protocol implemented and tested on AWS
+- 12.2020 - Testnet Launch
+- Q1.2021 - Smart contract support
+- 09.2021 - Desktop wallet & explorer public release
+- **08.11.2021 - Mainnet launch**
+- 01.2022 - 1st dApp prototype
+- 06.2022 - Beta version of contract SDK (alephium-web3)
+- 06.2022 - Leman Network Upgrade deployed on the testnet
+- 11.2022 - Alpha version of multi-guardians bridge on the Testnet 
+- Q4.2022 - NFT prototype alpha released
+- 03.2023 - DEX prototype Released
+- 03.2023 - Launch Browser Wallet Extension
+- **27.03.2023 - Leman Network Upgrade on Mainnet**
+- 03.2023 - Schnorr signatures and cross chain interoperability
+- 03.2023 - New  Asset Permission System and set of Virtual Machine (VM) instructions and building functions
+- 03.2023 - Improved node APIs and SDK
+- 03.2023 - Improved difficulty adjustment algorithm (DAA)
 
 
 **Ecosystem**
 
-08.11.2021 - 3rd party cloud mining service at Mainnet Launch
-11.2021 - Joined the UTXO alliance & Bitcoin Association Switzerland
-Q4.2021 - Mining ecosystem development:community pools, miners development, reference mining pool, and pool integration.
-12.01.2022 - First exchange listing: Gate.io
-Q3.2022 - Initiation of marketing initiatives ( sponsoring of ErgoHack, AMAs, community competitions, campaigns, Tech Talk Series, etc)
-Q3.2022 - 3rd party dApps development started on Alephium
-10.2022 - Dappnode Integration 
-11.2022 - Flux Integration
-11.2022 - Launch of Alephium Swag Shop
-H2.2022 - Joint communication and marketing initiatives with UTXO Alliance members
-12.2022 - Reached over 265 community contributions 
+- 08.11.2021 - 3rd party cloud mining service at Mainnet Launch
+- 11.2021 - Joined the UTXO alliance & Bitcoin Association Switzerland
+- Q4.2021 - Mining ecosystem development:community pools, miners development, reference mining pool, and pool integration.
+- 12.01.2022 - First exchange listing: Gate.io
+- Q3.2022 - Initiation of marketing initiatives ( sponsoring of ErgoHack, AMAs, community competitions, campaigns, Tech Talk Series, etc)
+- Q3.2022 - 3rd party dApps development started on Alephium
+- 10.2022 - Dappnode Integration 
+- 11.2022 - Flux Integration
+- 11.2022 - Launch of Alephium Swag Shop
+- H2.2022 - Joint communication and marketing initiatives with UTXO Alliance members
+- 12.2022 - Reached over 265 community contributions 
 
 
 ### Roadmap
