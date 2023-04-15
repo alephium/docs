@@ -13,10 +13,6 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 Alephium is the first operational sharded L1 blockchain scaling and enhancing PoW & UTXO concepts. Decentralization, self-sovereignty and security meet high-performance, accessibility and energy efficiency in a dev-friendly network optimized for DeFi & smart contract applications.
 
-- Like Bitcoin, but more programmable & energy efficient.
-- Like Ethereum, but more secure & scalable.
-- Like Solana, but more decentralised & trustless.
-
 ---
 
 ## Why is Alephium special?
@@ -116,29 +112,40 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 **Core Platform**
 
-- 02.2019 — Whitepapers publicly released
-- Q1.2020 — Alpha version of the core sharding protocol implemented and tested on AWS
-- 12.2020 — Testnet Launch
-- Q1.2021 — Smart contract support
-- 09.2021 — Desktop wallet & explorer public release
-- 08.11.2021 — Mainnet launch & 3rd party cloud mining service
-- 01.2022 — 1st dApp proof-of-concept
-- 04.2022 — Desktop wallet upgrade
-- 05-06.2022 — Explorer optimization & addition of Chain statistics
-- 06.2022 — Full node 1.4.0 with all of the major features for the Leman network upgrade implemented
-- 06.2022 — Beta version of dApp SDK (alephium-web3)
-- 06.2022 — Launch new testnet 
-- 06.2022 — Leman Network Upgrade deployed on the testnet
+02.2019 - Whitepapers publicly released
+Q1.2020 - Alpha version of the core sharding protocol implemented and tested on AWS
+12.2020 - Testnet Launch
+Q1.2021 - Smart contract support
+09.2021 - Desktop wallet & explorer public release
+**08.11.2021 - Mainnet launch**
+01.2022 - 1st dApp prototype
+06.2022 - Beta version of contract SDK (alephium-web3)
+06.2022 - Leman Network Upgrade deployed on the testnet
+11.2022 - Alpha version of multi-guardians bridge on the Testnet 
+Q4.2022 - NFT prototype alpha released
+03.2023 - DEX prototype Released
+03.2023 - Launch Browser Wallet Extension
+**27.03.2023 - Leman Network Upgrade on Mainnet**
+03.2023 - Schnorr signatures and cross chain interoperability
+03.2023 - New  Asset Permission System and set of Virtual Machine (VM) instructions and building functions
+03.2023 - Improved node APIs and SDK
+03.2023 - Improved difficulty adjustment algorithm (DAA)
+
 
 **Ecosystem**
 
-- 11.2021 — Joined the UTXO alliance & Bitcoin Association Switzerland
-- Q4.2021 — Mining ecosystem development: miners development, reference mining pool and pool integration.
-- 13.12.2021 — First community mining pool
-- 12.01.2022 — First exchange listing: Gate.io
-- 02.2022 — 9 mining pools on Alephium
-- 04.2022 — First NFT platform to be built on Alephium
-- 06.2022 — Website Revamp
+08.11.2021 - 3rd party cloud mining service at Mainnet Launch
+11.2021 - Joined the UTXO alliance & Bitcoin Association Switzerland
+Q4.2021 - Mining ecosystem development:community pools, miners development, reference mining pool, and pool integration.
+12.01.2022 - First exchange listing: Gate.io
+Q3.2022 - Initiation of marketing initiatives ( sponsoring of ErgoHack, AMAs, community competitions, campaigns, Tech Talk Series, etc)
+Q3.2022 - 3rd party dApps development started on Alephium
+10.2022 - Dappnode Integration 
+11.2022 - Flux Integration
+11.2022 - Launch of Alephium Swag Shop
+H2.2022 - Joint communication and marketing initiatives with UTXO Alliance members
+12.2022 - Reached over 265 community contributions 
+
 
 ### Roadmap
 
@@ -146,31 +153,53 @@ The network is young and growing rapidly. We will update the roadmap to reflect 
 
 **Core Platform**
 
-- Improve the robustness, efficiency and dev-experience of the full node
-- Improve documentation of the core infrastructure
-- Improve the Alephium SDK with more features
-- Improve the robustness and efficiency of the explorer backend
-- Bridge development, testing, and launch
-- Leman Network Upgrade for cross-chain interoperability
-- dApp support in the desktop wallet
-- DEX development, testing, and launch
-- Mobile wallet
-- Hardware wallet integration
+- [Feature] Desktop Wallet v2.0
+- [Launch] Mobile wallet (Android and iOS)
+- [Launch] Alephium’s Bridge Launch on Mainnet
+- [Feature & UX] Support streaming for blockchain events (tx, block, contract events)
+- [Feature & Security] Typescript SDK for off-chain transaction encoding/decoding
+- [Feature] P2P transaction endpoints and SDKs
+- [Community] Introduce AIP for Alephium Improvement Proposals
+- [Improvement] Improved web3 SDK with better DevX and more functionality
+- [Feature] Multisig support in SDK and wallets
+- [Security] Standard for transaction information display on wallet
+- [Improvement] Improved full node’s database system for better performance
+- [DevX & UX] Better error system for full node and its endpoints
+- [Feature] Design and implement fast sync for full node
+- [Feature] Smart contracts support in the Explorer
+- [Improvement] Enhanced UX and additional features for the Browser Wallet Extension
+- [Improvement] Improved NFT standard and prototype
+- [Launch] Additional dApps prototypes
+- [DevX] Better development experience and additional functionalities for the Ralph language
+- [Improvement] Continuous improvement of the documentation 
+- [Feature] Design and implement light node
+
 
 **Ecosystem**
 
+- Additional CEX listings
+- DEX listing 
+- Launch of 3rd party dApps (NFT, DEX, stablecoin, Alephium Name Services, oracle, etc) on Alephium
+- Ledger wallet integration
+- Additional bridges to other ecosystems
+- Introduction videos & articles for building dApps on Alephium
+- Integration with 3rd party wallets
+- First Alephium Hackathon
+- Grant program & Development Bounties V2
+- Improve developers' onboarding experience
+- Launch of the Ambassador program
+- Building-up community engagement
+- Additional marketing, partnership and knowledge-sharing initiatives with like-minded communities and projects.
 - Website revamp
-- Build-up community engagement & marketing initiatives (hackathon, AMAs, community competitions, campaigns, etc)
-- Key industry events (PBWS, EthCCand others)
-- DEX listing (after the deployment of the bridge)
-- Additional CEX listing
-- 3rd party dApps (NFT, DEX, stablecoin) on Alephium
+
 
 ---
 
 ## Buy/sell
 
-- [Gate.io][gateio]
+- [Gate.io - USDT][gateio]
+- [TradeOgre - USDT][tradeogreUSDT]
+- [TradeOgre - BTC][tradeogreBTC]
 
 ---
 
@@ -246,6 +275,8 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [medium]: https://medium.com/@alephium
 [github]: https://github.com/alephium
 [gateio]: https://www.gate.io/fr/trade/ALPH_USDT
+[tradeogreBTC]: https://tradeogre.com/exchange/BTC-ALPH
+[tradeogreUSDT]: https://tradeogre.com/exchange/USDT-ALPH
 [utxo-alliance]: https://utxo-alliance.org/
 [bas]: https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9
 [market-across]: https://marketacross.com/
