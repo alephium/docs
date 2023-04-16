@@ -114,7 +114,7 @@ If you have built something, feel free to add it to this list by sending a Pull 
 
 ### How long does it take for deposits to show up on exchanges?
 
-Currently, 120 confirmations are needed for deposits, which is around 2hours (120 blocks \* block time 64s). PoW chains usually require a higher number of confirmation to ensure sufficient security. For reference, it is still around 1 hour for Bitcoin.
+Exchanges usually require a higher number of confirmation for PoW chains to ensure sufficient security. Currently, most exchanges request 50-60 confirmations for Alephium which is around 1 hour.
 
 ### When Binance?
 
