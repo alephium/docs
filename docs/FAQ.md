@@ -68,11 +68,13 @@ Alephium allows 18 decimals and its smallest denomination is called Phi. Phi = 0
 
 ### Is there a DEX on Alephium?
 
-We have a simple  [Uniswap-like DEX in the test](https://github.com/alephium/alephium/blob/master/app/src/it/scala/org/alephium/app/SmartContractTest.scala#L142-L170) We could also support order-book style DEX, which would avoid the well-known impermanent loss problem thanks to the UTXO model.
+Alephium has a [DEX prototype](https://alephium.github.io/alephium-dex) running on Testnet. To learn more about it, check out [this medium article](https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce).
 
-We identified DeFi and dApps to be the next critical focus for Alephium. To kickstart the development we will build clean Proof-of-concept dApps, to serve as examples. This will help us find bottlenecks or edge cases we haven’t been able to identify before. It will also serve as a basis to compile the necessary documentation to help community developers to build and deploy their applications. 
+The contracts have been thoroughly tested by the core devs, making them reliable and efficient. The community can easily fork and use them for their own projects.
 
-Our VM and language are really dev-friendly and if you're familiar with Solidity, you can easily build similar applications on Alephium.
+### Is Alephium prone to the concurrency issue of classic UTXO model?
+
+No. Alephium's stateful UTXO model combines the classic UTXO model with the account model. This ensures that dApps can access mutable contract states in parallel, eliminating any possibility of a concurrency issue.
 
 ### Is there any dApps on Alephium?
 
