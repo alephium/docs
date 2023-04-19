@@ -211,7 +211,7 @@ npx @alephium/cli@latest test
 
 Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
 
-```rust
+```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
 import { Settings } from '../alephium.config'
 import { TokenFaucet } from '../artifacts/ts'
@@ -236,8 +236,8 @@ const deployFaucet: DeployFunction<Settings> = async (
       balance: issueTokenAmount
     }
   })
-  console.log('Token faucet contract id: ' + result.contractId)
-  console.log('Token faucet contract address: ' + result.contractAddress)
+  console.log('Token faucet contract id: ' + result.contractInstance.contractId)
+  console.log('Token faucet contract address: ' + result.contractInstance.address)
 }
 
 export default deployFaucet
@@ -285,8 +285,8 @@ async function withdraw() {
       console.log(`The contract is not deployed on group ${account.group}`)
       continue
     }
-    const tokenId = deployed.contractId
-    const tokenAddress = deployed.contractAddress
+    const tokenId = deployed.contractInstance.contractId
+    const tokenAddress = deployed.contractInstance.address
 
     // Submit a transaction to use the transaction script
     await Withdraw.execute(signer, {
