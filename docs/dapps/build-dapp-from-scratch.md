@@ -243,8 +243,8 @@ const deployFaucet: DeployFunction<Settings> = async (
       balance: issueTokenAmount
     }
   })
-  console.log('Token faucet contract id: ' + result.contractId)
-  console.log('Token faucet contract address: ' + result.contractAddress)
+  console.log('Token faucet contract id: ' + result.contractInstance.contractId)
+  console.log('Token faucet contract address: ' + result.contractInstance.address)
 }
 
 export default deployFaucet
@@ -435,8 +435,8 @@ async function withdraw() {
   const deployed = deployments.getDeployedContractResult(accountGroup, 'TokenFaucet')
 
   if(deployed !== undefined) {
-    const tokenId = deployed.contractId
-    const tokenAddress = deployed.contractAddress
+    const tokenId = deployed.contractInstance.contractId
+    const tokenAddress = deployed.contractInstance.address
 
     // Submit a transaction to use the transaction script
     // It uses our `wallet` to sing the transaction.
