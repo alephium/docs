@@ -283,6 +283,23 @@ curl -X 'GET' \
 # }
 ```
 
+### UTXO Consolidation
+
+To prevent slow transaction processing and API errors, it's best for exchanges with many users to manage UTXOs explicitly and build transactions with specific UTXOs as shown above. 
+
+Accumulating too many UTXOs without managing them can cause problems. You can use the sweep endpoint to consolidate UTXOs of a specific address.
+
+```shell
+curl -X 'POST' \
+  'http://127.0.0.1:22973/transactions/sweep-address/build' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fromPublicKey": "0381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b0",
+  "toAddress": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH"
+}'
+```
+
 ## More Information
 
 ### Wallet generation
