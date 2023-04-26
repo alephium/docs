@@ -159,7 +159,7 @@ fn foo() -> (U256, Boolean, ByteVec) {
 
 #### If-else statements/expressions
 
-```
+```rust
 fn foo() -> ByteVec {
   // If else statement
   if (a == 0) {
@@ -178,7 +178,7 @@ fn foo() -> ByteVec {
 
 #### For loop
 
-```
+```rust
 // For loop
 fn foo() -> () {
   for (let mut index = 0; index <= 4; index = index + 1) {
@@ -189,7 +189,7 @@ fn foo() -> () {
 
 #### While loop
 
-```
+```rust
 // While loop
 fn foo() -> () {
   let mut index = 0
@@ -201,7 +201,7 @@ fn foo() -> () {
 ```
 
 :::note
-`break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert](/ralph/built-in-functions#assert).
+`break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert function](/ralph/built-in-functions#assert).
 :::
 
 :::note
