@@ -279,7 +279,14 @@ Theoretically yes, the future is not really projectable beyond 80 years. However
 
 ### What type of wallet do you offer? Is it planned to offer hardware wallets?
 
-We currently have a [desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest) and a [web extension wallet](https://github.com/alephium/extension-wallet/releases/latest). The team is actively working on a [mobile wallet](https://github.com/alephium/mobile-wallet). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
+Alephium currently offers:
+
+- a [desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
+- a [web extension wallet](https://github.com/alephium/extension-wallet/releases/latest) available on [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
+
+A mobile wallet is currently under development.
+
+Having Alephium available on hardware wallets is an important priority for the project. Ledger support is currently under development. Please note, it is a lengthy process with multiple stages that will take time to complete.
 
 ### When importing my seed to another desktop wallet, is there a way to import all generated addresses with it?
 
