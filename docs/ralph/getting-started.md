@@ -369,7 +369,7 @@ Contract Foo(a: U256, mut b: Boolean) {
 
 #### Check External Caller
 
-In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for all public functions that do not check for external calls. The warning can be suppressed with annotation `@using(checkExternalCaller = false)`.
+In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for all public functions that do not check for external callers. The warning can be suppressed with annotation `@using(checkExternalCaller = false)`.
 
 The compiler will skip the checking for simple view functions. A simple view function must satisfy all of the following conditions:
 
