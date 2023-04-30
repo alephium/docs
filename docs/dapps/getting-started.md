@@ -108,7 +108,7 @@ Contract TokenFaucet(
     // A public function that transfers tokens to anyone who calls it.
     // The function is annotated with `updateFields = true` as it changes the contract fields.
     // The function is annotated as using contract assets as it does.
-    @using(assetsInContract = true, updateFields = true)
+    @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
     pub fn withdraw(amount: U256) -> () {
         // Debug events can be helpful for error analysis
         emit Debug(`The current balance is ${balance}`)
