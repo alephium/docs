@@ -369,7 +369,13 @@ Contract Foo(a: U256, mut b: Boolean) {
 
 #### Check External Caller
 
-In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for public functions that do not check for external calls. The warning can be suppressed with annotation `@using(checkExternalCaller = false)`.
+In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for all public functions that do not check for external calls. The warning can be suppressed with annotation `@using(checkExternalCaller = false)`.
+
+The compiler will skip the checking for simple view functions. A simple view function must satisfy all of the following conditions:
+
+1. It cannot change the contract fields.
+2. It cannot use any assets.
+3. All sub-function calls must also be simple view functions.
 
 To check the caller of a function, the built-in function [checkCaller!](/ralph/built-in-functions#checkcaller) has to be used.
 
@@ -388,21 +394,19 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
     // ...
   }
 
-  // The compiler will report warnings if the `f1` is called by other contract.
+  // The compiler will report warnings for the function `f1`
   pub fn f1() -> () {
     b = !b
     // ...
   }
 
-  // Function `f2` is a view function, which does not use any assets,
-  // does not update contract fields, and has no sub function call.
-  // We don't need to add the `using(checkExternalCaller = false)` for view functions.
+  // Function `f2` is a simple view function, we don't need to add the
+  // `using(checkExternalCaller = false)` for simple view functions.
   pub fn f2() -> ByteVec {
     return barId
   }
 
-  // The compiler will NOT report warnings if the `f3` is caller by
-  // other contract, because we checked the caller in function`f4`.
+  // The compiler will NOT report warnings because we checked the caller in function`f4`.
   pub fn f3() -> () {
     f4(callerContractId!())
     // ...
@@ -411,6 +415,21 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
   fn f4(callerContractId: ByteVec) -> () {
     checkCaller!(callerContractId == barId, ErrorCodes.InvalidCaller)
     // ...
+  }
+}
+```
+
+There is another scenario where the compiler will report warnings if a contract calls a function through an interface, this is because we do not know if the implementation of the function needs to check the external caller:
+
+```rust
+Interface Bar() {
+  pub fn bar() -> ()
+}
+
+Contract Foo() {
+  // The compiler will report warnings for the function `Foo.foo`
+  pub fn foo(barId: ByteVec) -> () {
+    Bar(barId).bar()
   }
 }
 ```
