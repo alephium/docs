@@ -62,7 +62,7 @@ This is followed by 5 access methods for the different contract's arguments.
 The last method is where the magic happens:
 
 ```rust
-@using(assetsInContract = true, updateFields = true)
+@using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
 pub fn withdraw(amount: U256) -> () {
     // Debug events can be helpful for error analysis
     emit Debug(`The current balance is ${balance}`)
