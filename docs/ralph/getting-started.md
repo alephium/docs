@@ -500,12 +500,11 @@ Contract Bar() {
 
 ### Contract Built-In Functions
 
-In the Alephium blockchain, contract immutable fields and mutable fields are stored separately. Therefore, when creating a contract, we encode the immutable and mutable fields separately. Ralph provides two contract builtin functions to encode the contract fields.
+Sometimes we need to create a contract within a contract, and in such cases, we need to encode the contract fields into `ByteVec`. Ralph provides a built-in function called `encodeFields` that can be used to encode the contract fields into `ByteVec`.
 
-* **encodeImmFields**: the input type of encodeImmFields is a list of the types of all immutable fields in the contract, arranged in the order of their definitions, and it returns a `ByteVec` encoding the inputs
-* **encodeMutFields**: the input type is encodeMutFields is a list of the types of all mutable fields in the contract, arranged in the order of their definitions, and it returns a `ByteVec` encoding the inputs
+The parameter type of the `encodeFields` function is a list of the types of the contract fields, arranged in the order of their definitions. And the function returns two `ByteVec` values, where the first one is the encoded immutable fields, and the second one is the encoded mutable fields.
 
-For example:
+There is an example:
 
 ```rust
 Contract Foo(a: U256, mut b: I256, c: ByteVec, mut d: Bool) {
@@ -515,14 +514,11 @@ Contract Foo(a: U256, mut b: I256, c: ByteVec, mut d: Bool) {
 Contract Bar() {
   @using(preapprovedAssets = true)
   fn createFoo(caller: Address, fooBytecode: ByteVec, a: U256, b: I256, c: ByteVec, d: Bool) -> (ByteVec) {
-    let encodedImmFields = Foo.encodeImmFields!(a, c)
-    let encodedMutFields = Foo.encodeMutFields!(b, d)
-    return createContract!{caller -> 1 alph}(fooBytecode, encodedImmFields, encodeMutFields)
+    let (encodedImmFields, encodedMutFields) = Foo.encodeFields!(a, b, c, d)
+    return createContract!{caller -> 1 alph}(fooBytecode, encodedImmFields, encodedMutFields)
   }
 }
 ```
-
-In the example above, we want to deploy contract `Foo` in the `createFoo` function of contract `Bar`, where contract `Foo` has four fields, with `a` and `c` being immutable fields, and `b` and `d` being mutable fields. Therefore, the input type for `encodeImmFields` is `(U256, ByteVec)`, and the input type for `encodeMutFields` is `(I256, Bool)`.
 
 ### Events
 
@@ -559,8 +555,7 @@ Contract Foo(barTemplateId: ByteVec) {
   @using(preapprovedAssets = true, checkExternalCaller = false)
   pub fn set(caller: Address, key: U256, value: U256) -> () {
     let path = u256To8Bytes!(key)
-    let encodedImmFields = Foo.encodeImmFields!(value) // There is one immutable field
-    let encodedMutFields = Foo.encodeMutFields!() // There is no mutable field
+    let (encodedImmFields, encodedMutFields) = Foo.encodeFields!(value) // Contract `Bar` has only one field
     // Create a sub contract from the given key and value.
     // The sub contract id is `blake2b(blake2b(selfContractId!() ++ path))`.
     // It will fail if the sub contract already exists.
@@ -597,8 +592,7 @@ Contract Foo(a: ByteVec, b: Address, mut c: U256) {
 // First we need to deploy a template contract of `Foo`, which contract id is `fooTemplateId`.
 // Then we can use `copyCreateContract!` to create multiple instances.
 TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
-  let encodedImmFields = Foo.encodeImmFields!(a, b)
-  let encodedMutFields = Foo.encodeMutFields!(c)
+  let (encodedImmFields, encodedMutFields) = Foo.encodeFields!(a, b, c)
   copyCreateContract!(fooTemplateId, encodedImmFields, encodedMutFields)
 }
 ```
@@ -620,9 +614,8 @@ fn upgrade(newCode: ByteVec, newImmFieldsEncoded: ByteVec, newMutFieldsEncoded: 
 
 fn upgrade(newCode: ByteVec) -> () {
   checkOwner(...)
-  let newImmFieldsEncoded = ContractName.encodeImmFields!(immField0, immField1, ...)
-  let newMutFieldsEncoded = ContractName.encodeMutFields!(mutField0, mutField1, ...)
-  migrateWithFields!(newCode, newMutFieldsEncoded, newMutFieldsEncoded)
+  let (newImmFieldsEncoded, newMutFieldsEncoded) = ContractName.encodeFields!(newFields...)
+  migrateWithFields!(newCode, newImmFieldsEncoded, newMutFieldsEncoded)
 }
 ```
 
