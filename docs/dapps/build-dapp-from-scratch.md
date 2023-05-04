@@ -289,6 +289,11 @@ const configuration: Configuration<void> = {
 }
 ```
 
+:::caution
+Real applications should use environment variables or similiar techniques for senstivie settings like `privateKeys`.
+Do not commit your private keys to source control.
+:::
+
 and retry to deploy:
 
 ```sh
