@@ -292,6 +292,10 @@ Having Alephium available on hardware wallets is an important priority for the p
 
 Yes! When restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
 
+### Why is there an additional 0.001 ALPH per token added to my transaction when I try to send tokens?
+
+The 0.001 ALPH is the minimal requirement per UTXO to avoid UTXO spamming. This amount is not consumed by the network and it will arrive to the destination address, same as the tokens.
+
 ### What analytics does the desktop wallet collect?
 
 Alephium takes concerns about privacy and user experience seriously. Enabling analytics can actually help improve your experience without compromising your privacy. The information collected by the desktop wallet is completely anonymous. When you launch your wallet for the first time, a unique ID is generated (for example, `vCJGCsDPrZ8WJaIKZMWjU`) which is the only identification information required. IPs or any other [personal data](https://posthog.com/blog/what-is-personal-data-pii) are not collected. The only data collected are button clicks, number of wallets, number of addresses, number of contacts, and wallet preferences. It helps understand which features are useful to users and which ones are not. Alephium encourages everyone to check out its open-source code base and [look for the `posthog?.capture` keyword](https://github.com/alephium/desktop-wallet/search?q=posthog%3F.capture) to see exactly which events are captured.
