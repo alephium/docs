@@ -226,7 +226,31 @@ curl -X 'GET' \
 
 ## UTXO Management
 
-Like Bitcoin, Alephium uses the UTXO model. To create transactions more efficiently, an exchange can store the set of UTXOs of the chain and then provide specific UTXOs through the API.
+### Why UTXO management?
+
+In practice, some miners tend to send mining rewards directly to exchange addresses, resulting in a large number of small-valued UTXOs in the exchange's hot wallets. However, due to the limited number of inputs that can be included in each transaction, withdrawals may fail if the hot wallet is filled with these small UTXOs.
+
+### How to consolidate small-valued UTXOs?
+
+If your exchange already has a proper UTXO management framework in place, you are in good shape. However, if you don't, there is a simple solution available. You can utilize the sweep endpoint to consolidate the small-valued UTXOs of a specific address. Please note that this feature is only accessible starting from full node `2.3.0`.
+
+```shell
+# `maxAttoAlphPerUTXO` refers to the maximum amount of ALPH in the UTXOs to be consolidated.
+
+curl -X 'POST' \
+  'http://127.0.0.1:22973/transactions/sweep-address/build' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fromPublicKey": "0381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b0",
+  "toAddress": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH",
+  "maxAttoAlphPerUTXO": "100 ALPH"
+}'
+```
+
+### How to work with designated UTXOs?
+
+To create transactions more efficiently, an exchange is recommended to store the set of UTXOs of their hot wallets and then provide specific UTXOs through the API.
 
 ```shell
 curl -X 'POST' \
@@ -281,23 +305,6 @@ curl -X 'GET' \
 #   },
 #   ...
 # }
-```
-
-### UTXO Consolidation
-
-To prevent slow transaction processing and API errors, it's best for exchanges with many users to manage UTXOs explicitly and build transactions with specific UTXOs as shown above. 
-
-Accumulating too many UTXOs without managing them can cause problems. You can use the sweep endpoint to consolidate UTXOs of a specific address.
-
-```shell
-curl -X 'POST' \
-  'http://127.0.0.1:22973/transactions/sweep-address/build' \
-  -H 'accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{
-  "fromPublicKey": "0381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b0",
-  "toAddress": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH"
-}'
 ```
 
 ## More Information
