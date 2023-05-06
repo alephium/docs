@@ -257,7 +257,7 @@ Now, you can build the source code `src/token.ts` :
 
 ```typescript
 import { Deployments } from '@alephium/cli'
-import { web3, Project } from '@alephium/web3'
+import { DUST_AMOUNT, web3, Project } from '@alephium/web3'
 import { testNodeWallet } from '@alephium/web3-test'
 import configuration from '../alephium.config'
 import { TokenFaucet, Withdraw } from '../artifacts/ts'
@@ -290,7 +290,8 @@ async function withdraw() {
 
     // Submit a transaction to use the transaction script
     await Withdraw.execute(signer, {
-      initialFields: { token: tokenId, amount: 1n }
+      initialFields: { token: tokenId, amount: 1n },
+      attoAlphAmount: DUST_AMOUNT
     })
 
     const faucet = TokenFaucet.at(tokenAddress)
