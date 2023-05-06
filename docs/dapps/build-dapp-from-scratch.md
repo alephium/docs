@@ -408,7 +408,7 @@ Another way is to create a skeleton web application project using TypeScript. Cr
 
 ```typescript
 import { Deployments } from '@alephium/cli'
-import { web3, Project, NodeProvider } from '@alephium/web3'
+import { DUST_AMOUNT, web3, Project, NodeProvider } from '@alephium/web3'
 import { PrivateKeyWallet} from '@alephium/web3-wallet'
 import configuration from '../alephium.config'
 import { TokenFaucet, Withdraw } from '../artifacts/ts'
@@ -446,7 +446,8 @@ async function withdraw() {
     // Submit a transaction to use the transaction script
     // It uses our `wallet` to sing the transaction.
     await Withdraw.execute(wallet, {
-      initialFields: { token: tokenId, amount: 1n }
+      initialFields: { token: tokenId, amount: 1n },
+      attoAlphAmount: DUST_AMOUNT
     })
 
     // Fetch the latest state of the token contract, `mut balance` should have change
