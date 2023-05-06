@@ -290,7 +290,8 @@ async function withdraw() {
 
     // Submit a transaction to use the transaction script
     await Withdraw.execute(signer, {
-      initialFields: { token: tokenId, amount: 1n }
+      initialFields: { token: tokenId, amount: 1n },
+      attoAlphAmount: DUST_AMOUNT
     })
 
     const faucet = TokenFaucet.at(tokenAddress)
