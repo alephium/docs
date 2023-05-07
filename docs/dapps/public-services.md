@@ -12,14 +12,6 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 The Testnet Faucet is a way to receive testnet-v1 tokens into a given wallet.
 
-### Via Twitter
-
-To receive testnet-v16 tokens, simply tweet `#alephium` followed by your wallet address (the one you use on testnet).
-
-```
-#alephium 1H1GPLkoMGVUfxQcJgtjWTrKV1KJCQooEV5WxPMhP4Zjy
-```
-
 ### Via HTTP API
 
 Another way to receive testnet-v16 tokens is via an HTTP call, giving your wallet address in the request body, simply as follows:
