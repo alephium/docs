@@ -279,14 +279,26 @@ Theoretically yes, the future is not really projectable beyond 80 years. However
 
 ### What type of wallet do you offer? Is it planned to offer hardware wallets?
 
-We currently have a desktop [wallet](https://github.com/alephium/desktop-wallet/releases/latest) and the team is working on mobile and [web extension wallets](https://github.com/alephium/extension-wallet/releases/latest). We want to offer the possibility to store ALPH on hardware wallets. We are currently pursuing being supported on Ledger. Please note that it is a lengthy process and won't be completed overnight.
+Alephium currently offers:
+
+- a [desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
+- a [web extension wallet](https://github.com/alephium/extension-wallet/releases/latest) available on [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
+
+A mobile wallet is currently under development.
+
+Having Alephium available on hardware wallets is an important priority for the project. Ledger support is currently under development. Please note, it is a lengthy process with multiple stages that will take time to complete.
 
 ### When importing my seed to another desktop wallet, is there a way to import all generated addresses with it?
 
-At the moment, when using the desktop wallet, one will have to manually re-generate each address when restoring a mnemonic into a new wallet. 
-Assuming a wallet had generated X active addresses (an address is considered active when it has had at least one transaction), when the mnemonic of this wallet is restored and X addresses are generated, those addresses will be the same addresses as before and will have the same balance.
+Yes! When restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
 
-Automatic address discovery will be added in the near future. That way, when restoring a wallet, the app will automatically start a scanning process to find addresses that are "active" (active = have been used to send/receive transactions), so that the user doesn't have to manually re-generate them.
+### Why is there an additional 0.001 ALPH per token added to my transaction when I try to send tokens?
+
+The 0.001 ALPH is the minimal requirement per UTXO to avoid UTXO spamming. This amount is not consumed by the network and it will arrive to the destination address, same as the tokens.
+
+### What analytics does the desktop wallet collect?
+
+Alephium takes concerns about privacy and user experience seriously. Enabling analytics can actually help improve your experience without compromising your privacy. The information collected by the desktop wallet is completely anonymous. When you launch your wallet for the first time, a unique ID is generated (for example, `vCJGCsDPrZ8WJaIKZMWjU`) which is the only identification information required. IPs or any other [personal data](https://posthog.com/blog/what-is-personal-data-pii) are not collected. The only data collected are button clicks, number of wallets, number of addresses, number of contacts, and wallet preferences. It helps understand which features are useful to users and which ones are not. Alephium encourages everyone to check out its open-source code base and [look for the `posthog?.capture` keyword](https://github.com/alephium/desktop-wallet/search?q=posthog%3F.capture) to see exactly which events are captured.
 
 ## Miscellaneous
 
