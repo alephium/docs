@@ -221,7 +221,7 @@ Let's create a deployment script file called `0_deploy_faucet.ts` into the `scri
 Note that deployment scripts should always be prefixed with numbers (starting from `0`).
 
 ```typescript
-import { Deployer, DeployFunction, Network } from '@alephium/cli'
+import { Deployer, DeployFunction } from '@alephium/cli'
 import { Settings } from '../alephium.config'
 import { TokenFaucet } from '../artifacts/ts'
 
@@ -230,7 +230,7 @@ import { TokenFaucet } from '../artifacts/ts'
 const deployFaucet: DeployFunction<Settings> = async (
   deployer: Deployer
 ): Promise<void> => {
-  const issueTokenAmount = 100n
+  const issueTokenAmount = 100n * (10n ** 18n)
   const result = await deployer.deployContract(TokenFaucet, {
     // The amount of token to be issued
     issueTokenAmount: issueTokenAmount,
