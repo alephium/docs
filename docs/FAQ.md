@@ -86,7 +86,7 @@ If you want to build a dApp, check out our [dApps Getting Started guide](https:/
 
 ### Where is the roadmap?
 
-You will find the roadmap on the [website](https://alephium.org/#whats_next) and on the [docs](https://docs.alephium.org/#roadmap). You can also follow the weekly development updates on [Discord](https://alephium.org/discord), [Twitter](https://twitter.com/alephium) or [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1).
+You will find the roadmap on the [website](https://alephium.org/#next) and on the [docs](https://docs.alephium.org/#roadmap). You can also follow the weekly development updates on [Discord](https://alephium.org/discord), [Twitter](https://twitter.com/alephium) or [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1).
 
 ### Where can I monitor the status of Alephium maintained public service?
 
