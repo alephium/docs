@@ -152,6 +152,20 @@ Returns the id of the contract
 
 ---
 
+### contractId
+
+```Rust
+fn contractId!(contract:<Contract>) -> (ByteVec)
+```
+
+Returns the id of the contract
+
+> @param **contract** *the contract variable*
+>
+> @returns *the id of the contract*
+
+---
+
 ### callerContractId
 
 ```Rust
@@ -941,6 +955,20 @@ Converts contract id (ByteVec) to contract address (Address).
 > @param **contractId** *the input contract id*
 >
 > @returns *a contract Address*
+
+---
+
+### addressToContractId
+
+```Rust
+fn addressToContractId!(contractAddress:Address) -> (ByteVec)
+```
+
+Converts contract address (Address) to contract id (ByteVec)
+
+> @param **contractAddress** *the input contract address*
+>
+> @returns *a contract id*
 
 ---
 
