@@ -8,8 +8,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-![imageedited](https://github.com/alephium/docs/assets/88235023/3a177ba9-d4b7-4be0-87bd-ead436544485)
-
+![IMG_8932-2](https://github.com/alephium/alephium/assets/88235023/010e915e-0ecd-4f8f-808e-4223202eaecd)
 
 ## This is a tutorial on how to install the Alephium App in your ledger and use it to sign transactions
 
