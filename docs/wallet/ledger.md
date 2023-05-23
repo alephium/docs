@@ -49,7 +49,7 @@ To install the Ledger Python Library just open a terminal window and type the fo
 
 This will make all upgrades and install the Ledger Wallet Library that will be needed for the next step.
 
-![image](https://github.com/alephium/docs/assets/88235023/b94f67bb-7a26-4fda-b03d-8f9c269af738)
+![Install Ledger App](https://github.com/alephium/docs/assets/88235023/f3f096e3-fb9b-4a8c-9a98-a060112b0f5f)
 
 **4 — Download the Alephium Ledger App to your computer**
 
@@ -98,7 +98,7 @@ Create a new address in your extension wallet: Click on the current address name
 * Select your Ledger device from the list;
 * Finish the configuration.
 
-![image](https://github.com/alephium/docs/assets/88235023/afb9f361-3dbe-4807-8b66-f1d43eb135c2)
+![install new wallet](https://github.com/alephium/alephium/assets/88235023/5fa7e000-2f77-4b44-9dfa-13b784e05eba)
 
 **7 — Use the Ledger Device to send a transaction!**
 
@@ -130,10 +130,10 @@ Now that you have a already sign a transaction with yout Ledger Device, it is ti
 
 Access the [Alephium DEX on Testnet](https://alephium.github.io/alephium-dex). Click in the “Connect Alephium” button on the top right. Select the extension wallet in the prompt and the Ledger account.
 
-![image](https://github.com/alephium/docs/assets/88235023/d5076919-8bf7-4971-8b55-44aa55641ba9)
+![connect with dex](https://github.com/alephium/alephium/assets/88235023/f3e6cf9e-e632-4bc0-84a8-67f38d067311)
 
 Now you are connected to the Alephium DEX. Make a swap transaction and use your Ledger to sign it. The process is similar to a transfer.
 
-![image](https://github.com/alephium/docs/assets/88235023/490c34e8-02ee-4a24-ba5b-21e0a2f1c8af)
+![unnamed](https://github.com/alephium/alephium/assets/88235023/bb263f71-3801-4be3-86cd-d7a18b525e0a)
 
 If you have questions or suggestions, please come to [Alephium’s Discord](http://alephium.org/discord), [Telegram](https://t.me/alephiumgroup), or reach out on [Twitter](https://twitter.com/alephium)!
