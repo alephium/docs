@@ -314,6 +314,18 @@ Checks whether the function is called by a TxScript.
 
 ---
 
+### selfContract
+
+```Rust
+fn selfContract!() -> (<Contract>)
+```
+
+Returns self contract
+
+> @returns *self contract*
+
+---
+
 ## SubContract Functions
 ---
 ### createSubContract
