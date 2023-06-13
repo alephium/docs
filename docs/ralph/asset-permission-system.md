@@ -184,7 +184,7 @@ marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(t
 
 When `marketPlace.listNFT` is executed by the VM, it is authorized to
 spend `1.1` ALPH and `1` token from the caller of the script. If
-`marketPlace.listNFT` in turm calls other methods, it can approve a
+`marketPlace.listNFT` in turn calls other methods, it can approve a
 subset of these approved assets to that method as well. For example,
 in `marketPlace.listNFT` we have the following code to create a NFT
 listing:
