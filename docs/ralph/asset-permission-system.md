@@ -8,125 +8,245 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-:::caution
-This page is WIP until our dApps stack is more stable 🚧
-:::
+The Asset Permission System (APS) is one of Ralph's unique
+features. It explicitly stipulates the flow of assets at code level,
+giving confidence to developers and users of the smart contracts that
+all asset transfers happen as intended. Together with the UTXOs model,
+it also offers simpler and more secure user experience by eliminating
+the token approval risks in systems such as EVM.
 
-The Asset Permission System (APS) is one of Ralph's defining features. It gives
-developers a safety net and the ability to build with confidence on Alephium.
+Alephium uses the
+[sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
+model where assets, including the native ALPH and other tokens are
+managed by UTXOs while smart contracts and their states are managed
+using account-based model.
 
-It may not be obvious at first how to use the APS. Sure it may seem simple to
-call `approveAlph!(fromAddress, amount)`, but when you mix it with `alphRemaining!()`
-and `transfer` functions it can then become confusing, even overwhelming. What
-are those built-in functions actually doing? Well it all has to do with
-understanding the flow of funds and what happens between function calls.
+This has a few implications:
 
-A very important point to internalize is that the "flow of funds" always starts
-from a `TxScript`.
+1. Simple asset transfers among users only require UTXOs, which is
+   battle tested for its security in managing assets. Here no smart
+   contracts are involved.
+2. When smart contracts need to transfer assets on behalf of the
+   owners, no seperate approval transactions are required. The
+   approval is implicit in the UTXO model: if the input that contains
+   a particular token is authorized to be spent in the transaction,
+   then the owner has already given consent to the usage of that token
+   in the context of this transaction, meaning that the smart
+   contracts that get invoked in the same transaction can
+   potentially transfer the token.
 
-Using the `TxScript` the funds can flow into a contract, or to another user's
-address.
+Now the question is: in the second situation, how can we make sure
+that the assets implicitly approved in the transaction using UTXO
+model can be handled securely by the smart contracts? The answer is
+Ralph's Asset Permission System (APS).
 
-:::note
-That's right! Unlike in Ethereum, you _don't_ send funds directly to contract
-addresses!
-:::
+## Flow of Assets
 
-A way to think the system are the two states of "staged" and "commited" funds.
-Funds are staged when approved, and they are commited when a contract method
-is called.
+To interact with the smart contracts in Alephium, a transaction needs
+to execute a `TxScript`. In the following example transaction, there
+are two inputs, one fixed outputs and a `TxScript`:
 
-Now let's look at some code to see the details and the full picture.
+```
+                  ----------------
+                  |              |
+                  |              |
+   1 Token A      |              |   1 ALPH (fixed output)
+================> |              | ========================>
+   6.1 ALPHs      |  <TxScript>  |   ??? (generated output)
+================> |              | ========================>
+                  |              | 
+                  |              | 
+                  |              |
+                  ----------------
+```
 
-:::note
-Funds can be from many sources, not just one! Just like how you can stage many
-files for a commit in version control, you can stage many address balances in
-Ralph.
-:::
+Two things are worth noting here:
 
-:::note
-There are also some built-ins which also commit funds and use them immediately.
+1. Even though there is only one fixed output, there will be more
+   outputs generated for this transaction. The generated outputs
+   depend on the result of the `TxScript` execution.
+2. The total assets available for `TxScript` (including the smart
+   contracts it invokes) are `5.1` ALPHs and `1` Token A, because we
+   need to substract the `1` ALPH in fixed ouput.
 
-These built-ins are:
+Let's say the `TxScript` looks something like this:
 
-- `createContract!`
-- `createContractWithToken!`
-- `createContractAndTransferToken!`
-- `copyCreateContract!`
-- `copyCreateContractWithToken!`
-- `copyCreateContractAndTransferToken!`
-- `createSubContract!`
-- `createSubContractWithToken!`
-- `createSubContractAndTransferToken!`
-- `copyCreateSubContract!`
-- `copyCreateSubContractWithToken!`
-- `copyCreateSubContractAndTransferToken!`
+```rust
+TxScript ListNFT(
+    tokenAId: ByteVec,
+    price: U256,
+    marketPlace: NFTMarketPlace
+) {
+    let listingFee = marketPlace.getListingFee()
+    let minimalAlphInContract = 1 alph
+    let approvedAlphAmount = listingFee + minimalAlphInContract
 
-:::
-
-## A concrete demonstration
-
-Since code partially dictates the flow of funds, the explanation is tightly
-coupled to it. The best way to explain then is to use code and comments.
-
-```javascript
-// User sends 10 ALPH along with this TxScript
-TxScript MyScriptWithAName() {
-  let myAddress = callerAddress!()
-
-  // Stage 5 ALPH into the `approvedAssets` property.
-  approveAlph!(myAddress, 5)
-  let contract = SomeContractIWrote(<contract-id-goes-here>)
-
-  //
-  // Remember, every function has a frame of state.
-  // This function call will commit 5 ALPH into `doStuff`'s `remainingAssets` property.
-  // Consequently this means the `approvedAssets` property (staging) is now empty!
-  //
-  contract.doStuff()
-
-  //
-  // There is still `5 ALPH` in the `remainingAssets` property in this frame to use for anything else.
-  // If it's not used, it's returned to the user.
-  // You could use the remainingAlph!(address) built-in to check the remaining funds in `remainingAssets`.
-  // There is no way to check how many funds are staged in `approvedAssets`.
-  //
-}
-
-TxContract SomeContractIWrote() {
-  //
-  // If preapprovedAssets equaled false then the function would completely ignore the approved Alph!
-  // This means the `remainingAssets` property would be initialized as empty in this function's frame.
-  //
-  // Here though it's the opposite and *we will* set `remainingAssets` *of this frame*
-  // to what was approved before calling. `approvedAssets` will be initialized as
-  // empty, ready to stage more funds to be commited!
-  //
-  // So if it isn't clear, each method you call that expects funds *must* again
-  // stage them.
-  //
-  @using(preapprovedAssets = true)
-  pub doStuff() -> () {
-    // 5 ALPH will be taken from `remainingAssets` and put into the contract's
-    // funds (meaning `remainingAssets` is now empty).
-    transferAlphToSelf!(callerAddress!(), 5)
-  }
-
-  //
-  // If assetsInContract is true then the function has immediate access to the
-  // contract's funds, or in other words, `remainingAssets` becomes equal to
-  // what the contract holds already.
-  //
-  @using(assetsInContract = true)
-  pub useTheAlph(to: Address) -> () {
-    //
-    // 5 ALPH will be taken from `remainingAssets`.
-    //
-    // If assetsInContract equaled false, then this would throw an error!
-    //
-    transferAlphFromSelf!(to, 5)
-
-    // And the rest is sent back to the contract.
-  }
+    marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
 }
 ```
+
+As you may have guessed, Token A is an NFT token and the purpose of
+the above `TxScript` is to list it through a market place smart contract.
+
+The following line of code is of particular interest:
+
+```rust
+marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
+```
+
+The code inside of the curly braces explicitly approves that
+`approvedAlphAmount` ALPH and `1` token A are allowed to be spent in
+the `marketPlace.listNFT` function, even though the total amount of
+assets available for `TxScript` are `5.1` and `1` for ALPH and token A
+respectively.
+
+The following scenarios could happen:
+
+1. If `approvedAlphAmount` turns out to be more than `5.1` ALPH, then
+   the transaction fails with `NotEnoughBalance` error.
+2. If `approvedAlphAmount` is less than `5.1` ALPH, say `1.1` ALPH,
+   then maximum amount of assets that `marketPlace.listNFT` can handle
+   are `1.1` ALPHs and `1` token A. `marketPlace.listNFT` does not
+   have access to the rest of the `4` ALPHs.
+3. If `marketPlace.listNFT` has not spent the entirety of the approved
+   assets, the remaining assets will be returned back to their owner
+   when `marketPlace.listNFT` returns.
+
+Let's look a bit closer to the `marketPlace.listNFT` function:
+
+```rust
+Contract NFTMarketPlace(
+    nftListingTemplateId: ByteVec
+) {
+    // Other code are omitted for brevity
+
+    pub fn getListingFee() -> U256 {
+        return 0.1 ALPH
+    }
+
+    @using(preapprovedAssets = true, assetsInContract = true, updateFields = false)
+    pub fn listNFT(
+        tokenId: ByteVec,
+        price: U256
+    ) -> (Address) {
+        assert!(price > 0, ErrorCodes.NFTPriceIsZero)
+
+        // Only owner can list the NFT
+        let tokenOwner = callerAddress!()
+
+        let (encodeImmutableFields, encodeMutableFields) = NFTListing.encodeFields!(tokenId, tokenOwner, selfAddress!(), commissionRate, price)
+        // Create the listing contract
+        let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, tokenId: 1}(
+            tokenId, nftListingTemplateId, encodeImmutableFields, encodeMutableFields
+        )
+
+        // Charge the listing fee
+        transferTokenToSelf!(tokenOwner, ALPH, listingFee)
+
+        return contractIdToAddress!(nftListingContractId)
+    }
+}
+```
+
+First thing to notice is the annotation for the `listNFT` method:
+
+```rust
+@using(preapprovedAssets = true, assetsInContract = true, updateFields = false)
+```
+
+`preapprovedAssets = true` tells VM that the `listNFT` method intends
+to use some assets and the caller is supposed to approve a set of
+neccessary assets or else a compilation error will be
+reported. Compilation will also fail if the caller tries to approve
+assets for a method where `preapprovedAssets = false`.
+
+`assetsInContract = true` indicates to the VM that the `listNFT`
+method wants to update the asset of the `NFTMarketPlace`
+contract. Compiler will make sure that the `listNFT` method indeed
+does that or else an compilation error will be reported. In this case,
+`listNFT` updates the asset of the `NFTMarketPlace` contract by
+transferring the `listingFee` to it:
+
+```rust
+// Charge the listing fee
+transferTokenToSelf!(tokenOwner, ALPH, listingFee)
+```
+
+`updateFields` annotation is out of scope for this documentation.
+
+`marketPlace.listNFT` method is invoked by `TxScript` `ListNFT`, as
+shown below:
+
+```rust
+marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
+```
+
+When `marketPlace.listNFT` is executed by the VM, it is authorized to
+spend `1.1` ALPH and `1` token from the caller of the script. If
+`marketPlace.listNFT` in turn calls other methods, it can approve a
+subset of these approved assets to that method as well. For example,
+in `marketPlace.listNFT` we have the following code to create a NFT
+listing:
+
+```rust
+let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, tokenId: 1}(
+    tokenId, nftListingTemplateId, encodeImmutableFields, encodeMutableFields
+)
+```
+
+As we can see, `marketPlace.listNFT` method approves `1` ALPH and `1`
+Token A to the `copyCreateSubContract!` built-in function from its own
+pool of approved assets (`1.1` ALPH and `1` Token A), before it sends
+the `listingFee` to the `NFTMarketPlace` contract itself. The flow of
+assets is illustrated below:
+
+```
+  Caller of the TxScript
+  (6.1 ALPH; 1 Token A)
+           ||
+           ||
+           || Substract assets in
+           || Fixed outputs
+           ||
+           ||                    Approves                         Approves
+           \/               (1.1 ALPH; 1 TokenA)              (1 ALPH; 1 TokenA)
+  (5.1 ALPH; 1 Token A)  ========================> listNFT ========================> copyCreateSubContract!
+                                                     ||
+                                                     ||
+                                                     || To self
+                                                     ||
+                                                     \/
+                                                  (0.1 ALPH)
+```
+
+As we can imagine, if we have a bigger tree of method calls, approved
+fund will cascade from the root of the tree all the way to the leaves
+like water. Asset Permission System makes this flow of the fund
+throughout the method calls explicit and enforce constrains to each of
+the method as to what tokens and how much of them can be spent.
+
+Going back to the transaction, after the execution of the `TxScript`
+the generated outputs should look something like this:
+
+```
+                        ----------------
+                        |              |
+                        |              |   1 ALPH (fixed output)
+  1 Token A             |              | =========================================>
+======================> |              |   1 ALPH, 1 Token A (NFTListing contract)
+  6.1 ALPHs             |  <TxScript>  | =========================================>
+======================> |              |   0.1 ALPH (NFTMarketPlace contract)
+                        |              | =========================================>
+                        |              |   4 ALPH - gas (change output)
+                        |              | =========================================>
+                        |              |
+                        ----------------
+```
+
+## Summary
+
+Asset Permission System (APS) dictates the flow of assets in smart
+contracts. The explicit approval of the assets for each method
+invocation ensures that the methods can never spend more than what
+they are authorized for. Together with the UTXO model, it offers
+assets management solution that is simpler, more reliable and secure.
