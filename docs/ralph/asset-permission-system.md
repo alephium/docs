@@ -75,9 +75,8 @@ Let's say the `TxScript` looks something like this:
 TxScript ListNFT(
     tokenAId: ByteVec,
     price: U256,
-    marketPlaceContractId: ByteVec
+    marketPlace: NFTMarketPlace
 ) {
-    let marketPlace = NFTMarketPlace(marketPlaceContractId)
     let listingFee = marketPlace.getListingFee()
     let minimalAlphInContract = 1 alph
     let approvedAlphAmount = listingFee + minimalAlphInContract
