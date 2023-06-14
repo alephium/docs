@@ -12,8 +12,8 @@ The Asset Permission System (APS) is one of Ralph's unique
 features. It explicitly stipulates the flow of assets at code level,
 giving confidence to developers and users of the smart contracts that
 all asset transfers happen as intended. Together with the UTXOs model,
-it also offers simpler and more secure user experience by eliminating
-the token approval risks in systems such as EVM.
+it also offers a simpler and more secure user experience by
+eliminating the token approval risks in systems such as EVM.
 
 Alephium uses the
 [sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
@@ -27,7 +27,7 @@ This has a few implications:
    battle tested for its security in managing assets. Here no smart
    contracts are involved.
 2. When smart contracts need to transfer assets on behalf of the
-   owners, no seperate approval transactions are required. The
+   owners, no separate approval transactions are required. The
    approval is implicit in the UTXO model: if the input that contains
    a particular token is authorized to be spent in the transaction,
    then the owner has already given consent to the usage of that token
@@ -36,7 +36,7 @@ This has a few implications:
    potentially transfer the token.
 
 Now the question is: in the second situation, how can we make sure
-that the assets implicitly approved in the transaction using UTXO
+that the assets implicitly approved in the transaction using the UTXO
 model can be handled securely by the smart contracts? The answer is
 Ralph's Asset Permission System (APS).
 
@@ -67,7 +67,7 @@ Two things are worth noting here:
    depend on the result of the `TxScript` execution.
 2. The total assets available for `TxScript` (including the smart
    contracts it invokes) are `5.1` ALPHs and `1` Token A, because we
-   need to substract the `1` ALPH in fixed ouput.
+   need to subtract the `1` ALPH in fixed output.
 
 Let's say the `TxScript` looks something like this:
 
@@ -86,7 +86,7 @@ TxScript ListNFT(
 ```
 
 As you may have guessed, Token A is an NFT token and the purpose of
-the above `TxScript` is to list it through a market place smart contract.
+the above `TxScript` is to list it through a marketplace smart contract.
 
 The following line of code is of particular interest:
 
@@ -156,7 +156,7 @@ First thing to notice is the annotation for the `listNFT` method:
 
 `preapprovedAssets = true` tells VM that the `listNFT` method intends
 to use some assets and the caller is supposed to approve a set of
-neccessary assets or else a compilation error will be
+necessary assets or else a compilation error will be
 reported. Compilation will also fail if the caller tries to approve
 assets for a method where `preapprovedAssets = false`.
 
@@ -205,7 +205,7 @@ assets is illustrated below:
   (6.1 ALPH; 1 Token A)
            ||
            ||
-           || Substract assets in
+           || Subtract assets in
            || Fixed outputs
            ||
            ||                    Approves                         Approves
@@ -219,11 +219,12 @@ assets is illustrated below:
                                                   (0.1 ALPH)
 ```
 
-As we can imagine, if we have a bigger tree of method calls, approved
-fund will cascade from the root of the tree all the way to the leaves
-like water. Asset Permission System makes this flow of the fund
-throughout the method calls explicit and enforce constrains to each of
-the method as to what tokens and how much of them can be spent.
+As we can imagine, if we have a bigger tree of method calls, the
+approved fund will cascade from the root of the tree all the way to
+the leaves like water. Asset Permission System makes this flow of the
+fund throughout the method calls explicit and enforce constraints to
+each of the methods as to what tokens and how much of them can be
+spent.
 
 Going back to the transaction, after the execution of the `TxScript`
 the generated outputs should look something like this:
@@ -248,5 +249,6 @@ the generated outputs should look something like this:
 Asset Permission System (APS) dictates the flow of assets in smart
 contracts. The explicit approval of the assets for each method
 invocation ensures that the methods can never spend more than what
-they are authorized for. Together with the UTXO model, it offers
-assets management solution that is simpler, more reliable and secure.
+they are authorized for. Together with the UTXO model, it offers an
+asset management solution that is simpler, more reliable and more
+secure.
