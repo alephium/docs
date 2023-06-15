@@ -57,3 +57,11 @@ export const Aliases = ({aliases, type}) => (
 
 <Aliases aliases={aliases['current']} type='Current' />
 <Aliases aliases={aliases['deprecated']} type='Deprecated' />
+
+## API rate limiting
+
+To ensure the best performance and security, all of our public APIs have implemented rate limiting. This means that there is a limit on the number of requests you can make within a certain time period. As our services evolve and grow, the rate limit may be adjusted based on the actual usage of the service.
+
+To ensure a smooth experience while working within the rate limit, we highly recommend implementing cache and retry mechanisms when making requests to our API services. Caching responses can help reduce the number of API calls, while retrying failed requests can handle temporary issues or errors.
+
+If your application is built with the React framework, you can leverage the ["SWR"](https://www.npmjs.com/package/swr) package available on npm. SWR provides convenient hooks for data fetching and caching, making it easier to work with APIs. Specifically, you can use the useSWR hook for handling mutable data and the useSWRImmutable hook for handling immutable data such as token metadata.
