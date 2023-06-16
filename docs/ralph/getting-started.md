@@ -300,18 +300,18 @@ The `@using` annotation has four optional fields:
 
 #### Using Approved Assets
 
-In Ralph, if a function uses assets, then the caller needs to explicitly approve assets. And all functions in the call stack must be annotated with `@using(approvedAssets = true)`.
+In Ralph, if a function uses assets, then the caller needs to explicitly approve assets. And all functions in the call stack must be annotated with `@using(preapprovedAssets = true)`.
 
 ```rust
 Contract Foo() {
   // Function `foo` uses approved assets, and it will transfer 1 ALPH and 1 token to the contract from the `caller`
-  @using(approvedAssets = true)
+  @using(preapprovedAssets = true)
   fn foo(caller: Address, tokenId: ByteVec) -> () {
     transferAlphToSelf!(caller, 1 alph)
     transferTokenToSelf!(caller, tokenId, 1)
   }
 
-  @using(approvedAssets = true)
+  @using(preapprovedAssets = true)
   fn bar(caller: Address, tokenId: ByteVec) -> () {
     // We need to explicitly approve assets when calling function `foo`
     foo{caller -> 1 alph, tokenId: 1}(caller, tokenId)
@@ -319,6 +319,11 @@ Contract Foo() {
   }
 }
 ```
+
+For the `preapprovedAssets` annotation, the compiler will do the following checks:
+
+1. If a function is annotated `preapprovedAssets = true` but don't use the braces syntax, the compiler will report an error
+2. If a function call uses the braces syntax but the function is not annotated `preapprovedAssets = true`, the compiler will report an error
 
 #### Using Contract Assets
 
@@ -338,6 +343,10 @@ Contract Foo() {
   }
 }
 ```
+
+For the `assetsInContract` annotation, the compiler will do the following checks:
+
+1. If a function is annotated `assetsInContract = true` but does not use contract assets, the compiler will report an error
 
 You can find more information about asset permission at [here](/ralph/asset-permission-system).
 
