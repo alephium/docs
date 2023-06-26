@@ -17,7 +17,7 @@ It's a good practice to use API key to limit the access to your full node's rest
 Please add the following to your `user.conf` by replacing the zeros with your own key (>= 32 characters).
 
 ```
-alephium.api.api-key = "0000000000000000000000000000000000000000000000000000000000000000"
+alephium.api.api-key = "--- your own key with >= 32 characters"
 ```
 
 Restart your full node to make this take effect.
@@ -36,6 +36,16 @@ On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
 
 Now you could use Swagger UI as if there is no API key.
 
+## How to make the full node API publicly accessible ?
+
+1. Set up your API key properly following the guide above.
+
+2. Add the following to your `user.conf` and restart your full node.
+
+```
+alephium.api.network-interface = "0.0.0.0"
+```
+
 ## How to access the Swagger UI of my full node on another computer in the same subnet ?
 
 1. Add the following to your `user.conf` and restart your full node.
@@ -44,7 +54,7 @@ Now you could use Swagger UI as if there is no API key.
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-2. Change the `host` of Swagger UI to be the IP of your full node.
+2. Change the `host` of Swagger UI to be the subnet IP of your full node.
 
 ## Error "java.lang.AssertionError: assumption failed"
 
