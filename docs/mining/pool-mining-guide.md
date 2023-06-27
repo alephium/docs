@@ -95,6 +95,13 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Telegram: https://t.me/metapool1
 - Discord: https://discord.gg/5TTzMDzJ
 
+#### Okminer 
+
+- Website (CN): https://okminer.com
+- Calculator: https://okminer.com/tools
+- Telegram (CN): https://t.me/okminer_CN
+- Telegram (EN): https://t.me/okminer_support
+
 #### p1pool.com
 
 - Website: https://p1pool.com/
