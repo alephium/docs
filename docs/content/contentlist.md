@@ -1,4 +1,17 @@
+# All Things Alephium List
 
+## Table of Contents
+* Official links & accounts 
+* Tech Series
+* Tech Threads
+* TechTalks & AMAs
+* Milestones
+* Other Articles
+* Community & Social
+* External Podcasts & Publications
+* Events, presentations & conferences
+* Partnerships & PRs
+* Reading Lists
 
 ## Official links & accounts
 
@@ -18,15 +31,19 @@ Linkedin - https://www.linkedin.com/company/74304166
 
 ## Tech Series
 
-All weekly dev-updates - https://www.reddit.com/r/Alephium/?f=flair_name%3A%22Development%22
-
 sUTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
 
-Proof-of-Less-Work - The Ultimate guide to Proof-of-Less-Work, the universe and everything… - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
+Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
 Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
 
+Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
+
+Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
+
 ## Tech Threads
+
+You can access the whole list here: https://twitter.com/alephium/status/1648310455725883393
 
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447 <br>
 sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928 <br>
@@ -54,7 +71,40 @@ How many ALPH are mined per day? - https://twitter.com/alephium/status/155190546
 
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
 
+## TechTalks & AMAs
+
+November 2021 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
+
+July  2022 - Tech Talk #1 The Ultimate guide to Proof of Less Work
+https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
+
+July 2022 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
+
+August 2022 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
+
+September 2022 - Ergo - https://www.youtube.com/watch?v=GCDo3V7HTb0
+
+October 2022 - DappNode - https://www.youtube.com/watch?v=wzobAlPR11s&t
+
+Nov/Dec 2022 - Flux - https://www.youtube.com/watch?v=17Rx27PwADI&t
+
+January 2023 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
+
+February 2023 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
+
+March 2023 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
+
+April 2023 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
+
+May 2023 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+
 ## Milestones 
+
+Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
+
+Alephium Bridge on Testnet - https://medium.com/@alephium/the-alephium-bridge-is-live-on-testnet-e13454677fb8
+
+Alephium DEX PoC on Testnet - https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
 
 Leman Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
@@ -87,11 +137,15 @@ Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-se
 
 Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
+Sharding - https://medium.com/@alephium/sharding-d50968b8b229
+
 Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
 
 Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-interview-series-episode-2-bec6e6908d2f
 
 Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-interview-series-episode-3-64b6dacc1459
+
+Core team interview series. Episode 4 - https://medium.com/@alephium/core-team-interview-series-episode-4-3886003b8fef
 
 Security assessment by Inference - https://medium.com/@alephium/security-assessment-by-inference-afa2f62957ad
 
@@ -103,15 +157,36 @@ Initial description - First article -  https://medium.com/@alephium/alephium-pus
 
 ## Community & Social 
 
-Community Highlight #4, cgi-bin - Montail
+Builders Highlight #1 - Sahhar
 
 
-Community Highlight #3, cgi-bin - DigDug
+Community Highlight #10 - Lx, aka Lix
+https://medium.com/@alephium/community-highlight-10-lx-aka-lix-fde724cf8d81
+
+Community Highlight #9 - dZHEMSH
+https://medium.com/@alephium/community-highlight-9-dzhemsh-a0a4a98a8489
+
+Community Highlight #8 - Jorge
+https://medium.com/@alephium/community-highlight-8-jorge-438510785041
+
+Community Highlight #7 - Oheka
+https://medium.com/@alephium/community-highlight-7-oheka-13d8b4ae025e
+
+Community Highlight #6 - Waldi — Zkit/beats
+https://medium.com/@alephium/community-highlight-6-waldi-zkit-beats-37af1f6df3b8
+
+Community Highlight #5 - TxN
+https://medium.com/@alephium/community-highlight-5-txn-71c4fd76ffe8
+
+Community Highlight #4 - Montail
+https://medium.com/@alephium/community-highlight-4-montail-e24fd88882a0
+
+Community Highlight #3 - DigDug
 https://medium.com/@alephium/community-highlight-3-digdug-48a7ec868504
 
-Community Highlight #2, cgi-bin - https://medium.com/@alephium/community-highlight-cgi-bin-c102cc106f19
+Community Highlight #2 - cgi-bin - https://medium.com/@alephium/community-highlight-cgi-bin-c102cc106f19
 
-Community Highlight #1, Wilhelm Källström aka “Oracleuggla” - 
+Community Highlight #1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
 
 Video Creation contest - https://medium.com/@alephium/contest-for-all-video-creators-e777f2619596
@@ -180,7 +255,6 @@ Cheng Wang - WASM blockchain Berlin 2019 - https://twitter.com/wachmc/status/113
 Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
-
 
 
 ## Partnerships & PRs
