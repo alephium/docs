@@ -12,6 +12,9 @@
 * Events, presentations & conferences
 * Partnerships & PRs
 * Reading Lists
+* People to follow
+* Libraries & Developer Resources
+* Apply to a grant
 
 ## Official links & accounts
 
@@ -158,7 +161,7 @@ Initial description - First article -  https://medium.com/@alephium/alephium-pus
 ## Community & Social 
 
 Builders Highlight #1 - Sahhar
-
+https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
 Community Highlight #10 - Lx, aka Lix
 https://medium.com/@alephium/community-highlight-10-lx-aka-lix-fde724cf8d81
@@ -301,3 +304,23 @@ UTXO alliance - https://medium.com/@alephium/alephium-joins-the-utxo-alliance-64
 #20 - https://twitter.com/alephium/status/1609891871148630016 <br>
 #21 - https://twitter.com/alephium/status/1612107655610527744 <br>
 
+
+## People to Follow
+
+Cheng Wang: https://twitter.com/wachmc
+
+First Tweet - https://twitter.com/alephium/status/1095960264837685249
+
+Wow visual - https://twitter.com/gemforgem/status/1441427580578455554
+
+## Libraries & Developer Resources
+
+Docs - https://docs.alephium.org/
+
+Github - https://github.com/alephium
+
+## Apply for Grants
+
+Apply for grants - https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md
+
+Apply for rewards - https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md
