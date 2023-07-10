@@ -36,7 +36,7 @@ Let's now create a `contracts` folder where we'll store all our contracts:
 mkdir contracts
 ```
 
-Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
+Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/alephium-web3/blob/master/packages/cli/templates/base/contracts/token.ral). You can copy the whole file into your `contracts` folder.
 
 Let's inspect it, piece by piece:
 
@@ -95,7 +95,6 @@ import { Configuration } from '@alephium/cli'
 export type Settings = {}
 
 const configuration: Configuration<Settings> = {
-  defaultNetwork: 'devnet',
   networks: {
     devnet: {
       //Make sure the two values match what's in your devnet configuration
@@ -179,7 +178,7 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [alephium/nextjs-template](https://github.com/alephium/nextjs-template/blob/main/test/token.test.ts) project.
+A more complex test can be found in our [template](https://github.com/alephium/alephium-web3/blob/master/packages/cli/templates/base/test/token.test.ts) project.
 
 Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
 
@@ -277,7 +276,6 @@ Let's update our `alephium.config.ts`
 
 ```typescript
 const configuration: Configuration<void> = {
-  defaultNetwork: 'devnet',
   networks: {
     devnet: {
       nodeUrl: 'http://localhost:22973',
@@ -416,7 +414,7 @@ import { TokenFaucet, Withdraw } from '../artifacts/ts'
 async function withdraw() {
 
   //Select our network defined in alephium.config.ts
-  const network = configuration.networks[configuration.defaultNetwork]
+  const network = configuration.networks.devnet
 
   //NodeProvider is an abstraction of a connection to the Alephium network
   const nodeProvider = new NodeProvider(network.nodeUrl)
@@ -467,7 +465,7 @@ async function withdraw() {
 withdraw()
 ```
 
-For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
+For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/alephium-web3/blob/master/packages/cli/templates/base/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -536,7 +534,7 @@ You should now be a proud owner of the token you created.
 
 ## What's next?
 
-You can find a more complex example of the token faucet tutorial [in the alephium/nextjs-template](https://github.com/alephium/nextjs-template) project.
+You can find a more complex example of the token faucet tutorial [in our base template](https://github.com/alephium/alephium-web3/tree/master/packages/cli/templates/base) project.
 
 ## Connect to the wallets
 

@@ -249,7 +249,7 @@ You can run it using:
 npx @alephium/cli@latest deploy
 ```
 
-This will deploy the token faucet to all of the 4 groups of devnet. To deploy on testnet (or any other network), update your `alephium.config.ts` and use the `--network` option:
+This will deploy the token faucet to group 0 of devnet. To deploy on testnet (or any other network), update your `alephium.config.ts` and use the `--network` option:
 
 ```
 npx @alephium/cli@latest deploy --network testnet
