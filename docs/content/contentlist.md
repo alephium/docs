@@ -1,20 +1,20 @@
 # All Things Alephium List
 
 ## Table of Contents
-* Official links & accounts 
-* Tech Series
+* [Official links & accounts](#official-links--accounts) 
+* [Tech Series](#tech-series)
 * [Tech Threads](#tech-threads)
-* TechTalks & AMAs
-* Milestones
-* Other Articles
-* Community & Social
-* External Podcasts & Publications
-* Events, presentations & conferences
-* Partnerships & PRs
-* Reading Lists
-* People to follow
-* Libraries & Developer Resources
-* Apply to a grant
+* [TechTalks & AMAs](#techtalks--amas)
+* [Milestones](#milestones)
+* [Other Articles](#other-articles)
+* [Community & Social](#community--social)
+* [External Podcasts & Publications](#external-podcasts--publications)
+* [Events, presentations & conferences](#events-presentations--conferences)
+* [Partnerships & PRs](#partnerships--prs)
+* [Reading Lists](#reading-lists)
+* [People to follow](#people-to-follow)
+* [Libraries & Developer Resources](#libraries--developer-resources)
+* [Apply to a grant](#apply-for-grants)
 
 ## Official links & accounts
 
