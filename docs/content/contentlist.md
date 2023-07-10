@@ -3,7 +3,7 @@
 ## Table of Contents
 * Official links & accounts 
 * Tech Series
-* Tech Threads
+* [Tech Threads](#tech-threads)
 * TechTalks & AMAs
 * Milestones
 * Other Articles
@@ -34,7 +34,7 @@ Linkedin - https://www.linkedin.com/company/74304166
 
 ## Tech Series
 
-sUTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
+Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
 
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
