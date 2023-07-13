@@ -151,7 +151,7 @@ This command also generates typescript code based on the compiled artifacts. The
 
 ## Test your contract
 
-The sample project comes with tests `test/token.test.ts` for your contract:
+The sample project comes with tests `test/unit/token.test.ts` for your contract:
 
 ```typescript
 import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
@@ -191,7 +191,7 @@ describe('unit tests', () => {
       inputAssets: [{ address: testAddress, asset: { alphAmount: 10n ** 18n } }]
     }
   })
-  //See more test in `test/token.test.ts`
+  //See more test in `test/unit/token.test.ts`
 )}
 ```
 

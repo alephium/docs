@@ -178,7 +178,7 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/token.test.ts) project.
+A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) project.
 
 Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
 
