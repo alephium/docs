@@ -36,7 +36,7 @@ Let's now create a `contracts` folder where we'll store all our contracts:
 mkdir contracts
 ```
 
-Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/alephium-web3/blob/master/packages/cli/templates/base/contracts/token.ral). You can copy the whole file into your `contracts` folder.
+Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
 
 Let's inspect it, piece by piece:
 
@@ -178,7 +178,7 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [template](https://github.com/alephium/alephium-web3/blob/master/packages/cli/templates/base/test/token.test.ts) project.
+A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/token.test.ts) project.
 
 Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
 
@@ -465,7 +465,7 @@ async function withdraw() {
 withdraw()
 ```
 
-For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/alephium-web3/blob/master/packages/cli/templates/base/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
+For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -534,7 +534,7 @@ You should now be a proud owner of the token you created.
 
 ## What's next?
 
-You can find a more complex example of the token faucet tutorial [in our base template](https://github.com/alephium/alephium-web3/tree/master/packages/cli/templates/base) project.
+You can find a more complex example of the token faucet tutorial [in the alephium/nextjs-template](https://github.com/alephium/nextjs-template) project.
 
 ## Connect to the wallets
 
