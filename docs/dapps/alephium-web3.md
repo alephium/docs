@@ -252,7 +252,43 @@ expect(contractState.address).toEqual(testContractAddress)
 
 A complete example can be found in our [`alephium-nextjs-template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
 
+#### Integration tests
+
+Alongside unit tests, you can also run some integration tests, be careful as those one can change the blockchain state.
+
+```typescript
+web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
+await Project.build()
+
+const accounts = signer.getAccounts()
+const account = accounts[0]
+const testAddress = account.address
+await signer.setSelectedAccount(testAddress)
+const testGroup = account.group
+
+const deployed = deployments.getDeployedContractResult(testGroup, 'TokenFaucet')
+const tokenId = deployed.contractInstance.contractId
+const tokenAddress = deployed.contractInstance.address
+
+const faucet = TokenFaucet.at(tokenAddress)
+const initialState = await faucet.fetchState()
+const initialBalance = initialState.fields.balance
+
+// Call `withdraw` function 10 times
+for (let i = 0; i < 10; i++) {
+  await Withdraw.execute(signer, {
+    initialFields: { token: tokenId, amount: 1n },
+    attoAlphAmount: DUST_AMOUNT * 2n
+  })
+
+  //!!! Blockchain state is changed !!!
+  const newState = await faucet.fetchState()
+  const newBalance = newState.fields.balance
+  expect(newBalance).toEqual(initialBalance - BigInt(i) - 1n)
+}
 ```
+
+More details can be found in our [integration test folder](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration)
 
 ### Deploy the contract
 
