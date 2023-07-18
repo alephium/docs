@@ -60,6 +60,10 @@ Bridge #3 - https://twitter.com/alephium/status/1587440588692934656 <br>
 
 New SDK - https://twitter.com/alephium/status/1574389337612947456
 
+Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370 <br>
+Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984 <br>
+Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
+
 Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
 
 Birthday Paradox - https://twitter.com/alephium/status/1559155971284275200
@@ -72,34 +76,51 @@ Naming Alephium - https://twitter.com/alephium/status/1554467104858210305
 
 How many ALPH are mined per day? - https://twitter.com/alephium/status/1551905461103775745
 
-Blockflow - https://twitter.com/alephium/status/1541711510178758658
+Leman Upgrade schnorr signatures : https://twitter.com/alephium/status/1648310494661595137
+
+Blockflow - https://twitter.com/alephium/status/1541711510178758658 <br>
+Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
+
+Sharding - https://twitter.com/alephium/status/1648310491763331078
+
+Full Nodes - https://twitter.com/alephium/status/1592536671177699328
+
+Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
+
+NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680 <br>
+NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
+
+UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
+
+Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
 
 ## TechTalks & AMAs
 
-November 2021 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
+
+May 2023 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+
+April 2023 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
+
+March 2023 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
+
+February 2023 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
+
+January 2023 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
+
+Nov/Dec 2022 - Flux - https://www.youtube.com/watch?v=17Rx27PwADI&t
+
+October 2022 - DappNode - https://www.youtube.com/watch?v=wzobAlPR11s&t
+
+September 2022 - Ergo - https://www.youtube.com/watch?v=GCDo3V7HTb0
+
+August 2022 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
+
+July 2022 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
 
 July  2022 - Tech Talk #1 The Ultimate guide to Proof of Less Work
 https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
-July 2022 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
-
-August 2022 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
-
-September 2022 - Ergo - https://www.youtube.com/watch?v=GCDo3V7HTb0
-
-October 2022 - DappNode - https://www.youtube.com/watch?v=wzobAlPR11s&t
-
-Nov/Dec 2022 - Flux - https://www.youtube.com/watch?v=17Rx27PwADI&t
-
-January 2023 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
-
-February 2023 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
-
-March 2023 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
-
-April 2023 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
-
-May 2023 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+November 2021 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
 
@@ -159,6 +180,9 @@ Alephium Block Rewards - https://medium.com/@alephium/alephium-block-rewards-72d
 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
 ## Community & Social 
+
+Builders Highlight #2 - Sezame Wallet
+https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight #1 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
@@ -235,10 +259,11 @@ Cheng Wang at EthCC 2022 - Account Model meets UTXO: a new paradigm for secure d
 
 Cheng Wang - Blockchain sharding at CDC 36th C3 - https://youtu.be/_SjtXp6F43k
 
-Maud @ Plan B Lugano - 2022
+Maud @ Plan B Lugano 2022 - https://www.youtube.com/watch?v=8DiMSar3HOw
 
-Ethcc Paris 2022 - 
+Ethcc Paris 2022 - https://www.youtube.com/watch?v=VVYH9rBJAdA
 
+CVC/CVA 2023 - https://www.youtube.com/watch?v=8DiMSar3HOw / https://twitter.com/alephium/status/1673692785457897472
 CVC/CVA  2022 - https://twitter.com/alephium/status/1537452412801323011 / https://twitter.com/alephium/status/1528649536050278401
 
 PBWS Paris - 2022 - https://twitter.com/alephium/status/1530174317576716290 / https://twitter.com/ParisBlockWeek/status/1519685412066836483
@@ -298,12 +323,29 @@ UTXO alliance - https://medium.com/@alephium/alephium-joins-the-utxo-alliance-64
 #13 - https://twitter.com/alephium/status/1586680785355952128 <br>
 #14 - https://twitter.com/alephium/status/1589249714691530753 <br>
 #15 - https://twitter.com/alephium/status/1591769178016428033 <br>
-#16 - https://twitter.com/alephium/status/1594356097455820800 <br> 
+#16 - https://twitter.com/alephium/status/1594356097455820800 <br>
 #17 - https://twitter.com/alephium/status/1596845995442126848 <br>
-
-#20 - https://twitter.com/alephium/status/1609891871148630016 <br>
+#20 - ​​https://twitter.com/alephium/status/1609891871148630016 <br>
 #21 - https://twitter.com/alephium/status/1612107655610527744 <br>
-
+#22 - https://twitter.com/alephium/status/1614603383855525889 <br>
+#23 - https://twitter.com/alephium/status/1617170911408361474 <br>
+#24 - https://twitter.com/alephium/status/1619682407338377220 <br>
+#25 - https://twitter.com/alephium/status/1622188051081601026 <br>
+#26 - https://twitter.com/alephium/status/1624740153117003779 <br>
+#27 - https://twitter.com/alephium/status/1627309742220775427 <br>
+#28 - https://twitter.com/alephium/status/1629798455102300163 <br>
+#29 - https://twitter.com/alephium/status/1632350304208588800 <br>
+#30 - https://twitter.com/alephium/status/1634886987151994882 <br>
+#31 - https://twitter.com/alephium/status/1637423729193152514 <br>
+#32 - https://twitter.com/alephium/status/1639915107408044033 <br>
+#33 - https://twitter.com/alephium/status/1642466924876689413 <br>
+#34 - https://twitter.com/alephium/status/1645095313492017155 <br>
+#35 - https://twitter.com/alephium/status/1647540350658150407 <br>
+#36 - https://twitter.com/alephium/status/1650077066644291584 <br>
+#37 - https://twitter.com/alephium/status/1652613787290316803 <br>
+#38 - https://twitter.com/alephium/status/1655150495235997696 <br>
+#39 - https://twitter.com/alephium/status/1658134671648251907 <br>
+#40 - https://twitter.com/alephium/status/1660228530851184642 <br>
 
 ## People to Follow
 
