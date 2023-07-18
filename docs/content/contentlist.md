@@ -227,11 +227,21 @@ DJ Fentamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?
 
 ## External Podcasts & Publications
 
+UTXO Alliance Roundtable - https://www.youtube.com/watch?v=1XcBWJRRp-E&list=PL8q8n0BHJS1MWfqe1OIz4EWz9RKNrCiu6&index=1&pp=iAQB
+
+Cheng Wang: Founder of Alephium, Distributed Consensus, Proof of Less Work | Wolfram Blockchain Labs - https://youtu.be/8XYa288lIg0
+
 Didier Borel - SwissRoadCrypto - https://www.buzzsprout.com/2058047/11607475
 
 Cheng Wang AMA @ERGO - https://www.youtube.com/watch?v=GCDo3V7HTb0
 
+Uncovering the Secrets of the Next Generation Blockchain Network Alephium - https://youtu.be/UzqZ4npA2w4
+
 Sigma Prism - Meet Alephium | A New Scalable UTXO Paradigm | episode #19 - https://youtu.be/vBVbKIuHbLc (Notes)
+
+Alephium | A New Era of Possibilities - https://youtu.be/0jmo-WYhwWc
+
+Maud Bannwart: Chief Operating Officer of Alephium | Operations of Blockchain Development - https://youtu.be/3CYsjwIkI_c
 
 NiceHash - NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
