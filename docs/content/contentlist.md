@@ -166,22 +166,6 @@ Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-
 
 May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
-
-
-
-BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59
-
-The Road to self Custody - https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444
-
-Block Time & Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
-
-Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
-
-Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
-
-Sharding - https://medium.com/@alephium/sharding-d50968b8b229
-
-
 ## Community & Social 
 
 Builders Highlight #2 - Sezame Wallet
@@ -268,8 +252,6 @@ Heidi News - https://www.heidi.news/cyber/alephium-une-blockchain-3-0-developpee
 
 Token Insights - https://tokeninsight.medium.com/project-research-paper-of-alephium-8001323353e7
 
-
-
 ## Events, presentations & conferences 
 
 What is Alephium? - https://www.youtube.com/watch?v=v2L4jEvoSIU
@@ -304,7 +286,6 @@ Cheng Wang - WASM blockchain Berlin 2019 - https://twitter.com/wachmc/status/113
 Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
-
 
 ## Partnerships & PRs
 
@@ -376,6 +357,17 @@ First Tweet - https://twitter.com/alephium/status/1095960264837685249
 
 Wow visual - https://twitter.com/gemforgem/status/1441427580578455554
 
+Hongchao: https://twitter.com/hongchao
+
+### Community
+
+Redonder: https://twitter.com/zkitbeats
+
+TL: https://twitter.com/techleaks24
+
+Ryan: https://twitter.com/RyanRit91769208
+
+Diomark: https://twitter.com/diomark
 ## Libraries & Developer Resources
 
 Docs - https://docs.alephium.org/
