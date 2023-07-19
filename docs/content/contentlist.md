@@ -47,7 +47,7 @@ Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-les
 Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
 
 ### Alphred Virtual Machine
-Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
+Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025 <br>
 Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370 <br>
 Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984 <br>
 Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
@@ -368,6 +368,9 @@ TL: https://twitter.com/techleaks24
 Ryan: https://twitter.com/RyanRit91769208
 
 Diomark: https://twitter.com/diomark
+
+Benjaminnn: https://twitter.com/BenLarkey
+
 ## Libraries & Developer Resources
 
 Docs - https://docs.alephium.org/
