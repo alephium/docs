@@ -1,5 +1,5 @@
 ---
-sidebar_position: 2
+sidebar_position: 11
 sidebar_label: The Content Repo
 slug: /
 title: The Content Repo
@@ -342,81 +342,81 @@ UTXO alliance - https://medium.com/@alephium/alephium-joins-the-utxo-alliance-64
 
 ## Reading Lists
 
-1 - https://twitter.com/alephium/status/1548224145703313408
+1. https://twitter.com/alephium/status/1548224145703313408
 
-2 - https://twitter.com/alephium/status/1553395039778119682
+2. https://twitter.com/alephium/status/1553395039778119682
 
-3 - https://twitter.com/alephium/status/1555917416667811841
+3. https://twitter.com/alephium/status/1555917416667811841
 
-4 - https://twitter.com/alephium/status/1558459721912242176
+4. https://twitter.com/alephium/status/1558459721912242176
 
-5 - https://twitter.com/alephium/status/1560964886485643265
+5. https://twitter.com/alephium/status/1560964886485643265
 
-6 - https://twitter.com/alephium/status/1563540765728313347
+6. https://twitter.com/alephium/status/1563540765728313347
 
-7 - https://twitter.com/alephium/status/1566079135071449088
+7. https://twitter.com/alephium/status/1566079135071449088
 
-8 - https://twitter.com/alephium/status/1568915710210101250
+8. https://twitter.com/alephium/status/1568915710210101250
 
-9 - ​https://twitter.com/alephium/status/1571927107911188481
+9. ​https://twitter.com/alephium/status/1571927107911188481
 
-10 - https://twitter.com/alephium/status/1574016171698900992
+10. https://twitter.com/alephium/status/1574016171698900992
 
-11 - https://twitter.com/alephium/status/1579050425449271296
+11. https://twitter.com/alephium/status/1579050425449271296
 
-12 - https://twitter.com/alephium/status/1584133324720594946
+12. https://twitter.com/alephium/status/1584133324720594946
 
-13 - https://twitter.com/alephium/status/1586680785355952128
+13. https://twitter.com/alephium/status/1586680785355952128
 
-14 - https://twitter.com/alephium/status/1589249714691530753
+14. https://twitter.com/alephium/status/1589249714691530753
 
-15 - https://twitter.com/alephium/status/1591769178016428033
+15. https://twitter.com/alephium/status/1591769178016428033
 
-16 - https://twitter.com/alephium/status/1594356097455820800
+16. https://twitter.com/alephium/status/1594356097455820800
 
-17 - https://twitter.com/alephium/status/1596845995442126848
+17. https://twitter.com/alephium/status/1596845995442126848
 
-20 - ​​https://twitter.com/alephium/status/1609891871148630016
+20. ​​https://twitter.com/alephium/status/1609891871148630016
 
-21 - https://twitter.com/alephium/status/1612107655610527744
+21. https://twitter.com/alephium/status/1612107655610527744
 
-22 - https://twitter.com/alephium/status/1614603383855525889
+22. https://twitter.com/alephium/status/1614603383855525889
 
-23 - https://twitter.com/alephium/status/1617170911408361474
+23. https://twitter.com/alephium/status/1617170911408361474
 
-24 - https://twitter.com/alephium/status/1619682407338377220
+24. https://twitter.com/alephium/status/1619682407338377220
 
-25 - https://twitter.com/alephium/status/1622188051081601026
+25. https://twitter.com/alephium/status/1622188051081601026
 
-26 - https://twitter.com/alephium/status/1624740153117003779
+26. https://twitter.com/alephium/status/1624740153117003779
 
-27 - https://twitter.com/alephium/status/1627309742220775427
+27. https://twitter.com/alephium/status/1627309742220775427
 
-28 - https://twitter.com/alephium/status/1629798455102300163
+28. https://twitter.com/alephium/status/1629798455102300163
 
-29 - https://twitter.com/alephium/status/1632350304208588800
+29. https://twitter.com/alephium/status/1632350304208588800
 
-30 - https://twitter.com/alephium/status/1634886987151994882
+30. https://twitter.com/alephium/status/1634886987151994882
 
-31 - https://twitter.com/alephium/status/1637423729193152514
+31. https://twitter.com/alephium/status/1637423729193152514
 
-32 - https://twitter.com/alephium/status/1639915107408044033
+32. https://twitter.com/alephium/status/1639915107408044033
 
-33 - https://twitter.com/alephium/status/1642466924876689413
+33. https://twitter.com/alephium/status/1642466924876689413
 
-34 - https://twitter.com/alephium/status/1645095313492017155
+34. https://twitter.com/alephium/status/1645095313492017155
 
-35 - https://twitter.com/alephium/status/1647540350658150407
+35. https://twitter.com/alephium/status/1647540350658150407
 
-36 - https://twitter.com/alephium/status/1650077066644291584
+36. https://twitter.com/alephium/status/1650077066644291584
 
-37 - https://twitter.com/alephium/status/1652613787290316803
+37. https://twitter.com/alephium/status/1652613787290316803
 
-38 - https://twitter.com/alephium/status/1655150495235997696
+38. https://twitter.com/alephium/status/1655150495235997696
 
-39 - https://twitter.com/alephium/status/1658134671648251907
+39. https://twitter.com/alephium/status/1658134671648251907
 
-40 - https://twitter.com/alephium/status/1660228530851184642
+40. https://twitter.com/alephium/status/1660228530851184642
 
 ## People to Follow
 
