@@ -1,3 +1,9 @@
+---
+sidebar_position: 10
+title: Getting Started
+sidebar_label: Getting started
+---
+
 # All Things Alephium List
 
 ## Table of Contents
