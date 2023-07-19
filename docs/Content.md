@@ -1,7 +1,6 @@
 ---
 sidebar_position: 11
 sidebar_label: The Content Repo
-slug: /
 title: The Content Repo
 ---
 
