@@ -106,30 +106,30 @@ You can access the whole list of Twitter Threads here: https://twitter.com/aleph
 
 ## TechTalks & AMAs
 
-May 2023 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+May/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
 
-April 2023 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
+Apr/23 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
 
-March 2023 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
+Mar/23 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
 
-February 2023 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
+Feb/23 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
 
-January 2023 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
+Jan/23 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
 
-Nov/Dec 2022 - Flux - https://www.youtube.com/watch?v=17Rx27PwADI&t
+Nov/22 - Flux - https://www.youtube.com/watch?v=17Rx27PwADI&t
 
-October 2022 - DappNode - https://www.youtube.com/watch?v=wzobAlPR11s&t
+Oct/22 - DappNode - https://www.youtube.com/watch?v=wzobAlPR11s&t
 
-September 2022 - Ergo - https://www.youtube.com/watch?v=GCDo3V7HTb0
+Sep/22 - Ergo - https://www.youtube.com/watch?v=GCDo3V7HTb0
 
-August 2022 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
+Aug/22 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
 
-July 2022 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
+Jul/22 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
 
-July  2022 - Tech Talk #1 The Ultimate guide to Proof of Less Work
+Jul/22 - Tech Talk #1 The Ultimate guide to Proof of Less Work
 https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
-November 2021 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
+Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
 
