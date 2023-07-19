@@ -38,7 +38,8 @@ Linkedin - https://www.linkedin.com/company/74304166
 Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749 <br>
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447 <br>
 sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928 <br>
-sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320
+sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320 <br>
+UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
 
 ### Proof-of-Less-Work
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301 <br>
@@ -58,6 +59,7 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 ### Blockflow
 Blockflow - https://twitter.com/alephium/status/1541711510178758658 <br>
 Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
+Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 Sharding - https://twitter.com/alephium/status/1648310491763331078
 
 ### Ralph Programming Language
@@ -66,7 +68,12 @@ Ralph and Solidity Code Comparison - https://twitter.com/alephium/status/1643961
 
 ## Explainer Series
 
-You can access the whole list here: https://twitter.com/alephium/status/1648310455725883393
+Block Time and Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
+Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
+
+Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
+
+Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
 
@@ -78,8 +85,10 @@ New SDK - https://twitter.com/alephium/status/1574389337612947456
 
 Birthday Paradox - https://twitter.com/alephium/status/1559155971284275200
 
+BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59 <br>
 BIP39 Thread - https://twitter.com/alephium/status/1557019434979512327
 
+The Road to self Custody - https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444 <br>
 Self-custody - https://twitter.com/alephium/status/1557763279123992577
 
 Naming Alephium - https://twitter.com/alephium/status/1554467104858210305
@@ -93,9 +102,7 @@ Full Nodes - https://twitter.com/alephium/status/1592536671177699328
 NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680 <br>
 NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
-UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
-
-Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
+You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
 ## TechTalks & AMAs
 
@@ -136,6 +143,8 @@ Mar/23 Leman Network Upgrade - https://medium.com/@alephium/announcing-the-leman
 
 Nov/22 1 year of Mainnet - https://medium.com/@alephium/one-year-of-mainnet-b7ed5d3024ee
 
+Oct/22 Security assessment by Inference - https://medium.com/@alephium/security-assessment-by-inference-afa2f62957ad
+
 Jul/22 Website update - https://twitter.com/alephium/status/1546841030020009984
 
 May/22 Q2 2022 Update - https://medium.com/@alephium/alephium-h1-project-update-1f2076978f00
@@ -147,11 +156,18 @@ Dec/21 Q3 2021 Update - https://medium.com/@alephium/time-for-an-alephium-develo
 
 Nov/21 Mainnet Launch - https://medium.com/@alephium/alephium-mainnet-brings-sharding-smart-contracts-and-energy-efficiency-to-bitcoin-tech-stack-a255183aa50b
 
+Nov/21 Alephium Block Rewards - https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33
+
+Oct/21 Tokenomics of Alephium - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
+
 Sep/21 Pre-sale Q3 2021 - https://medium.com/@alephium/alephium-closes-3-6m-pre-sale-from-80-contributors-to-expand-sharded-utxo-blockchain-platform-84f80492e28d
 
 Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-8381dbd9f88d
 
-## Other Articles
+May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
+
+
+
 
 BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59
 
@@ -165,21 +181,6 @@ Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
 Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
-Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
-
-Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-interview-series-episode-2-bec6e6908d2f
-
-Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-interview-series-episode-3-64b6dacc1459
-
-Core team interview series. Episode 4 - https://medium.com/@alephium/core-team-interview-series-episode-4-3886003b8fef
-
-Security assessment by Inference - https://medium.com/@alephium/security-assessment-by-inference-afa2f62957ad
-
-Tokenomics of Alephium - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
-
-Alephium Block Rewards - https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33
-
-Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
 ## Community & Social 
 
@@ -217,6 +218,14 @@ Community Highlight #2 - cgi-bin - https://medium.com/@alephium/community-highli
 
 Community Highlight #1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
+
+Core team interview series. Episode 4 - https://medium.com/@alephium/core-team-interview-series-episode-4-3886003b8fef
+
+Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-interview-series-episode-3-64b6dacc1459
+
+Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-interview-series-episode-2-bec6e6908d2f
+
+Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
 
 Video Creation contest - https://medium.com/@alephium/contest-for-all-video-creators-e777f2619596
 
