@@ -3,6 +3,7 @@
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 
 * [Tech Series](#tech-series)
+* [Explainer Series](#explainer-series)
 * [TechTalks & AMAs](#techtalks--amas)
 * [Milestones](#milestones)
 * [Other Articles](#other-articles)
