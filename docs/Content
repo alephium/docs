@@ -1,3 +1,14 @@
+---
+sidebar_position: 80
+sidebar_label: Overview
+slug: /
+title: Alephium Overview
+---
+
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
+<UntranslatedPageText />
+
 # All Things Alephium List
 
 ## Table of Contents
