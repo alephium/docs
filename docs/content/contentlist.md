@@ -6,7 +6,6 @@
 * [Explainer Series](#explainer-series)
 * [TechTalks & AMAs](#techtalks--amas)
 * [Milestones](#milestones)
-* [Other Articles](#other-articles)
 * [Community & Social](#community--social)
 * [External Podcasts & Publications](#external-podcasts--publications)
 * [Events, presentations & conferences](#events-presentations--conferences)
@@ -35,40 +34,55 @@ Linkedin - https://www.linkedin.com/company/74304166
 ## Tech Series
 
 ### Stateful UTXO
-Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749 <br>
-sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447 <br>
-sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928 <br>
-sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320 <br>
+Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
+
+sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447
+
+sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928
+
+sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320
+
 UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
 
 ### Proof-of-Less-Work
-Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301 <br>
-Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71 <br>
+Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
+
+Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
+
 Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
 
 ### Alphred Virtual Machine
-Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025 <br>
-Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370 <br>
-Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984 <br>
+Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
+
+Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370
+
+Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984
+
 Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
 ### Blockflow
-Blockflow - https://twitter.com/alephium/status/1541711510178758658 <br>
+Blockflow - https://twitter.com/alephium/status/1541711510178758658
+
 Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
+
 Sharding - https://medium.com/@alephium/sharding-d50968b8b229
+
 Sharding - https://twitter.com/alephium/status/1648310491763331078
 
 ### Ralph Programming Language
 Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
+
 Ralph and Solidity Code Comparison - https://twitter.com/alephium/status/1643961985841905664
 
 ### Asset Permission System
 Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
+
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
 ## Explainer Series
 
 Block Time and Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
+
 Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
 
 Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
@@ -77,18 +91,22 @@ Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
 
-Bridge #1 - https://twitter.com/alephium/status/1579824159273541632 <br>
-Bridge #2 - https://twitter.com/alephium/status/1582368148631695361 <br>
-Bridge #3 - https://twitter.com/alephium/status/1587440588692934656 <br>
+Bridge #1 - https://twitter.com/alephium/status/1579824159273541632
+
+Bridge #2 - https://twitter.com/alephium/status/1582368148631695361
+
+Bridge #3 - https://twitter.com/alephium/status/1587440588692934656
 
 New SDK - https://twitter.com/alephium/status/1574389337612947456
 
 Birthday Paradox - https://twitter.com/alephium/status/1559155971284275200
 
-BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59 <br>
+BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59
+
 BIP39 Thread - https://twitter.com/alephium/status/1557019434979512327
 
-The Road to self Custody - https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444 <br>
+The Road to self Custody - https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444
+
 Self-custody - https://twitter.com/alephium/status/1557763279123992577
 
 Naming Alephium - https://twitter.com/alephium/status/1554467104858210305
@@ -99,7 +117,8 @@ Leman Upgrade schnorr signatures : https://twitter.com/alephium/status/164831049
 
 Full Nodes - https://twitter.com/alephium/status/1592536671177699328
 
-NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680 <br>
+NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680
+
 NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
@@ -217,7 +236,7 @@ Naming Competition - https://medium.com/@alephium/alephium-naming-competition-c1
 
 Introducing Community Rewards - https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf
 
-DJ Fentamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
+DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
 
 
 ## External Podcasts & Publications
@@ -294,8 +313,10 @@ DappNode - Tutorial -  https://medium.com/@alephium/alephium-dappnode-collab-tec
 
 Ergo - Announcement - https://medium.com/@alephium/ergohack-v-alephium-sponsors-ergos-hackathon-with-flux-djed-alliance-to-foster-innovation-in-eae9c8bd7e97
 
-FLUX - Announcement - https://medium.com/@alephium/alephium-continues-its-engagement-for-decentralization-and-partners-with-the-cloud-based-f9c5baebe5b2 <br>
-FLUX - Tutorial - https://medium.com/@alephium/host-your-alephium-node-via-the-flux-marketplace-2f3a5ab85263 <br>
+FLUX - Announcement - https://medium.com/@alephium/alephium-continues-its-engagement-for-decentralization-and-partners-with-the-cloud-based-f9c5baebe5b2
+
+FLUX - Tutorial - https://medium.com/@alephium/host-your-alephium-node-via-the-flux-marketplace-2f3a5ab85263
+
 FLUX - Contest -  https://medium.com/@alephium/alephium-flux-tutorial-contest-81054caf926
 
 Cetacean Capital - https://medium.com/@alephium/alephium-partners-with-cetacean-capital-83cf2fbea8a1
@@ -310,44 +331,81 @@ UTXO alliance - https://medium.com/@alephium/alephium-joins-the-utxo-alliance-64
 
 ## Reading Lists
 
-#1 - https://twitter.com/alephium/status/1548224145703313408 <br>
-#2 - https://twitter.com/alephium/status/1553395039778119682 <br>
-#3 - https://twitter.com/alephium/status/1555917416667811841 <br>
-#4 - https://twitter.com/alephium/status/1558459721912242176 <br>
-#5 - https://twitter.com/alephium/status/1560964886485643265 <br>
-#6 - https://twitter.com/alephium/status/1563540765728313347 <br>
-#7 - https://twitter.com/alephium/status/1566079135071449088 <br>
-#8 - https://twitter.com/alephium/status/1568915710210101250 <br>
-#9 - ​https://twitter.com/alephium/status/1571927107911188481 <br>
-#10 - https://twitter.com/alephium/status/1574016171698900992 <br>
-#11 - https://twitter.com/alephium/status/1579050425449271296 <br>
-#12 - https://twitter.com/alephium/status/1584133324720594946 <br>
-#13 - https://twitter.com/alephium/status/1586680785355952128 <br>
-#14 - https://twitter.com/alephium/status/1589249714691530753 <br>
-#15 - https://twitter.com/alephium/status/1591769178016428033 <br>
-#16 - https://twitter.com/alephium/status/1594356097455820800 <br>
-#17 - https://twitter.com/alephium/status/1596845995442126848 <br>
-#20 - ​​https://twitter.com/alephium/status/1609891871148630016 <br>
-#21 - https://twitter.com/alephium/status/1612107655610527744 <br>
-#22 - https://twitter.com/alephium/status/1614603383855525889 <br>
-#23 - https://twitter.com/alephium/status/1617170911408361474 <br>
-#24 - https://twitter.com/alephium/status/1619682407338377220 <br>
-#25 - https://twitter.com/alephium/status/1622188051081601026 <br>
-#26 - https://twitter.com/alephium/status/1624740153117003779 <br>
-#27 - https://twitter.com/alephium/status/1627309742220775427 <br>
-#28 - https://twitter.com/alephium/status/1629798455102300163 <br>
-#29 - https://twitter.com/alephium/status/1632350304208588800 <br>
-#30 - https://twitter.com/alephium/status/1634886987151994882 <br>
-#31 - https://twitter.com/alephium/status/1637423729193152514 <br>
-#32 - https://twitter.com/alephium/status/1639915107408044033 <br>
-#33 - https://twitter.com/alephium/status/1642466924876689413 <br>
-#34 - https://twitter.com/alephium/status/1645095313492017155 <br>
-#35 - https://twitter.com/alephium/status/1647540350658150407 <br>
-#36 - https://twitter.com/alephium/status/1650077066644291584 <br>
-#37 - https://twitter.com/alephium/status/1652613787290316803 <br>
-#38 - https://twitter.com/alephium/status/1655150495235997696 <br>
-#39 - https://twitter.com/alephium/status/1658134671648251907 <br>
-#40 - https://twitter.com/alephium/status/1660228530851184642 <br>
+#1 - https://twitter.com/alephium/status/1548224145703313408
+
+#2 - https://twitter.com/alephium/status/1553395039778119682
+
+#3 - https://twitter.com/alephium/status/1555917416667811841
+
+#4 - https://twitter.com/alephium/status/1558459721912242176
+
+#5 - https://twitter.com/alephium/status/1560964886485643265
+
+#6 - https://twitter.com/alephium/status/1563540765728313347
+
+#7 - https://twitter.com/alephium/status/1566079135071449088
+
+#8 - https://twitter.com/alephium/status/1568915710210101250
+
+#9 - ​https://twitter.com/alephium/status/1571927107911188481
+
+#10 - https://twitter.com/alephium/status/1574016171698900992
+
+#11 - https://twitter.com/alephium/status/1579050425449271296
+
+#12 - https://twitter.com/alephium/status/1584133324720594946
+
+#13 - https://twitter.com/alephium/status/1586680785355952128
+
+#14 - https://twitter.com/alephium/status/1589249714691530753
+
+#15 - https://twitter.com/alephium/status/1591769178016428033
+
+#16 - https://twitter.com/alephium/status/1594356097455820800
+
+#17 - https://twitter.com/alephium/status/1596845995442126848
+
+#20 - ​​https://twitter.com/alephium/status/1609891871148630016
+
+#21 - https://twitter.com/alephium/status/1612107655610527744
+
+#22 - https://twitter.com/alephium/status/1614603383855525889
+
+#23 - https://twitter.com/alephium/status/1617170911408361474
+
+#24 - https://twitter.com/alephium/status/1619682407338377220
+
+#25 - https://twitter.com/alephium/status/1622188051081601026
+
+#26 - https://twitter.com/alephium/status/1624740153117003779
+
+#27 - https://twitter.com/alephium/status/1627309742220775427
+
+#28 - https://twitter.com/alephium/status/1629798455102300163
+
+#29 - https://twitter.com/alephium/status/1632350304208588800
+
+#30 - https://twitter.com/alephium/status/1634886987151994882
+
+#31 - https://twitter.com/alephium/status/1637423729193152514
+
+#32 - https://twitter.com/alephium/status/1639915107408044033
+
+#33 - https://twitter.com/alephium/status/1642466924876689413
+
+#34 - https://twitter.com/alephium/status/1645095313492017155
+
+#35 - https://twitter.com/alephium/status/1647540350658150407
+
+#36 - https://twitter.com/alephium/status/1650077066644291584
+
+#37 - https://twitter.com/alephium/status/1652613787290316803
+
+#38 - https://twitter.com/alephium/status/1655150495235997696
+
+#39 - https://twitter.com/alephium/status/1658134671648251907
+
+#40 - https://twitter.com/alephium/status/1660228530851184642
 
 ## People to Follow
 
