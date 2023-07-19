@@ -9,8 +9,6 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# All Things Alephium List
-
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 
 * [Tech Series](#tech-series)
