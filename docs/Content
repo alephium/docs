@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-sidebar_label: Overview
+sidebar_label: All Things Alephium
 slug: /
-title: Alephium Overview
+title: All Things Alephium
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
