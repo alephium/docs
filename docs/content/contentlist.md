@@ -3,7 +3,6 @@
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 
 * [Tech Series](#tech-series)
-* [Tech Threads](#tech-threads)
 * [TechTalks & AMAs](#techtalks--amas)
 * [Milestones](#milestones)
 * [Other Articles](#other-articles)
@@ -34,23 +33,39 @@ Linkedin - https://www.linkedin.com/company/74304166
 
 ## Tech Series
 
-Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
-
-Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
-
-Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
-
-Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
-
-Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
-
-## Tech Threads
-
-You can access the whole list here: https://twitter.com/alephium/status/1648310455725883393
-
+### Stateful UTXO
+Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749 <br>
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447 <br>
 sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928 <br>
 sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320
+
+### Proof-of-Less-Work
+Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301 <br>
+Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71 <br>
+Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
+
+### Alphred Virtual Machine
+Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
+Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370 <br>
+Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984 <br>
+Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
+
+### Asset Permission System
+Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
+Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
+
+### Blockflow
+Blockflow - https://twitter.com/alephium/status/1541711510178758658 <br>
+Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
+Sharding - https://twitter.com/alephium/status/1648310491763331078
+
+### Ralph Programming Language
+Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
+Ralph and Solidity Code Comparison - https://twitter.com/alephium/status/1643961985841905664
+
+## Explainer Series
+
+You can access the whole list here: https://twitter.com/alephium/status/1648310455725883393
 
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
 
@@ -59,12 +74,6 @@ Bridge #2 - https://twitter.com/alephium/status/1582368148631695361 <br>
 Bridge #3 - https://twitter.com/alephium/status/1587440588692934656 <br>
 
 New SDK - https://twitter.com/alephium/status/1574389337612947456
-
-Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370 <br>
-Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984 <br>
-Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
-
-Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
 
 Birthday Paradox - https://twitter.com/alephium/status/1559155971284275200
 
@@ -78,14 +87,7 @@ How many ALPH are mined per day? - https://twitter.com/alephium/status/155190546
 
 Leman Upgrade schnorr signatures : https://twitter.com/alephium/status/1648310494661595137
 
-Blockflow - https://twitter.com/alephium/status/1541711510178758658 <br>
-Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
-
-Sharding - https://twitter.com/alephium/status/1648310491763331078
-
 Full Nodes - https://twitter.com/alephium/status/1592536671177699328
-
-Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
 
 NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680 <br>
 NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
@@ -95,7 +97,6 @@ UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
 Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
 
 ## TechTalks & AMAs
-
 
 May 2023 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
 
