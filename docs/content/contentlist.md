@@ -286,6 +286,7 @@ Maud @ Plan B Lugano 2022 - https://www.youtube.com/watch?v=8DiMSar3HOw
 Ethcc Paris 2022 - https://www.youtube.com/watch?v=VVYH9rBJAdA
 
 CVC/CVA 2023 - https://www.youtube.com/watch?v=8DiMSar3HOw / https://twitter.com/alephium/status/1673692785457897472
+
 CVC/CVA  2022 - https://twitter.com/alephium/status/1537452412801323011 / https://twitter.com/alephium/status/1528649536050278401
 
 PBWS Paris - 2022 - https://twitter.com/alephium/status/1530174317576716290 / https://twitter.com/ParisBlockWeek/status/1519685412066836483
@@ -308,7 +309,8 @@ Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & PRs
 
-DappNode - Announcement - https://medium.com/@alephium/pushing-for-decentralization-alephium-and-dappnode-join-forces-c98845d9a9da <br>
+DappNode - Announcement - https://medium.com/@alephium/pushing-for-decentralization-alephium-and-dappnode-join-forces-c98845d9a9da
+
 DappNode - Tutorial -  https://medium.com/@alephium/alephium-dappnode-collab-tech-talk-and-ama-80b34dfd1e9f
 
 Ergo - Announcement - https://medium.com/@alephium/ergohack-v-alephium-sponsors-ergos-hackathon-with-flux-djed-alliance-to-foster-innovation-in-eae9c8bd7e97
