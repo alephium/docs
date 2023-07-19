@@ -1,8 +1,8 @@
 ---
 sidebar_position: 2
-sidebar_label: All Things Alephium
+sidebar_label: The Content Repo
 slug: /
-title: All Things Alephium
+title: The Content Repo
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
