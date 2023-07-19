@@ -626,7 +626,7 @@ subscription.unsubscribe()
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'
 const contractAddress = addressFromContractId(contractId)
-console(binToHex(contractIdFromAddress(contractAddress)) === contractId)
+console.log(binToHex(contractIdFromAddress(contractAddress)) === contractId)
 // true
 ```
 
