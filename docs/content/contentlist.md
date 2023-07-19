@@ -126,30 +126,30 @@ November 2021 - First Live AMA - https://medium.com/@alephium/alephiums-first-li
 
 ## Milestones 
 
-Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
+Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
 
-Alephium Bridge on Testnet - https://medium.com/@alephium/the-alephium-bridge-is-live-on-testnet-e13454677fb8
+May/23 Alephium Bridge on Testnet - https://medium.com/@alephium/the-alephium-bridge-is-live-on-testnet-e13454677fb8
 
-Alephium DEX PoC on Testnet - https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
+Mar/23 Alephium DEX PoC on Testnet - https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
 
-Leman Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
+Mar/23 Leman Network Upgrade - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
-1 year of Mainnet - https://medium.com/@alephium/one-year-of-mainnet-b7ed5d3024ee
+Nov/22 1 year of Mainnet - https://medium.com/@alephium/one-year-of-mainnet-b7ed5d3024ee
 
-Website update - https://twitter.com/alephium/status/1546841030020009984
+Jul/22 Website update - https://twitter.com/alephium/status/1546841030020009984
 
-Q2 2022 Update - https://medium.com/@alephium/alephium-h1-project-update-1f2076978f00
+May/22 Q2 2022 Update - https://medium.com/@alephium/alephium-h1-project-update-1f2076978f00
 https://twitter.com/alephium/status/1530174260114776071
 
-Q1 2022 Update - https://medium.com/@alephium/alephium-q1-project-update-50f4a7b354b0
+Jan/22 Q1 2022 Update - https://medium.com/@alephium/alephium-q1-project-update-50f4a7b354b0
 
-Q3 2021 Update - https://medium.com/@alephium/time-for-an-alephium-development-recap-cdaa47ee95a
+Dec/21 Q3 2021 Update - https://medium.com/@alephium/time-for-an-alephium-development-recap-cdaa47ee95a
 
-Mainnet Launch - https://medium.com/@alephium/alephium-mainnet-brings-sharding-smart-contracts-and-energy-efficiency-to-bitcoin-tech-stack-a255183aa50b
+Nov/21 Mainnet Launch - https://medium.com/@alephium/alephium-mainnet-brings-sharding-smart-contracts-and-energy-efficiency-to-bitcoin-tech-stack-a255183aa50b
 
-Pre-sale Q3 2021 - https://medium.com/@alephium/alephium-closes-3-6m-pre-sale-from-80-contributors-to-expand-sharded-utxo-blockchain-platform-84f80492e28d
+Sep/21 Pre-sale Q3 2021 - https://medium.com/@alephium/alephium-closes-3-6m-pre-sale-from-80-contributors-to-expand-sharded-utxo-blockchain-platform-84f80492e28d
 
-Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-8381dbd9f88d
+Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-8381dbd9f88d
 
 ## Other Articles
 
