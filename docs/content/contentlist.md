@@ -52,10 +52,6 @@ Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370 <br>
 Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984 <br>
 Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
-### Asset Permission System
-Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
-Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
-
 ### Blockflow
 Blockflow - https://twitter.com/alephium/status/1541711510178758658 <br>
 Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
@@ -65,6 +61,10 @@ Sharding - https://twitter.com/alephium/status/1648310491763331078
 ### Ralph Programming Language
 Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
 Ralph and Solidity Code Comparison - https://twitter.com/alephium/status/1643961985841905664
+
+### Asset Permission System
+Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
+Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
 ## Explainer Series
 
