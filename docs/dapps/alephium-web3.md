@@ -206,6 +206,7 @@ await wallet.signAndSubmitTransferTx({
 Similar to Ethereum, a contract is an abstraction of program code which lives on the Alephium blockchain. Let's use the following example to illustrate how to test, deploy and call a contract, please follow the [guide](/dapps/getting-started) to create a project.
 
 ### Test the contract
+#### Unit tests
 
 The SDK provides unit testing functionality, which calls the contract like a normal transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
 
@@ -244,115 +245,50 @@ const result = await TokenFaucet.tests.withdraw({
     asset: { alphAmount: 10n ** 18n }
   }]
 })
-console.log(JSON.stringify(result, null, 2))
-// {
-//   "contractId": "edcc67cc1187540b189e0c4b1cb8d881c6c7dc58bfc4a1ccc0f8cf0a07315a4e",
-//   "contractAddress": "2AhDWnKjdYULdEimnH5iKYkKKfcSDAA8gcHPd1FUNxRWM",
-//   "returns": null,
-//   "gasUsed": 21848,
-//   "contracts": [
-//     {
-//       "address": "2AhDWnKjdYULdEimnH5iKYkKKfcSDAA8gcHPd1FUNxRWM",
-//       "contractId": "edcc67cc1187540b189e0c4b1cb8d881c6c7dc58bfc4a1ccc0f8cf0a07315a4e",
-//       "bytecode": "050609121b4024402d4067010000000102ce0002010000000102ce0102010000000102ce0202010000000102ce0302010000000102a00002010201010013a0007e02175468652063757272656e742062616c616e6365206973200016000e320c7bb4b11600aba00016002ba10005b416005f",
-//       "initialStateHash": "e511c1a7e9560bd8edec9cf53e0d77653daa6f968c9b7caf825dc01dd7fd4c5f",
-//       "codeHash": "142f8d7201aa0279723529eb7b15f247c0e41a71d1f58d7bdbefa5264d16a7a8",
-//       "fields": {
-//         "symbol": "5446",
-//         "name": "546f6b656e466175636574",
-//         "decimals": "18",
-//         "supply": "1000000000000000000",
-//         "balance": "9"
-//       },
-//       "fieldsSig": {
-//         "names": [
-//           "symbol",
-//           "name",
-//           "decimals",
-//           "supply",
-//           "balance"
-//         ],
-//         "types": [
-//           "ByteVec",
-//           "ByteVec",
-//           "U256",
-//           "U256",
-//           "U256"
-//         ],
-//         "isMutable": [
-//           false,
-//           false,
-//           false,
-//           false,
-//           true
-//         ]
-//       },
-//       "asset": {
-//         "alphAmount": "1000000000000000000",
-//         "tokens": [
-//           {
-//             "id": "edcc67cc1187540b189e0c4b1cb8d881c6c7dc58bfc4a1ccc0f8cf0a07315a4e",
-//             "amount": "9"
-//           }
-//         ]
-//       }
-//     }
-//   ],
-//   "txOutputs": [
-//     {
-//       "type": "AssetOutput",
-//       "address": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH",
-//       "alphAmount": "1000000000000000",
-//       "tokens": [
-//         {
-//           "id": "edcc67cc1187540b189e0c4b1cb8d881c6c7dc58bfc4a1ccc0f8cf0a07315a4e",
-//           "amount": "1"
-//         }
-//       ],
-//       "lockTime": 0,
-//       "message": ""
-//     },
-//     {
-//       "type": "AssetOutput",
-//       "address": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH",
-//       "alphAmount": "936500000000000000",
-//       "tokens": [],
-//       "lockTime": 0,
-//       "message": ""
-//     },
-//     {
-//       "type": "ContractOutput",
-//       "address": "2AhDWnKjdYULdEimnH5iKYkKKfcSDAA8gcHPd1FUNxRWM",
-//       "alphAmount": "1000000000000000000",
-//       "tokens": [
-//         {
-//           "id": "edcc67cc1187540b189e0c4b1cb8d881c6c7dc58bfc4a1ccc0f8cf0a07315a4e",
-//           "amount": "9"
-//         }
-//       ]
-//     }
-//   ],
-//   "events": [
-//     {
-//       "txId": "92a392b116cbb3247849887152230d02771d3edc79b4884a0c332f354cd60f3d",
-//       "blockHash": "2a7128f25167357ab202b08065ed9d7e3880c5a8c8b95867054ddd34ff53994b",
-//       "contractAddress": "2AhDWnKjdYULdEimnH5iKYkKKfcSDAA8gcHPd1FUNxRWM",
-//       "name": "Withdraw",
-//       "eventIndex": 0,
-//       "fields": {
-//         "to": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH",
-//         "amount": "1"
-//       }
-//     }
-//   ],
-//   "debugMessages": [
-//     {
-//       "contractAddress": "2AhDWnKjdYULdEimnH5iKYkKKfcSDAA8gcHPd1FUNxRWM",
-//       "message": "The current balance is 10"
-//     }
-//   ]
-// }
+
+const contractState = result.contracts[0] as TokenFaucetTypes.State
+expect(contractState.address).toEqual(testContractAddress)
 ```
+
+A complete example can be found in our [`alephium-nextjs-template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
+
+#### Integration tests
+
+Alongside unit tests, you can also run some integration tests, be careful as those one can change the blockchain state.
+
+```typescript
+web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
+await Project.build()
+
+const accounts = signer.getAccounts()
+const account = accounts[0]
+const testAddress = account.address
+await signer.setSelectedAccount(testAddress)
+const testGroup = account.group
+
+const deployed = deployments.getDeployedContractResult(testGroup, 'TokenFaucet')
+const tokenId = deployed.contractInstance.contractId
+const tokenAddress = deployed.contractInstance.address
+
+const faucet = TokenFaucet.at(tokenAddress)
+const initialState = await faucet.fetchState()
+const initialBalance = initialState.fields.balance
+
+// Call `withdraw` function 10 times
+for (let i = 0; i < 10; i++) {
+  await Withdraw.execute(signer, {
+    initialFields: { token: tokenId, amount: 1n },
+    attoAlphAmount: DUST_AMOUNT * 2n
+  })
+
+  //!!! Blockchain state is changed !!!
+  const newState = await faucet.fetchState()
+  const newBalance = newState.fields.balance
+  expect(newBalance).toEqual(initialBalance - BigInt(i) - 1n)
+}
+```
+
+More details can be found in our [integration test folder](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration)
 
 ### Deploy the contract
 
