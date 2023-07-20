@@ -33,17 +33,11 @@ This will create a new directory `alephium-tutorial` and initialize a sample pro
 
 ## Launch the local development network
 
-To compile and test your contracts, it's necessary to launch a local development network by running:
+To compile and test your contracts, it's necessary to launch a local development network, and you can follow [this guide](/full-node/devnet) to launch a devnet.
 
-```
-npx @alephium/cli@latest devnet start
-```
-
-Your new network is now launched using [this configuration](https://github.com/alephium/alephium-web3/blob/master/packages/cli/devnet-user.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
+Your new network is now launched using [this configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
 
 The Typescript SDK is then able to interact with the network through REST endpoints.
-
-Alternatively, if you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
 
 ## Compile your contract
 
