@@ -289,8 +289,6 @@ Cheng Wang at EthCC 2022 - Account Model meets UTXO: a new paradigm for secure d
 
 Cheng Wang - Blockchain sharding at CDC 36th C3 - https://youtu.be/_SjtXp6F43k
 
-Maud @ Plan B Lugano 2022 - https://www.youtube.com/watch?v=8DiMSar3HOw
-
 Ethcc Paris 2022 - https://www.youtube.com/watch?v=VVYH9rBJAdA
 
 CVC/CVA 2023 - https://www.youtube.com/watch?v=8DiMSar3HOw / https://twitter.com/alephium/status/1673692785457897472
@@ -389,18 +387,6 @@ First Tweet - https://twitter.com/alephium/status/1095960264837685249
 Wow visual - https://twitter.com/gemforgem/status/1441427580578455554
 
 Hongchao: https://twitter.com/hongchao
-
-### Community
-
-Redonder: https://twitter.com/zkitbeats
-
-TL: https://twitter.com/techleaks24
-
-Ryan: https://twitter.com/RyanRit91769208
-
-Diomark: https://twitter.com/diomark
-
-Benjaminnn: https://twitter.com/BenLarkey
 
 ## Libraries & Developer Resources
 
