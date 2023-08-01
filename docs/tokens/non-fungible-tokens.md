@@ -265,7 +265,6 @@ collection before and after it is added into the token list.
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/verified-nft-collection.png").default} alt="Verified" width="250"/>
 
-Currently, a pull request is needed to add the token metadata to token
+Currently, a pull request is needed to add the NFT collection to token
 list.
-
 
