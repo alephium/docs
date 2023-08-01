@@ -237,3 +237,17 @@ share the link and start to launch the public sale of your NFT
 collection!
 
 <img src={require("./media/flow-page.png").default} alt="FLow Page"/>
+
+### Wallet Support
+
+Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
+Wallet](/wallet/extension-wallet/overview) have native support for
+non-fungible tokens.
+
+Following is an example of displaying and transfering a NFT in the
+`Imagine Collection` in the extension wallet:
+
+<img
+src={require("./media/show-nft-collection-extension-wallet.png").default} alt="Show collection" width="250"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src={require("./media/transfer-nft-collection-extension-wallet.png").default} alt="Transfer NFT" width="250" />
