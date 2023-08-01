@@ -4,129 +4,108 @@ title: Extension Wallet for dApps
 sidebar_label: dApp integration
 ---
 
-The Alephium extension wallet injects a global object `window.alephium` into the websites
-that the user interacts with. dApps can use this object to authenticate the user, request
-user accounts and communicate with the Alephium blockchain such as signing and submitting
-various transactions. To detect the `window.alephium` object, we recommand to use the
+The Alephium extension wallet injects a global object
+`window.alephiumProviders.alephium` into the web apps that the user
+interacts with. dApps can use this object to authenticate the user,
+request user accounts and communicate with the Alephium blockchain
+such as signing and submitting transactions. To detect the
+`window.alephiumProviders.alephium` object, we recommand to use the
 [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
 package.
 
-### 1. Basic Setup
+### Basic Setup
 
 ```
 npm install --save @alephium/get-extension-wallet
 ```
 
-The following code shows how to connect to the extension wallet, get accounts as well as
-listen to events to detect account and network updates:
+The following code shows how to connect to the extension wallet using
+pure typescript:
 
 ```ts
-import { connect } from "@alephium/get-extension-wallet"
+import { getDefaultAlephiumWallet } from "@alephium/get-extension-wallet"
 
 async function tryConnect() {
-  // Show the available extension wallets for users to select. Returns the
-  // `window.alephium` object after user selects the extension wallet.
-  const windowAlephium = await connect({ showList: false })
+  // Returns the `window.alephiumProviders.alephium` object after user selects
+  // the extension wallet.
+  const windowAlephium = await getDefaultAlephiumWallet()
+  // Authenticate user to the current dApp, return the selected account
+  const selectedAccount = await windowAlephium?.enable()
 
-  if (windowAlephium) {
-    // Authenticate user to the current dApp
-    await windowAlephium.enable()
-    
-    // Get all the available accounts in the extension wallet
-    const accounts = await windowAlephium.getAccounts()
-    
-    // Get the selected account in the extension wallet
-    const selectedAccount = windowAlephium.selectedAccount
-
-    // Listen to the event where anther account is selected
-    windowAlephium.on("addressesChanged", (address) => { 
-      assert(address === windowAlephium.selectedAccount.address)
-      console.log(`Address ${address} is selected`)
-    })
-
-    // Listen to the event where network is changed. e.g. from `testnet` to `mainnet`
-    windowAlephium.on("networkChanged", (network) => { 
-      console.log(`Network ${network} is selected`)
-    })
+  if (windowAlephium && selectedAccount) {
+    // From here, you can execute various transactions:
+    //
+    // windowAlephium.signAndSubmitTransferTx(...)
+    // windowAlephium.signAndSubmitDeployContractTx(...)
+    // windowAlephium.signAndSubmitExecuteScriptTx(...)
+    // ...
   }
 }
 ```
 
-User will be prompted to connect to the current web page when `windowAlephium.enable()` method is called:
+Users will be prompted to connect to the current dApp when
+`windowAlephium?.enable()` method is called:
+
 <img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="250" />
 
-After user clicks the `Connect` button, the extension wallet will return all the available accounts
-to the dApp.
+After user clicks the `Connect` button, dApp is connected with users
+extension wallet.
 
-### 2. Sign Transactions
+### Web3 React
 
-`windowAlephium` object [implements](https://github.com/alephium/extension-wallet/blob/4f29c8f10843b737cda87ddc689b71c298a42e57/packages/get-extension-wallet/src/types.ts#L138)
-the [SignerProvider](https://github.com/alephium/alephium-web3/blob/ad4401d9ef87eced37d03762324297aeba07e03d/packages/web3/src/signer/signer.ts#L154), which exposes the following
-interfaces:
+For dApps built with react,
+[@alephium/web3-react](https://www.npmjs.com/package/@alephium/web3-react)
+offers an easier way to authenticate with dApps using wallets,
+including extension wallet.
 
-```ts
-export interface SignerProvider {
-  // Get all the available accounts from the wallet
-  getAccounts(): Promise<Account[]>
+A minimal example is shown below:
 
-  // Sign and optionally submit the transaction that transfers assets
-  signTransferTx(params: SignTransferTxParams): Promise<SignTransferTxResult>
-
-  // Sign and optionally submit the transaction that deploys a contract
-  signDeployContractTx(params: SignDeployContractTxParams): Promise<SignDeployContractTxResult>
-
-  // Sign and optionally submit the transaction that executes a transaction script
-  signExecuteScriptTx(params: SignExecuteScriptTxParams): Promise<SignExecuteScriptTxResult>
-
-  // Sign an unsigned transaction
-  signUnsignedTx(params: SignUnsignedTxParams): Promise<SignUnsignedTxResult>
-
-  // Sign a hex string
-  signHexString(params: SignHexStringParams): Promise<SignHexStringResult>
-
-  // Sign a message
-  signMessage(params: SignMessageParams): Promise<SignMessageResult>
-}
+```typescript
+const App = () => {
+  return (
+    <AlephiumConnectProvider useTheme="retro">
+      /* Your App */
+      <AlephiumConnectButton />
+    </AlephiumConnectProvider>
+  );
 ```
 
-For example, together with the [@alephium/web3](https://www.npmjs.com/package/@alephium/web3) package, here is
-how we can execute a transaction script called `HelloWorld` using the `windowAlephium` object created from the
-previous section.
+This will place a button in your dApp with the `retro` built-in
+theme. Once users click the button, a pop-up window will show up to
+ask users to select wallets to connect:
+
+<img src={require("./media/connect-dapp-2.png").default} alt="Connect dApp Web3 React" />
+
+If user selects `Extension Wallet`, user will again be prompted to
+connect to the current dApp. After user clicks the `Connect` button,
+dApp is connected with users extension wallet.
+
+### Sign Transactions
+
+`windowAlephium` object implements the
+[InteractiveSignerProvider](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/signer/signer.ts#L80),
+which exposes the following methods for transaction signing:
 
 ```ts
-TxScript HelloWorld() {
-  emit Debug(`Hello World`)
-}
+abstract signAndSubmitTransferTx(params: SignTransferTxParams): Promise<SignTransferTxResult>
+abstract signAndSubmitDeployContractTx(params: SignDeployContractTxParams): Promise<SignDeployContractTxResult>
+abstract signAndSubmitExecuteScriptTx(params: SignExecuteScriptTxParams): Promise<SignExecuteScriptTxResult>
+abstract signAndSubmitUnsignedTx(params: SignUnsignedTxParams): Promise<SignUnsignedTxResult>
+abstract signUnsignedTx(params: SignUnsignedTxParams): Promise<SignUnsignedTxResult>
+// The message will be prefixed with 'Alephium Signed Message: ' before signing
+// so that the resulted signature cannot be reused for building transactions.
+abstract signMessage(params: SignMessageParams): Promise<SignMessageResult>
 ```
 
-Please refer to the [Getting Started](/dapps/getting-started#compiling-your-contracts) page
-for more details about how to compile smart contracts into artifacts that can be used in your
-dApp. More on the Ralph programming language, check out the [language reference](/ralph/getting-started).
-In this case, we assume that the compiled artifact for `HelloWorld` is located at
-`../artifacts/hello_world.ral.json`
+When any of these method is executed, extension wallet will provide
+neccessary information depending on the type of the transaction and
+prompt user for signature. 
 
-```ts
-import { Script } from "@alephium/web3"
-import helloWorldArtifact from '../artifacts/hello_world.ral.json'
+The following is an example of a transaction for token transfer: user
+is transferring 2 `TokenFaucet` token from `Salary` account to
+`Saving` account.
 
-async function callScript() {
-  // Load the transaction script
-  const helloWorld = Script.fromJson(helloWorldArtifact)
-  
-  // Constract the execution parameters 
-  const deployParams = helloWorld.paramsForDeployment({
-    signerAddress: windowAlephium.selectedAccount.address,
-  })
-  
-  // Sign and execute the script, return the result
-  return await windowAlephium.signExecuteScriptTx(deployParams)
-}
-```
+<img src={require("./media/transaction-signing-transfer.png").default} alt="Transaction Signing Transfer" width="250" />
 
-That is it! When signature is needed, user will be prompted to approve the transaction as follows:
-
-<img src={require("./media/execute-txscript.png").default} alt="Execute Transction Script" width="250" />
-
-
-After user clicks the `Approve` button, the transction will be signed and submitted to the Alephium blockchain
-by the extension wallet. Other methods can be executed in a similiar way.
+After user clicks the `Sign` button, the transction will be signed and
+submitted to the Alephium blockchain by the extension wallet.

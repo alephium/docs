@@ -586,7 +586,7 @@ Tests the condition or checks invariants.
 >
 > @param **errorCode** *the error code to throw if the check fails*
 >
-> @returns *true if the condition is satisfied, false otherwise*
+> @returns
 
 ---
 
@@ -1324,7 +1324,7 @@ Verifies the transaction SecP256K1 signature of a public key. The signature is s
 
 > @param **publicKey** *the public key (33 bytes) of the signer*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
@@ -1354,7 +1354,7 @@ Verifies the SecP256K1 signature of the input and public key.
 >
 > @param **signature** *the signature (64 bytes) value*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
@@ -1372,7 +1372,7 @@ Verifies the ED25519 signature of the input and public key.
 >
 > @param **signature** *the signature value (64 bytes)*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
@@ -1390,7 +1390,7 @@ Verifies the BIP340 Schnorr signature of the input and public key.
 >
 > @param **signature** *the signature value (64 bytes)*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
