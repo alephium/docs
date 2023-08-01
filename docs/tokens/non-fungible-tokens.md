@@ -251,3 +251,21 @@ Following is an example of displaying and transfering a NFT in the
 src={require("./media/show-nft-collection-extension-wallet.png").default} alt="Show collection" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-nft-collection-extension-wallet.png").default} alt="Transfer NFT" width="250" />
+
+### Token List
+
+It is not too difficult to fake other NFT collections and scam
+users. [Token list](https://github.com/alephium/token-list) allows
+well known NFT collections in the Alephium ecosystem to be
+whitelisted, so that dApps and wallets can warn users for unverified
+NFT collections. Here is how extension wallet displays a NFT
+collection before and after it is added into the token list.
+
+<img src={require("./media/unverified-nft-collection.png").default} alt="Unverified" width="250"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src={require("./media/verified-nft-collection.png").default} alt="Verified" width="250"/>
+
+Currently, a pull request is needed to add the token metadata to token
+list.
+
+
