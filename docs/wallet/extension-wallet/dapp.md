@@ -5,15 +5,18 @@ sidebar_label: dApp integration
 ---
 
 The Alephium extension wallet injects a global object
-`window.alephiumProviders.alephium` into the web apps that the user
+`window.alephiumProviders.alephium` into the dApps that the user
 interacts with. dApps can use this object to authenticate the user,
-request user accounts and communicate with the Alephium blockchain
-such as signing and submitting transactions. To detect the
-`window.alephiumProviders.alephium` object, we recommand to use the
-[@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
-package.
+request users account and communicate with the Alephium blockchain
+such as fetching user balance, contract state and submitting
+transactions, etc.
 
 ### Basic Setup
+
+To detect the `window.alephiumProviders.alephium` object, we recommand
+to use the
+[@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
+package.
 
 ```
 npm install --save @alephium/get-extension-wallet
@@ -58,6 +61,10 @@ For dApps built with react,
 offers an easier way to authenticate with dApps using wallets,
 including extension wallet.
 
+```
+npm install --save @alephium/web3-react
+```
+
 A minimal example is shown below:
 
 ```typescript
@@ -79,6 +86,10 @@ ask users to select wallets to connect:
 If user selects `Extension Wallet`, user will again be prompted to
 connect to the current dApp. After user clicks the `Connect` button,
 dApp is connected with users extension wallet.
+
+Please refer to the
+[`nextjs-template`](https://github.com/alephium/nextjs-template) repo
+for a working and more complete example.
 
 ### Sign Transactions
 
