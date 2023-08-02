@@ -90,6 +90,11 @@ NFTs.
 
 ### Manage Accounts
 
+Account in the Alephium extension wallet represents a digital
+container that consists of a public address and its corresponding
+private key, allowing user to receive, store and transfer assets on
+the Alephium blockchain.
+
 Alephium extension wallet allows users to manage multiple accounts at
 the same time. For example, Alice can have one account for `Salary`,
 one account for `Saving` and another account for `Trip 2023`. 
