@@ -20,7 +20,7 @@ dApps and wallets to infer token types and fetch token information.
 The standard [fungible token
 interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
 defines methods to get the `name`, `symbol`, `decimals` as well as the
-`totalSupply` of the token. It also annotated with the `@std`
+`totalSupply` of the token. It is also annotated with the `@std`
 annotation with the id `#0001`:
 
 ```rust
@@ -109,7 +109,7 @@ Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
 Wallet](/wallet/extension-wallet/overview) have native support for
 fungible tokens.
 
-Following is an example of listing and transfering the `PACA` token
+Following is an example of displaying and transfering the `PACA` token
 using extesion wallet:
 
 <img src={require("./media/transfer-alphpaca-1.png").default} alt="Token Overview" width="250"/>
@@ -126,10 +126,10 @@ as `description` and `logoURI` so that dApps and wallets can properly
 display them.
 
 The goal of the [token list](https://github.com/alephium/token-list)
-is to be a source of trust for metadata of the well known tokens in
-the Alephium ecosystem, so wallets and dApps can warn users for the
-unverified tokens. Here is how extension wallet displays a token
-before and after it is added into the token list.
+is to be a source of trust for token id and metadata of the well known
+tokens in the Alephium ecosystem, so wallets and dApps can warn users
+for the unverified tokens. Here is how extension wallet displays a
+token before and after it is added into the token list.
 
 <img src={require("./media/unverified-token.png").default} alt="Unverified" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
