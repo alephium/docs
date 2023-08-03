@@ -11,19 +11,19 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 Here's a tutorial on how to create an address for a specific group. 
 Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
 
-* Unlock your Extension Wallet.
+1. Unlock your Extension Wallet.
 
 ![step01](https://github.com/alephium/docs/assets/88235023/efa34122-c996-4a5b-a1bc-a2c3d97b36bd)
 
-* Click on the Wallet Name in the top left corner.
+2. Click on the Wallet Name in the top left corner.
   
 ![step02](https://github.com/alephium/docs/assets/88235023/8c169719-ebe5-4556-a967-ffae987bc4c3)
 
-* Press the “+” button in the top right corner.
+3. Press the “+” button in the top right corner.
   
 ![step03](https://github.com/alephium/docs/assets/88235023/a84a7019-d8b2-4045-9133-f10a115e3512)
 
-* Click on the “Group” dropdown menu and select a group of your choice.
+*4. Click on the “Group” dropdown menu and select a group of your choice.
   
 ![step04](https://github.com/alephium/docs/assets/88235023/f3192c1e-9cf8-432b-9283-784c97ea3108)
 
@@ -38,15 +38,15 @@ You can repeat this process for every group (0, 1, 2, 3) you want an address on.
 Here's a tutorial on how to create an address for a specific group. 
 Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
 
-* Unlock your Desktop Wallet.
+1. Unlock your Desktop Wallet.
 
 ![stepp01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
 
-* Click on the “Addresses & Contacts” menu.
+2. Click on the “Addresses & Contacts” menu.
 
 ![stepp02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
 
-* Press the blue “New Address” button.
+3. Press the blue “New Address” button.
 
 ![stepp03](https://github.com/alephium/docs/assets/88235023/57595a9a-1588-43ff-a7cc-8d57b08e108f)
 
@@ -58,15 +58,15 @@ Press “Generate”. You can repeat this process for every group you want an ad
 
 # How to generate a new address for all groups at once in the Desktop Wallet
 
-* Unlock your Desktop Wallet.
+1. Unlock your Desktop Wallet.
 
 ![stepp01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
 
-* Click on the “Addresses & Contacts” menu.
+2. Click on the “Addresses & Contacts” menu.
 
 ![stepp02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
 
-* Click on the "wrench" icon (advanced operations).
+3. Click on the "wrench" icon (advanced operations).
 
 ![stepp04](https://github.com/alephium/docs/assets/88235023/19999aec-b9dc-4b40-bb7b-3ee8dfab49cf)
 
