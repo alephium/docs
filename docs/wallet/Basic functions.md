@@ -6,7 +6,9 @@ sidebar_label: Node wallet
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
-# How to generate a new address in the Extension Wallet 
+# How to generate a new address for a specific group in the Extension Wallet
+
+You need to take these steps to create an address for a specific group. Sometimes this is needed to interact with dApps in the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
 
 * Unlock your Extension Wallet.
 
@@ -26,11 +28,13 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 Optionally you could choose to use Schnorr signatures (more information about this feature can be found [here](https://twitter.com/alephium/status/1648310494661595137). Once you’re done, click “Create a new Alephium Account.”
 
-You can repeat this process for every group (0, 1, 2, 3) you want an address on. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
+You can repeat this process for every group (0, 1, 2, 3) you want an address on.
 
 
 
-# How to generate a new address in the Desktop Wallet
+# How to generate a new address for a specific group in the Desktop Wallet
+
+You need to take these steps to create an address for a specific group. Sometimes this is needed to interact with dApps in the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
 
 * Unlock your Desktop Wallet.
 
@@ -48,7 +52,7 @@ Once the menu shows up, choose a name and a colour for your new address.
 
 Then, turn on the “Advanced options” toggle and select the group you want to use for your new address.
 
-Press “Generate”. You can repeat this process for every group you want an address on (0, 1, 2, 3) or use the next method for batch address creation. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
+Press “Generate”. You can repeat this process for every group you want an address on (0, 1, 2, 3) or use the next method for batch address creation.
 
 # How to generate a new address for all groups at once in the Desktop Wallet
 
