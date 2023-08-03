@@ -6,12 +6,10 @@ sidebar_label: Node wallet
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
-# How to generate a new address for a specific group in the Extension Wallet (and the desktop wallet)
+# How to generate a new address for a specific group in the Extension Wallet
 
 Here's a tutorial on how to create an address for a specific group. 
-Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
-
-First, with the extension wallet: 
+Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
 
 * Unlock your Extension Wallet.
 
@@ -36,6 +34,9 @@ You can repeat this process for every group (0, 1, 2, 3) you want an address on.
 
 
 # How to generate a new address for a specific group in the Desktop Wallet
+
+Here's a tutorial on how to create an address for a specific group. 
+Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
 
 * Unlock your Desktop Wallet.
 
@@ -71,4 +72,4 @@ Press “Generate”. You can repeat this process for every group you want an ad
 
 Once the menu appears, click the blue "Start" button in the "Generate one address per group" section. In the popup, choose a name for the wallets. Then click on the blue "Generate" button.
 
-Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
+Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
