@@ -64,6 +64,6 @@ Press “Generate”. You can repeat this process for every group you want an ad
 
 ![stepp04](https://github.com/alephium/docs/assets/88235023/19999aec-b9dc-4b40-bb7b-3ee8dfab49cf)
 
-Once the menu shows up, click on the blue "Start" button in the "Generate one address per group" section. In the popup, choose a name for the wallets. Then click on the blue "Generate" button.
+Once the menu appears, click the blue "Start" button in the "Generate one address per group" section. In the popup, choose a name for the wallets. Then click on the blue "Generate" button.
 
 Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
