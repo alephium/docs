@@ -6,9 +6,12 @@ sidebar_label: Node wallet
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
-# How to generate a new address for a specific group in the Extension Wallet
+# How to generate a new address for a specific group in the Extension Wallet (and the desktop wallet)
 
-You need to take these steps to create an address for a specific group. Sometimes this is needed to interact with dApps in the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
+Here's a tutorial on how to create an address for a specific group. 
+Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
+
+First, with the extension wallet: 
 
 * Unlock your Extension Wallet.
 
@@ -26,15 +29,13 @@ You need to take these steps to create an address for a specific group. Sometime
   
 ![step04](https://github.com/alephium/docs/assets/88235023/f3192c1e-9cf8-432b-9283-784c97ea3108)
 
-Optionally you could choose to use Schnorr signatures (more information about this feature can be found [here](https://twitter.com/alephium/status/1648310494661595137). Once you’re done, click “Create a new Alephium Account.”
+Optionally you could choose to use Schnorr signatures (more information about this feature can be found [here](https://twitter.com/alephium/status/1648310494661595137)). Once you’re done, click “Create a new Alephium Account.”
 
 You can repeat this process for every group (0, 1, 2, 3) you want an address on.
 
 
 
 # How to generate a new address for a specific group in the Desktop Wallet
-
-You need to take these steps to create an address for a specific group. Sometimes this is needed to interact with dApps in the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups in Alephium).
 
 * Unlock your Desktop Wallet.
 
@@ -50,7 +51,7 @@ You need to take these steps to create an address for a specific group. Sometime
 
 Once the menu shows up, choose a name and a colour for your new address.
 
-Then, turn on the “Advanced options” toggle and select the group you want to use for your new address.
+Then, turn on the “Advanced options” toggle and select the group you want to generate your new address on.
 
 Press “Generate”. You can repeat this process for every group you want an address on (0, 1, 2, 3) or use the next method for batch address creation.
 
