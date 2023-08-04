@@ -77,6 +77,8 @@ Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
 Sharding - https://twitter.com/alephium/status/1648310491763331078
 
+An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
+
 ### Ralph Programming Language
 Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
 
@@ -88,6 +90,8 @@ Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
 ## Explainer Series
+
+First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
 
 Block Time and Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
 
@@ -132,6 +136,8 @@ NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
 ## TechTalks & AMAs
+
+Jul/26 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
 
 May/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
 
@@ -195,11 +201,17 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
+Builders Highlight 3 - Alphpaca NFTs
+https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
+
 Builders Highlight 2 - Sezame Wallet
 https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight 1 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #11 - Dr. Jekyll
+https://medium.com/@alephium/community-highlight-11-dr-jekyll-165ab9a51880
 
 Community Highlight 10 - Lx, aka Lix
 https://medium.com/@alephium/community-highlight-10-lx-aka-lix-fde724cf8d81
@@ -238,6 +250,8 @@ Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-i
 
 Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
 
+Alephium Send your best Alephium Memes! - https://twitter.com/alephium/status/1686420533510832128
+
 Video Creation contest - https://medium.com/@alephium/contest-for-all-video-creators-e777f2619596
 
 Naming Competition - https://medium.com/@alephium/alephium-naming-competition-c1b736797461
@@ -245,6 +259,18 @@ Naming Competition - https://medium.com/@alephium/alephium-naming-competition-c1
 Introducing Community Rewards - https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf
 
 DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
+
+## Tutorials & Workshops
+
+How to use the Alephium Desktop Wallet privately through the NYM Mixnet - https://www.youtube.com/watch?v=VbhQEhtX-rI
+
+First Developer Workshop — Build a Token Faucet ( Video ) - https://www.youtube.com/watch?v=YblUxEcXQuY
+
+How to use Alephium's app on Ledger? A Tutorial - https://www.youtube.com/watch?v=YBQy_siZh6w&t
+
+How to use the Alephium Bridge (testnet) - part 1 - https://www.youtube.com/watch?v=cwv28divQrA&t
+
+How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watch?v=TziFpCgM3-0&t
 
 
 ## External Podcasts & Publications
