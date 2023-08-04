@@ -1,7 +1,7 @@
 ---
 sidebar_position: 70
-title: Node Wallet
-sidebar_label: Node wallet
+title: Basic Functions
+sidebar_label: Basic Functions
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
