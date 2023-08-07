@@ -4,28 +4,23 @@ title: Non-fungible Tokens (NFTs)
 sidebar_label: Non-fungible Tokens
 ---
 
-Non-fungible tokens (NFTs) on Alephium has some unique characteristics
+Non-fungible tokens (NFTs) on Alephium have several unique characteristics
 compared to NFTs on other blockchains:
 
-- Like other types of tokens on Alephium, NFTs are managed securely by
-  UTXOs which are owned directly by addresses
-- Users' NFTs can be discovered easily by dApps and wallets without
-  relying on third party services
-- NFTs often interact with smart contracts such as decentralized
-  marketplaces which might have complex logic. Thanks to Alephium's
-  innovative VM and language design, users doesn't need a seperate
-  approval transaction when trading NFTs and developers can write
-  secure code more easily with the help of tools such as [Asset
-  Permission System](/ralph/asset-permission-system), etc
-- The supply of NFTs on Alephium is finite because each NFT is issued
-  by deploying a contract and there is an 1 `ALPH` deposit requirement
-  for each contract deployed.
-  
-In Alephium, there is no
-[mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types)
-data structure. A NFT collection is a smart contract with
-[sub-contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions)
-representing individual NFTs within the collection.
+- True ownership based on the UTXO model: Like other types of tokens on Alephium, NFTs are securely managed by UTXOs, which are directly owned by addresses. Since UTXOs are protected by users' private keys, even if there are bugs in the NFT contract, users' assets remain safe.
+
+- First-class support for NFTs: Tokens are native assets on Alephium. As a result, users’ NFTs can be easily discovered and displayed by wallets, explorers, and dApps without relying on third-party services.
+
+- Higher security thanks to Alephium’s VM and contract language: Alephium's virtual machine (VM) and contract language eliminate the need for a separate approval transaction during NFT trading, reducing associated risks. This simplifies the process of writing secure NFT contracts for developers with the help of tools such as the [Asset
+  Permission System](/ralph/asset-permission-system).
+
+- Sub-contract system: In Alephium, there is no [mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types) data structure. Collections are created with a parent contract (the collection) and [sub-contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (the items). Each sub-contract represents an NFT in this collection, and all metadata is tied to it. This is a native feature of the Alephium Blockchain that allows Alephium’s NFTs to be unique (one token per sub-contract) or semi-fungible, as the same minting contract can create more than one token.
+
+- Efficient transaction batching: Multiple NFTs and users can be involved in a single transaction.
+
+- Cheaper transaction fees and higher throughput: NFT transactions will benefit from Alephium's sharding algorithm.
+
+- NFT scarcity: The supply of NFTs on Alephium is finite, as each NFT necessitates the deployment of its own individual sub-contract, which in turn requires a deposit of ALPH - currently set at 1 `ALPH`. This unique structure inherently imposes a limit on the production of NFTs on the platform, reinforcing the scarcity of NFTs on Alephium.
   
 ### Non-fungible Token Standard
 
