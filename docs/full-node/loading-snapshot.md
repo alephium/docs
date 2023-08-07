@@ -26,7 +26,7 @@ required disk space to download and to extract the snapshot:
 ```shell
 ALEPHIUM_HOME=~/.alephium
 ALEPHIUM_NETWORK=mainnet
-curl -L "$(curl -s https://s3.eu-central-1.amazonaws.com/archives.alephium.org/archives/$ALEPHIUM_NETWORK/full-node-data/_latest.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
+curl -L "$(curl -s https://archives.alephium.org/archives/$ALEPHIUM_NETWORK/full-node-data/_latest.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
 ```
 
 A specific file `_latest.txt` is updated for your convenience, always pointing to the latest snapshot available.
@@ -65,5 +65,5 @@ can be loaded in the postgresql database of the explorer backend at the first ru
 
 ```shell
 ALEPHIUM_NETWORK=mainnet
-curl -L $(curl -L -s https://s3.eu-central-1.amazonaws.com/archives.alephium.org/archives/${ALEPHIUM_NETWORK}/explorer-db/_latest.txt) | gunzip -c | psql -U $pg_user -d $database
+curl -L $(curl -L -s https://archives.alephium.org/archives/${ALEPHIUM_NETWORK}/explorer-db/_latest.txt) | gunzip -c | psql -U $pg_user -d $database
 ```
