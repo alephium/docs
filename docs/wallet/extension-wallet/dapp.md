@@ -70,10 +70,10 @@ A minimal example is shown below:
 ```typescript
 const App = () => {
   return (
-    <AlephiumConnectProvider useTheme="retro">
+    <AlephiumWalletProvider useTheme="retro">
       /* Your App */
       <AlephiumConnectButton />
-    </AlephiumConnectProvider>
+    </AlephiumWalletProvider>
   );
 ```
 
