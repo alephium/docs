@@ -128,13 +128,13 @@ After user is connected to the wallet, we can interact with the
 Alephium blockchain by using a set of react hooks provided by
 [@alephium/web3-react](https://github.com/alephium/alephium-web3/tree/master/packages/web3-react). For
 example, getting the [current
-account](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useAccount.tsx),
+connected wallet](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useWallet.tsx),
 [balance](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useBalance.tsx)
 and [transaction
 status](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useTxStatus.tsx),
 etc.
 
-It is worth mentioning that the `useBalance` hook also provides the functionality to update the balance.
+When a user makes a transaction, you can update the user's balance using `updateBalanceForTx`.
 Here is a simple example:
 
 ```typescript
