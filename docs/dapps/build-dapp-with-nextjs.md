@@ -138,7 +138,10 @@ When a user makes a transaction, you can update the user's balance using `update
 Here is a simple example:
 
 ```typescript
-const { updateBalanceForTx } = useAlephiumBalanceContext()
+// The useBalance hook returns two values:
+// 1. balance: the current balance
+// 2. updateBalanceForTx: used to update the balance when the user makes a transaction.
+const { balance, updateBalanceForTx } = useBalance()
 
 const withdrawCallback = useCallback(async () => {
   const result = await withdraw(...)
