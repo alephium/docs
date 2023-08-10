@@ -6,7 +6,9 @@ sidebar_label: Basic Functions
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
-# How to generate a new address for a specific group in the Extension Wallet
+# Basic Functions
+
+## How to generate a new address for a specific group in the Extension Wallet
 
 Here's a tutorial on how to create an address for a specific group. 
 Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
@@ -33,7 +35,7 @@ You can repeat this process for every group (0, 1, 2, 3) you want an address on.
 
 
 
-# How to generate a new address for a specific group in the Desktop Wallet
+## How to generate a new address for a specific group in the Desktop Wallet
 
 Here's a tutorial on how to create an address for a specific group. 
 Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
@@ -56,7 +58,7 @@ Then, turn on the “Advanced options” toggle and select the group you want to
 
 Press “Generate”. You can repeat this process for every group you want an address on (0, 1, 2, 3) or use the next method for batch address creation.
 
-# How to generate a new address for all groups at once in the Desktop Wallet
+## How to generate a new address for all groups at once in the Desktop Wallet
 
 1. Unlock your Desktop Wallet.
 
@@ -73,3 +75,28 @@ Press “Generate”. You can repeat this process for every group you want an ad
 Once the menu appears, click the blue "Start" button in the "Generate one address per group" section. In the popup, choose a name for the wallets. Then click on the blue "Generate" button.
 
 Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
+
+
+## Requesting Testnet ALPH on the Extension Wallet
+
+1. Switch from “Mainnet” to “Testnet”
+
+![faucet001](https://github.com/alephium/docs/assets/88235023/2c83938e-d91a-4f64-9aa9-5ff275a77fd2)
+
+2. Click on “+Add Funds”, and then press “request $ALPH”
+
+![faucet002](https://github.com/alephium/docs/assets/88235023/85c4403d-1281-4005-b8dc-e1704b60c508)
+
+In about 1-2 minutes you should receive 12 testnet $ALPH in your balance.
+
+# Requesting Testnet ALPH on the Desktop Wallet
+
+1. Switch from “Mainnet” to “Testnet”
+
+![faucet01](https://github.com/alephium/docs/assets/88235023/b0c6dcc1-3e21-4dac-92fc-2f371ef9d513)
+
+2. Open “Settings”, choose “Developer Tools”, enable “developer tools”, and click on “Receive testnet tokens”
+
+![faucet02](https://github.com/alephium/docs/assets/88235023/d8ba431b-f556-4734-afe3-faef821822c4)
+
+You will receive 12 Testnet $ALPH in about 1-2 minutes!
