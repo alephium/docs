@@ -173,3 +173,12 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Website: [https://raveos.com/](https://raveos.com/)
 - Telegram: [https://t.me/raveossupport](https://t.me/raveossupport)
 - Discord: [https://discord.gg/Dcdadz2](https://discord.gg/Dcdadz2)
+
+### OKMiner Mobile OS 
+
+- iOS: [https://apps.apple.com/ru/app/okminer-os/id1494087547](https://apps.apple.com/ru/app/okminer-os/id1494087547)
+- Android: [https://downap.okminer.com/hashapk/okminer.apk](https://downap.okminer.com/hashapk/okminer.apk)
+- Website (CN): https://okminer.com
+- Calculator: https://okminer.com/tools
+- Telegram (CN): https://t.me/okminer_CN
+- Telegram (EN): https://t.me/okminer_support
