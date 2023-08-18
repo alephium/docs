@@ -210,6 +210,9 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 Builders Highlight 1 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
+Community Highlight #12 - energy45
+https://medium.com/@alephium/community-highlight-12-sam-a-k-a-energy45-610005a9219b
+
 Community Highlight #11 - Dr. Jekyll
 https://medium.com/@alephium/community-highlight-11-dr-jekyll-165ab9a51880
 
