@@ -8,9 +8,9 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# Contract
+## Contract
 
-## Fetch contract state
+### Fetch contract state
 
 When using the `npx @alephium/cli compile` command to compile a contract, it will generate TypeScript code based on the contract code.
 Taking the [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) contract as an example,
@@ -36,7 +36,7 @@ const { symbol, name, decimals, supply, balance  } = contractState.fields
 const { alphAmount, tokens } = contractState.asset
 ```
 
-## Call contract method
+### Call contract method
 
 You can use the generated TypeScript code to call the contract methods, it is similar to the `eth_call` in Ethereum:
 
@@ -53,7 +53,7 @@ const tokenFaucet = TokenFaucet.at(tokenFaucetAddress)
 const totalSupply = await tokenFaucet.methods.getTotalSupply()
 ```
 
-## Subscribe to contract events
+### Subscribe to contract events
 
 In the [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) contract,
 we have defined a [Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18) event.
@@ -94,9 +94,9 @@ const subscription = tokenFaucet.subscribeWithdrawEvent(options, fromEventCount)
 subscription.unsubscribe()
 ```
 
-# Transaction
+## Transaction
 
-## Query transaction status
+### Query transaction status
 
 You can query the transaction status using the following approach:
 
@@ -116,11 +116,11 @@ You can differentiate the transaction status using the `txStatus.type`:
 2. `Confirmed`: the transaction has been confirmed, and you can get the confirmations using `txStatus.chainConfirmations`
 3. `TxNotFound`: the transaction does not exist
 
-# Hooks
+## Hooks
 
 The `@alephium/web3-react` package provides several hooks to facilitate the development of frontend user interfaces.
 
-## useWallet
+### useWallet
 
 ```typescript
 import { useWallet, Wallet } from '@alephium/web3-react'
@@ -134,7 +134,7 @@ If the return value is `undefined`, it indicates that the wallet is not connecte
 * `wallet.account`: this is the currently connected account
 * `wallet.nodeProvider`: you can use the node provider to communicate with the full node, note that this value may be `undefined`
 
-## useBalance
+### useBalance
 
 ```typescript
 import { useBalance } from '@alephium/web3-react'
@@ -147,7 +147,7 @@ The `useBalance` hook returns two values:
 1. `balance`: the current balance of the connected account
 2. `updateBalanceForTx`: this is used to update the balance when the user makes a transaction. It takes a transaction id as a parameter, and it will update the balance once this transaction is confirmed.
 
-## useTxStatus
+### useTxStatus
 
 ```typescript
 import { useState } from 'react'
@@ -161,9 +161,9 @@ const confirmed = useMemo(() => {
 
 The `useTxStatus` hook also accepts an optional callback parameter of type `(txStatus: node.TxStatus) => Promise<any>`, it will be called after each transaction status query.
 
-# Utils
+## Utils
 
-## Rate limit
+### Rate limit
 
 `NodeProvider` is used to communicate with the full node when developing a dApp,
 and you can use the public [API services](./public-services.md) provided by Alephium. 
@@ -182,7 +182,7 @@ const retryFetch = fetchRetry.default(fetch, {
 const nodeProvider = new NodeProvider('node-url', undefined, retryFetch)
 ```
 
-## Custom wallet connect button
+### Custom wallet connect button
 
 `@alephium/web3-react` provides the `AlephiumConnectButton` component to facilitate the development of user interfaces,
 you can also use the `AlephiumConnectButton.Custom` to customize the style of the connect button:
