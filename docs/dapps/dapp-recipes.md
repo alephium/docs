@@ -197,7 +197,7 @@ function CustomWalletConnectButton = () => {
   })
 
   return (
-    <AlephiumConnectButton.Custom displayAccount={(account) => account.address}>
+    <AlephiumConnectButton.Custom>
       {({ isConnected, show, address }) => {
         return isConnected ? (
           <button onClick={disconnect}>
