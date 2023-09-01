@@ -129,7 +129,7 @@ function Component() {
   const { account, connectionStatus } = useWallet()
 
   if (connectionStatus === 'connecting') return <div>Connecting</div>
-  if (connectionStatus === 'disconnected') return <div>Connecting</div>
+  if (connectionStatus === 'disconnected') return <div>Disconnected</div>
 
   // connected
   return <div>{account}</div>
@@ -201,7 +201,7 @@ import { AlephiumConnectButton } from '@alephium/web3'
 function CustomWalletConnectButton = () => {
   return (
     <AlephiumConnectButton.Custom>
-      {({ isConnected, disconnect, show, address }) => {
+      {({ isConnected, disconnect, show, account }) => {
         return isConnected ? (
           <button onClick={disconnect}>
             Disconnect
