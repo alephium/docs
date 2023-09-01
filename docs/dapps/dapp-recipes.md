@@ -125,7 +125,15 @@ The `@alephium/web3-react` package provides several hooks to facilitate the deve
 ```typescript
 import { useWallet, Wallet } from '@alephium/web3-react'
 
-const wallet: Wallet | undefined = useWallet()
+function Component() {
+  const { account, connectionStatus } = useWallet()
+
+  if (connectionStatus === 'connecting') return <div>Connecting</div>
+  if (connectionStatus === 'disconnected') return <div>Disconnected</div>
+
+  // connected
+  return <div>{account}</div>
+}
 ```
 
 If the return value is `undefined`, it indicates that the wallet is not connected. The returned wallet has the following fields:
@@ -188,17 +196,12 @@ const nodeProvider = new NodeProvider('node-url', undefined, retryFetch)
 you can also use the `AlephiumConnectButton.Custom` to customize the style of the connect button:
 
 ```typescript
-import { AlephiumConnectButton, useConnect } from '@alephium/web3'
+import { AlephiumConnectButton } from '@alephium/web3'
 
 function CustomWalletConnectButton = () => {
-  const { disconnect } = useConnect({
-    addressGroup: 0,
-    networkId: 'mainnet'
-  })
-
   return (
     <AlephiumConnectButton.Custom>
-      {({ isConnected, show, address }) => {
+      {({ isConnected, disconnect, show, account }) => {
         return isConnected ? (
           <button onClick={disconnect}>
             Disconnect
