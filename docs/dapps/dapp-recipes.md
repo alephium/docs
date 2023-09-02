@@ -120,6 +120,23 @@ You can differentiate the transaction status using the `txStatus.type`:
 
 The `@alephium/web3-react` package provides several hooks to facilitate the development of frontend user interfaces.
 
+### useWalletConfig
+
+```typescript
+import { useWalletConfig } from '@alephium/web3-react'
+
+export function Component() {
+  const { network, setNetwork, addressGroup, setAddressGroup } = useWalletConfig()
+
+  return <div>
+    <button onClick={() => setNetwork('testnet')}>Network: {network}</button>
+    <button onClick={() => setAddressGroup(3)}>Address group: {addressGroup}</button>
+  </div>
+}
+```
+
+The `useWalletConfig` hook returns the configurations of the connect button and utility functions to update those configurations.
+
 ### useWallet
 
 ```typescript
