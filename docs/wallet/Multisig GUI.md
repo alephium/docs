@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## The Alephium Toolkit: A Guide to Creating a Multisig Wallet
 
-Multisignature wallets are essential to a maturing infrastructure, as they provide more granularity & security in managing $ALPH wallets. The core-team is very happy to unveil the Multisig Wallet Creation tool, the first in the [Alephium Toolkit](https://alephium.github.io/alephium-toolkit/)!
+*Multisignature wallets are essential to a maturing infrastructure, as they provide more granularity & security in managing $ALPH wallets. The core-team is very happy to unveil the Multisig Wallet Creation tool, the first in the [Alephium Toolkit](https://alephium.github.io/alephium-toolkit/)!*
 
 ![image](https://github.com/alephium/docs/assets/88235023/29f9c9e9-02e4-4d26-80bb-7d0e5c14b6d0)
 
@@ -72,7 +72,7 @@ In this third step, the signers will import the multisig wallet, so they are abl
 
 ![image](https://github.com/alephium/docs/assets/88235023/ddf154db-31c7-45b4-bd37-48c61811ebc5)
 
-* Navigate to Import Multisig Wallet
+* Navigate to [Import Multisig Wallet](https://alephium.github.io/alephium-toolkit/#/multisig/import)
 * Click on “Import Multisig”
 * You can now either build and/or sign transactions in that particular multisig
 * The next step is to put some money on the multisig, so you can actually build, sign and then send a transaction!
@@ -84,7 +84,7 @@ Before you can make transactions with the multisig, you need to send some $ALPH 
 
 ![image](https://github.com/alephium/docs/assets/88235023/f16d17dd-1520-4869-8506-6ab0e0cc8209)
 
-* Go to Show Multisig Wallet
+* Go to [Show Multisig Wallet](https://alephium.github.io/alephium-toolkit/#/multisig/show)
 * Copy the “address” content
 * Go to your wallet of choice (can be another multisig, the desktop, or extension wallet) and paste the address in the recipient field, choose the amount, the token, and send! — You can also give this address to someone else to pay to the multisig!
 * (If you want to send a token, remember you will need some $ALPH to pay for gas anyway, so send some too)
@@ -96,7 +96,7 @@ Any party to a multisig wallet can now act as the builder of a transaction. So g
 
 ![image](https://github.com/alephium/docs/assets/88235023/25a813a5-bbdc-4ade-874f-aa1d3c256368)
 
-* Navigate to Build Transaction
+* Navigate to [Build Transaction](https://alephium.github.io/alephium-toolkit/#/multisig/build-tx)
 * Choose your multisig from the list, select the signers you need/want, the amount and the recipient’s address for the transaction. Check well that you selected the correct signers, and that you are satisfying the quorum requirement!
 * Click “Build Transaction”. You’ll get a text blurb, which is essentially an unsigned transaction.
 * Copy this, and send it to the signers you selected.
@@ -109,7 +109,7 @@ You are a party to a multisig transaction, the builder of the transaction sent y
 
 ![image](https://github.com/alephium/docs/assets/88235023/2c4bc5fa-c262-4d8b-a102-03ab20529689)
 
-* Go to Sign Transaction
+* Go to [Sign Transaction](https://alephium.github.io/alephium-toolkit/#/multisig/sign-tx)
 * Make sure you are a party to the multisig (if you haven’t imported the multisig wallet, this is not going to work, see step 3)
 * Input the transaction details
 * Verify the transaction parameters!
@@ -126,7 +126,7 @@ At this stage, the wallet has been created, a transaction has been built and dis
 
 ![image](https://github.com/alephium/docs/assets/88235023/2c1107b7-11f7-4cd0-982a-4c60ee90d924)
 
-* Go back to the “build transaction” page
+* Go back to the [“build transaction”](https://alephium.github.io/alephium-toolkit/#/multisig/build-tx) page
 * Input the signatures in the relevant field
 * Click “submit”: the transaction will be sent.
 * You can click on “view on explorer” to check it on the explorer
@@ -137,7 +137,7 @@ And that’s it!
 
 You have successfully created and created and used a Multisig wallet to send a transaction on Alephium. For those who value both security and flexibility and need a way to share the funds ownership with others, a Multisig wallet is a powerful tool to have in your crypto arsenal. Remember, the future of finance is not just about owning digital assets but [securing them smartly](https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444).
 
-Let us know what you think, follow the evolution of the code on Github, follow the news on Twitter & Medium or come interact onboard on Discord & Telegram!
+*Let us know what you think, follow the evolution of the code on [Github](https://github.com/alephium), follow the news on [Twitter](https://twitter.com/alephium) & [Medium](https://medium.com/@alephium) or come interact onboard on [Discord](https://discord.com/invite/GEbcpajCJG) & [Telegram](https://t.me/alephiumgroup)!*
 
 ### Multisig FAQ:
 
