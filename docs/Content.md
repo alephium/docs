@@ -135,6 +135,12 @@ NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
+## Monthly Retrospective
+
+Jun/2023 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
+
+Jul/2023 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+
 ## TechTalks & AMAs
 
 Jul/26 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
@@ -165,6 +171,8 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Sep/23 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
 
 Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
 
@@ -200,6 +208,9 @@ Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-
 May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
 ## Community & Social 
+
+Builders Highlight 4 - Ayin
+https://medium.com/@alephium/builders-highlight-3-ayin-6be4a6bd4ec2
 
 Builders Highlight 3 - Alphpaca NFTs
 https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
