@@ -559,7 +559,7 @@ Contract Bar(value: U256) {
 }
 
 Contract Foo(barTemplateId: ByteVec) {
-  emit SubContractCreated(key: U256, contractId: ByteVec)
+  event SubContractCreated(key: U256, contractId: ByteVec)
 
   @using(preapprovedAssets = true, checkExternalCaller = false)
   pub fn set(caller: Address, key: U256, value: U256) -> () {
