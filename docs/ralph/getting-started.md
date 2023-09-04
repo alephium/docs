@@ -578,9 +578,9 @@ Contract Foo(barTemplateId: ByteVec) {
   }
 
   pub fn get(key: U256) -> U256 {
-    const path = u256To8Bytes(key)
+    let path = u256To8Bytes(key)
     // Get the sub contract id by the `subContractId!` built-in function
-    const contractId =  subContractId!(path)
+    let contractId =  subContractId!(path)
     return Bar(contractId).getValue()
   }
 }
