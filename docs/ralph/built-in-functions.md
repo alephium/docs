@@ -760,18 +760,6 @@ Returns the network id (a single byte).
 
 ---
 
-### blockHash
-
-```Rust
-fn blockHash!() -> (ByteVec)
-```
-
-Returns the block hash of the current block.
-
-> @returns *the block hash of the current block*
-
----
-
 ### blockTimeStamp
 
 ```Rust
