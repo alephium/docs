@@ -172,7 +172,11 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
-Sep/23 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
+Sep/08 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
+
+Sep/04 Zealy quests are now available! - https://t.co/49nM9If9p1
+
+Sep/01 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
 
 Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
 
@@ -263,6 +267,8 @@ Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-i
 Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-interview-series-episode-2-bec6e6908d2f
 
 Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
+
+Alephium Toolkit GUI design contest! - https://medium.com/@alephium/design-contest-a-logo-for-the-toolkit-website-f7bf7801b03c
 
 Alephium Send your best Alephium Memes! - https://twitter.com/alephium/status/1686420533510832128
 
