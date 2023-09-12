@@ -38,13 +38,14 @@ Interface INFTCollection {
    pub fn getCollectionUri() -> ByteVec
    pub fn totalSupply() -> U256
    pub fn nftByIndex(index: U256) -> INFT
+   pub fn validateNFT(nftId: ByteVec, nftIndex: U256) -> () // Validates that the NFT is part of the collection, otherwise throws exception.
 }
 
 // Standard interface for NFT
 @std(id = #0003)
 Interface INFT {
    pub fn getTokenUri() -> ByteVec
-   pub fn getCollectionId() -> ByteVec
+   pub fn getCollectionIndex() -> (ByteVec, U256) // Returns collection id and index of the NFT in the collection.
 }
 ```
 
@@ -81,7 +82,7 @@ For NFT collection, one of the metadata is `collectionUri`, which is
 an URI that points to an JSON document with the following schema:
 
 ```typescript
-interface NFTCollectionMetadata {
+interface NFTCollectionUriMetaData {
   name: string            // Name of the NFT collection
   description: string     // General description of the NFT collection
   image: string           // A URI to the image that represents the NFT collection
@@ -92,7 +93,7 @@ For individual NFT, one of the metadata is `tokenUri`, which is an URI
 that points to an JSON document with the following schema:
 
 ```typescript
-interface NFTMetadata {
+interface NFTTokenUriMetaData {
   name: string                           // Name of the NFT
   description?: string                   // General description of the NFT
   image: string                          // A URI to the image that represents the NFT
