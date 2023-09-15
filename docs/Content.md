@@ -91,6 +91,8 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 ## Explainer Series
 
+Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
+
 First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
 
 Block Time and Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
@@ -281,6 +283,8 @@ Introducing Community Rewards - https://medium.com/@alephium/introducing-communi
 DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
 
 ## Tutorials & Workshops
+
+Video tutorial on how to create a Multisig Wallet using Alephium Toolkit GUI: https://twitter.com/alephium/status/1701211477577785724
 
 How to use the Alephium Desktop Wallet privately through the NYM Mixnet - https://www.youtube.com/watch?v=VbhQEhtX-rI
 
