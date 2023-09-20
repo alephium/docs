@@ -137,13 +137,13 @@ You can access the whole list of Twitter Threads here: https://twitter.com/aleph
 
 ## Monthly Retrospective
 
-Jun/2023 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
+Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
 
-Jul/2023 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## TechTalks & AMAs
 
-Jul/26 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
+Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
 
 May/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
 
