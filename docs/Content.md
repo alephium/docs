@@ -172,11 +172,13 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
-Sep/08 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
+Sep/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167584017588419
 
-Sep/04 Zealy quests are now available! - https://t.co/49nM9If9p1
+Sep/23 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
 
-Sep/01 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
+Sep/23 Zealy quests are now available! - https://t.co/49nM9If9p1
+
+Sep/23 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
 
 Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
 
@@ -224,6 +226,9 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight 1 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #13 - Ryann
+https://medium.com/@alephium/community-highlight-13-ryan-5dbbeaf859e4
 
 Community Highlight #12 - energy45
 https://medium.com/@alephium/community-highlight-12-sam-a-k-a-energy45-610005a9219b
