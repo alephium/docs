@@ -174,11 +174,13 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
-Sep/08 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
+Oct/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167584017588419
 
-Sep/04 Zealy quests are now available! - https://t.co/49nM9If9p1
+Sep/23 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
 
-Sep/01 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
+Sep/23 Zealy quests are now available! - https://t.co/49nM9If9p1
+
+Sep/23 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
 
 Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
 
@@ -215,16 +217,19 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
-Builders Highlight 4 - Ayin
+Builders Highlight 4 - No Trust Verify
+https://medium.com/@alephium/builders-highlight-4-no-trust-verify-9ea495ca826f
+
+Builders Highlight 3 - Ayin
 https://medium.com/@alephium/builders-highlight-3-ayin-6be4a6bd4ec2
 
-Builders Highlight 3 - Alphpaca NFTs
+Builders Highlight 2 - Alphpaca NFTs
 https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
 
-Builders Highlight 2 - Sezame Wallet
+Builders Highlight 1 - Sezame Wallet
 https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
-Builders Highlight 1 - Sahhar
+Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
 Community Highlight #12 - energy45
