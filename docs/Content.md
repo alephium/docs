@@ -52,6 +52,8 @@ sUTXO #3 - General explanation - https://twitter.com/alephium/status/16153890977
 
 UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
 
+An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
+
 ### Proof-of-Less-Work
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
