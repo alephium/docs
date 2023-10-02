@@ -52,6 +52,8 @@ sUTXO #3 - General explanation - https://twitter.com/alephium/status/16153890977
 
 UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
 
+An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
+
 ### Proof-of-Less-Work
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
@@ -90,6 +92,8 @@ Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
 ## Explainer Series
+
+Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
 
 First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
 
@@ -137,13 +141,13 @@ You can access the whole list of Twitter Threads here: https://twitter.com/aleph
 
 ## Monthly Retrospective
 
-Jun/2023 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
+Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
 
-Jul/2023 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## TechTalks & AMAs
 
-Jul/26 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
+Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
 
 May/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
 
@@ -215,16 +219,19 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
-Builders Highlight 4 - Ayin
+Builders Highlight 4 - No Trust Verify
+https://medium.com/@alephium/builders-highlight-4-no-trust-verify-9ea495ca826f
+
+Builders Highlight 3 - Ayin
 https://medium.com/@alephium/builders-highlight-3-ayin-6be4a6bd4ec2
 
-Builders Highlight 3 - Alphpaca NFTs
+Builders Highlight 2 - Alphpaca NFTs
 https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
 
-Builders Highlight 2 - Sezame Wallet
+Builders Highlight 1 - Sezame Wallet
 https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
-Builders Highlight 1 - Sahhar
+Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
 Community Highlight #13 - Ryann
@@ -286,6 +293,8 @@ Introducing Community Rewards - https://medium.com/@alephium/introducing-communi
 DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
 
 ## Tutorials & Workshops
+
+Video tutorial on how to create a Multisig Wallet using Alephium Toolkit GUI: https://twitter.com/alephium/status/1701211477577785724
 
 How to use the Alephium Desktop Wallet privately through the NYM Mixnet - https://www.youtube.com/watch?v=VbhQEhtX-rI
 
