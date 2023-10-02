@@ -176,7 +176,7 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
-Oct/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167584017588419
+Sep/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167584017588419
 
 Sep/23 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
 
@@ -233,6 +233,9 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #13 - Ryann
+https://medium.com/@alephium/community-highlight-13-ryan-5dbbeaf859e4
 
 Community Highlight #12 - energy45
 https://medium.com/@alephium/community-highlight-12-sam-a-k-a-energy45-610005a9219b
