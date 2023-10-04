@@ -351,6 +351,11 @@ Alephium's open-source code base allows users to verify which events are capture
 
 The `0.001` ALPH is the minimal requirement per UTXO to avoid UTXO spamming. This amount is not consumed by the network and it will arrive to the destination address, same as the tokens.
 
+### Why is it important to back-up your secret recovery phrase?
+
+Backing up your secret recovery phrase is crucial because it acts as the master key to your wallet. If you lose access to your wallet (e.g., due to device loss, malfunction, or app deletion), the secret recovery phrase is the only way to restore and access your funds.  
+Without it, any assets stored in the wallet could be permanently lost. Treat it with utmost care, and store it securely and privately.
+
 ## Miscellaneous
 
 ### How can I find translated content?
