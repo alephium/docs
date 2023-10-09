@@ -38,4 +38,4 @@ Here are some well-maintained dApps that can be a great source of inspiration fo
 
 - [DEX](https://github.com/alephium/alephium-dex/tree/master/contracts) 
 - [NFT](https://github.com/alephium/alephium-nft) 
-- [Wormhole Bridge Integration](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 
+- [Alephium Bridge](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 
