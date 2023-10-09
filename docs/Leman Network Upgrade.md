@@ -93,8 +93,8 @@ You can connect to the testnet and interact with the following applications & to
 
 ### NFT Marketplace
 
-- Link: https://alephium-nft.softfork.se/my-nfts
-- Tutorial on How to interact with the NFT Marketplace: https://medium.com/@alephium/alephium-launches-browser-extension-wallet-706dfeda98f5
+- Link: [https://alephium-nft.softfork.se/my-nfts](https://v3.testnet.nft.alephium.org/)
+- Medium article about v3 NFT Marketplace: [https://medium.com/@alephium/alephium-launches-browser-extension-wallet-706dfeda98f5](https://medium.com/@alephium/nft-marketplace-v3-5f017026b500)
 
 ### DEX on Alephium Testnet
 
@@ -104,6 +104,5 @@ You can connect to the testnet and interact with the following applications & to
 
 ### Alephium Ethereum Bridge
 
-- Link: [https://portal-bridge.wormhole-testnet.softfork.se/](https://portal-bridge.wormhole-testnet.softfork.se/)
-- Tutorial on How to Interact with the Bridge: *Coming Soon*
-- Tutorial on How to Connect with Ethereum Goerli Testnet: *Coming Soon*
+- Link: [https://testnet.bridge.alephium.org/](https://testnet.bridge.alephium.org/)
+- Tutorial on How to Interact with the Bridge: [https://medium.com/@alephium/the-alephium-bridge-is-live-on-testnet-e13454677fb8](https://medium.com/@alephium/the-alephium-bridge-is-live-on-testnet-e13454677fb8)
