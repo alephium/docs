@@ -272,6 +272,10 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
 
+The Blockflow Alliance DAO got its first grant. : https://twitter.com/alephium/status/1711405133165453683?s=20
+
+WELCOME BLOCKFLOW ALLIANCE DAO! - https://medium.com/@alephium/welcome-blockflow-alliance-dao-cd74a949f98b
+
 Core team interview series. Episode 4 - https://medium.com/@alephium/core-team-interview-series-episode-4-3886003b8fef
 
 Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-interview-series-episode-3-64b6dacc1459
