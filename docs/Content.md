@@ -93,6 +93,10 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 ## Explainer Series
 
+Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
+
+TxScripts and Smart COntracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
+
 Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
 
 First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
@@ -146,6 +150,8 @@ Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https
 Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## TechTalks & AMAs
+
+Aug/23 - UI/UX to onboard the next billion people - https://www.youtube.com/watch?v=VK4QtY_q1ek
 
 Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
 
@@ -234,6 +240,9 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
+Community Highlight #14 - AnimalManJan
+https://medium.com/@alephium/community-highlight-14-animalmanjan-da8fd051bc38
+
 Community Highlight #13 - Ryann
 https://medium.com/@alephium/community-highlight-13-ryan-5dbbeaf859e4
 
@@ -272,6 +281,8 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
 
+Core Alephium Contibutors Update - https://medium.com/@alephium/alephium-contributors-f35eeaeaf0a0
+
 Core team interview series. Episode 4 - https://medium.com/@alephium/core-team-interview-series-episode-4-3886003b8fef
 
 Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-interview-series-episode-3-64b6dacc1459
@@ -279,6 +290,10 @@ Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-i
 Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-interview-series-episode-2-bec6e6908d2f
 
 Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
+
+Alpehium's community creativity is fantastic! Toolkit Design Contest Winners - https://medium.com/@alephium/toolkit-design-contest-winners-announced-6cc5e304cd8b
+
+UI & UX wizardry from our latest techtalk! - https://medium.com/@alephium/techtalk-11-how-to-onboard-the-next-billion-people-to-crypto-d1f4904b3eea
 
 Alephium Toolkit GUI design contest! - https://medium.com/@alephium/design-contest-a-logo-for-the-toolkit-website-f7bf7801b03c
 
@@ -297,6 +312,8 @@ DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v
 Video tutorial on how to create a Multisig Wallet using Alephium Toolkit GUI: https://twitter.com/alephium/status/1701211477577785724
 
 How to use the Alephium Desktop Wallet privately through the NYM Mixnet - https://www.youtube.com/watch?v=VbhQEhtX-rI
+
+Second Developer Workshop - Friendtech smart contract - https://medium.com/@alephium/second-online-dev-workshop-6ebc5fb0b0da
 
 First Developer Workshop — Build a Token Faucet ( Video ) - https://www.youtube.com/watch?v=YblUxEcXQuY
 
