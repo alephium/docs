@@ -44,6 +44,8 @@ Linkedin - https://www.linkedin.com/company/74304166
 ### Stateful UTXO
 Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
 
+
+
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447
 
 sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928
@@ -51,6 +53,12 @@ sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/16026847896554209
 sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320
 
 UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
+
+Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 1 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-de2cf2063615
+
+Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 2 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-f6b6868ef873
+
+An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1690004285818327040
 
 An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
 
