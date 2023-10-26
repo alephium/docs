@@ -182,6 +182,14 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
+Oct/23 Meet the Guardians! - https://twitter.com/alephium/status/1716858711493493013
+
+Oct/23 Android Mobile wallet app is ready for beta testing! - https://medium.com/@alephium/ios-mobile-wallet-beta-testing-feedback-wanted-cdf162a49a79
+
+Oct/23 The mobile wallet for iOS is ready for beta testing - https://medium.com/@alephium/ios-mobile-wallet-beta-testing-feedback-wanted-cdf162a49a79 
+
+Oct/23 The Blockflow Alliance DAO got its first grant. - https://twitter.com/alephium/status/1711405133165453683?s=20
+
 Sep/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167584017588419
 
 Sep/23 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
@@ -291,6 +299,8 @@ Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-i
 
 Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
 
+Welcome to the Blockflow Alliance DAO! - https://medium.com/@alephium/welcome-blockflow-alliance-dao-cd74a949f98b
+
 Alpehium's community creativity is fantastic! Toolkit Design Contest Winners - https://medium.com/@alephium/toolkit-design-contest-winners-announced-6cc5e304cd8b
 
 UI & UX wizardry from our latest techtalk! - https://medium.com/@alephium/techtalk-11-how-to-onboard-the-next-billion-people-to-crypto-d1f4904b3eea
@@ -325,6 +335,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## External Podcasts & Publications
+
+Nym Project's blog post about the Alephium wallet built by @Mika and @nop33! - https://twitter.com/alephium/status/1710291031759982803
 
 UTXO Alliance Roundtable - https://www.youtube.com/watch?v=1XcBWJRRp-E&list=PL8q8n0BHJS1MWfqe1OIz4EWz9RKNrCiu6&index=1&pp=iAQB
 
