@@ -190,6 +190,10 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
+Oct/23 Android Mobile App is out of Beta! - https://x.com/alephium/status/1719739251368325612?s=20
+
+Oct/23 Get Ready for Bridging! - https://twitter.com/alephium/status/1719398464449335561
+
 Oct/23 Meet the Guardians! - https://twitter.com/alephium/status/1716858711493493013
 
 Oct/23 Android Mobile wallet app is ready for beta testing! - https://medium.com/@alephium/ios-mobile-wallet-beta-testing-feedback-wanted-cdf162a49a79
@@ -240,6 +244,9 @@ Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-
 May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
 ## Community & Social 
+
+Builders Highlight 5 - Deadrare
+https://medium.com/@alephium/builders-highlight-5-deadrare-d5ff90d6161e
 
 Builders Highlight 4 - No Trust Verify
 https://medium.com/@alephium/builders-highlight-4-no-trust-verify-9ea495ca826f
