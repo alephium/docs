@@ -101,6 +101,10 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 ## Explainer Series
 
+Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
+
+Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
+
 Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 
 TxScripts and Smart COntracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
@@ -189,6 +193,8 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Nov/23 The Bridge is Live! - https://vxtwitter.com/alephium/status/1722661768131178556
 
 Oct/23 Android Mobile App is out of Beta! - https://x.com/alephium/status/1719739251368325612?s=20
 
@@ -339,6 +345,8 @@ Video tutorial on how to create a Multisig Wallet using Alephium Toolkit GUI: ht
 How to use the Alephium Desktop Wallet privately through the NYM Mixnet - https://www.youtube.com/watch?v=VbhQEhtX-rI
 
 Second Developer Workshop - Friendtech smart contract - https://medium.com/@alephium/second-online-dev-workshop-6ebc5fb0b0da
+
+Second Developer Workshop - Re-implementing Friend.Tech’s Smart Contract in Ralph - https://www.youtube.com/watch?v=gi2sxvB9Np8
 
 First Developer Workshop — Build a Token Faucet ( Video ) - https://www.youtube.com/watch?v=YblUxEcXQuY
 
