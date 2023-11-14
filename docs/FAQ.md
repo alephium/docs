@@ -367,6 +367,7 @@ On Twitter, the following community accounts translate Alephium tweets:
 - [German](https://twitter.com/Alephiumde)
 - [French](https://twitter.com/Alephiumfr)
 - [Bulgarian](https://twitter.com/alephiumbg)
+- [Indonesian](https://twitter.com/Alephium_id)
 
 Translators are encouraged to use the following hashtag structure when they publish translated content: #Alephium\[i18n\]
 You can find translation on Medium, Twitter and other channels with the following hashtags:
