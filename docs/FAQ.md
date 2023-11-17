@@ -88,6 +88,8 @@ Alephium operates as a sharded blockchain, where addresses and contract states a
 
 So, when you connect to a dApp, it will specifically ask to connect with addresses that belong to the same group as the dApp itself. This grouping system ensures everything runs smoothly within Alephium's sharded structure.
 
+Note that this is only a problem when using dApps. Normal transfers have similar user experience as non-sharded blockchains. The core team is committed to improve the assets management across different groups to make it more friendly for dApp users.
+
 ## Development
 
 ### Where is the roadmap?
