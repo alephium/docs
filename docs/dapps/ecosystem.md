@@ -30,7 +30,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 ## Dapp Wallets
 - Extension wallet: [Google Chrome Store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) or [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 - [Desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
-- [Mobile wallet (WIP)](https://github.com/alephium/mobile-wallet)
+- [Mobile wallet: [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet) & [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
 ## Prototypes
 
