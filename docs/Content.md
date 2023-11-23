@@ -42,9 +42,8 @@ Linkedin - https://www.linkedin.com/company/74304166
 ## Tech Series
 
 ### Stateful UTXO
+
 Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
-
-
 
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447
 
@@ -100,6 +99,12 @@ Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
 ## Explainer Series
+
+Bridge Thread #5 - https://x.com/alephium/status/1725439073052168293?s=20
+
+Bridge Thread #4 - https://x.com/alephium/status/1725164466868801848?s=20
+
+Bridge Thread #3 - https://twitter.com/alephium/status/1724107359696662624
 
 Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
 
@@ -193,6 +198,8 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Nov/23 iOS app is live in the App Store! - https://vxtwitter.com/alephium/status/1724452430262534311 
 
 Nov/23 The Bridge is Live! - https://vxtwitter.com/alephium/status/1722661768131178556
 
@@ -309,6 +316,12 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
+
+Welcome to DeFi Llama! - https://vxtwitter.com/DefiLlama/status/1726667056781881648?s=20
+
+Onboarding Thread on Alephium - https://vxtwitter.com/alephium/status/1726249933374959943?s=20
+
+Verification of bridge contracts, tokens & token lists - https://medium.com/@alephium/verification-of-bridge-contracts-tokens-token-lists-76e5c237bf52
 
 Core Alephium Contibutors Update - https://medium.com/@alephium/alephium-contributors-f35eeaeaf0a0
 
