@@ -446,6 +446,22 @@ Returns the id of the sub contract.
 
 ---
 
+### subContractIdInParentGroup
+
+```Rust
+fn subContractIdInParentGroup!(contract:<Contract>, subContractPath:ByteVec) -> (ByteVec)
+```
+
+Returns the id of the sub contract.
+
+> @param **contract** *the parent contract of the sub-contract*
+>
+> @param **subContractPath** *the path of the sub-contract*
+>
+> @returns *the id of the sub contract*
+
+---
+
 ## Asset Functions
 ---
 ### approveToken
