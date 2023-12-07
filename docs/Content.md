@@ -100,6 +100,8 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 ## Explainer Series
 
+Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
+
 Bridge Thread #5 - https://x.com/alephium/status/1725439073052168293?s=20
 
 Bridge Thread #4 - https://x.com/alephium/status/1725164466868801848?s=20
@@ -352,6 +354,12 @@ Introducing Community Rewards - https://medium.com/@alephium/introducing-communi
 DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
 
 ## Tutorials & Workshops
+
+🎦Bridge Tutorial!📺 - https://www.youtube.com/watch?v=xoYVzbwBAjg
+
+Deep Dive into Ralph with the Dev Workshop! 🛠 - https://www.youtube.com/watch?v=gi2sxvB9Np8
+
+Deep Dive into Ralph with the Dev Workshop - Part 2! 🛠 - https://vxtwitter.com/alephium/status/1729530234649866529
 
 Video tutorial on how to create a Multisig Wallet using Alephium Toolkit GUI: https://twitter.com/alephium/status/1701211477577785724
 
