@@ -174,6 +174,11 @@ To know how many coins are mined per day, you can use the formula below. As the 
 
 At the time this entry was last updated the average block reward was: `2.87` ALPH which results in approximately `61'992` ALPH mined per day.
 
+### Is Alephium ASIC resistant?
+
+No, Alephium is designed to be ASIC friendly, just like Bitcoin.
+Maintaining ASIC resistance can be incredibly challenging, if not impossible, as evidenced by other chains that have had to fork and change their mining algorithms. Alephium decided to prioritize a secure and stable network over resistance to specialized hardware. When the time comes, the use of ASICs on Alephium can support performance and miner fidelity, as investing in chain-specific hardware makes miners more likely to stay committed, reducing the risk of sudden shifts in mining power.
+
 ### Which miners can I use to mine ALPH?
 
 Below is list of known Alephium miners. Please note the list may be incomplete as it is difficult to keep track of new miners coming out, feel free to submit a Pull Request to add to the list.
