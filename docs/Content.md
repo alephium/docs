@@ -176,6 +176,12 @@ Dec/23 - AMA with @DjMines - https://youtu.be/gD2Lvk9WM4o?si=ZWRSwH6hHexWXWCj
 
 Dec/23 - Bridge & Beyond AMA - https://twitter.com/i/spaces/1mrGmydQreMGy
 
+Nov/23 - Alph Community Twitter Space @Hiramabiffkas - https://x.com/hiramabiffkas/status/1726835786270843094?s=20
+
+Nov/23 - X Space on Crypto Mining 📢 - https://twitter.com/i/spaces/1ZkKzjBzrOZKv?s=20
+
+Aug/23 - HouseOfChimera Twitter Space - https://twitter.com/HouseofChimera/status/1714310856324854137 
+
 Aug/23 - UI/UX to onboard the next billion people - https://www.youtube.com/watch?v=VK4QtY_q1ek
 
 Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
