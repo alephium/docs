@@ -112,6 +112,8 @@ Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
 
 Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
+🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1733086186707808578 
+
 Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 
 TxScripts and Smart COntracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
@@ -170,6 +172,10 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Dec/23 - AMA with @DjMines - https://youtu.be/gD2Lvk9WM4o?si=ZWRSwH6hHexWXWCj
+
+Dec/23 - Bridge & Beyond AMA - https://twitter.com/i/spaces/1mrGmydQreMGy
+
 Aug/23 - UI/UX to onboard the next billion people - https://www.youtube.com/watch?v=VK4QtY_q1ek
 
 Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
@@ -200,6 +206,8 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Dec/23 Etherscan Update! - https://vxtwitter.com/alephium/status/1734581269684687010
 
 Nov/23 iOS app is live in the App Store! - https://vxtwitter.com/alephium/status/1724452430262534311 
 
