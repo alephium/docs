@@ -180,15 +180,23 @@ Nov/23 - Alph Community Twitter Space @Hiramabiffkas - https://x.com/hiramabiffk
 
 Nov/23 - X Space on Crypto Mining 📢 - https://twitter.com/i/spaces/1ZkKzjBzrOZKv?s=20
 
+Oct/23 - AMArmotte - https://x.com/Marmottoshis/status/1710643787305820353?s=20
+
 Aug/23 - HouseOfChimera Twitter Space - https://twitter.com/HouseofChimera/status/1714310856324854137 
 
 Aug/23 - UI/UX to onboard the next billion people - https://www.youtube.com/watch?v=VK4QtY_q1ek
 
 Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
 
-May/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+Jun/23 - Bitmart X ALPH Twitter Space AMA - https://x.com/alephium/status/1670061238456565761?s=20
+
+Jun/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+
+Apr/23 - POW Roundtable - https://www.youtube.com/watch?v=17Rx27PwADI
 
 Apr/23 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
+
+Apr/23 - Proof of less work AMA - https://x.com/alephium/status/1646113444461178882?s=20
 
 Mar/23 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
 
