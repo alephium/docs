@@ -377,6 +377,8 @@ DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v
 
 ## Tutorials & Workshops
 
+Alephium Bridge: The Written Tutorial - https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
+
 🎦Bridge Tutorial!📺 - https://www.youtube.com/watch?v=xoYVzbwBAjg
 
 Deep Dive into Ralph with the Dev Workshop! 🛠 - https://www.youtube.com/watch?v=gi2sxvB9Np8
