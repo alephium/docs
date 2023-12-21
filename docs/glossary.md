@@ -125,15 +125,11 @@ This difference is offered by actors referred to as “searchers” that analyze
 
 ![](media/Block%20reward.png)
 
-The mining reward is the payment to the miner for the computational work needed to validate the transactions and put them into a block. On Alephium, The mining reward has two components: [Transaction Fee](#transaction-fee) and [Block Reward](#block-reward) or new token emissions. The transaction rewarding the miner and issuing the newly minted ALPH is called a coinbase transaction.
+Alephium’s reward for newly generated blocks is also called Mining Reward (MR). After distribution, the [block rewards](#block-reward) are locked for 500 minutes.
 
-The following equation defines it:
+The mining reward is bound by two curves based on hashrate and timestamp. At a given time and for a given hashrate, the reward per block equals the minimum between the time-based reward and the hashrate-based reward.
 
-Total Mining Reward = Block Reward + min(max(Block Reward, 1 ALPH), Transaction Fee / 2)
-
-![image](media/186885966-b8d746fb-612b-433e-8f79-47e5a87ea375.png)
-
-Half of the transaction fees component is burnt to act as a deflationary mechanism.  
+Block Reward = min( time-based reward, hashrate-based reward).
 
 Additional resources: [Alephium Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 
