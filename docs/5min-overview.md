@@ -116,7 +116,7 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 ---
 
-## [Buy/sell](https://www.coingecko.com/en/coins/alephium#markets)
+## [Buy/sell][markets]
 
 ⚠️ Some pairs have low liquidity, always check liquidity before chosing a venue or bridging an asset.
 
