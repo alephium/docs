@@ -196,7 +196,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [node-release]: https://github.com/alephium/alephium/releases/latest/
 [full-node]: https://github.com/alephium/alephium
 [desktop-wallet]: https://github.com/alephium/desktop-wallet
-[explorer]: https://github.com/alephium/explorer
+[explorer]: https://github.com/alephium/alephium-frontend/apps/explorer
 [web3-sdk]: https://github.com/alephium/alephium-web3
 [Docs]: https://github.com/alephium/docs
 [awesome]: https://github.com/alephium/awesome-alephium
