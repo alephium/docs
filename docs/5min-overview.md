@@ -110,7 +110,7 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 ## Milestones & Roadmap
 
-[Completed Milestones](https://alephium.org/#milestones)
+[Completed Milestones][milestones]
 
 [Roadmap](https://alephium.org/#next)
 
