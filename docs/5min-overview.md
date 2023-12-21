@@ -112,13 +112,13 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 [Completed Milestones][milestones]
 
-[Roadmap](https://alephium.org/#next)
+[Roadmap][roadmap]
 
 ---
 
 ## [Buy/sell][markets]
 
-⚠️ Some pairs have low liquidity, always check liquidity before chosing a venue or bridging an asset.
+⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
 
 ---
 
@@ -195,10 +195,11 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [github]: https://github.com/alephium
 [node-release]: https://github.com/alephium/alephium/releases/latest/
 [full-node]: https://github.com/alephium/alephium
-[desktop-wallet]: https://github.com/alephium/desktop-wallet
+[desktop-wallet]: https://github.com/alephium/alephium-frontend/apps/desktop-wallet
+[mobile-wallet]: https://github.com/alephium/alephium-frontend/apps/mobile-wallet
 [explorer]: https://github.com/alephium/alephium-frontend/apps/explorer
 [web3-sdk]: https://github.com/alephium/alephium-web3
-[Docs]: https://github.com/alephium/docs
+[docs]: https://github.com/alephium/docs
 [awesome]: https://github.com/alephium/awesome-alephium
 [mining-discord]: https://alephium.org/discord
 [miner-starter-pack]: https://github.com/alephium/alephium-miner-getting-started
@@ -209,3 +210,5 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [wormhole-fork-repo]: https://github.com/alephium/wormhole-fork
 [brand-guide]: https://github.com/alephium/alephium-brand-guide
 [reward-grant]: https://github.com/alephium/community/tree/master
+[markets]: https://www.coingecko.com/en/coins/alephium#markets
+[roadmap]: https://alephium.org/#next
