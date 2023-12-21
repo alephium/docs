@@ -72,7 +72,8 @@ Find our latest [node release on GitHub][node-release].
 Discover and contribute to our main projects [on GitHub][github]:
 
 - [Full node][full-node]
-- [Mobile Wallet & Desktop Wallet](https://github.com/alephium/alephium-frontend)
+- [Desktop wallet][desktop-wallet]
+- [Mobile wallet][mobile-wallet]
 - [Explorer][explorer]
 - [Web3 SDK][web3-sdk]
 - [Extension Wallet][extension-wallet-repo]
