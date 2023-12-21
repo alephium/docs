@@ -80,7 +80,7 @@ Discover and contribute to our main projects [on GitHub][github]:
 - [Wallet Connect][walletconnect-repo]
 - [Bridge][wormhole-fork-repo]
 - [Awesome Alephium][awesome]
-- [Docs](https://github.com/alephium/docs)
+- [Docs][docs]
 
 ### Building something on Alephium?
 
