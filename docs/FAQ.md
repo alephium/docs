@@ -47,10 +47,9 @@ The circulating supply is equal to number existing ALPH minus:
 ### How can I check wallets balances and which are the top holding addresses?
 
 To check the balance of a specific wallet, the [Explorer](https://explorer.alephium.org) is your go-to.  
-Community members have created web-apps that lists the top holding addresses:
+Community members have created [Alph Richlist](https://alph-richlist.vercel.app/) that lists the top holding addresses.
 
-- https://alph-richlist.vercel.app/
-- https://alph-top.web.app/
+In addition, you can find the wrapped ALPH/erc20 holders at [etherscan.io](https://etherscan.io/token/0x590F820444fA3638e022776752c5eEF34E2F89A6#balances)
 
 ### What is the minimum Transaction Fee?
 
