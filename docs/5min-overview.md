@@ -49,7 +49,7 @@ The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet 
 
 860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
 
-In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
+In addition, all the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
 
 
 ### Total Supply and Circulating Supply
