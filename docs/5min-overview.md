@@ -212,3 +212,4 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [reward-grant]: https://github.com/alephium/community/tree/master
 [markets]: https://www.coingecko.com/en/coins/alephium#markets
 [roadmap]: https://alephium.org/#next
+[milestones]: https://alephium.org/#milestones
