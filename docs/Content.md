@@ -100,6 +100,8 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 ## Explainer Series
 
+Network Upgrade 🧵#1 - https://vxtwitter.com/alephium/status/1738220571832594612
+
 Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
 
 Bridge Thread #5 - https://x.com/alephium/status/1725439073052168293?s=20
@@ -172,6 +174,14 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Jan/24 - Bridge AMA Transcript Part 3 - https://vxtwitter.com/alephium/status/1742137217307578827
+
+Dec/23 - Bridge AMA Transcript Part 2 - https://vxtwitter.com/alephium/status/1739586739579363509
+
+Dec/23 - AMA with Ivan Shigeo - https://twitter.com/Shigeo808/status/1736821774959227069
+
+Dec/23 - Bridge AMA Transcript Part 1 - https://medium.com/@alephium/the-alephium-bridge-ama-part-1-bd6536ea9cdc
+
 Dec/23 - AMA with @DjMines - https://youtu.be/gD2Lvk9WM4o?si=ZWRSwH6hHexWXWCj
 
 Dec/23 - Bridge & Beyond AMA - https://twitter.com/i/spaces/1mrGmydQreMGy
@@ -220,6 +230,22 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
+
+Jan/24 The dApps, the whole dApps, nothing but the dApps - https://vxtwitter.com/alephium/status/1743268517309513949
+
+Dec/23 2023 Front-end recap - https://vxtwitter.com/alephium/status/1741402507203764614
+
+Dec/23 MEXC listing! - https://www.mexc.com/exchange/ALPH_USDT
+
+Dec/23 50 days of bridging! - https://vxtwitter.com/alephium/status/1740390954752958767
+
+Dec/23 Coinmetro Listing - https://vxtwitter.com/alephium/status/1737830035225219555?s=20
+
+Dec/23 Ambassador Program Launch - https://vxtwitter.com/alephium/status/1736792955896344966
+
+Dec/23 Crowdsourcing Alphad.app new name! - https://vxtwitter.com/alephium/status/1734948427950399948
 
 Dec/23 Etherscan Update! - https://vxtwitter.com/alephium/status/1734581269684687010
 
@@ -282,6 +308,8 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
+Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+
 Builders Highlight 5 - Deadrare
 https://medium.com/@alephium/builders-highlight-5-deadrare-d5ff90d6161e
 
@@ -340,6 +368,10 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
+
+The Hitchiker’s guide to Alephium’s community - https://vxtwitter.com/alephium/status/1740670046371017186?s=20
+
+The Zealy Sprint has come to an end - https://vxtwitter.com/alephium/status/1737144172317114621
 
 Welcome to DeFi Llama! - https://vxtwitter.com/DefiLlama/status/1726667056781881648?s=20
 
