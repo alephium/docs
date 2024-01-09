@@ -47,6 +47,8 @@ Vietnamese 🇻🇳 - https://t.me/alephiumvn
 
 Indonesia 🇮🇩 - https://t.me/AlephiumID
 
+French FR - https://t.me/Alephiumfr
+
 Topical groups
 
 Mining https://t.me/alephium_mining
