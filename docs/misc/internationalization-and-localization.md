@@ -37,7 +37,7 @@ Chinese 🇨🇳 - https://t.me/alephiumCN
 
 German (DACH) 🇩🇪 - https://t.me/alphgermanofficial
 
-Turkish 🇹🇷 - https://t.me/AlephiumTR
+Turkish 🇹🇷 - https://t.me/AlephiumTurkey
 
 Holland 🇳🇱 - https://t.me/AlephiumgroupNL
 
