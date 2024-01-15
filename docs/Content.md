@@ -174,6 +174,8 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Jan/24 - French AMA with MonsieurTK https://twitter.com/i/spaces/1YqKDgrwnjkxV?s=20
+
 Jan/24 - Bridge AMA Transcript Part 3 - https://vxtwitter.com/alephium/status/1742137217307578827
 
 Dec/23 - Bridge AMA Transcript Part 2 - https://vxtwitter.com/alephium/status/1739586739579363509
@@ -230,6 +232,10 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Jan/24 🌊 Announcing the Rhône Network Upgrade ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
+
+Jan/24 ⚙️ Tech Writings of 2023 🛠 - https://vxtwitter.com/alephium/status/1744795616818217432
 
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
@@ -307,6 +313,8 @@ Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-
 May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
 ## Community & Social 
+
+⛏ Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
 
