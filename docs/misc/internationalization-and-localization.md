@@ -49,6 +49,8 @@ Indonesia 🇮🇩 - https://t.me/AlephiumID
 
 French FR - https://t.me/Alephiumfr
 
+Polish PL - https://t.me/alephiumPL
+
 Topical groups
 
 Mining https://t.me/alephium_mining
