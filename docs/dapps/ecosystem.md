@@ -36,10 +36,11 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
   - [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
   - [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
-## Prototypes
+## Examples
 
 Here are some well-maintained dApps that can be a great source of inspiration for building new dApps.
 
+- [Examples](https://github.com/alephium/ralph-example)
 - [DEX](https://github.com/alephium/alephium-dex/tree/master/contracts) 
 - [NFT](https://github.com/alephium/alephium-nft) 
 - [Alephium Bridge](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 
