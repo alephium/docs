@@ -26,6 +26,10 @@ The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains gene
 
 ### Test wallet
 
+:::caution
+The node wallet is for testing the APIs of full node. To generate hot wallets for depositing, please check [wallet generation](exchange#wallet-generation).
+:::
+
 Let's recover the test wallet by executing the following API. The test wallet has 1million ALPH for the address `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH`.
 
 ```shell
