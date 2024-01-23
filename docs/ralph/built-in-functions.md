@@ -1268,11 +1268,11 @@ Encodes inputs as big-endian ByteVec.
 fn blake2b!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Blake2b hash of the input.
+Computes the Blake2b-256 hash of the input.
 
 > @param **data** *the input data to be hashed*
 >
-> @returns *the hash result*
+> @returns *the 32 bytes hash result*
 
 ---
 
