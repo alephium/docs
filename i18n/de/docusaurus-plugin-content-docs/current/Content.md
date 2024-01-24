@@ -1,27 +1,36 @@
 ---
 sidebar_position: 12
-sidebar_label: The Content Repo
-title: The Content Repo
+sidebar_label: Das Inhalts-Repo
+title: Das Inhalts-Repo
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Table of Contents
-* [Official links & accounts](#official-links--accounts) 
-* [Tech Series](#tech-series)
-* [Explainer Series](#explainer-series)
-* [TechTalks & AMAs](#techtalks--amas)
-* [Milestones](#milestones)
-* [Community & Social](#community--social)
-* [External Podcasts & Publications](#external-podcasts--publications)
-* [Events, presentations & conferences](#events-presentations--conferences)
-* [Partnerships & PRs](#partnerships--prs)
-* [Reading Lists](#reading-lists)
-* [People to follow](#people-to-follow)
-* [Libraries & Developer Resources](#libraries--developer-resources)
-* [Apply to a grant](#apply-for-grants)
+## Inhaltsverzeichnis
+- [Inhaltsverzeichnis](#inhaltsverzeichnis)
+- [Official links \& accounts](#official-links--accounts)
+- [Tech Series](#tech-series)
+  - [Stateful UTXO](#stateful-utxo)
+  - [Proof-of-Less-Work](#proof-of-less-work)
+  - [Alphred Virtual Machine](#alphred-virtual-machine)
+  - [Blockflow](#blockflow)
+  - [Ralph Programming Language](#ralph-programming-language)
+  - [Asset Permission System](#asset-permission-system)
+- [Explainer Series](#explainer-series)
+- [Monthly Retrospective](#monthly-retrospective)
+- [TechTalks \& AMAs](#techtalks--amas)
+- [Milestones](#milestones)
+- [Community \& Social](#community--social)
+- [Tutorials \& Workshops](#tutorials--workshops)
+- [External Podcasts \& Publications](#external-podcasts--publications)
+- [Events, presentations \& conferences](#events-presentations--conferences)
+- [Partnerships \& PRs](#partnerships--prs)
+- [Reading Lists](#reading-lists)
+- [People to Follow](#people-to-follow)
+- [Libraries \& Developer Resources](#libraries--developer-resources)
+- [Apply for Grants](#apply-for-grants)
 
 ## Official links & accounts
 

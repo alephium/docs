@@ -1,62 +1,63 @@
 ---
 sidebar_position: 30
-sidebar_label: Glossary
-slug: /glossary
-title: Glossary
+sidebar_label: Glossar
+slug: /glossar
+title: Glossar
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-This is a list of useful concepts for understanding Alephium in particular and Blockchains in general.
+Dies ist eine allgemeine Liste nützlicher Konzepte zur besseren Verständnis von Alephium im Besonderen und Blockchains.
 
 ## A
 
 ### Alephium
 
-Alephium is the first operational sharded L1 blockchain scaling and enhancing PoW & UTXO concepts. Decentralization, self-sovereignty and security meet high-performance, accessibility and energy efficiency in a dev-friendly network optimized for DeFi & smart contract applications. 
+Alephium ist die erste funktionsfähige L1-Blockchain, die erfolgreich das sharding-Prinzip implementiert und die Konzepte von PoW und UTXO skalierbar und verbessert umsetzt. Diese Blockchain vereint Dezentralisierung, Selbstbestimmung und Sicherheit mit herausragender Leistung, Zugänglichkeit und Energieeffizienz. Das Ergebnis ist ein entwicklerfreundliches Netzwerk, das speziell für die Optimierung von DeFi- und Smart-Vertragsanwendungen konzipiert wurde.
 
-From its technical design to its interfaces, Alephium has been created to address the challenges of accessibility, scalability, and security encountered by decentralized applications today.
+Von seinem technischen Design bis zu seinen Schnittstellen wurde Alephium geschaffen, um den Herausforderungen der Zugänglichkeit, Skalierbarkeit und Sicherheit zu begegnen, denen dezentrale Anwendungen heute gegenüberstehen.
 
 ## B
 
-### Blake 3 Algorithm (Hash Function)
-[Blake 3 Algorithm](https://github.com/BLAKE3-team/BLAKE3) is a cryptographic hash function. A hash function is a mathematical function that takes an input string of any length and converts it to a fixed-length output string. The fixed-length output is known as the hash value.
+### Blake 3 Algorithmus (Hash Funktion)
+[Blake 3 Algorithmus](https://github.com/BLAKE3-team/BLAKE3) ist eine kryptografische Hash-Funktion. Eine Hash-Funktion ist eine mathematische Funktion, die eine Eingabesequenz beliebiger Länge entgegennimmt und sie in eine Ausgabesequenz fester Länge umwandelt. Die Ausgabesequenz fester Länge wird als Hash-Wert bezeichnet.
 
-Hash functions have a lot of use cases on a blockchain: in the [Merkle Tree](#merkle-tree), Proof of Work Consensus, Digital Signatures, and on the Blockchain itself (as each block header in a block in the blockchain contains the hash of the previous block header). Bitcoin, for example, uses the [SHA-256.](https://en.wikipedia.org/wiki/SHA-2)
+Hashfunktionen haben viele Anwendungsfälle in einer Blockchain: im [Merkle Tree](#merkle-tree), im Proof-of-Work-Konsens, bei digitalen Signaturen und in der Blockchain selbst (da jeder Blockkopf(Block-Header) in einem Block in der Blockchain den Hash des vorherigen Blockkopfs enthält). Bitcoin verwendet beispielsweise den [SHA-256.](https://en.wikipedia.org/wiki/SHA-2)
 
-Alephium uses the Blake 3 Algorithm as its cryptographic hash function for mining.
+Alephium verwendet den Blake-3-Algorithmus als seine kryptografische Hash-Funktion für das Mining.
 
-### Block Reward
+### Block Reward (Blockbelohnung)
 
-The block reward is an economic incentive for the miners to do their job of securing the network.
+Die Blockbelohnung ist ein wirtschaftlicher Anreiz für die Miner, ihre Aufgabe der Sicherung des Netzwerks zu erfüllen.
 
-It is paid in the blockchain’s native token. It is usually higher when the network is small and new and decreases over time as it matures.
+Sie wird in der nativen Token der Blockchain gezahlt. In der Regel ist sie höher, wenn das Netzwerk klein und neu ist, und nimmt im Laufe der Zeit ab, wenn es reift.
 
-[Block Reward GitHub Implementation](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
+[Blockbelohnung GitHub Implementierung](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
 
-### Block Size
+### Blockgröße
 
-Block size is the data limit each block can handle. 
 
-It can be measured in different ways. In some blockchains, it is expressed in how much actual data the block can carry (for example, in Zcash, the block size is 2MB). In other blockchains, the block size is related to the computational processing limit it can consume from the network (usually expressed in gas). Ethereum’s and Alephium’s block sizes are measured this way.
+Die Blockgröße ist die Datenbegrenzung, die jeder Block verarbeiten kann. 
 
-### Block Time
+Sie kann auf verschiedene Arten gemessen werden. In einigen Blockchains wird sie durch die tatsächlichen Datenmengen ausgedrückt, die der Block tragen kann (beispielsweise beträgt die Blockgröße bei Zcash 2 MB). In anderen Blockchains hängt die Blockgröße mit der berechneten Verarbeitungsgrenze zusammen, die das Netzwerk verbrauchen kann (üblicherweise in Gas ausgedrückt). Die Blockgrößen von Ethereum und Alephium werden auf diese Weise gemessen.
 
-Block Time is the time needed to compute the transactions inside a block and send it to the network.
+### Blockzeit
 
-Transactions are gathered inside a block and checked by the miners (or validators on PoS blockchains). Usually, the Block Time is impacted by the mining difficulty, as it is adjusted to reflect the network's computational capacity (hashrate) over a given time.
+Die Blockzeit ist die Zeit, die benötigt wird, um die Transaktionen innerhalb eines Blocks zu berechnen und ihn an das Netzwerk zu senden.
 
-Alephium network has a difficulty adjustment on every block and has an expected block time of **64 seconds**.
+Transaktionen werden in einem Block gesammelt und von den Minern (oder Validatoren in PoS-Blockchains) überprüft. In der Regel wird die Blockzeit von der Mining-Schwierigkeit beeinflusst, da sie angepasst wird, um die Rechenkapazität (Hashrate) des Netzwerks über eine bestimmte Zeitperiode widerzuspiegeln.
 
-Additional resources: [Block Time and Block Size Article](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
+Das Alephium-Netzwerk hat eine Schwierigkeitsanpassung bei jedem Block und eine erwartete Blockzeit von **64 sekunden**.
+
+Additional resources: [Artikel zu Blockzeit and Blockgröße](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
 
 ### Bridge
 
-A bridge is a protocol connecting separate blockchains to enable interactions between them. Each blockchain usually has its own technological features and doesn’t have a native way to communicate with other protocols. So the bridge is a set of smart contracts that links these different ecosystems.
+Eine Bridge ist ein Protokoll, das separate Blockchains verbindet, um Interaktionen zwischen ihnen zu ermöglichen. Jede Blockchain hat normalerweise ihre eigenen technologischen Merkmale und verfügt nicht über eine native Möglichkeit zur Kommunikation mit anderen Protokollen. Die Bridge besteht daher aus einer Gruppe von Smart Contracts, die diese verschiedenen Ökosysteme miteinander verbinden.
  
-A bridge can be more specialized, only allowing one type of interaction (like token transfers, for instance), or it can be more generalistic, allowing any kind of data transfer between the bridged blockchains.
+Eine Bridge kann spezialisierter sein und nur eine Art von Interaktion ermöglichen (wie zum Beispiel Token-Transfers) oder sie kann allgemeiner sein und jeglichen Datenaustausch zwischen den verbundenen Blockchains ermöglichen.
 
 ## C
 
@@ -68,35 +69,35 @@ A bridge can be more specialized, only allowing one type of interaction (like to
 
 ## G
 
-### Gas Amount Spent
+###  Gast Amount Spent (Gasbetrag ausgegeben)
 
-Gas Spent is the amount of computations the miner uses to execute the transactions. The more functions the transaction has, the more complex its execution, and the more gas is spent. 
+Gas Spent ist die Menge an Berechnungen, die der Miner verwendet, um die Transaktionen auszuführen. Je mehr Funktionen die Transaktion hat, desto komplexer ist ihre Ausführung, und desto mehr Gas wird ausgegeben. 
 
-For now, and as an anti-spam measure, there is a minimum value of 20’000 gas for any transaction on Alephium, meaning that your transaction fee will cost at least 0.002 ALPH. 
+Derzeit gibt es als Spam-Schutz eine Mindestgrenze von 20.000 Gas für jede Transaktion auf Alephium, was bedeutet, dass die Transaktionsgebühr mindestens 0,002 ALPH betragen wird.
 
-As the network matures, this will be relaxed, and the market will define the price of transaction fees.
+Mit zunehmender Reife des Netzwerks wird dies gelockert, und der Markt wird den Preis für Transaktionsgebühren festlegen.
 
-### Gas Price
+### Gaspreis
 
-This is the monetary value of the gas. Gas is defined as the computational effort to execute a command in a blockchain. The gas price is the monetary counterpart to pay for the work done by the miner. 
+Dies ist der monetäre Wert des Gases. Gas wird als der Rechenaufwand definiert, um einen Befehl in einer Blockchain auszuführen. Der Gaspreis ist der monetäre Gegenwert, um die vom Miner durchgeführte Arbeit zu bezahlen. 
 
-The current lowest possible gas price on Alephium is 10^-7 ALPH or 0.0000001 ALPH.
+Der aktuell niedrigste mögliche Gaspreis auf Alephium beträgt 10^-7 ALPH oder 0,0000001 ALPH.
 
 ### Genesis Block
 
-A Genesis Block is the name of a blockchain’s first block ever mined. As the blocks get layered one on top of the other, the Genesis Block is the foundation or beginning of it.
+Ein Genesis-Block ist der Name des allerersten Blocks, der jemals in einer Blockchain gemined wurde. Da die Blöcke übereinander gestapelt werden, bildet der Genesis-Block das Fundament oder den Anfang der Blockchain.
 
-It is also occasionally referred to as Block 0 or Block 1. When a block is broadcasted to the blockchain, it references the previous block. Because there is no previous block to reference, genesis blocks are generally hardcoded into the software.
+Er wird gelegentlich auch als Block 0 oder Block 1 bezeichnet. Wenn ein Block an die Blockchain übertragen wird, verweist er auf den vorherigen Block. Da es keinen vorherigen Block zum Verweisen gibt, sind Genesis-Blöcke in der Regel im Softwarecode fest codiert.
 
-Alephium’s genesis block was mined on November 8th, 2021
+Der Genesis-Block von Alephium wurde am 8. November 2021 gemined.
 
 ## H
 
-### Hard Fork
+### Hard Fork (Harte Gabel)
 
-A hard fork happens when a major upgrade on a network's protocol makes nodes or users running the previous version unable to send or validate transactions on the network after it.
+Ein Hard Fork tritt auf, wenn ein bedeutendes Upgrade des Protokolls eines Netzwerks dazu führt, dass Knoten oder Benutzer, die die vorherige Version ausführen, nach dem Upgrade keine Transaktionen mehr senden oder validieren können.
 
-As the upgrade is optional, sometimes some of the nodes or users decide not to do it, thus creating a different version of the blockchain from that point on. That happened with Ethereum and Ethereum Classic, for example.
+Da das Upgrade optional ist, entscheiden sich manchmal einige der Knoten oder Benutzer dagegen, es durchzuführen, wodurch ab diesem Zeitpunkt eine unterschiedliche Version der Blockchain entsteht. Das geschah zum Beispiel bei Ethereum und Ethereum Classic.
 
 ## I
 
@@ -108,38 +109,38 @@ As the upgrade is optional, sometimes some of the nodes or users decide not to d
 
 ## M
 
-### Merkle Tree
+### Merkle Tree (Merkle-Baum)
 
-A Merkle tree [is a structure](https://en.wikipedia.org/wiki/Merkle_tree) used in a blockchain to compress data more efficiently and securely.
-The blockchain packs the transactions in blocks. Each block has a header, and this header has a hash. This hash is stored on the Merkle Tree. The hash from the Merkle Tree is used to verify that a data set is the same as the original set of transactions without accessing the content inside the block. When visualized, this structure resembles a tree and can also be called a "binary hash tree."
+Ein Merkle-Tree [ist eine Struktur](https://en.wikipedia.org/wiki/Merkle_tree), die in einer Blockchain verwendet wird, um Daten effizienter und sicherer zu komprimieren.
+Die Blockchain packt die Transaktionen in Blöcken. Jeder Block hat einen Header, und dieser Header hat einen Hash. Dieser Hash wird im Merkle-Baum gespeichert. Der Hash aus dem Merkle-Baum wird verwendet, um zu überprüfen, dass ein Datensatz mit dem ursprünglichen Satz von Transaktionen identisch ist, ohne auf den Inhalt innerhalb des Blocks zugreifen zu müssen. Wenn dies visualisiert wird, ähnelt diese Struktur einem Baum und kann auch als "binärer Hash-Baum" bezeichnet werden.
 
-For example, Alephium uses three Merkle trees per group to store assets-UTXOs, contract logic, and contract state. 
+Zum Beispiel verwendet Alephium drei Merkle-Bäume pro Gruppe, um Assets-UTXOs, Vertragslogik und Vertragszustand zu speichern. 
 
 ### Maximal Extractble Value (MEV)
 
-Miner or [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/) refers to the value obtained from a block mining in excess of the standard block reward and gas fees by changing, including, or removing transactions in a block.
+Miner oder [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/) bezieht sich auf den Wert, der durch das Mining eines Blocks über die standardmäßige Blockbelohnung und Gasgebühren hinaus durch Ändern, Hinzufügen oder das Entfernen von Transaktionen in einem Block erzielt wird.
 
-This difference is offered by actors referred to as “searchers” that analyze the mempool looking for profit opportunities by replacing the information on a given transaction, like the sender or receive address. To increase the likelihood of their transaction being chosen by the miner to be part of the next block produced, they are willing to pay a much higher gas fee than the average one, giving away or “sharing” part of the profit.
+Diese Differenz wird von Akteuren angeboten, die als "Sucher" bezeichnet werden und den Mempool analysieren, um Profitmöglichkeiten zu finden, indem sie Informationen zu einer bestimmten Transaktion ersetzen, wie beispielsweise den Sender oder Empfänger. Um die Wahrscheinlichkeit zu erhöhen, dass ihre Transaktion vom Miner ausgewählt wird, um Teil des nächsten produzierten Blocks zu sein, sind sie bereit, eine viel höhere Gasgebühr als die Durchschnittsgebühr zu zahlen und somit einen Teil des Gewinns abzugeben oder zu "teilen".
 
 ### Mining Reward
 
 ![](media/Block%20reward.png)
 
-Alephium’s reward for newly generated blocks is also called Mining Reward (MR). After distribution, the [block rewards](#block-reward) are locked for 500 minutes.
+Die Belohnung für neu generierte Blöcke in Alephium wird auch als Mining Reward (MR) bezeichnet. Nach der Verteilung werden die [Block Rewards](#block-reward) für 500 Minuten gesperrt.
 
-The mining reward is bound by two curves based on hashrate and timestamp. At a given time and for a given hashrate, the reward per block equals the minimum between the time-based reward and the hashrate-based reward.
+Die Mining-Belohnung ist durch zwei Kurven gebunden, die auf Hashrate und Zeitstempel basieren. Zu einem bestimmten Zeitpunkt und für eine gegebene Hashrate entspricht die Belohnung pro Block dem Minimum zwischen der zeitbasierten Belohnung und der hashrate-basierten Belohnung.
 
-Block Reward = min( time-based reward, hashrate-based reward).
+Block Reward = min( zeitbasierte Belohnung, hashrate-basierte Belohnung ).
 
-Additional resources: [Alephium Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
+Zusätzliche Ressourcen: [Alephium Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 
 ### Multisig
 
-Multisig or Multisignature is the process of requesting more than one private key to co-sign a transaction for it to be broadcast to the network. It is used as an additional security step.
+Multisig oder Multisignatur ist der Prozess, bei dem mehr als ein privater Schlüssel erforderlich ist, um eine Transaktion zu co-signieren, bevor sie an das Netzwerk übertragen wird. Es wird als zusätzlicher Sicherheitsschritt verwendet.
 
-Usually, the multisig setup is done in a way that requires a minimal quorum of signers for a specific transaction to be approved and sent. For instance, a multisig of 5 out of 9 will require a quorum of 5 signers (among nine potential co-signers) to co-sign a transaction before it can be sent.
+In der Regel wird die Multisig-Konfiguration so konzipiert, dass eine bestimmte Transaktion nur dann genehmigt und versendet werden kann, wenn ein vordefiniertes Quorum von Unterzeichnern erreicht wird. Zum Beispiel erfordert eine Multisig mit einer 5-von-9-Konfiguration ein Quorum von 5 Unterzeichnern (aus neun potenziellen Mitunterzeichnern), um die Transaktion gemeinsam zu unterzeichnen, bevor sie gesendet werden kann.
 
-Alephium’s [Full Node Wallet](/wallet/node-wallet-guide) supports multisig addresses
+Alephium’s [Full Node Wallet](/wallet/node-wallet-guide) unterstützt Multisig Adressen
 
 ## N
 
@@ -149,11 +150,11 @@ Alephium’s [Full Node Wallet](/wallet/node-wallet-guide) supports multisig add
 
 ### Proof of Less Work (or PoLW)
 
-Similar to Proof-of-Work for Bitcoin, or Proof-of-Stake for Ethereum (post-merge), PoLW is Alephium’s consensus algorithm. It optimizes the network's energy consumption without compromising its security & decentralisation. It is activated when the network surpasses 1 Eh/s of accumulated hashrate. 
+Ähnlich wie der Proof-of-Work für Bitcoin oder der Proof-of-Stake für Ethereum (nach dem Merge) ist PoLW der Konsensalgorithmus von Alephium. Er optimiert den Energieverbrauch des Netzwerks, ohne dabei die Sicherheit und Dezentralisierung zu beeinträchtigen. Er wird aktiviert, wenn das Netzwerk eine kumulierte Hashrate von 1 Eh/s überschreitet.
 
-After that, it partially internalizes the cost to mine a new block, by adding a coin-burning mechanism into the block validation process, incentivizing a cap on the processing power needed overall. Given the same network conditions, Alephium would only use ⅛ of the energy consumed by Bitcoin mining.
+Danach internalisiert es teilweise die Kosten für das Minen eines neuen Blocks, indem es einen Coin-Burning-Mechanismus in den Blockvalidierungsprozess integriert, was dazu beiträgt, eine Begrenzung der insgesamt benötigten Rechenleistung zu fördern. Bei gleichen Netzwerkbedingungen würde Alephium nur ⅛ der Energie verbrauchen, die beim Bitcoin-Mining verbraucht wird.
 
-Additional resources: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work, the universe and everything…](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
+Zusätzliche Ressourcen: [TECH TALK #1 — Der ultimative Leitfaden zu Proof-of-Less-Work, dem Universum und allem anderen...](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
 
 ## Q
 
@@ -163,89 +164,89 @@ Additional resources: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work
 
 ### Sharding 
 
-Sharding is a strategy of database management that splits large databases into smaller, faster, more easily managed sections. 
+Sharding ist eine Strategie des Datenbankmanagements, die große Datenbanken in kleinere, schnellere und leichter zu verwaltende Abschnitte aufteilt.
 
-These smaller parts are called [“shards”](https://en.wikipedia.org/wiki/Shard_(database_architecture)), which means "a small part of a whole." Sharding is used when the power needed to run the database exceeds the processing capacity of a single computer. Sharding becomes necessary when the size of the blockchain exceeds the processing power of the Virtual Machine and the network. Sharding breaks up the main blockchain into separate segments, and the nodes verify only a subset of transactions, allowing parallel transaction validation. This increases the network throughput. 
+Diese kleineren Teile werden als [“shards”](https://en.wikipedia.org/wiki/Shard_(database_architecture)) bezeichnet, was „ein kleiner Teil eines Ganzen“ bedeutet. Sharding wird verwendet, wenn die benötigte Rechenleistung für die Datenbank die Verarbeitungskapazität eines einzelnen Computers übersteigt. Sharding wird notwendig, wenn die Größe der Blockchain die Verarbeitungsleistung der virtuellen Maschine und des Netzwerks übersteigt. Sharding zerlegt die Hauptblockchain in separate Segmente, und die Knoten verifizieren nur einen Teil der Transaktionen, was eine parallele Transaktionsvalidierung ermöglicht. Dies erhöht die Netzwerkdurchsatzrate. 
 
-Alephium’s blockchain is sharded, and the Blockflow algorithm manages this. Currently, we have four groups with four shards in each one.
+Die Blockchain von Alephium ist geschardet, und der Blockflow-Algorithmus verwaltet dies. Derzeit haben wir vier Gruppen mit jeweils vier Shards.
 
 ### Smart Contract 
 
-[Smart Contract (SC)](https://en.wikipedia.org/wiki/Smart_contract) is a computer program that enables transactions to be executed by rules predefined, without needing to rely on a third party, central authority or external mechanisms. In the blockchain context, a smart contract is written using the native Programing Language or is compiled (translated) to it and usually runs on the blockchain’s [Virtual Machine.](#virtual-machine)
+Ein [Smart Contract (SC)](https://en.wikipedia.org/wiki/Smart_contract) ist ein Computerprogramm, das Transaktionen nach vordefinierten Regeln ausführt, ohne auf eine dritte Partei, zentrale Autorität oder externe Mechanismen angewiesen zu sein. Im Kontext der Blockchain wird ein Smart Contract entweder in der nativen Programmiersprache geschrieben oder dazu kompiliert (übersetzt) und läuft normalerweise auf der [virtuellen Maschine](VM) der Blockchain.
 
-SCs on a blockchain can store arbitrary [state](#state) and execute arbitrary transactions. End clients also use transactions to interact with it. And the SC transactions can also invoke other SCs. These transactions might result in changing the state and sending coins from one smart contract to another or from one account to another.
+Smart Contracts (SCs) auf einer Blockchain können beliebige [Zustände](#state) speichern und beliebige Transaktionen ausführen. Endbenutzer verwenden ebenfalls Transaktionen, um mit ihnen zu interagieren. Die Transaktionen von Smart Contracts können auch andere Smart Contracts aufrufen. Diese Transaktionen können zu einer Änderung des Zustands führen und Münzen von einem Smart Contract zu einem anderen oder von einem Konto zu einem anderen senden.
 
-In Alephium, the smart contracts are written using the Ralph language and run on Alphred Virtual Machine.
+In Alephium werden Smart Contracts in der Ralph-Sprache geschrieben und auf der Alphred Virtual Machine ausgeführt.
 
-### State
+### State (Zustand)
 
-The state is a [computer science concept](https://en.wikipedia.org/wiki/State_(computer_science)) where a machine can have multiple states, but only one at any given time.
+Der Begriff "Zustand" ist ein [Informatikkonzept](https://en.wikipedia.org/wiki/State_(computer_science)), bei dem eine Maschine mehrere Zustände haben kann, aber zu jedem Zeitpunkt nur einen.
 
-A blockchain is considered to be a state machine. The state describes the system's current situation, and the transactions (inputs and outputs) trigger state transitions. As the transactions are bundled in blocks to make the process more efficient, the addition of a block is what changes the actual blockchain state.
+Eine Blockchain wird als Zustandsmaschine betrachtet. Der Zustand beschreibt die aktuelle Situation des Systems, und die Transaktionen (Eingaben und Ausgaben) lösen Zustandsübergänge aus. Da die Transaktionen zu Blöcken gebündelt werden, um den Prozess effizienter zu gestalten, ist die Hinzufügung eines Blocks das, was den tatsächlichen Zustand der Blockchain ändert.
 
-Alephium uses the stateful UTXO model, which, compared to other UTXO accounting models, allows it to benefit from a full-featured state. 
+Alephium verwendet das "stateful UTXO"-Modell, das im Vergleich zu anderen UTXO-Buchhaltungsmodellen von einem vollständig ausgestatteten Zustand profitiert.
 
 ## T
 
-### Time to Finality
+### Time to Finality (Zeit bis zur Endgültigkeit) 
 
-Time to Finality is the time between when a transaction is submitted to the network and when it’s considered final (and immutable). There are two main categories of finality: probabilistic finality and deterministic finality.
+Time to Finality ist die Zeitspanne zwischen dem Zeitpunkt, an dem eine Transaktion an das Netzwerk übermittelt wird, und dem Zeitpunkt, an dem sie als endgültig (und unveränderlich) betrachtet wird. Es gibt zwei Hauptkategorien der Endgültigkeit: probabilistische Endgültigkeit und deterministische Endgültigkeit
 
-Most blockchain systems offer probabilistic transaction finality — this means that the probability that a transaction is valid and cannot be reversed increases with adding more blocks on the chain, but it’s never absolutely final. The network agrees that the transaction is final with enough time and blocks. This is how Bitcoin achieves finality, for example, a transaction is considered final after 6 blocks.
+Die meisten Blockchain-Systeme bieten eine probabilistische Transaktionsendgültigkeit. Das bedeutet, dass die Wahrscheinlichkeit, dass eine Transaktion gültig ist und nicht rückgängig gemacht werden kann, mit der Hinzufügung weiterer Blöcke in der Kette steigt, aber niemals absolut endgültig ist. Das Netzwerk stimmt zu, dass die Transaktion mit ausreichend Zeit und Blöcken als endgültig betrachtet wird. Dies ist beispielsweise bei Bitcoin der Fall, wo eine Transaktion nach 6 Blöcken als endgültig gilt.
 
-Other blockchains use a deterministic transaction finality (sometimes called absolute finality) — this means that the transaction is considered final when it is added to the blockchain. Fantom is one example of it.
+Andere Blockchains verwenden eine deterministische Transaktionsendgültigkeit (manchmal auch als absolute Endgültigkeit bezeichnet). Das bedeutet, dass die Transaktion als endgültig betrachtet wird, wenn sie zur Blockchain hinzugefügt wird. Fantom ist ein Beispiel dafür.
 
-Additional resource: [Time to Finality Article](https://medium.com/@alephium/time-to-finality-17d64eeffd25)
+Zusätzliche Ressource: [Artikel zur Time to Finality ](https://medium.com/@alephium/time-to-finality-17d64eeffd25)
 
 ### Token
 
-A token is a registry entry in a blockchain that follows a set of rules encoded by the smart contract issuing it. This definition makes it different from a cryptocurrency as the latter is the native asset of a blockchain like BTC or ETH, whereas tokens are built on an existing blockchain using smart contracts.
+Ein Token ist ein Eintrag im Register einer Blockchain, der einem Satz von Regeln folgt, die von einem Smart Contract kodiert wurden, der es ausgibt. Diese Definition unterscheidet es von einer Kryptowährung, da letztere das native Asset einer Blockchain wie BTC oder ETH ist, während Tokens auf einer bestehenden Blockchain mithilfe von Smart Contracts erstellt werden.
 
-Tokens can be categorized as fungible or non-fungible. Fungible tokens are identical and can seamlessly replace one another. On the other hand, non-fungible tokens (NFTs) are unique and provably scarce, meaning their histories can be traced down to the individual level.
+Tokens können als fungibel oder nicht fungibel kategorisiert werden. Fungible Tokens sind identisch und können nahtlos miteinander ausgetauscht werden. Auf der anderen Seite sind nicht fungible Tokens (NFTs) einzigartig und nachweislich knapp, was bedeutet, dass ihre Historien bis auf individueller Ebene zurückverfolgt werden können.
 
-Tokens can also be categorized by their intended function: Utility, Security, or Currency Tokens. Currency tokens are created to be traded, like MakerDAO’s DAI or USDC. Utility tokens are focused on practical use, representing access to a given product or service. Security tokens are a digital representation of an underlying asset, such as a share in a company, voting right in a company or other centralized organization, or some tangible or digital article of value.
+Tokens können auch nach ihrer beabsichtigten Funktion kategorisiert werden: Utility, Security oder Currency Tokens. Currency Tokens werden erstellt, um gehandelt zu werden, wie beispielsweise MakerDAO's DAI oder USDC. Utility Tokens konzentrieren sich auf praktische Verwendung und repräsentieren den Zugang zu einem bestimmten Produkt oder einer bestimmten Dienstleistung. Security Tokens sind eine digitale Darstellung eines zugrunde liegenden Vermögenswerts, wie zum Beispiel einer Aktie an einem Unternehmen, einem Stimmrecht in einem Unternehmen oder einer anderen zentralisierten Organisation oder einem greifbaren oder digitalen Wertgegenstand.
 
-### Transaction Fee 
+### Transaction Fee (Transaktionsgebühr) 
 
 ![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
 
-When someone does a transaction in Alephium, there’s a price to be paid to the miners for including it in a block. 
+Wenn jemand in Alephium eine Transaktion durchführt, muss er den Minern einen Preis zahlen, um sie in einen Block aufzunehmen.
 
-This price is composed of two elements: the [Gas Price](#gas-price) in the network’s native token and the [Gas Amount Spent](#gas-amount-spent) on this transaction processing and can be defined by this equation:
+Dieser Preis setzt sich aus zwei Elementen zusammen: dem [Gaspreis](#gas-price) in der nativen Token der Netzwerks und der [verwendeten Gasmenge](#gas-amount-spent) bei der Verarbeitung dieser Transaktion. Er kann durch folgende Gleichung definiert werden:
 
-Transaction fee = Gas Price * Gas Amount Spent
+Transaktionsgebühr = Gaspreis * Verwendete Gasmenge
 
-Additional resources: [Transaction fee GitHub Implementation](https://github.com/alephium/alephium/blob/v1.4.2/protocol/src/main/scala/org/alephium/protocol/model/Transaction.scala#L230-L239)
+Zusätzliche Ressource: [Transaktionsgebühr GitHub Implementierung](https://github.com/alephium/alephium/blob/v1.4.2/protocol/src/main/scala/org/alephium/protocol/model/Transaction.scala#L230-L239)
 
-### Transactions Per Second (TPS)
+### Transactions pro Sekunde (TPS)
 
-Transactions Per Second (TPS) is a measure that comes from the [database systems](https://en.wikipedia.org/wiki/Transactions_per_second) environment, and it means how many transactions theoretically can happen in one second in a given system.
+Transactions Per Second (TPS) ist eine Kennzahl aus dem Umfeld von [Datenbanksystemen](https://en.wikipedia.org/wiki/Transactions_per_second) und gibt an, wie viele Transaktionen theoretisch in einer Sekunde in einem bestimmten System stattfinden können.
 
-In the blockchain context, it is used as a synonym for speed: how fast a transaction can be broadcasted to the network. The following equation calculates it:
+Im Blockchain-Kontext wird es als Synonym für Geschwindigkeit verwendet: wie schnell eine Transaktion an das Netzwerk gesendet werden kann. Die folgende Gleichung berechnet es:
  
-TPS = (Block Size / Transaction Size ) /Block Time
+TPS = (Blockgröße / Transaktionsgröße) / Blockzeit
 
-Additional resources:[Transactions Per Second Article](https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39)
+Zusätzliche Ressource:[Artikel Transactions Per Second ](https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39)
 
 ## U
 
 ### UTXO
 
-[UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) (Unspent Transaction Output) is the term for the amount of a specific currency that remains unspent after a cryptocurrency transaction.
+[UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) (Unspent Transaction Output) ist der Begriff für den Betrag einer bestimmten Währung, der nach einer Kryptowährungstransaktion ungenutzt bleibt.
 
-On a UTXO account model blockchain, the portion of what was sent and not spent in a transaction is used as an accounting method. Like double-entry accounting, each transaction has an input and output.
+Auf einer UTXO-Kontomodell-Blockchain wird der nicht ausgegebene Teil einer Transaktion als Buchungsmethode verwendet. Ähnlich der doppelten Buchführung hat jede Transaktion einen Ein- und Ausgang.
 
-Improved versions were built over it, like eUTXO, Cell System, or Alephium’s sUTXO.
+Verbesserte Versionen wurden darüber entwickelt, wie z.B. eUTXO, Cell System oder Alephium's sUTXO.
 
 ## V
 
-### Virtual Machine
+### Virtuelle Maschine
 
-A Virtual Machine (VM) is a software emulation of a physical computer to run programs and deploy apps.
+Eine virtuelle Maschine (VM) ist eine Softwareemulation eines physischen Computers, um Programme auszuführen und Apps bereitzustellen.
 
-A virtual machine runs its own operating system and functions. Each node runs a copy of the VM to run the programs (smart contracts) and allow them to interact with each other and the blockchain itself. 
+Eine virtuelle Maschine führt ihr eigenes Betriebssystem und Funktionen aus. Jeder Knoten führt eine Kopie der VM aus, um die Programme (Smart Contracts) auszuführen und es ihnen zu ermöglichen, miteinander und mit der Blockchain selbst zu interagieren.
 
-Alephium’s Virtual machine is called Alphred and has a lot of very [interesting properties.](https://www.youtube.com/watch?v=VVYH9rBJAdA&list=PLqL60kqgLPBBrc64K-1Gs771FBTiLtYZE&index=29)
+Die virtuelle Maschine von Alephium wird Alphred genannt und weist viele sehr [interessante Eigenschaften](https://www.youtube.com/watch?v=VVYH9rBJAdA&list=PLqL60kqgLPBBrc64K-1Gs771FBTiLtYZE&index=29) auf.
 
 
 ## W
