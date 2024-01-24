@@ -1,79 +1,79 @@
 ---
 sidebar_position: 0
-sidebar_label: Overview
+sidebar_label: Übersicht
 slug: /
-title: Alephium Overview
+title: Alephium Übersicht
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## What is Alephium?
+## Was ist Alephium?
 
-**Scalable for devs. Secure for users. Decentralized for all.**
+**Skalierbar für Entwickler. Sicher für Benutzer. Dezentralisiert für alle.**
 
-Innovative sharding meets expressive sUTXO and efficient Proof-of-Less-Work to secure scalable dApps for real-world use cases.
-
----
-
-## Why is Alephium special?
-
-On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
-
-**It scales through sharding**. Alephium is built on a novel and complete sharding algorithm called BlockFlow. It improves on the UTXO model of BTC to make it scalable, and uses DAG data structure to reach consensus between different shards. This will allow up to 10’000 Transactions Per Second (currently more than 400 TPS vs Bitcoins 7 TPS).
-
-**It is programmable & secure**. Alephium proposes a stateful UTXO model offering layer-1 scalability and the same level of programmability as the account model implemented on ETH, whilst being more secure.
-
-**It is less energy consuming thanks to POLW**. Proof of Less Work combines physical work and Coin economics to dynamically adjust the work required to mine new blocks. Given the same network conditions, Alephium only uses ⅛ of the energy compared to Bitcoin.
-
-**It improves on chain structure with its own custom VM (Alphred)**. It resolves many of the critical issues of the current dApps platforms with huge improvements on security, development experience and introductions of new paradigms such as trustless P2P smart contracts transactions.
-
-**It has its own programming language for dApps**. Ralph is similar to the Rust syntax, hence its name. It allows to build efficient and secure smart contracts easier than Solidity for example. It is specifically designed to facilitate the creation of Decentralized Finance applications!
-
-Putting all these innovations together, Alephium delivers a highly demanded solution in the industry: a scalable blockchain improving on mature ideas from Bitcoin to deliver reliable, powerful and secure DeFi and dApps capabilities. And we’re live!
-
-**Check out our [whitepapers][whitepaper]!**
+Innovatives Sharding trifft auf expressive sUTXO und effizientes Proof-of-Less-Work, um skalierbare dApps für den realen Einsatz zu sichern.
 
 ---
 
-## Our tokenomics
+## Warum ist Alephium besonders?
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (Nov. 8th, 2021), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
+Neben einem beeindruckenden Team, einer herausragenden Gemeinschaft und viel Energie zeichnen uns folgende technische Besonderheiten aus:
 
-80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
+**Es skaliert durch Sharding.**. Alephium basiert auf einem neuartigen und umfassenden Sharding-Algorithmus namens BlockFlow. Dieser verbessert das UTXO-Modell von BTC, um es skalierbar zu machen, und verwendet die DAG-Datenstruktur, um Konsens zwischen verschiedenen Shards zu erreichen. Dies ermöglicht bis zu 10.000 Transaktionen pro Sekunde (derzeit mehr als 400 TPS im Vergleich zu Bitcoins 7 TPS).
 
-30M tokens (3%) 💡 **Community and ecosystem development**. Locked on-chain for 4 years and vested quarterly.
+**Es ist programmierbar und sicher**. Alephium bietet ein zustandsbehaftetes UTXO-Modell, das Layer-1-Skalierbarkeit und das gleiche Maß an Programmierbarkeit wie das auf ETH implementierte Account-Modell vorschlägt, während es gleichzeitig sicherer ist.
 
-30M tokens (3%) 🧑‍💻 **Treasury & Team**. Locked on-chain for 3 years, and vested quarterly.
+**Es ist weniger energieintensiv dank POLW**. Proof of Less Work kombiniert physische Arbeit und Coin-Ökonomie, um die erforderliche Arbeit für das Minen neuer Blöcke dynamisch anzupassen. Unter gleichen Netzwerkbedingungen verwendet Alephium nur ⅛ der Energie im Vergleich zu Bitcoin.
 
-860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
+**Es verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred)**. Es löst viele der kritischen Probleme der aktuellen dApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
 
-In addition, all the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
+**Es verfügt über eine eigene Programmiersprache für dApps**. Ralph ähnelt der Rust-Syntax, daher sein Name. Es ermöglicht das einfachere Erstellen effizienter und sicherer Smart Contracts im Vergleich zu Solidity. Es ist speziell darauf ausgerichtet, die Erstellung von dezentralen Finanzanwendungen zu erleichtern!
+
+Durch die Kombination all dieser Innovationen bietet Alephium eine stark nachgefragte Lösung in der Branche: eine skalierbare Blockchain, die auf bewährten Ideen von Bitcoin aufbaut, um zuverlässige, leistungsstarke und sichere DeFi- und dApps-Funktionen zu liefern. Und wir sind live!
+
+**Check out our [Whitepapers][whitepaper]!**
+
+---
+
+## Unsere Tokenökonomie
+
+Die Tokenversorgung auf Alephium ist begrenzt und hat ein Hardcap von 1 Milliarde. Zum Zeitpunkt des Mainnet-Launchs (11.8.21) wurden mit dem Genesis-Block eine anfängliche Versorgung von 140 Millionen Tokens (14% des Hardcaps) abgebaut. Die verbleibende Versorgung der ALPH-Token wird über die nächsten ~80 Jahre abgebaut. Von diesen 140 Millionen Tokens:
+
+80 Millionen Tokens (8%) 🤝 **Vorverkäufe und zukünftige strategische private Verkäufe**. Vesting-Perioden variieren von 2 bis 4 Jahren.
+
+30 Millionen Tokens (3%) 💡 **Community- und Ökosystementwicklung**. Auf der Chain für 4 Jahre gesperrt und vierteljährlich gevestet.
+
+30 Millionen Tokens (3%) 🧑‍💻 **Treasury & Team**. Auf der Chain für 3 Jahre gesperrt und vierteljährlich gevestet.
+
+860 Millionen Tokens (86%) 🌊 **Mining Rewards**. Diese Tokens werden für Mining-Belohnungen über die nächsten ~80 Jahre verwendet. Sie gewährleisten die Verarbeitung von Transaktionen und die Ausführung von Smart Contracts auf der Alephium-Blockchain.
+
+Zusätzlich werden die Hälfte der Transaktionsgebühren mit jedem Block verbrannt, und Proof of Less Work ermöglicht interne Mining-Kosten durch Verbrennung, wenn die Hashrate und der Energieverbrauch signifikant hoch sind.
 
 
-### Total Supply and Circulating Supply
+### Gesamtangebot und Umlaufangebot
 
-The Total Supply is calculated by adding the tokens mined at the Genesis Block (see breakdown above) and the block rewards since the Mainnet Launch.
+Das Gesamtangebot wird berechnet, indem die Tokens, die beim Genesis-Block abgebaut wurden (siehe Aufschlüsselung oben), und die Blockbelohnungen seit dem Mainnet-Launch addiert werden.
 
-Alephium uses the CMC method to calculate the circulating supply of ALPH. It consists of: the total number of existing ALPH from which is subtracted the balance (locked & unlocked) from the private sale investors, the treasury, ecosystem, the advisors/contractors, the project-controlled assets and all locked ALPH from other addresses.
-In general, you can find our circulating supply on the front page of our [explorer](https://explorer.alephium.org/#/blocks). If you want a more in-depth explanation of the Coin Market Cap methodology, find it [here.](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-)
+Alephium verwendet die CMC-Methode, um das Umlaufangebot von ALPH zu berechnen. Dieses besteht aus: der Gesamtanzahl der vorhandenen ALPH, von der der Saldo (gesperrt & nicht gesperrt) der Privatverkaufsinvestoren, des Schatzes, des Ökosystems, der Berater/Auftragnehmer, der projektgesteuerten Vermögenswerte und aller gesperrten ALPH von anderen Adressen abgezogen wird.
+Im Allgemeinen finden Sie unser Umlaufangebot auf der Startseite unseres [Explorers](https://explorer.alephium.org/#/blocks). Wenn Sie eine detailliertere Erklärung der Coinmarketcap-Methodik wünschen, finden Sie diese [hier.](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-)
 
-If you need the endpoints, find them here: [Total Supply](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Circulating Supply](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserved Supply](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Locked ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
+Wenn Sie die Endpunkte benötigen, finden Sie diese hier: [Total Supply](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Circulating Supply](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserved Supply](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Locked ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
 
 **Find more details in our [Tokenomics Medium article][tokenomics-medium].**
 
 ---
 
-## If you’re a dev, start here
+## Wenn Sie Entwickler sind, starten Sie hier
 
-Find our latest [node release on GitHub][node-release].
+Finden Sie unsere neuestes [Node Release auf GitHub][node-release].
 
-Discover and contribute to our main projects [on GitHub][github]:
+Entdecken Sie und tragen Sie zu unseren Hauptprojekten [auf GitHub][github] bei:
 
-- [Full node][full-node]
-- [Desktop wallet][desktop-wallet]
-- [Mobile wallet][mobile-wallet]
+- [Full Node][full-node]
+- [Desktop Wallet][desktop-wallet]
+- [Mobile Wallet][mobile-wallet]
 - [Explorer][explorer]
 - [Web3 SDK][web3-sdk]
 - [Extension Wallet][extension-wallet-repo]
@@ -82,73 +82,73 @@ Discover and contribute to our main projects [on GitHub][github]:
 - [Awesome Alephium][awesome]
 - [Docs][docs]
 
-### Building something on Alephium?
+### Etwas auf Alephium entwickeln?
 
-Start with the [Web3 SDK][web3-sdk] and if you’re building a dApp, head over [here](./dapps/Getting-Started). 
-Once released, let everyone know by sending a PR to add your project to [Awesome Alephium][awesome]!
-The Alephium [Brand Guide][brand-guide] might also come in handy.
+Beginne mit dem [Web3 SDK][web3-sdk], und wenn du eine dApp erstellen möchtest, schau [hier](./dapps/Getting-Started) vorbei. 
+Sobald Ihr Projekt veröffentlicht ist, informieren Sie alle, indem Sie einen Pull Request (PR) senden, um Ihr Projekt zu [Awesome Alephium][awesome]!
+Der Alephium [Brand Guide][brand-guide] könnte ebenfalls nützlich sein.
 
 [Reward & Grant Program][reward-grant]
 
-## If you’re a miner, start here
+## Wenn du Miner bist, starte hier
 
-Start by joining the dedicated [Mining channel on Discord][mining-discord].
+Beginne, indem du dem dedizierten [Mining Kanal auf Discord][mining-discord] beitrittst.
 
-Find our [Miner starter pack on Github][miner-starter-pack].
+Finde unser [Miner Starter Packet auf Github][miner-starter-pack].
 
-and the specific repos:
+und den spezifischen Repos:
 
 - https://github.com/alephium/gpu-miner
 - https://github.com/alephium/fpga-miner
 - https://github.com/alephium/mining-pool
 
-Here is a video of [how to get started for solo mining][solo-mining-video].
+Hier ist ein Video über [Wie starte ich mit dem Solo Mining][solo-mining-video].
 
-And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](./mining/pool-mining-guide).
+Und wenn du lieber einem Pool beitreten möchtest, findest du eine Liste der verfügbaren Pools im [Pool Mining Guide](./mining/pool-mining-guide).
 
 ---
 
-## Milestones & Roadmap
+## Meilensteine & Roadmap
 
-[Completed Milestones][milestones]
+[Abgeschlossene Meilensteine][milestones]
 
 [Roadmap][roadmap]
 
 ---
 
-## [Buy/sell][markets]
+## [Kaufen/Verkaufen][markets]
 
-⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
+⚠️ Einige Paare haben eine geringe Liquidität. Überprüfen Sie immer die Liquidität, bevor Sie einen Handelsplatz auswählen oder ein Asset überbrücken.
 
 ---
 
-## Join the Alephium Community!
+## Trete Alephium Community bei!
 
-### Talk
+### Unterhalten
 
 - [Discord][discord]
 - [Telegram][telegram]
 - [Reddit][reddit]
 
-### Connect 
+### Verbinden 
 
 - [Twitter][twitter]
 - [LinkedIn][linkedin]
 - [Facebook][facebook]
 
-### Read, setup, explore, contribute
+### Lesen, einrichten, erkunden, beitragen
 
-- [Website][website]
+- [Webseite][website]
 - [Whitepapers][whitepaper]
 - [Medium][medium]
 - [GitHub][github]
 
 ---
 
-## Non-official Content & Communities
+## Nicht offizielle Inhalte & Communities
 
 :::info
-Not moderated, endorsed or managed by Alephium
+Nicht moderiert, unterstützt oder verwaltet durch Alephium.
 :::
 
 You will find the complete list of internationalized channel [here](./misc/Internationalization-and-Localization)
@@ -171,7 +171,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 
 ---
 
-## Our partners
+## Unsere Partner
 
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
 - [Cetacean Capital](https://cetacean.capital/)

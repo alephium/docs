@@ -1,11 +1,12 @@
 ---
 sidebar_position: 20
-title: Dockerized Full Node Guide
-sidebar_label: Dockerized full node guide
+title: Dockerisierter Full Node Leitfaden
+sidebar_label: Dockerisierter Full Node Leitfaden
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-You can find the instructions on how run a full node with `docker-compose` in 1 minute here: [https://github.com/alephium/alephium/tree/master/docker](https://github.com/alephium/alephium/tree/master/docker)
+
+Sie finden die Anweisungen, wie Sie einen Full Node mit `docker-compose` in 1 Minute ausführen können, hier: [Docker](https://github.com/alephium/alephium/tree/master/docker)
