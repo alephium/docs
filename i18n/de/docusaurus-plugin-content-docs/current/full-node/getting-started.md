@@ -1,56 +1,56 @@
 ---
 sidebar_position: 10
-title: Getting Started
-sidebar_label: Getting started
+title: Erste Schritte
+sidebar_label: Erste Schritte
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Requirements
+## Anforderungen
 
-Ensure that Java (11 or 17 is recommended) is installed on your computer:
+Stellen Sie sicher, dass Java (11 oder 17 wird empfohlen) auf Ihrem Computer installiert ist:
 
-- Windows or macOS: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
-- Ubuntu: run `sudo apt install default-jdk` in Terminal
+- Windows oder macOS: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
+- Ubuntu: führen sie `sudo apt install default-jdk` in Ihrem Terminal auf
 
-## Download Application File
+## Anwendungsdatei herunterladen
 
-Download file `alephium-x.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
+Laden Sie die Datei `alephium-x.x.x.jar` vom [Github-Release](https://github.com/alephium/alephium/releases/latest) herunter (klicken Sie nicht doppelt darauf, da sie auf diese Weise nicht gestartet werden kann).
 
-## Start your node
+## Starte deine Node
 
-1. Open the search and type in `Terminal` (for Mac and Ubuntu) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-x.x.x.jar** file is saved.
-3. Type the following command and press Enter to launch the full node:
+1. Öffnen Sie die Suche und geben Sie im `Terminal` (für Mac und Ubuntu) oder der `Eingabeaufforderung` (für Windows) ein.
+2. Geben Sie im Terminal-/Eingabeaufforderungsprogramm `cd Ihr-jar-File-Pfad` ein, um in das Verzeichnis zu wechseln, in dem die Datei **alephium-x.x.x.jar** gespeichert ist.
+3. Geben Sie den folgenden Befehl ein und drücken Sie Enter, um den Full Node zu starten:
    ```shell
    java -jar alephium-x.x.x.jar
    ```
 
-🎉 _**Tada, your node is running**_
+🎉 _**Tada, Ihr Knotenpunkt ist aktiviert.**_
 
-- Your node will start to sync with the network. It might take long the first time. Your node has been fully synced once the block height in the terminal logs is equal to the one found in the latest blocks of the [explorer].
-- If you close the terminal the node will be turned off.
-- All of the blockchain data is stored in `.alephium` under your home folder[^1].
+- Ihr Knotenpunkt beginnt, sich mit dem Netzwerk zu synchronisieren. Es kann beim ersten Mal eine Weile dauern. Ihr Knotenpunkt ist vollständig synchronisiert, wenn die Blockhöhe in den Terminalprotokollen mit derjenigen in den neuesten Blöcken des [Explorers] übereinstimmt.
+- Wenn Sie das Terminal schließen, wird der Knotenpunkt ausgeschaltet.
+- Alle Blockchain-Daten werden im Ordner `.alephium` unter Ihrem Benutzerverzeichnis [^1] gespeichert.
 
 ### Swagger
 
-We use OpenAPI to interact with the full node. You can directly open Swagger UI through [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+Wir verwenden OpenAPI, um mit dem Full Node zu interagieren. Sie können direkt die Swagger-Benutzeroberfläche öffnen unter: [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
 
-Alternatively, you can use any OpenAPI client to
-import the `openapi.json` file from our repository ([download](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.json)).
+Alternativ können Sie jeden OpenAPI-Client verwenden, um die Datei
+aus unserem Repository `openapi.json` zu importieren. ([Download](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.json)).
 
 ### Mining
 
-For mining tutorial, you can follow our [Solo Mining Guide](mining/solo-mining-guide.md) or [Pool Mining Guide](mining/pool-mining-guide.md).
+Für ein Mining-Tutorial können Sie unserer Anleitung zum [Solo Mining Guide](mining/solo-mining-guide.md) oder [Pool Mining Guide](mining/pool-mining-guide.md) folgen.
 
 ### Wallet
 
-You could download the desktop wallet from here [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
+Sie können die Desktop Wallet von hier auf [GitHub](https://github.com/alephium/desktop-wallet/releases/latest) herunterladen.
 
-Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](wallet/node-wallet-guide.md) to learn how to use it.
+Alternativ verfügt unsere Full Node über eine integrierte Wallet mit erweiterten Funktionen. Sie können unserer [Wallet Guide](wallet/node-wallet-guide.md) folgen, um zu lernen, wie Sie sie verwenden können.
 
-[^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
+[^1]: Der Home-Ordner hängt von Ihrem System ab: `C:\Users\<ihr-benutzername>` unter Windows, `/Users/<ihr-benutzername>` auf macOS, `/home/<ihr-benutzername>` unter Linux.
 
 [explorer]: https://explorer.alephium.org
