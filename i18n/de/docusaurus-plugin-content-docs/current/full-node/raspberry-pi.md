@@ -1,33 +1,33 @@
 ---
 sidebar_position: 30
-title: Full Node on Raspberry Pi
-sidebar_label: Full node on Raspberry Pi
+title: Full Node auf dem Raspberry Pi
+sidebar_label: Full Node auf dem Raspberry Pi
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-In this guide we'll learn:
 
-- How to install a Raspberry Pi 4
-- How to run a docker'ized instance of Alephium full node
+In diesem Leitfaden werden wir lernen:
 
-## How to install a Raspberry Pi 4
+- Wie man einen Raspberry Pi 4 installiert
+- Wie man eine Docker-Instanz eines Alephium-Full-Nodes ausführt
 
-This first section will detail my personal way of installing Ubuntu 20.04 server on a Raspberry Pi 4.
-It requires to have a Raspberry Pi 4 (obviously), a SD Card (8 GB is the minimum) and an SD Card reader to flash the SD Card.
-It will be illustrated using shell command from macOS, but you'll find the equivalent in Windows.
+## Wie man einen Raspberry Pi 4 installiert
 
-![Getting ready for the hard work](media/flashing.jpeg)
+Dieser erste Abschnitt wird meinen persönlichen Weg zur Installation von Ubuntu 20.04 Server auf einem Raspberry Pi 4 beschreiben.
+Es erfordert einen Raspberry Pi 4 (offensichtlich), eine SD-Karte (mindestens 8 GB) und einen SD-Kartenleser, um die SD-Karte zu flashen.
+Es wird mit Shell-Befehlen von macOS illustriert, aber du findest das Äquivalent in Windows.
 
-First of all we will configure the installation Ubuntu. We're using cloud-init for that since it is built in Ubuntu 20.04 and above.
-This configuration creates a user (different from the `ubuntu` default) and installs a few packages.
+![Bereit machen für die harte Arbeit](media/flashing.jpeg)
 
-### Configure the boot
+Zuerst werden wir die Installation von Ubuntu konfigurieren. Hierfür verwenden wir cloud-init, da es in Ubuntu 20.04 und höher integriert ist. Diese Konfiguration erstellt einen Benutzer (abweichend vom standardmäßigen  `ubuntu`) und installiert einige Pakete.
 
-Put the snippet below in a file named `user-data.yml` and save it. This one creates a user `alephium` with the password `installfest2021`.
-You can customize the content of this file if you know what you're doing.
+### Boot-Konfiguration einrichten
+
+Füge den unten stehenden Ausschnitt in eine Datei mit dem Namen `user-data.yml` ein und speichere sie. Diese erstellt einen Benutzer `alephium` mit dem Passwort `installfest2021`.
+Du kannst den Inhalt dieser Datei anpassen, wenn du weist, was du tust.
 
 ```yaml
 #cloud-config
@@ -70,11 +70,11 @@ power_state:
   mode: reboot
 ```
 
-### Flash the SD Card
+### Flashen der SD-Karte
 
-Now, we'll flash the SD Card including this file `user-data.yml`.
+Nun werden wir die SD-Karte mit dieser Datei flashen. `user-data.yml`.
 
-I'm using the tool [flash](https://github.com/hypriot/flash/) for this, which does most of the hard work for you.
+Ich nutze dafür das Tool [Flash](https://github.com/hypriot/flash/), was die meiste harte Arbeit für uns erledigt.
 
 ```shell
 curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash
@@ -83,61 +83,55 @@ chmod +x flash
 ./flash --userdata user-data.yml https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz
 ```
 
-The command above will ask for confirmation that `/dev/disk2` is the SD Card and not your harddrive, and will ask your password
-because flashing a SD Card requires admin privileges.
+Der obige Befehl wird um Bestätigung bitten, dass `/dev/disk2` die SD-Karte und nicht deine Festplatte ist, und wird nach dem Passwort fragen, da das Flashen einer SD-Karte Administratorrechte erfordert.
 
-Once the command above completes, you can insert the SD Card in your Raspberry Pi and turn it on.
-It takes a handful of minutes for the first boot to execute fully, and your Raspberry Pi is ready to be used.
-Once the node is ready, you can ssh into it using `alephium` as username, and `installfest2021` as password!
+Sobald der obige Befehl abgeschlossen ist, könnst du die SD-Karte in deinen Raspberry Pi einlegen und ihn einschalten. Es dauert einige Minuten, bis der erste Start vollständig ausgeführt ist, anschließend ist dein Raspberry Pi bereit zur Verwendung. Sobald der Knoten bereit ist, könst du dich per SSH anmelden, indem du `alephium` als Benutzernamen und `installfest2021` als Passwort verwendest!
 
 ```shell
 ssh alephium@alephium
 ```
 
-If `alephium` host is unknown, you'll have to search for the IP address of the node, most likely on your router configuration app/page.
+Wenn der Host `alephium` unbekannt sein sollte, musst du nach der IP-Adresse des Knotens suchen, höchstwahrscheinlich in deiner Router-Konfigurations-App/Seite.
 
-And that's it, your Raspberry Pi is running Ubuntu 20.04 with Docker, and is ready to run an Alephium full node.
+Und das ist es, Ihr Raspberry Pi läuft mit Docker unter Ubuntu 20.04 und ist bereit, einen vollständigen Alephium-Knoten auszuführen.
 
 🚀
 
 ![Raspberry pi 4](media/pies.jpeg)
 
-## How to run a docker'ized instance of Alephium full node
+## Wie man eine dockerisierte Instanz eines vollständigen Alephium-Knotens ausführt:
 
-This second section is not specific to a Raspberry Pi, but can be generalized to any server/vm/computer with SSH access.
-We will run the most basic version of a Alephium full node using docker, and then iterate to make our setup more
-convenient to work with.
+Diese zweite Sektion ist nicht spezifisch für einen Raspberry Pi, sondern kann auf jeden Server/VM/Computer mit SSH-Zugang eingerichtet werden. Wir werden die einfachste Version eines Alephium-Full-Knotens mit Docker ausführen und dann Schritt für Schritt vorgehen, um die Einrichtung bequemer zu gestalten.
 
-As a pre-requisite of this section, we must have a server with SSH access, and more precisely running Ubuntu 20.04 or more recent.
-The previous section explains how to do that with a Raspberry Pi, but an AWS EC2 instance would also do the job.
+Als Voraussetzung für diesen Abschnitt müssen wir einen Server mit SSH-Zugriff haben, der genauer gesagt Ubuntu 20.04 oder höher ausführt. Der vorherige Abschnitt erklärt, wie das mit einem Raspberry Pi gemacht wird, aber eine AWS EC2-Instanz würde ebenfalls funktionieren.
 
-### Connect to the server
+### Mit dem Server verbinden
 
-This should be an easy step, using the `ssh` command. Run:
+Das sollte ein einfacher Schritt mit dem `ssh` -Befehl sein. Führe folgendes aus:
 
 ```shell
 ssh alephium@alephium
 ```
 
-### Installing docker and docker-compose
+### Docker und Docker-Compose installieren
 
-Let's install docker and docker-compose quickly, so that we'll be all set to run the Alephium full node.
+Lass uns schnell Docker und Docker Compose installieren, damit wir bereit sind, die Alephium-Full-Node auszuführen.
 
-Once ssh'ed, run the following commands:
+Nach dem SSH-Zugriff führen Sie die folgenden Befehle aus:
 
 ```shell
 sudo apt install -y docker.io docker-compose
 ```
 
-Great, docker should be running:
+Großartig, Docker sollte nun ausgeführt werden:
 
 ```shell
 docker ps
 ```
 
-### Run the full node
+### Führe die Full Node aus
 
-Now we can run the full node, in a single line, as follow:
+Nun kannst du die Full Node mit einer einzigen Zeile wie folgt ausführen:
 
 ```shell
 docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:latest
@@ -145,11 +139,10 @@ docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:latest
 
 ### Docker-compose
 
-Docker-compose is a bit more convenient way of running a container, especially if the command starts to contain
-volumes, more ports, environment variables, etc...
+Docker-Compose ist eine etwas bequemere Möglichkeit, einen Container auszuführen, insbesondere wenn der Befehl Volumes, mehr Ports, Umgebungsvariablen usw. enthält.
 
-So, below is the service definition you can put in a `docker-compose.yml` file, and simply call `docker-compose up -d` to
-start your full node from this definition.
+
+Hier ist die Servicedefinition, die du in einer `docker-compose.yml` -Datei platzieren und einfach `docker-compose up -d`  aufrufen kannst, um deine Full Node von dieser Definition aus zu starten.
 
 ```yaml
 version: "3"
