@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
-title: Erste Schritte
-sidebar_label: Erste Schritte
+title: Einstieg
+sidebar_label: Einstieg
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
