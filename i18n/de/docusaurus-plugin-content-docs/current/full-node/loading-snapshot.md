@@ -1,7 +1,7 @@
 ---
 sidebar_position: 35
-title: Loading from a snapshot
-sidebar_label: Loading from snapshot
+title: Laden aus dem Snapshot
+sidebar_label: Laden aus dem Snapshot
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
