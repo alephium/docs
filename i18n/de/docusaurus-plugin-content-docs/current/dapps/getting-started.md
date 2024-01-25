@@ -1,53 +1,53 @@
 ---
 sidebar_position: 5
-title: Getting Started
-sidebar_label: Getting started
+title: Erste Schritte
+sidebar_label: Erste Schritte
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Overview
+## Übersicht
 
-Alephium proposes multiple tools and packages to help you build your dApps.
+Alephium stellt mehrere Tools und Pakete vor, um Ihnen beim Erstellen Ihrer dApps zu helfen.
 
-This guide will help you install our recommended setup.
+Dieser Leitfaden wird Ihnen helfen, unsere empfohlene Einrichtung zu installieren.
 
-Prerequisites:
+Voraussetzungen:
 
-- Write code in [Typescript](https://www.typescriptlang.org/)
-- Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
-- [nodejs](https://nodejs.org/en/) version >= 16 installed
-- `npm` version >= 8 installed
+- Schreiben Sie Code in [Typescript](https://www.typescriptlang.org/)
+- Arbeiten sie in einem [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
+- [nodejs](https://nodejs.org/en/) Version >= 16 installiert
+- `npm` Version >= 8 installiert
 
-## Create a new dApp project
+## Ein neues Projekt für eine neue dApp erstellen
 
-To create the tutorial project, open a new terminal and run:
+Um das Tutorial-Projekt zu erstellen, öffnen Sie ein neues Terminal und führen Sie den folgenden Befehl aus:
 
 ```
 npx @alephium/cli@latest init alephium-tutorial
 ```
 
-This will create a new directory `alephium-tutorial` and initialize a sample project inside that directory.
+Dies erstellt ein neues Verzeichnis mit dem Namen  `alephium-tutorial` und initialisiert darin ein Beispielsprojekt.
 
-## Launch the local development network
+## Starten des lokalen Entwicklungsnetzwerks
 
-To compile and test your contracts, it's necessary to launch a local development network, and you can follow [this guide](/full-node/devnet) to launch a devnet.
+Um Ihre Contracts zu kompilieren und zu testen, ist es erforderlich, ein lokales Entwicklungsnetzwerk zu starten. Sie können [diese Anleitung](/full-node/devnet) verwenden, um ein Devnet zu starten.
 
-Your new network is now launched using [this configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
+Ihr neues Netzwerk ist jetzt mit [dieser Konfiguration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) und den generierten Adressen in 4 Gruppen mit ausreichend ALPHs für Testzwecke gestartet.
 
-The Typescript SDK is then able to interact with the network through REST endpoints.
+Durch REST-Endpunkte kann das TypeScript SDK dann mit dem Netzwerk interagieren.
 
-## Compile your contract
+## Kompilieren Sie ihren Contract
 
-Next, change the workspace to the tutorial project:
+Ändern Sie als Nächstes den Arbeitsbereich zum Tutorial-Projekt:
 
 ```
 cd alephium-tutorial
 ```
 
-Have a look in the `contracts/` folder, you can find `token.ral`:
+Werfen Sie einen Blick in den Ordner `contracts/` dort finden Sie `token.ral`:
 
 ```rust
 import "std/fungible_token_interface"
@@ -120,7 +120,7 @@ Contract TokenFaucet(
 }
 ```
 
-and `withdraw.ral` :
+und `withdraw.ral` :
 
 ```rust
 // Defines a transaction script.
@@ -133,19 +133,19 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 }
 ```
 
- To compile your contracts, run:
+ Um Ihre Verträge zu kompilieren, führen Sie den folgenden Befehl aus:
 
 ```
 npx @alephium/cli@latest compile
 ```
 
-The compiled artifacts are in the directory `artifacts`.
+Die kompilierten Artefakte befinden sich im Verzeichnis `artifacts`.
 
-This command also generates typescript code based on the compiled artifacts. The generated typescript code are in the directory `artifacts/ts`. You can interact with the alephium blockchain more conveniently by using the generated typescript code.
+Dieser Befehl generiert auch TypeScript-Code basierend auf den kompilierten Artefakten. Der generierte TypeScript-Code befindet sich im Verzeichnis  `artifacts/ts`. Sie können mit dem generierten TypeScript-Code bequemer mit der Alephium-Blockchain interagieren.
 
-## Test your contract
+## Testen sie ihren Contract
 
-The sample project comes with tests `test/unit/token.test.ts` for your contract:
+Das Beispielprojekt wird mit Tests `test/unit/token.test.ts` für Ihren Contract geliefert:
 
 ```typescript
 import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
@@ -189,21 +189,21 @@ describe('unit tests', () => {
 })
 ```
 
-You can run them with:
+Sie können die Test ausführen mit:
 
 ```
 npm run test
 ```
 
-or
+oder
 
 ```
 npx @alephium/cli@latest test
 ```
 
-## Deploy your contract
+## Ihren Contract bereitstellen
 
-Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
+Als nächstes verwenden wir Alephium CLI und ein Bereitstellungsskript `scripts/0_deploy_faucet.ts`:
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
@@ -237,21 +237,21 @@ const deployFaucet: DeployFunction<Settings> = async (
 export default deployFaucet
 ```
 
-You can run it using:
+Führen Sie die Bereitstellung aus mit:
 
 ```
 npx @alephium/cli@latest deploy
 ```
 
-This will deploy the token faucet to group 0 of devnet. To deploy on testnet (or any other network), update your `alephium.config.ts` and use the `--network` option:
+Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren Sie Ihre  `alephium.config.ts` und verwenden Sie die Option  `--network`:
 
 ```
 npx @alephium/cli@latest deploy --network testnet
 ```
 
-## Interact with the deployed contract
+## Mit dem bereitgestellten Contract interagieren
 
-Now, you can build the source code `src/token.ts` :
+Nun können Sie den Quellcode `src/token.ts` erstellen:
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -303,27 +303,27 @@ withdraw()
 
 ```
 
-Simply run:
+Führen Sie einfach folgendes aus:
+
 
 ```
 npm run build
 ```
 
-and interact with the deployed token faucet:
+und interagieren Sie mit dem bereitgestellten Token-Faucet.
 
 ```
 node dist/src/token.js
 ```
 
-## Connect to the wallets
+## Verbindung zu den Wallets
 
-dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
-such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
-and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
+dApps erfordern eine Wallet-Integration für Benutzer der dApp, um sich zu authentifizieren und mit der Alephium-Blockchain zu interagieren, z. B. das Signieren von Transaktionen. Derzeit können dApps sowohl mit der [Extension Wallet](../wallet/extension-wallet/dapp)
+als auch mit [WalletConnect](../wallet/walletconnect) integriert werden. Bitte beachten Sie die jeweiligen Seiten für weitere Details.
 
-## Learn more
+## Weitere Informationen
 
-- To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
-- To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
-- To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-- To learn how to build a Nextjs dApp, please visit [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)
+- Um mehr über das Ökosystem zu erfahren, besuchen Sie bitte die [Übersicht des Ökosystems](/dapps/ecosystem).
+- Um mehr über das Web3 SDK zu erfahren, besuchen Sie bitte die [Anleitung zum Web3 SDK](/dapps/alephium-web3).
+- Um mehr über die Ralph-Sprache zu erfahren, besuchen Sie bitte die [Anleitung zu Ralph](/ralph/getting-started).
+- Um zu lernen, wie man eine Nextjs dApp erstellt, besuchen Sie bitte [Erstellen Sie eine dApp mit Nextjs](/dapps/build-dapp-with-nextjs.md)
