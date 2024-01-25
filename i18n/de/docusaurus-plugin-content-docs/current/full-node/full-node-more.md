@@ -1,44 +1,44 @@
 ---
 sidebar_position: 40
-title: More and Troubleshooting
-sidebar_label: More and troubleshooting
+title: Problembehebung und Mehr
+sidebar_label: Problembehebung und Mehr 
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## API Key
+## API-Schlüssel
 
-It's a good practice to use API key to limit the access to your full node's rest endpoints.
+Es ist eine gute Praxis, einen API-Schlüssel zu verwenden, um den Zugriff auf die REST-Endpunkte Ihres Full Nodes zu beschränken.
 
-### API Key Setup
+### Einrichtung des API-Schlüssels
 
-Please add the following to your `user.conf` by replacing the zeros with your own key (>= 32 characters).
+Fügen Sie bitte folgendes zu Ihrer `user.conf` hinzu, indem Sie die Nullen durch Ihren eigenen Schlüssel (>= 32 Zeichen) ersetzen.
 
 ```
 alephium.api.api-key = "--- your own key with >= 32 characters"
 ```
 
-Restart your full node to make this take effect.
+Starten Sie Ihren Full Node neu, damit dies wirksam wird.
 
-#### API Key Generation
+#### Generieren eines API-Schlüssels
 
-On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
+Für GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
 
-### Use API Key
+### API-Schlüssel benutzen
 
-1. Click on the `Authorize` button on the top right of your Swagger UI:
+1. Klicken Sie auf die Schaltfläche `Authorize`  oben rechts in Ihrer Swagger-Benutzeroberfläche:
    ![full-node-api-key-auth0](media/full-node-api-key-auth0.png)
 
-2. Fill in the value box with your key and click the authorize button:
+2. Füllen Sie das Wertfeld mit Ihrem Schlüssel aus und klicken Sie auf die Schaltfläche "Authorize":
    ![full-node-api-key-auth1](media/full-node-api-key-auth1.png)
 
-Now you could use Swagger UI as if there is no API key.
+Nun können Sie Swagger UI verwenden, als ob kein API-Schlüssel vorhanden wäre.
 
-## How to make the full node API publicly accessible ?
+## Wie mache ich die API meines Full Nodes öffentlich zugänglich?
 
-1. Set up your API key properly following the guide above.
+1. Richten Sie Ihren API-Schlüssel gemäß der oben stehenden Anleitung ordnungsgemäß ein.
 
 2. Add the following to your `user.conf` and restart your full node.
 
@@ -46,67 +46,65 @@ Now you could use Swagger UI as if there is no API key.
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-## How to access the Swagger UI of my full node on another computer in the same subnet ?
+## Wie greife ich auf die Swagger UI meines Full Nodes von einem anderen Computer im selben Subnetz aus zu?
 
-1. Add the following to your `user.conf` and restart your full node.
+1. Fügen Sie folgendes zu Ihrer `user.conf` hinzu und starten Sie Ihren Full Node neu.
 
 ```
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-2. Change the `host` of Swagger UI to be the subnet IP of your full node.
+2. Ändern Sie den `host` der Swagger UI auf die Subnetz-IP Ihres Full Nodes.
 
-## Error "java.lang.AssertionError: assumption failed"
+## Fehler "java.lang.AssertionError: assumption failed"
 
-This error often occurs due to connection loss during node synchronization and means that some of the files are corrupted.
-To fix the problem:
+Dieser Fehler tritt häufig aufgrund von Verbindungsverlust während der Knoten Synchronisierung auf und bedeutet, dass einige der Dateien beschädigt sind.
+Um das Problem zu beheben:
 
-1. Delete the folder .alephium `rm .alephium`
+1. Löschen sie den Ordner .alephium `rm .alephium`
 
-2. Restart the node and wait for synchronization `java -jar alephium-x.x.x.jar`
+2. Starten Sie den Knoten neu und warten Sie auf die Synchronisierung `java -jar alephium-x.x.x.jar`
 
-## Moving the Alephium data folder
+## Verschieben des Alephium-Datenordners
 
-Many users prefer to keep the Alephium data folder on a different disk than the primary boot disk. To do so with the Alephium full node jar, you can use the `ALEPHIUM_HOME` environment variable:
+Viele Benutzer bevorzugen es, den Alephium-Datenordner auf einer anderen Festplatte als der primären Startfestplatte zu speichern. Hierzu können Sie die Umgebungsvariable `ALEPHIUM_HOME` im Alephium-Full-Node-Jar nutzen:
 
-1. Stop the Alephium full node jar
-2. Move the Alephium data folder (normally at `%userprofile%\.alephium` for Windows or `~/.alephium` for Linux and macOS) to the new location
-3. Add an environment variable `ALEPHIUM_HOME` to the system pointing to the new location. You can either do this at the system level or simply create a batch file that sets the variable prior to starting the Alephium jar.
-4. Restart the Alephium node
+1. Stoppen Sie das Alephium-Full-Node-Jar
+2. Verschieben Sie den Alephium-Datenordner (normalerweise unter `%userprofile%\.alephium` für Windows oder `~/.alephium` für Linux und macOS) an den neuen Speicherort
+3. Fügen Sie eine Umgebungsvariable `ALEPHIUM_HOME` auf Systemebene hinzu, die auf den neuen Speicherort verweist. Dies können Sie entweder auf Systemebene durchführen oder einfach eine Batch-Datei erstellen, die die Variable vor dem Starten des Alephium-Jars festlegt.
+4. Starten Sie den Alephium-Knoten neu
 
-If using the docker full node, then simply change the mounted folder definitions in the docker file to point to the new home then restart.
+Wenn Sie den Docker-Full-Node verwenden, passen Sie einfach die Definitionen der eingebundenen Ordner in der Docker-Datei an, um auf das neue Verzeichnis zu zeigen, und starten Sie dann den Node neu.
 
-## Customize Logging
+## Anpassen des Protokolls
 
-There are several environment variables used for logging:
+Es gibt mehrere Umgebungsvariablen, die für das Protokollieren verwendet werden:
 
-- `ALEPHIUM_LOG_LEVEL` could change the console log level.
-- `ALEPHIUM_ENABLE_DEBUG_LOGGING` could enable debug logging.
-- `ALEPHIUM_HOME` could change the home folder of the full node, therefore the folder of logs
+- `ALEPHIUM_LOG_LEVEL` könnte das Konsolen-Protokollniveau ändern.
+- `ALEPHIUM_ENABLE_DEBUG_LOGGING` könnte das Debug-Protokollieren aktivieren.
+- `ALEPHIUM_HOME` könnte den Hauptordner des Full Nodes ändern, daher auch den Ordner der Protokolle.
 
-Below is an example with all of the possible logging options:
+Im Folgenden finden Sie ein Beispiel mit allen möglichen Protokolloptionen:
 
 ```
 ALEPHIUM_HOM=<folder> ALEPHIUM_LOG_LEVEL=<DEBUG | INFO | WARN | ERROR> ALEPHIUM_ENABLE_DEBUG_LOGGING=<true | false> java -jar alephium-x.x.x.jar
 ```
 
-It's also possible to override the [logging configuration file](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml) of Alephium.
+Es ist auch möglich, die [Protokollkonfigurationsdatei](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml) von Alephium zu überschreiben.
 
 ```
 java -Dlogback.configurationFile=/path/to/config.xml alephium-x.x.x.jar
 ```
 
-## Pruning
+## Pruning (Beschneidung)
 
-A fully sync-ed Alephium full node requires more than 80 GB of disk space to store blockchain data. Since
-version `2.6.1` the Alephium full node supports storage pruning which can significantly reduce the storage
-requirement.
+Ein vollständig synchronisierter Alephium-Full-Node benötigt mehr als 80 GB Festplattenspeicher, um Blockchain-Daten zu speichern. Seit Version `2.6.1` unterstützt der Alephium-Full-Node das Pruning der Festplatte, was den Speicherbedarf erheblich reduzieren kann.
 
-Here are the steps to prune the Alephium full node:
+Hier sind die Schritte des Prunings des Alephium Full Nodes:
 
-1. Make sure the Alephium full node is stopped
-2. Download `alephium-tools-2.6.1.jar` from https://github.com/alephium/alephium/releases/tag/v2.6.1
-3. If you changed the default Alephium home directory, set the the `ALEPHIUM_HOME` environment variable
-4. Run the following command `java -cp alephium-tools-2.6.1.jar org.alephium.tools.PruneStorage` to start pruning
-5. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
-6. Restart the Alephium full node
+1. Stellen Sie sicher, dass der Alephium-Full-Node gestoppt ist.
+2. Laden Sie  `alephium-tools-2.6.1.jar` von https://github.com/alephium/alephium/releases/tag/v2.6.1 herunter.
+3. Wenn Sie das Standard-Alephium-Verzeichnis geändert haben, setzen Sie die Umgebungsvariable `ALEPHIUM_HOME`
+4. Führen Sie den folgenden Befehl aus:  `java -cp alephium-tools-2.6.1.jar org.alephium.tools.PruneStorage` um mit dem Beschneiden zu beginnen.
+5. Warten Sie, bis der Befehl abgeschlossen ist. Der Festplattenspeicher sollte auf etwa 20 GB reduziert sein.
+6. Starten Sie den Alephium-Full-Node neu.
