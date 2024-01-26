@@ -100,6 +100,8 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 ## Explainer Series
 
+💡 Understanding the sUTXO model - https://vxtwitter.com/alephium/status/1749827565634855028
+
 Network Upgrade 🧵#1 - https://vxtwitter.com/alephium/status/1738220571832594612
 
 Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
@@ -174,6 +176,8 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Jan/24 - 🎙️ Live AMA @CoinMetro 🎙️ - https://www.youtube.com/watch?v=mkNZ64oYPHQ
+
 Jan/24 - French AMA with MonsieurTK https://twitter.com/i/spaces/1YqKDgrwnjkxV?s=20
 
 Jan/24 - Bridge AMA Transcript Part 3 - https://vxtwitter.com/alephium/status/1742137217307578827
@@ -232,6 +236,10 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
+
+Jan/24 🔥 2024 is starting STRONG. - https://vxtwitter.com/alephium/status/1747995876457640253
 
 Jan/24 🌊 Announcing the Rhône Network Upgrade ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
 
@@ -314,9 +322,12 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
-⛏ Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
+Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+
+Builders Highlight #6 - What the Duck 
+https://medium.com/@alephium/builders-highlight-6-what-the-duck-0aedc602ecfd
 
 Builders Highlight 5 - Deadrare
 https://medium.com/@alephium/builders-highlight-5-deadrare-d5ff90d6161e
@@ -376,6 +387,8 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
+
+🌈 Front-end magic - https://vxtwitter.com/alephium/status/1750549153153953845
 
 The Hitchiker’s guide to Alephium’s community - https://vxtwitter.com/alephium/status/1740670046371017186?s=20
 
