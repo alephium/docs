@@ -94,6 +94,23 @@ const subscription = tokenFaucet.subscribeWithdrawEvent(options, fromEventCount)
 subscription.unsubscribe()
 ```
 
+### Test functions with simulated block time
+
+It's possible to test functions with simulated block time in unit tests. For integration tests based on testnet or devnet, there is no way to change the block time though.
+
+Here is a simple example:
+
+```typescript
+import { TokenFaucet } from 'artifacts/ts'
+
+const result = await TokenFaucet.tests.withdraw({
+  blockTimeStamp: 1706284941000, // the unit is millisecond
+  address: ...,
+  initialFields: ...,
+  ...
+})
+```
+
 ## Transaction
 
 ### Query transaction status
