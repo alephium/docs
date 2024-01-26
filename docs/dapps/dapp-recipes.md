@@ -111,6 +111,28 @@ const result = await TokenFaucet.tests.withdraw({
 })
 ```
 
+### Log debug messages
+
+Ralph supports debug messages by emitting the built-in event `Debug`. Note that such events are ignored on mainnet.
+
+```typescript
+// Simple Ralph contract
+Contract Debug() {
+    pub fn debug() -> () {
+        emit Debug(`Hello, ${nullContractAddress!()}!`)
+    }
+}
+
+// Unit test in Typescript
+const result = await Debug.tests.debug()
+
+// The following line will appear in the console output and the full node's logs:
+//   Debug - tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq - Hello, tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq!
+
+// Retrieve all debug messages
+console.log(result.debugMessages)
+```
+
 ## Transaction
 
 ### Query transaction status
