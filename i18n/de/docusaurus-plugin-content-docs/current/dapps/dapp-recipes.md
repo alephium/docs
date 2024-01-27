@@ -1,21 +1,19 @@
 ---
 sidebar_position: 30
-title: Dapp Recipes
-sidebar_label: Dapp Recipes
+title: Dapp-Rezepte
+sidebar_label: Dapp-Rezepte
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Contract
+## Smart Contract
 
-### Fetch contract state
+### Zustand des Smart Contracts abrufen
 
-When using the `npx @alephium/cli compile` command to compile a contract, it will generate TypeScript code based on the contract code.
-Taking the [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) contract as an example,
-[here](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) is the generated TypeScript code.
-We can use the generated TypeScript code to fetch the contract state:
+Wenn Sie den Befehl `npx @alephium/cli compile` verwenden, um einen Smart Contract zu kompilieren, wird TypeScript-Code basierend auf dem Smart Contract generiert. Nehmen wir den [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract als Beispiel,
+[hier](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) ist der generierte TypeScript-Code. Wir können den generierten TypeScript-Code verwenden, um den Zustand des Smart Contracts abzurufen:
 
 ```typescript
 import { TokenFaucet } from 'artifacts/ts' // Note that you may need to change the import path according to your project directory structure
@@ -36,9 +34,9 @@ const { symbol, name, decimals, supply, balance  } = contractState.fields
 const { alphAmount, tokens } = contractState.asset
 ```
 
-### Call contract method
+### Methode des Smart Contracts aufrufen
 
-You can use the generated TypeScript code to call the contract methods, it is similar to the `eth_call` in Ethereum:
+Sie können den generierten TypeScript-Code verwenden, um die Methoden des Smart Contracts aufzurufen. Dies ähnelt dem `eth_call` in Ethereum:
 
 ```typescript
 import { TokenFaucet } from 'artifacts/ts'
@@ -53,12 +51,11 @@ const tokenFaucet = TokenFaucet.at(tokenFaucetAddress)
 const totalSupply = await tokenFaucet.methods.getTotalSupply()
 ```
 
-### Subscribe to contract events
+### Ereignisse des Smart Contract abonnieren
 
-In the [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) contract,
-we have defined a [Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18) event.
-Every time the `withdraw` function is called, the contract will emit a `Withdraw` event.
-We can subscribe to the withdraw events using the following approach:
+Im [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract haben wir ein [Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18)-Ereignis definiert.
+Jedes Mal, wenn die `Withdraw`-Funktion aufgerufen wird, gibt der Smart Contract ein `Withdraw`-Ereignis aus. 
+Wir können uns für die Withdraw-Ereignisse wie folgt anmelden:
 
 ```typescript
 import { TokenFaucet, TokenFaucetTypes } from 'artifacts/ts'
@@ -94,11 +91,11 @@ const subscription = tokenFaucet.subscribeWithdrawEvent(options, fromEventCount)
 subscription.unsubscribe()
 ```
 
-## Transaction
+## Transaktion
 
-### Query transaction status
+### Transaktionsstatus abfragen
 
-You can query the transaction status using the following approach:
+Sie können den Transaktionsstatus wie folgt abfragen:
 
 ```typescript
 import { NodeProvider } from '@alephium/web3'
@@ -110,15 +107,15 @@ const txId = '919d4e4b1080d74beb56a1f78ea7c0569a358e3ea3988058987cc1addf4b93cc'
 const txStatus = await nodeProvider.transactions.getTransactionsStatus({ txId })
 ```
 
-You can differentiate the transaction status using the `txStatus.type`:
+Sie können den Transaktionsstatus anhand von `txStatus.type` unterscheiden:
 
-1. `MemPooled`: this means the transaction is in the mempool
-2. `Confirmed`: the transaction has been confirmed, and you can get the confirmations using `txStatus.chainConfirmations`
-3. `TxNotFound`: the transaction does not exist
+1. `MemPooled`: Dies bedeutet, dass die Transaktion im Mempool ist
+2. `Confirmed`: Die Transaktion wurde bestätigt, und Sie können die Bestätigungen mit `txStatus.chainConfirmations` abrufen
+3. `TxNotFound`:  Die Transaktion existiert nicht
 
 ## Hooks
 
-The `@alephium/web3-react` package provides several hooks to facilitate the development of frontend user interfaces.
+Das Paket `@alephium/web3-react` stellt mehrere Hooks zur Verfügung, um die Entwicklung von Frontend-Benutzeroberflächen zu erleichtern.
 
 ### useWalletConfig
 
@@ -135,7 +132,7 @@ export function Component() {
 }
 ```
 
-The `useWalletConfig` hook returns the configurations of the connect button and utility functions to update those configurations.
+Das `useWalletConfig`-Hook gibt die Konfigurationen des Verbindungsbuttons und Hilfsfunktionen zurück, um diese Konfigurationen zu aktualisieren.
 
 ### useWallet
 
@@ -153,11 +150,11 @@ function Component() {
 }
 ```
 
-If the return value is `undefined`, it indicates that the wallet is not connected. The returned wallet has the following fields:
+Wenn der Rückgabewert `undefined` ist, deutet dies darauf hin, dass die Brieftasche nicht verbunden ist. Die zurückgegebene Brieftasche hat die folgenden Felder:
 
-* `wallet.signer`: you can use the signer to sign transactions
-* `wallet.account`: this is the currently connected account
-* `wallet.nodeProvider`: you can use the node provider to communicate with the full node, note that this value may be `undefined`
+* `wallet.signer`: Sie können den Signierer verwenden, um Transaktionen zu signieren.
+* `wallet.account`: Dies ist das aktuell verbundene Konto.
+* `wallet.nodeProvider`: Sie können den Node-Provider verwenden, um mit dem Full Node zu kommunizieren. Beachten Sie, dass dieser Wert `undefined` sein kann.
 
 ### useBalance
 
@@ -167,10 +164,10 @@ import { useBalance } from '@alephium/web3-react'
 const { balance, updateBalanceForTx } = useBalance()
 ```
 
-The `useBalance` hook returns two values:
+Das `useBalance`-Hook gibt zwei Werte zurück:
 
-1. `balance`: the current balance of the connected account
-2. `updateBalanceForTx`: this is used to update the balance when the user makes a transaction. It takes a transaction id as a parameter, and it will update the balance once this transaction is confirmed.
+1. `balance`: Das aktuelle Guthaben des verbundenen Kontos.
+2. `updateBalanceForTx`: Dies wird verwendet, um das Guthaben zu aktualisieren, wenn der Benutzer eine Transaktion durchführt. Es nimmt eine Transaktions-ID als Parameter entgegen und aktualisiert das Guthaben, sobald diese Transaktion bestätigt ist.
 
 ### useTxStatus
 
@@ -184,17 +181,15 @@ const confirmed = useMemo(() => {
 }, [txStatus])
 ```
 
-The `useTxStatus` hook also accepts an optional callback parameter of type `(txStatus: node.TxStatus) => Promise<any>`, it will be called after each transaction status query.
+Das `useTxStatus`-Hook akzeptiert auch einen optionalen Rückrufparameter vom Typ `(txStatus: node.TxStatus) => Promise<any>`. Dieser wird nach jeder Abfrage des Transaktionsstatus aufgerufen.
 
-## Utils
+## Hilfsfunktionen
 
 ### Rate limit
 
-`NodeProvider` is used to communicate with the full node when developing a dApp,
-and you can use the public [API services](./public-services.md) provided by Alephium. 
-But all APIs are rate limited to prevent spam. So if the client sends too many requests in a given amount of time, it will receive the HTTP 429 error.
+`NodeProvider` wird verwendet, um beim Entwickeln einer dApp mit dem Full Node zu kommunizieren, und Sie können die von Alephium öffentlich bereitgestellten  [API services](./public-services.md) verwenden. Aber alle APIs unterliegen einer Ratenbegrenzung, um Spam zu verhindern. Wenn der Client also in einer bestimmten Zeitspanne zu viele Anfragen sendet, erhält er den HTTP-429-Fehler.
 
-You can use the [fetch-retry](https://github.com/jonbern/fetch-retry) to solve this issue:
+Sie können [fetch-retry](https://github.com/jonbern/fetch-retry) verwenden, um dieses Problem zu lösen:
 
 ```typescript
 import * as fetchRetry from 'fetch-retry'
@@ -207,10 +202,9 @@ const retryFetch = fetchRetry.default(fetch, {
 const nodeProvider = new NodeProvider('node-url', undefined, retryFetch)
 ```
 
-### Custom wallet connect button
+### Benutzerdefinierter Wallet-Verbindungsbutton
 
-`@alephium/web3-react` provides the `AlephiumConnectButton` component to facilitate the development of user interfaces,
-you can also use the `AlephiumConnectButton.Custom` to customize the style of the connect button:
+`@alephium/web3-react` bietet die `AlephiumConnectButton`-Komponente zur Erleichterung der Entwicklung von Benutzeroberflächen an. Sie können auch `AlephiumConnectButton.Custom` verwenden, um den Stil des Verbindungsbuttons anzupassen:
 
 ```typescript
 import { AlephiumConnectButton } from '@alephium/web3'

@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Inhaltsverzeichnis
 - [Inhaltsverzeichnis](#inhaltsverzeichnis)
-- [Official links \& accounts](#official-links--accounts)
+- [Offizielle Links \& Accounts](#offizielle-links--accounts)
 - [Tech Series](#tech-series)
   - [Stateful UTXO](#stateful-utxo)
   - [Proof-of-Less-Work](#proof-of-less-work)
@@ -32,7 +32,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 - [Libraries \& Developer Resources](#libraries--developer-resources)
 - [Apply for Grants](#apply-for-grants)
 
-## Official links & accounts
+## Offizielle Links & Accounts
 
 Website - https://alephium.org/
 

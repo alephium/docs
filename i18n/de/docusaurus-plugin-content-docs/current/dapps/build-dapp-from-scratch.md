@@ -1,44 +1,44 @@
 ---
 sidebar_position: 15
-title: Build dApp from scratch
-sidebar_label: Build dApp from scratch
+title: Eine DApp von Grund auf erstellen
+sidebar_label: Eine DApp von Grund auf erstellen
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-This guide will explore the basics of creating an Alephium dApp project.
+In diesem Leitfaden werden wir die Grundlagen für die Erstellung eines Alephium DApp-Projekts erkunden.
 
-Prerequisites:
+Voraussetzungen:
 
-- Write code in [Typescript](https://www.typescriptlang.org/)
-- Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
-- [nodejs](https://nodejs.org/en/) version >= 16 installed
-- `npm` version >= 8 installed
+- Code schreiben in [Typescript](https://www.typescriptlang.org/)
+- Arbeiten in einem [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
+- [NodeJS](https://nodejs.org/en/) Version >= 16 installiert
+- `npm` Version >= 8 installiert
 
-## Create a new dApp project: Token Faucet
+## Erstellen Sie ein neues DApp-Projekt: Token Faucet
 
-In this tutorial we will write our first dApp: A token faucet.
+In diesem Tutorial werden wir unsere erste DApp schreiben: einen Token-Faucet (Token-Wasserhahn).
 
-The code here is taken from our [getting started page](/dapps/getting-started), but we will see step by step how we build this guide.
+Der Code hier stammt von unserer [Einführungsseite](/DApps/getting-started), aber wir werden Schritt für Schritt durchgehen, wie wir diesen anhand des Leitfadens erstellen.
 
-Create a new project folder and navigate into it:
+Erstellen Sie einen neuen Projektordner und wechseln Sie in diesen:
 
 ```sh
 mkdir alephium-faucet-tuto
 cd alephium-faucet-tuto
 ```
 
-Let's now create a `contracts` folder where we'll store all our contracts:
+Erstellen Sie nun einen Ordner `contracts`, in dem wir alle unsere Verträge speichern werden:
 
 ```sh
 mkdir contracts
 ```
 
-Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
+Unser erster Smart Contract wird `token.ral` sein, den Sie [hier](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) finden können. Sie können die gesamte Datei in Ihren `contracts`-Ordner kopieren.
 
-Let's inspect it, piece by piece:
+Lassen Sie uns das ganze Stück für Stück untersuchen:
 
 ```rust
 import "std/fungible_token_interface"
@@ -52,14 +52,14 @@ Contract TokenFaucet(
 ) implements IFungibleToken {
 ```
 
-The first four fields will be immutable values that store the data required to serve our [IFungibleToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral).
-`mut balance` is a mutable value that keeps track of how many tokens are left in this faucet.
+Die ersten vier Felder werden unveränderliche Werte sein, welche die für unser [IFungibleToken Interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral) erforderlichen Daten speichern.
+`mut balance` ist ein veränderlicher Wert, der verfolgt, wie viele Token sich noch in diesem Faucet befinden.
 
-You can see that our contract emits an `event` and defines an `error` code. Read the following for more info on [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
+Sie können sehen, dass unser Smart Contract ein `Event` emittiert und einen `Error`-Code definiert. Lesen Sie das Folgende für weitere Informationen zu [Ereignissen](https://wiki.alephium.org/ralph/getting-started#events) und [Fehlerbehandlung](https://wiki.alephium.org/ralph/getting-started#error-handling).
 
-This is followed by 5 access methods for the different contract's arguments.
+Dies wird von fünf Zugriffsmethoden für die verschiedenen Argumente des Smart Contracts begleitet.
 
-The last method is where the magic happens:
+Die letzte Methode ist der Ort, wo die Magie geschieht:
 
 ```rust
 @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
@@ -79,15 +79,14 @@ pub fn withdraw(amount: U256) -> () {
 }
 ```
 
-With the `assert!` we make sure no one takes more than 2 tokens at the same time.  
-`transferTokenFromSelf` will actually perform the transfer of the tokens.  
-We update the `mut balance` field with the new balance. In the case of underflow, an error will be raised and the transaction won't be performed.
-`callerAddress!()` and `selfTokenId!()` are built-in functions, you can read more about them in our [built-in functions page](/ralph/built-in-functions).
-## Compile your contract
+Mit `assert!` stellen wir sicher, dass niemand mehr als zwei Token gleichzeitig entnehmen kann.  
+`transferTokenFromSelf` wird den tatsächlichen Transfer der Token durchführen.
+Wir aktualisieren das `mut balance`-Feld mit dem neue erstellten Guthaben. Im Falle eines Unterlaufs wird ein Fehler ausgelöst, und die Transaktion wird nicht durchgeführt.
+`callerAddress!()` und `selfTokenId!()` sind integrierte Funktionen (build-in Functions). Mehr dazu finden Sie auf unserer Seite zu [Build-In Functions](/ralph/built-in-functions).
 
-The compiler needs to contact the full node in order to compile the contract, you'll need to use the right information defined while [creating your devnet](/full-node/devnet). If you haven't start it, now it's the time.
-We define the node URL using the following config file: `alephium.config.ts`. 
-Create this file in the root directory of your project and paste the following code:
+## Kompilieren Sie Ihren Smart Contract
+
+Der Compiler muss den Full Node kontaktieren, um den Smart Contract zu kompilieren. Sie müssen die richtigen Informationen verwenden, die beim [erstellen Ihres Devnets ](/full-node/devnet)definiert wurden. Wenn Sie es noch nicht gestartet haben, dann ist jetzt der richtige Zeitpunkt dafür. Wir definieren die Node-URL mit der folgenden Konfigurationsdatei: `alephium.config.ts`. Erstellen Sie diese Datei im Stammverzeichnis Ihres Projekts und fügen Sie folgenden Code ein:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
@@ -107,38 +106,38 @@ const configuration: Configuration<Settings> = {
 export default configuration
 ```
 
-Now, let's compile:
+Nun, lassen Sie uns kompilieren:
 
 ```sh
 npx @alephium/cli@latest compile
 ```
 
-It may ask you for some confirmation to install the latest `@alephium/cli` package. Select yes to proceed.
+Sie werden gebeten das neueste Paket `@alephium/cli` zu installieren. Bestätigen Sie dies mit Ja, um fortzufahren.
 
-Once the above command succeeds, you will notice that a new folder called `artifacts` was created. It contains several files related to your contract. For example, `artifacts/ts/TokenFaucet.ts` produces lots of helper functions like `at`, `fetchState`, `call*`, etc, as well as many test functions.
+Sobald der oben genannte Befehl erfolgreich ausgeführt wurde, werden Sie feststellen, dass ein neuer Ordner mit der Bezeichnung `artifacts` erstellt wurde. Dieser enthält mehrere Dateien, die sich auf Ihren Smart Contract beziehen. Beispielsweise generiert `artifacts/ts/TokenFaucet.ts` einige Hilfsfunktionen wie `at`, `fetchState`, `call*`, usw., sowie auch zusätzliche Testfunktionen.
 
-## Test your contract
-The SDK provides unit test functionalities, which call the contract by sending a transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+## Testen Sie Ihren Smart Contract
+Das SDK bietet Funktionen für Unittests, die den Smart Contract aufrufen, indem sie eine Transaktion senden. Anstatt den Blockchain-Zustand zu ändern, gibt es den neuen Vertragszustand, Transaktionsausgaben und Ereignisse zurück.
 
-Install the test framework:
+Installieren Sie das Testframework:
 
 ```sh
 npm install ts-jest @types/jest
 ```
 
-You'll also need our `@alephium/web3` package:
+Sie benötigen auch unser `@alephium/web3` Paket:
 
 ```sh
 npm install @alephium/web3 @alephium/web3-test
 ```
 
-Create a `test` folder:
+Erstellen Sie einen `test`-Ordner:
 
 ```sh
 mkdir test
 ```
 
-and create the `test/token.test.ts` minimalistic test file with the following contents:
+und erstellen Sie eine minimale Testdatei `test/token.test.ts` mit folgendem Inhalt:
 
 ```typescript
 import { web3, Project, addressFromContractId } from '@alephium/web3'
@@ -178,9 +177,9 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) project.
+Ein komplexerer Test ist in unserem [Template](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) zu finden.
 
-Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
+Ohne zu sehr ins Detail zu gehen, benötigt TypeScript einige Konfigurationen, um den Test auszuführen. Erstellen Sie daher einfach eine Datei namens `tsconfig.json` im Stammverzeichnis Ihres Projekts und fügen Sie den folgenden Code ein:
 
 ```json
 {
@@ -196,28 +195,27 @@ Without entering too much into details, TypeScript needs some configuration to r
 }
 ```
 
-You can now run the test:
+Sie können den Test nun ausführen:
 
 ```sh
 npx @alephium/cli@latest test
 ```
 
-You should be able to see on your terminal the output of calling the withdraw method.
+Sie sollten in Ihrem Terminal die Ausgabe des Aufrufs der Abhebungsmethode sehen.
 
-🎉 Congratulations! Have created your first contract and written a test to call it and test it locally! It's time to deploy your contract.
+🎉 Herzlichen Glückwunsch! Sie haben Ihren ersten Smart Contract erstellt und einen Test geschrieben, um ihn lokal aufzurufen und zu überprüfen! Jetzt ist es an der Zeit, Ihren Smart Contract bereitzustellen.
+## Bereitstellen des Smart Contracts
 
-## Deploy your contract
+Jetzt wird es ernst, denn wir werden unseren Smart Contract in unserem `devnet` bereitstellen. :rocket:
 
-Now things are getting serious, we will deploy our contract on our `devnet` :rocket:
-
-The `deploy` command will execute all deployment scripts it finds inside the `scripts` folder. Create the `scripts` folder in the root folder of the project:
+Der `deploy` -Befehl führt alle Bereitstellungsskripte aus, die er im Ordner `scripts` findet. Erstellen Sie den Ordner `scripts` im Stammverzeichnis des Projekts:
 
 ```sh
 mkdir scripts
 ```
 
-Let's create a deployment script file called `0_deploy_faucet.ts` into the `scripts` folder and paste the following code.  
-Note that deployment scripts should always be prefixed with numbers (starting from `0`).
+Lassen Sie uns eine Bereitstellungsskriptdatei namens `0_deploy_faucet.ts` in den Ordner `scripts` erstellen und fügen folgenden Code hinzu.  
+Beachten Sie, dass Bereitstellungsskripte immer mit Zahlen (beginnend ab `0`) vorangestellt sein sollten.
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
@@ -249,30 +247,30 @@ const deployFaucet: DeployFunction<Settings> = async (
 export default deployFaucet
 ```
 
-The [deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) of the `Deployer` takes our contract and deploys it with the correct arguments. You can also add a `taskTag` argument to tag your deployment with a specific name. By default, it will use the contract name, but if you deploy the same contract multiple times with different initial fields, your `.deployment` file will get overridden. Using a specific `taskTag` solves this issue.
+Das [deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) des `Deployer` nimmt unseren Smart Contract und bereitet ihn mit den richtigen Argumenten vor. Sie können auch ein `taskTag`-Argument hinzufügen, um Ihre Bereitstellung mit einem bestimmten Namen zu kennzeichnen. Standardmäßig wird der Vertragsname verwendet, aber wenn Sie denselben Smart Contract mehrmals mit unterschiedlichen Anfangswerten bereitstellen, wird Ihre `.deployment`-Datei diesen überschrieben. Die Verwendung eines spezifischen `taskTag` löst dieses Problem.
 
-From the [DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293) interface, we can see that `initialFields` is mandatory as it contains the arguments for our `TokenFaucet` contract.
+Aus der [DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293)-Schnittstelle können wir sehen, dass `initialFields` obligatorisch ist, da es die Argumente für unseren Smart Contract `TokenFaucet` enthält.
 
-With `issueTokenAmount` you can define how many tokens you want to issue, this is required if you want to create a token, otherwise no token-id will be created.
+Mit `issueTokenAmount` können Sie definieren, wie viele Token Sie ausgeben möchten. Dies ist erforderlich, wenn Sie ein Token erstellen möchten, sonst wird keine Token-ID erstellt.
 
-Now, let's deploy!
+Lassen Sie uns den Smart Contract nun bereitstellen!
 
 ```sh
 npx @alephium/cli@latest deploy
 ```
 
-...OOPS... It doesn't work???
+...OOPS... Hat es nicht funktioniert???
 
-If you got the error `The node chain id x is different from configured chain id y`, go check your `networkId` in the devnet configuration and the `alephium.config.ts` file.
+Wenn Sie den Fehler `The node chain id x is different from configured chain id y` erhalten haben, überprüfen Sie Ihre `networkId` in der Devnet-Konfiguration und der Datei `alephium.config.ts`.
 
 `No UTXO found` ???
 
-Of course we didn't provide the `how-to-use-my-utxos`, we need to define our [privateKeys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46).
+Klar, wir haben die `how-to-use-my-utxos` nicht bereitgestellt. Sie müssen ihre [privateKeys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46) definieren.
 
-You'll need to export the private keys from our wallet extension (might do it from our other wallets later), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
-If you used the docker way to launch your devnet, it might have work as we are defining [a default private key in our cli package](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) based on the genesis allocation.
+Sie müssen die privaten Schlüssel aus ihrer Extension Wallet exportieren (möglicherweise später auch aus ihren anderen Wallets). Stellen Sie sicher, dass Sie eine Wallet mit Guthaben verwenden, wie diejenige aus der Genesis-Zuteilung Ihres Devnet.
+Wenn Sie die Docker-Methode zum Starten Ihres Devnets verwendet haben, hat es möglicherweise funktioniert, da wir [einen Standard-Private Key in unserem CLI-Paket definieren](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) basierend auf der Genesis-Zuteilung.
 
-Let's update our `alephium.config.ts`
+Aktualisieren wir nun unsere `alephium.config.ts`
 
 ```typescript
 const configuration: Configuration<void> = {
@@ -288,11 +286,10 @@ const configuration: Configuration<void> = {
 ```
 
 :::caution
-Real applications should use environment variables or similiar techniques for senstivie settings like `privateKeys`.
-Do not commit your private keys to source control.
+Echte Anwendungen sollten Umgebungsvariablen oder ähnliche Techniken für sensible Einstellungen wie `privateKeys` verwenden. Geben Sie Ihre privaten Schlüssel nicht in die Quellcodeverwaltung ein.
 :::
 
-and retry to deploy:
+und versuchen Sie es erneut bereitzustellen:
 
 ```sh
 npx @alephium/cli@latest deploy
@@ -307,13 +304,13 @@ Token faucet contract address: 28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA
 ✅ Deployment scripts executed!
 ```
 
-Congratulations! Your contract is deployed. We can check the balance of the contract. Use `curl` and change the contract address based on your deployment result:
+Herzlichen Glückwunsch! Ihr Smart Contract ist bereitgestellt. Wir können nun das Guthaben des Smart Contract überprüfen. Verwenden Sie `curl` und ändern Sie die Vertragsadresse basierend auf dem Ergebnis ihrer Bereitstellung:
 
 ```sh
 curl 'http://localhost:22973/addresses/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/balance'
 ```
 
-The response should look like this:
+Die Antwort sollte so aussehen:
 
 ```json
 {
@@ -331,9 +328,9 @@ The response should look like this:
 }
 ```
 
-We can see our token id, with the 100 tokens we decided to issue.
+Wir können unsere Token-ID mit den 100 Tokens sehen die wir ausgeben wollten.
 
-Let's check the contract state by first getting the group of our address: 
+Lassen Sie uns den Vertragszustand überprüfen, indem Sie zuerst die Gruppe unserer Adresse abrufen:
 
 ```sh
 curl 'http://localhost:22973/addresses/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/group'
@@ -341,7 +338,7 @@ curl 'http://localhost:22973/contracts/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y
 ```
 
 
-Contract state response:
+Rückmeldung des Vertragszustands:
 ```json
 {
   "address": "28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA",
@@ -384,25 +381,25 @@ Contract state response:
 }
 ```
 
-In the `immFields` we can see our initial `TokenFaucet` arguments (`symbol`, `name`, `decimals`, `supply`). We can also see that `mutFields` contains the current token balance. We'll check that field later after calling the faucet.
+In den `immFields` sehen wir unsere anfänglichen `TokenFaucet`-Argumente (`symbol`, `name`, `decimals`, `supply`). Wir sehen auch, dass `mutFields` das aktuelle Token-Guthaben enthält. Wir werden dieses Feld später überprüfen, nachdem wir den Faucet (Wasserhahn) aufgerufen haben.
 
-The `deploy` command also created a `.deployments.devnet.json` file, with the deployment result. It's important to keep that file to easily interact with the contract, even though all information can be found on the blockchain.
+Der `deploy`-Befehl hat auch die Datei `.deployments.devnet.json` erstellt, mit dem Bereitstellungsergebnis. Es ist wichtig, diese Datei zu behalten, um einfacher mit dem Smart Contract zu interagieren, obwohl alle Informationen auch auf der Blockchain gefunden werden können.
 
-# Interact with the deployed contract
+# Interagieren Sie mit dem bereitgestellten Smart Contract
 
-Having a token faucet is nice, getting tokens from it is even better.
+Einen Token-Wasserhahn zu haben, ist schön, von ihm Token zu erhalten, ist noch besser.
 
-We can now write some code to interact with the faucet contract.
+Jetzt können wir etwas Code schreiben, um mit dem Faucet Contract zu interagieren.
 
-We'll need to install our `cli` package and the `typescript` dependency if it's not yet the case:
+Wir müssen unser `cli`-Paket und die `typescript`-Abhängigkeiten installieren, falls dies noch nicht der Fall war:
 
 ```
 npm install @alephium/cli typescript
 ```
 
-We will now see a different option to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
+Wir werden nun eine andere Option sehen, um mit der Blockchain zu interagieren. Zuvor haben wir die `DeployFunction` mit unseren `scripts/<number>_*`-Dateien verwendet, die automatisch mit dem CLI-Tool bereitgestellt wurden.
 
-Another way is to create a skeleton web application project using TypeScript. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
+Eine andere Möglichkeit besteht darin, ein Grundgerüst einer Webanwendung mit TypeScript zu erstellen. Erstellen Sie einen Ordner mit der Bezeichnung `src` im Stammverzeichnis des Projekts und darin eine Datei namens `tokens.ts` mit folgendem Inhalt:
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -465,7 +462,7 @@ async function withdraw() {
 withdraw()
 ```
 
-For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
+Für aufmerksame Beobachter gibt es Neuerungen in unseren Artefakten: `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) ist ein [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) ist,  das notwendig ist, um mit dem `TokenFaucet`-Smart Contract zu interagieren. Der zugehörige Code ist recht simpel. Legen Sie eine Datei mit dem Namen `withdraw.ral` im Ordner `contracts` an und fügen Sie den folgenden Code ein:
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -473,19 +470,19 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 }
 ```
 
-We now need to recompile our contracts to get the artifact for `Withdraw`:
+Wir müssen jetzt unsere Verträge neu kompilieren, um das Artefakt für `Withdraw` zu erhalten:
 
 ```sh
 npx @alephium/cli@latest compile
 ```
 
-You can now compile the TypeScript code to JavaScript with:
+Sie können den TypeScript-Code jetzt mit folgendem Befehl in JavaScript kompilieren:
 
 ```sh
 npx tsc --build .
 ```
 
-OOPS, you should get an error coming from the `alephium.config.ts`, until now the config was used as a simple JSON, but now `TypeScript` want it to respect its [interface](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L48-L62). Especially the `networks` is a record that need to contain the 3 `NetworkType`. You can try to fix it by yourself or update your `alephium.config.ts` file with:
+OOPS, Sie werden einen Fehler aus der `alephium.config.ts`, erhalten. Bisher wurde die Konfiguration einfach als JSON verwendet, aber jetzt verlangt `TypeScript` dass es sein [Interface](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L48-L62) respektiert. Insbesondere ist `networks` ein Record, der die drei `Netzwerk-Typen` enthalten muss. Sie können versuchen, dies selbst zu beheben, oder Sie können Ihre `alephium.config.ts`-Datei mit folgendem Inhalt aktualisieren:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
@@ -517,34 +514,32 @@ const configuration: Configuration<Settings> = {
 export default configuration
 ```
 
-Now recompile
+Kompilieren Sie nun erneut:
 
 ```
 npx tsc --build .
 ```
 
-A `dist` folder should have been created, go ahead and interact with the deployed token faucet:
+Ein `dist` -Ordner sollte erstellt worden sein, gehen Sie weiter und interagieren Sie mit dem bereitgestellten Token-Faucet:
 
 ```
 node dist/src/token.js
 ```
 
-You should now be a proud owner of the token you created.
+Sie sollten jetzt stolzer Besitzer des von Ihnen erstellten Tokens sein.
 
 
-## What's next?
+## Was kommt als nächstes?
 
-You can find a more complex example of the token faucet tutorial [in the alephium/nextjs-template](https://github.com/alephium/nextjs-template) project.
+Ein komplexeres Beispiel für das Token-Faucet-Tutorial finden Sie im [Alephium/Nextjs-Template](https://github.com/alephium/nextjs-template)-Projekt.
 
-## Connect to the wallets
+## Mit den Wallets verbinden
 
-dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
-such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
-and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
+DApps erfordern eine Wallet-Integration für Benutzer der DApp, um sich zu authentifizieren und mit der Alephium-Blockchain zu interagieren, wie zum Beispiel das Signieren von Transaktionen. Derzeit können DApps sowohl mit der [Extension Wallet](../wallet/extension-wallet/DApp) als auch mit [WalletConnect](../wallet/walletconnect) integriert werden. Bitte lesen Sie die entsprechenden Seiten für weitere Details.
 
-## Learn more
+## Weitere Informationen
 
-- To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
-- To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
-- To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-- To learn how to build a Nextjs dApp, please visit [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)
+- Um mehr über das Ökosystem zu erfahren, besuchen Sie bitte die [Übersicht des Ökosystems](/DApps/ecosystem).
+- Um mehr über das Web3 SDK zu erfahren, besuchen Sie bitte die [Anleitung zum Web3 SDK](/DApps/alephium-web3).
+- Um mehr über die Ralph-Sprache zu erfahren, besuchen Sie bitte die [Anleitung zu Ralph](/ralph/getting-started).
+- Um zu erfahren, wie man eine Nextjs DApp erstellt, besuchen Sie [Entwicklen Sie eine DApp mit Nextjs](/DApps/build-DApp-with-nextjs.md)

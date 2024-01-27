@@ -1,7 +1,7 @@
 ---
 sidebar_position: 50
-title: Public Services
-sidebar_label: Public services
+title: Öffentliche Dienste
+sidebar_label: Öffentliche Dienste
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -10,31 +10,31 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Testnet Faucet
 
-The Testnet Faucet is a way to receive testnet-v1 tokens into a given wallet.
+Der Testnet-Faucet ist eine Möglichkeit, Testnet-v1-Token in eine bestimmte Brieftasche zu erhalten.
 
 ### Via HTTP API
 
-Another way to receive testnet-v16 tokens is via an HTTP call, giving your wallet address in the request body, simply as follows:
+Eine andere Möglichkeit, Testnet-v16-Token zu erhalten, besteht darin, einen HTTP-Aufruf durchzuführen und Ihre Brieftaschenadresse im Anfragekörper anzugeben, einfach wie folgt:
 
 ```
 curl -X POST -d '1H1GPLkoMGVUfxQcJgtjWTrKV1KJCQooEV5WxPMhP4Zjy' https://faucet.testnet.alephium.org/send
 ```
 
-Mind that the faucet is throttling requests for few minutes.
+Beachten Sie, dass der Faucet Anfragen für einige Minuten drosselt.
 
-## Node and Explorer APIs
+## Node und Explorer APIs
 
-Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
-* `https://wallet-v20.mainnet.alephium.org` for mainnet with node v2.X ([Doc](https://wallet-v20.mainnet.alephium.org/docs))
-* `https://wallet-v20.testnet.alephium.org` for testnet with node v2.X ([Doc](https://wallet-v20.testnet.alephium.org/docs))
-* `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Doc](https://backend-v113.mainnet.alephium.org/docs))
-* `https://backend-v113.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Doc](https://backend-v113.testnet.alephium.org/docs))
+Aktuell werden die folgenden API-Services gewartet. Beachten Sie, dass alle APIs ratenbegrenzt sind, um Spam zu verhindern.
+* `https://wallet-v20.mainnet.alephium.org` für das Mainnet mit Node v2.X ([Doc](https://wallet-v20.mainnet.alephium.org/docs))
+* `https://wallet-v20.testnet.alephium.org` für Testnet mit Node v2.X ([Doc](https://wallet-v20.testnet.alephium.org/docs))
+* `https://backend-v113.mainnet.alephium.org` für das Mainnet einschließlich Explorer-Backend v1.13.X ([Doc](https://backend-v113.mainnet.alephium.org/docs))
+* `https://backend-v113.testnet.alephium.org` für das Testnet einschließlich Explorer-Backend v1.13.X ([Doc](https://backend-v113.testnet.alephium.org/docs))
 
-As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
+Da das Projekt sich noch in aktiver Entwicklung befindet, sind alle APIs versioniert. In der Regel werden nur die neuesten Versionen gepflegt, aber alle API-Upgrades werden der Community im Voraus angekündigt.
 
 ## API Aliases
 
-We maintain the following API aliases to give users time to migrate from the old API.
+Wir pflegen die folgenden API-Aliase, um Benutzern Zeit für die Migration von der alten API zu geben.
 
 import aliases from "./api-aliases.json";
 
@@ -53,10 +53,10 @@ export const Aliases = ({aliases, type}) => (
 <Aliases aliases={aliases['current']} type='Current' />
 <Aliases aliases={aliases['deprecated']} type='Deprecated' />
 
-## API rate limiting
+## API-Ratenbegrenzung
 
-To ensure the best performance and security, all of our public APIs have implemented rate limiting. This means that there is a limit on the number of requests you can make within a certain time period. As our services evolve and grow, the rate limit may be adjusted based on the actual usage of the service.
+Um die beste Leistung und Sicherheit zu gewährleisten, haben alle unsere öffentlichen APIs eine Ratenbegrenzung implementiert. Dies bedeutet, dass es eine Begrenzung für die Anzahl der Anfragen gibt, die Sie innerhalb eines bestimmten Zeitraums machen können. Da unsere Dienste sich weiterentwickeln und wachsen, kann die Ratenbegrenzung basierend auf der tatsächlichen Nutzung des Dienstes angepasst werden.
 
-To ensure a smooth experience while working within the rate limit, we highly recommend implementing cache and retry mechanisms when making requests to our API services. Caching responses can help reduce the number of API calls, while retrying failed requests can handle temporary issues or errors.
+Um eine reibungslose Erfahrung bei der Arbeit innerhalb der Ratenbegrenzung zu gewährleisten, empfehlen wir dringend, Cache- und Wiederholungsmechanismen zu implementieren, wenn Anfragen an unsere API-Dienste gestellt werden. Das Zwischenspeichern von Antworten kann dazu beitragen, die Anzahl der API-Aufrufe zu reduzieren, während das Wiederholen fehlgeschlagener Anfragen vorübergehende Probleme oder Fehler behandeln kann.
 
-If your application is built with the React framework, you can leverage the ["SWR"](https://www.npmjs.com/package/swr) package available on npm. SWR provides convenient hooks for data fetching and caching, making it easier to work with APIs. Specifically, you can use the `useSWR` hook for handling mutable data and the `useSWRImmutable` hook for handling immutable data such as token metadata.
+Wenn Ihre Anwendung mit dem React-Framework erstellt wurde, können Sie das ["SWR"](https://www.npmjs.com/package/swr)-Paket nutzen, das auf npm verfügbar ist. SWR bietet bequeme Hooks für Datenabruf und Zwischenspeicherung und erleichtert die Arbeit mit APIs. Insbesondere können Sie das `useSWR`-Hook für die Bearbeitung von veränderlichen Daten und das `useSWRImmutable`-Hook für die Bearbeitung von unveränderlichen Daten wie Token-Metadaten verwenden.

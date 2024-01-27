@@ -8,36 +8,36 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Installing
+## Installation
 
 ```
 npm install --save @alephium/web3
 ```
 
-## Connecting to Alephium
+## Mit Alephium verbinden
 
-`NodeProvider` is an abstraction of a connection to the Alephium network, you can get a `NodeProvider` by:
+`NodeProvider` ist eine Abstraktion einer Verbindung zum Alephium-Netzwerk. Sie können einen `NodeProvider` erhalten, indem Sie:
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
 ```
 
-Or specify the `API_KEY` if you have `alephium.api.api-key` in your full node configuration file:
+Oder geben Sie die `API_KEY` an, wenn Sie `alephium.api.api-key` in Ihrer Konfigurationsdatei für den vollständigen Knoten haben:
 
 ```typescript
 const API_KEY = // alephium.api.api-key from your full node config
 const nodeProvider = new NodeProvider('http://localhost:22973', API_KEY)
 ```
 
-Sometimes, it's convenient to setup a global `NodeProvider` for your project:
+Manchmal ist es praktisch, einen globalen `NodeProvider` für Ihr Projekt einzurichten:
 
 ```typescript
 web3.setCurrentNodeProvider(<nodeURL>)
 ```
 
-## Querying the Blockchain
+## Abfragen der Blockchain
 
-Once you have a `NodeProvider`, you have a connection to the blockchain, which you can use to query the current contract state, fetch historic contract events, look up deployed contracts and so on.
+Sobald Sie einen `NodeProvider` haben, besteht eine Verbindung zur Blockchain, die Sie verwenden können, um den aktuellen Vertragszustand abzufragen, historische Vertragsereignisse abzurufen, bereitgestellte Verträge nachzuschlagen und so weiter.
 
 ```typescript
 // Get the blockchain height from the given chain index
@@ -111,23 +111,23 @@ await nodeProvider.addresses.getAddressesAddressBalance('1DrDyTr9RpRsQnDnXo2YRiP
 // }
 ```
 
-## Writing to the blockchain
+## In die BLockchain schreiben
 
-Transactions are used to change the state of the blockchain. Every transaction needs to be signed with a private key, which can be done through the `SignerProvider`. And there are two `SignerProvider` in `alephium/web3-wallet`.
+Transaktionen werden verwendet, um den Zustand der Blockchain zu ändern. Jede Transaktion muss mit einem privaten Schlüssel signiert werden, was über den  `SignerProvider` erfolgen kann. Und es gibt zwei `SignerProvider` in `alephium/web3-wallet`.
 
-### Installing Web3 Wallet
+### Web3 Wallet installieren
 
 ```
 npm install --save @alephium/web3-wallet
 ```
 
 :::note
-Both wallets are used for contract development and deployment, please don't use them to store large amount of tokens.
+Beide Wallets werden für die Entwicklung und Bereitstellung von Verträgen verwendet. Bitte verwenden Sie sie nicht, um eine große Menge an Token zu speichern.
 :::
 
 ### NodeWallet
 
-Please follow the [guide](/wallet/node-wallet-guide) to create a full node wallet.
+Bitte folge dieser [Anleitung](/wallet/node-wallet-guide) um eine Full Node Wallet zu erstellen.
 
 ```typescript
 // Create a node wallet by wallet name
@@ -203,12 +203,12 @@ await wallet.signAndSubmitTransferTx({
 
 ## Contracts
 
-Similar to Ethereum, a contract is an abstraction of program code which lives on the Alephium blockchain. Let's use the following example to illustrate how to test, deploy and call a contract, please follow the [guide](/dapps/getting-started) to create a project.
+Ähnlich wie bei Ethereum ist ein Vertrag eine Abstraktion von Programmcode, der auf der Alephium-Blockchain existiert. Verwenden wir das folgende Beispiel, um zu veranschaulichen, wie man einen Vertrag testet, bereitstellt und aufruft. Bitte folgen Sie dieser [Anleitung](/dapps/getting-started), um ein Projekt zu erstellen.
 
-### Test the contract
-#### Unit tests
+### Teste den Contract
+#### Unit Tests
 
-The SDK provides unit testing functionality, which calls the contract like a normal transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+Das SDK bietet Funktionen für Unittests, die den Vertrag wie eine normale Transaktion aufrufen. Anstatt jedoch den Blockchain-Zustand zu ändern, gibt es den neuen Zustand des Vertrags, Transaktionsausgaben und Ereignisse zurück.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -250,11 +250,11 @@ const contractState = result.contracts[0] as TokenFaucetTypes.State
 expect(contractState.address).toEqual(testContractAddress)
 ```
 
-A complete example can be found in our [`alephium-nextjs-template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
+Ein vollständiges Beispiel finden Sie in unserem  [`Alephium-NextJS-Template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
 
-#### Integration tests
+#### Integrations-Tests
 
-Alongside unit tests, you can also run some integration tests, be careful as those one can change the blockchain state.
+Neben den Unittests können auch Integrationstests durchgeführt werden. Seien Sie vorsichtig, da diese den Blockchain-Zustand ändern können.
 
 ```typescript
 web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
@@ -288,9 +288,9 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-More details can be found in our [integration test folder](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration)
+Weitere Details finden Sie in unserem [Ordner für Integrationstests](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration).
 
-### Deploy the contract
+### Den Vertrag bereitstellen
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -384,11 +384,11 @@ console.log(JSON.stringify(contractState, null, 2))
 // }
 ```
 
-From the output we can see that we have successfully deployed the contract, and there are 10 tokens in the contract asset.
+Von der Ausgabe können wir sehen, dass der Vertrag erfolgreich bereitgestellt wurde und es 10 Token im Vertragsvermögen gibt.
 
-### Call the contract
+### Rufen Sie den Vertrag auf
 
-You can use scripts to call contracts on the Alephium blockchain, the script code will be executed when the transaction is submitted to the Alephium network, but the script code will not be stored in the blockchain's state.
+Sie können Skripte verwenden, um Verträge in der Alephium-Blockchain aufzurufen. Der Skriptcode wird ausgeführt, wenn die Transaktion an das Alephium-Netzwerk gesendet wird, aber der Skriptcode wird nicht im Zustand der Blockchain gespeichert.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -439,9 +439,9 @@ console.log(JSON.stringify(balance, null, 2))
 // }
 ```
 
-### Query historic contract events
+### Historische Vertragsereignisse abfragen
 
-Contract events are indexed by contract address with offsets, and you can query historic events of a contract address by specifying the offset and limit (optional).
+Vertragsereignisse werden durch Vertragsadresse mit Offsets indiziert, und Sie können historische Ereignisse einer Vertragsadresse abfragen, indem Sie den Offset und das Limit (optional) angeben.
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
@@ -507,9 +507,9 @@ await nodeProvider.events.getEventsTxIdTxid('c29e9cb10b3e0b34979b9daac73151d98ee
 // }
 ```
 
-### Listening to events
+### Ereignisse abhören
 
-In addition to querying events one by one, you can also get events by event subscription. It will periodically query and get new events.
+Zusätzlich zur Abfrage von Ereignissen einzeln können Sie Ereignisse auch durch ein Abonnement abrufen. Es wird periodisch abgefragt und neue Ereignisse werden abgerufen.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -555,9 +555,9 @@ console.log(JSON.stringify(events, null, 2))
 subscription.unsubscribe()
 ```
 
-## Utils
+## Hilfsfunktionen
 
-### Conversion between contract id and contract address
+### Gruppe einer Adresse abrufen
 
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'
@@ -566,7 +566,7 @@ console.log(binToHex(contractIdFromAddress(contractAddress)) === contractId)
 // true
 ```
 
-### Get the group of an address
+### Gruppe einer Adresse abrufen
 
 ```typescript
 const group = groupOfAddress('1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH')
@@ -574,7 +574,7 @@ console.log(group)
 // 0
 ```
 
-### Get the sub-contract id
+### Die Sub-Vertrags-ID abrufen
 
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'

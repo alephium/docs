@@ -27,7 +27,7 @@
     "description": "The ARIA label for the back to top button"
   },
   "theme.admonition.note": {
-    "message": "Notiz",
+    "message": "Hinweis",
     "description": "The default label used for the Note admonition (:::note)"
   },
   "theme.admonition.tip": {

@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Übersicht
 
-Alephium stellt mehrere Tools und Pakete vor, um Ihnen beim Erstellen Ihrer dApps zu helfen.
+Alephium stellt mehrere Tools und Pakete bereit, um Ihnen beim Erstellen Ihrer DApps zu helfen.
 
 Dieser Leitfaden wird Ihnen helfen, unsere empfohlene Einrichtung zu installieren.
 
@@ -18,10 +18,10 @@ Voraussetzungen:
 
 - Schreiben Sie Code in [Typescript](https://www.typescriptlang.org/)
 - Arbeiten sie in einem [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
-- [nodejs](https://nodejs.org/en/) Version >= 16 installiert
+- [NodeJS](https://nodejs.org/en/) Version >= 16 installiert
 - `npm` Version >= 8 installiert
 
-## Ein neues Projekt für eine neue dApp erstellen
+## Ein neues Projekt für eine neue DApp erstellen
 
 Um das Tutorial-Projekt zu erstellen, öffnen Sie ein neues Terminal und führen Sie den folgenden Befehl aus:
 
@@ -35,13 +35,13 @@ Dies erstellt ein neues Verzeichnis mit dem Namen  `alephium-tutorial` und initi
 
 Um Ihre Contracts zu kompilieren und zu testen, ist es erforderlich, ein lokales Entwicklungsnetzwerk zu starten. Sie können [diese Anleitung](/full-node/devnet) verwenden, um ein Devnet zu starten.
 
-Ihr neues Netzwerk ist jetzt mit [dieser Konfiguration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) und den generierten Adressen in 4 Gruppen mit ausreichend ALPHs für Testzwecke gestartet.
+Ihr neues Netzwerk ist jetzt mit [dieser Konfiguration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) und den generierten Adressen in 4 Gruppen und ausreichend ALPHs für Testzwecke gestartet.
 
 Durch REST-Endpunkte kann das TypeScript SDK dann mit dem Netzwerk interagieren.
 
-## Kompilieren Sie ihren Contract
+## Kompilieren Sie ihren Smart Contract
 
-Ändern Sie als Nächstes den Arbeitsbereich zum Tutorial-Projekt:
+Ändern Sie als nächstes den Arbeitsbereich zum Tutorial-Projekt:
 
 ```
 cd alephium-tutorial
@@ -139,13 +139,13 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 npx @alephium/cli@latest compile
 ```
 
-Die kompilierten Artefakte befinden sich im Verzeichnis `artifacts`.
+Die kompilierten Artefakte befinden sich nun im Verzeichnis `artifacts`.
 
-Dieser Befehl generiert auch TypeScript-Code basierend auf den kompilierten Artefakten. Der generierte TypeScript-Code befindet sich im Verzeichnis  `artifacts/ts`. Sie können mit dem generierten TypeScript-Code bequemer mit der Alephium-Blockchain interagieren.
+Dieser Befehl generiert auch TypeScript-Code basierend auf den kompilierten Artefakten. Der generierte TypeScript-Code befindet sich im Verzeichnis  `artifacts/ts`. Sie können mit dem generierten TypeScript-Code einfacher mit der Alephium-Blockchain interagieren.
 
-## Testen sie ihren Contract
+## Testen sie ihren Smart Contract
 
-Das Beispielprojekt wird mit Tests `test/unit/token.test.ts` für Ihren Contract geliefert:
+Das Beispielprojekt wird mit Tests `test/unit/token.test.ts` für Ihren Smart Contract geliefert:
 
 ```typescript
 import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
@@ -189,7 +189,7 @@ describe('unit tests', () => {
 })
 ```
 
-Sie können die Test ausführen mit:
+Sie können die Tests ausführen mit:
 
 ```
 npm run test
@@ -201,9 +201,9 @@ oder
 npx @alephium/cli@latest test
 ```
 
-## Ihren Contract bereitstellen
+## Ihren Smart Contract bereitstellen
 
-Als nächstes verwenden wir Alephium CLI und ein Bereitstellungsskript `scripts/0_deploy_faucet.ts`:
+Als nächstes verwenden wir das Alephium CLI und ein Bereitstellungsskript `scripts/0_deploy_faucet.ts`:
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
@@ -243,15 +243,15 @@ Führen Sie die Bereitstellung aus mit:
 npx @alephium/cli@latest deploy
 ```
 
-Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren Sie Ihre  `alephium.config.ts` und verwenden Sie die Option  `--network`:
+Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Smart Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren Sie Ihre  `alephium.config.ts` und verwenden Sie anschließend folgende Option `--network`:
 
 ```
 npx @alephium/cli@latest deploy --network testnet
 ```
 
-## Mit dem bereitgestellten Contract interagieren
+## Mit dem bereitgestellten Smart Contract interagieren
 
-Nun können Sie den Quellcode `src/token.ts` erstellen:
+Nun können Sie den Quellcode `src/token.ts` mit folgendem Inhalt erstellen:
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -318,12 +318,12 @@ node dist/src/token.js
 
 ## Verbindung zu den Wallets
 
-dApps erfordern eine Wallet-Integration für Benutzer der dApp, um sich zu authentifizieren und mit der Alephium-Blockchain zu interagieren, z. B. das Signieren von Transaktionen. Derzeit können dApps sowohl mit der [Extension Wallet](../wallet/extension-wallet/dapp)
+DApps erfordern eine Wallet-Integration für Benutzer der DApp, um sich zu authentifizieren und mit der Alephium-Blockchain zu interagieren, z. B. das Signieren von Transaktionen. Derzeit können DApps sowohl mit der [Extension Wallet](../wallet/extension-wallet/DApp)
 als auch mit [WalletConnect](../wallet/walletconnect) integriert werden. Bitte beachten Sie die jeweiligen Seiten für weitere Details.
 
 ## Weitere Informationen
 
-- Um mehr über das Ökosystem zu erfahren, besuchen Sie bitte die [Übersicht des Ökosystems](/dapps/ecosystem).
-- Um mehr über das Web3 SDK zu erfahren, besuchen Sie bitte die [Anleitung zum Web3 SDK](/dapps/alephium-web3).
+- Um mehr über das Ökosystem zu erfahren, besuchen Sie bitte die [Übersicht des Ökosystems](/DApps/ecosystem).
+- Um mehr über das Web3 SDK zu erfahren, besuchen Sie bitte die [Anleitung zum Web3 SDK](/DApps/alephium-web3).
 - Um mehr über die Ralph-Sprache zu erfahren, besuchen Sie bitte die [Anleitung zu Ralph](/ralph/getting-started).
-- Um zu lernen, wie man eine Nextjs dApp erstellt, besuchen Sie bitte [Erstellen Sie eine dApp mit Nextjs](/dapps/build-dapp-with-nextjs.md)
+- Um zu lernen, wie man eine Nextjs DApp erstellt, besuchen Sie bitte [Erstellen Sie eine DApp mit Nextjs](/DApps/build-DApp-with-nextjs.md)
