@@ -1,17 +1,17 @@
 ---
 sidebar_position: 40
 title: Alephium Stratum
-sidebar_label: Alephium stratum
+sidebar_label: Alephium Stratum
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-The proposal is based on: [https://eips.ethereum.org/EIPS/eip-1571](https://eips.ethereum.org/EIPS/eip-1571).
-Messages follow EIP-1571's JSON-RPC-2.0 specification.
+Der Vorschlag basiert auf: [https://eips.ethereum.org/EIPS/eip-1571](https://eips.ethereum.org/EIPS/eip-1571).
+Nachrichten folgen der JSON-RPC-2.0-Spezifikation von EIP-1571.
 
-? - denotes that a property is optional
+? - bedeutet, dass eine Eigenschaft optional ist
 
 ```
 Methods:

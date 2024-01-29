@@ -1,57 +1,58 @@
 ---
 sidebar_position: 30
-title: Troubleshooting
+title: Fehlerbehebung
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# Troubleshooting
+# Fehlerbehebung
 
-#### Why I can only restore 1 of my 4 miner addresses ?
+#### Warum kann ich nur 1 meiner 4 Miner-Adressen wiederherstellen ?
 
-You have to specify `isMiner = true` when restoring your miner address. Please checkout the example here: [Restore-Miner-Wallet](solo-mining-guide.md#restore-your-miner-wallet)
+Sie müssen beim Wiederherstellen Ihrer Miner-Adresse `isMiner = true` angeben. 
+Bitte werfen Sie einen Blick auf das Beispiel hier: [Restore-Miner-Wallet](solo-mining-guide.md#restore-your-miner-wallet)
 
-#### How to connect my miner to my full node on another computer in the same subnet ?
+#### Wie verbinde ich meinen Miner mit meinem Full Node auf einem anderen Computer im gleichen Subnetz ?
 
-1. Add the following to your `user.conf` and restart your full node.
+1. Fügen Sie das Folgende zu Ihrer `user.conf` hinzu und starten Sie Ihren Full Node neu.
 
 ```
 alephium.mining.api-interface = "0.0.0.0"
 ```
 
-2. Run your miner with `-a IP`, where the IP is your full node's IP in the subnet.
+2. Führen Sie Ihren Miner mit `-a IP` aus, wobei die IP die IP Ihres Full Nodes im Subnetz ist.
 
-#### How to use the Swagger UI of my VPS hosted full node ?
+#### Wie kann ich die Swagger UI meines VPS-gehosteten Full Nodes verwenden ?
 
-SSH port forwarding is recommended:
+SSH-Portweiterleitung wird empfohlen:
 
 ```
 ssh user@server  -L 12973:127.0.0.1:12973
 ```
 
-#### How to access the Swagger UI of my full node on another computer in the same subnet ?
+#### Wie greife ich auf die Swagger UI meines Full Nodes auf einem anderen Computer im gleichen Subnetz zu ?
 
-1. Add the following to your `user.conf` and restart your full node.
+1. Fügen Sie das Folgende zu Ihrer `user.conf` hinzu und starten Sie Ihren Full Node neu.
 
 ```
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-2. Change the `host` of Swagger UI to be the IP of your full node.
+2. Ändern Sie den `host` der Swagger UI auf die IP Ihres Full Nodes.
 
-#### My miner (via run-miner.sh) cannot connect to my full node on another computer
+#### Mein Miner (über run-miner.sh) kann keine Verbindung zu meinem Full Node auf einem anderen Computer herstellen.
 
-The script `run-miner.sh` connects to `127.0.0.1` by default. You will need to add `-a IP` into `run-miner.sh`.
+Das Skript `run-miner.sh` stellt standardmäßig eine Verbindung zu `127.0.0.1` her. Sie müssen `-a IP` zu `run-miner.sh` hinzufügen.
 
-#### Why the miner uses huge amount of memory on HiveOS?
+#### Warum verwendet der Miner auf HiveOS eine große Menge an Speicher ?
 
-You should deactivate the `log to write in RAM` with command `logs-on`.
+Sie sollten die `log to write in RAM` mit dem Befehl `logs-on` deaktivieren.
 
-#### How to customize the auto-lock timeout for wallets?
+#### Wie kann ich den Auto-Lock-Timeout für Wallets anpassen ?
 
-You could change the auto-lock timeout of wallet with the following configuration:
+Sie können den Auto-Lock-Timeout des Wallets mit der folgenden Konfiguration ändern:
 
 ```
 alephium.wallet.locking-timeout = 10 minutes

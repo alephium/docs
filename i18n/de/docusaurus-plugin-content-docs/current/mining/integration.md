@@ -8,55 +8,54 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-This document aims to make it easier for mining pools and miners to integrate alephium. This document mainly includes:
+Dieses Dokument soll es Mining-Pools und Minern erleichtern, Alephium zu integrieren. Es enthält hauptsächlich:
 
-* the communication protocol between the mining pool and the full node
-* how the miner calculates the block hash based on the mining jobs
+* das Kommunikationsprotokoll zwischen dem Mining-Pool und dem Full Node
+* wie der Miner den Blockhash basierend auf den Mining-Jobs berechnet
 
-Regarding the implementation of the communication protocol between mining pool and miners, you can refer to the stratum protocol [here](alephium-stratum.md). Note that mining pools does not follow exactly the protocol.
-
-In this document I will use the code of [mining-pool](https://github.com/alephium/mining-pool) and [gpu-miner](https://github.com/alephium/gpu-miner) as a reference.
+Hinsichtlich der Implementierung des Kommunikationsprotokolls zwischen Mining-Pool und Minern können Sie sich auf das Stratum-Protokoll [hier](alephium-stratum.md) beziehen. Beachten Sie, dass Mining-Pools das Protokoll nicht genau befolgen.
+In diesem Dokument werde ich den Code von [mining-pool](https://github.com/alephium/mining-pool) und [gpu-miner](https://github.com/alephium/gpu-miner) als Referenz verwenden.
 
 
 ## Mining Pool
 
-The mining pool needs to connect to the alephium full node to get mining jobs, and the default mining api server is `localhost:10973`.
+Der Mining-Pool muss sich mit dem Alephium Full Node verbinden, um Mining-Jobs zu erhalten, und der Standard-Mining-API-Server ist `localhost:10973`.
 
-The mining pool communicates with the full node through a binary protocol, the format of the message is as follows:
+Der Mining-Pool kommuniziert mit dem Full Node über ein binäres Protokoll, das Format der Nachricht sieht wie folgt aus:
 
 ```
 MessageSize(4 bytes) + Message(1 byte MessageType + Payload)
 ```
 
-### Getting Jobs From Full Node
+### Mining-Jobs vom Full Node erhalten
 
-Every time the full node receives a new block, it sends a `Jobs` message to the mining pool. You can also set the time interval in the [mining configuration](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/system_prod.conf.tmpl#L6) of the full node to send `Jobs` messages when there are no new blocks.
+Jedes Mal, wenn der Full Node einen neuen Block empfängt, sendet er eine `Jobs` Nachricht an den Mining-Pool. Sie können auch das Zeitintervall in der [Mining-Konfiguration](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/system_prod.conf.tmpl#L6) des Full Nodes festlegen, um `Jobs`-Nachrichten zu senden, wenn es keine neuen Blöcke gibt.
 
-Because there are 16 chains in alephium now, there will be 16 block templates in each `Jobs` message. And the block template consists of the following fields:
+Da es jetzt 16 Chains in Alephium gibt, wird es in jeder `Jobs`-Nachricht 16 Blockvorlagen geben. Und die Blockvorlage besteht aus den folgenden Feldern:
 
-* `fromGroup` and `toGroup`: the chain index of the block template.
-* `headerBlob`: the serialized binary data of the [BlockHeader](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/BlockHeader.scala#L28), excluding the first 24 bytes(nonce).
-* `txsBlob`: the serialized binary data of the transactions.
-* `targetBlob`: the serialized binary data of the [Target](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/Target.scala#L32).
+* `fromGroup` und `toGroup`: der Chain-Index der Blockvorlage.
+* `headerBlob`: die serialisierten binären Daten des [BlockHeader](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/BlockHeader.scala#L28), exklusive der ersten 24 Bytes (Nonce).
+* `txsBlob`: die serialisierten binären Daten der Transaktionen.
+* `targetBlob`: die serialisierten binären Daten des [Targets](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/Target.scala#L32).
 
-You can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js) to learn more about the format of the `Jobs` message and how to parse the `Jobs` message.
+Sie können den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/messages.js) verwenden, um mehr über das Format der `Jobs`-Nachricht und das Parsen der `Jobs`-Nachricht zu erfahren.
 
-Once the mining pool receives the `Jobs` message from the full node, it can send the mining jobs to miners based on their hashrate. For each chain, calculating the nonce only requires the `targetBlob` and `headerBlob` fields. Therefore, the mining pool can save bandwidth by excluding the `txsBlob` field when sending mining jobs to miners. You can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/blockTemplate.js#L51).
+Sobald der Mining-Pool die `Jobs` -Nachricht vom Full Node empfängt, kann er die Mining-Jobs basierend auf ihrer Hashrate an die Miner senden. Für jede Chain erfordert die Berechnung des Nonce nur die Felder `targetBlob` und `headerBlob`. Daher kann der Mining-Pool Bandbreite sparen, indem er das Feld `txsBlob` ausschließt, wenn er Mining-Jobs an die Miner sendet. Sie können den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/blockTemplate.js#L51) verwenden.
 
-### Submitting Blocks To Full Node
+### Blöcke an den Full Node senden
 
-Once the mining pool receives a valid `nonce` from the miner, it can send the block to the full node, where the block is composed of `nonce`, `headerBlob` and `txsBlob`, you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/pool.js#L119).
+Sobald der Mining-Pool eine gültige `nonce` vom Miner erhält, kann er den Block an den Full Node senden, wobei der Block aus der `nonce`, `headerBlob` und `txsBlob` besteht. Sie können den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/pool.js#L119) verwenden.
 
-Then you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) to construct a valid `SubmitBlock` message and send this message to the full node.
+Dann können Sie den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) verwenden, um eine gültige `SubmitBlock`-Nachricht zu konstruieren und diese Nachricht an den Full Node zu senden.
 
-After the full node verifies the block, it will send a `SubmitBlockResult` message to tell the mining pool whether the block is valid, you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) to parse the `SubmitBlockResult` message.
+Nachdem der Full Node den Block überprüft hat, sendet er eine `SubmitBlockResult` -Nachricht, um dem Mining-Pool mitzuteilen, ob der Block gültig ist. Sie können den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) verwenden, um die `SubmitBlockResult`-Nachricht zu parsen.
 
 ## Miner
 
-### Calculating the BlockHash
+### Berechnung des Blockhash
 
-In alephium, the size of the `nonce` is 24 bytes, and the hash of the block is: `blake3(blake3(serialize(blockHeader))`. As mentioned before, `blockBlob` in each job is the serialized binary data of `BlockHeader` excluding the `nonce` field. Therefore, when the miner calculates the block hash, it needs to preappend the `nonce` to the front of the `headerBlob`, you can refer to the code provided [here](https://github.com/alephium/gpu-miner/blob/master/src/worker.h#L135) and [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#L314).
+In Alephium beträgt die Größe der `nonce` 24 Bytes, und der Hash des Blocks lautet: `blake3(blake3(serialize(blockHeader))`. Wie zuvor erwähnt, ist `blockBlob` in jedem Job die serialisierten binären Daten von `BlockHeader` ohne dem Feld `nonce`. Daher muss der Miner beim Berechnen des Blockhash die `nonce` vor dem `headerBlob` voranstellen. Sie können den bereitgestellten Code [hier](https://github.com/alephium/gpu-miner/blob/master/src/worker.h#L135) und [hier](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#L314) verwenden.
 
-### Checking the ChainIndex
+### Überprüfen des Chain-Index
 
-In addition to checking the target, the miner also needs to check the chain index of the block as alephium encodes the chain index into the block hash. You can refer to the code provided [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) to check whether the chain index of the block hash is correct.
+Zusätzlich zur Überprüfung des Ziels muss der Miner auch den Chain-Index des Blocks überprüfen, da Alephium den Chain-Index in den Blockhash kodiert. Sie können den bereitgestellten Code [hier](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) verwenden, um zu überprüfen, ob der Chain-Index des Blockhash korrekt ist.

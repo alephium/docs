@@ -1,38 +1,38 @@
 ---
 sidebar_position: 40
-title: Exchange
-sidebar_label: Exchange
+title: Börse (Exchange)
+sidebar_label: Börse (Exchange)
 ---
 
-Integration prototype with Alephium's SDK: https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts
+Integration des Prototyps mit Alephiums SDK: https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts
 
-This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
+Dieser Leitfaden erläutert die grundlegenden APIs und Informationen, die für die Integration von Alephium mit einer Kryptowährungsbörse erforderlich sind.
 
-## Getting started
+## Einstieg
 
-### Local development network
+### Lokales Entwicklungsnetzwerk
 
-To integrate Alephium, an exchange must run a full node. Additionally, the explorer-backend can be run for debugging and additional indexing. 
+Um mit Alephium zu integrieren, muss eine Börse einen Full Node betreiben. Zusätzlich kann das Explorer-Backend zu Debugging- und zusätzlichen Indexierungszwecken ausgeführt werden.
 
-To create a local development network with explorer support, follow the instructions in the [alephium-stack](https://github.com/alephium/alephium-stack#devnet) repository. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
+Um ein lokales Entwicklungsnetzwerk mit Explorer-Unterstützung zu erstellen, folgen Sie den Anweisungen im [Alephium-Stack](https://github.com/alephium/alephium-stack#devnet) Repository. Sobald es gestartet ist, kann auf die Swagger UI für die API-Schnittstelle des Full Nodes und des Explorer-Backends zugegriffen werden.
 
-* Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
-* Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
-* Explorer front-end: [http://localhost:23000](http://localhost:23000)
+* Swagger UI des Full Nodes: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
+* Swagger UI des Explorer-Backends: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
+* Explorer-Frontend: [http://localhost:23000](http://localhost:23000)
 
 ### APIs
 
-To keep the guide concise, relevant API queries will be provided in the doc instead of Swagger UI screenshots.
+Um den Leitfaden kurz zu halten, werden relevante API-Anfragen im Dokument bereitgestellt, anstatt Swagger UI-Screenshots zu verwenden.
 
-The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains generated Typescript APIs for both the [full node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) and [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
+Das [web3 SDK](https://github.com/alephium/alephium-web3#packages) enthält generierte TypeScript-APIs sowohl für den [Full Node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) als auch für das [Explorer-Backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
 
 ### Test wallet
 
 :::caution
-The node wallet is for testing the APIs of full node. To generate hot wallets for depositing, please check [wallet generation](exchange#wallet-generation).
+Die Node-Wallet dient dazu, die APIs des Full Nodes zu testen. Um Hot Wallets für Einzahlungen zu generieren, überprüfen Sie bitte [Wallet-Generierung](exchange#wallet-generation).
 :::
 
-Let's recover the test wallet by executing the following API. The test wallet has 1million ALPH for the address `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH`.
+Lassen Sie uns die Test-Wallet wiederherstellen, indem wir die folgende API ausführen. Die Test-Wallet hat 1 Million ALPH für die Adresse `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH`.
 
 ```shell
 curl -X 'PUT' \
@@ -51,7 +51,7 @@ curl -X 'PUT' \
 # }
 ```
 
-Get the public key of the address by querying:
+Erhalten Sie den öffentlichen Schlüssel der Adresse durch folgende Abfrage:
 
 ```shell
 curl -X 'GET' \
@@ -67,11 +67,11 @@ curl -X 'GET' \
 # }
 ```
 
-## Transaction APIs
+## Transaktions-APIs
 
-### Create a transaction
+### Eine Transaktion erstellen
 
-Let's build a transaction to send `1.23 ALPH` to address `1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3`.
+Lassen Sie uns eine Transaktion erstellen, um `1.23 ALPH` an die Adresse `1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3` zu senden.
 
 ```shell
 # `fromPublicKey` is the public key of the wallet address
@@ -101,9 +101,9 @@ curl -X 'POST' \
 # }
 ```
 
-### Sign a transaction
+### Transaktion signieren
 
-Let's sign the transaction id:
+Lassen Sie uns die Transaktions-ID signieren:
 
 ```shell
 curl -X 'POST' \
@@ -120,9 +120,9 @@ curl -X 'POST' \
 # }
 ```
 
-### Submit a transaction
+### Eine Transaktion übermitteln
 
-Let's submit the transaction to the network:
+Lassen Sie uns die Transaktion an das Netzwerk übermitteln:
 
 ```shell
 # `unsignedTx` is from the response of transaction building
@@ -147,9 +147,9 @@ curl -X 'POST' \
 
 ## Block APIs
 
-### Get block hash with transaction ID
+### Blockhash mit Transaktions-ID abrufen
 
-To get the block hash of a confirmed transaction, you can use the full node API:
+Um den Blockhash einer bestätigten Transaktion zu erhalten, können Sie die Full-Node-API verwenden:
 
 ```shell
 curl -X 'GET' \
@@ -167,7 +167,7 @@ curl -X 'GET' \
 # }
 ```
 
-### Get block with block hash
+### Block mit Blockhash abrufen
 
 ```shell
 curl -X 'GET' \
@@ -188,9 +188,9 @@ curl -X 'GET' \
 # }
 ```
 
-### Polling for blocks
+### Abfrage von Blöcken
 
-In Alephium, you can fetch all the blocks from all the chains for a given time interval because it is a sharded blockchain with multiple chains operating at different heights simultaneously.
+In Alephium können Sie alle Blöcke von allen Ketten für einen bestimmten Zeitintervall abrufen, da es sich um eine sharded Blockchain handelt, bei der mehrere Ketten gleichzeitig auf unterschiedlichen Höhen arbeiten.
 
 ```shell
 curl -X 'GET' \
@@ -207,7 +207,7 @@ curl -X 'GET' \
 # }
 ```
 
-You can retrieve blocks for each chain individually using this endpoint:
+Sie können Blöcke für jede Kette einzeln mit diesem Endpunkt abrufen:
 ```shell
 curl -X 'GET' \
   'http://127.0.0.1:22973/blockflow/chain-info?fromGroup=2&toGroup=3' \
@@ -230,15 +230,15 @@ curl -X 'GET' \
 # }
 ```
 
-## UTXO Management
+## UTXO Verwaltung
 
-### Why UTXO management?
+### Warum UTXO-Verwaltung?
 
-In practice, some miners tend to send mining rewards directly to exchange addresses, resulting in a large number of small-valued UTXOs in the exchange's hot wallets. However, due to the limited number of inputs that can be included in each transaction, withdrawals may fail if the hot wallet is filled with these small UTXOs.
+In der Praxis neigen einige Miner dazu, Mining-Belohnungen direkt an Börsenadressen zu senden, was zu einer großen Anzahl von UTXOs mit geringem Wert in den Hot Wallets der Börse führt. Aufgrund der begrenzten Anzahl von Inputs, die in jede Transaktion aufgenommen werden können, können Auszahlungen fehlschlagen, wenn das Hot Wallet mit diesen kleinen UTXOs gefüllt ist.
 
-### How to consolidate small-valued UTXOs?
+### Wie konsolidiert man UTXOs mit geringem Wert?
 
-If your exchange already has a proper UTXO management framework in place, you are in good shape. However, if you don't, there is a simple solution available. You can utilize the sweep endpoint to consolidate the small-valued UTXOs of a specific address. Please note that this feature is only accessible starting from full node `2.3.0`.
+Wenn Ihre Börse bereits ein geeignetes UTXO-Verwaltungssystem hat, sind Sie gut aufgestellt. Wenn nicht, gibt es eine einfache Lösung. Sie können den Sweep-Endpunkt verwenden, um die UTXOs mit geringem Wert einer bestimmten Adresse zu konsolidieren. Beachten Sie, dass diese Funktion nur ab Full Node `2.3.0` verfügbar ist.
 
 ```shell
 # `maxAttoAlphPerUTXO` refers to the maximum amount of ALPH in the UTXOs to be consolidated.
@@ -254,9 +254,9 @@ curl -X 'POST' \
 }'
 ```
 
-### How to work with designated UTXOs?
+### Wie man mit bestimmten UTXOs arbeitet?
 
-To create transactions more efficiently, an exchange is recommended to store the set of UTXOs of their hot wallets and then provide specific UTXOs through the API.
+Um Transaktionen effizienter zu erstellen, wird einer Börse empfohlen, den Satz von UTXOs ihrer Hot Wallets zu speichern und dann spezifische UTXOs über die API bereitzustellen.
 
 ```shell
 curl -X 'POST' \
@@ -280,7 +280,7 @@ curl -X 'POST' \
 }'
 ```
 
-`hint` and `key` for the UTXO are fetched from the first output of the first transaction we made. `key` is unique and can be used to index the UTXO.
+`hint` und `key` für den UTXO werden aus der ersten Ausgabe der ersten von uns erstellten Transaktion abgerufen. `key` ist eindeutig und kann verwendet werden, um den UTXO zu indizieren.
 
 ```shell
 curl -X 'GET' \
@@ -313,25 +313,25 @@ curl -X 'GET' \
 # }
 ```
 
-## More Information
+## Mehr Informationen
 
-### Wallet generation
+### Wallet-Generierung
 
-To generate multiple addresses for users, you can use the [HD-wallet in the web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185).
+Um mehrere Adressen für Benutzer zu generieren, können Sie die [HD-Wallet im Web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185) verwenden.
 
 ### Sharding
 
-Alephium is a sharded blockchain and its addresses are split into 4 groups on the mainnet. However, one can: 
-- Send ALPH to multiple addresses that belong to the same address group in a single transaction. All the destination addresses must belong to the same group.
-- Send ALPH from multiple addresses that belong to the same address group in a single transaction. All the sending addresses must belong to the same group.
-- Send ALPH from multiple addresses that belong to the same group to multiple addresses that belong to another group. All the sending addresses must belong to the same group, and all the destination addresses must belong to the same group too.
+Alephium ist eine sharded Blockchain, und seine Adressen sind auf dem Mainnet in 4 Gruppen unterteilt. Man kann jedoch:
+- ALPH an mehrere Adressen derselben Adressgruppe in einer einzigen Transaktion senden. Alle Zieladressen müssen derselben Gruppe angehören.
+- ALPH von mehreren Adressen derselben Adressgruppe in einer einzigen Transaktion senden. Alle sendenden Adressen müssen derselben Gruppe angehören.
+- ALPH von mehreren Adressen derselben Gruppe an mehrere Adressen einer anderen Gruppe senden. Alle sendenden Adressen müssen derselben Gruppe angehören, und alle Zieladressen müssen ebenfalls derselben Gruppe angehören.
 
-To get the group of an address, you can refer to the web3 SDK function [groupOfAddress(address)](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/utils/utils.ts#L85-L103).
+Um die Gruppe einer Adresse zu erhalten, können Sie auf die Web3 SDK-Funktion [groupOfAddress(address)](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/utils/utils.ts#L85-L103) verweisen.
 
-### Gas computation
+### Gasberechnung
 
-Alephium's transaction fees are determined by the amount of gas allocated and the gas price. A maximum gas amount of 625,000 can be assigned to each transaction.
-The default gas price is set at `1e11` attoALPH per gas unit. When conducting a simple transfer transaction, the gas amount can be computed using the following pseudo code:
+Die Transaktionsgebühren von Alephium werden durch die zugewiesene Gasmenge und den Gaspreis bestimmt. Pro Transaktion können maximal 625.000 Gas zugewiesen werden.
+Der Standard-Gaspreis beträgt `1e11` AttoALPH pro Gas-Einheit. Bei einer einfachen Übertragungstransaktion kann die Gasmenge mit dem folgenden Pseudocode berechnet werden:
 
 ```Typescript
 txInputBaseGas = 2000

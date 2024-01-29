@@ -1,137 +1,137 @@
 ---
 sidebar_position: 20
-title: Pool Mining Guide
-sidebar_label: Pool mining guide
+title: Pool Mining Leitfaden
+sidebar_label: Pool Mining Leitfaden
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# Pool Mining Guide
+# Pool Mining Leitfaden
 
-You will find a complete list of known mining pools [on this link.](#community-pools)
+Sie finden eine vollständige Liste bekannter Mining-Pools [auf diesem Link](#community-pools).
 
-### Build your own Pool
+### Erstellen Sie Ihren eigenen Pool
 
-If you want to host your own mining pool, please checkout [the repo here](https://github.com/alephium/mining-pool/). If you create a pool, feel free to send a Pull Request to add your pool the [list](#community-pools).
+Wenn Sie Ihren eigenen Mining-Pool hosten möchten, schauen Sie sich [dieses Repo hier](https://github.com/alephium/mining-pool/) an. Wenn Sie einen Pool erstellen, können Sie gerne einen Pull Request senden, um Ihren Pool der [Liste](#community-pools) hinzuzufügen.
 
-### Example node configuration for mining pool:
+### Beispiel-Node-Konfiguration für den Mining-Pool:
 
-> This section is for pool operators, not for miners.
+> Dieser Abschnitt richtet sich an Pool-Betreiber, nicht an Miner.
 
 ```
-// more connections for better block propagation
+// mehr Verbindungen für bessere Blockpropagation
 alephium.network.external-address = "<public IP for discovery>:9973"
 alephium.network.max-outbound-connections-per-group = 48
 alephium.network.max-inbound-connections-per-group  = 256
 
 alephium.mining.miner-addresses = [4 miner addresses]
 
-// comment out the following 2 lines if you don't access rest api from external network
+// kommentieren Sie die folgenden 2 Zeilen aus, wenn Sie nicht aus dem externen Netzwerk auf die REST-API zugreifen
 alephium.api.network-interface = "0.0.0.0"
 alephium.api.api-key = "<api key>"
 ```
 
 ## Community Pools
 
-### ⚠️ Disclaimer
+### ⚠️ Haftungsausschluss
 
-This is a non-exhaustive list of mining-pools that are driven by the community. These pools are in no way endorsed by Alephium and Alephium cannot be held responsible for your choice of Pool. While the pools listed here have behaved as expected so far, keep in mind that choosing a pool requires you to do some research regarding the security, reputation and general safety of the pool. A good place to start is to [ask the community on the Discord](https://alephium.org/discord)
+Dies ist eine nicht erschöpfende Liste von Mining-Pools, die von der Community betrieben werden. Diese Pools werden in keiner Weise von Alephium unterstützt, und Alephium kann nicht für Ihre Auswahl des Pool verantwortlich gemacht werden. Obwohl die hier aufgeführten Pools sich bisher wie erwartet verhalten haben, sollten Sie bedenken, dass die Auswahl eines Pools erfordert, dass Sie einige Recherchen zur Sicherheit, Reputation und allgemeinen Sicherheit des Pools durchführen. Ein guter Ausgangspunkt ist, [die Community im Discord zu fragen](https://alephium.org/discord)
 
-### Using pools and how to get support
+### Verwendung von Pools und wie Sie Unterstützung erhalten
 
-We’re happy to see this list of pools grow and diversify. Please give them a try. If one pool grows too big, consider switching to a different pool to enhance decentralization.
+Wir freuen uns, dass diese Liste von Pools wächst und vielfältiger wird. Probieren Sie sie aus. Wenn ein Pool zu groß wird, sollten Sie in Betracht ziehen, zu einem anderen Pool zu wechseln, um die Dezentralisierung zu fördern.
 
-Alephium is still very new and it is important that you keep an eye on updates. This is also valid for the software needed to join the mining pools. Remember that each pool has a thriving community with channels welcoming your support requests and questions. Therefore it is always best to ask your pool-related questions in the concerned pool’s group. You may also find instructions in your own language in one of our [community playlists available here.](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists)
+Alephium ist noch sehr neu, und es ist wichtig, dass Sie Updates im Auge behalten. Dies gilt auch für die Software, die zum Beitritt zu den Mining-Pools erforderlich ist. Beachten Sie, dass jeder Pool eine blühende Community mit Kanälen hat, die Ihre Supportanfragen und Fragen begrüßen. Daher ist es immer am besten, Ihre poolbezogenen Fragen in der entsprechenden Pool-Gruppe zu stellen. Sie finden möglicherweise auch Anleitungen in Ihrer eigenen Sprache in einer unserer [verfügbaren Community-Playlists hier](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists).
 
-### Currently known and active pools
+### Aktuell bekannte und aktive Pools
 
-Below is a list of mining pools in alphabetic order. We encourage you to [send a pull request](https://github.com/alephium/wiki/tree/master/docs/mining/pool-mining-guide.md) to add up-and-coming pools to this wiki and/or to report their disappearance as well as potential misbehavior.
+Hier ist eine Liste von Mining-Pools in alphabetischer Reihenfolge. Wir ermutigen Sie, [einen Pull-Request zu senden](https://github.com/alephium/wiki/tree/master/docs/mining/pool-mining-guide.md) , um aufstrebende Pools zu dieser Wiki hinzuzufügen und/oder ihr Verschwinden sowie mögliches Fehlverhalten zu melden.
 
-You can also check [https://miningpoolstats.stream/alephium](https://miningpoolstats.stream/alephium).
+Sie können auch [https://miningpoolstats.stream/alephium](https://miningpoolstats.stream/alephium) überprüfen.
 
 #### Alephium-pool (Community pool)
 
-- Website: https://alephium-pool.com/
+- Webseite: https://alephium-pool.com/
 - Telegram: https://t.me/alephium_pool
 - Discord: https://discord.gg/ZXYU2NGx
 
 #### ALPH.city
 
-- Website: https://alph.city/
+- Webseite: https://alph.city/
 - Telegram: https://t.me/alphcity
 
 #### ALPH-pool.com
 
-- Website: https://alph-pool.com/
+- Webseite: https://alph-pool.com/
 - Telegram: https://t.me/ALPH_pool_chat
 
 #### Alph2Mine.com
 
-- Website: https://alph2mine.com/
+- Webseite: https://alph2mine.com/
 - Email: alph2mine@gmail.com
 
 #### Coinhunters Pool
 
-- Website: https://alph.coinhunters.space
+- Webseite: https://alph.coinhunters.space
 - Telegram (EN): https://t.me/alph_coinhunters_en
 - Telegram (RU): https://t.me/alph_gravitsapapool_ru
 
 #### e4pool ALPH Pool 
 
-- Website: https://e4pool.com/alph
+- Webseite: https://e4pool.com/alph
 - Telegram: https://t.me/E4piko
 - Support: https://t.me/e4pool_howto
 - Forum: https://forum.e4pool.com/
 
 #### Enigma Pool
 
-- Website: https://enigmapool.com/
+- Webseite: https://enigmapool.com/
 - Discord: https://discord.com/invite/enigmapool
 - Calculator: https://enigmapool.com/tools/calculator
 
 #### Herominers Pool
 
-- Website: https://alephium.herominers.com/
+- Webseite: https://alephium.herominers.com/
 - Discord: https://discord.com/invite/gvWSs84
 - Telegram: https://t.me/HeroMinersPool
 
 #### Metapool (Community pool)
 
-- Website: https://www.metapool.tech
+- Webseite: https://www.metapool.tech
 - Calculator: https://metapool.tech/dashboard#calculator
 - Telegram: https://t.me/metapool1
 - Discord: https://discord.gg/5TTzMDzJ
 
 #### Okminer 
 
-- Website (CN): https://okminer.com
+- Webseite (CN): https://okminer.com
 - Calculator: https://okminer.com/tools
 - Telegram (CN): https://t.me/okminer_CN
 - Telegram (EN): https://t.me/okminer_support
 
 #### p1pool.com
 
-- Website: https://p1pool.com/
+- Webseite: https://p1pool.com/
 - Telegram: https://t.me/p1pool_com
 - Discord: https://discord.gg/U8dh97XHk8
 - Email: info@p1pool.com
 
 #### Soloblocks
 
-- Website: https://soloblocks.org/alph/
+- Webseite: https://soloblocks.org/alph/
 
 #### Solopool.org
 
-- Website: https://alph.solopool.org/
+- Webseite: https://alph.solopool.org/
 - Telegram: https://t.me/solopool_org
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
 
 #### Wooly Pooly
 
-- Website: https://woolypooly.com/en/coin/alph
+- Webseite: https://woolypooly.com/en/coin/alph
 - Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
@@ -164,7 +164,7 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 
 ### Hive OS
 
-- Website: [https://hiveos.farm](https://hiveos.farm)
+- Webseite: [https://hiveos.farm](https://hiveos.farm)
 - Forum: [https://hiveon.com/forum/](https://hiveon.com/forum/)
 - Telegram: [https://t.me/hiveoschat_en](https://t.me/hiveoschat_en)
 - Discord: [https://discord.gg/CVZeZdn](https://discord.gg/CVZeZdn)
@@ -172,7 +172,7 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 ### Rave OS
 
 - Mail support: support@raveos.com
-- Website: [https://raveos.com/](https://raveos.com/)
+- Webseite: [https://raveos.com/](https://raveos.com/)
 - Telegram: [https://t.me/raveossupport](https://t.me/raveossupport)
 - Discord: [https://discord.gg/Dcdadz2](https://discord.gg/Dcdadz2)
 
@@ -180,7 +180,7 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 
 - iOS: [https://apps.apple.com/ru/app/okminer-os/id1494087547](https://apps.apple.com/ru/app/okminer-os/id1494087547)
 - Android: [https://downap.okminer.com/hashapk/okminer.apk](https://downap.okminer.com/hashapk/okminer.apk)
-- Website (CN): https://okminer.com
-- Calculator: https://okminer.com/tools
+- Webseite (CN): https://okminer.com
+- Kalkulator: https://okminer.com/tools
 - Telegram (CN): https://t.me/okminer_CN
 - Telegram (EN): https://t.me/okminer_support
