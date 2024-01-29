@@ -1,17 +1,17 @@
 ---
 sidebar_position: 30
-title: Configure a Mining Wallet
-sidebar_label: Configure a Mining Wallet
+title: Eine Mining Wallet konfigurieren
+sidebar_label: Eine Mining Wallet konfigurieren
 ---
 
-# Configure a Mining Wallet
+# Eine Mining Wallet konfigurieren
 
-A mining wallet is slightly different and needs to have **one address per group**. Currently, Alephium is running 4 groups, meaning it is needed to have 4 addresses. The desktop wallet can generate them easily for you.
+Eine Mining-Wallet ist etwas anders und muss **eine Adresse pro Gruppe** haben. Derzeit verwendet Alephium 4 Gruppen, was bedeutet, dass 4 Adressen benötigt werden. Die Desktop-Wallet kann diese problemlos für dich generieren.
 
-To do this, simply unfold the `Advanced Settings` in the welcome screen at the end of the wallet creation process.
+Um dies zu tun, klappe einfach die `Erweiterten Einstellungen` m Begrüßungsbildschirm am Ende des Wallet-Erstellungsprozesses aus.
 
 <img src={require("./media/mw1.png").default} alt="Prompt to create a new wallet" width="auto" style={{ height: '200px' }} />
 
-Alternatively, you can create additional addresses manually after you log into your wallet by going to the `Addresses` tab, click on the `Advanced operations` icon and choose `Generate one address per group`
+Alternativ kannst du nach dem Einloggen in deine Wallet manuell zusätzliche Adressen erstellen, indem du zum Tab `Adressen` gehst, auf das `Erweiterten Einstellungen`-Symbol klickst und `Eine Adresse pro Gruppe generieren` auswählst.
 
 <img src={require("./media/af4.png").default} alt="Advanced management section" width="auto" style={{ height: '200px' }} />

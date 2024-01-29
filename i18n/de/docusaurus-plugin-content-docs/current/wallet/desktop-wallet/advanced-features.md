@@ -1,66 +1,66 @@
 ---
 sidebar_position: 40
-title: Advanced Features
-sidebar_label: Advanced Features
+title: Erweiterte Funktionen
+sidebar_label: Erweiterte Funktionen
 ---
 
-# Advanced Features
+# Erweiterte Funktionen
 
-## 1. UTXO consolidation
+## 1. UTXO-Konsolidierung
 
 :::info
 
-Due to the nature of UTXO, every time a transaction is made, a couple of new Unspent Transaction Outputs are created, each containing various amounts of ALPH. If these UTXOs aren't consolidated every now and then, a UTXO can reach a point where it becomes so-called "dust". Meaning that if the amount in a UTXO is smaller than the cost of GAS to send the ALPHs it contains, these ALPHs cannot be moved anymore.
+Aufgrund der Natur von UTXO werden bei jeder Transaktion mehrere neue "Unspent Transaction Outputs" (UTXOs) erstellt, die jeweils verschiedene Beträge von ALPH enthalten. Wenn diese UTXOs nicht von Zeit zu Zeit konsolidiert werden, kann ein UTXO den Punkt erreichen, an dem es so genanntes "Staub" wird. Das bedeutet, dass, wenn der Betrag in einem UTXO kleiner ist als die Kosten für GAS, um die enthaltenen ALPH zu senden, diese ALPH nicht mehr bewegt werden können.
 
-To make sure this doesn't happen, the wallet allows you to easily consolidate your UTXOs with the click of a button.
+Um sicherzustellen, dass dies nicht passiert, ermöglicht es das Wallet, deine UTXOs mit einem Klick auf eine Schaltfläche einfach zu konsolidieren.
 
 :::
 
-In the `Addresses` tab, click on the `Advanced operations` icon and choose `Consolidate UTXOs`.
+Im Tab `Addresses` auf das Symbol `Erweiterte Operationen` klicken und `UTXOs konsolidieren` auswählen.
 
 <img src={require("./media/af1.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
 
 <img src={require("./media/af4.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
 
-Select the address from which you want to consolidate the UTXOs and select the destination address (it can be the same address). Click on `Consolidate` and your UTXOs will be consolidated.
+Wähle die Adresse aus, von der aus du die UTXOs konsolidieren möchtest, und wähle die Zieladresse aus (es kann dieselbe Adresse sein). Klicke auf `Konsolidieren` und deine UTXOs werden konsolidiert.
 
 <img src={require("./media/af2.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
 
-## 2. Passphrase (ADVANCED SECURITY FEATURE)
+## 2. Passphrase (ERWEITERTES SICHERHEITSFEATURE)
 
-Introduced in version 1.3.0
+Eingeführt in Version 1.3.0
 
 :::caution
-Please, read the following documentation and this [article](https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59) before deciding to use this feature.
+Bitte lies die folgende Dokumentation und diesen [Artikel](https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59) bevor du dich entscheidest, diese Funktion zu verwenden.
 :::
 
-### 1. Important Takeaways
+### 1. Wichtige Erkenntnisse
 
-- The Passphrase is an advanced security feature that adds an additional word that you choose to your existing Secret Recovery Phrase.
-- Using a Passphrase will cause an entirely new wallet to be created which cannot be accessed via the Secret Recovery Phrase alone.
-- The desktop wallet password is different from the Passphrase. The password is only used on your computer to encrypt and store the Secret Recovery Phrase. The Passphrase is an additional word to that Secret Recovery Phrase and is not stored in the wallet.
-- Apart from adding another layer of security, the Passphrase grants you plausible deniability when under duress.
-- **If you decide to use a Passphrase, it is vital to store it and back it up securely in a different physical location than the Secret Recovery Phrase. You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet. **
+- Die Passphrase ist ein fortgeschrittenes Sicherheitsmerkmal, das ein zusätzliches von dir gewähltes Wort zu deiner vorhandenen Secret Recovery Phrase hinzufügt.
+- Die Verwendung einer Passphrase führt dazu, dass ein vollständig neues Wallet erstellt wird, auf das nicht allein über die Secret Recovery Phrase zugegriffen werden kann.
+- Das Desktop Wallet-Passwort unterscheidet sich von der Passphrase. Das Passwort wird nur auf deinem Computer verwendet, um die Secret Recovery Phrase zu verschlüsseln und zu speichern. Die Passphrase ist ein zusätzliches Wort zu dieser Secret Recovery Phrase und wird nicht im Wallet gespeichert.
+- Neben der Erhöhung der Sicherheit gewährt die Passphrase dir plausible Abstreitbarkeit bei Zwangslage.
+- **Wenn du dich entscheidest, eine Passphrase zu verwenden, ist es entscheidend, diese sicher an einem anderen physischen Ort als der Secret Recovery Phrase zu speichern und zu sichern. Du musst dich an deine Passphrase perfekt erinnern. Eine Änderung eines einzelnen Zeichens (selbst von Klein- zu Großbuchstaben) führt zur Generierung eines völlig neuen Wallets. **
 
-Assuming you have created a wallet using the desktop wallet app, you have a list of 24 words referred to as your Secret Recovery Phrase. This phrase can be used to restore your wallet and access your funds. If this 24-word Secret Recovery Phrase gets stolen, the attacker will be able to steal your funds. To enhance the security of our desktop wallet users and to prevent loss of funds due to theft of the 24-word Secret Recovery Phrase, we implemented the [BIP39 passphrase](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed) feature.
+Angenommen, du hast eine Wallet mit der Desktop Wallet-App erstellt, du hast eine Liste von 24 Wörtern, die als deine Secret Recovery Phrase bezeichnet werden. Diese Phrase kann verwendet werden, um deine Wallet wiederherzustellen und auf deine Mittel zuzugreifen. Wenn diese 24-Wort Secret Recovery Phrase gestohlen wird, kann der Angreifer deine Mittel stehlen. Um die Sicherheit der Benutzer unserer Desktop-Wallet zu erhöhen und den Verlust von Mitteln aufgrund des Diebstahls der 24-Wort Secret Recovery Phrase zu verhindern, haben wir die [BIP39 passphrase](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed) Funktion implementiert.
 
-The Passphrase is an additional optional 25th word that you are free to choose for yourself. It can be composed of any lower/upper-case character, number, and/or signs and be as long as you want.
+Die Passphrase ist ein zusätzliches optionales 25. Wort, das du selbst wählen kannst. Es kann aus beliebigen Klein-/Großbuchstaben, Zahlen und/oder Zeichen bestehen und so lang sein, wie du möchtest.
 
-### 2. How to use a passphrase
+### 2. Wie man eine Passphrase verwendet
 
 :::warning
 
-It is important to remember that any unique Passphrase will generate and give access to a completely new wallet. It is vital to store and back up the Passphrase securely in a different physical location than the Secret Recovery Phrase. **You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet.**
+Es ist wichtig zu beachten, dass jede einzigartige Passphrase ein vollständig neues Wallet generieren und darauf zugreifen wird. Es ist entscheidend, die Passphrase sicher an einem anderen physischen Ort als der Secret Recovery Phrase zu speichern und zu sichern.  **Du musst dich perfekt an deine Passphrase erinnern. Eine Änderung eines einzelnen Zeichens (selbst von Klein- zu Großbuchstaben) führt zur Generierung eines völlig neuen Wallets.**
 
 :::
 
-To use a Passphrase, simply tick the `Use optional passphrase (advanced)` and enter the optional Passphrase of your choice.
+Um eine Passphrase zu verwenden, aktiviere einfach die Option `Use optional passphrase (advanced)` und gib die optionale Passphrase deiner Wahl ein.
 
 <img src={require("./media/af5.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
 
-### 3. Limitations of Passphrase-enabled wallets
+### 3. Einschränkungen von Wallets mit Passphrase
 
-1. You cannot (yet) use colored labels for your generated addresses.
-2. Any additionally generated addresses will need to be re-generated after every login.
+1. Du kannst (noch) keine farbigen Etiketten für deine generierten Adressen verwenden.
+2. Alle zusätzlich generierten Adressen müssen nach jedem Login erneut generiert werden.
 
-This may change in the future.
+Dies könnte sich in Zukunft ändern.

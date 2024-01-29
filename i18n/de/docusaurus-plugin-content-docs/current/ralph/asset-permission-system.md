@@ -8,51 +8,29 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-The Asset Permission System (APS) is one of Ralph's unique
-features. It explicitly stipulates the flow of assets at code level,
-giving confidence to developers and users of the smart contracts that
-all asset transfers happen as intended. Together with the UTXOs model,
-it also offers a simpler and more secure user experience by
-eliminating the token approval risks in systems such as EVM.
+Das Asset Permission System (APS) ist eine der einzigartigen Funktionen von Ralph. Es legt den Fluss von Vermögenswerten auf Code-Ebene explizit fest und gibt Entwicklern und Benutzern von Smart Contracts die Gewissheit, dass alle Vermögensübertragungen wie beabsichtigt erfolgen. Zusammen mit dem UTXO-Modell bietet es auch eine einfachere und sicherere Benutzererfahrung, indem es Risiken bei der Token-Genehmigung in Systemen wie EVM eliminiert.
 
-Alephium uses the
-[sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
-model where assets, including the native ALPH and other tokens are
-managed by UTXOs while smart contracts and their states are managed
-using account-based model.
+Alephium verwendet das
+[sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)-Modell, bei dem Vermögenswerte, einschließlich des nativen ALPH und anderer Token, durch UTXOs verwaltet werden, während Smart Contracts und ihre Zustände im Account-basierten Modell verwaltet werden.
 
-This has a few implications:
+Dies hat einige Auswirkungen:
 
-1. Simple asset transfers among users only require UTXOs, which is
-   battle tested for its security in managing assets. Here no smart
-   contracts are involved.
-2. When smart contracts need to transfer assets on behalf of the
-   owners, no separate approval transactions are required. The
-   approval is implicit in the UTXO model: if the input that contains
-   a particular token is authorized to be spent in the transaction,
-   then the owner has already given consent to the usage of that token
-   in the context of this transaction, meaning that the smart
-   contracts that get invoked in the same transaction can
-   potentially transfer the token.
+1. Einfache Vermögensübertragungen zwischen Benutzern erfordern nur UTXOs, die sich in der Sicherheit bei der Verwaltung von Vermögenswerten bewährt haben. Hier sind keine Smart Contracts beteiligt.
+2. Wenn Smart Contracts Vermögenswerte im Auftrag der Besitzer übertragen müssen, sind keine separaten Genehmigungstransaktionen erforderlich. Die Genehmigung ist im UTXO-Modell implizit: Wenn der Input, der einen bestimmten Token enthält, in der Transaktion autorisiert ist, ausgegeben zu werden, hat der Besitzer bereits seine Zustimmung zur Verwendung dieses Tokens im Kontext dieser Transaktion erteilt. Dies bedeutet, dass die Smart Contracts, die in derselben Transaktion aufgerufen werden, potenziell den Token übertragen können.
 
-Now the question is: in the second situation, how can we make sure
-that the assets implicitly approved in the transaction using the UTXO
-model can be handled securely by the smart contracts? The answer is
-Ralph's Asset Permission System (APS).
+Nun stellt sich die Frage: In der zweiten Situation, wie können wir sicherstellen, dass die implizit in der Transaktion über das UTXO-Modell genehmigten Vermögenswerte sicher von den Smart Contracts verarbeitet werden können? Die Antwort lautet: Ralphs Asset Permission System (APS).
 
-## Flow of Assets
+## Fluss von Vermögenswerten
 
-To interact with the smart contracts in Alephium, a transaction needs
-to execute a `TxScript`. In the following example transaction, there
-are two inputs, one fixed outputs and a `TxScript`:
+Um mit den Smart Contracts in Alephium zu interagieren, muss eine Transaktion ein `TxScript` ausführen. Im folgenden Beispiel für eine Transaktion gibt es zwei Inputs, einen fixen Output und ein `TxScript`:
 
 ```
                   ----------------
                   |              |
                   |              |
-   1 Token A      |              |   1 ALPH (fixed output)
+   1 Token A      |              |   1 ALPH (fester Output)
 ================> |              | ========================>
-   6.1 ALPHs      |  <TxScript>  |   ??? (generated output)
+   6.1 ALPHs      |  <TxScript>  |   ??? (generierter Output)
 ================> |              | ========================>
                   |              | 
                   |              | 
@@ -60,16 +38,12 @@ are two inputs, one fixed outputs and a `TxScript`:
                   ----------------
 ```
 
-Two things are worth noting here:
+Hier sind zwei Dinge zu beachten:
 
-1. Even though there is only one fixed output, there will be more
-   outputs generated for this transaction. The generated outputs
-   depend on the result of the `TxScript` execution.
-2. The total assets available for `TxScript` (including the smart
-   contracts it invokes) are `5.1` ALPHs and `1` Token A, because we
-   need to subtract the `1` ALPH in fixed output.
+1. Obwohl es nur einen festen Output gibt, werden für diese Transaktion mehrere Outputs generiert. Die generierten Outputs hängen vom Ergebnis der Ausführung des `TxScript` ab.
+2. Die insgesamt verfügbaren Vermögenswerte für `TxScript` (einschließlich der von ihm aufgerufenen Smart Contracts) betragen `5.1` ALPHs und `1` Token A, da das `1` ALPH im festen Output abgezogen werden muss.
 
-Let's say the `TxScript` looks something like this:
+Angenommen, das `TxScript` sieht ungefähr so aus:
 
 ```rust
 TxScript ListNFT(
@@ -85,34 +59,26 @@ TxScript ListNFT(
 }
 ```
 
-As you may have guessed, Token A is an NFT token and the purpose of
-the above `TxScript` is to list it through a marketplace smart contract.
+Wie Sie vielleicht vermutet haben, handelt es sich bei Token A um einen NFT-Token, und das obige `TxScript` hat zum Ziel, ihn über einen Marktplatz-Smart Contract zu listen.
 
-The following line of code is of particular interest:
+Die folgende Codezeile ist besonders interessant:
 
 ```rust
 marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
 ```
 
-The code inside of the curly braces explicitly approves that
-`approvedAlphAmount` ALPH and `1` token A are allowed to be spent in
-the `marketPlace.listNFT` function, even though the total amount of
-assets available for `TxScript` are `5.1` and `1` for ALPH and token A
-respectively.
+Der Code innerhalb der geschweiften Klammern genehmigt explizit, dass 
+`approvedAlphAmount` ALPH und `1` Token A in der Funktion
+`marketPlace.listNFT` ausgegeben werden dürfen, obwohl die Gesamtvermögenswerte für `TxScript` `5.1` und `1` für ALPH bzw. Token A betragen.
 
-The following scenarios could happen:
+Es könnten folgende Szenarien eintreten:
 
-1. If `approvedAlphAmount` turns out to be more than `5.1` ALPH, then
-   the transaction fails with `NotEnoughBalance` error.
-2. If `approvedAlphAmount` is less than `5.1` ALPH, say `1.1` ALPH,
-   then maximum amount of assets that `marketPlace.listNFT` can handle
-   are `1.1` ALPHs and `1` token A. `marketPlace.listNFT` does not
-   have access to the rest of the `4` ALPHs.
-3. If `marketPlace.listNFT` has not spent the entirety of the approved
-   assets, the remaining assets will be returned back to their owner
-   when `marketPlace.listNFT` returns.
+1. Wenn sich herausstellt, dass `approvedAlphAmount` mehr als `5.1` ALPH beträgt, schlägt die Transaktion mit einem Fehler `NotEnoughBalance` fehl.
+2. Wenn `approvedAlphAmount` weniger als `5.1` ALPH ist, sagen wir `1.1` ALPH,
+   dann beträgt die maximal mögliche Menge an Vermögenswerten, die `marketPlace.listNFT` verarbeiten kann,  `1.1` ALPHs und `1` Token A. `marketPlace.listNFT` hat keinen Zugriff auf die restlichen `4` ALPHs.
+3. Wenn `marketPlace.listNFT` nicht die gesamten genehmigten Vermögenswerte ausgegeben hat, werden die verbleibenden Vermögenswerte an ihren Besitzer zurückgegeben, wenn `marketPlace.listNFT` zurückkehrt.
 
-Let's look a bit closer to the `marketPlace.listNFT` function:
+Schauen wir uns die Funktion `marketPlace.listNFT` etwas genauer an:
 
 ```rust
 Contract NFTMarketPlace(
@@ -148,45 +114,35 @@ Contract NFTMarketPlace(
 }
 ```
 
-First thing to notice is the annotation for the `listNFT` method:
+Das erste, was auffällt, ist die Annotation für die Methode `listNFT`:
 
 ```rust
 @using(preapprovedAssets = true, assetsInContract = true, updateFields = false)
 ```
 
-`preapprovedAssets = true` tells VM that the `listNFT` method intends
-to use some assets and the caller is supposed to approve a set of
-necessary assets or else a compilation error will be
-reported. Compilation will also fail if the caller tries to approve
-assets for a method where `preapprovedAssets = false`.
+`preapprovedAssets = true` teilt der VM mit, dass die Methode `listNFT` beabsichtigt, einige Vermögenswerte zu verwenden, und der Aufrufer beabsichtigt, einen Satz erforderlicher Vermögenswerte zu genehmigen, oder andernfalls wird ein Kompilierfehler gemeldet. Die Kompilierung schlägt auch fehl, wenn der Aufrufer versucht, Vermögenswerte für eine Methode zu genehmigen, bei der `preapprovedAssets = false`.
 
-`assetsInContract = true` indicates to the VM that the `listNFT`
-method wants to update the asset of the `NFTMarketPlace`
-contract. Compiler will make sure that the `listNFT` method indeed
-does that or else an compilation error will be reported. In this case,
-`listNFT` updates the asset of the `NFTMarketPlace` contract by
-transferring the `listingFee` to it:
+`assetsInContract = true` gibt der VM an, dass die Methode `listNFT`
+beabsichtigt, das Vermögen des Vertrags `NFTMarketPlace` zu aktualisieren. 
+Der Compiler stellt sicher, dass die Methode `listNFT` dies tatsächlich tut, 
+oder es wird ein Kompilierfehler gemeldet. In diesem Fall aktualisiert
+`listNFT` das Vermögen des Vertrags `NFTMarketPlace` indem es die `listingFee` darauf überträgt:
 
 ```rust
 // Charge the listing fee
 transferTokenToSelf!(tokenOwner, ALPH, listingFee)
 ```
 
-`updateFields` annotation is out of scope for this documentation.
+Die Annotation `updateFields` liegt außerhalb des Rahmens dieser Dokumentation.
 
-`marketPlace.listNFT` method is invoked by `TxScript` `ListNFT`, as
-shown below:
+Die Methode `marketPlace.listNFT` wird vom `TxScript` `ListNFT`, ufgerufen, 
+wie unten gezeigt:
 
 ```rust
 marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
 ```
 
-When `marketPlace.listNFT` is executed by the VM, it is authorized to
-spend `1.1` ALPH and `1` token from the caller of the script. If
-`marketPlace.listNFT` in turn calls other methods, it can approve a
-subset of these approved assets to that method as well. For example,
-in `marketPlace.listNFT` we have the following code to create a NFT
-listing:
+Wenn `marketPlace.listNFT` von der VM ausgeführt wird, ist sie berechtigt, `1.1` ALPH und `1` Token vom Aufrufer des Skripts auszugeben. Wenn `marketPlace.listNFT` wiederum andere Methoden aufruft, kann es auch einem Teil dieser genehmigten Vermögenswerte für diese Methode zustimmen. Beispielsweise haben wir in `marketPlace.listNFT` den folgenden Code, um eine NFT-Listung zu erstellen:
 
 ```rust
 let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, tokenId: 1}(
@@ -194,45 +150,37 @@ let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, to
 )
 ```
 
-As we can see, `marketPlace.listNFT` method approves `1` ALPH and `1`
-Token A to the `copyCreateSubContract!` built-in function from its own
-pool of approved assets (`1.1` ALPH and `1` Token A), before it sends
-the `listingFee` to the `NFTMarketPlace` contract itself. The flow of
-assets is illustrated below:
+Wie wir sehen können, genehmigt die Methode `marketPlace.listNFT`  `1` ALPH und `1`
+Token A für die eingebaute Funktion `copyCreateSubContract!` aus ihrem eigenen Pool genehmigter Vermögenswerte (`1.1` ALPH and `1` Token A), bevor sie die `listingFee` dem Vertrag `NFTMarketPlace` elbst zusendet. Der Fluss von Vermögenswerten ist unten dargestellt:
 
 ```
-  Caller of the TxScript
+  Aufrufer des TxScript
   (6.1 ALPH; 1 Token A)
            ||
            ||
-           || Subtract assets in
-           || Fixed outputs
+           || Vermögenswerte in den
+           || festen Outputs
            ||
-           ||                    Approves                         Approves
+           ||                    Genehmigungen                         Genehmigungen
            \/               (1.1 ALPH; 1 TokenA)              (1 ALPH; 1 TokenA)
   (5.1 ALPH; 1 Token A)  ========================> listNFT ========================> copyCreateSubContract!
                                                      ||
                                                      ||
-                                                     || To self
+                                                     || An sich selbst
                                                      ||
                                                      \/
                                                   (0.1 ALPH)
 ```
 
-As we can imagine, if we have a bigger tree of method calls, the
-approved fund will cascade from the root of the tree all the way to
-the leaves like water. Asset Permission System makes this flow of the
-fund throughout the method calls explicit and enforce constraints to
-each of the methods as to what tokens and how much of them can be
-spent.
+Wie wir uns vorstellen können, wenn wir einen größeren Baum von Methodenaufrufen haben, wird der genehmigte Betrag von der Wurzel des Baums bis zu den Blättern wie Wasser kaskadieren. Das Asset Permission System macht diesen Fluss des Vermögens über die Methodenaufrufe hinweg explizit und setzt Einschränkungen für jede der Methoden fest, welche Token und wie viel von ihnen ausgegeben werden können.
 
-Going back to the transaction, after the execution of the `TxScript`
-the generated outputs should look something like this:
+Zurück zur Transaktion sollten die generierten Ausgänge nach der Ausführung des  `TxScript`
+ungefähr so aussehen:
 
 ```
                         ----------------
                         |              |
-                        |              |   1 ALPH (fixed output)
+                        |              |   1 ALPH (fester Output)
   1 Token A             |              | =========================================>
 ======================> |              |   1 ALPH, 1 Token A (NFTListing contract)
   6.1 ALPHs             |  <TxScript>  | =========================================>
@@ -244,11 +192,6 @@ the generated outputs should look something like this:
                         ----------------
 ```
 
-## Summary
+## Zusammenfassung
 
-Asset Permission System (APS) dictates the flow of assets in smart
-contracts. The explicit approval of the assets for each method
-invocation ensures that the methods can never spend more than what
-they are authorized for. Together with the UTXO model, it offers an
-asset management solution that is simpler, more reliable and more
-secure.
+Das Asset Permission System (APS) gibt den Fluss von Vermögenswerten in Smart Contracts vor. Die explizite Genehmigung der Vermögenswerte für jeden Methodenaufruf stellt sicher, dass die Methoden niemals mehr ausgeben können, als ihnen autorisiert wurde. Zusammen mit dem UTXO-Modell bietet es eine Vermögensverwaltungslösung, die einfacher, zuverlässiger und sicherer ist.
