@@ -9,7 +9,7 @@ sidebar_label: Erste Schritte
 ## 1. Installation
 
 1. Lade die ausführbare Datei gemäß deinem Setup (macOS, Windows, Linux) von der [neuesten Veröffentlichung](https://github.com/alephium/desktop-wallet/releases/latest) herunter und doppelklicke darauf, um die Anwendung zu installieren.
-2. Auf Linux und Windows doppelklicke auf die Anwendung, um die Desktop-Wallet zu starten. Auf macOS musst du zum Anwendungsordner gehen, mit der rechten Maustaste auf die Alephium-App klicken und dann auf _Open_ (doppelklicken funktioniert nicht, es sei denn, du erlaubst es in den Systemeinstellungen).
+2. Auf Linux und Windows doppelklicke auf die Anwendung, um die Desktop-Wallet zu starten. Auf macOS musst du zum Anwendungsordner navigieren, mit der rechten Maustaste auf die Alephium-App klicken und dann  _Open_ auswählen (doppelklicken funktioniert nicht, es sei denn, du erlaubst es in den Systemeinstellungen).
 
 ## 2. Wallet erstellen
 
@@ -70,7 +70,7 @@ Alle vorhandenen Adressen werden in einer Liste im Tab `Adressen` angezeigt, mit
 
 <img src={require("./media/gs10.png").default} alt="Address page" width="auto" style={{ height: '200px' }} />
 
-Durch Klicken auf eine der `+ New address`-Schaltflächen gelangst du zur Seite `Neue Adresse`, auf der du die neue Adresse erstellen und beschriften kannst. Standardmäßig werden Adressen in einer zufälligen Gruppe generiert. Du kannst manuell eine bestimmte Gruppe unter dem Abschnitt `Erweiterte Einstellungen` auswählen.
+Durch Klicken auf eine der `+ Neue Addresse`-Schaltflächen gelangst du zur Seite `Neue Adresse`, auf der du die neue Adresse erstellen und beschriften kannst. Standardmäßig werden Adressen in einer zufälligen Gruppe generiert. Du kannst manuell eine bestimmte Gruppe unter dem Abschnitt `Erweiterte Einstellungen` auswählen.
 
 <img src={require("./media/gs11.png").default} alt="Prompt to create a new address" width="auto" style={{ height: '200px' }} />
 

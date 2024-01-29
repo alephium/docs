@@ -8,4 +8,4 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-Coming soon
+In Kürze

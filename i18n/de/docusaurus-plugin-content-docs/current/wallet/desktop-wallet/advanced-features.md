@@ -10,13 +10,13 @@ sidebar_label: Erweiterte Funktionen
 
 :::info
 
-Aufgrund der Natur von UTXO werden bei jeder Transaktion mehrere neue "Unspent Transaction Outputs" (UTXOs) erstellt, die jeweils verschiedene Beträge von ALPH enthalten. Wenn diese UTXOs nicht von Zeit zu Zeit konsolidiert werden, kann ein UTXO den Punkt erreichen, an dem es so genanntes "Staub" wird. Das bedeutet, dass, wenn der Betrag in einem UTXO kleiner ist als die Kosten für GAS, um die enthaltenen ALPH zu senden, diese ALPH nicht mehr bewegt werden können.
+Aufgrund der Natur von UTXO werden bei jeder Transaktion mehrere neue "Unspent Transaction Outputs" (UTXOs) erstellt, die jeweils verschiedene Beträge von ALPH enthalten. Wenn diese UTXOs nicht von Zeit zu Zeit konsolidiert werden, kann ein UTXO den Punkt erreichen, an dem es so genanntes "Staub (Dust)" wird. Das bedeutet, dass, wenn der Betrag in einem UTXO kleiner ist als die Kosten für GAS, um die enthaltenen ALPH zu senden, diese ALPH nicht mehr bewegt werden können.
 
 Um sicherzustellen, dass dies nicht passiert, ermöglicht es das Wallet, deine UTXOs mit einem Klick auf eine Schaltfläche einfach zu konsolidieren.
 
 :::
 
-Im Tab `Addresses` auf das Symbol `Erweiterte Operationen` klicken und `UTXOs konsolidieren` auswählen.
+Im Tab `Adressen` auf das Symbol `Erweiterte Operationen` klicken und `UTXOs konsolidieren` auswählen.
 
 <img src={require("./media/af1.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
 
@@ -42,7 +42,7 @@ Bitte lies die folgende Dokumentation und diesen [Artikel](https://medium.com/@a
 - Neben der Erhöhung der Sicherheit gewährt die Passphrase dir plausible Abstreitbarkeit bei Zwangslage.
 - **Wenn du dich entscheidest, eine Passphrase zu verwenden, ist es entscheidend, diese sicher an einem anderen physischen Ort als der Secret Recovery Phrase zu speichern und zu sichern. Du musst dich an deine Passphrase perfekt erinnern. Eine Änderung eines einzelnen Zeichens (selbst von Klein- zu Großbuchstaben) führt zur Generierung eines völlig neuen Wallets. **
 
-Angenommen, du hast eine Wallet mit der Desktop Wallet-App erstellt, du hast eine Liste von 24 Wörtern, die als deine Secret Recovery Phrase bezeichnet werden. Diese Phrase kann verwendet werden, um deine Wallet wiederherzustellen und auf deine Mittel zuzugreifen. Wenn diese 24-Wort Secret Recovery Phrase gestohlen wird, kann der Angreifer deine Mittel stehlen. Um die Sicherheit der Benutzer unserer Desktop-Wallet zu erhöhen und den Verlust von Mitteln aufgrund des Diebstahls der 24-Wort Secret Recovery Phrase zu verhindern, haben wir die [BIP39 passphrase](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed) Funktion implementiert.
+Angenommen, du hast eine Wallet mit der Desktop Wallet-App erstellt, du hast eine Liste von 24 Wörtern, die als deine Secret Recovery Phrase bezeichnet werden. Diese Phrase kann verwendet werden, um deine Wallet wiederherzustellen und auf deine Mittel zuzugreifen. Wenn diese 24-Wort Secret Recovery Phrase gestohlen wird, kann der Angreifer deine Mittel stehlen. Um die Sicherheit der Benutzer unserer Desktop-Wallet zu erhöhen und den Verlust von Mitteln aufgrund des Diebstahls der 24-Wort Secret Recovery Phrase zu verhindern, haben wir die [BIP39 Passphrase](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed) Funktion implementiert.
 
 Die Passphrase ist ein zusätzliches optionales 25. Wort, das du selbst wählen kannst. Es kann aus beliebigen Klein-/Großbuchstaben, Zahlen und/oder Zeichen bestehen und so lang sein, wie du möchtest.
 
@@ -54,7 +54,7 @@ Es ist wichtig zu beachten, dass jede einzigartige Passphrase ein vollständig n
 
 :::
 
-Um eine Passphrase zu verwenden, aktiviere einfach die Option `Use optional passphrase (advanced)` und gib die optionale Passphrase deiner Wahl ein.
+Um eine Passphrase zu verwenden, aktiviere einfach die Option `optionale Passphrase verwenden (Fortgeschritten)` und gib die optionale Passphrase deiner Wahl ein.
 
 <img src={require("./media/af5.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
 

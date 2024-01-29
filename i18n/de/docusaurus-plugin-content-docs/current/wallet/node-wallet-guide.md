@@ -8,11 +8,12 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-The wallet API can be called using our Swagger UI at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) or by using `curl`. Make sure that your full node is running so you could access the Swagger UI.
+Die Wallet-API kann über unsere Swagger UI unter [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs)  oder durch Verwendung von `curl` aufgerufen werden. Stellen Sie sicher, dass Ihr Full Node ausgeführt wird, damit Sie auf die 
+Swagger UI zugreifen können.
 
-## Create a new wallet
+## Erstellen Sie eine neue Wallet
 
-You can create a new wallet by doing a POST with the following data on `/wallets`.
+Sie können eine neue Wallet erstellen, indem Sie eine POST-Anfrage mit den folgenden Daten an `/wallets` senden.
 
 ```json
 {
@@ -21,7 +22,7 @@ You can create a new wallet by doing a POST with the following data on `/wallets
 }
 ```
 
-The server must response successfully giving you our new wallet mnemonic.
+Der Server muss erfolgreich antworten und Ihnen Ihre neue Wallet-Mnemonic geben.
 
 ```json
 {
@@ -30,7 +31,7 @@ The server must response successfully giving you our new wallet mnemonic.
 }
 ```
 
-Fetch your new wallet address by `GET /wallets/{wallet_name}/addresses`
+Rufen Sie Ihre neue Wallet-Adresse mit `GET /wallets/{wallet_name}/addresses` ab.
 
 ```json
 {
@@ -39,7 +40,7 @@ Fetch your new wallet address by `GET /wallets/{wallet_name}/addresses`
 }
 ```
 
-If you already created a wallet once but it got deleted or you don't remember your password, you can restore your wallet with your `mnemonic` using:
+Wenn Sie bereits einmal eine Wallet erstellt haben, diese jedoch gelöscht wurde oder Sie Ihr Passwort vergessen haben, können Sie Ihre Wallet mit Ihrer `mnemonic` wiederherstellen, indem Sie:
 
 ```
 PUT /wallets
@@ -50,9 +51,9 @@ PUT /wallets
 }
 ```
 
-## Lock/Unlock
+## Sperren/Entsperren
 
-You wallet will automatically be locked after some time, you'll need to unlock it if you want to use it:
+Ihre Wallet wird automatisch nach einiger Zeit gesperrt. Sie müssen sie entsperren, wenn Sie sie verwenden möchten:
 
 ```
 POST /wallets/{wallet_name}/unlock
@@ -61,16 +62,16 @@ POST /wallets/{wallet_name}/unlock
 }
 ```
 
-You can also manually lock it:
+Sie können sie auch manuell sperren:
 
 ```
 POST /wallets/{wallet_name}/lock
 ```
 
-## Query for balance
+## Abfrage des Kontostands
 
-You can check the current balance with `GET /wallets/{wallet_name}/balances`
-response:
+Sie können den aktuellen Kontostand mit `GET /wallets/{wallet_name}/balances`
+überprüfen.
 
 ```json
 {
@@ -84,9 +85,9 @@ response:
 }
 ```
 
-## Transfering funds
+## Funds übertragen
 
-You can submit a transaction from a wallet to an address by doing:
+Sie können eine Transaktion von einer Wallet zu einer Adresse senden, indem Sie:
 
 ```
 POST /wallets/{wallet_name}/transfer
@@ -98,7 +99,7 @@ POST /wallets/{wallet_name}/transfer
 }
 ```
 
-The server must response succussfully with the transaction id and the group information.
+Der Server muss erfolgreich mit der Transaktions-ID und den Gruppeninformationen antworten.
 
 ```json
 {

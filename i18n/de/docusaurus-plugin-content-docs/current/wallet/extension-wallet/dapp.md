@@ -1,29 +1,26 @@
 ---
 sidebar_position: 40
-title: Extension Wallet for dApps
-sidebar_label: dApp integration
+title: Extension-Wallet für DApps
+sidebar_label: Integration von DApps
 ---
 
-The Alephium extension wallet injects a global object
-`window.alephiumProviders.alephium` into the dApps that the user
-interacts with. dApps can use this object to authenticate the user,
-request users account and communicate with the Alephium blockchain
-such as fetching user balance, contract state and submitting
-transactions, etc.
+Die Alephium Extension Wallet fügt ein globales Objekt 
+`window.alephiumProviders.alephium` in die dApps ein, mit 
+denen der Benutzer interagiert. DApps können dieses Objekt 
+verwenden, um den Benutzer zu authentifizieren, Benutzerkonten 
+anzufordern und mit der Alephium-Blockchain zu kommunizieren, 
+um beispielsweise das Benutzerkonto abzurufen, den Vertragsstatus 
+zu überprüfen und Transaktionen zu übermitteln.
 
-### Basic Setup
+### Grundlegende Einrichtung
 
-To detect the `window.alephiumProviders.alephium` object, we recommand
-to use the
-[@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
-package.
-
+Um das Objekt `window.alephiumProviders.alephium` zu erkennen, empfehlen wir die Verwendung des Pakets
+[@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet).
 ```
 npm install --save @alephium/get-extension-wallet
 ```
 
-The following code shows how to connect to the extension wallet using
-pure typescript:
+Der folgende Code zeigt, wie man sich mit dem Erweiterungswallet über reinen TypeScript verbindet:
 
 ```ts
 import { getDefaultAlephiumWallet } from "@alephium/get-extension-wallet"
@@ -46,26 +43,26 @@ async function tryConnect() {
 }
 ```
 
-Users will be prompted to connect to the current dApp when
-`windowAlephium?.enable()` method is called:
+Benutzer werden aufgefordert, sich mit der aktuellen dApp zu verbinden, wenn die Methode
+`windowAlephium?.enable()` aufgerufen wird.
 
 <img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="250" />
 
-After user clicks the `Connect` button, dApp is connected with users
-extension wallet.
+Nachdem der Benutzer auf die Schaltfläche `Connect` geklickt hat, ist die dApp mit dem 
+Extension Wallet des Benutzers verbunden.
 
 ### Web3 React
 
-For dApps built with react,
+Für mit React erstellte dApps bietet 
 [@alephium/web3-react](https://www.npmjs.com/package/@alephium/web3-react)
-offers an easier way to authenticate with dApps using wallets,
-including extension wallet.
+eine einfachere Möglichkeit zur Authentifizierung von dApps mit Wallets, 
+einschließlich der Extension Wallet.
 
 ```
 npm install --save @alephium/web3-react
 ```
 
-A minimal example is shown below:
+Ein minimales Beispiel sieht wie folgt aus:
 
 ```typescript
 const App = () => {
@@ -77,25 +74,25 @@ const App = () => {
   );
 ```
 
-This will place a button in your dApp with the `retro` built-in
-theme. Once user clicks the button, a pop-up window will show up to
-ask user to select a wallet:
+Dieser Code platziert eine Schaltfläche in Ihrer dApp mit dem integrierten `Retro`-Design. 
+Nachdem der Benutzer auf die Schaltfläche geklickt hat, wird ein Popup-Fenster angezeigt, 
+um den Benutzer zur Auswahl einer Wallet aufzufordern.
 
 <img src={require("./media/connect-dapp-2.png").default} alt="Connect dApp Web3 React" />
 
-If user selects `Extension Wallet`, user will again be prompted to
-connect to the current dApp. After user clicks the `Connect` button,
-dApp is connected with users extension wallet.
+Wenn der Benutzer die `Extension Wallet` auswählt, wird er erneut aufgefordert, sich mit der 
+aktuellen dApp zu verbinden. Nachdem der Benutzer auf die Schaltfläche `Connect` geklickt 
+hat, ist die dApp mit der Extension Wallet des Benutzers verbunden.
 
-Please refer to the
-[nextjs-template](https://github.com/alephium/nextjs-template) repo
-for a working and more complete example.
+Bitte werfen Sie einen Blick auf das
+[NextJS-Template](https://github.com/alephium/nextjs-template) Repository 
+für ein funktionierendes und umfassenderes Beispiel.
 
-### Sign Transactions
+### Transaktionen signieren
 
-`windowAlephium` object implements the
+Das Objekt `windowAlephium` implementiert den
 [InteractiveSignerProvider](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/signer/signer.ts#L80),
-which exposes the following methods for transaction signing:
+ der die folgenden Methoden für die Signatur von Transaktionen bereitstellt:
 
 ```ts
 abstract signAndSubmitTransferTx(params: SignTransferTxParams): Promise<SignTransferTxResult>
@@ -108,15 +105,13 @@ abstract signUnsignedTx(params: SignUnsignedTxParams): Promise<SignUnsignedTxRes
 abstract signMessage(params: SignMessageParams): Promise<SignMessageResult>
 ```
 
-When any of these method is executed, extension wallet will provide
-neccessary information depending on the type of the transaction and
-prompt user for signature. 
+Wenn eine dieser Methoden ausgeführt wird, stellt das Erweiterungswallet die erforderlichen Informationen abhängig vom Typ der Transaktion bereit und fordert den Benutzer zur Signatur auf.
 
-The following is an example of a transaction for token transfer: user
-is transferring `2` `TokenFaucet` token from `Salary` account to
-`Saving` account.
+Hier ein Beispiel für eine Transaktion zum Übertragen von Token: Der Benutzer überträgt
+ `2` `Token Faucet`-Token vom Konto `Gehalt` auf das Konto
+`Sparen`.
 
 <img src={require("./media/transaction-signing-transfer.png").default} alt="Transaction Signing Transfer" width="250" />
 
-After user clicks the `Sign` button, the transction will be signed and
-submitted to the Alephium blockchain by the extension wallet.
+Nachdem der Benutzer auf die Schaltfläche `Sign` (Signieren) geklickt hat, wird die Transaktion von der 
+Extension Wallet signiert und an die Alephium-Blockchain übermittelt.

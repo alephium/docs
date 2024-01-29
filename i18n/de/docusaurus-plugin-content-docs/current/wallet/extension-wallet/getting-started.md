@@ -1,35 +1,34 @@
 ---
 sidebar_position: 20
-title: Getting Started
-sidebar_label: Getting started
+title: Erste Schritte
+sidebar_label: Erste Schritte
 ---
 
 ### Installation
 
-Alephium extension wallet is available for both
+Die Alephium Extension Wallet ist für beide Browser
 [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
-and
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/).
+und
+[Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/) verfügbar.
 
-### Create Wallet
+### Wallet erstellen
 
 <img src={require("./media/new-wallet-1.png").default} alt="Create wallet"/>
 
-1. Click the Alephium extension wallet icon on your browser
-2. On the landing page, click the `New wallet` button
-3. Enter the password to protect your wallet
-4. Done! Your wallet is created.
+1. Klicken Sie auf das Alephium Extension Wallet-Symbol in Ihrem Browser.
+2. Auf der Startseite klicken Sie auf die Schaltfläche `Neue Wallet`.
+3. Geben Sie das Passwort ein, um Ihre Wallet zu schützen.
+4. Fertig! Ihre Wallet ist erstellt.
 
-Now your wallet does not have any assets. In the next step, let's
-transfer some ALPH to this wallet.
+Ihre Wallet hat jetzt noch keine Vermögenswerte. Im nächsten Schritt übertragen wir etwas ALPH auf diese Wallet.
 
-### Transfer Assets
+### Vermögenswerte übertragen
 
 #### ALPH Token Faucet
 
-For `devnet` and `testnet`, extension wallet has a `ALPH` token faucet
-built-in. You can recieve `1000` `ALPH` for `devnet` and `12` `ALPH` for
-`testnet` respectively everytime.
+Für das `Devnet` und das `Testnet` verfügt die Extension-Wallet über einen integrierten `ALPH` Token-Faucet. 
+Sie können jeweils `1000` `ALPH` für das `Devnet` und `12` `ALPH` für das
+`Testnet` erhalten.
 
 <img src={require("./media/token-faucet-1.png").default} alt="Receive Fund" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -37,9 +36,9 @@ built-in. You can recieve `1000` `ALPH` for `devnet` and `12` `ALPH` for
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/token-faucet-3.png").default} alt="Token Received" width="250" />
 
-#### Transfer ALPH
+#### ALPH übertragen
 
-You can also transfer `ALPH` to your account from another acount:
+Sie können auch `ALPH` von einem anderen Konto auf Ihr Konto übertragen:
 
 <img src={require("./media/transfer-alph-1.png").default} alt="Overview page" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -47,10 +46,8 @@ You can also transfer `ALPH` to your account from another acount:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-alph-3.png").default} alt="Review transfer" width="250" />
 
-After signing the transfer transaction, you can monitor the
-transaction state from the `Activity` tab. As soon as the transaction
-is confirmed, the transferred `ALPH` amount is reflected on the
-receiving account.
+Nachdem Sie die Transfertransaktion signiert haben, können Sie den Transaktionsstatus im Tab `Aktivität` überwachen. 
+Sobald die Transaktion bestätigt ist, wird der übertragene  `ALPH`-Betrag auf dem Empfängerkonto angezeigt.
 
 <img src={require("./media/received-alph-1.png").default} alt="Pending Tx" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -58,12 +55,12 @@ receiving account.
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/received-alph-3.png").default} alt="ALPH Received" width="250" />
 
-That's it! You have successfully transfered some `ALPH`.
+Das war's! Sie haben erfolgreich einige `ALPH` übertragen.
 
-#### Transfer Tokens
+#### Token übertragen
 
-The process of transferring other fungible tokens is basically the
-same as transferring the `ALPH` token:
+Der Prozess des Übertragens anderer fungibler Tokens ist im Wesentlichen der gleiche wie beim Übertragen 
+des `ALPH`-Tokens:
 
 <img src={require("./media/transfer-alphpaca-1.png").default} alt="Transfer Token 1" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -71,12 +68,12 @@ same as transferring the `ALPH` token:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-alphpaca-3.png").default} alt="Transfer Token 3" width="250" />
 
-Please refer to the [Fungible Tokens](/tokens/fungible-tokens) guide
-for more information about fungible tokens.
+Bitte lesen Sie den Leitfaden zu [Fungiblen Tokens](/tokens/fungible-tokens) für weitere Informationen 
+zu fungiblen Tokens.
 
-### NFT Support
+### NFT-Unterstützung
 
-Alephium extension wallet also support displaying and transferring NFTs, as shown below:
+Die Alephium Extension-Wallet unterstützt auch die Anzeige und Übertragung von NFTs, wie unten gezeigt:
 
 <img src={require("./media/display-nft-collections.png").default} alt="Display Collections" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -84,23 +81,17 @@ Alephium extension wallet also support displaying and transferring NFTs, as show
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-nft.png").default} alt="Transfer NFT" width="250" />
 
-Please refer to the [Non-fungible Tokens
-(NFTs)](/tokens/non-fungible-tokens) guide for more information about
-NFTs.
+Bitte lesen Sie den Leitfaden zu [Non-fungible Tokens (NFTs)](/tokens/non-fungible-tokens) für weitere Informationen zu NFTs.
 
-### Manage Accounts
+### Konten verwalten
 
-Account in the Alephium extension wallet represents a digital
-container that consists of a public address and its corresponding
-private key, allowing user to receive, store and transfer assets on
-the Alephium blockchain.
+Ein Konto in der Alephium Extension-Wallet repräsentiert einen digitalen Container, der aus einer öffentlichen Adresse und dem entsprechenden privaten Schlüssel besteht und es dem Benutzer ermöglicht, Vermögenswerte auf der Alephium-Blockchain zu empfangen, zu speichern und zu übertragen.
 
-Alephium extension wallet allows users to manage multiple accounts at
-the same time. For example, Alice can have one account for `Salary`,
-one account for `Saving` and another account for `Trip 2023`. 
+Die Alephium Extension-Wallet ermöglicht es Benutzern, gleichzeitig mehrere Konten zu verwalten. 
+Zum Beispiel kann Alice ein Konto für `Gehalt`, ein Konto für `Sparen` und ein weiteres Konto für `Reise 2023` haben. 
 
-#### Create Account
-To add an extra account, follow the steps below:
+#### Konto erstellen
+Um ein zusätzliches Konto hinzuzufügen, befolgen Sie die unten stehenden Schritte:
 
 <img src={require("./media/manage-accounts-1.png").default} alt="Overview" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -108,27 +99,24 @@ To add an extra account, follow the steps below:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/manage-accounts-3.png").default} alt="Add Account" width="250"/>
 
-There are couple of options that we can choose before creating an
-account:
+Es gibt einige Optionen, die wir vor dem Erstellen eines Kontos auswählen können:
 
-- `Group`: Available options are `0`, `1`, `2` or `3`. If `any` is
-  chosen, the group where the created account belongs to will be
-  random
-- `Sign`: Available options are `default` and `schnorr`. `default`
-  represents the default Alephium signature type used to e.g. sign
-  Alephium transactoins, whereas `schnorr` represents the `BIP340`
-  Schnorr signature type which is useful when interacting with
-  protocols like [Nostr](https://nostr.com/)
-- `Account Type`: Available options are `Alephium Account` or a
-  `Ledger Account`. For more details about the Ledger integration
-  please refer to the [Ledger](/wallet/ledger) guide.
+- `Group`: Die verfügbaren Optionen sind `0`, `1`, `2` oder `3`. Wenn `beliebig` ausgewählt wird, 
+  wird die Gruppe, zu der das erstellte Konto gehört, zufällig sein.
+- `Sign`: Die verfügbaren Optionen sind `Standard` und `Schnorr`. `Standard`
+  repräsentiert den Standard-Alephium-Signaturtyp, der z.B. zum Signieren von 
+  Alephium-Transaktionen   verwendet wird, während `Schnorr` den `BIP340`
+  Schnorr-Signaturtyp repräsentiert, welcher nützlich ist, wenn Sie mit Protokollen wie 
+  [Nostr](https://nostr.com/) interagieren. 
+- `Account Type`: Die verfügbaren Optionen sind `Alephium Account` oder 
+  `Ledger Account`. Weitere Details zur Ledger-Integration finden Sie im 
+  [Ledger](/wallet/ledger)-Leitfaden.
 
-After choosing the desired options, a new account will be created and
-ready to be used.
+Nach Auswahl der gewünschten Optionen wird ein neues Konto erstellt und ist bereit zur Verwendung.
 
-#### Edit Account
-You can also edit the name of an existing account, export its private
-key, delete an account, etc:
+#### Konto bearbeiten
+Sie können auch den Namen eines vorhandenen Kontos bearbeiten, den privaten Schlüssel exportieren, 
+ein Konto löschen, usw.
 
 <img src={require("./media/manage-accounts-4.png").default} alt="Account List" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;

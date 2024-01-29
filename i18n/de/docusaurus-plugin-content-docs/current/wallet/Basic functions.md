@@ -1,102 +1,99 @@
 ---
 sidebar_position: 70
-title: Basic Functions
-sidebar_label: Basic Functions
+title: Grundlegende Funktionen
+sidebar_label: Grundlegende Funktionen
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
-# Basic Functions
+# Grundlegende Funktionen
 
-## How to generate a new address for a specific group in the Extension Wallet
+## Wie man eine neue Adresse für eine bestimmte Gruppe in der Extension-Wallet erstellt
 
-Here's a tutorial on how to create an address for a specific group. 
-Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
+Hier ist eine Anleitung, wie Sie eine Adresse für eine bestimmte Gruppe erstellen können. 
+Manchmal ist dies erforderlich, um mit DApps auf der Alephium-Blockchain zu interagieren. (Klicken Sie [hier](https://twitter.com/alephium/status/1681307477961482241) um mehr über Gruppen und [Sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium zu erfahren).
 
-1. Unlock your Extension Wallet.
+1. Entsperren Sie Ihre Extension-Wallet.
 
-![step01](https://github.com/alephium/docs/assets/88235023/efa34122-c996-4a5b-a1bc-a2c3d97b36bd)
+![Schritt01](https://github.com/alephium/docs/assets/88235023/efa34122-c996-4a5b-a1bc-a2c3d97b36bd)
 
-2. Click on the Wallet Name in the top left corner.
+2. Klicken Sie auf den Wallet-Namen in der oberen linken Ecke.
   
-![step02](https://github.com/alephium/docs/assets/88235023/8c169719-ebe5-4556-a967-ffae987bc4c3)
+![Schritt02](https://github.com/alephium/docs/assets/88235023/8c169719-ebe5-4556-a967-ffae987bc4c3)
 
-3. Press the “+” button in the top right corner.
+3. Drücken Sie die Taste "+" in der oberen rechten Ecke.
   
-![step03](https://github.com/alephium/docs/assets/88235023/a84a7019-d8b2-4045-9133-f10a115e3512)
+![Schritt03](https://github.com/alephium/docs/assets/88235023/a84a7019-d8b2-4045-9133-f10a115e3512)
 
-*4. Click on the “Group” dropdown menu and select a group of your choice.
+*4. Klicken Sie im Dropdown-Menü "Gruppe" und wählen Sie eine Gruppe Ihrer Wahl.
   
-![step04](https://github.com/alephium/docs/assets/88235023/f3192c1e-9cf8-432b-9283-784c97ea3108)
+![Schritt04](https://github.com/alephium/docs/assets/88235023/f3192c1e-9cf8-432b-9283-784c97ea3108)
 
-Optionally you could choose to use Schnorr signatures (more information about this feature can be found [here](https://twitter.com/alephium/status/1648310494661595137)). Once you’re done, click “Create a new Alephium Account.”
+Optional können Sie Schnorr-Signaturen wählen, um diese zu verwenden (weitere Informationen zu dieser Funktion finden Sie [hier](https://twitter.com/alephium/status/1648310494661595137)). Wenn Sie fertig sind, klicken Sie auf "Neues Alephium-Konto erstellen".
 
-You can repeat this process for every group (0, 1, 2, 3) you want an address on.
+Sie können diesen Vorgang für jede Gruppe (0, 1, 2, 3) wiederholen, für die Sie eine Adresse wünschen.
 
+## Wie man eine neue Adresse für eine bestimmte Gruppe in der Desktop-Wallet erstellt
 
+Hier ist eine Anleitung, wie Sie eine Adresse für eine bestimmte Gruppe erstellen können.
+Manchmal ist dies erforderlich, um mit DApps auf der Alephium-Blockchain zu interagieren. (Klicken Sie [hier](https://twitter.com/alephium/status/1681307477961482241), um mehr über Gruppen und [Sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium zu erfahren).
 
-## How to generate a new address for a specific group in the Desktop Wallet
+1. Entsperren Sie Ihre Desktop-Wallet.
 
-Here's a tutorial on how to create an address for a specific group. 
-Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
+![Schritt01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
 
-1. Unlock your Desktop Wallet.
+2. Klicken Sie auf das Menü "Adressen & Kontakte".
 
-![stepp01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
+![Schritt02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
 
-2. Click on the “Addresses & Contacts” menu.
+3. Drücken Sie die blaue Schaltfläche "Neue Adresse".
 
-![stepp02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
+![Schritt03](https://github.com/alephium/docs/assets/88235023/57595a9a-1588-43ff-a7cc-8d57b08e108f)
 
-3. Press the blue “New Address” button.
+Wählen Sie im erscheinenden Menü einen Namen und eine Farbe für Ihre neue Adresse.
 
-![stepp03](https://github.com/alephium/docs/assets/88235023/57595a9a-1588-43ff-a7cc-8d57b08e108f)
+Aktivieren Sie den Schalter "Erweiterte Optionen" und wählen Sie die Gruppe aus, für die Sie Ihre neue Adresse generieren möchten.
 
-Once the menu shows up, choose a name and a colour for your new address.
+Drücken Sie "Generieren". Sie können diesen Vorgang für jede Gruppe, für die Sie eine Adresse wünschen (0, 1, 2, 3), wiederholen oder die nächste Methode für die Stapeladressenerstellung verwenden.
 
-Then, turn on the “Advanced options” toggle and select the group you want to generate your new address on.
+## Erstellen von Adressen für alle Gruppen gleichzeitig in der Desktop-Wallet
 
-Press “Generate”. You can repeat this process for every group you want an address on (0, 1, 2, 3) or use the next method for batch address creation.
+1. Entsperren Sie Ihre Desktop-Wallet.
 
-## How to generate a new address for all groups at once in the Desktop Wallet
+![Schritt01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
 
-1. Unlock your Desktop Wallet.
+2. Klicken Sie auf das Menü "Adressen & Kontakte".
 
-![stepp01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
+![Schritt02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
 
-2. Click on the “Addresses & Contacts” menu.
+3. Klicken Sie auf das "Schraubenschlüssel"-Symbol (erweiterte Operationen).
 
-![stepp02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
+![Schritt03](https://github.com/alephium/docs/assets/88235023/19999aec-b9dc-4b40-bb7b-3ee8dfab49cf)
 
-3. Click on the "wrench" icon (advanced operations).
+Wenn das Menü erscheint, klicken Sie auf die blaue Schaltfläche "Start" im Abschnitt "Generiere eine Adresse pro Gruppe". Wählen Sie im Popup einen Namen für die Brieftaschen aus. Klicken Sie dann auf die blaue Schaltfläche "Generieren".
 
-![stepp04](https://github.com/alephium/docs/assets/88235023/19999aec-b9dc-4b40-bb7b-3ee8dfab49cf)
+Jetzt haben Sie eine Adresse in jeder Gruppe. (Klicken Sie [hier](https://twitter.com/alephium/status/1681307477961482241) um mehr über Gruppen und [Sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium zu erfahren).
 
-Once the menu appears, click the blue "Start" button in the "Generate one address per group" section. In the popup, choose a name for the wallets. Then click on the blue "Generate" button.
+## Anfordern von Testnet ALPH in der Erweiterungsbrieftasche
 
-Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
-
-
-## Requesting Testnet ALPH on the Extension Wallet
-
-1. Switch from “Mainnet” to “Testnet”
+1. Wechseln Sie von "Mainnet" zu "Testnet".
 
 ![faucet001](https://github.com/alephium/docs/assets/88235023/2c83938e-d91a-4f64-9aa9-5ff275a77fd2)
 
-2. Click on “+Add Funds”, and then press “request $ALPH”
+2. Klicken Sie auf "+Funds hinzufügen" und dann auf "12 $ALPH anfordern".
 
 ![faucet002](https://github.com/alephium/docs/assets/88235023/85c4403d-1281-4005-b8dc-e1704b60c508)
 
-In about 1-2 minutes you should receive 12 testnet $ALPH in your balance.
+In etwa 1-2 Minuten sollten Sie 12 Testnetz $ALPH auf Ihrem Guthaben erhalten.
 
-# Requesting Testnet ALPH on the Desktop Wallet
+# Anfordern von Testnet ALPH in der Desktop-Brieftasche
 
-1. Switch from “Mainnet” to “Testnet”
+1. Wechseln Sie von "Mainnet" zu "Testnet".
 
 ![faucet01](https://github.com/alephium/docs/assets/88235023/b0c6dcc1-3e21-4dac-92fc-2f371ef9d513)
 
-2. Open “Settings”, choose “Developer Tools”, enable “developer tools”, and click on “Receive testnet tokens”
+2. Öffnen Sie "Einstellungen", wählen Sie "Entwicklertools", aktivieren Sie "Entwicklertools" und klicken Sie auf "Testnetz-Token empfangen".
 
 ![faucet02](https://github.com/alephium/docs/assets/88235023/d8ba431b-f556-4734-afe3-faef821822c4)
 
-You will receive 12 Testnet $ALPH in about 1-2 minutes!
+Sie erhalten in etwa 1-2 Minuten 12 Testnetz $ALPH!
