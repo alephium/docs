@@ -1,14 +1,14 @@
 ---
 sidebar_position: 20
-title: Built-in Functions
-sidebar_label: Built-in functions
+title: Built-in Funktionen
+sidebar_label: Built-in Funktionen
 ---
 
 <!---
 This file is auto-generated with "scripts/generate-builtin-functions.js"
 -->
 
-The built-in functions are divided into several categories:
+Die integrierten Funktionen sind in mehrere Kategorien unterteilt:
 [Contract](#contract-functions),
 [SubContract](#subcontract-functions),
 [Asset](#asset-functions),
@@ -17,10 +17,10 @@ The built-in functions are divided into several categories:
 [Conversion](#conversion-functions),
 [ByteVec](#bytevec-functions),
 [Cryptography](#cryptography-functions).
-All built-in functions are suffixed with `!`.
-All of the byte encoding use Big Endian byte order.
+Alle integrierten Funktionen haben das Suffix `!`.
+Alle Byte-Codierungen verwenden die Byte-Reihenfolge Big Endian.
 
-## Contract Functions
+## Vertragsfunktionen
 ---
 ### createContract
 
@@ -28,15 +28,15 @@ All of the byte encoding use Big Endian byte order.
 fn createContract!(bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
-Creates a new contract without token issuance.
+Erstellt einen neuen Vertrag ohne Token-Ausgabe.
 
-> @param **bytecode** *the bytecode of the contract to be created*
+> @param **bytecode** *der Bytecode des zu erstellenden Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -46,19 +46,19 @@ Creates a new contract without token issuance.
 fn createContractWithToken!(bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
-Creates a new contract with token issuance.
+Erstellt einen neuen Vertrag mit Token-Ausgabe.
 
-> @param **bytecode** *the bytecode of the contract to be created*
+> @param **bytecode** *der Bytecode des zu erstellenden Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @param **issueTokenAmount** *the amount of token to be issued*
+> @param **issueTokenAmount** *die Menge der auszugebenden Token*
 >
-> @param **issueTo** *(optional) a designated address to receive issued token*
+> @param **issueTo** *(optional) eine festgelegte Adresse, um die ausgegebenen Token zu erhalten*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -68,15 +68,15 @@ Creates a new contract with token issuance.
 fn copyCreateContract!(contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
-Creates a new contract without token issuance by copying another contract's code. This costs less gas than createContract!(...).
+Erstellt einen neuen Vertrag ohne Token-Ausgabe durch Kopieren des Codes eines anderen Vertrags. Dies kostet weniger Gas als createContract!
 
-> @param **contractId** *the id of the contract to be copied*
+> @param **contractId** *die ID des zu kopierenden Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -86,19 +86,19 @@ Creates a new contract without token issuance by copying another contract's code
 fn copyCreateContractWithToken!(contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
-Creates a new contract with token issuance by copying another contract's code. This costs less gas than createContractWithToken!(...).
+Erstellt einen neuen Vertrag mit Token-Ausgabe durch Kopieren des Codes eines anderen Vertrags. Dies kostet weniger Gas als createContractWithToken!(...).
 
-> @param **contractId** *the id of the contract to be copied*
+> @param **contractId** *die ID des zu kopierenden Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @param **issueTokenAmount** *the amount of token to be issued*
+> @param **issueTokenAmount** *die Menge der auszugebenden Token*
 >
-> @param **issueTo** *(optional) a designated address to receive issued token*
+> @param **issueTo** *(optional) eine festgelegte Adresse zum Empfangen der ausgegebenen Token*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -108,9 +108,9 @@ Creates a new contract with token issuance by copying another contract's code. T
 fn selfAddress!() -> (Address)
 ```
 
-Returns the address of the contract.
+Gibt die Adresse des Vertrags zurück.
 
-> @returns *the address of the contract*
+> @returns *die Adresse des Vertrags*
 
 ---
 
@@ -120,9 +120,9 @@ Returns the address of the contract.
 fn selfContractId!() -> (ByteVec)
 ```
 
-Returns the id (ByteVec) of the contract.
+Gibt die ID (ByteVec) des Vertrags zurück.
 
-> @returns *the id (ByteVec) of the contract*
+> @returns *die ID (ByteVec) des Vertrags*
 
 ---
 
@@ -132,9 +132,9 @@ Returns the id (ByteVec) of the contract.
 fn selfTokenId!() -> (ByteVec)
 ```
 
-Returns the token id (ByteVec) of the contract.
+Gibt die Token-ID (ByteVec) des Vertrags zurück.
 
-> @returns *the token id (ByteVec) of the contract*
+> @returns *die Token-ID (ByteVec) des Vertrags*
 
 ---
 
@@ -144,11 +144,11 @@ Returns the token id (ByteVec) of the contract.
 fn tokenId!(contract:<Contract>) -> (ByteVec)
 ```
 
-Returns the id of the contract
+Gibt die ID des Vertrags zurück.
 
-> @param **contract** *the contract variable*
+> @param **contract** *die Vertragsvariable*
 >
-> @returns *the id of the contract*
+> @returns *die ID des Vertrags*
 
 ---
 
@@ -158,11 +158,11 @@ Returns the id of the contract
 fn contractId!(contract:<Contract>) -> (ByteVec)
 ```
 
-Returns the id of the contract
+Gibt die ID des Vertrags zurück.
 
-> @param **contract** *the contract variable*
+> @param **contract** *die Vertragsvariable*
 >
-> @returns *the id of the contract*
+> @returns *die ID des Vertrags*
 
 ---
 
@@ -172,9 +172,9 @@ Returns the id of the contract
 fn callerContractId!() -> (ByteVec)
 ```
 
-Returns the contract id of the caller.
+Gibt die Vertrags-ID des Aufrufers zurück.
 
-> @returns *the contract id of the caller*
+> @returns *die Vertrags-ID des Aufrufers*
 
 ---
 
@@ -184,9 +184,9 @@ Returns the contract id of the caller.
 fn callerAddress!() -> (Address)
 ```
 
-Returns the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails.
+Gibt die Adresse des Aufrufers zurück. Wenn es in einem TxScript verwendet wird, gibt es die eindeutige Eingangsadresse zurück, wenn die Eingangsadressen identisch sind, sonst schlägt es fehl.
 
-> @returns *the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails*
+> @returns *die Adresse des Aufrufers. Wenn sie in einem TxScript verwendet wird, gibt sie die eindeutige Eingangsadresse zurück, wenn die Eingangsadressen gleich sind, ansonsten schlägt sie fehl*
 
 ---
 
@@ -196,11 +196,11 @@ Returns the address of the caller. When used in a TxScript, it returns the uniqu
 fn contractInitialStateHash!(contractId:ByteVec) -> (ByteVec)
 ```
 
-Returns the initial state hash of the contract.
+Gibt den anfänglichen Zustandshash des Vertrags zurück.
 
-> @param **contractId** *the id of the input contract*
+> @param **contractId** *die ID des Eingangsvertrags*
 >
-> @returns *the initial state hash of the contract*
+> @returns *der Anfangszustandshash des Vertrags*
 
 ---
 
@@ -210,11 +210,11 @@ Returns the initial state hash of the contract.
 fn contractCodeHash!(contractId:ByteVec) -> (ByteVec)
 ```
 
-Returns the contract code hash of the contract.
+Gibt den Vertragscodehash des Vertrags zurück.
 
-> @param **contractId** *the id of the input contract*
+> @param **contractId** *die ID des Eingangsvertrags*
 >
-> @returns *the contract code hash of the contract*
+> @returns *der Vertragscodehash des Vertrags*
 
 ---
 
@@ -224,9 +224,9 @@ Returns the contract code hash of the contract.
 fn callerInitialStateHash!() -> (ByteVec)
 ```
 
-Returns the initial state hash of the caller contract.
+Gibt den anfänglichen Zustandshash des Aufrufervertrags zurück.
 
-> @returns *the initial state hash of the caller contract*
+> @returns *der Anfangszustandshash des Aufrufervertrags*
 
 ---
 
@@ -236,9 +236,9 @@ Returns the initial state hash of the caller contract.
 fn callerCodeHash!() -> (ByteVec)
 ```
 
-Returns the contract code hash of the caller contract.
+Gibt den Vertragscodehash des Aufrufervertrags zurück.
 
-> @returns *the contract code hash of the caller contract*
+> @returns *der Vertragscodehash des Aufrufervertrags*
 
 ---
 
@@ -248,11 +248,11 @@ Returns the contract code hash of the caller contract.
 fn contractExists!(contractId:ByteVec) -> (Bool)
 ```
 
-Checks whether the contract exists with the given id.
+Überprüft, ob der Vertrag mit der angegebenen ID existiert.
 
-> @param **contractId** *the input contract id to be tested*
+> @param **contractId** *die ID des zu testenden Eingangsvertrags*
 >
-> @returns *ture if the contract exists on the chain, false otherwise*
+> @returns *true, wenn der Vertrag auf der Kette existiert, andernfalls false*
 
 ---
 
@@ -262,9 +262,9 @@ Checks whether the contract exists with the given id.
 fn destroySelf!(refundAddress:Address) -> ()
 ```
 
-Destroys the contract and transfer the remaining assets to a designated address.
+Zerstört den Vertrag und überträgt das verbleibende Vermögen an eine festgelegte Adresse.
 
-> @param **refundAddress** *the address to receive the remaining assets in the contract*
+> @param **refundAddress** *die Adresse, um die verbleibenden Vermögenswerte im Vertrag zu erhalten*
 >
 > @returns
 
@@ -276,9 +276,9 @@ Destroys the contract and transfer the remaining assets to a designated address.
 fn migrate!(newBytecode:ByteVec) -> ()
 ```
 
-Migrates the code of the contract.
+Migriert den Code des Vertrags.
 
-> @param **newBytecode** *the new bytecode for the contract to migrate to*
+> @param **newBytecode** *das neue Bytecode für den Vertrag, zu dem migriert werden soll*
 >
 > @returns
 
@@ -290,13 +290,13 @@ Migrates the code of the contract.
 fn migrateWithFields!(newBytecode:ByteVec, newEncodedImmFields:ByteVec, newEncodedMutFields:ByteVec) -> ()
 ```
 
-Migrates both the code and the fields of the contract.
+Migriert sowohl den Code als auch die Felder des Vertrags.
 
-> @param **newBytecode** *the bytecode for the contract to migrate to*
+> @param **newBytecode** *der Bytecode für den Vertrag, zu dem migriert werden soll*
 >
-> @param **newEncodedImmFields** *the encoded immutable fields for the contract to migrate to*
+> @param **newEncodedImmFields** *die codierten unveränderlichen Felder für den Vertrag, zu dem migriert werden soll*
 >
-> @param **newEncodedMutFields** *the encoded mutable fields for the contract to migrate to*
+> @param **newEncodedMutFields** *die codierten veränderlichen Felder für den Vertrag, zu dem migriert werden soll*
 >
 > @returns
 
@@ -308,9 +308,9 @@ Migrates both the code and the fields of the contract.
 fn isCalledFromTxScript!() -> (Bool)
 ```
 
-Checks whether the function is called by a TxScript.
+Überprüft, ob die Funktion von einem TxScript aufgerufen wird.
 
-> @returns *true if the function is called by a TxScript, false otherwise*
+> @returns *true, wenn die Funktion von einem TxScript aufgerufen wird, andernfalls false*
 
 ---
 
@@ -320,9 +320,9 @@ Checks whether the function is called by a TxScript.
 fn selfContract!() -> (<Contract>)
 ```
 
-Returns self contract
+Gibt den eigenen Vertrag zurück.
 
-> @returns *self contract*
+> @returns *Selbstvertrag*
 
 ---
 
@@ -334,17 +334,17 @@ Returns self contract
 fn createSubContract!(subContractPath:ByteVec, bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
-Creates a new sub-contract without token issuance.
+Erstellt einen neuen Untervertag ohne Token-Ausgabe.
 
-> @param **subContractPath** *the path of the sub-contract to be created*
+> @param **subContractPath** *der Pfad des zu erstellenden Unter-Vertrags*
 >
-> @param **bytecode** *the bytecode of the sub-contract to be created*
+> @param **bytecode** *der Bytecode des zu erstellenden Unter-Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -354,21 +354,21 @@ Creates a new sub-contract without token issuance.
 fn createSubContractWithToken!(subContractPath:ByteVec, bytecode:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
-Creates a new sub-contract with token issuance.
+Erstellt einen neuen Untervertag mit Token-Ausgabe.
 
-> @param **subContractPath** *the path of the sub-contract to be created*
+> @param **subContractPath** *der Pfad des zu erstellenden Unter-Vertrags*
 >
-> @param **bytecode** *the bytecode of the sub-contract to be created*
+> @param **bytecode** *der Bytecode des zu erstellenden Unter-Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @param **issueTokenAmount** *the amount of token to be issued*
+> @param **issueTokenAmount** *die Menge der auszugebenden Token*
 >
-> @param **issueTo** *(optional) a designated address to receive issued token*
+> @param **issueTo** *(optional) eine festgelegte Adresse zum Empfangen der ausgegebenen Token*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -378,17 +378,17 @@ Creates a new sub-contract with token issuance.
 fn copyCreateSubContract!(subContractPath:ByteVec, contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec) -> (ByteVec)
 ```
 
-Creates a new sub-contract without token issuance by copying another contract's code. This costs less gas than createSubContract!(...).
+Erstellt einen neuen Untervertag ohne Token-Ausgabe durch Kopieren des Codes eines anderen Vertrags. Dies kostet weniger Gas als createSubContract!(...).
 
-> @param **subContractPath** *the path of the sub-contract to be created*
+> @param **subContractPath** *der Pfad des zu erstellenden Unter-Vertrags*
 >
-> @param **contractId** *the id of the contract to be copied*
+> @param **contractId** *die ID des zu kopierenden Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -398,21 +398,21 @@ Creates a new sub-contract without token issuance by copying another contract's 
 fn copyCreateSubContractWithToken!(subContractPath:ByteVec, contractId:ByteVec, encodedImmFields:ByteVec, encodedMutFields:ByteVec, issueTokenAmount:U256, issueTo?:Address) -> (ByteVec)
 ```
 
-Creates a new sub-contract with token issuance by copying another contract's code. This costs less gas than createSubContractWithToken!(...).
+Erstellt einen neuen Untervertag mit Token-Ausgabe durch Kopieren des Codes eines anderen Vertrags. Dies kostet weniger Gas als createSubContractWithToken!(...).
 
-> @param **subContractPath** *the path of the sub-contract to be created*
+> @param **subContractPath** *der Pfad des zu erstellenden Unter-Vertrags*
 >
-> @param **contractId** *the id of the contract to be copied*
+> @param **contractId** *die ID des zu kopierenden Vertrags*
 >
-> @param **encodedImmFields** *the encoded immutable fields as a ByteVec*
+> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
 >
-> @param **encodedMutFields** *the encoded mutable fields as a ByteVec*
+> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
 >
-> @param **issueTokenAmount** *the amount of token to be issued*
+> @param **issueTokenAmount** *die Menge der auszugebenden Token*
 >
-> @param **issueTo** *(optional) a designated address to receive issued token*
+> @param **issueTo** *(optional) eine festgelegte Adresse zum Empfangen der ausgegebenen Token*
 >
-> @returns *the id of the created contract*
+> @returns *die ID des erstellten Vertrags*
 
 ---
 
@@ -422,11 +422,11 @@ Creates a new sub-contract with token issuance by copying another contract's cod
 fn subContractId!(subContractPath:ByteVec) -> (ByteVec)
 ```
 
-Returns the id of the sub contract.
+Gibt die ID des Untervertags zurück.
 
-> @param **subContractPath** *the path of the sub-contract*
+> @param **subContractPath** *der Pfad des Unter-Vertrags*
 >
-> @returns *the id of the sub contract*
+> @returns *die ID des Unter-Vertrags*
 
 ---
 
@@ -436,13 +436,13 @@ Returns the id of the sub contract.
 fn subContractIdOf!(contract:<Contract>, subContractPath:ByteVec) -> (ByteVec)
 ```
 
-Returns the id of the sub contract.
+Gibt die ID des Untervertags zurück.
 
-> @param **contract** *the parent contract of the sub-contract*
+> @param **contract** *der übergeordnete Vertrag des Unter-Vertrags*
 >
-> @param **subContractPath** *the path of the sub-contract*
+> @param **subContractPath** *der Pfad des Unter-Vertrags*
 >
-> @returns *the id of the sub contract*
+> @returns *die ID des Unter-Vertrags*
 
 ---
 
@@ -452,13 +452,13 @@ Returns the id of the sub contract.
 fn subContractIdInParentGroup!(contract:<Contract>, subContractPath:ByteVec) -> (ByteVec)
 ```
 
-Returns the id of the sub contract.
+Gibt die ID des Untervertags zurück.
 
-> @param **contract** *the parent contract of the sub-contract*
+> @param **contract** *der übergeordnete Vertrag des Unter-Vertrags*
 >
-> @param **subContractPath** *the path of the sub-contract*
+> @param **subContractPath** *der Pfad des Unter-Vertrags*
 >
-> @returns *the id of the sub contract*
+> @returns *die ID des Unter-Vertrags*
 
 ---
 
@@ -470,13 +470,13 @@ Returns the id of the sub contract.
 fn approveToken!(fromAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Approves the usage of certain amount of token from the given address
+Genehmigt die Verwendung einer bestimmten Menge an Token von der angegebenen Adresse.
 
-> @param **fromAddress** *the address to approve token from*
+> @param **fromAddress** *der übergeordnete Vertrag des Unter-Vertrags*
 >
-> @param **tokenId** *the token to be approved*
+> @param **tokenId** *das zu genehmigende Token*
 >
-> @param **amount** *the amount of the token to be approved*
+> @param **amount** *die Menge der zu genehmigenden Token*
 >
 > @returns
 
@@ -488,13 +488,13 @@ Approves the usage of certain amount of token from the given address
 fn tokenRemaining!(address:Address, tokenId:ByteVec) -> (U256)
 ```
 
-Returns the amount of the remaining token amount in the input assets of the function.
+Gibt die Menge der verbleibenden Tokenmenge in den Eingangsvermögen der Funktion zurück.
 
-> @param **address** *the input address*
+> @param **address** *die Eingangsadresse*
 >
-> @param **tokenId** *the token id*
+> @param **tokenId** *die Token-ID*
 >
-> @returns *the amount of the remaining token amount in the input assets of the function*
+> @returns *die Menge der verbleibenden Token in den Eingangsvermögen der Funktion*
 
 ---
 
@@ -504,15 +504,15 @@ Returns the amount of the remaining token amount in the input assets of the func
 fn transferToken!(fromAddress:Address, toAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Transfers token from the input assets of the function.
+Überträgt Token aus dem Eingangsvermögen der Funktion.
 
-> @param **fromAddress** *the address to transfer token from*
+> @param **fromAddress** *die Adresse, von der Token transferiert werden sollen
 >
-> @param **toAddress** *the address to transfer token to*
+> @param **toAddress** *die Adresse, zu der Token transferiert werden sollen*
 >
-> @param **tokenId** *the token to be transferred*
+> @param **tokenId** *das zu transferierende Token*
 >
-> @param **amount** *the amount of token to be transferred*
+> @param **amount** *die Menge der zu transferierenden Token*
 >
 > @returns
 
@@ -524,13 +524,13 @@ Transfers token from the input assets of the function.
 fn transferTokenFromSelf!(toAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Transfers the contract's token from the input assets of the function.
+Überträgt die Token des Vertrags aus dem Eingangsvermögen der Funktion.
 
-> @param **toAddress** *the address to transfer token to*
+> @param **toAddress** *die Adresse, zu der Token transferiert werden sollen*
 >
-> @param **tokenId** *the token to be transferred*
+> @param **tokenId** *das zu transferierende Token*
 >
-> @param **amount** *the amount of token to be transferred*
+> @param **amount** *die Menge der zu transferierenden Token*
 >
 > @returns
 
@@ -542,13 +542,13 @@ Transfers the contract's token from the input assets of the function.
 fn transferTokenToSelf!(fromAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Transfers token to the contract from the input assets of the function.
+Überträgt Token an den Vertrag aus dem Eingangsvermögen der Funktion.
 
-> @param **fromAddress** *the address to transfer token from*
+> @param **fromAddress** *die Adresse, von der Token transferiert werden sollen*
 >
-> @param **tokenId** *the token to be transferred*
+> @param **tokenId** *das zu transferierende Token*
 >
-> @param **amount** *the amount of token to be transferred*
+> @param **amount** *die Menge der zu transferierenden Token*
 >
 > @returns
 
@@ -560,13 +560,13 @@ Transfers token to the contract from the input assets of the function.
 fn burnToken!(address:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Burns token from the input assets of the function.
+Verbrennt Token aus dem Eingangsvermögen der Funktion.
 
-> @param **address** *the address to burn token from*
+> @param **address** *die Adresse, von der Token verbrannt werden sollen*
 >
-> @param **tokenId** *the token to be burnt*
+> @param **tokenId** *das zu verbrennende Token*
 >
-> @param **amount** *the amount of token to be burnt*
+> @param **amount** *die Menge der zu verbrennenden Token*
 >
 > @returns
 
@@ -578,11 +578,11 @@ Burns token from the input assets of the function.
 fn lockApprovedAssets!(address:Address, timestamp:U256) -> ()
 ```
 
-Locks the current approved assets.
+Sperrt das aktuelle genehmigte Vermögen.
 
-> @param **address** *the address to lock assets to*
+> @param **address** *die Adresse, zu der die Vermögen gesperrt werden sollen*
 >
-> @param **timestamp** *the timestamp that the assets will be locked until*
+> @param **timestamp** *der Zeitstempel, bis zu dem die Vermögen gesperrt werden sollen*
 >
 > @returns
 
@@ -596,11 +596,11 @@ Locks the current approved assets.
 fn assert!(condition:Bool, errorCode:U256) -> ()
 ```
 
-Tests the condition or checks invariants.
+Testet die Bedingung oder überprüft Invarianten.
 
-> @param **condition** *the condition to be checked*
+> @param **condition** *die zu überprüfende Bedingung*
 >
-> @param **errorCode** *the error code to throw if the check fails*
+> @param **errorCode** *der Fehlercode, der geworfen wird, wenn die Überprüfung fehlschlägt*
 >
 > @returns
 
@@ -612,11 +612,11 @@ Tests the condition or checks invariants.
 fn checkCaller!(condition:Bool, errorCode:U256) -> ()
 ```
 
-Checks conditions of the external caller of the function.
+Überprüft Bedingungen des externen Aufrufers der Funktion.
 
-> @param **condition** *the condition to be checked*
+> @param **condition** *die zu überprüfende Bedingung*
 >
-> @param **errorCode** *the error code to throw if the check fails*
+> @param **errorCode** *der Fehlercode, der geworfen wird, wenn die Überprüfung fehlschlägt*
 >
 > @returns
 
@@ -628,11 +628,11 @@ Checks conditions of the external caller of the function.
 fn isAssetAddress!(address:Address) -> (Bool)
 ```
 
-Returns whether an address is an asset address.
+Gibt zurück, ob eine Adresse eine Vermögensadresse ist.
 
-> @param **address** *the input address to be tested*
+> @param **address** *die zu testende Eingangsadresse*
 >
-> @returns *true if the address is an asset address, false otherwise*
+> @returns *true, wenn die Adresse eine Vermögensadresse ist, andernfalls false*
 
 ---
 
@@ -642,11 +642,11 @@ Returns whether an address is an asset address.
 fn isContractAddress!(address:Address) -> (Bool)
 ```
 
-Returns whether an address is a contract address.
+Gibt zurück, ob eine Adresse eine Vertragsadresse ist.
 
-> @param **address** *the input address to be tested*
+> @param **address** *die zu testende Eingangsadresse*
 >
-> @returns *true if the address is a contract address, false otherwise*
+> @returns *true, wenn die Adresse eine Vertragsadresse ist, andernfalls false*
 
 ---
 
@@ -656,11 +656,11 @@ Returns whether an address is a contract address.
 fn zeros!(n:U256) -> (ByteVec)
 ```
 
-Returns a ByteVec of zeros.
+Gibt ein ByteVec von Nullen zurück.
 
-> @param **n** *the number of zeros*
+> @param **n** *die Anzahl der Nullen*
 >
-> @returns *a ByteVec of zeros*
+> @returns *ein ByteVec aus Nullen*
 
 ---
 
@@ -670,9 +670,9 @@ Returns a ByteVec of zeros.
 fn panic!(errorCode?: U256) -> (Never)
 ```
 
-Terminates the application immediately.
+Beendet die Anwendung sofort.
 
-> @param **errorCode** *(optional) the error code to be thrown when the panic!(...) is called*
+> @param **errorCode** *(optional) der Fehlercode, der geworfen wird, wenn panic!(...) aufgerufen wird*
 >
 > @returns
 
@@ -684,7 +684,7 @@ Terminates the application immediately.
 fn mulModN!(x:U256, y:U256, n:U256) -> (U256)
 ```
 
-Returns compute the x * y % n.
+Berechnet x * y % n.
 
 > @param **x** *x*
 >
@@ -692,7 +692,7 @@ Returns compute the x * y % n.
 >
 > @param **n** *n*
 >
-> @returns *compute the x * y % n*
+> @returns *berechne x * y % n*
 
 ---
 
@@ -702,7 +702,7 @@ Returns compute the x * y % n.
 fn addModN!(x:U256, y:U256, n:U256) -> (U256)
 ```
 
-Returns compute the (x + y) % n.
+Berechnet (x + y) % n.
 
 > @param **x** *x*
 >
@@ -710,7 +710,7 @@ Returns compute the (x + y) % n.
 >
 > @param **n** *n*
 >
-> @returns *compute the (x + y) % n*
+> @returns *berechne (x + y) % n*
 
 ---
 
@@ -720,9 +720,9 @@ Returns compute the (x + y) % n.
 fn u256Max!() -> (U256)
 ```
 
-Returns the max value of U256.
+Gibt den maximalen Wert von U256 zurück.
 
-> @returns *the max value of U256*
+> @returns *der maximale Wert von U256*
 
 ---
 
@@ -732,9 +732,9 @@ Returns the max value of U256.
 fn i256Max!() -> (I256)
 ```
 
-Returns the max value of I256.
+Gibt den maximalen Wert von I256 zurück.
 
-> @returns *the max value of I256*
+> @returns *der maximale Wert von I256*
 
 ---
 
@@ -744,9 +744,9 @@ Returns the max value of I256.
 fn i256Min!() -> (I256)
 ```
 
-Returns the min value of I256.
+Gibt den minimalen Wert von I256 zurück.
 
-> @returns *the min value of I256*
+> @returns *der minimale Wert von I256*
 
 ---
 
@@ -756,9 +756,9 @@ Returns the min value of I256.
 fn nullContractAddress!() -> (Address)
 ```
 
-Returns the null contract address with contract id being zeros.
+Gibt die Null-Vertragsadresse mit der Vertrags-ID, die Nullen sind, zurück.
 
-> @returns *the null contract address with contract id being zeros*
+> @returns *die Null-Vertragsadresse mit der Vertrags-ID als Nullen*
 
 ---
 
@@ -770,9 +770,9 @@ Returns the null contract address with contract id being zeros.
 fn networkId!() -> (ByteVec)
 ```
 
-Returns the network id (a single byte).
+Gibt die Netzwerk-ID (ein einzelnes Byte) zurück.
 
-> @returns *the network id (a single byte)*
+> @returns *die Netzwerk-ID (ein einzelnes Byte)*
 
 ---
 
@@ -782,9 +782,9 @@ Returns the network id (a single byte).
 fn blockTimeStamp!() -> (U256)
 ```
 
-Returns the block timestamp.
+Gibt den Block-Zeitstempel zurück.
 
-> @returns *the block timestamp*
+> @returns *der Zeitstempel des Blocks*
 
 ---
 
@@ -794,9 +794,9 @@ Returns the block timestamp.
 fn blockTarget!() -> (U256)
 ```
 
-Returns the block difficulty target.
+Gibt das Schwierigkeitsziel des Blocks zurück.
 
-> @returns *the block difficulty target*
+> @returns *das Schwierigkeitsziel des Blocks*
 
 ---
 
@@ -806,9 +806,9 @@ Returns the block difficulty target.
 fn txId!() -> (ByteVec)
 ```
 
-Returns the current transaction id.
+Gibt die aktuelle Transaktions-ID zurück.
 
-> @returns *the current transaction id*
+> @returns *die aktuelle Transaktions-ID*
 
 ---
 
@@ -818,11 +818,11 @@ Returns the current transaction id.
 fn txInputAddress!(txInputIndex:U256) -> (Address)
 ```
 
-Returns the n-th transaction input address.
+Gibt die n-te Transaktionseingangsadresse zurück.
 
-> @param **txInputIndex** *the index of the transaction input*
+> @param **txInputIndex** *der Index der Transaktionseingabe*
 >
-> @returns *the n-th transaction input address*
+> @returns *die n-te Transaktionseingangsadresse*
 
 ---
 
@@ -832,9 +832,9 @@ Returns the n-th transaction input address.
 fn txInputsSize!() -> (U256)
 ```
 
-Returns the number of transaction inputs.
+Gibt die Anzahl der Transaktionseingänge zurück.
 
-> @returns *the number of transaction inputs*
+> @returns *die Anzahl der Transaktionseingaben*
 
 ---
 
@@ -844,9 +844,9 @@ Returns the number of transaction inputs.
 fn txGasPrice!() -> (U256)
 ```
 
-Returns the current transaction gas price.
+Gibt den aktuellen Transaktionsgaspreis zurück.
 
-> @returns *the current transaction gas price*
+> @returns *der aktuelle Transaktions-Gaspreis*
 
 ---
 
@@ -856,9 +856,9 @@ Returns the current transaction gas price.
 fn txGasAmount!() -> (U256)
 ```
 
-Returns the current transaction gas amount.
+Gibt die aktuelle Transaktionsgasmenge zurück.
 
-> @returns *the current transaction gas amount*
+> @returns *die aktuelle Transaktions-Gasmenge*
 
 ---
 
@@ -868,9 +868,9 @@ Returns the current transaction gas amount.
 fn txGasFee!() -> (U256)
 ```
 
-Returns the current transaction gas fee.
+Gibt die aktuelle Transaktionsgebühr zurück.
 
-> @returns *the current transaction gas fee*
+> @returns *die aktuelle Transaktions-Gebühr*
 
 ---
 
@@ -880,9 +880,9 @@ Returns the current transaction gas fee.
 fn verifyAbsoluteLocktime!(lockUntil:U256) -> ()
 ```
 
-Verifies that the absolute locktime is before the block timestamp, otherwise it fails.
+Überprüft, ob die absolute Verriegelungszeit vor dem Block-Zeitstempel liegt, andernfalls schlägt es fehl.
 
-> @param **lockUntil** *the timestamp until which the lock is valid*
+> @param **lockUntil** *der Zeitstempel, bis zu dem die Sperre gültig ist*
 >
 > @returns
 
@@ -894,11 +894,11 @@ Verifies that the absolute locktime is before the block timestamp, otherwise it 
 fn verifyRelativeLocktime!(txInputIndex:U256, lockDuration:U256) -> ()
 ```
 
-Verifies that the input's creation timestamp + lock duration is before the block timestamp, otherwise it fails.
+Überprüft, ob der Erstellungszeitstempel der Eingabe + Sperrdauer vor dem Block-Zeitstempel liegt, andernfalls schlägt es fehl.
 
-> @param **txInputIndex** *the index of the transaction input*
+> @param **txInputIndex** *der Index der Transaktionseingabe*
 >
-> @param **lockDuration** *the duration that the input is locked for*
+> @param **lockDuration** *die Dauer, für die die Eingabe gesperrt ist*
 >
 > @returns
 
@@ -910,9 +910,9 @@ Verifies that the input's creation timestamp + lock duration is before the block
 fn dustAmount!() -> (U256)
 ```
 
-Returns the dust amount of an UTXO.
+Gibt den Staubbetrag einer UTXO zurück.
 
-> @returns *the dust amount of an UTXO*
+> @returns *der Staubbetrag eines UTXO*
 
 ---
 
@@ -924,11 +924,11 @@ Returns the dust amount of an UTXO.
 fn toI256!(from:U256) -> (I256)
 ```
 
-Converts U256 to I256.
+Konvertiert U256 in I256.
 
-> @param **from** *a U256 to be converted*
+> @param **from** *ein zu konvertierendes U256*
 >
-> @returns *a I256*
+> @returns *ein I256*
 
 ---
 
@@ -938,11 +938,11 @@ Converts U256 to I256.
 fn toU256!(from:I256) -> (U256)
 ```
 
-Converts I256 to U256.
+Konvertiert I256 in U256.
 
-> @param **from** *a I256 to be converted*
+> @param **from** *ein zu konvertierendes I256*
 >
-> @returns *a U256*
+> @returns *ein U256*
 
 ---
 
@@ -952,11 +952,11 @@ Converts I256 to U256.
 fn toByteVec!(from:Bool|I256|U256|Address) -> (ByteVec)
 ```
 
-Converts Bool/I256/U256/Address to ByteVec
+Konvertiert Bool/I256/U256/Adresse in ByteVec
 
-> @param **from** *a Bool|I256|U256|Address to be converted*
+> @param **from** *ein Bool|I256|U256|Adresse, das konvertiert werden soll*
 >
-> @returns *a ByteVec*
+> @returns *ein ByteVec*
 
 ---
 
@@ -966,11 +966,11 @@ Converts Bool/I256/U256/Address to ByteVec
 fn contractIdToAddress!(contractId:ByteVec) -> (Address)
 ```
 
-Converts contract id (ByteVec) to contract address (Address).
+Konvertiert die Vertrags-ID (ByteVec) in die Vertragsadresse (Adresse).
 
-> @param **contractId** *the input contract id*
+> @param **contractId** *die Eingabe-Vertrags-ID*
 >
-> @returns *a contract Address*
+> @returns *eine Vertragsadresse*
 
 ---
 
@@ -980,11 +980,11 @@ Converts contract id (ByteVec) to contract address (Address).
 fn addressToContractId!(contractAddress:Address) -> (ByteVec)
 ```
 
-Converts contract address (Address) to contract id (ByteVec)
+Konvertiert die Vertragsadresse (Adresse) in die Vertrags-ID (ByteVec).
 
-> @param **contractAddress** *the input contract address*
+> @param **contractAddress** *die Eingabe-Vertragsadresse*
 >
-> @returns *a contract id*
+> @returns *eine Vertrags-ID*
 
 ---
 
@@ -994,11 +994,11 @@ Converts contract address (Address) to contract id (ByteVec)
 fn byteVecToAddress!(bytes:ByteVec) -> (Address)
 ```
 
-Converts ByteVec to Address.
+Konvertiert ByteVec in Adresse.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an Address*
+> @returns *eine Adresse*
 
 ---
 
@@ -1008,11 +1008,11 @@ Converts ByteVec to Address.
 fn u256To1Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 1 byte.
+Konvertiert U256 in 1 Byte.
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *1 byte*
+> @returns *1 Byte*
 
 ---
 
@@ -1022,11 +1022,11 @@ Converts U256 to 1 byte.
 fn u256To2Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 2 big-endian bytes.
+Konvertiert U256 in 2 Big-Endian-Bytes.
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *2 bytes*
+> @returns *2 Bytes*
 
 ---
 
@@ -1036,11 +1036,11 @@ Converts U256 to 2 big-endian bytes.
 fn u256To4Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 4 big-endian bytes.
+Konvertiert U256 in 4 Big-Endian-Bytes
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *4 bytes*
+> @returns *4 Bytes*
 
 ---
 
@@ -1050,11 +1050,11 @@ Converts U256 to 4 big-endian bytes.
 fn u256To8Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 8 big-endian bytes.
+Konvertiert U256 in 8 Byte im Big-Endian-Format.
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *8 bytes*
+> @returns *8 Bytes*
 
 ---
 
@@ -1064,11 +1064,11 @@ Converts U256 to 8 big-endian bytes.
 fn u256To16Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 16 big-endian bytes.
+Konvertiert U256 in 16 Big-Endian-Bytes.
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *16 bytes*
+> @returns *16 Bytes*
 
 ---
 
@@ -1078,11 +1078,11 @@ Converts U256 to 16 big-endian bytes.
 fn u256To32Byte!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to 32 big-endian bytes.
+Konvertiert U256 in 32 Big-Endian-Bytes.
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *32 bytes*
+> @returns *32 Bytes*
 
 ---
 
@@ -1092,11 +1092,11 @@ Converts U256 to 32 big-endian bytes.
 fn u256ToString!(u256:U256) -> (ByteVec)
 ```
 
-Converts U256 to string in ByteVec.
+Konvertiert U256 in Zeichenkette in ByteVec.
 
-> @param **u256** *the input U256*
+> @param **u256** *die Eingabe-U256*
 >
-> @returns *Converted string in ByteVec*
+> @returns *die in ByteVec umgewandelte Zeichenkette*
 
 ---
 
@@ -1106,11 +1106,11 @@ Converts U256 to string in ByteVec.
 fn i256ToString!(i256:I256) -> (ByteVec)
 ```
 
-Converts I256 to string in ByteVec.
+Konvertiert I256 in Zeichenkette in ByteVec.
 
-> @param **i256** *the input I256*
+> @param **i256** *die Eingabe-U256*
 >
-> @returns *Converted string in ByteVec*
+> @returns *die in ByteVec umgewandelte Zeichenkette*
 
 ---
 
@@ -1120,11 +1120,11 @@ Converts I256 to string in ByteVec.
 fn boolToString!(bool:Bool) -> (ByteVec)
 ```
 
-Converts Bool to string in ByteVec.
+Konvertiert Bool in Zeichenkette in ByteVec.
 
-> @param **bool** *the input Bool*
+> @param **bool** *die Eingabe-Bool*
 >
-> @returns *Converted string in ByteVec*
+> @returns *die in ByteVec umgewandelte Zeichenkette*
 
 ---
 
@@ -1134,11 +1134,11 @@ Converts Bool to string in ByteVec.
 fn u256From1Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 1 byte to U256.
+Konvertiert 1 Byte in U256.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an U256*
+> @returns *eine U256*
 
 ---
 
@@ -1148,11 +1148,11 @@ Converts 1 byte to U256.
 fn u256From2Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 2 big-endian bytes to U256.
+Konvertiert 2 Big-Endian-Bytes in U256.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an U256*
+> @returns *eine U256*
 
 ---
 
@@ -1162,11 +1162,11 @@ Converts 2 big-endian bytes to U256.
 fn u256From4Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 4 big-endian bytes to U256.
+Konvertiert 4 Big-Endian-Bytes in U256.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an U256*
+> @returns *eine U256*
 
 ---
 
@@ -1176,11 +1176,11 @@ Converts 4 big-endian bytes to U256.
 fn u256From8Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 8 big-endian bytes to U256.
+Konvertiert 8 Big-Endian-Bytes in U256.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an U256*
+> @returns *eine U256*
 
 ---
 
@@ -1190,11 +1190,11 @@ Converts 8 big-endian bytes to U256.
 fn u256From16Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 16 big-endian bytes to U256.
+Konvertiert 16 Big-Endian-Bytes in U256.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an U256*
+> @returns *eine U256*
 
 ---
 
@@ -1204,11 +1204,11 @@ Converts 16 big-endian bytes to U256.
 fn u256From32Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Converts 32 big-endian bytes to U256.
+Konvertiert 32 Big-Endian-Bytes in U256.
 
-> @param **bytes** *the input ByteVec*
+> @param **bytes** *die Eingabe-ByteVec*
 >
-> @returns *an U256*
+> @returns *eine U256*
 
 ---
 
@@ -1220,11 +1220,11 @@ Converts 32 big-endian bytes to U256.
 fn size!(bytes:ByteVec) -> (U256)
 ```
 
-Returns the size of the ByteVec.
+Gibt die Größe des ByteVec zurück.
 
-> @param **bytes** *a ByteVec*
+> @param **bytes** *eine ByteVec*
 >
-> @returns *the size of the ByteVec*
+> @returns *die Größe der ByteVec*
 
 ---
 
@@ -1234,15 +1234,15 @@ Returns the size of the ByteVec.
 fn byteVecSlice!(bytes:ByteVec, from:U256, until:U256) -> (ByteVec)
 ```
 
-Selects an interval of bytes.
+Wählt ein Intervall von Bytes aus.
 
-> @param **bytes** *a ByteVec*
+> @param **bytes** *eine ByteVec*
 >
-> @param **from** *the lowest index to include from the ByteVec*
+> @param **from** *der niedrigste Index, der von der ByteVec einbezogen werden soll*
 >
-> @param **until** *the lowest index to exclude from the ByteVec*
+> @param **until** *der niedrigste Index, der von der ByteVec ausgeschlossen werden soll*
 >
-> @returns *a ByteVec containing the elements greater than or equal to index from extending up to (but not including) index until of this ByteVec*
+> @returns *aeine ByteVec, die die Elemente ab Index oder höher enthält, bis (aber nicht einschließlich) Index, von dieser ByteVec erstreckt*
 
 ---
 
@@ -1252,11 +1252,11 @@ Selects an interval of bytes.
 fn encodeToByteVec!(...any) -> (ByteVec)
 ```
 
-Encodes inputs as big-endian ByteVec.
+Kodiert Eingaben als Big-Endian ByteVec.
 
-> @param **any** *a sequence of input values*
+> @param **any** *eine Sequenz von Eingabewerten*
 >
-> @returns *a ByteVec encoding the inputs*
+> @returns *eine ByteVec, die die Eingaben kodiert*
 
 ---
 
@@ -1268,11 +1268,11 @@ Encodes inputs as big-endian ByteVec.
 fn blake2b!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Blake2b-256 hash of the input.
+Berechnet den Blake2b-256-Hash der Eingabe.
 
-> @param **data** *the input data to be hashed*
+> @param **data** *die zu hashenden Eingabedaten*
 >
-> @returns *the 32 bytes hash result*
+> @returns *das 32-Byte-Hashergebnis*
 
 ---
 
@@ -1282,11 +1282,11 @@ Computes the Blake2b-256 hash of the input.
 fn keccak256!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Keccak256 hash of the input.
+Berechnet den Keccak256-Hash der Eingabe.
 
-> @param **data** *the input data to be hashed*
+> @param **data** *die zu hashenden Eingabedaten*
 >
-> @returns *the hash result*
+> @returns *das Hashergebnis*
 
 ---
 
@@ -1296,11 +1296,11 @@ Computes the Keccak256 hash of the input.
 fn sha256!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Sha256 hash of the input.
+Berechnet den Sha256-Hash der Eingabe.
 
-> @param **data** *the input data to be hashed*
+> @param **data** *die zu hashenden Eingabedaten*
 >
-> @returns *the hash result*
+> @returns *das Hashergebnis*
 
 ---
 
@@ -1310,11 +1310,11 @@ Computes the Sha256 hash of the input.
 fn sha3!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Sha3 hash of the input.
+Berechnet den Sha3-Hash der Eingabe.
 
-> @param **data** *the input data to be hashed*
+> @param **data** *die zu hashenden Eingabedaten*
 >
-> @returns *the hash result*
+> @returns *das Hashergebnis*
 
 ---
 
@@ -1324,9 +1324,9 @@ Computes the Sha3 hash of the input.
 fn verifyTxSignature!(publicKey:ByteVec) -> ()
 ```
 
-Verifies the transaction SecP256K1 signature of a public key. The signature is signed against the transaction id.
+Überprüft die Transaktions-SecP256K1-Signatur eines öffentlichen Schlüssels. Die Signatur ist gegen die Transaktions-ID signiert.
 
-> @param **publicKey** *the public key (33 bytes) of the signer*
+> @param **publicKey** *der öffentliche Schlüssel (33 Bytes) des Signierenden*
 >
 > @returns
 
@@ -1338,9 +1338,9 @@ Verifies the transaction SecP256K1 signature of a public key. The signature is s
 fn getSegregatedSignature!() -> (ByteVec)
 ```
 
-The segregated signature of the transaction
+Die segregierte Signatur der Transaktion
 
-> @returns *the segregated signature of the transaction*
+> @returns *die segregierte Signatur der Transaktion*
 
 ---
 
@@ -1350,13 +1350,13 @@ The segregated signature of the transaction
 fn verifySecP256K1!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 ```
 
-Verifies the SecP256K1 signature of the input and public key.
+Überprüft die SecP256K1-Signatur der Eingabe und des öffentlichen Schlüssels.
 
-> @param **data** *the data (32 bytes) that was supposed to have been signed*
+> @param **data** *die Daten (32 Bytes), die eigentlich signiert werden sollten*
 >
-> @param **publicKey** *the public key (33 bytes) of the signer*
+> @param **publicKey** *der öffentliche Schlüssel (33 Bytes) des Signierenden*
 >
-> @param **signature** *the signature (64 bytes) value*
+> @param **signature** *der Signaturwert (64 Bytes)*
 >
 > @returns
 
@@ -1368,13 +1368,13 @@ Verifies the SecP256K1 signature of the input and public key.
 fn verifyED25519!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 ```
 
-Verifies the ED25519 signature of the input and public key.
+Überprüft die ED25519-Signatur der Eingabe und des öffentlichen Schlüssels.
 
-> @param **data** *the data (32 bytes) that was supposed to have been signed*
+> @param **data** *die Daten (32 Bytes), die eigentlich signiert werden sollten*
 >
-> @param **publicKey** *the public key (32 bytes) of the signer*
+> @param **publicKey** *der öffentliche Schlüssel (32 Bytes) des Signierenden*
 >
-> @param **signature** *the signature value (64 bytes)*
+> @param **signature** *der Signaturwert (64 Bytes)*
 >
 > @returns
 
@@ -1386,13 +1386,13 @@ Verifies the ED25519 signature of the input and public key.
 fn verifyBIP340Schnorr!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 ```
 
-Verifies the BIP340 Schnorr signature of the input and public key.
+Überprüft die BIP340 Schnorr-Signatur der Eingabe und des öffentlichen Schlüssels.
 
-> @param **data** *the data (32 bytes) that was supposed to have been signed*
+> @param **data** *die Daten (32 Bytes), die eigentlich signiert werden sollten*
 >
-> @param **publicKey** *the public key (32 bytes) of the signer*
+> @param **publicKey** *der öffentliche Schlüssel (32 Bytes) des Signierenden*
 >
-> @param **signature** *the signature value (64 bytes)*
+> @param **signature** *der Signaturwert (64 Bytes)*
 >
 > @returns
 
@@ -1404,13 +1404,13 @@ Verifies the BIP340 Schnorr signature of the input and public key.
 fn ethEcRecover!(data:ByteVec, signature:ByteVec) -> (ByteVec)
 ```
 
-Recovers the ETH account that signed the data.
+Stellt das ETH-Konto wieder her, das die Daten signiert hat.
 
-> @param **data** *the data that was supposed to have been signed*
+> @param **data** *die Daten, die eigentlich signiert werden sollten*
 >
-> @param **signature** *the signature value*
+> @param **signature** *der Signaturwert*
 >
-> @returns *the ETH account that signed the data*
+> @returns *das ETH-Konto, das die Daten signiert hat*
 
 ---
 

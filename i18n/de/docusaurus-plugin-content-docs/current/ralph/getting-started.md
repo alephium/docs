@@ -1,27 +1,27 @@
 ---
 sidebar_position: 10
-title: Getting Started
-sidebar_label: Getting started
+title: Einstieg
+sidebar_label: Einstieg
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Introduction
+## Einführung
 
-Ralph is the smart contract programming language for the Alephium blockchain, which focuses on three goals: security, simplicity and efficiency. This tutorial provides tips for writing clean, idiomatic, and secure Ralph smart contracts. We follow the following principles when designing Ralph:
-1. Make the smart contract DSL as simple as possible.
-2. There should be one-- and preferably only one --obvious way to do it.
-3. Make good practices built-in.
+Ralph ist die Programmiersprache für Smart Contracts auf der Alephium-Blockchain und konzentriert sich auf drei Ziele: Sicherheit, Einfachheit und Effizienz. Dieses Tutorial bietet Tipps zum Schreiben von sauberen, idiomatischen und sicheren Ralph Smart Contracts. Wir folgen den folgenden Prinzipien bei der Gestaltung von Ralph:
+1. Halte die DSL (Domain Specific Language) für Smart Contracts so einfach wie möglich.
+2. Es sollte eine – und vorzugsweise nur eine – offensichtliche Möglichkeit geben, es zu tun.
+3. Integriere bewährte Praktiken von Anfang an.
 
-## Types
+## Typen
 
-Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to type inference.
-All types of Ralph are value types, i.e. they are always copied when they are used as function arguments or assigned.
-Currently, Ralph only supports the following data types:
+Ralph ist eine statisch typisierte Sprache, aber dank Typinferenz müssen Sie den Typ für lokale Variablen und Konstanten nicht angeben.
+Alle Typen in Ralph sind Werttypen, das heißt, sie werden immer kopiert, wenn sie als Funktionsargumente verwendet oder zugewiesen werden.
+Derzeit unterstützt Ralph nur die folgenden Datentypen:
 
-### Primitive Types
+### Primitive Typen
 
 #### U256
 
@@ -69,9 +69,9 @@ let c = #
 let a = @1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH
 ```
 
-### Fixed Size Array
+### Festgrößen-Arrays
 
-The syntax for fixed-size arrays is influenced by Rust.
+Die Syntax für Festgrößen-Arrays ist von Rust beeinflusst.
 
 ```rust
 // The type of `a0` is [U256; 4]
@@ -89,15 +89,15 @@ let a3 = [#00, #11, #22, #33]
 
 ### Mapping
 
-Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like data structure to provide map-like functionality and mitigate the state bloat issue.
+Ralph verwendet [subcontract](/ralph/getting-started#subcontract) anstelle einer datenbankähnlichen Datenstruktur, um eine funktionsähnliche Funktionalität bereitzustellen und das Problem des Staatsaufblähens zu mildern.
 
-### Struct
+### Struktur
 
-Currently, Ralph does not support user-defined data types, but it will be supported in the future.
+Derzeit unterstützt Ralph keine benutzerdefinierten Datentypen, aber dies wird in Zukunft unterstützt werden.
 
-## Functions
+## Funktionen
 
-Functions are the executable units of code, you can also define functions inside a contract.
+Funktionen sind die ausführbaren Einheiten des Codes. Sie können auch Funktionen innerhalb eines Vertrags definieren.
 
 ### Function Signatures
 
@@ -118,9 +118,9 @@ fn foo(a: U256, b: Boolean) -> U256
 fn foo(a: U256, b: Boolean) -> (U256, ByteVec, Address)
 ```
 
-### Local Variables
+### Lokale Variablen
 
-A function cannot have duplicate variable definitions, and the variable name in the function cannot be the same as the contract field name.
+Eine Funktion kann keine doppelten Variablendefinitionen haben, und der Variablenname in der Funktion darf nicht mit dem Namen des Vertragsfeldes übereinstimmen.
 
 ```rust
 fn foo() -> () {
@@ -147,7 +147,7 @@ fn baz() -> () {
 }
 ```
 
-### Control Structures
+### Kontroll-Strukturen
 
 #### Return statements
 
@@ -201,11 +201,11 @@ fn foo() -> () {
 ```
 
 :::note
-`break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert function](/ralph/built-in-functions#assert).
+Anweisungen wie `break` und `continue` werden in `for` und `while`-Schleifen nicht unterstützt, da sie in einigen Fällen als schlechte Praxis angesehen werden können. Es wird empfohlen, sie durch ein vorzeitiges `return` oder eine [assert function](/ralph/built-in-functions#assert) zu ersetzen.
 :::
 
 :::note
-In Ralph, each function has only one scope, so you can not define duplicated variables in the `while` or `for` block:
+In Ralph hat jede Funktion nur einen Geltungsbereich (Scope), sodass es nicht möglich ist, doppelte Variablen im `while` oder `for` -Block zu definieren:
 
 ```rust
 let value = 0
@@ -214,12 +214,12 @@ while (true) {
   // ...
 }
 ```
-This is an on-purpose design since variable shadowing is generally not a good practice.
+Dies ist eine bewusste Designentscheidung, da das Verdecken von Variablen im Allgemeinen keine gute Praxis ist.
 :::
 
-### Error Handling
+### Fehlerbehandlung
 
-Ralph provides two builtin assertion functions for error handling: [assert!](/ralph/built-in-functions#assert) and [panic!](/ralph/built-in-functions#panic). Assertion failure will revert all changes made to the world state by the transaction and stop the execution of the transaction immediately.
+Ralph bietet zwei integrierte Assertionsfunktionen für die Fehlerbehandlung:  [assert!](/ralph/built-in-functions#assert) und [panic!](/ralph/built-in-functions#panic). Ein Fehler bei der Assertion führt dazu, dass alle Änderungen am Weltzustand durch die Transaktion rückgängig gemacht werden und die Ausführung der Transaktion sofort gestoppt wird.
 
 ```rust
 enum ErrorCodes {
@@ -241,9 +241,9 @@ fn bar(cond: Boolean) -> U256 {
 }
 ```
 
-### Function Calls
+### Funktionsaufrufe
 
-Functions of the current contract can be called directly ('internally') or recursively:
+Funktionen des aktuellen Vertrags können direkt ('intern') oder rekursiv aufgerufen werden:
 
 ```rust
 Contract Foo() {
@@ -263,7 +263,7 @@ Contract Foo() {
 }
 ```
 
-Functions can also be called externally using the `bar.func()` notation, where `bar` is a contract instance and `func` is a function belonging to `bar`:
+Funktionen können auch extern mit der Notation `bar.func()` aufgerufen werden, wobei  `bar` eine Vertragsinstanz und `func` eine Funktion von `bar`ist:
 
 ```rust
 Contract Bar() {
@@ -283,24 +283,24 @@ Contract Foo() {
 }
 ```
 
-### Builtin Functions
+### Eingebaute Funktionen
 
-Ralph provides lots of builtin functions, you can refer to [here](/ralph/built-in-functions).
+Ralph bietet viele eingebaute Funktionen, auf die Sie [hier](/ralph/built-in-functions) verweisen können.
 
-### Annotations
+### Annotationen
 
-The Ralph function also supports annotations, currently the only valid annotation is the `@using` annotation, and user-defined annotations will be supported in the future if necessary.
+Die Ralph-Funktion unterstützt auch Annotationen. Derzeit ist die einzige gültige Annotation die `@using`-Annotation, und benutzerdefinierte Annotationen werden in Zukunft unterstützt, wenn dies erforderlich ist.
 
-The `@using` annotation has four optional fields:
+Die `@using`-Annotation hat vier optionale Felder:
 
-* `preapprovedAssets = true/false`: whether the function uses user-approved assets. The default value is `false` for contracts, `true` for scripts.
-* `assetsInContract = true/false`: whether the function uses contract assets. The default value is `false` for contracts
-* `checkExternalCaller = true/false`: whether the function checks the caller. The default value is `true` for contracts
-* `updateFields = true/false`: whether the function changes contract fields. The default value is `false` for contracts
+* `preapprovedAssets = true/false`: ob die Funktion Assets verwendet, für die der Benutzer zugestimmt hat. Der Standardwert ist `false` für Verträge und `true` für Skripte.
+* `assetsInContract = true/false`: ob die Funktion Vertragsvermögen verwendet. Der Standardwert ist `false` für Verträge.
+* `checkExternalCaller = true/false`: ob die Funktion den Aufrufer überprüft. Der Standardwert ist `true` für Verträge.
+* `updateFields = true/false`: ob die Funktion Vertragsfelder ändert. Der Standardwert ist  `false` für contracts
 
-#### Using Approved Assets
+#### Verwendung von vorab genehmigten Vermögenswerten
 
-In Ralph, if a function uses assets, then the caller needs to explicitly approve assets. And all functions in the call stack must be annotated with `@using(preapprovedAssets = true)`.
+In Ralph muss der Aufrufer, wenn eine Funktion Vermögenswerte verwendet, die Vermögenswerte ausdrücklich genehmigen. Und alle Funktionen im Aufrufstapel müssen mit `@using(preapprovedAssets = true)`.
 
 ```rust
 Contract Foo() {
@@ -320,12 +320,12 @@ Contract Foo() {
 }
 ```
 
-For the `preapprovedAssets` annotation, the compiler will do the following checks:
+Für die Annotation `preapprovedAssets` überprüft der Compiler Folgendes:
 
-1. If a function is annotated `preapprovedAssets = true` but don't use the braces syntax, the compiler will report an error
-2. If a function call uses the braces syntax but the function is not annotated `preapprovedAssets = true`, the compiler will report an error
+1. Wenn eine Funktion mit  `preapprovedAssets = true` annotiert ist, aber nicht die Syntax mit geschweiften Klammern verwendet, gibt der Compiler einen Fehler aus.
+2. Wenn ein Funktionsaufruf die Syntax mit geschweiften Klammern verwendet, die Funktion jedoch nicht mit `preapprovedAssets = true` annotiert ist, gibt der Compiler einen Fehler aus.
 
-#### Using Contract Assets
+#### Verwendung von Vertragsvermögen
 
 ```rust
 Contract Foo() {
@@ -344,15 +344,15 @@ Contract Foo() {
 }
 ```
 
-For the `assetsInContract` annotation, the compiler will do the following checks:
+Für die Annotation `assetsInContract` überprüft der Compiler Folgendes:
 
-1. If a function is annotated `assetsInContract = true` but does not use contract assets, the compiler will report an error
+1. Wenn eine Funktion mit `assetsInContract = true` annotiert ist, aber keine Vertragsvermögen verwendet, gibt der Compiler einen Fehler aus.
 
-You can find more information about asset permission at [here](/ralph/asset-permission-system).
+Weitere Informationen zur Berechtigung für Vermögenswerte finden Sie [hier](/ralph/asset-permission-system).
 
-#### Update Fields
+#### Feldaktualisierungen
 
-Functions that update fields will change the current contract fields. If a function changes the contract fields but without the `@using(updateFields = true)` annotation, the compiler will report a warning; if a function does not change the contract fields but annotated with `@using(updateFields = true)`, the compiler will report a warning as well.
+Funktionen, die Felder aktualisieren, ändern die aktuellen Felder des Vertrags. Wenn eine Funktion die Vertragsfelder ändert, aber ohne die Annotation `@using(updateFields = true)` , gibt der Compiler eine Warnung aus. Wenn eine Funktion die Vertragsfelder nicht ändert, aber mit `@using(updateFields = true)` annotiert ist, gibt der Compiler ebenfalls eine Warnung aus.
 
 ```rust
 Contract Foo(a: U256, mut b: Boolean) {
@@ -376,17 +376,17 @@ Contract Foo(a: U256, mut b: Boolean) {
 }
 ```
 
-#### Check External Caller
+#### Überprüfung des externen Aufrufers
 
-In smart contracts, we often need to check whether the caller of the contract function is authorized. To avoid bugs caused by unauthorized callers, the compiler will report warnings for all public functions that do not check for external callers. The warning can be suppressed with annotation `@using(checkExternalCaller = false)`.
+In Smart Contracts müssen wir oft überprüfen, ob der Aufrufer der Vertragsfunktion autorisiert ist. Um Bugs durch nicht autorisierte Aufrufer zu vermeiden, gibt der Compiler Warnungen für alle öffentlichen Funktionen aus, die nicht nach externen Aufrufern überprüfen. Die Warnung kann mit der Annotation `@using(checkExternalCaller = false)` unterdrückt werden.
 
-The compiler will skip the checking for simple view functions. A simple view function must satisfy all of the following conditions:
+Der Compiler überspringt die Überprüfung für einfache Ansichtsfunktionen. Eine einfache Ansichtsfunktion muss alle folgenden Bedingungen erfüllen:
 
-1. It cannot change the contract fields.
-2. It cannot use any assets.
-3. All sub-function calls must also be simple view functions.
+1. Sie kann die Vertragsfelder nicht ändern.
+2. Sie kann keine Vermögenswerte verwenden.
+3. Alle Aufrufe von Unterfunktionen müssen ebenfalls einfache Ansichtsfunktionen sein.
 
-To check the caller of a function, the built-in function [checkCaller!](/ralph/built-in-functions#checkcaller) has to be used.
+Um den Aufrufer einer Funktion zu überprüfen, muss die integrierte Funktion [checkCaller!](/ralph/built-in-functions#checkcaller) verwendet werden.
 
 ```rust
 Contract Foo(barId: ByteVec, mut b: Boolean) {
@@ -428,7 +428,7 @@ Contract Foo(barId: ByteVec, mut b: Boolean) {
 }
 ```
 
-There is another scenario where the compiler will report warnings if a contract calls a function through an interface, this is because we do not know if the implementation of the function needs to check the external caller:
+Es gibt noch einen anderen Fall, in dem der Compiler Warnungen ausgeben wird, wenn ein Vertrag eine Funktion über eine Schnittstelle aufruft. Das liegt daran, dass wir nicht wissen, ob die Implementierung der Funktion den externen Aufrufer überprüfen muss:
 
 ```rust
 Interface Bar() {
@@ -443,18 +443,19 @@ Contract Foo() {
 }
 ```
 
-## Contracts
+## Verträge (Contracts)
 
 :::info
-Each Alephium's contract has 3 forms of unique identification:
-1. **Address**: each contract has a unique address
-2. **Contract ID**: each contract has a unique contract ID
-3. **Token ID**: each contract can issue a token with the same ID as its own contract ID
+Jeder Alephium-Vertrag hat drei Formen der eindeutigen Identifikation:
+1. **Address**: Jeder Vertrag hat eine eindeutige Adresse.
+2. **Contract ID**: Jeder Vertrag hat eine eindeutige Vertrags-ID.
+3. **Token ID**: Jeder Vertrag kann eine Token mit der gleichen ID wie seine eigene Vertrags-ID ausgeben.
 
-In Ralph, the contract ID is used more frequently. Contract ids can be converted from/to other forms with Ralph's built-in functions or web3 SDK.
+
+In Ralph wird die Vertrags-ID häufiger verwendet. Vertrags-IDs können von/zu anderen Formen mit den integrierten Funktionen oder dem Web3 SDK von Ralph konvertiert werden.
 :::
 
-Contracts in Ralph are similar to classes in object-oriented languages. Each contract can contain declarations of contract fields, events, constants, enums, and functions. All these declarations must be inside a contract. Furthermore, contracts can inherit from other contracts.
+Verträge in Ralph ähneln Klassen in objektorientierten Sprachen. Jeder Vertrag kann Deklarationen von Vertragsfeldern, Ereignissen, Konstanten, Enums und Funktionen enthalten. Alle diese Deklarationen müssen innerhalb eines Vertrags erfolgen. Darüber hinaus können Verträge von anderen Verträgen erben.
 
 ```rust
 // This is a comment, and currently Ralph only supports line comments.
@@ -484,9 +485,9 @@ Contract MyToken(supply: U256, name: ByteVec) {
 }
 ```
 
-### Fields
+### Felder
 
-Contract fields are permanently stored in the contract storage, and the fields can be changed by the contract code. Applications can get the contract fields through the REST API of an Alephium client.
+Vertragsfelder werden dauerhaft im Vertragsspeicher gespeichert, und die Felder können vom Vertragscode geändert werden. Anwendungen können die Vertragsfelder über die REST-API eines Alephium-Clients abrufen.
 
 ```rust
 // Contract `Foo` has two fields:
@@ -507,13 +508,13 @@ Contract Bar() {
 }
 ```
 
-### Contract Built-In Functions
+### Eingebaute Funktionen des Vertrags (Build-In Functions)
 
-Sometimes we need to create a contract within a contract, and in such cases, we need to encode the contract fields into `ByteVec`. Ralph provides a built-in function called `encodeFields` that can be used to encode the contract fields into `ByteVec`.
+Manchmal müssen wir einen Vertrag innerhalb eines Vertrags erstellen, und in solchen Fällen müssen wir die Vertragsfelder in `ByteVec`codieren. Ralph bietet eine integrierte Funktion namens `encodeFields` die verwendet werden kann, um die Vertragsfelder in `ByteVec` zu codieren.
 
-The parameter type of the `encodeFields` function is a list of the types of the contract fields, arranged in the order of their definitions. And the function returns two `ByteVec` values, where the first one is the encoded immutable fields, and the second one is the encoded mutable fields.
+Der Parametertyp der Funktion `encodeFields` ist eine Liste der Typen der Vertragsfelder, angeordnet in der Reihenfolge ihrer Definitionen. Die Funktion gibt zwei `ByteVec` -Werte zurück, wobei der erste die codierten unveränderlichen Felder und der zweite die codierten veränderlichen Felder sind.
 
-There is an example:
+Hier ist ein Beispiel:
 
 ```rust
 Contract Foo(a: U256, mut b: I256, c: ByteVec, mut d: Bool) {
@@ -529,9 +530,9 @@ Contract Bar() {
 }
 ```
 
-### Events
+### Ereignisse
 
-Events are dispatched signals that contracts can fire. Applications can listen to these events through the REST API of an Alephium client.
+Ereignisse sind ausgelöste Signale, die Verträge feuern können. Anwendungen können diesen Ereignissen über die REST-API eines Alephium-Clients lauschen.
 
 ```rust
 Contract Token() {
@@ -547,9 +548,9 @@ Contract Token() {
 }
 ```
 
-### SubContract
+### Untervertrag (SubContract)
 
-Alephium's virtual machine supports subcontract. Subcontracts can be used as map-like data structure but they are less prone to the state bloat issue. A subcontract can be created by a parent contract with a unique subcontract path.
+Alephiums virtuelle Maschine unterstützt Unterverträge. Unterverträge können als map-ähnliche Datenstruktur verwendet werden, sind jedoch weniger anfällig für das Problem des wachsenden Speicherplatzes. Ein Untervertrag kann von einem übergeordneten Vertrag mit einem eindeutigen Untervertragspfad erstellt werden.
 
 ```rust
 Contract Bar(value: U256) {
@@ -586,11 +587,11 @@ Contract Foo(barTemplateId: ByteVec) {
 }
 ```
 
-### Contract Creation inside a Contract
+### Erstellung eines Vertrags innerhalb eines Vertrags
 
-Ralph supports creating contracts programmatically within contracts, Ralph provides some builtin functions to create contracts, you can find more information at [here](/ralph/built-in-functions#contract-functions).
+Ralph unterstützt die programmatische Erstellung von Verträgen innerhalb von Verträgen. Ralph stellt einige integrierte Funktionen zum Erstellen von Verträgen bereit. Weitere Informationen finden Sie [hier](/ralph/built-in-functions#contract-functions).
 
-If you want to create multiple instances of a contract, then you should use the `copyCreateContract!` builtin functions, which will reduce a lot of on-chain storage and transaction gas fee.
+Wenn Sie mehrere Instanzen eines Vertrags erstellen möchten, sollten Sie die integrierten Funktionen `copyCreateContract!` verwenden, was eine Menge On-Chain-Speicher und Transaktionsgasgebühren reduzieren wird.
 
 ```rust
 Contract Foo(a: ByteVec, b: Address, mut c: U256) {
@@ -608,7 +609,7 @@ TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
 
 ### Migration
 
-Alephium's contracts can be upgraded with two migration functions: [migrate!](/ralph/built-in-functions#migrate) and [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Here are the three typical ways to use them:
+Alephium-Verträge können mit zwei Migrationsfunktionen aktualisiert werden: [migrate!](/ralph/built-in-functions#migrate) und [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Hier sind drei typische Möglichkeiten, sie zu verwenden:
 
 ```Rust
 fn upgrade(newCode: ByteVec) -> () {
@@ -628,9 +629,9 @@ fn upgrade(newCode: ByteVec) -> () {
 }
 ```
 
-## Inheritance
+## Vererbung
 
-Ralph also supports multiple inheritance, when a contract inherits from other contracts, only a single contract is created on the blockchain, and the code from all the parent contracts is compiled into the created contract.
+Ralph unterstützt auch mehrere Vererbungen. Wenn ein Vertrag von anderen Verträgen erbt, wird nur ein einziger Vertrag auf der Blockchain erstellt, und der Code aller übergeordneten Verträge wird in den erstellten Vertrag kompiliert.
 
 ```rust
 Abstract Contract Foo(a: U256) {
@@ -655,7 +656,7 @@ Contract Baz(a: U256, b: ByteVec) extends Foo(a), Bar(b) {
 ```
 
 :::note
-In Ralph, abstract contracts are not instantiable, which means the following code is invalid:
+In Ralph sind abstrakte Verträge nicht instanziierbar, was bedeutet, dass der folgende Code ungültig ist:
 
 ```rust
 let bazId = // The contract id of `Baz`
@@ -663,14 +664,14 @@ Foo(bazId).foo() // ERROR
 ```
 :::
 
-## Interface
+## Schnittstelle
 
-Interfaces are similar to abstract contracts with the following restrictions:
+Schnittstellen sind ähnlich wie abstrakte Verträge, unterliegen jedoch den folgenden Einschränkungen:
 
-* They cannot have any functions implemented.
-* They cannot inherit from other contracts, but they can inherit from other interfaces.
-* They cannot declare contract fields.
-* Contracts can only implements one interface.
+* Sie können keine implementierten Funktionen haben.
+* Sie können nicht von anderen Verträgen erben, sondern können von anderen Schnittstellen erben.
+* Sie können keine Vertragsfelder deklarieren.
+* Verträge können nur eine Schnittstelle implementieren.
 
 ```rust
 Interface Foo {
@@ -699,7 +700,7 @@ Contract Baz() implements Bar {
 }
 ```
 
-And you can instantiate a contract with interface:
+Und Sie können einen Vertrag mit einer Schnittstelle instanziieren:
 
 ```rust
 let bazId = // The contract id of `Baz`
@@ -708,12 +709,12 @@ let _ = Bar(bazId).bar()
 ```
 
 :::note
-Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph), so creating a large number of sub-contracts is not practical.
+Die Bereitstellung eines Vertrags erfordert die Hinterlegung einer bestimmten Menge an ALPH im Vertrag (derzeit 1 Alph), sodass die Erstellung einer großen Anzahl von Unterverträgen nicht praktikabel ist.
 :::
 
 ## TxScript
 
-A transaction script is a piece of code to interact with contracts on the blockchain. Transaction scripts can use the input assets of transactions in general. A script is disposable and will only be executed once along with the holder transaction.
+Ein Transaktionsskript ist ein Codefragment, das zur Interaktion mit Verträgen auf der Blockchain dient. Transaktionsskripte können in der Regel die Eingangsvermögen von Transaktionen nutzen. Ein Skript ist einmalig und wird nur zusammen mit der Transaktion, die es enthält, ausgeführt.
 
 ```rust
 Contract Foo() {
