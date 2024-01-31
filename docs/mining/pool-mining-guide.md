@@ -136,6 +136,12 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
 
+#### Vipor.net
+
+- Website: https://vipor.net
+- Discord: https://discord.gg/4tQU83Yq3Z
+- Telegram: https://t.me/vipornet
+
 ⚠️ **Make sure you use the latest version of the mining software**
 
 ### Alephium GPU-Miner
