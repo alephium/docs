@@ -15,7 +15,7 @@ sidebar_label: Erste Schritte
 
 :::info
 
-Standardmäßig ist die Wallet mit dem öffentlichen Alephium-Knoten verbunden. Wenn du deinen eigenen Knoten verwenden oder die Wallet offline erstellen möchtest, kannst du dies tun, indem du auf das Einstellungsrad oben rechts in der App klickst und den Node Host auf deinen localhost änderst oder ihn einfach leer lässt, um die Wallet offline zu erstellen.
+Standardmäßig ist die Wallet mit dem öffentlichen Alephium-Node verbunden. Wenn du deinen eigenen Node verwenden oder die Wallet offline erstellen möchtest, kannst du dies tun, indem du auf das Einstellungsrad oben rechts in der App klickst und den Node Host auf deinen localhost änderst oder ihn einfach leer lässt, um die Wallet offline zu erstellen.
 
 :::
 

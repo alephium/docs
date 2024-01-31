@@ -4,32 +4,28 @@ title: Non-fungible Tokens (NFTs)
 sidebar_label: Non-fungible Tokens
 ---
 
-Non-fungible tokens (NFTs) on Alephium have several unique characteristics
-compared to NFTs on other blockchains:
+Non-fungible tokens (NFTs) auf Alephium weisen im Vergleich zu 
+NFTs auf anderen Blockchains mehrere einzigartige Merkmale auf:
 
-- True ownership based on the UTXO model: Like other types of tokens on Alephium, NFTs are securely managed by UTXOs, which are directly owned by addresses. Since UTXOs are protected by users' private keys, even if there are bugs in the NFT contract, users' assets remain safe.
+- Echte Eigentumsübertragung basierend auf dem UTXO-Modell: Wie andere Arten von Tokens auf Alephium werden NFTs sicher durch UTXOs verwaltet, die sich direkt im Besitz von Adressen befinden. Da UTXOs durch die privaten Schlüssel der Benutzer geschützt sind, bleiben die Vermögenswerte der Benutzer auch dann sicher, wenn es Fehler im NFT-Vertrag gibt.
 
-- First-class support for NFTs: Tokens are native assets on Alephium. As a result, users’ NFTs can be easily discovered and displayed by wallets, explorers, and dApps without relying on third-party services.
+- Erstklassige Unterstützung für NFTs: Tokens sind native Vermögenswerte auf Alephium. Daher können die NFTs der Benutzer einfach von Wallets, Explorern und dApps gefunden und angezeigt werden, ohne auf Dienste von Drittanbietern angewiesen zu sein.
 
-- Higher security thanks to Alephium’s VM and contract language: Alephium's virtual machine (VM) and contract language eliminate the need for a separate approval transaction during NFT trading, reducing associated risks. This simplifies the process of writing secure NFT contracts for developers with the help of tools such as the [Asset
-  Permission System](/ralph/asset-permission-system).
+- Höhere Sicherheit dank Alephiums VM und Vertragssprache: Alephiums Virtual Machine (VM) und Vertragssprache eliminieren die Notwendigkeit für eine separate Genehmigungstransaktion während des NFT-Handels, was die damit verbundenen Risiken reduziert. Dies vereinfacht den Prozess des Schreibens sicherer NFT-Verträge für Entwickler mithilfe von Tools wie dem [Asset Permission System](/ralph/asset-permission-system).
 
-- Sub-contract system: In Alephium, there is no [mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types) data structure. Collections are created with a parent contract (the collection) and [sub-contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (the items). Each sub-contract represents an NFT in this collection, and all metadata is tied to it. This is a native feature of the Alephium Blockchain that allows Alephium’s NFTs to be unique (one token per sub-contract) or semi-fungible, as the same minting contract can create more than one token.
+- Sub-Vertragsystem: In Alephium gibt es keine [Mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types)-Datenstruktur. Kollektionen werden mit einem übergeordneten Vertrag (der Kollektion) und [Sub-Contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (den Einzelteilen) erstellt. Jeder Sub-Contract repräsentiert ein NFT in dieser Kollektion, und alle Metadaten sind damit verbunden. Dies ist eine native Funktion der Alephium-Blockchain, die es ermöglicht, dass Alephiums NFTs einzigartig (ein Token pro Sub-Contract) oder halb-fungibel sind, da derselbe Minting-Contract mehr als ein Token erstellen kann.
 
-- Efficient transaction batching: Multiple NFTs and users can be involved in a single transaction.
+- Effiziente Transaktionsbündelung: Mehrere NFTs und Benutzer können an einer einzigen Transaktion beteiligt sein.
 
-- Cheaper transaction fees and higher throughput: NFT transactions will benefit from Alephium's sharding algorithm.
+- Günstigere Transaktionsgebühren und höhere Durchsatzrate: NFT-Transaktionen profitieren von Alephiums Sharding-Algorithmus.
 
-- NFT scarcity: The supply of NFTs on Alephium is finite, as each NFT necessitates the deployment of its own individual sub-contract, which in turn requires a deposit of ALPH - currently set at 1 `ALPH`. This unique structure inherently imposes a limit on the production of NFTs on the platform, reinforcing the scarcity of NFTs on Alephium.
+- Knappheit von NFTs: Das Angebot an NFTs auf Alephium ist endlich, da jedes NFT die Bereitstellung seines eigenen individuellen Sub-Contracts erfordert, der wiederum eine Einzahlung von ALPH - derzeit auf 1 `ALPH`. festgelegt - erfordert. Diese einzigartige Struktur setzt von Natur aus eine Grenze für die Produktion von NFTs auf der Plattform und verstärkt die Knappheit von NFTs auf Alephium.
   
-### Non-fungible Token Standard
+### Non-fungible-Token Standard
 
-Both NFT collections and individual NFTs have metadata associated with
-them, such as `collectionUri`, `totalSupply` and `tokenUri`, etc. The
+Sowohl NFT-Kollektionen als auch individuelle NFTs verfügen über Metadaten, wie z.B. `collectionUri`, `totalSupply` und `tokenUri`, usw. Die
 [INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
-and
-[INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral)
-interfaces standardize the methods to fetch these metadata.
+und [INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral)-Schnittstellen standardisieren die Methoden zum Abrufen dieser Metadaten.
 
 ```rust
 // Standard interface for NFT collection
@@ -49,8 +45,8 @@ Interface INFT {
 }
 ```
 
-They are also annotated with the `@std` annotations to facilitate
-dApps and wallets to infer their contract/token types.
+Sie sind auch mit den `@std`-Annotationen versehen, 
+um es dApps und Wallets zu erleichtern, ihre Contract-/Token-Typen zu inferieren.
 
 ```typescript
 // Guess NFT token type
@@ -62,11 +58,11 @@ const isNFTCollection = await web3.getCurrentNodeProvider().guessFollowsNFTColle
 console.log("Is NFT collection", isNFTCollection)
 ```
 
-For contracts that implement
+Für Contracts, die
 [INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
-and
+und
 [INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral),
-SDK offers a canonical way to fetch their respective metadata:
+implementieren, bietet das SDK eine kanonische Methode zum Abrufen ihrer jeweiligen Metadaten:
 
 ```typescript
 // NFT Collection Metadata
@@ -78,8 +74,7 @@ const nftMetadata = await web3.getCurrentNodeProvider().fetchNFTMetadata(nft.con
 console.log("NFT Token URI, collection address", nftMetadata.tokenUri, nftMetadata.collectionAddress)
 ```
 
-For NFT collection, one of the metadata is `collectionUri`, which is
-an URI that points to an JSON document with the following schema:
+Für NFT-Kollektionen ist eine der Metadaten `collectionUri`, die eine URI ist und auf ein JSON-Dokument mit dem folgenden Schema verweist:
 
 ```typescript
 interface NFTCollectionUriMetaData {
@@ -89,8 +84,7 @@ interface NFTCollectionUriMetaData {
 }
 ```
 
-For individual NFT, one of the metadata is `tokenUri`, which is an URI
-that points to an JSON document with the following schema:
+Für individuelle NFTs ist eine der Metadaten `tokenUri`, die eine URI ist und auf ein JSON-Dokument mit dem folgenden Schema verweist:
 
 ```typescript
 interface NFTTokenUriMetaData {
@@ -106,45 +100,44 @@ interface NFTTokenUriMetaData {
 }
 ```
 
-### AlephiumNFT Marketplace
+### AlephiumNFT Marktplatz
 
-[AlephiumNFT](https://github.com/alephium/alephium-nft) marketplace is
-a proof-of-concept NFT marketplace to show case the capabilities of
-NFTs on Alephium. Here you can create NFT collections, discovery, mint
-and trade NFTs. You can also launch [Opensea
-Drop](https://docs.opensea.io/docs/drops-on-opensea) style public sale
-campaigns for your NFT collections. These campaigns are called `Flows`
-on `AlephiumNFT` marketplace.
+Der [AlephiumNFT](https://github.com/alephium/alephium-nft) Marktplatz ist 
+ein Proof-of-Concept-NFT-Marktplatz, der die Fähigkeiten von NFTs auf Alephium 
+präsentiert. Hier können sie NFT-Sammlungen erstellen, NFTs entdecken, prägen 
+und handeln. Sie können auch [Opensea Drop](https://docs.opensea.io/docs/drops-on-opensea)-style 
+öffentliche Verkaufskampagnen für Ihre NFT-Sammlungen starten. Diese Kampagnen werden auf 
+dem `AlephiumNFT`-Marktplatz als `Flows` bezeichnet.
 
-Create your own NFT collections should be pretty
-straightforward. Follow this [Twitter
-thread](https://twitter.com/alephium/status/1674397159947649030) for
-more details. If you want to create a `Flow` on `AlephiumNFT`
-marketplace,
-[@alephium/cli](https://www.npmjs.com/package/@alephium/cli) has a
-`nft` subcommand that can help with that.
+Die Erstellung eigener NFT-Sammlungen sollte recht einfach sein. 
+Folgen sie diesem  [Twitter thread](https://twitter.com/alephium/status/1674397159947649030) für weitere Details.
+Wenn sie einen `Flow` auf dem `AlephiumNFT` Marktplatz erstellen möchten, 
+kann Ihnen [@alephium/cli](https://www.npmjs.com/package/@alephium/cli) mit seinem
+`nft` Unterbefehl dabei helfen.
 
-#### Create Flows
+#### Flows erstellen
 
-Let's say you want to launch a public sale for your NFT collection
-that has `5` individual NFTs. Before you create a `Flow` for it, you
-should have `5` images ready first. If not, `@alephium/cli` offers a
-command for you to generate images using OpenAI's
-[DALL.E](https://openai.com/research/dall-e) models:
+Angenommen, sie möchten einen öffentlichen Verkauf für Ihre NFT-Sammlung 
+starten, die `5` individuelle NFTs hat. Bevor sie einen `Flow` dafür 
+erstellen, sollten sie zunächst `5` Bilder bereithalten. Wenn nicht, bietet
+ `@alephium/cli` einen Befehl, mit dem sie Bilder mithilfe von OpenAI's
+[DALL.E](https://openai.com/research/dall-e)-Modellen generieren können:
 
 ```bash
 export OPENAI_API_KEY=xxxx-xxxx-xxxx-xxxx
 npx @alephium/cli@latest nft generate-images-with-openai --number 5 -d /tmp/imagine "imagine all the people, living life in peace"
 ```
 
-This will create `5` images with the prompt `imagine all the
-people, living life in peace` and store them under the `/tmp/imagine`
-directory. Please skip this step if you have designed the images for
-your collection already.
+Das erstellt `5` Bilder mit der Aufforderung 
+`imagine all the people, living life in peace` und speichert 
+sie unter dem Verzeichnis `/tmp/imagine`. Bitte überspringen 
+sie diesen Schritt, wenn sie bereits Bilder für Ihre Sammlung 
+entworfen haben.
 
-Assuming that the images are ready under the `/tmp/imagine`
-directory. Next step is to create a metadata file in YAML format for
-your collection. Here is an example of an YAML file called `imagine.yaml`:
+Angenommen, die Bilder sind unter dem Verzeichnis `/tmp/imagine`
+bereit. Der nächste Schritt besteht darin, eine Metadatendatei im 
+YAML-Format für Ihre Sammlung zu erstellen. Hier ist ein Beispiel 
+für eine YAML-Datei namens  `imagine.yaml`:
 
 ```bash
 > ls /tmp/imagine
@@ -166,8 +159,9 @@ your collection. Here is an example of an YAML file called `imagine.yaml`:
 4.jpg:
 ```
 
-When you are happy about the images and metadata of your collection,
-run the following command to upload the images and metadata to IPFS:
+Wenn sie mit den Bildern und Metadaten Ihrer Sammlung zufrieden sind, 
+führen sie den folgenden Befehl aus, um die Bilder und Metadaten auf 
+IPFS hochzuladen:
 
 ```bash
 > export IPFS_INFURA_PROJECT_ID=xxxx-xxxx-xxxx-xxxx
@@ -177,15 +171,14 @@ NFTBaseUri:
 https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/
 ```
 
-The `NFTBaseUri` points to an IPFS directory where `5` documents are
-named and stored based on their sequence in the `imagine.yaml` file:
+Der `NFTBaseUri` verweist auf ein IPFS-Verzeichnis, in dem `5` Dokumente 
+benannt und basierend auf ihrer Reihenfolge in der Datei `imagine.yaml` gespeichert sind:
 
 <img src={require("./media/ipfs-imagine-directory.png").default} alt="IPFS Imagine Directory"/>
 
-Each of the document points to the metadata of an NFT and can be
-referenced by their
-indexes. E.g. `https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/2`
-points to the metadata of the 3rd NFT:
+Jedes Dokument verweist auf die Metadaten eines NFT und kann anhand 
+seiner Indizes referenziert werden. Zum Beispiel verweist `https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/2`
+auf die Metadaten des 3. NFT:
 
 ```bash
 > curl https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/2 | jq
@@ -205,8 +198,7 @@ points to the metadata of the 3rd NFT:
 }
 ```
 
-You can validate if a `NFTBaseUri` is valid using the following
-command:
+Sie können mit dem folgenden Befehl überprüfen, ob ein  `NFTBaseUri` gültig ist:
 
 ```bash
 > npx @alephium/cli@latest nft validate-enumerable-nft-base-uri --nftBaseUri https://ipfs.io/ipfs/QmbLevU4kVnQCCoYt23mKhdowJ7TnNNT9dRyVw9AyQDJty/ --maxSupply 5
@@ -220,47 +212,44 @@ Token Metadataz:
 ]
 ```
 
-After `NFTBaseUri` is created, we are ready to launch the `Flow` on `AlephiumNFT` Marketplace:
+Nachdem `NFTBaseUri` erstellt wurde, sind wir bereit, den `Flow` auf dem `AlephiumNFT` Marktplatz 
+zu starten::
 
 <img src={require("./media/create-flow-page.png").default} alt="Create FLow Page"/>
 
-As illustrated above, you can put in the collection image, the max
-batch mint size, the mint price, the name and description of the
-collection, and most importantly the NFT base URI that we created in
-the last step. After you click the `Create NFT Collection` button and
-sign the transaction, you will successfully create your first `Flow`,
-share the link and start to launch the public sale of your NFT
-collection!
+Wie oben dargestellt, können sie das Bild der Sammlung, die maximale 
+Stapel-Mint-Größe, den Mint-Preis, den Namen und die Beschreibung der 
+Sammlung sowie den wichtigsten NFT-Basis-URI eingeben, den wir im letzten 
+Schritt erstellt haben. Nachdem sie auf die Schaltfläche `Create NFT Collection`
+geklickt und die Transaktion signiert haben, erstellen sie erfolgreich Ihren ersten `Flow`,
+teilen den Link und starten den öffentlichen Verkauf Ihrer NFT-Sammlung!
 
 <img src={require("./media/flow-page.png").default} alt="FLow Page"/>
 
-### Wallet Support
+### Wallet Unterstützung
 
-Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
-Wallet](/wallet/extension-wallet/overview) have native support for
-non-fungible tokens.
+Sowohl die [Desktop Wallet](/wallet/desktop-wallet/overview) als auch die [Extension
+Wallet](/wallet/extension-wallet/overview) unterstützen nativ non-fungible Tokens.
 
-Following is an example of displaying and transfering a NFT in the
-`Imagine Collection` in the extension wallet:
+Nachfolgend ein Beispiel für die Anzeige und Übertragung eines NFT in der
+`Imagine Collection` in der Extension Wallet:
 
 <img
 src={require("./media/show-nft-collection-extension-wallet.png").default} alt="Show collection" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-nft-collection-extension-wallet.png").default} alt="Transfer NFT" width="250" />
 
-### Token List
+### Token-Liste
 
-It is not too difficult to fake other NFT collections and scam
-users. [Token list](https://github.com/alephium/token-list) allows
-well known NFT collections in the Alephium ecosystem to be
-whitelisted, so that dApps and wallets can warn users for unverified
-NFT collections. Here is how extension wallet displays a NFT
-collection before and after it is added into the token list.
+Es ist nicht allzu schwierig, andere NFT-Sammlungen vorzutäuschen 
+und Benutzer zu betrügen. Die[Token-Liste](https://github.com/alephium/token-list) 
+ermöglicht es, bekannte NFT-Sammlungen im Alephium-Ökosystem zu whitelisten, 
+sodass dApps und Wallets die Benutzer vor nicht überprüften NFT-Sammlungen warnen 
+können. Hier sehen sie, wie die Extension Wallet eine NFT-Sammlung vor und nachdem sie 
+in die Token-Liste aufgenommen wurde, anzeigt.
 
 <img src={require("./media/unverified-nft-collection.png").default} alt="Unverified" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/verified-nft-collection.png").default} alt="Verified" width="250"/>
 
-Currently, a pull request is needed to add the NFT collection to token
-list.
-
+Aktuell ist ein Pull Request erforderlich, um die NFT-Sammlung zur Token-Liste hinzuzufügen.

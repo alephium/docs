@@ -12,7 +12,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ### Zustand des Smart Contracts abrufen
 
-Wenn Sie den Befehl `npx @alephium/cli compile` verwenden, um einen Smart Contract zu kompilieren, wird TypeScript-Code basierend auf dem Smart Contract generiert. Nehmen wir den [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract als Beispiel,
+Wenn sie den Befehl `npx @alephium/cli compile` verwenden, um einen Smart Contract zu kompilieren, wird TypeScript-Code basierend auf dem Smart Contract generiert. Nehmen wir den [Token Faucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract als Beispiel,
 [hier](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) ist der generierte TypeScript-Code. Wir können den generierten TypeScript-Code verwenden, um den Zustand des Smart Contracts abzurufen:
 
 ```typescript
@@ -53,9 +53,9 @@ const totalSupply = await tokenFaucet.methods.getTotalSupply()
 
 ### Ereignisse des Smart Contract abonnieren
 
-Im [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract haben wir ein [Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18)-Ereignis definiert.
+Im [Token Faucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract haben wir ein [Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18)-Ereignis definiert.
 Jedes Mal, wenn die `Withdraw`-Funktion aufgerufen wird, gibt der Smart Contract ein `Withdraw`-Ereignis aus. 
-Wir können uns für die Withdraw-Ereignisse wie folgt anmelden:
+Wir können die Abhebungsereignisse mit dem folgenden Ansatz abonnieren:
 
 ```typescript
 import { TokenFaucet, TokenFaucetTypes } from 'artifacts/ts'
@@ -110,7 +110,7 @@ const txStatus = await nodeProvider.transactions.getTransactionsStatus({ txId })
 Sie können den Transaktionsstatus anhand von `txStatus.type` unterscheiden:
 
 1. `MemPooled`: Dies bedeutet, dass die Transaktion im Mempool ist
-2. `Confirmed`: Die Transaktion wurde bestätigt, und Sie können die Bestätigungen mit `txStatus.chainConfirmations` abrufen
+2. `Confirmed`: Die Transaktion wurde bestätigt, und sie können die Bestätigungen mit `txStatus.chainConfirmations` abrufen
 3. `TxNotFound`:  Die Transaktion existiert nicht
 
 ## Hooks
@@ -150,11 +150,11 @@ function Component() {
 }
 ```
 
-Wenn der Rückgabewert `undefined` ist, deutet dies darauf hin, dass die Brieftasche nicht verbunden ist. Die zurückgegebene Brieftasche hat die folgenden Felder:
+Wenn der Rückgabewert `undefined` ist, deutet dies darauf hin, dass die Wallet nicht verbunden ist. Die zurückgegebene Wallet hat die folgenden Felder:
 
-* `wallet.signer`: Sie können den Signierer verwenden, um Transaktionen zu signieren.
+* `wallet.signer`: Sie können den Signer verwenden, um Transaktionen zu signieren.
 * `wallet.account`: Dies ist das aktuell verbundene Konto.
-* `wallet.nodeProvider`: Sie können den Node-Provider verwenden, um mit dem Full Node zu kommunizieren. Beachten Sie, dass dieser Wert `undefined` sein kann.
+* `wallet.nodeProvider`: Sie können den Node-Provider verwenden, um mit dem Full Node zu kommunizieren. Beachten sie, dass dieser Wert `undefined` sein kann.
 
 ### useBalance
 
@@ -167,7 +167,7 @@ const { balance, updateBalanceForTx } = useBalance()
 Das `useBalance`-Hook gibt zwei Werte zurück:
 
 1. `balance`: Das aktuelle Guthaben des verbundenen Kontos.
-2. `updateBalanceForTx`: Dies wird verwendet, um das Guthaben zu aktualisieren, wenn der Benutzer eine Transaktion durchführt. Es nimmt eine Transaktions-ID als Parameter entgegen und aktualisiert das Guthaben, sobald diese Transaktion bestätigt ist.
+2. `updateBalanceForTx`: Dies wird verwendet, um das Guthaben zu aktualisieren, wenn der Benutzer eine Transaktion durchführt. Es nimmt eine Transaktions-ID als Parameter entgegen und aktualisiert das Guthaben, sobald diese Transaktion bestätigt wurde.
 
 ### useTxStatus
 
@@ -187,7 +187,7 @@ Das `useTxStatus`-Hook akzeptiert auch einen optionalen Rückrufparameter vom Ty
 
 ### Rate limit
 
-`NodeProvider` wird verwendet, um beim Entwickeln einer dApp mit dem Full Node zu kommunizieren, und Sie können die von Alephium öffentlich bereitgestellten  [API services](./public-services.md) verwenden. Aber alle APIs unterliegen einer Ratenbegrenzung, um Spam zu verhindern. Wenn der Client also in einer bestimmten Zeitspanne zu viele Anfragen sendet, erhält er den HTTP-429-Fehler.
+Der `NodeProvider` wird verwendet, um beim Entwickeln einer dApp mit dem Full Node zu kommunizieren, und sie können die von Alephium öffentlich bereitgestellten  [API services](./public-services.md) verwenden. Aber alle APIs unterliegen einer Ratenbegrenzung, um Spam zu verhindern. Wenn der Client also in einer bestimmten Zeitspanne zu viele Anfragen sendet, erhält er den HTTP-429-Fehler.
 
 Sie können [fetch-retry](https://github.com/jonbern/fetch-retry) verwenden, um dieses Problem zu lösen:
 

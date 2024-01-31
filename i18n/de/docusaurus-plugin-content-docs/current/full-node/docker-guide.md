@@ -9,4 +9,4 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 <UntranslatedPageText />
 
 
-Sie finden die Anweisungen, wie Sie einen Full Node mit `docker-compose` in 1 Minute ausführen können, hier: [Docker](https://github.com/alephium/alephium/tree/master/docker)
+Anweisungen, wie Sie einen Full Node mit `docker-compose` in 1 Minute ausführen können, finden sie hier: [Docker](https://github.com/alephium/alephium/tree/master/docker)

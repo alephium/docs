@@ -1,108 +1,107 @@
-# The Bridge
+# Die Bridge
 
-## Tutorials & Links
+## Anleitungen & Links
 
-Bridge Website : https://bridge.alephium.org/#/
+Bridge Webseite : https://bridge.alephium.org/#/
 
-Bridge Explorer Website : https://explorer.bridge.alephium.org/
+Bridge Explorer Webseite : https://explorer.bridge.alephium.org/
 
-Bridge Tutorial Article ( Mainnet ) : https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
+Anleitung für die Bridge ( Mainnet ) : https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
 
-The Alephium Bridge How does it work? How to use it? ( Article ) : https://medium.com/@alephium/the-alephium-bridge-a787d90b2e4a
+Die Alephium Bridge - Wie sie funktioniert? Wie man sie benutzt? ( Artikel ) : https://medium.com/@alephium/the-alephium-bridge-a787d90b2e4a
 
-Bridge Tutorial ( Mainnet ) : https://www.youtube.com/watch?v=xoYVzbwBAjg 
+Bridge Video-Anleitung ( Mainnet ) : https://www.youtube.com/watch?v=xoYVzbwBAjg 
  
 ## Bridge FAQ
 
-### 1. I have waited long enough, and it is not letting me redeem! What should I do? 
+### 1. Ich habe lange genug gewartet, und es lässt mich nicht einlösen! Was soll ich tun?
 
-Please bear in mind that: 
+Bitte beachten Sie: 
 
-- Bridging from ETH to ALPH takes an average of 15-20 minutes.
+- Die Überbrückung von ETH zu ALPH dauert durchschnittlich 15-20 Minuten.
 
-- Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 105 blocks and at least 112 minutes. If one of the conditions is not met, redemption is not possible (yet).
+- Die Überbrückung von ALPH zu ETH dauert etwas länger. Die Transaktion muss zwei Bedingungen erfüllen: mindestens 105 Blöcke und mindestens 112 Minuten. Wenn eine der Bedingungen nicht erfüllt ist, ist die Einlösung noch nicht möglich.
 
-In most cases, waiting a little bit longer to redeem your tokens is enough. 
+In den meisten Fällen reicht es aus, etwas länger zu warten, um Ihre Token einzulösen.
 
-If it still doesn’t work, please try to disconnect & reconnect your wallets to the bridge, and try to redeem again (see
+Wenn es immer noch nicht funktioniert, versuchen Sie bitte, Ihre Wallets von der Bridge zu trennen und erneut zu verbinden, und versuchen Sie es erneut (siehe
 
-If that doesn’t work, open an issue here.
+Wenn das nicht funktioniert, öffnen Sie hier ein Problem.
 
 
-### 2. The Bridge alerted me that I need to create a new wallet address! What does that mean? 
+### 2. Die Bridge hat mich darauf hingewiesen, dass ich eine neue Brieftaschenadresse erstellen muss! Was bedeutet das? 
 
-To interact with most dapps on Alephium, you need to create a Group 0 address. Here's how:
+Um mit den meisten dApps auf Alephium zu interagieren, müssen Sie eine Adresse der Gruppe 0 erstellen. So geht's:
 
 ### Desktop:
 
-Go to the addresses tab and click on "+ New address".
-Tick the advanced options and select "Group 0".
-Click on generate to create the address.
-Transfer your funds to this address for bridging.
+Gehe zum Register "Adressen" und klicke auf "+ Neue Adresse".
+Aktiviere die erweiterten Optionen und wähle "Gruppe 0".
+Klicke auf Generieren, um die Adresse zu erstellen.
+Überweise deine Mittel auf diese Adresse für die Überbrückung.
 
-### Extension:
+### Erweiterung:
 
-Click on your current wallet in the top left corner of the app.
-Select the plus icon to add a new address.
-Choose the desired group for the new address.
-Transfer your funds to this address for bridging.
+Klicke auf deine aktuelle Wallet oben links in der App.
+Wähle das Plus-Symbol, um eine neue Adresse hinzuzufügen.
+Wähle die gewünschte Gruppe für die neue Adresse.
+Überweise deine Mittel auf diese Adresse für die Überbrückung.
 
 
 ### Mobile:
 
-The mobile app will generate the address for you.
-Fund the generated address.
-Proceed with the bridge process.
+Die mobile App wird die Adresse für dich generieren.
+Finanziere die generierte Adresse.
+Fahre mit dem Überbrückungsvorgang fort.
 
 
-Remember to transfer your funds to the newly created addresses for bridging.
+Denke daran, deine Mittel auf die neu erstellten Adressen für die Überbrückung zu übertragen.
 
-### 3. I am getting “failed to fetch” errors! 
+### 3. Ich erhalte "Failed to Fetch"-Fehler!
 
-This error is related to your wallet locking itself. The steps to go around this are simple:
-
-
-- Copy your Transaction Hash from the bottom of the page, just in case.
-- Refresh the page
-- Switch to the “Transactions” tab.
-- Reconnect your wallets
-- Recover your transaction.
-
-### 4. The confirmations won’t update.
+Dieser Fehler hängt damit zusammen, dass sich Ihre Wallet selbst gesperrt hat. Die Schritte, um dies zu umgehen, sind einfach:
 
 
-Usually that means that one of your wallets has locked itself. Please copy your Transaction Hash from the bottom of the page, refresh the page, reconnect your wallets and head over to the redeem tab where you can recover the transaction using your Transaction Hash. 
+- Kopiere dein Transaktions-Hash am unteren Rand der Seite, nur für den Fall.
+- Aktualisiere die Seite
+- Wechsle zum Register "Transaktionen".
+- Trenne deine Wallet und verbinde sie erneut.
+- Stelle deine Transaktion wieder her.
+
+### 4. Die Bestätigungen werden nicht aktualisiert.
 
 
-
-### 5. Transaction has over 105 confirmations and I can't redeem!
-
-Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 105 blocks and at least 112 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
-
-- “Issue 1. I have waited long enough, and it is not letting me redeem! What do I do?”
-- “Issue 6. I am getting a VAA error! And I can't redeem.” 
-
-If that doesn’t work, open an issue here.
-
-### 6. I am getting a VAA error! And I can't redeem.
+Normalerweise bedeutet das, dass eine Ihrer Wallet sich selbst gesperrt hat. Kopieren Sie Ihren Transaktions-Hash am unteren Rand der Seite, aktualisieren Sie die Seite, verbinden Sie Ihre Wallet erneut und gehen Sie zum Tab "Einlösen", wo Sie die Transaktion mithilfe Ihres Transaktions-Hash wiederherstellen können.
 
 
-If you are getting a VAA error, and waiting before trying again didn’t work, try the following steps: 
+### 5. Die Transaktion hat über 105 Bestätigungen und ich kann nicht einlösen!
 
-- Close the tab, and re-open it.
-- Connect your wallets.
-- Recover your operation from the “Transactions” tab.
-- Try again.
+Die Überbrückung von ALPH zu ETH dauert etwas länger. Die Transaktion muss zwei Bedingungen erfüllen: mindestens 105 Blöcke und mindestens 112 Minuten. Wenn eine der Bedingungen nicht erfüllt ist, ist die Einlösung noch nicht möglich. Wenn das Problem weiterhin besteht, versuchen Sie die in den folgenden Lösungen vorgeschlagenen Lösungen: 
 
-If that doesn’t work, open an issue here.
+- "Problem 1. Ich habe lange genug gewartet, und es lässt mich nicht einlösen! Was soll ich tun?"
+- "Problem 6. Ich erhalte einen VAA-Fehler! Und ich kann nicht einlösen."
 
-### 7. Can we only bridge USDT from ETH to ALPH?
+Wenn das nicht funktioniert, öffnen Sie hier ein Problem.
 
-No. You can also bridge USDC, ETH, DAI, WBTC & ALPH.
-
-And if you interact with the smart contract directly, you can bridge all erc20 tokens you want.
+### 6. ch erhalte einen VAA-Fehler! Und ich kann nicht einlösen.
 
 
-### 8. I bridged ETH and/or USDC, and there’s no liquidity on AYIN pools, what can I do?
+Wenn Sie einen VAA-Fehler erhalten und das Warten vor dem erneuten Versuch nicht funktioniert hat, versuchen Sie die folgenden Schritte: 
 
-Before bridging any token, please check that there is enough liquidity available, otherwise you might have to bridge those tokens back.
+- Schließen Sie die Registerkarte und öffnen Sie sie erneut.
+- Verbinden Sie Ihre Wallet.
+- Stellen Sie Ihre Operation im Tab "Transaktionen" wieder her
+- Versuchen Sie es erneut.
+
+Wenn das nicht funktioniert, öffnen Sie hier ein Problem.
+
+### 7. Können wir nur USDT von ETH zu ALPH überbrücken?
+
+Nein. Sie können auch USDC, ETH, DAI, WBTC & ALPH überbrücken.
+
+Und wenn Sie direkt mit dem Smart Contract interagieren, können Sie alle ERC-20-Token überbrücken, die Sie möchten.
+
+
+### 8. Ich habe ETH und/oder USDC überbrückt, und es gibt keine Liquidität in den AYIN-Pools, was kann ich tun?
+
+Bevor Sie ein Token überbrücken, überprüfen Sie bitte, ob ausreichend Liquidität vorhanden ist. Andernfalls müssen Sie diese Token möglicherweise zurück überbrücken.

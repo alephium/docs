@@ -1,7 +1,7 @@
 ---
 sidebar_position: 30
-title: CPU Miner Guide
-sidebar_label: CPU miner guide
+title: CPU Miner Leitfaden
+sidebar_label: CPU Miner Leitfaden
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -10,33 +10,32 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 :::info
 
-CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](network/testnet-guide.md).
+CPU-Mining ist nur für Testzwecke gedacht. Um das Testnet zu verwenden, besuchen Sie bitte  [Testnet Leitfaden](network/testnet-guide.md).
 
-For mining in production please visit [Solo Mining Guide](mining/solo-mining-guide.md) or [Pool Mining Guide](mining/pool-mining-guide.md).
+Für das Mining in der Produktion besuchen Sie bitte [Solo Mining Leitfaden](mining/solo-mining-guide.md) oder [Pool Mining Leitfaden](mining/pool-mining-guide.md).
 
 :::
 
-You must first follow the steps in the [Full-node Guide](full-node/getting-started.md), in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
+Sie müssen zuerst den Schritten im [Full-node Guide](full-node/getting-started.md) folgen, um Ihren Node herunterzuladen, zu konfigurieren, zu starten und Swagger (oder andere OpenAPI-Clients) zu verwenden.
 
-Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+Bitte beachten sie, dass die Standardadresse und der Port für die REST-API  [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) sind.
 
-## Start mining
+## Mining starten
 
-Please make sure that your local node is fully synced before mining. We will add validation for this in our next major release.
+Stellen sie sicher, dass Ihr lokaler Node vollständig synchronisiert ist, bevor sie mit dem Mining beginnen. Wir werden in unserem nächsten großen Release eine Validierung dafür hinzufügen.
 
-You can **start** mining on your local node by doing a POST on `/miners/cpu-mining?action=start-mining`.
+Sie können das Mining **starten**, indem sie auf Ihrem lokalen Node einen POST auf `/miners/cpu-mining?action=start-mining` durchführen..
 
-The server should answer simply with `true` to confirm that the mining process has now started.
+Der Server sollte einfach mit `true` antworten, um zu bestätigen, dass der Mining-Prozess jetzt gestartet ist.
 
-Please note that you will need first to configure your miner's addresses as explain the [Create a new miner wallet](mining/solo-mining-guide.md#create-a-new-miner-wallet) section of the GPU Miner Guide.
+Bitte beachten sie, dass sie zuerst Ihre Miner-Adressen konfigurieren müssen, wie im Abschnitt [Eine neue Miner-Wallet erstellen](mining/solo-mining-guide.md#create-a-new-miner-wallet) des GPU-Miner-Guides erklärt.
 
-## Stop mining
+## Mining stoppen
+Ebenso können sie das Mining **stoppen** , indem sie auf Ihrem lokalen Node einen POST auf `/miners/cpu-mining?action=stop-mining` durchführen..
 
-Similarly, you can **stop** mining on your local node by doing a POST on `/miners/cpu-mining?action=stop-mining`.
+## CPU Nutzung
 
-## CPU Usage
-
-You could tune how much CPU resources for mining by using the following two configs:
+Sie können die Menge der CPU-Ressourcen für das Mining durch Verwendung der folgenden beiden Konfigurationen anpassen:
 
     akka.actor.mining-dispatcher.fork-join-executor.parallelism-min = 1 // the minimal number of threads for mining
     akka.actor.mining-dispatcher.fork-join-executor.parallelism-max = 4 // the maximal number of threads for mining

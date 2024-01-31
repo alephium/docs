@@ -4,24 +4,23 @@ title: Fungible Tokens
 sidebar_label: Fungible Tokens
 ---
 
-### Fungible Token Standard
+### 
+Fungible Token Standard
 
-In Alephium, new tokens can be issued when deploying new
-contracts. The id of the newly issued token is the same as the id of
-the contract that issues it. You can refer to this
-[guide](/dapps/build-dapp-from-scratch) for details about how to issue
-tokens on Alephium from scratch.
+In Alephium können neue Tokens ausgegeben werden, wenn neue Verträge 
+bereitgestellt werden. Die ID des neu ausgegebenen Tokens ist dieselbe 
+wie die ID des Vertrags, der es ausgibt. Sie können sich an diese
+[Anleitung](/dapps/build-dapp-from-scratch) wenden, um Details darüber 
+zu erfahren, wie sie auf Alephium von Grund auf neue Tokens ausgeben können.
 
-Tokens are usually associated with information such as
-`name`, `decimals`, `totalSupply`, etc. The goal of the token standard is
-to put constraints on token-issuing contract so it becomes easier for
-dApps and wallets to infer token types and fetch token information.
+Tokens sind in der Regel mit Informationen wie
+`name`, `decimals`, `totalSupply` usw. verbunden. Das Ziel des Token-Standards 
+ist es, Einschränkungen für den Token-ausgebenden Vertrag festzulegen, damit es 
+für dApps und Wallets einfacher wird, Token-Typen zu erschließen und 
+Token-Informationen abzurufen.
 
-The standard [fungible token
-interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
-defines methods to get the `name`, `symbol`, `decimals` as well as the
-`totalSupply` of the token. It is also annotated with the `@std`
-annotation with the id `#0001`:
+Die Standard [fungible-Token-Interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral) definiert Methoden zum Abrufen des `name`, `symbol`, `decimals` sowie des
+`totalSupply` des Tokens. Sie ist auch mit der `@std`-Annotation mit der ID `#0001` versehen:
 
 ```rust
 // Standard interface for fungible tokens
@@ -58,10 +57,9 @@ Contract TokenFaucet(
 }
 ```
 
-Once a token contract implements
-[IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
-interface, like the `TokenFaucet` contract shown above, it enables SDK
-to get information in a standard way:
+Sobald ein Token-Vertrag die
+[IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)-Schnittstelle implementiert, wie der oben gezeigte `TokenFaucet`-Vertrag, ermöglicht es dem SDK, 
+Informationen auf eine standardisierte Weise abzurufen:
 
 ```typescript
 // Use SDK to call methods individually
@@ -79,7 +77,7 @@ const multicallResult = await tokenFaucet.multicall({
 console.log("TokenFaucet name, decimals, totalSupply", multicallResult.getName.returns, multicallResult.getDecimal.returns, multicallResult.getTotalSupply.returns)
 ```
 
-In fact, SDK provides a canonical way to fetch all metadata for a fungible token.
+Tatsächlich bietet das SDK eine kanonische Möglichkeit, alle Metadaten für ein fungibles Token abzurufen.
 
 ```typescript
 const metadata = await web3.getCurrentNodeProvider().fetchFungibleTokenMetaData(tokenFaucet.contractId)
@@ -87,8 +85,8 @@ console.log("TokenFaucet name, decimals, totalSupply", metadata.name, metadata.d
 ```
 
 [IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
-also enables SDK to guess the type of a token, so that dApps and
-wallets can handle them respectively:
+ermöglicht es dem SDK auch, den Typ eines Tokens zu erraten, 
+damit dApps und Wallets diese entsprechend behandeln können:
 
 ```typescript
 // Guess token type
@@ -100,17 +98,16 @@ const tokenInterfaceId = await web3.getCurrentNodeProvider().guessStdInterfaceId
 expect(tokenInterfaceId).toEqual('0001')
 ```
 
-For a working and more complete example, please take a look at the
-[nextjs-template](https://github.com/alephium/nextjs-template) repository.
+Für ein funktionierendes und vollständigeres Beispiel werfen sie bitte 
+einen Blick auf das [NextJS-Template](https://github.com/alephium/nextjs-template)-Repository.
 
-### Wallet Support
+### Wallet Unterstützung
 
-Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
-Wallet](/wallet/extension-wallet/overview) have native support for
-fungible tokens.
+Sowohl die [Desktop Wallet](/wallet/desktop-wallet/overview) als auch 
+die [Extension Wallet](/wallet/extension-wallet/overview) unterstützen 
+fungible Tokens nativ.
 
-Following is an example of displaying and transfering the `PACA` token
-using extesion wallet:
+Nachfolgend ein Beispiel für die Anzeige und Übertragung des `PACA` Tokens mit der Extension-Wallet:
 
 <img src={require("./media/transfer-alphpaca-1.png").default} alt="Token Overview" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -118,22 +115,22 @@ using extesion wallet:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-alphpaca-3.png").default} alt="Sign Tx" width="250" />
 
-### Token List
+### Token-Liste
 
-Other than the basic information such as `name`, `symbol` and
-`decimals`, etc. Fungible tokens usually contain other metadata such
-as `description` and `logoURI` so that dApps and wallets can properly
-display them.
+Neben den grundlegenden Informationen wie `name`, `symbol` und
+`decimals` usw., enthalten fungible Tokens in der Regel auch andere Metadaten 
+wie `description` und `logoURI` , damit dApps und Wallets sie ordnungsgemäß 
+anzeigen können.
 
-The goal of the [token list](https://github.com/alephium/token-list)
-is to be a source of trust for token id and metadata of the well known
-tokens in the Alephium ecosystem, so wallets and dApps can warn users
-for the unverified tokens. Here is how extension wallet displays a
-token before and after it is added into the token list.
+Das Ziel der [Token-Liste](https://github.com/alephium/token-list)
+ist es, eine Vertrauensquelle für die Token-ID und die Metadaten der 
+bekannten Tokens im Alephium-Ökosystem zu sein, damit Wallets und 
+dApps Benutzer vor nicht verifizierten Tokens warnen können. Hier sehen 
+sie, wie die Erweiterungsbrieftasche ein Token vor und nachdem es zur 
+Token-Liste hinzugefügt wurde, anzeigt.
 
 <img src={require("./media/unverified-token.png").default} alt="Unverified" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/verified-token.png").default} alt="Verified" width="250"/>
 
-Currently, a pull request is needed to add the token metadata to token
-list.
+Derzeit ist ein Pull Request erforderlich, um die Token-Metadaten zur Token-Liste hinzuzufügen.

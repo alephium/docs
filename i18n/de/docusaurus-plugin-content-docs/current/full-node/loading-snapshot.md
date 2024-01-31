@@ -17,7 +17,7 @@ Um diesen anfänglichen Synchronisierungsprozess zu beschleunigen, stehen Snapsh
 
 ## Einen Snapshot herunterladen
 
-Beim Vorbereiten des Vollknotens für seinen ersten Start, kurz bevor Sie ihn starten, können Sie den neuesten Snapshot herunterladen und (es handelt sich um eine `tar` -Datei) an der richtigen Stelle extrahieren. Der folgende Codeausschnitt führt dies sogar inline aus, d.h., ohne den benötigten Festplattenspeicherplatz für den Download und das Extrahieren des Snapshots zu verdoppeln:
+Beim Vorbereiten des Full Node für seinen ersten Start, kurz bevor Sie ihn starten, können Sie den neuesten Snapshot herunterladen und (es handelt sich um eine `tar`-Datei) an der richtigen Stelle extrahieren. Der folgende Codeausschnitt führt dies sogar inline aus, d.h., ohne den benötigten Festplattenspeicherplatz für den Download und das Extrahieren des Snapshots zu verdoppeln:
 
 ```shell
 ALEPHIUM_HOME=~/.alephium
@@ -29,7 +29,7 @@ Eine spezielle Datei mit dem Namen `_latest.txt` wird regelmäßig aktualisiert 
 
 ## Die Verwendung eines vorgefertigten Skripts
 
-Die oben gegebene Anleitung funktioniert zwar, deckt jedoch nicht alle möglichen Fehlerfälle ab, die auftreten können und dazu führen können, dass die Datenbank des Vollknotens in einem inkonsistenten Zustand bleibt. Glücklicherweise hilft Ihnen ein einsatzbereites Skript bei dieser Aufgabe.
+Die oben gegebene Anleitung funktioniert zwar, deckt jedoch nicht alle möglichen Fehlerfälle ab, die auftreten können und dazu führen können, dass die Datenbank des Full Node in einem inkonsistenten Zustand bleibt. Glücklicherweise hilft Ihnen ein einsatzbereites Skript bei dieser Aufgabe.
 
 ```shell
 ALEPHIUM_HOME=/tmp
@@ -39,7 +39,7 @@ curl -L https://github.com/touilleio/alephium-standalone/raw/main/snapshot-loade
 
 ## Starten eines eigenständigen Containers
 
-Und schließlich, wenn Sie dieses Setup schnell ausprobieren möchten, erledigt ein OCI-Image, das einfach das offizielle `alephium/alephium` -Image erweitert, automatisch alle oben beschriebenen Schritte: `touilleio/alephium-standalone`. Sein [Quellcode](https://github.com/touilleio/alephium-standalone) enthält alle erforderlichen Details zur Verwendung..
+Und schließlich, wenn Sie dieses Setup schnell ausprobieren möchten, erledigt ein OCI-Image, das einfach das offizielle `alephium/alephium`-Image erweitert, automatisch alle oben beschriebenen Schritte: `touilleio/alephium-standalone`. Sein [Quellcode](https://github.com/touilleio/alephium-standalone) enthält alle erforderlichen Details zur Verwendung..
 
 Ein kurzer Referenzbefehl zum Starten des eigenständigen Containers ist unten für die einfache Verwendung aufgeführt:
 

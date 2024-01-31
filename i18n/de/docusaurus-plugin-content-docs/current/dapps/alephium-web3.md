@@ -16,13 +16,13 @@ npm install --save @alephium/web3
 
 ## Mit Alephium verbinden
 
-`NodeProvider` ist eine Abstraktion einer Verbindung zum Alephium-Netzwerk. Sie können einen `NodeProvider` erhalten, indem Sie:
+Der `NodeProvider` ist eine Abstraktion einer Verbindung zum Alephium-Netzwerk. Sie können einen `NodeProvider` erhalten, indem sie:
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
 ```
 
-Oder geben Sie die `API_KEY` an, wenn Sie `alephium.api.api-key` in Ihrer Konfigurationsdatei für den vollständigen Knoten haben:
+Oder geben sie die `API_KEY` an, wenn sie `alephium.api.api-key` in Ihrer Konfigurationsdatei für den vollständigen Node haben:
 
 ```typescript
 const API_KEY = // alephium.api.api-key from your full node config
@@ -37,7 +37,7 @@ web3.setCurrentNodeProvider(<nodeURL>)
 
 ## Abfragen der Blockchain
 
-Sobald Sie einen `NodeProvider` haben, besteht eine Verbindung zur Blockchain, die Sie verwenden können, um den aktuellen Vertragszustand abzufragen, historische Vertragsereignisse abzurufen, bereitgestellte Verträge nachzuschlagen und so weiter.
+Sobald sie einen `NodeProvider` haben, besteht eine Verbindung zur Blockchain, die sie verwenden können, um den aktuellen Vertragszustand abzufragen, historische Vertragsereignisse abzurufen, bereitgestellte Verträge nachzuschlagen und so weiter.
 
 ```typescript
 // Get the blockchain height from the given chain index
@@ -122,10 +122,10 @@ npm install --save @alephium/web3-wallet
 ```
 
 :::note
-Beide Wallets werden für die Entwicklung und Bereitstellung von Verträgen verwendet. Bitte verwenden Sie sie nicht, um eine große Menge an Token zu speichern.
+Beide Wallets werden für die Entwicklung und Bereitstellung von Verträgen verwendet. Bitte verwenden sie diese nicht, um eine große Menge an Token zu speichern.
 :::
 
-### NodeWallet
+### Node Wallet
 
 Bitte folge dieser [Anleitung](/wallet/node-wallet-guide) um eine Full Node Wallet zu erstellen.
 
@@ -203,12 +203,12 @@ await wallet.signAndSubmitTransferTx({
 
 ## Contracts
 
-Ähnlich wie bei Ethereum ist ein Vertrag eine Abstraktion von Programmcode, der auf der Alephium-Blockchain existiert. Verwenden wir das folgende Beispiel, um zu veranschaulichen, wie man einen Vertrag testet, bereitstellt und aufruft. Bitte folgen Sie dieser [Anleitung](/dapps/getting-started), um ein Projekt zu erstellen.
+Ähnlich wie bei Ethereum ist ein Contract eine Abstraktion von Programmcode, der auf der Alephium-Blockchain existiert. Verwenden wir das folgende Beispiel, um zu veranschaulichen, wie man einen Contract testet, bereitstellt und aufruft. Bitte folgen sie dieser [Anleitung](/dapps/getting-started), um ein Projekt zu erstellen.
 
 ### Teste den Contract
 #### Unit Tests
 
-Das SDK bietet Funktionen für Unittests, die den Vertrag wie eine normale Transaktion aufrufen. Anstatt jedoch den Blockchain-Zustand zu ändern, gibt es den neuen Zustand des Vertrags, Transaktionsausgaben und Ereignisse zurück.
+Das SDK bietet Funktionen für Unittests, die den Contract wie eine normale Transaktion aufrufen. Anstatt jedoch den Blockchain-Zustand zu ändern, gibt es den neuen Zustand des Vertrags, Transaktionsausgaben und Ereignisse zurück.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -250,11 +250,11 @@ const contractState = result.contracts[0] as TokenFaucetTypes.State
 expect(contractState.address).toEqual(testContractAddress)
 ```
 
-Ein vollständiges Beispiel finden Sie in unserem  [`Alephium-NextJS-Template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
+Ein vollständiges Beispiel finden sie in unserem  [`Alephium-NextJS-Template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
 
 #### Integrations-Tests
 
-Neben den Unittests können auch Integrationstests durchgeführt werden. Seien Sie vorsichtig, da diese den Blockchain-Zustand ändern können.
+Neben den Unittests können auch Integrationstests durchgeführt werden. Seien sie vorsichtig, da diese den Blockchain-Zustand ändern können.
 
 ```typescript
 web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
@@ -288,7 +288,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-Weitere Details finden Sie in unserem [Ordner für Integrationstests](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration).
+Weitere Details finden sie in unserem [Ordner für Integrationstests](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration).
 
 ### Den Vertrag bereitstellen
 
@@ -384,9 +384,9 @@ console.log(JSON.stringify(contractState, null, 2))
 // }
 ```
 
-Von der Ausgabe können wir sehen, dass der Vertrag erfolgreich bereitgestellt wurde und es 10 Token im Vertragsvermögen gibt.
+Durch die Ausgabe können wir sehen, dass der Vertrag erfolgreich bereitgestellt wurde und es 10 Token im Vertragsvermögen gibt.
 
-### Rufen Sie den Vertrag auf
+### Rufen sie den Vertrag auf
 
 Sie können Skripte verwenden, um Verträge in der Alephium-Blockchain aufzurufen. Der Skriptcode wird ausgeführt, wenn die Transaktion an das Alephium-Netzwerk gesendet wird, aber der Skriptcode wird nicht im Zustand der Blockchain gespeichert.
 
@@ -441,7 +441,7 @@ console.log(JSON.stringify(balance, null, 2))
 
 ### Historische Vertragsereignisse abfragen
 
-Vertragsereignisse werden durch Vertragsadresse mit Offsets indiziert, und Sie können historische Ereignisse einer Vertragsadresse abfragen, indem Sie den Offset und das Limit (optional) angeben.
+Vertragsereignisse werden durch Vertragsadresse mit Offsets indiziert, und sie können historische Ereignisse einer Vertragsadresse abfragen, indem sie den Offset und das Limit (optional) angeben.
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
@@ -509,7 +509,7 @@ await nodeProvider.events.getEventsTxIdTxid('c29e9cb10b3e0b34979b9daac73151d98ee
 
 ### Ereignisse abhören
 
-Zusätzlich zur Abfrage von Ereignissen einzeln können Sie Ereignisse auch durch ein Abonnement abrufen. Es wird periodisch abgefragt und neue Ereignisse werden abgerufen.
+Zusätzlich zur Abfrage von Ereignissen einzeln können sie Ereignisse auch durch ein Abonnement abrufen. Es wird periodisch abgefragt und neue Ereignisse werden abgerufen.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
@@ -574,7 +574,7 @@ console.log(group)
 // 0
 ```
 
-### Die Sub-Vertrags-ID abrufen
+### Die Sub-Contract-ID abrufen
 
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'

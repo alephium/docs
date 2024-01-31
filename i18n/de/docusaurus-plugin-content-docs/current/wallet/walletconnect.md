@@ -8,4 +8,5 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-In Kürze
+  
+## *Kommt bald*

@@ -1,20 +1,20 @@
 ---
 sidebar_position: 20
-title: Internationalization and Localization
-sidebar_label: Internationalization and localization
+title: Internationalisierung und Lokalisierung
+sidebar_label: Internationalisierung und Lokalisierung
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# Internationalization and Localization (i18n)
+# Internationalisierung und Lokalisierung (i18n)
 
 ## Discord
 
-Find the following languages in [the official Discord](https://alephium.org/discord)
+Finde die folgenden Sprachen im [offiziellen Discord](https://alephium.org/discord)
 
-- AR 🌙العربية
+- AR 🌙العربية 
 - CN 🐼 中文
 - CZ 🏒czech-slovakia
 - DE 🌭deutsch
@@ -23,35 +23,35 @@ Find the following languages in [the official Discord](https://alephium.org/disc
 - SP 🌮español
 - TR 🐺türkçe
 
-## Known localized community driven user-groups
+## Bekannte lokalisierte Community-getriebene Benutzergruppen
 
-### Telegram groups
+### Telegram Gruppen
 
-Localized groups (these are non-official groups, created and modded by independant third-parties Alephium has no control on)
+Lokalisierte Gruppen (dies sind inoffizielle Gruppen, erstellt und moderiert von unabhängigen Dritten, auf die Alephium keinen Einfluss hat)
 
-Russian 🇷🇺 - https://t.me/alephiumgroup_ru
+Russisch 🇷🇺 - https://t.me/alephiumgroup_ru
 
-Spanish 🇪🇦 - https://t.me/minerosAlephium
+Spanisch 🇪🇦 - https://t.me/minerosAlephium
 
-Chinese 🇨🇳 - https://t.me/alephiumCN
+Chinesisch 🇨🇳 - https://t.me/alephiumCN
 
-German (DACH) 🇩🇪 - https://t.me/alphgermanofficial
+Deutsch (DACH) 🇩🇪 - https://t.me/alphgermanofficial
 
-Turkish 🇹🇷 - https://t.me/AlephiumTurkey
+Türkisch 🇹🇷 - https://t.me/AlephiumTurkey
 
-Holland 🇳🇱 - https://t.me/AlephiumgroupNL
+Holländisch 🇳🇱 - https://t.me/AlephiumgroupNL
 
-Portuguese 🇵🇹 🇧🇷 - https://t.me/Alephium_pt
+Portugisisch 🇵🇹 🇧🇷 - https://t.me/Alephium_pt
 
-Vietnamese 🇻🇳 - https://t.me/alephiumvn
+Vietnamesisch 🇻🇳 - https://t.me/alephiumvn
 
-Indonesia 🇮🇩 - https://t.me/AlephiumID
+Indonesisch 🇮🇩 - https://t.me/AlephiumID
 
-French FR - https://t.me/Alephiumfr
+Französisch FR - https://t.me/Alephiumfr
 
-Polish PL - https://t.me/alephiumPL
+Polnisch PL - https://t.me/alephiumPL
 
-Topical groups
+Themen-Gruppen
 
 Mining https://t.me/alephium_mining
 

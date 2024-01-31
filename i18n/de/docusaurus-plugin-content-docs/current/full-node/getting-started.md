@@ -19,7 +19,7 @@ Stellen Sie sicher, dass Java (11 oder 17 wird empfohlen) auf Ihrem Computer ins
 
 Laden Sie die Datei `alephium-x.x.x.jar` vom [Github-Release](https://github.com/alephium/alephium/releases/latest) herunter (klicken Sie nicht doppelt darauf, da sie auf diese Weise nicht gestartet werden kann).
 
-## Starte deine Node
+## Starte deinen Node (Knoten)
 
 1. Öffnen Sie die Suche und geben Sie im `Terminal` (für Mac und Ubuntu) oder der `Eingabeaufforderung` (für Windows) ein.
 2. Geben Sie im Terminal-/Eingabeaufforderungsprogramm `cd Ihr-jar-File-Pfad` ein, um in das Verzeichnis zu wechseln, in dem die Datei **alephium-x.x.x.jar** gespeichert ist.
@@ -28,10 +28,10 @@ Laden Sie die Datei `alephium-x.x.x.jar` vom [Github-Release](https://github.com
    java -jar alephium-x.x.x.jar
    ```
 
-🎉 _**Tada, Ihr Knotenpunkt ist aktiviert.**_
+🎉 _**Tada, Ihr Node ist aktiviert.**_
 
-- Ihr Knotenpunkt beginnt, sich mit dem Netzwerk zu synchronisieren. Es kann beim ersten Mal eine Weile dauern. Ihr Knotenpunkt ist vollständig synchronisiert, wenn die Blockhöhe in den Terminalprotokollen mit derjenigen in den neuesten Blöcken des [Explorers] übereinstimmt.
-- Wenn Sie das Terminal schließen, wird der Knotenpunkt ausgeschaltet.
+- Ihr Node beginnt, sich mit dem Netzwerk zu synchronisieren. Es kann beim ersten Mal eine Weile dauern. Ihr Node ist vollständig synchronisiert, wenn die Blockhöhe in den Terminalprotokollen mit derjenigen in den neuesten Blöcken des [Explorers] übereinstimmt.
+- Wenn Sie das Terminal schließen, wird der Node ausgeschaltet.
 - Alle Blockchain-Daten werden im Ordner `.alephium` unter Ihrem Benutzerverzeichnis [^1] gespeichert.
 
 ### Swagger
@@ -47,9 +47,9 @@ Für ein Mining-Tutorial können Sie unserer Anleitung zum [Solo Mining Guide](m
 
 ### Wallet
 
-Sie können die Desktop Wallet von hier auf [GitHub](https://github.com/alephium/desktop-wallet/releases/latest) herunterladen.
+Sie können die Desktop Wallet von hier [GitHub](https://github.com/alephium/desktop-wallet/releases/latest) herunterladen.
 
-Alternativ verfügt unsere Full Node über eine integrierte Wallet mit erweiterten Funktionen. Sie können unserer [Wallet Guide](wallet/node-wallet-guide.md) folgen, um zu lernen, wie Sie sie verwenden können.
+Alternativ verfügt unsere Full Node über eine integrierte Wallet mit erweiterten Funktionen. Sie können unserem [Wallet Guide](wallet/node-wallet-guide.md) folgen, um zu lernen, wie Sie die Wallet verwenden können.
 
 [^1]: Der Home-Ordner hängt von Ihrem System ab: `C:\Users\<ihr-benutzername>` unter Windows, `/Users/<ihr-benutzername>` auf macOS, `/home/<ihr-benutzername>` unter Linux.
 

@@ -8,7 +8,7 @@
     "description": "The label for category Full Node in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Building dApps": {
-    "message": "DApps erstellen",
+    "message": "dApps erstellen",
     "description": "The label for category Building dApps in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Ralph Language": {
@@ -36,7 +36,7 @@
     "description": "The label for category Mining in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Network": {
-    "message": "Network",
+    "message": "Netzwerk",
     "description": "The label for category Network in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Explorer Backend": {

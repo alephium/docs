@@ -8,7 +8,7 @@ sidebar_label: Built-in Funktionen
 This file is auto-generated with "scripts/generate-builtin-functions.js"
 -->
 
-Die integrierten Funktionen sind in mehrere Kategorien unterteilt:
+Die integrierten Funktionen (Built-in Functions) sind in mehrere Kategorien unterteilt:
 [Contract](#contract-functions),
 [SubContract](#subcontract-functions),
 [Asset](#asset-functions),

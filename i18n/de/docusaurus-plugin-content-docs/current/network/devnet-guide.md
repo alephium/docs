@@ -1,24 +1,24 @@
 ---
 sidebar_position: 20
-title: Devnet Guide
-sidebar_label: Devnet guide
+title: Devnet Leitfaden
+sidebar_label: Devnet Leitfaden
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-It's dev-friendly to start a local devnet with empty block history and arbitrary amount of coins.
+Es ist entwicklerfreundlich, eine lokale Entwicklungsumgebung (Devnet) mit leerer Blockhistorie und einer beliebigen Menge an Münzen zu starten.
 
-The installation of full node for devnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
+Die Installation des Full Nodes für das Devnet erfolgt genauso wie für das Mainnet: [Full Node Starter Guide](full-node/getting-started.md)
 
-**The `user.conf` must be modified before starting the full node**.
+**Die `user.conf` muss vor dem Starten des Full Nodes modifiziert werden.**.
 
-Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+Bitte beachten sie, dass die Standardadresse und der Port für die REST-API [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) sind.
 
-## Configuration
+## Konfiguration
 
-In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have to add:
+In der Datei `$HOME/.alephium/user.conf` (`user.conf`, wenn Docker verwendet wird) müssen sie Folgendes hinzufügen:
 
 ```
 // in most cases, modify the following two lines
@@ -39,17 +39,17 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
-Please put your own addresses for genesis allocations. You could also reduce `num-zeros-at-least-in-hash` to make mining faster.
+Setzen sie bitte Ihre eigenen Adressen für die Genesis-Zuweisungen ein. Sie können auch `num-zeros-at-least-in-hash` eduzieren, um das Mining zu beschleunigen.
 
-More configurations can be found in `$HOME/.alephium/network-4/`, and logs can be found in `$HOME/.alephium/logs/`.
+Weitere Konfigurationen finden sie in `$HOME/.alephium/network-4/`, und Protokolle können in `$HOME/.alephium/logs/` gefunden werden.
 
-If you modify `user.conf`, then better to wipe out `$HOME/.alephium/network-4/` before restarting the full node.
+Wenn sie `user.conf` ändern, ist es besser, `$HOME/.alephium/network-4/` u löschen, bevor sie den Full Node neu starten.
 
 ## Mining
 
-Devnet with the sample configuration file is able to automatically mine new blocks for all new transactions. There is no need to use CPU for mining.
+Devnet mit der Beispielkonfigurationsdatei kann automatisch neue Blöcke für alle neuen Transaktionen minen. Es ist nicht erforderlich, die CPU für das Mining zu verwenden.
 
-If you want to use devnet for mining tests, please set a relative high difficulty as follows:
+Wenn sie das Devnet für Mining-Tests verwenden möchten, setzen sie bitte eine relativ hohe Schwierigkeit wie folgt:
 
 ```
 alephium.consensus.num-zeros-at-least-in-hash = 24

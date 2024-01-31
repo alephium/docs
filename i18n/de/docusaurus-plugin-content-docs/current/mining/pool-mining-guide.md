@@ -12,9 +12,9 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 Sie finden eine vollständige Liste bekannter Mining-Pools [auf diesem Link](#community-pools).
 
-### Erstellen Sie Ihren eigenen Pool
+### Erstellen sie Ihren eigenen Pool
 
-Wenn Sie Ihren eigenen Mining-Pool hosten möchten, schauen Sie sich [dieses Repo hier](https://github.com/alephium/mining-pool/) an. Wenn Sie einen Pool erstellen, können Sie gerne einen Pull Request senden, um Ihren Pool der [Liste](#community-pools) hinzuzufügen.
+Wenn sie Ihren eigenen Mining-Pool hosten möchten, schauen sie sich [dieses Repo hier](https://github.com/alephium/mining-pool/) an. Wenn sie einen Pool erstellen, können sie gerne einen Pull Request senden, um Ihren Pool der [Liste](#community-pools) hinzuzufügen.
 
 ### Beispiel-Node-Konfiguration für den Mining-Pool:
 
@@ -28,7 +28,7 @@ alephium.network.max-inbound-connections-per-group  = 256
 
 alephium.mining.miner-addresses = [4 miner addresses]
 
-// kommentieren Sie die folgenden 2 Zeilen aus, wenn Sie nicht aus dem externen Netzwerk auf die REST-API zugreifen
+// kommentieren sie die folgenden 2 Zeilen aus, wenn sie nicht aus dem externen Netzwerk auf die REST-API zugreifen
 alephium.api.network-interface = "0.0.0.0"
 alephium.api.api-key = "<api key>"
 ```
@@ -37,17 +37,17 @@ alephium.api.api-key = "<api key>"
 
 ### ⚠️ Haftungsausschluss
 
-Dies ist eine nicht erschöpfende Liste von Mining-Pools, die von der Community betrieben werden. Diese Pools werden in keiner Weise von Alephium unterstützt, und Alephium kann nicht für Ihre Auswahl des Pool verantwortlich gemacht werden. Obwohl die hier aufgeführten Pools sich bisher wie erwartet verhalten haben, sollten Sie bedenken, dass die Auswahl eines Pools erfordert, dass Sie einige Recherchen zur Sicherheit, Reputation und allgemeinen Sicherheit des Pools durchführen. Ein guter Ausgangspunkt ist, [die Community im Discord zu fragen](https://alephium.org/discord)
+Dies ist eine nicht erschöpfende Liste von Mining-Pools, die von der Community betrieben werden. Diese Pools werden in keiner Weise von Alephium unterstützt, und Alephium kann nicht für Ihre Auswahl des Pool verantwortlich gemacht werden. Obwohl die hier aufgeführten Pools sich bisher wie erwartet verhalten haben, sollten sie bedenken, dass die Auswahl eines Pools erfordert, dass sie einige Recherchen zur Sicherheit, Reputation und allgemeinen Sicherheit des Pools durchführen. Ein guter Ausgangspunkt ist, [die Community im Discord zu fragen](https://alephium.org/discord)
 
-### Verwendung von Pools und wie Sie Unterstützung erhalten
+### Verwendung von Pools und wie sie Unterstützung erhalten
 
-Wir freuen uns, dass diese Liste von Pools wächst und vielfältiger wird. Probieren Sie sie aus. Wenn ein Pool zu groß wird, sollten Sie in Betracht ziehen, zu einem anderen Pool zu wechseln, um die Dezentralisierung zu fördern.
+Wir freuen uns, dass diese Liste von Pools wächst und vielfältiger wird. Probieren sie sie aus. Wenn ein Pool zu groß wird, sollten sie in Betracht ziehen, zu einem anderen Pool zu wechseln, um die Dezentralisierung zu fördern.
 
-Alephium ist noch sehr neu, und es ist wichtig, dass Sie Updates im Auge behalten. Dies gilt auch für die Software, die zum Beitritt zu den Mining-Pools erforderlich ist. Beachten Sie, dass jeder Pool eine blühende Community mit Kanälen hat, die Ihre Supportanfragen und Fragen begrüßen. Daher ist es immer am besten, Ihre poolbezogenen Fragen in der entsprechenden Pool-Gruppe zu stellen. Sie finden möglicherweise auch Anleitungen in Ihrer eigenen Sprache in einer unserer [verfügbaren Community-Playlists hier](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists).
+Alephium ist noch sehr neu, und es ist wichtig, dass sie Updates im Auge behalten. Dies gilt auch für die Software, die zum Beitritt zu den Mining-Pools erforderlich ist. Beachten sie, dass jeder Pool eine blühende Community mit Kanälen hat, die Ihre Supportanfragen und Fragen begrüßen. Daher ist es immer am besten, Ihre poolbezogenen Fragen in der entsprechenden Pool-Gruppe zu stellen. Sie finden möglicherweise auch Anleitungen in Ihrer eigenen Sprache in einer unserer [verfügbaren Community-Playlists hier](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists).
 
 ### Aktuell bekannte und aktive Pools
 
-Hier ist eine Liste von Mining-Pools in alphabetischer Reihenfolge. Wir ermutigen Sie, [einen Pull-Request zu senden](https://github.com/alephium/wiki/tree/master/docs/mining/pool-mining-guide.md) , um aufstrebende Pools zu dieser Wiki hinzuzufügen und/oder ihr Verschwinden sowie mögliches Fehlverhalten zu melden.
+Hier ist eine Liste von Mining-Pools in alphabetischer Reihenfolge. Wir ermutigen sie, [einen Pull-Request zu senden](https://github.com/alephium/wiki/tree/master/docs/mining/pool-mining-guide.md) , um aufstrebende Pools zu dieser Wiki hinzuzufügen und/oder ihr Verschwinden sowie mögliches Fehlverhalten zu melden.
 
 Sie können auch [https://miningpoolstats.stream/alephium](https://miningpoolstats.stream/alephium) überprüfen.
 

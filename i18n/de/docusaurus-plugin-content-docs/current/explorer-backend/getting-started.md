@@ -1,58 +1,58 @@
 ---
 sidebar_position: 10
-title: Getting Started
-sidebar_label: Getting started
+title: Einstieg
+sidebar_label: Einstieg
 ---
 
-## Requirements
+## Anforderungen
 
-- Java (11 or 17 is recommended)
+- Java (11 oder 17 wird empfohlen)
 - [PostgreSQL](https://www.postgresql.org)
-- [A running full-node](full-node/getting-started.md)
+- [Ein laufender full-node](full-node/getting-started.md)
 
-## Download Application File
+## Anwendungsdatei herunterladen
 
-Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest).
+Laden sie die Datei  `explorer-backend-x.x.x.jar` von [Github-Release](https://github.com/alephium/explorer-backend/releases/latest)  herunter.
 
-## Create the database:
+## Erstellen der Datenbank:
 
-1. Start the `postgresql` service.
-2. Login to the PostgreSQL shell with the default `postgres` user:
+1. Starten sie den `postgresql`-Dienst.
+2. Melden sie sich bei der PostgreSQL-Shell mit dem Standardbenutzer `postgres` an:
    ```shell
    psql postgres # or `psql -U postgres` depending on your OS
    ```
-3. Ensure that the `postgres` role exists, and if not, create it.
-   List all roles:
+3. Stellen sie sicher, dass die Rolle `postgres` existiert, und erstellen sie diese bei Bedarf.
+   Alle Rollen auflisten:
    ```shell
    postgres=# \du
    ```
-   Create `postgres` role:
+   Erstellen sie die Rolle `postgres`:
    ```shell
    postgres=# CREATE ROLE postgres WITH LOGIN;
    ```
-4. Then, create the database:
+4. Erstellen sie dann die Datenbank:
    ```shell
    postgres=# CREATE DATABASE explorer;
    ```
 
-## Start your explorer-backend
+## Starten sie Ihr Explorer-Backend
 
 ```shell
 java -jar explorer-backend-x.x.x.jar
 ```
 
-Your explorer-backend will start to sync with the full node. It might take long the first time
+Ihr Explorer-Backend wird mit dem Full Node synchronisiert. Es kann beim ersten Mal lange dauern.
 
-## Start from a snapshot
+## Starten sie von einem Snapshot
 
-To reduce the first syncing time, you can restore one of our snapshot.
+Um die Zeit für die erste Synchronisierung zu verkürzen, können sie eine unserer Snapshots wiederherstellen.
 
-Snapshots are available at https://archives.alephium.org/#mainnet/explorer-db/
+Snapshots sind verfügbar unter https://archives.alephium.org/#mainnet/explorer-db/
 
-Download the latest one, extract it, and run:
+Laden sie den neuesten herunter, extrahieren sie ihn und führen sie folgendes aus:
 
 ```shell
 psql explorer < explorer-db-xxx.pg_dump
 ```
 
-Please note that the `explorer` database must have been created before and be empty.
+Bitte beachten sie, dass die `Explorer`-Datenbank zuvor erstellt und leer sein muss.

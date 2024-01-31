@@ -1,28 +1,28 @@
 ---
 sidebar_position: 30
-title: Multisig Guide
-sidebar_label: Multisig guide
+title: Multisig Leitfaden
+sidebar_label: Multisig Leitfaden
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-Alephium is supporting `m-of-n` multi-signature addresses.
+Alephium unterstützt `m-of-n` Multi-Signature-Adressen.
 
-You can find the related command for multisig at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) under the `Multi-signature` section. Make sure that your full node is running so that you can access the Swagger UI.
+Die entsprechenden Befehle für Multi-Sig finden sie unter [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) im Abschnitt `Multi-signature`. Stellen sie sicher, dass ihr Full Node läuft, damit sie auf die Swagger UI zugreifen können.
 
-## Create a multisig address
+## Erstellen einer Multi-Sig-Adresse
 
-1. Get all the public keys of the accounts for that multisig.
+1. Holen sie alle öffentlichen Schlüssel der Konten für diese Multi-Sig.
 
-   Public key can be retrieve with the wallet by calling:
+   Der öffentliche Schlüssel kann mit der Wallet abgerufen werden, indem sie folgenden Befehl aufrufen:
 
    ```
    GET /wallets/{wallet_name}/addresses/{address}
    ```
 
-   response:
+   Rückmeldung:
 
    ```json
    {
@@ -31,7 +31,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-2. For example, if you want to create a multisig address with 3 accounts that needs 2 signatures to unlock (2-of-3), you can do:
+2. Zum Beispiel, wenn sie eine Multi-Sig-Adresse mit 3 Konten erstellen möchten, die 2 Signaturen zum Entsperren benötigt (2-of-3), können sie folgendes tun:
 
    ```
    POST /multisig/address
@@ -45,7 +45,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   response:
+   Rückmeldung:
 
    ```json
    {
@@ -53,13 +53,14 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   > ⚠️ WARNING: Make sure to remember the order of the public keys, you'll need to provide the same order later.
+   > ⚠️ WARNUNG: Stellen sie sicher, dass sie die Reihenfolge der öffentlichen Schlüssel beibehalten; sie müssen später dieselbe Reihenfolge angeben.
 
-   Funds can now be send to that address.
+   Gelder können jetzt an diese Adresse gesendet werden.
 
-3. To use the funds, you need to build a multisig transaction.  
-   Pass the public keys that will sign the transaction, 2 in our example.  
-   Make sure to have the same order as during the address creation:
+3. Um die Gelder zu nutzen, müssen sie eine Multi-Sig-Transaktion erstellen.  
+   Übergeben sie die öffentlichen Schlüssel, die die 
+   Transaktion signieren werden, in unserem Beispiel 2.  
+   Stellen sie sicher, dass die Reihenfolge dieselbe ist wie bei der Adresserstellung:
 
    ```
    POST /multisig/build
@@ -78,7 +79,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   response:
+   Rückmeldung:
 
    ```json
    {
@@ -89,7 +90,8 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-4. You can now send the `txId` to the people that need to sign the transaction. Everyone can sign it using their wallet:
+4. Sie können jetzt die `txId` an die Personen senden, die die Transaktion signieren müssen. 
+   Jeder kann es mit seiner Wallet signieren:
 
    ```
    POST /wallets/{wallet_name}/sign
@@ -98,7 +100,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   response:
+   Rückmeldung:
 
    ```json
    {
@@ -106,9 +108,9 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-5. Collect the signatures, 2 in our example (because `m=2`) and finally send the transaction:
+5. Sammlen sie die Signaturen, in unserem Beispiel 2 (weil `m=2`) , und senden sie schließlich die Transaktion:
 
-   > NOTE: The signatures order needs to be the same as the public keys.
+   > HINWEIS: Die Reihenfolge der Signaturen muss dieselbe wie die der öffentlichen Schlüssel sein.
 
    ```
    POST /multisig/submit
@@ -122,7 +124,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
 
    ```
 
-   response:
+   Rückmeldung:
 
    ```json
    {

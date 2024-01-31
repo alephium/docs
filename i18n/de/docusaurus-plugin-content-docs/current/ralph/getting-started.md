@@ -17,7 +17,7 @@ Ralph ist die Programmiersprache für Smart Contracts auf der Alephium-Blockchai
 
 ## Typen
 
-Ralph ist eine statisch typisierte Sprache, aber dank Typinferenz müssen Sie den Typ für lokale Variablen und Konstanten nicht angeben.
+Ralph ist eine statisch typisierte Sprache, aber dank Typinferenz müssen sie den Typ für lokale Variablen und Konstanten nicht angeben.
 Alle Typen in Ralph sind Werttypen, das heißt, sie werden immer kopiert, wenn sie als Funktionsargumente verwendet oder zugewiesen werden.
 Derzeit unterstützt Ralph nur die folgenden Datentypen:
 
@@ -89,7 +89,7 @@ let a3 = [#00, #11, #22, #33]
 
 ### Mapping
 
-Ralph verwendet [subcontract](/ralph/getting-started#subcontract) anstelle einer datenbankähnlichen Datenstruktur, um eine funktionsähnliche Funktionalität bereitzustellen und das Problem des Staatsaufblähens zu mildern.
+Ralph verwendet [subcontract](/ralph/getting-started#subcontract) anstelle einer datenbankähnlichen Datenstruktur, um eine funktionsähnliche Funktionalität bereitzustellen und das Problem des Zustandsaufblähens zu mildern.
 
 ### Struktur
 
@@ -285,7 +285,7 @@ Contract Foo() {
 
 ### Eingebaute Funktionen
 
-Ralph bietet viele eingebaute Funktionen, auf die Sie [hier](/ralph/built-in-functions) verweisen können.
+Ralph bietet viele eingebaute Funktionen, auf die sie [hier](/ralph/built-in-functions) verweisen können.
 
 ### Annotationen
 
@@ -296,7 +296,7 @@ Die `@using`-Annotation hat vier optionale Felder:
 * `preapprovedAssets = true/false`: ob die Funktion Assets verwendet, für die der Benutzer zugestimmt hat. Der Standardwert ist `false` für Verträge und `true` für Skripte.
 * `assetsInContract = true/false`: ob die Funktion Vertragsvermögen verwendet. Der Standardwert ist `false` für Verträge.
 * `checkExternalCaller = true/false`: ob die Funktion den Aufrufer überprüft. Der Standardwert ist `true` für Verträge.
-* `updateFields = true/false`: ob die Funktion Vertragsfelder ändert. Der Standardwert ist  `false` für contracts
+* `updateFields = true/false`: ob die Funktion Vertragsfelder ändert. Der Standardwert ist  `false` für Verträge.
 
 #### Verwendung von vorab genehmigten Vermögenswerten
 
@@ -348,7 +348,7 @@ Für die Annotation `assetsInContract` überprüft der Compiler Folgendes:
 
 1. Wenn eine Funktion mit `assetsInContract = true` annotiert ist, aber keine Vertragsvermögen verwendet, gibt der Compiler einen Fehler aus.
 
-Weitere Informationen zur Berechtigung für Vermögenswerte finden Sie [hier](/ralph/asset-permission-system).
+Weitere Informationen zur Berechtigung für Vermögenswerte finden sie [hier](/ralph/asset-permission-system).
 
 #### Feldaktualisierungen
 
@@ -510,9 +510,9 @@ Contract Bar() {
 
 ### Eingebaute Funktionen des Vertrags (Build-In Functions)
 
-Manchmal müssen wir einen Vertrag innerhalb eines Vertrags erstellen, und in solchen Fällen müssen wir die Vertragsfelder in `ByteVec`codieren. Ralph bietet eine integrierte Funktion namens `encodeFields` die verwendet werden kann, um die Vertragsfelder in `ByteVec` zu codieren.
+Manchmal müssen wir einen Vertrag innerhalb eines Vertrags erstellen, und in solchen Fällen müssen wir die Vertragsfelder in `ByteVec` codieren. Ralph bietet eine integrierte Funktion namens `encodeFields` die verwendet werden kann, um die Vertragsfelder in `ByteVec` zu codieren.
 
-Der Parametertyp der Funktion `encodeFields` ist eine Liste der Typen der Vertragsfelder, angeordnet in der Reihenfolge ihrer Definitionen. Die Funktion gibt zwei `ByteVec` -Werte zurück, wobei der erste die codierten unveränderlichen Felder und der zweite die codierten veränderlichen Felder sind.
+Der Parametertyp der Funktion `encodeFields` ist eine Liste der Typen der Vertragsfelder, angeordnet in der Reihenfolge ihrer Definitionen. Die Funktion gibt zwei `ByteVec`-Werte zurück, wobei der erste die codierten unveränderlichen Felder und der zweite die codierten veränderlichen Felder sind.
 
 Hier ist ein Beispiel:
 
@@ -532,7 +532,7 @@ Contract Bar() {
 
 ### Ereignisse
 
-Ereignisse sind ausgelöste Signale, die Verträge feuern können. Anwendungen können diesen Ereignissen über die REST-API eines Alephium-Clients lauschen.
+Ereignisse sind ausgelöste Signale, die von Verträgen ausgelöst werden können. Anwendungen können diese Ereignisse über die REST-API eines Alephium-Clients abhören.
 
 ```rust
 Contract Token() {
@@ -589,9 +589,9 @@ Contract Foo(barTemplateId: ByteVec) {
 
 ### Erstellung eines Vertrags innerhalb eines Vertrags
 
-Ralph unterstützt die programmatische Erstellung von Verträgen innerhalb von Verträgen. Ralph stellt einige integrierte Funktionen zum Erstellen von Verträgen bereit. Weitere Informationen finden Sie [hier](/ralph/built-in-functions#contract-functions).
+Ralph unterstützt die programmatische Erstellung von Verträgen innerhalb von Verträgen. Ralph stellt einige integrierte Funktionen zum Erstellen von Verträgen bereit. Weitere Informationen finden sie [hier](/ralph/built-in-functions#contract-functions).
 
-Wenn Sie mehrere Instanzen eines Vertrags erstellen möchten, sollten Sie die integrierten Funktionen `copyCreateContract!` verwenden, was eine Menge On-Chain-Speicher und Transaktionsgasgebühren reduzieren wird.
+Wenn sie mehrere Instanzen eines Vertrags erstellen möchten, sollten sie die integrierten Funktionen `copyCreateContract!` verwenden, was eine Menge On-Chain-Speicher und Transaktionsgasgebühren reduzieren wird.
 
 ```rust
 Contract Foo(a: ByteVec, b: Address, mut c: U256) {

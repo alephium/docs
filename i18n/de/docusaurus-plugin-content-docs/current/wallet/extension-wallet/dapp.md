@@ -1,12 +1,12 @@
 ---
 sidebar_position: 40
-title: Extension-Wallet für DApps
-sidebar_label: Integration von DApps
+title: Extension-Wallet für dApps
+sidebar_label: Integration von dApps
 ---
 
 Die Alephium Extension Wallet fügt ein globales Objekt 
 `window.alephiumProviders.alephium` in die dApps ein, mit 
-denen der Benutzer interagiert. DApps können dieses Objekt 
+denen der Benutzer interagiert. dApps können dieses Objekt 
 verwenden, um den Benutzer zu authentifizieren, Benutzerkonten 
 anzufordern und mit der Alephium-Blockchain zu kommunizieren, 
 um beispielsweise das Benutzerkonto abzurufen, den Vertragsstatus 
@@ -84,7 +84,7 @@ Wenn der Benutzer die `Extension Wallet` auswählt, wird er erneut aufgefordert,
 aktuellen dApp zu verbinden. Nachdem der Benutzer auf die Schaltfläche `Connect` geklickt 
 hat, ist die dApp mit der Extension Wallet des Benutzers verbunden.
 
-Bitte werfen Sie einen Blick auf das
+Bitte werfen sie einen Blick auf das
 [NextJS-Template](https://github.com/alephium/nextjs-template) Repository 
 für ein funktionierendes und umfassenderes Beispiel.
 

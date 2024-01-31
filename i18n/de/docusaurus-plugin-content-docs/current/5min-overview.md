@@ -21,19 +21,19 @@ Innovatives Sharding trifft auf expressive sUTXO und effizientes Proof-of-Less-W
 
 Neben einem beeindruckenden Team, einer herausragenden Gemeinschaft und viel Energie zeichnen uns folgende technische Besonderheiten aus:
 
-**Es skaliert durch Sharding.**. Alephium basiert auf einem neuartigen und umfassenden Sharding-Algorithmus namens BlockFlow. Dieser verbessert das UTXO-Modell von BTC, um es skalierbar zu machen, und verwendet die DAG-Datenstruktur, um Konsens zwischen verschiedenen Shards zu erreichen. Dies ermöglicht bis zu 10.000 Transaktionen pro Sekunde (derzeit mehr als 400 TPS im Vergleich zu Bitcoins 7 TPS).
+**Es skaliert durch Sharding.** Alephium basiert auf einem neuartigen und umfassenden Sharding-Algorithmus namens BlockFlow. Dieser verbessert das UTXO-Modell von BTC, um es skalierbar zu machen, und verwendet die DAG-Datenstruktur, um Konsens zwischen verschiedenen Shards zu erreichen. Dies ermöglicht bis zu 10.000 Transaktionen pro Sekunde (derzeit mehr als 400 TPS im Vergleich zu Bitcoins 7 TPS).
 
-**Es ist programmierbar und sicher**. Alephium bietet ein zustandsbehaftetes UTXO-Modell, das Layer-1-Skalierbarkeit und das gleiche Maß an Programmierbarkeit wie das auf ETH implementierte Account-Modell vorschlägt, während es gleichzeitig sicherer ist.
+**Es ist programmierbar und sicher.** Alephium bietet ein zustandsbehaftetes UTXO-Modell, das Layer-1-Skalierbarkeit und das gleiche Maß an Programmierbarkeit wie das auf ETH implementierte Account-Modell verwendet, während es gleichzeitig sicherer ist.
 
-**Es ist weniger energieintensiv dank POLW**. Proof of Less Work kombiniert physische Arbeit und Coin-Ökonomie, um die erforderliche Arbeit für das Minen neuer Blöcke dynamisch anzupassen. Unter gleichen Netzwerkbedingungen verwendet Alephium nur ⅛ der Energie im Vergleich zu Bitcoin.
+**Es ist weniger energieintensiv dank POLW.** Proof of Less Work kombiniert physische Arbeit und Coin-Ökonomie, um die erforderliche Arbeit für das Minen neuer Blöcke dynamisch anzupassen. Unter gleichen Netzwerkbedingungen verwendet Alephium nur ⅛ der Energie im Vergleich zu Bitcoin.
 
-**Es verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred)**. Es löst viele der kritischen Probleme der aktuellen dApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
+**Es verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred).** Es löst viele der kritischen Probleme der aktuellen dApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
 
-**Es verfügt über eine eigene Programmiersprache für dApps**. Ralph ähnelt der Rust-Syntax, daher sein Name. Es ermöglicht das einfachere Erstellen effizienter und sicherer Smart Contracts im Vergleich zu Solidity. Es ist speziell darauf ausgerichtet, die Erstellung von dezentralen Finanzanwendungen zu erleichtern!
+**Es verfügt über eine eigene Programmiersprache für dApps.** Ralph ähnelt der Rust-Syntax, daher sein Name. Es ermöglicht das einfachere Erstellen effizienter und sicherer Smart Contracts im Vergleich zu Solidity. Es ist speziell darauf ausgerichtet, die Erstellung von dezentralen Finanzanwendungen zu erleichtern!
 
 Durch die Kombination all dieser Innovationen bietet Alephium eine stark nachgefragte Lösung in der Branche: eine skalierbare Blockchain, die auf bewährten Ideen von Bitcoin aufbaut, um zuverlässige, leistungsstarke und sichere DeFi- und dApps-Funktionen zu liefern. Und wir sind live!
 
-**Check out our [Whitepapers][whitepaper]!**
+**Schauen Sie sich unsere [Whitepapers][whitepaper] an!**
 
 ---
 
@@ -56,18 +56,18 @@ Zusätzlich werden die Hälfte der Transaktionsgebühren mit jedem Block verbran
 
 Das Gesamtangebot wird berechnet, indem die Tokens, die beim Genesis-Block abgebaut wurden (siehe Aufschlüsselung oben), und die Blockbelohnungen seit dem Mainnet-Launch addiert werden.
 
-Alephium verwendet die CMC-Methode, um das Umlaufangebot von ALPH zu berechnen. Dieses besteht aus: der Gesamtanzahl der vorhandenen ALPH, von der der Saldo (gesperrt & nicht gesperrt) der Privatverkaufsinvestoren, des Schatzes, des Ökosystems, der Berater/Auftragnehmer, der projektgesteuerten Vermögenswerte und aller gesperrten ALPH von anderen Adressen abgezogen wird.
+Alephium verwendet die CMC-Methode, um das Umlaufangebot von ALPH zu berechnen. Dieses besteht aus: der Gesamtanzahl der vorhandenen ALPH, von der der Saldo (gesperrt & nicht gesperrt) der Privatverkaufsinvestoren, den Finanzressourcen, des Ökosystems, der Berater/Auftragnehmer, der projektgesteuerten Vermögenswerte und aller gesperrten ALPH von anderen Adressen abgezogen wird.
 Im Allgemeinen finden Sie unser Umlaufangebot auf der Startseite unseres [Explorers](https://explorer.alephium.org/#/blocks). Wenn Sie eine detailliertere Erklärung der Coinmarketcap-Methodik wünschen, finden Sie diese [hier.](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-)
 
-Wenn Sie die Endpunkte benötigen, finden Sie diese hier: [Total Supply](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Circulating Supply](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserved Supply](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Locked ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
+Wenn Sie die Endpunkte benötigen, finden Sie diese hier: [Gesamtangebot](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Umlaufangebot](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserviertes Angebot](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Gesperrte ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
 
-**Find more details in our [Tokenomics Medium article][tokenomics-medium].**
+**Weitere Details finden Sie in unserem [Tokenomics-Artikel auf Medium][tokenomics-medium].**
 
 ---
 
 ## Wenn Sie Entwickler sind, starten Sie hier
 
-Finden Sie unsere neuestes [Node Release auf GitHub][node-release].
+Finden Sie unsere neuestes [Node-Release auf GitHub][node-release].
 
 Entdecken Sie und tragen Sie zu unseren Hauptprojekten [auf GitHub][github] bei:
 
@@ -86,9 +86,9 @@ Entdecken Sie und tragen Sie zu unseren Hauptprojekten [auf GitHub][github] bei:
 
 Beginne mit dem [Web3 SDK][web3-sdk], und wenn du eine dApp erstellen möchtest, schau [hier](./dapps/Getting-Started) vorbei. 
 Sobald Ihr Projekt veröffentlicht ist, informieren Sie alle, indem Sie einen Pull Request (PR) senden, um Ihr Projekt zu [Awesome Alephium][awesome]!
-Der Alephium [Brand Guide][brand-guide] könnte ebenfalls nützlich sein.
+Die Alephium [Markenrichtlinie][brand-guide] könnte ebenfalls nützlich sein.
 
-[Reward & Grant Program][reward-grant]
+[Belohnungs- und Förderprogramm][reward-grant]
 
 ## Wenn du Miner bist, starte hier
 
@@ -118,7 +118,7 @@ Und wenn du lieber einem Pool beitreten möchtest, findest du eine Liste der ver
 
 ## [Kaufen/Verkaufen][markets]
 
-⚠️ Einige Paare haben eine geringe Liquidität. Überprüfen Sie immer die Liquidität, bevor Sie einen Handelsplatz auswählen oder ein Asset überbrücken.
+⚠️ Einige Handelspaare verfügen über eine geringe Liquidität. Überprüfen Sie immer die Liquidität, bevor Sie einen Handelsplatz auswählen oder ein Asset überbrücken.
 
 ---
 
@@ -151,7 +151,7 @@ Und wenn du lieber einem Pool beitreten möchtest, findest du eine Liste der ver
 Nicht moderiert, unterstützt oder verwaltet durch Alephium.
 :::
 
-You will find the complete list of internationalized channel [here](./misc/Internationalization-and-Localization)
+Sie finden [hier](./misc/Internationalization-and-Localization) die vollständige Liste der internationalisierten Kanäle.
 
 ### Youtube
 

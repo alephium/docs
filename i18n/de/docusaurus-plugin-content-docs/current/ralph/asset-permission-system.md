@@ -120,7 +120,7 @@ Das erste, was auffällt, ist die Annotation für die Methode `listNFT`:
 @using(preapprovedAssets = true, assetsInContract = true, updateFields = false)
 ```
 
-`preapprovedAssets = true` teilt der VM mit, dass die Methode `listNFT` beabsichtigt, einige Vermögenswerte zu verwenden, und der Aufrufer beabsichtigt, einen Satz erforderlicher Vermögenswerte zu genehmigen, oder andernfalls wird ein Kompilierfehler gemeldet. Die Kompilierung schlägt auch fehl, wenn der Aufrufer versucht, Vermögenswerte für eine Methode zu genehmigen, bei der `preapprovedAssets = false`.
+`preapprovedAssets = true` teilt der VM mit, dass die Methode `listNFT` beabsichtigt, einige Vermögenswerte zu verwenden, und der Aufrufer beabsichtigt, einen Satz erforderlicher Vermögenswerte zu genehmigen, oder andernfalls wird ein Kompilierfehler gemeldet. Die Kompilierung schlägt auch fehl, wenn der Aufrufer versucht, Vermögenswerte für eine Methode zu genehmigen, bei der `preapprovedAssets = false` ist.
 
 `assetsInContract = true` gibt der VM an, dass die Methode `listNFT`
 beabsichtigt, das Vermögen des Vertrags `NFTMarketPlace` zu aktualisieren. 
@@ -135,7 +135,7 @@ transferTokenToSelf!(tokenOwner, ALPH, listingFee)
 
 Die Annotation `updateFields` liegt außerhalb des Rahmens dieser Dokumentation.
 
-Die Methode `marketPlace.listNFT` wird vom `TxScript` `ListNFT`, ufgerufen, 
+Die Methode `marketPlace.listNFT` wird vom `TxScript` `ListNFT`, aufgerufen, 
 wie unten gezeigt:
 
 ```rust
@@ -151,7 +151,7 @@ let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, to
 ```
 
 Wie wir sehen können, genehmigt die Methode `marketPlace.listNFT`  `1` ALPH und `1`
-Token A für die eingebaute Funktion `copyCreateSubContract!` aus ihrem eigenen Pool genehmigter Vermögenswerte (`1.1` ALPH and `1` Token A), bevor sie die `listingFee` dem Vertrag `NFTMarketPlace` elbst zusendet. Der Fluss von Vermögenswerten ist unten dargestellt:
+Token A für die eingebaute Funktion `copyCreateSubContract!` aus ihrem eigenen Pool genehmigter Vermögenswerte (`1.1` ALPH and `1` Token A), bevor sie die `listingFee` dem Vertrag `NFTMarketPlace` selbst zusendet. Der Fluss von Vermögenswerten ist unten dargestellt:
 
 ```
   Aufrufer des TxScript
@@ -186,7 +186,7 @@ ungefähr so aussehen:
   6.1 ALPHs             |  <TxScript>  | =========================================>
 ======================> |              |   0.1 ALPH (NFTMarketPlace contract)
                         |              | =========================================>
-                        |              |   4 ALPH - gas (change output)
+                        |              |   4 ALPH - gas (Ausgabe ändern)
                         |              | =========================================>
                         |              |
                         ----------------

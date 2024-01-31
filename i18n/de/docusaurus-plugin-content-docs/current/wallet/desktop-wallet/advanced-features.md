@@ -10,7 +10,7 @@ sidebar_label: Erweiterte Funktionen
 
 :::info
 
-Aufgrund der Natur von UTXO werden bei jeder Transaktion mehrere neue "Unspent Transaction Outputs" (UTXOs) erstellt, die jeweils verschiedene Beträge von ALPH enthalten. Wenn diese UTXOs nicht von Zeit zu Zeit konsolidiert werden, kann ein UTXO den Punkt erreichen, an dem es so genanntes "Staub (Dust)" wird. Das bedeutet, dass, wenn der Betrag in einem UTXO kleiner ist als die Kosten für GAS, um die enthaltenen ALPH zu senden, diese ALPH nicht mehr bewegt werden können.
+Aufgrund der Natur von UTXO werden bei jeder Transaktion mehrere neue "Unspent Transaction Outputs" (UTXOs) erstellt, die jeweils verschiedene Beträge von ALPH enthalten. Wenn diese UTXOs nicht von Zeit zu Zeit konsolidiert werden, kann ein UTXO den Punkt erreichen, an dem es so genanntes "Dust (Staub)" wird. Das bedeutet, dass, wenn der Betrag in einem UTXO kleiner ist als die Kosten für GAS, um die enthaltenen ALPH zu senden, diese ALPH nicht mehr bewegt werden können.
 
 Um sicherzustellen, dass dies nicht passiert, ermöglicht es das Wallet, deine UTXOs mit einem Klick auf eine Schaltfläche einfach zu konsolidieren.
 

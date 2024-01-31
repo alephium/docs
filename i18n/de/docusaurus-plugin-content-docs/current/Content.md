@@ -19,9 +19,9 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
   - [Ralph Programming Language](#ralph-programming-language)
   - [Asset Permission System](#asset-permission-system)
 - [Explainer Series](#explainer-series)
-- [Monthly Retrospective](#monthly-retrospective)
+- [Monatlicher Rückblick](#monatlicher-rückblick)
 - [TechTalks \& AMAs](#techtalks--amas)
-- [Milestones](#milestones)
+- [Meilensteine](#meilensteine)
 - [Community \& Social](#community--social)
 - [Tutorials \& Workshops](#tutorials--workshops)
 - [External Podcasts \& Publications](#external-podcasts--publications)
@@ -36,7 +36,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 Website - https://alephium.org/
 
-Documentation - https://docs.alephium.org/
+Dokumentation - https://docs.alephium.org/
 
 Github - https://github.com/alephium
 
@@ -98,9 +98,9 @@ Sharding - https://twitter.com/alephium/status/1648310491763331078
 An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
 ### Ralph Programming Language
-Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
+Ralph ist eine domänenspezifische Sprache (DSL) - https://twitter.com/alephium/status/1675867624184627201
 
-Ralph and Solidity Code Comparison - https://twitter.com/alephium/status/1643961985841905664
+Vergleich von Ralph- und Solidity-Code - https://twitter.com/alephium/status/1643961985841905664
 
 ### Asset Permission System
 Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
@@ -125,21 +125,21 @@ Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
 🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1733086186707808578 
 
-Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
+Alephium Tokenomics - Aktualisierter Artikel - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 
-TxScripts and Smart COntracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
+TxScripts und Smart Contracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
 
-Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
+Wissen Sie, was "Magic Numbers" sind? Und welche hat Alephium? : https://twitter.com/alephium/status/1701604666847666397
 
-First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
+Erster Entwickler-Workshop – Erstellen Sie einen Token-Faucet (Artikel) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
 
-Block Time and Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
+Blockzeit & Blockgröße - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
 
-Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
+Zurück zu den Grundlagen: Was ist Blockzeit? Warum beträgt sie auf Alephium 64 Sekunden? https://twitter.com/alephium/status/1676257717303005185
 
-Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
+Transaktionen pro Sekunde (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
 
-Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
+Zeit bis zur Endgültigkeit - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
 
@@ -149,11 +149,11 @@ Bridge #2 - https://twitter.com/alephium/status/1582368148631695361
 
 Bridge #3 - https://twitter.com/alephium/status/1587440588692934656
 
-New SDK - https://twitter.com/alephium/status/1574389337612947456
+Neues SDK - https://twitter.com/alephium/status/1574389337612947456
 
 Birthday Paradox - https://twitter.com/alephium/status/1559155971284275200
 
-BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59
+BIP39 Passphrase Implementierung - https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59
 
 BIP39 Thread - https://twitter.com/alephium/status/1557019434979512327
 
@@ -161,9 +161,9 @@ The Road to self Custody - https://medium.com/@alephium/ttxoo-2-the-road-to-self
 
 Self-custody - https://twitter.com/alephium/status/1557763279123992577
 
-Naming Alephium - https://twitter.com/alephium/status/1554467104858210305
+Namensgebung Alephium - https://twitter.com/alephium/status/1554467104858210305
 
-How many ALPH are mined per day? - https://twitter.com/alephium/status/1551905461103775745
+Wie viele ALPH werden pro Tag geschürft? - https://twitter.com/alephium/status/1551905461103775745
 
 Leman Upgrade schnorr signatures : https://twitter.com/alephium/status/1648310494661595137
 
@@ -175,11 +175,11 @@ NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
-## Monthly Retrospective
+## Monatlicher Rückblick
 
-Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
+Jun/23 "Juni war ein arbeitsreicher Monat! Schauen wir, was auf Alephium passiert ist! - https://twitter.com/alephium/status/1674785579123507202?s=20
 
-Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+Jul/23 "Heute ist der Schweizer Bundesfeier-Tag! Sehen Sie, was im Juli passiert ist! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## TechTalks & AMAs
 
@@ -240,7 +240,7 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
-## Milestones 
+## Meilensteine 
 
 Jan/24 🌊 Announcing the Rhône Network Upgrade ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
 

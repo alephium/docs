@@ -74,7 +74,7 @@ power_state:
 
 Nun werden wir die SD-Karte mit dieser Datei flashen. `user-data.yml`.
 
-Ich nutze dafür das Tool [Flash](https://github.com/hypriot/flash/), was die meiste harte Arbeit für uns erledigt.
+Ich nutze dafür das Tool [Flash](https://github.com/hypriot/flash/), welches die schwierigste Arbeit für uns erledigt.
 
 ```shell
 curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash
@@ -83,17 +83,17 @@ chmod +x flash
 ./flash --userdata user-data.yml https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz
 ```
 
-Der obige Befehl wird um Bestätigung bitten, dass `/dev/disk2` die SD-Karte und nicht deine Festplatte ist, und wird nach dem Passwort fragen, da das Flashen einer SD-Karte Administratorrechte erfordert.
+Der oben genannte Befehl wird um eine Bestätigung bitten, dass `/dev/disk2` die SD-Karte und nicht deine Festplatte ist, und wird nach dem Passwort fragen, da das Flashen einer SD-Karte Administratorrechte erfordert.
 
-Sobald der obige Befehl abgeschlossen ist, könnst du die SD-Karte in deinen Raspberry Pi einlegen und ihn einschalten. Es dauert einige Minuten, bis der erste Start vollständig ausgeführt ist, anschließend ist dein Raspberry Pi bereit zur Verwendung. Sobald der Knoten bereit ist, könst du dich per SSH anmelden, indem du `alephium` als Benutzernamen und `installfest2021` als Passwort verwendest!
+Sobald der oben genannte Befehl abgeschlossen ist, kannst du die SD-Karte in deinen Raspberry Pi einlegen und ihn einschalten. Es dauert einige Minuten, bis der erste Start vollständig ausgeführt ist, anschließend ist dein Raspberry Pi bereit zur Verwendung. Sobald der Knoten bereit ist, kannst du dich per SSH anmelden, indem du `alephium` als Benutzernamen und `installfest2021` als Passwort verwendest!
 
 ```shell
 ssh alephium@alephium
 ```
 
-Wenn der Host `alephium` unbekannt sein sollte, musst du nach der IP-Adresse des Knotens suchen, höchstwahrscheinlich in deiner Router-Konfigurations-App/Seite.
+Wenn der Host `alephium` unbekannt sein sollte, musst du nach der IP-Adresse des Knotens suchen, höchstwahrscheinlich auf der Konfigurations-Seite/App deines Routers.
 
-Und das ist es, Ihr Raspberry Pi läuft mit Docker unter Ubuntu 20.04 und ist bereit, einen vollständigen Alephium-Knoten auszuführen.
+Und das wars, dein Raspberry Pi läuft mit Docker unter Ubuntu 20.04 und ist bereit, einen vollständigen Alephium-Knoten auszuführen.
 
 🚀
 
@@ -101,7 +101,7 @@ Und das ist es, Ihr Raspberry Pi läuft mit Docker unter Ubuntu 20.04 und ist be
 
 ## Wie man eine dockerisierte Instanz eines vollständigen Alephium-Knotens ausführt:
 
-Diese zweite Sektion ist nicht spezifisch für einen Raspberry Pi, sondern kann auf jeden Server/VM/Computer mit SSH-Zugang eingerichtet werden. Wir werden die einfachste Version eines Alephium-Full-Knotens mit Docker ausführen und dann Schritt für Schritt vorgehen, um die Einrichtung bequemer zu gestalten.
+Diese zweite Sektion ist nicht spezifisch für einen Raspberry Pi, sondern kann auf jeden Server/VM/Computer mit SSH-Zugang eingerichtet werden. Wir werden die einfachste Version eines Alephium-Full-Node mit Docker ausführen und dann Schritt für Schritt vorgehen, um die Einrichtung bequemer zu gestalten.
 
 Als Voraussetzung für diesen Abschnitt müssen wir einen Server mit SSH-Zugriff haben, der genauer gesagt Ubuntu 20.04 oder höher ausführt. Der vorherige Abschnitt erklärt, wie das mit einem Raspberry Pi gemacht wird, aber eine AWS EC2-Instanz würde ebenfalls funktionieren.
 
@@ -117,7 +117,7 @@ ssh alephium@alephium
 
 Lass uns schnell Docker und Docker Compose installieren, damit wir bereit sind, die Alephium-Full-Node auszuführen.
 
-Nach dem SSH-Zugriff führen Sie die folgenden Befehle aus:
+Nach dem SSH-Zugriff führe die folgenden Befehle aus:
 
 ```shell
 sudo apt install -y docker.io docker-compose
@@ -142,7 +142,7 @@ docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:latest
 Docker-Compose ist eine etwas bequemere Möglichkeit, einen Container auszuführen, insbesondere wenn der Befehl Volumes, mehr Ports, Umgebungsvariablen usw. enthält.
 
 
-Hier ist die Servicedefinition, die du in einer `docker-compose.yml` -Datei platzieren und einfach `docker-compose up -d`  aufrufen kannst, um deine Full Node von dieser Definition aus zu starten.
+Hier ist die Servicedefinition, die du in einer `docker-compose.yml`-Datei platzieren und einfach `docker-compose up -d`  aufrufen kannst, um deine Full Node von dieser Definition aus zu starten.
 
 ```yaml
 version: "3"

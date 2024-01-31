@@ -1,22 +1,22 @@
 ---
 sidebar_position: 10
-title: Testnet Guide
-sidebar_label: Testnet guide
+title: Testnet Leitfaden
+sidebar_label: Testnet Leitfaden
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
+Die Installation des Full Nodes für das Testnet erfolgt genauso wie für das Mainnet: [Full Node Starter Guide](full-node/getting-started.md)
 
-**The `user.conf` must be modified before starting the full node**.
+**Die `user.conf` muss vor dem Starten des Full Nodes modifiziert werden.**.
 
-Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+Bitte beachten sie, dass die Standardadresse und der Port für die REST-API  [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) sind.
 
-## Configuration
+## Konfiguration
 
-In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have to add:
+In der Datei `$HOME/.alephium/user.conf` (`user.conf` , wenn Docker verwendet wird) müssen sie Folgendes hinzufügen:
 
 ```
 alephium.network.network-id = 1
@@ -25,9 +25,9 @@ alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-
 
 ## Mining
 
-In the testnet you can use the [CPU Miner Guide](cpu-miner-guide.md) to get some ALPH
+Im Testnet können sie den [CPU Miner Leitfaden](cpu-miner-guide.md) verwenden, um einige ALPH zu erhalten.
 
-Append your miner addresses in `$HOME/.alephium/user.conf` like:
+Fügen sie Ihre Miner-Adressen in `$HOME/.alephium/user.conf` wie folgt hinzu:
 
 ```
 alephium.mining.miner-addresses = [
@@ -40,11 +40,11 @@ alephium.mining.miner-addresses = [
 
 :::info 
 
-You can easily generate mining addresses by installing the [desktop wallet](../wallet/desktop-wallet/configure-mining-wallet), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
+Sie können ganz einfach Mining-Adressen generieren, indem sie die [Desktop Wallet](../wallet/desktop-wallet/configure-mining-wallet) installieren und eine Wallet mit 4 Adressen erstellen. Sie können dann die Adressen kopieren und in Ihre oben genannte `user.conf`-Datei einfügen.
 
 :::
 
-## Configuration example
+## Konfigurationsbeispiel:
 
 ```
 alephium.api.network-interface = "0.0.0.0"

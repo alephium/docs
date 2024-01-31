@@ -16,14 +16,14 @@ Dieser Leitfaden wird Ihnen helfen, unsere empfohlene Einrichtung zu installiere
 
 Voraussetzungen:
 
-- Schreiben Sie Code in [Typescript](https://www.typescriptlang.org/)
+- Schreiben sie Code in [Typescript](https://www.typescriptlang.org/)
 - Arbeiten sie in einem [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
 - [NodeJS](https://nodejs.org/en/) Version >= 16 installiert
 - `npm` Version >= 8 installiert
 
 ## Ein neues Projekt für eine neue DApp erstellen
 
-Um das Tutorial-Projekt zu erstellen, öffnen Sie ein neues Terminal und führen Sie den folgenden Befehl aus:
+Um das Tutorial-Projekt zu erstellen, öffnen sie ein neues Terminal und führen sie den folgenden Befehl aus:
 
 ```
 npx @alephium/cli@latest init alephium-tutorial
@@ -39,15 +39,15 @@ Ihr neues Netzwerk ist jetzt mit [dieser Konfiguration](https://github.com/aleph
 
 Durch REST-Endpunkte kann das TypeScript SDK dann mit dem Netzwerk interagieren.
 
-## Kompilieren Sie ihren Smart Contract
+## Kompilieren sie ihren Smart Contract
 
-Ändern Sie als nächstes den Arbeitsbereich zum Tutorial-Projekt:
+Ändern sie als nächstes den Arbeitsbereich zum Tutorial-Projekt:
 
 ```
 cd alephium-tutorial
 ```
 
-Werfen Sie einen Blick in den Ordner `contracts/` dort finden Sie `token.ral`:
+Werfen sie einen Blick in den Ordner `contracts/` dort finden sie `token.ral`:
 
 ```rust
 import "std/fungible_token_interface"
@@ -133,7 +133,7 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 }
 ```
 
- Um Ihre Verträge zu kompilieren, führen Sie den folgenden Befehl aus:
+ Um Ihre Verträge zu kompilieren, führen sie den folgenden Befehl aus:
 
 ```
 npx @alephium/cli@latest compile
@@ -237,13 +237,13 @@ const deployFaucet: DeployFunction<Settings> = async (
 export default deployFaucet
 ```
 
-Führen Sie die Bereitstellung aus mit:
+Führen sie die Bereitstellung aus mit:
 
 ```
 npx @alephium/cli@latest deploy
 ```
 
-Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Smart Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren Sie Ihre  `alephium.config.ts` und verwenden Sie anschließend folgende Option `--network`:
+Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Smart Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren sie Ihre  `alephium.config.ts` und verwenden sie anschließend folgende Option `--network`:
 
 ```
 npx @alephium/cli@latest deploy --network testnet
