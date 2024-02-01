@@ -27,9 +27,38 @@ Find the following languages in [the official Discord](https://alephium.org/disc
 
 ### Telegram groups
 
-- ID 🇮🇩 [https://t.me/AlephiumID](https://t.me/AlephiumID)
-- NL 🇳🇱 [https://t.me/AlephiumgroupNL](https://t.me/AlephiumgroupNL)
-- PT 🇧🇷🇵🇹 [https://t.me/Alephium_pt](https://t.me/Alephium_pt)
-- RU 🇷🇺 [https://t.me/alephiumgroup_ru](https://t.me/alephiumgroup_ru)
-- SP 🇪🇸 [https://t.me/minerosAlephium](https://t.me/minerosAlephium)
-- VN 🇻🇳 [https://t.me/alephiumvn](https://t.me/alephiumvn)
+Localized groups (these are non-official groups, created and modded by independant third-parties Alephium has no control on)
+
+Russian 🇷🇺 - https://t.me/alephiumgroup_ru
+
+Spanish 🇪🇦 - https://t.me/minerosAlephium
+
+Chinese 🇨🇳 - https://t.me/alephiumCN
+
+German (DACH) 🇩🇪 - https://t.me/alphgermanofficial
+
+Turkish 🇹🇷 - https://t.me/AlephiumTurkey
+
+Holland 🇳🇱 - https://t.me/AlephiumgroupNL
+
+Portuguese 🇵🇹 🇧🇷 - https://t.me/Alephium_pt
+
+Vietnamese 🇻🇳 - https://t.me/alephiumvn
+
+Indonesia 🇮🇩 - https://t.me/AlephiumID
+
+French FR - https://t.me/Alephiumfr
+
+Polish PL - https://t.me/alephiumPL
+
+Topical groups
+
+Mining https://t.me/alephium_mining
+
+Trading https://t.me/alephium_trading
+
+Bots
+
+Whales alert https://t.me/alphwhalesalert
+
+Insights https://t.me/alephiumin

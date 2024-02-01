@@ -186,7 +186,7 @@ describe('unit tests', () => {
     }
   })
   //See more test in `test/unit/token.test.ts`
-)}
+})
 ```
 
 You can run them with:

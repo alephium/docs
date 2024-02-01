@@ -39,7 +39,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 
 ## Our tokenomics
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (11.8.21), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
+The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (Nov. 8th, 2021), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
 
 80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
 
@@ -49,7 +49,7 @@ The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet 
 
 860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
 
-In addition, half of the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
+In addition, all the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
 
 
 ### Total Supply and Circulating Supply
@@ -73,14 +73,14 @@ Discover and contribute to our main projects [on GitHub][github]:
 
 - [Full node][full-node]
 - [Desktop wallet][desktop-wallet]
+- [Mobile wallet][mobile-wallet]
 - [Explorer][explorer]
 - [Web3 SDK][web3-sdk]
-- [Mobile Wallet][mobile-wallet-repo]
 - [Extension Wallet][extension-wallet-repo]
 - [Wallet Connect][walletconnect-repo]
 - [Bridge][wormhole-fork-repo]
-- [Wiki][wiki]
 - [Awesome Alephium][awesome]
+- [Docs][docs]
 
 ### Building something on Alephium?
 
@@ -110,98 +110,15 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 ## Milestones & Roadmap
 
-### Completed Milestones
+[Completed Milestones][milestones]
 
-**Core Platform**
-
-- 02.2019 - Whitepapers publicly released
-- Q1.2020 - Alpha version of the core sharding protocol implemented and tested on AWS
-- 12.2020 - Testnet Launch
-- Q1.2021 - Smart contract support
-- 09.2021 - Desktop wallet & explorer public release
-- **08.11.2021 - Mainnet launch**
-- 01.2022 - 1st dApp prototype
-- 06.2022 - Beta version of contract SDK (alephium-web3)
-- 06.2022 - Leman Network Upgrade deployed on the testnet
-- 11.2022 - Alpha version of multi-guardians bridge on the Testnet 
-- Q4.2022 - NFT prototype alpha released
-- 03.2023 - DEX prototype Released
-- 03.2023 - Launch Browser Wallet Extension
-- **27.03.2023 - Leman Network Upgrade on Mainnet**
-- 03.2023 - Schnorr signatures and cross chain interoperability
-- 03.2023 - New  Asset Permission System and set of Virtual Machine (VM) instructions and building functions
-- 03.2023 - Improved node APIs and SDK
-- 03.2023 - Improved difficulty adjustment algorithm (DAA)
-
-
-**Ecosystem**
-
-- 08.11.2021 - 3rd party cloud mining service at Mainnet Launch
-- 11.2021 - Joined the UTXO alliance & Bitcoin Association Switzerland
-- Q4.2021 - Mining ecosystem development:community pools, miners development, reference mining pool, and pool integration.
-- 12.01.2022 - First exchange listing: Gate.io
-- Q3.2022 - Initiation of marketing initiatives ( sponsoring of ErgoHack, AMAs, community competitions, campaigns, Tech Talk Series, etc)
-- Q3.2022 - 3rd party dApps development started on Alephium
-- 10.2022 - Dappnode Integration 
-- 11.2022 - Flux Integration
-- 11.2022 - Launch of Alephium Swag Shop
-- H2.2022 - Joint communication and marketing initiatives with UTXO Alliance members
-- 12.2022 - Reached over 265 community contributions 
-
-
-### Roadmap
-
-The network is young and growing rapidly. We will update the roadmap to reflect the latest priorities.
-
-**Core Platform**
-
-- [Feature] Desktop Wallet v2.0
-- [Launch] Mobile wallet (Android and iOS)
-- [Launch] Alephium’s Bridge Launch on Mainnet
-- [Feature & UX] Support streaming for blockchain events (tx, block, contract events)
-- [Feature & Security] Typescript SDK for off-chain transaction encoding/decoding
-- [Feature] P2P transaction endpoints and SDKs
-- [Community] Introduce AIP for Alephium Improvement Proposals
-- [Improvement] Improved web3 SDK with better DevX and more functionality
-- [Feature] Multisig support in SDK and wallets
-- [Security] Standard for transaction information display on wallet
-- [Improvement] Improved full node’s database system for better performance
-- [DevX & UX] Better error system for full node and its endpoints
-- [Feature] Design and implement fast sync for full node
-- [Feature] Smart contracts support in the Explorer
-- [Improvement] Enhanced UX and additional features for the Browser Wallet Extension
-- [Improvement] Improved NFT standard and prototype
-- [Launch] Additional dApps prototypes
-- [DevX] Better development experience and additional functionalities for the Ralph language
-- [Improvement] Continuous improvement of the documentation 
-- [Feature] Design and implement light node
-
-
-**Ecosystem**
-
-- Additional CEX listings
-- DEX listing 
-- Launch of 3rd party dApps (NFT, DEX, stablecoin, Alephium Name Services, oracle, etc) on Alephium
-- Ledger wallet integration
-- Additional bridges to other ecosystems
-- Introduction videos & articles for building dApps on Alephium
-- Integration with 3rd party wallets
-- First Alephium Hackathon
-- Grant program & Development Bounties V2
-- Improve developers' onboarding experience
-- Launch of the Ambassador program
-- Building-up community engagement
-- Additional marketing, partnership and knowledge-sharing initiatives with like-minded communities and projects.
-- Website revamp
-
+[Roadmap][roadmap]
 
 ---
 
-## Buy/sell
+## [Buy/sell][markets]
 
-- [Gate.io - USDT][gateio]
-- [TradeOgre - USDT][tradeogreUSDT]
-- [TradeOgre - BTC][tradeogreBTC]
+⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
 
 ---
 
@@ -276,26 +193,23 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [facebook]: https://www.facebook.com/alephium
 [medium]: https://medium.com/@alephium
 [github]: https://github.com/alephium
-[gateio]: https://www.gate.io/fr/trade/ALPH_USDT
-[tradeogreBTC]: https://tradeogre.com/exchange/BTC-ALPH
-[tradeogreUSDT]: https://tradeogre.com/exchange/USDT-ALPH
-[utxo-alliance]: https://utxo-alliance.org/
-[bas]: https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9
-[market-across]: https://marketacross.com/
 [node-release]: https://github.com/alephium/alephium/releases/latest/
 [full-node]: https://github.com/alephium/alephium
-[desktop-wallet]: https://github.com/alephium/desktop-wallet
-[explorer]: https://github.com/alephium/explorer
+[desktop-wallet]: https://github.com/alephium/alephium-frontend/apps/desktop-wallet
+[mobile-wallet]: https://github.com/alephium/alephium-frontend/apps/mobile-wallet
+[explorer]: https://github.com/alephium/alephium-frontend/apps/explorer
 [web3-sdk]: https://github.com/alephium/alephium-web3
-[wiki]: https://github.com/alephium/wiki
+[docs]: https://github.com/alephium/docs
 [awesome]: https://github.com/alephium/awesome-alephium
 [mining-discord]: https://alephium.org/discord
 [miner-starter-pack]: https://github.com/alephium/alephium-miner-getting-started
 [solo-mining-video]: https://www.youtube.com/watch?v=hdPH6inWjhc
 [reddit]: https://www.reddit.com/r/Alephium/
-[mobile-wallet-repo]: https://github.com/alephium/mobile-wallet
 [extension-wallet-repo]: https://github.com/alephium/extension-wallet
 [walletconnect-repo]: https://github.com/alephium/walletconnect
 [wormhole-fork-repo]: https://github.com/alephium/wormhole-fork
 [brand-guide]: https://github.com/alephium/alephium-brand-guide
-[reward-grant]: https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md
+[reward-grant]: https://github.com/alephium/community/tree/master
+[markets]: https://www.coingecko.com/en/coins/alephium#markets
+[roadmap]: https://alephium.org/#next
+[milestones]: https://alephium.org/#milestones

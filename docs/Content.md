@@ -42,6 +42,7 @@ Linkedin - https://www.linkedin.com/company/74304166
 ## Tech Series
 
 ### Stateful UTXO
+
 Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
 
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447
@@ -51,6 +52,14 @@ sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/16026847896554209
 sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320
 
 UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
+
+Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 1 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-de2cf2063615
+
+Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 2 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-f6b6868ef873
+
+An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1690004285818327040
+
+An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
 
 ### Proof-of-Less-Work
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
@@ -90,6 +99,30 @@ Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
 ## Explainer Series
+
+💡 Understanding the sUTXO model - https://vxtwitter.com/alephium/status/1749827565634855028
+
+Network Upgrade 🧵#1 - https://vxtwitter.com/alephium/status/1738220571832594612
+
+Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
+
+Bridge Thread #5 - https://x.com/alephium/status/1725439073052168293?s=20
+
+Bridge Thread #4 - https://x.com/alephium/status/1725164466868801848?s=20
+
+Bridge Thread #3 - https://twitter.com/alephium/status/1724107359696662624
+
+Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
+
+Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
+
+🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1733086186707808578 
+
+Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
+
+TxScripts and Smart COntracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
+
+Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
 
 First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.com/@alephium/first-developer-workshop-build-a-token-faucet-a6bb2aa7bf68
 
@@ -137,17 +170,49 @@ You can access the whole list of Twitter Threads here: https://twitter.com/aleph
 
 ## Monthly Retrospective
 
-Jun/2023 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
+Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
 
-Jul/2023 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## TechTalks & AMAs
 
-Jul/26 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
+Jan/24 - 🎙️ Live AMA @CoinMetro 🎙️ - https://www.youtube.com/watch?v=mkNZ64oYPHQ
 
-May/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+Jan/24 - French AMA with MonsieurTK https://twitter.com/i/spaces/1YqKDgrwnjkxV?s=20
+
+Jan/24 - Bridge AMA Transcript Part 3 - https://vxtwitter.com/alephium/status/1742137217307578827
+
+Dec/23 - Bridge AMA Transcript Part 2 - https://vxtwitter.com/alephium/status/1739586739579363509
+
+Dec/23 - AMA with Ivan Shigeo - https://twitter.com/Shigeo808/status/1736821774959227069
+
+Dec/23 - Bridge AMA Transcript Part 1 - https://medium.com/@alephium/the-alephium-bridge-ama-part-1-bd6536ea9cdc
+
+Dec/23 - AMA with @DjMines - https://youtu.be/gD2Lvk9WM4o?si=ZWRSwH6hHexWXWCj
+
+Dec/23 - Bridge & Beyond AMA - https://twitter.com/i/spaces/1mrGmydQreMGy
+
+Nov/23 - Alph Community Twitter Space @Hiramabiffkas - https://x.com/hiramabiffkas/status/1726835786270843094?s=20
+
+Nov/23 - X Space on Crypto Mining 📢 - https://twitter.com/i/spaces/1ZkKzjBzrOZKv?s=20
+
+Oct/23 - AMArmotte - https://x.com/Marmottoshis/status/1710643787305820353?s=20
+
+Aug/23 - HouseOfChimera Twitter Space - https://twitter.com/HouseofChimera/status/1714310856324854137 
+
+Aug/23 - UI/UX to onboard the next billion people - https://www.youtube.com/watch?v=VK4QtY_q1ek
+
+Jul/23 - Mikaël Vaivre - How to onboard the next billion people to crypto? - https://www.youtube.com/watch?v=QHmb87sT9nI
+
+Jun/23 - Bitmart X ALPH Twitter Space AMA - https://x.com/alephium/status/1670061238456565761?s=20
+
+Jun/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
+
+Apr/23 - POW Roundtable - https://www.youtube.com/watch?v=17Rx27PwADI
 
 Apr/23 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
+
+Apr/23 - Proof of less work AMA - https://x.com/alephium/status/1646113444461178882?s=20
 
 Mar/23 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
 
@@ -172,11 +237,55 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
-Sep/08 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
+Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
 
-Sep/04 Zealy quests are now available! - https://t.co/49nM9If9p1
+Jan/24 🔥 2024 is starting STRONG. - https://vxtwitter.com/alephium/status/1747995876457640253
 
-Sep/01 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
+Jan/24 🌊 Announcing the Rhône Network Upgrade ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
+
+Jan/24 ⚙️ Tech Writings of 2023 🛠 - https://vxtwitter.com/alephium/status/1744795616818217432
+
+Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
+
+Jan/24 The dApps, the whole dApps, nothing but the dApps - https://vxtwitter.com/alephium/status/1743268517309513949
+
+Dec/23 2023 Front-end recap - https://vxtwitter.com/alephium/status/1741402507203764614
+
+Dec/23 MEXC listing! - https://www.mexc.com/exchange/ALPH_USDT
+
+Dec/23 50 days of bridging! - https://vxtwitter.com/alephium/status/1740390954752958767
+
+Dec/23 Coinmetro Listing - https://vxtwitter.com/alephium/status/1737830035225219555?s=20
+
+Dec/23 Ambassador Program Launch - https://vxtwitter.com/alephium/status/1736792955896344966
+
+Dec/23 Crowdsourcing Alphad.app new name! - https://vxtwitter.com/alephium/status/1734948427950399948
+
+Dec/23 Etherscan Update! - https://vxtwitter.com/alephium/status/1734581269684687010
+
+Nov/23 iOS app is live in the App Store! - https://vxtwitter.com/alephium/status/1724452430262534311 
+
+Nov/23 The Bridge is Live! - https://vxtwitter.com/alephium/status/1722661768131178556
+
+Oct/23 Android Mobile App is out of Beta! - https://x.com/alephium/status/1719739251368325612?s=20
+
+Oct/23 Get Ready for Bridging! - https://twitter.com/alephium/status/1719398464449335561
+
+Oct/23 Meet the Guardians! - https://twitter.com/alephium/status/1716858711493493013
+
+Oct/23 Android Mobile wallet app is ready for beta testing! - https://medium.com/@alephium/ios-mobile-wallet-beta-testing-feedback-wanted-cdf162a49a79
+
+Oct/23 The mobile wallet for iOS is ready for beta testing - https://medium.com/@alephium/ios-mobile-wallet-beta-testing-feedback-wanted-cdf162a49a79 
+
+Oct/23 The Blockflow Alliance DAO got its first grant. - https://twitter.com/alephium/status/1711405133165453683?s=20
+
+Sep/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167584017588419
+
+Sep/23 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
+
+Sep/23 Zealy quests are now available! - https://t.co/49nM9If9p1
+
+Sep/23 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
 
 Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/status/1674397139835973633
 
@@ -213,17 +322,36 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
-Builders Highlight 4 - Ayin
+Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
+
+Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+
+Builders Highlight #6 - What the Duck 
+https://medium.com/@alephium/builders-highlight-6-what-the-duck-0aedc602ecfd
+
+Builders Highlight 5 - Deadrare
+https://medium.com/@alephium/builders-highlight-5-deadrare-d5ff90d6161e
+
+Builders Highlight 4 - No Trust Verify
+https://medium.com/@alephium/builders-highlight-4-no-trust-verify-9ea495ca826f
+
+Builders Highlight 3 - Ayin
 https://medium.com/@alephium/builders-highlight-3-ayin-6be4a6bd4ec2
 
-Builders Highlight 3 - Alphpaca NFTs
+Builders Highlight 2 - Alphpaca NFTs
 https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
 
-Builders Highlight 2 - Sezame Wallet
+Builders Highlight 1 - Sezame Wallet
 https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
-Builders Highlight 1 - Sahhar
+Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #14 - AnimalManJan
+https://medium.com/@alephium/community-highlight-14-animalmanjan-da8fd051bc38
+
+Community Highlight #13 - Ryann
+https://medium.com/@alephium/community-highlight-13-ryan-5dbbeaf859e4
 
 Community Highlight #12 - energy45
 https://medium.com/@alephium/community-highlight-12-sam-a-k-a-energy45-610005a9219b
@@ -260,6 +388,20 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
 
+🌈 Front-end magic - https://vxtwitter.com/alephium/status/1750549153153953845
+
+The Hitchiker’s guide to Alephium’s community - https://vxtwitter.com/alephium/status/1740670046371017186?s=20
+
+The Zealy Sprint has come to an end - https://vxtwitter.com/alephium/status/1737144172317114621
+
+Welcome to DeFi Llama! - https://vxtwitter.com/DefiLlama/status/1726667056781881648?s=20
+
+Onboarding Thread on Alephium - https://vxtwitter.com/alephium/status/1726249933374959943?s=20
+
+Verification of bridge contracts, tokens & token lists - https://medium.com/@alephium/verification-of-bridge-contracts-tokens-token-lists-76e5c237bf52
+
+Core Alephium Contibutors Update - https://medium.com/@alephium/alephium-contributors-f35eeaeaf0a0
+
 Core team interview series. Episode 4 - https://medium.com/@alephium/core-team-interview-series-episode-4-3886003b8fef
 
 Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-interview-series-episode-3-64b6dacc1459
@@ -267,6 +409,12 @@ Core team interview series. Episode 3 - https://medium.com/@alephium/core-team-i
 Core team interview series. Episode 2 - https://medium.com/@alephium/core-team-interview-series-episode-2-bec6e6908d2f
 
 Core team interview series. Episode 1 - https://medium.com/@alephium/core-team-interview-series-episode-1-3472f8295af6
+
+Welcome to the Blockflow Alliance DAO! - https://medium.com/@alephium/welcome-blockflow-alliance-dao-cd74a949f98b
+
+Alpehium's community creativity is fantastic! Toolkit Design Contest Winners - https://medium.com/@alephium/toolkit-design-contest-winners-announced-6cc5e304cd8b
+
+UI & UX wizardry from our latest techtalk! - https://medium.com/@alephium/techtalk-11-how-to-onboard-the-next-billion-people-to-crypto-d1f4904b3eea
 
 Alephium Toolkit GUI design contest! - https://medium.com/@alephium/design-contest-a-logo-for-the-toolkit-website-f7bf7801b03c
 
@@ -282,7 +430,21 @@ DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v
 
 ## Tutorials & Workshops
 
+Alephium Bridge: The Written Tutorial - https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
+
+🎦Bridge Tutorial!📺 - https://www.youtube.com/watch?v=xoYVzbwBAjg
+
+Deep Dive into Ralph with the Dev Workshop! 🛠 - https://www.youtube.com/watch?v=gi2sxvB9Np8
+
+Deep Dive into Ralph with the Dev Workshop - Part 2! 🛠 - https://vxtwitter.com/alephium/status/1729530234649866529
+
+Video tutorial on how to create a Multisig Wallet using Alephium Toolkit GUI: https://twitter.com/alephium/status/1701211477577785724
+
 How to use the Alephium Desktop Wallet privately through the NYM Mixnet - https://www.youtube.com/watch?v=VbhQEhtX-rI
+
+Second Developer Workshop - Friendtech smart contract - https://medium.com/@alephium/second-online-dev-workshop-6ebc5fb0b0da
+
+Second Developer Workshop - Re-implementing Friend.Tech’s Smart Contract in Ralph - https://www.youtube.com/watch?v=gi2sxvB9Np8
 
 First Developer Workshop — Build a Token Faucet ( Video ) - https://www.youtube.com/watch?v=YblUxEcXQuY
 
@@ -294,6 +456,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## External Podcasts & Publications
+
+Nym Project's blog post about the Alephium wallet built by @Mika and @nop33! - https://twitter.com/alephium/status/1710291031759982803
 
 UTXO Alliance Roundtable - https://www.youtube.com/watch?v=1XcBWJRRp-E&list=PL8q8n0BHJS1MWfqe1OIz4EWz9RKNrCiu6&index=1&pp=iAQB
 

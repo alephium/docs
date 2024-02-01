@@ -95,3 +95,18 @@ It's also possible to override the [logging configuration file](https://github.c
 ```
 java -Dlogback.configurationFile=/path/to/config.xml alephium-x.x.x.jar
 ```
+
+## Pruning
+
+A fully sync-ed Alephium full node requires more than 80 GB of disk space to store blockchain data. Since
+version `2.6.1` the Alephium full node supports storage pruning which can significantly reduce the storage
+requirement.
+
+Here are the steps to prune the Alephium full node:
+
+1. Make sure the Alephium full node is stopped
+2. Download `alephium-tools-2.6.1.jar` from https://github.com/alephium/alephium/releases/tag/v2.6.1
+3. If you changed the default Alephium home directory, set the the `ALEPHIUM_HOME` environment variable
+4. Run the following command `java -cp alephium-tools-2.6.1.jar org.alephium.tools.PruneStorage` to start pruning
+5. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
+6. Restart the Alephium full node

@@ -72,6 +72,11 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website: https://alph2mine.com/
 - Email: alph2mine@gmail.com
 
+#### Cedric-CRISPIN.com
+- Website: https://alephium.cedric-crispin.com/
+- Twitter: https://twitter.com/Cedric_Crispin
+- Email: webmaster@cedric-crispin.com
+
 #### Cloudiko Pool
 
 - Website: [https://cloudiko.io/](https://cloudiko.io/)
@@ -134,6 +139,12 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Telegram: https://t.me/solopool_org
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
+
+#### Vipor.net
+
+- Website: https://vipor.net
+- Discord: https://discord.gg/4tQU83Yq3Z
+- Telegram: https://t.me/vipornet
 
 #### Wooly Pooly
 

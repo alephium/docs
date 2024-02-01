@@ -446,6 +446,22 @@ Returns the id of the sub contract.
 
 ---
 
+### subContractIdInParentGroup
+
+```Rust
+fn subContractIdInParentGroup!(contract:<Contract>, subContractPath:ByteVec) -> (ByteVec)
+```
+
+Returns the id of the sub contract.
+
+> @param **contract** *the parent contract of the sub-contract*
+>
+> @param **subContractPath** *the path of the sub-contract*
+>
+> @returns *the id of the sub contract*
+
+---
+
 ## Asset Functions
 ---
 ### approveToken
@@ -1252,11 +1268,11 @@ Encodes inputs as big-endian ByteVec.
 fn blake2b!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Blake2b hash of the input.
+Computes the Blake2b-256 hash of the input.
 
 > @param **data** *the input data to be hashed*
 >
-> @returns *the hash result*
+> @returns *the 32 bytes hash result*
 
 ---
 

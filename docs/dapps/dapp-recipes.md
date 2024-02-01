@@ -94,6 +94,45 @@ const subscription = tokenFaucet.subscribeWithdrawEvent(options, fromEventCount)
 subscription.unsubscribe()
 ```
 
+### Test functions with simulated block time
+
+It's possible to test functions with simulated block time in unit tests. For integration tests based on testnet or devnet, there is no way to change the block time though.
+
+Here is a simple example:
+
+```typescript
+import { TokenFaucet } from 'artifacts/ts'
+
+const result = await TokenFaucet.tests.withdraw({
+  blockTimeStamp: 1706284941000, // the unit is millisecond
+  address: ...,
+  initialFields: ...,
+  ...
+})
+```
+
+### Log debug messages
+
+Ralph supports debug messages by emitting the built-in event `Debug`. Note that such events are ignored on mainnet.
+
+```typescript
+// Simple Ralph contract
+Contract Debug() {
+    pub fn debug() -> () {
+        emit Debug(`Hello, ${nullContractAddress!()}!`)
+    }
+}
+
+// Unit test in Typescript
+const result = await Debug.tests.debug()
+
+// The following line will appear in the console output and the full node's logs:
+//   Debug - tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq - Hello, tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq!
+
+// Retrieve all debug messages
+console.log(result.debugMessages)
+```
+
 ## Transaction
 
 ### Query transaction status
