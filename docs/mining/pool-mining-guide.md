@@ -144,6 +144,11 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 
 ⚠️ **Make sure you use the latest version of the mining software**
 
+#### Cedric-CRISPIN.com
+- Website: https://alephium.cedric-crispin.com/
+- Twitter: https://twitter.com/Cedric_Crispin
+- Email: webmaster@cedric-crispin.com
+
 ### Alephium GPU-Miner
 
 - Download: [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner)
