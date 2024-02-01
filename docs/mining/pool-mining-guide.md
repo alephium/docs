@@ -72,6 +72,11 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website: https://alph2mine.com/
 - Email: alph2mine@gmail.com
 
+#### Cedric-CRISPIN.com
+- Website: https://alephium.cedric-crispin.com/
+- Twitter: https://twitter.com/Cedric_Crispin
+- Email: webmaster@cedric-crispin.com
+
 #### Coinhunters Pool
 
 - Website: https://alph.coinhunters.space
@@ -129,6 +134,12 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
 
+#### Vipor.net
+
+- Website: https://vipor.net
+- Discord: https://discord.gg/4tQU83Yq3Z
+- Telegram: https://t.me/vipornet
+
 #### Wooly Pooly
 
 - Website: https://woolypooly.com/en/coin/alph
@@ -136,18 +147,7 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
 
-#### Vipor.net
-
-- Website: https://vipor.net
-- Discord: https://discord.gg/4tQU83Yq3Z
-- Telegram: https://t.me/vipornet
-
 ⚠️ **Make sure you use the latest version of the mining software**
-
-#### Cedric-CRISPIN.com
-- Website: https://alephium.cedric-crispin.com/
-- Twitter: https://twitter.com/Cedric_Crispin
-- Email: webmaster@cedric-crispin.com
 
 ### Alephium GPU-Miner
 
