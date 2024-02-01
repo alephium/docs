@@ -300,18 +300,18 @@ The `@using` annotation has four optional fields:
 
 #### Using Approved Assets
 
-In Ralph, if a function uses assets, then the caller needs to explicitly approve assets. And all functions in the call stack must be annotated with `@using(approvedAssets = true)`.
+In Ralph, if a function uses assets, then the caller needs to explicitly approve assets. And all functions in the call stack must be annotated with `@using(preapprovedAssets = true)`.
 
 ```rust
 Contract Foo() {
   // Function `foo` uses approved assets, and it will transfer 1 ALPH and 1 token to the contract from the `caller`
-  @using(approvedAssets = true)
+  @using(preapprovedAssets = true)
   fn foo(caller: Address, tokenId: ByteVec) -> () {
     transferAlphToSelf!(caller, 1 alph)
     transferTokenToSelf!(caller, tokenId, 1)
   }
 
-  @using(approvedAssets = true)
+  @using(preapprovedAssets = true)
   fn bar(caller: Address, tokenId: ByteVec) -> () {
     // We need to explicitly approve assets when calling function `foo`
     foo{caller -> 1 alph, tokenId: 1}(caller, tokenId)
@@ -319,6 +319,11 @@ Contract Foo() {
   }
 }
 ```
+
+For the `preapprovedAssets` annotation, the compiler will do the following checks:
+
+1. If a function is annotated `preapprovedAssets = true` but don't use the braces syntax, the compiler will report an error
+2. If a function call uses the braces syntax but the function is not annotated `preapprovedAssets = true`, the compiler will report an error
 
 #### Using Contract Assets
 
@@ -338,6 +343,10 @@ Contract Foo() {
   }
 }
 ```
+
+For the `assetsInContract` annotation, the compiler will do the following checks:
+
+1. If a function is annotated `assetsInContract = true` but does not use contract assets, the compiler will report an error
 
 You can find more information about asset permission at [here](/ralph/asset-permission-system).
 
@@ -550,7 +559,7 @@ Contract Bar(value: U256) {
 }
 
 Contract Foo(barTemplateId: ByteVec) {
-  emit SubContractCreated(key: U256, contractId: ByteVec)
+  event SubContractCreated(key: U256, contractId: ByteVec)
 
   @using(preapprovedAssets = true, checkExternalCaller = false)
   pub fn set(caller: Address, key: U256, value: U256) -> () {
@@ -569,9 +578,9 @@ Contract Foo(barTemplateId: ByteVec) {
   }
 
   pub fn get(key: U256) -> U256 {
-    const path = u256To8Bytes(key)
+    let path = u256To8Bytes(key)
     // Get the sub contract id by the `subContractId!` built-in function
-    const contractId =  subContractId!(path)
+    let contractId =  subContractId!(path)
     return Bar(contractId).getValue()
   }
 }
@@ -697,6 +706,26 @@ let bazId = // The contract id of `Baz`
 Foo(bazId).foo()
 let _ = Bar(bazId).bar()
 ```
+
+The reason why a contract can only implement one interface in Ralph is that, when calling contract methods, Ralph uses method indices to load and call contract methods.
+If we allow a contract to implement multiple interface, calling contract methods through the interface may result in using the wrong method index. For example:
+
+```
+Interface Foo {
+  pub fn foo() -> ();
+}
+
+Interface Bar {
+  pub fn bar() -> ();
+}
+
+Contract Baz() implements Foo, Bar {
+  pub fn foo() -> () {}
+  pub fn bar() -> () {}
+}
+```
+
+In this case, both `Foo(bazContractId).foo()` and `Bar(bazContractId).bar()` would use method index 0 to call the `Baz` contract.
 
 :::note
 Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph), so creating a large number of sub-contracts is not practical.

@@ -1,5 +1,5 @@
 ---
-sidebar_position: 20
+sidebar_position: 30
 title: Ecosystem
 sidebar_label: Ecosystem
 ---
@@ -28,14 +28,19 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 - [Vim plugin ](https://github.com/tdroxler/ralph.vim)
 
 ## Dapp Wallets
-- Extension wallet: [Google Chrome Store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) or [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 - [Desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
-- [Mobile wallet (WIP)](https://github.com/alephium/mobile-wallet)
+- Extension wallet:
+  - [Google Chrome Store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
+  - [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
+- Mobile wallet:
+  - [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
+  - [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
-## Prototypes
+## Examples
 
 Here are some well-maintained dApps that can be a great source of inspiration for building new dApps.
 
+- [Examples](https://github.com/alephium/ralph-example)
 - [DEX](https://github.com/alephium/alephium-dex/tree/master/contracts) 
 - [NFT](https://github.com/alephium/alephium-nft) 
-- [Wormhole Bridge Integration](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 
+- [Alephium Bridge](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 

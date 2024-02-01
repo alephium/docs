@@ -106,33 +106,48 @@ demonstrate how to interact with the Alephium blockchain from a Nextjs
 app.
 
 Authentication can be done in a few lines using the
-[@alephium/web3-react](https://github.com/alephium/alephium-web3-react)
+[@alephium/web3-react](https://github.com/alephium/alephium-web3/tree/master/packages/web3-react)
 component:
 
 ```tsx
-<AlephiumConnectProvider>
+<AlephiumWalletProvider>
   <AlephiumConnectButton />
   // Your logic
-</AlephiumConnectProvider>
+</AlephiumWalletProvider>
 ```
+
+`<AlephiumWalletProvider>` creates a react
+[context](https://reactjs.org/docs/context.html) and passes it through
+the component tree of the application. The context
+contains the
+[SignerProvider](https://github.com/alephium/alephium-web3/blob/8cf20fee4c16091cf581518e9f411e31ec37955e/packages/web3-react/src/contexts/alephiumConnect.tsx#L56)
+which is an essential piece of information to interact with the
+Alephium blockchain, such as signing transaction, etc.
 
 After user is connected to the wallet, we can interact with the
 Alephium blockchain by using a set of react hooks provided by
-[@alephium/web3-react](https://github.com/alephium/alephium-web3-react). For
+[@alephium/web3-react](https://github.com/alephium/alephium-web3/tree/master/packages/web3-react). For
 example, getting the [current
-account](https://github.com/alephium/alephium-web3-react/blob/master/src/hooks/useAccount.tsx),
-[balance](https://github.com/alephium/alephium-web3-react/blob/master/src/hooks/useBalance.tsx)
+connected wallet](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useWallet.tsx),
+[balance](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useBalance.tsx)
 and [transaction
-status](https://github.com/alephium/alephium-web3-react/blob/master/src/hooks/useTxStatus.tsx),
+status](https://github.com/alephium/alephium-web3/blob/master/packages/web3-react/src/hooks/useTxStatus.tsx),
 etc.
 
-`<AlephiumConnectProvider>` creates a react
-[context](https://reactjs.org/docs/context.html) and passes it through
-the component tree of the application. Among other things, the context
-contains the
-[SignerProvider](https://github.com/alephium/alephium-web3-react/blob/ca7e16c9fc5fe7f5ddaf006e20ab047ba2d91f74/src/components/AlephiumConnect.tsx#L35)
-which is an essential piece of information to interact with the
-Alephium blockchain, such as signing transaction, etc.
+When a user makes a transaction, you can update the user's balance using `updateBalanceForTx`.
+Here is a simple example:
+
+```typescript
+// The useBalance hook returns two values:
+// 1. balance: the current balance
+// 2. updateBalanceForTx: used to update the balance when the user makes a transaction.
+const { balance, updateBalanceForTx } = useBalance()
+
+const withdrawCallback = useCallback(async () => {
+  const result = await withdraw(...)
+  updateBalanceForTx(result.txId)
+}, [updateBalanceForTx])
+```
 
 For more implementation details, please take a look at the
 [code](https://github.com/alephium/nextjs-template). 

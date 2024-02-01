@@ -17,7 +17,7 @@ It's a good practice to use API key to limit the access to your full node's rest
 Please add the following to your `user.conf` by replacing the zeros with your own key (>= 32 characters).
 
 ```
-alephium.api.api-key = "0000000000000000000000000000000000000000000000000000000000000000"
+alephium.api.api-key = "--- your own key with >= 32 characters"
 ```
 
 Restart your full node to make this take effect.
@@ -36,6 +36,16 @@ On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
 
 Now you could use Swagger UI as if there is no API key.
 
+## How to make the full node API publicly accessible ?
+
+1. Set up your API key properly following the guide above.
+
+2. Add the following to your `user.conf` and restart your full node.
+
+```
+alephium.api.network-interface = "0.0.0.0"
+```
+
 ## How to access the Swagger UI of my full node on another computer in the same subnet ?
 
 1. Add the following to your `user.conf` and restart your full node.
@@ -44,7 +54,7 @@ Now you could use Swagger UI as if there is no API key.
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-2. Change the `host` of Swagger UI to be the IP of your full node.
+2. Change the `host` of Swagger UI to be the subnet IP of your full node.
 
 ## Error "java.lang.AssertionError: assumption failed"
 
@@ -85,3 +95,18 @@ It's also possible to override the [logging configuration file](https://github.c
 ```
 java -Dlogback.configurationFile=/path/to/config.xml alephium-x.x.x.jar
 ```
+
+## Pruning
+
+A fully sync-ed Alephium full node requires more than 80 GB of disk space to store blockchain data. Since
+version `2.6.1` the Alephium full node supports storage pruning which can significantly reduce the storage
+requirement.
+
+Here are the steps to prune the Alephium full node:
+
+1. Make sure the Alephium full node is stopped
+2. Download `alephium-tools-2.6.1.jar` from https://github.com/alephium/alephium/releases/tag/v2.6.1
+3. If you changed the default Alephium home directory, set the the `ALEPHIUM_HOME` environment variable
+4. Run the following command `java -cp alephium-tools-2.6.1.jar org.alephium.tools.PruneStorage` to start pruning
+5. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
+6. Restart the Alephium full node

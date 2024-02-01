@@ -446,6 +446,22 @@ Returns the id of the sub contract.
 
 ---
 
+### subContractIdInParentGroup
+
+```Rust
+fn subContractIdInParentGroup!(contract:<Contract>, subContractPath:ByteVec) -> (ByteVec)
+```
+
+Returns the id of the sub contract.
+
+> @param **contract** *the parent contract of the sub-contract*
+>
+> @param **subContractPath** *the path of the sub-contract*
+>
+> @returns *the id of the sub contract*
+
+---
+
 ## Asset Functions
 ---
 ### approveToken
@@ -586,7 +602,7 @@ Tests the condition or checks invariants.
 >
 > @param **errorCode** *the error code to throw if the check fails*
 >
-> @returns *true if the condition is satisfied, false otherwise*
+> @returns
 
 ---
 
@@ -757,18 +773,6 @@ fn networkId!() -> (ByteVec)
 Returns the network id (a single byte).
 
 > @returns *the network id (a single byte)*
-
----
-
-### blockHash
-
-```Rust
-fn blockHash!() -> (ByteVec)
-```
-
-Returns the block hash of the current block.
-
-> @returns *the block hash of the current block*
 
 ---
 
@@ -1264,11 +1268,11 @@ Encodes inputs as big-endian ByteVec.
 fn blake2b!(data:ByteVec) -> (ByteVec)
 ```
 
-Computes the Blake2b hash of the input.
+Computes the Blake2b-256 hash of the input.
 
 > @param **data** *the input data to be hashed*
 >
-> @returns *the hash result*
+> @returns *the 32 bytes hash result*
 
 ---
 
@@ -1324,7 +1328,7 @@ Verifies the transaction SecP256K1 signature of a public key. The signature is s
 
 > @param **publicKey** *the public key (33 bytes) of the signer*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
@@ -1354,7 +1358,7 @@ Verifies the SecP256K1 signature of the input and public key.
 >
 > @param **signature** *the signature (64 bytes) value*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
@@ -1372,7 +1376,7 @@ Verifies the ED25519 signature of the input and public key.
 >
 > @param **signature** *the signature value (64 bytes)*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 
@@ -1390,7 +1394,7 @@ Verifies the BIP340 Schnorr signature of the input and public key.
 >
 > @param **signature** *the signature value (64 bytes)*
 >
-> @returns *true if the signature is valid, false otherwise*
+> @returns
 
 ---
 

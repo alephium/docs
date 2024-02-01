@@ -95,7 +95,6 @@ import { Configuration } from '@alephium/cli'
 export type Settings = {}
 
 const configuration: Configuration<Settings> = {
-  defaultNetwork: 'devnet',
   networks: {
     devnet: {
       //Make sure the two values match what's in your devnet configuration
@@ -179,7 +178,7 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [alephium/nextjs-template](https://github.com/alephium/nextjs-template/blob/main/test/token.test.ts) project.
+A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) project.
 
 Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
 
@@ -277,7 +276,6 @@ Let's update our `alephium.config.ts`
 
 ```typescript
 const configuration: Configuration<void> = {
-  defaultNetwork: 'devnet',
   networks: {
     devnet: {
       nodeUrl: 'http://localhost:22973',
@@ -416,7 +414,7 @@ import { TokenFaucet, Withdraw } from '../artifacts/ts'
 async function withdraw() {
 
   //Select our network defined in alephium.config.ts
-  const network = configuration.networks[configuration.defaultNetwork]
+  const network = configuration.networks.devnet
 
   //NodeProvider is an abstraction of a connection to the Alephium network
   const nodeProvider = new NodeProvider(network.nodeUrl)

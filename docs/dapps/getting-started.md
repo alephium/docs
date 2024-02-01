@@ -33,17 +33,11 @@ This will create a new directory `alephium-tutorial` and initialize a sample pro
 
 ## Launch the local development network
 
-To compile and test your contracts, it's necessary to launch a local development network by running:
+To compile and test your contracts, it's necessary to launch a local development network, and you can follow [this guide](/full-node/devnet) to launch a devnet.
 
-```
-npx @alephium/cli@latest devnet start
-```
-
-Your new network is now launched using [this configuration](https://github.com/alephium/alephium-web3/blob/master/packages/cli/devnet-user.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
+Your new network is now launched using [this configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
 
 The Typescript SDK is then able to interact with the network through REST endpoints.
-
-Alternatively, if you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
 
 ## Compile your contract
 
@@ -151,7 +145,7 @@ This command also generates typescript code based on the compiled artifacts. The
 
 ## Test your contract
 
-The sample project comes with tests `test/token.test.ts` for your contract:
+The sample project comes with tests `test/unit/token.test.ts` for your contract:
 
 ```typescript
 import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
@@ -191,8 +185,8 @@ describe('unit tests', () => {
       inputAssets: [{ address: testAddress, asset: { alphAmount: 10n ** 18n } }]
     }
   })
-  //See more test in `test/token.test.ts`
-)}
+  //See more test in `test/unit/token.test.ts`
+})
 ```
 
 You can run them with:
@@ -249,7 +243,11 @@ You can run it using:
 npx @alephium/cli@latest deploy
 ```
 
-This will deploy the token faucet to all of the 4 groups of Devnet. You could configure `alephium.config.ts` to deploy the contract to different networks.
+This will deploy the token faucet to group 0 of devnet. To deploy on testnet (or any other network), update your `alephium.config.ts` and use the `--network` option:
+
+```
+npx @alephium/cli@latest deploy --network testnet
+```
 
 ## Interact with the deployed contract
 

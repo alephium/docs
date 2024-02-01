@@ -4,6 +4,8 @@ title: Exchange
 sidebar_label: Exchange
 ---
 
+Integration prototype with Alephium's SDK: https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts
+
 This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
 
 ## Getting started
@@ -25,6 +27,10 @@ To keep the guide concise, relevant API queries will be provided in the doc inst
 The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains generated Typescript APIs for both the [full node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) and [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
 
 ### Test wallet
+
+:::caution
+The node wallet is for testing the APIs of full node. To generate hot wallets for depositing, please check [wallet generation](exchange#wallet-generation).
+:::
 
 Let's recover the test wallet by executing the following API. The test wallet has 1million ALPH for the address `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH`.
 

@@ -43,11 +43,13 @@ This is a non-exhaustive list of mining-pools that are driven by the community. 
 
 We’re happy to see this list of pools grow and diversify. Please give them a try. If one pool grows too big, consider switching to a different pool to enhance decentralization.
 
-Alephium is still very new and it is important that you keep an eye on updates. This is also valid for the software needed to join the mining pools. Remember that each pool has a thriving community with channels welcoming your support requests and questions. Therefore it is always best to ask your pool related questions in the concerned pool’s group. You may also find instructions in your own language in one of our [community playlists available here.](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists)
+Alephium is still very new and it is important that you keep an eye on updates. This is also valid for the software needed to join the mining pools. Remember that each pool has a thriving community with channels welcoming your support requests and questions. Therefore it is always best to ask your pool-related questions in the concerned pool’s group. You may also find instructions in your own language in one of our [community playlists available here.](https://www.youtube.com/channel/UCIX9Eww2Kch7sc0E6gCmEdg/playlists)
+
+### Currently known and active pools
 
 Below is a list of mining pools in alphabetic order. We encourage you to [send a pull request](https://github.com/alephium/wiki/tree/master/docs/mining/pool-mining-guide.md) to add up-and-coming pools to this wiki and/or to report their disappearance as well as potential misbehavior.
 
-### Currently known and active pools
+You can also check [https://miningpoolstats.stream/alephium](https://miningpoolstats.stream/alephium).
 
 #### Alephium-pool (Community pool)
 
@@ -70,11 +72,29 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Website: https://alph2mine.com/
 - Email: alph2mine@gmail.com
 
+#### Cedric-CRISPIN.com
+- Website: https://alephium.cedric-crispin.com/
+- Twitter: https://twitter.com/Cedric_Crispin
+- Email: webmaster@cedric-crispin.com
+
+#### Cloudiko Pool
+
+- Website: [https://cloudiko.io/](https://cloudiko.io/)
+- Twitter: [https://twitter.com/Cloudiko_io](https://twitter.com/Cloudiko_io)
+- Discord: [https://discord.gg/8sTGZf3Kpm](https://discord.gg/8sTGZf3Kpm)
+
 #### Coinhunters Pool
 
 - Website: https://alph.coinhunters.space
 - Telegram (EN): https://t.me/alph_coinhunters_en
 - Telegram (RU): https://t.me/alph_gravitsapapool_ru
+
+#### e4pool ALPH Pool 
+
+- Website: https://e4pool.com/alph
+- Telegram: https://t.me/E4piko
+- Support: https://t.me/e4pool_howto
+- Forum: https://forum.e4pool.com/
 
 #### Enigma Pool
 
@@ -95,6 +115,13 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Telegram: https://t.me/metapool1
 - Discord: https://discord.gg/5TTzMDzJ
 
+#### Okminer 
+
+- Website (CN): https://okminer.com
+- Calculator: https://okminer.com/tools
+- Telegram (CN): https://t.me/okminer_CN
+- Telegram (EN): https://t.me/okminer_support
+
 #### p1pool.com
 
 - Website: https://p1pool.com/
@@ -113,19 +140,18 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Twitter: https://twitter.com/solopool_org
 - Email: support@solopool.org
 
+#### Vipor.net
+
+- Website: https://vipor.net
+- Discord: https://discord.gg/4tQU83Yq3Z
+- Telegram: https://t.me/vipornet
+
 #### Wooly Pooly
 
 - Website: https://woolypooly.com/en/coin/alph
 - Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
-
-### Pools no longer active
-
-#### e4p1k0 ALPH Pool (TLS Cert is expired)
-
-- Website: https://alph.e4pool.com/
-- Telegram: https://t.me/E4piko
 
 ⚠️ **Make sure you use the latest version of the mining software**
 
@@ -166,3 +192,12 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 - Website: [https://raveos.com/](https://raveos.com/)
 - Telegram: [https://t.me/raveossupport](https://t.me/raveossupport)
 - Discord: [https://discord.gg/Dcdadz2](https://discord.gg/Dcdadz2)
+
+### OKMiner Mobile OS 
+
+- iOS: [https://apps.apple.com/ru/app/okminer-os/id1494087547](https://apps.apple.com/ru/app/okminer-os/id1494087547)
+- Android: [https://downap.okminer.com/hashapk/okminer.apk](https://downap.okminer.com/hashapk/okminer.apk)
+- Website (CN): https://okminer.com
+- Calculator: https://okminer.com/tools
+- Telegram (CN): https://t.me/okminer_CN
+- Telegram (EN): https://t.me/okminer_support

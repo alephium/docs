@@ -1,5 +1,5 @@
 ---
-sidebar_position: 40
+sidebar_position: 50
 title: Public Services
 sidebar_label: Public services
 ---
@@ -25,15 +25,10 @@ Mind that the faucet is throttling requests for few minutes.
 ## Node and Explorer APIs
 
 Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
-* `https://wallet-v16.mainnet.alephium.org` for mainnet with node v1.6.X, deprecated, removed after Leman upgrade ([Test](https://wallet-v16.mainnet.alephium.org/infos/version))
-* `https://wallet-v17.mainnet.alephium.org` for mainnet with node v1.7.X, removed after Leman upgrade. ([Test](https://wallet-v17.mainnet.alephium.org/infos/version))
-* `https://wallet-v20.mainnet.alephium.org` for mainnet with node v2.X ([Test](https://wallet-v20.mainnet.alephium.org/infos/version))
-* `https://wallet-v17.testnet.alephium.org` for testnet with node v1.7.X, deprecated ([Test](https://wallet-v17.testnet.alephium.org/infos/version))
-* `https://wallet-v20.testnet.alephium.org` for testnet with node v2.X ([Test](https://wallet-v20.testnet.alephium.org/infos/version))
-* `https://backend-v112.mainnet.alephium.org` for mainnet with explorer backend v1.12.X, deprecated ([Test](https://backend-v112.mainnet.alephium.org/infos))
-* `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Test](https://backend-v113.mainnet.alephium.org/infos))
-* `https://backend-v112.testnet.alephium.org` for testnet with explorer backend v1.12.X, deprecated ([Test](https://backend-v112.testnet.alephium.org/infos))
-* `https://backend-v113.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Test](https://backend-v113.testnet.alephium.org/infos))
+* `https://wallet-v20.mainnet.alephium.org` for mainnet with node v2.X ([Doc](https://wallet-v20.mainnet.alephium.org/docs))
+* `https://wallet-v20.testnet.alephium.org` for testnet with node v2.X ([Doc](https://wallet-v20.testnet.alephium.org/docs))
+* `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Doc](https://backend-v113.mainnet.alephium.org/docs))
+* `https://backend-v113.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Doc](https://backend-v113.testnet.alephium.org/docs))
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
@@ -57,3 +52,11 @@ export const Aliases = ({aliases, type}) => (
 
 <Aliases aliases={aliases['current']} type='Current' />
 <Aliases aliases={aliases['deprecated']} type='Deprecated' />
+
+## API rate limiting
+
+To ensure the best performance and security, all of our public APIs have implemented rate limiting. This means that there is a limit on the number of requests you can make within a certain time period. As our services evolve and grow, the rate limit may be adjusted based on the actual usage of the service.
+
+To ensure a smooth experience while working within the rate limit, we highly recommend implementing cache and retry mechanisms when making requests to our API services. Caching responses can help reduce the number of API calls, while retrying failed requests can handle temporary issues or errors.
+
+If your application is built with the React framework, you can leverage the ["SWR"](https://www.npmjs.com/package/swr) package available on npm. SWR provides convenient hooks for data fetching and caching, making it easier to work with APIs. Specifically, you can use the `useSWR` hook for handling mutable data and the `useSWRImmutable` hook for handling immutable data such as token metadata.
