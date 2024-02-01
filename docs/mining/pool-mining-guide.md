@@ -77,6 +77,12 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Twitter: https://twitter.com/Cedric_Crispin
 - Email: webmaster@cedric-crispin.com
 
+#### Cloudiko Pool
+
+- Website: [https://cloudiko.io/](https://cloudiko.io/)
+- Twitter: [https://twitter.com/Cloudiko_io](https://twitter.com/Cloudiko_io)
+- Discord: [https://discord.gg/8sTGZf3Kpm](https://discord.gg/8sTGZf3Kpm)
+
 #### Coinhunters Pool
 
 - Website: https://alph.coinhunters.space
