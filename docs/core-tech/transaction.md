@@ -4,7 +4,7 @@ title: Transaction
 sidebar_label: Transaction
 ---
 
-A transaction refers to the act of transferring an entity from one address to another within the network. It is a fundamental operation that enables the exchange of Alephium's native cryptocurrency ALPH, or any other tokens or contract data.
+A transaction in Alephium denotes the process of transferring an entity, such as Alephium's native cryptocurrency ALPH, tokens, or contract data, from some addresses to other ones within the network. Beyond facilitating the exchange of value, transactions also play a pivotal role in executing smart contracts. These contracts allow for the implementation of programmable logic, enabling a diverse range of functionalities and decentralized applications on the Alephium blockchain.
 
 ## Prerequisites
 
@@ -18,11 +18,11 @@ A transaction typically includes the following components:
 * Outputs: list of recipients address with given amount of values (such as ALPH)
 * Transaction Fee: A small amount of cryptocurrency paid by the sender to to get his transaction included in a block.
 
-When a transaction is created, it undergoes a validation process to ensure that the inputs have sufficient funds, the transaction is properly signed, UTXO model is respected and other relevant conditions are met. 
-Once validated, the transaction is added to a [block](/core-tech/block) and subsequently added to the [BlockFlow](/core-tech/blockflow-and-sharding), becoming a permanent part of Alephium's history.
+When a transaction is created, it undergoes a validation process to ensure that the inputs have sufficient funds, the transaction is properly signed, UTXO model is respected and other relevant conditions are met.
+Once validated, the transaction is added to a [block](/core-tech/block) and subsequently added to one of the blockchain of the Alephium's network, according to the groups of the addresses involved in the transaction, becoming a permanent part of Alephium's history.
 
 ### Transaction model
-* unsigned: The unsigned transaction, containing the UTXO assets 
+* unsigned: The unsigned transaction, containing the UTXO assets
 * scriptExecutionOk: Does the script exectuted correctly?
 * contractInputs: Inputs coming from a contracts
 * generatedOutputs: Auto generated outputs from contracts
