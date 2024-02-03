@@ -166,6 +166,20 @@ Returns the id of the contract
 
 ---
 
+### contractAddress
+
+```Rust
+fn contractAddress!(contract:<Contract>) -> (Address)
+```
+
+Returns the address of the contract
+
+> @param **contract** *the contract variable*
+>
+> @returns *the address of the contract*
+
+---
+
 ### callerContractId
 
 ```Rust
