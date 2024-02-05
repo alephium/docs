@@ -176,6 +176,10 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Jan/24 - Crypto Roundtable with tsncrypto - https://x.com/alephium/status/1750142614534504831?s=20
+
+Jan/24 - AMA with Crypto Picsou - https://x.com/CryptoPicsou/status/1748757066548752679?s=20
+
 Jan/24 - 🎙️ Live AMA @CoinMetro 🎙️ - https://www.youtube.com/watch?v=mkNZ64oYPHQ
 
 Jan/24 - French AMA with MonsieurTK https://twitter.com/i/spaces/1YqKDgrwnjkxV?s=20
@@ -237,11 +241,13 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Milestones 
 
+Jan/24 Rhône Network Upgrade 🧵#2 - https://x.com/alephium/status/1752376284754420186?s=20
+
 Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
 
 Jan/24 🔥 2024 is starting STRONG. - https://vxtwitter.com/alephium/status/1747995876457640253
 
-Jan/24 🌊 Announcing the Rhône Network Upgrade ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
+Jan/24 🌊 Announcing the Rhône Network Upgrade #1 ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
 
 Jan/24 ⚙️ Tech Writings of 2023 🛠 - https://vxtwitter.com/alephium/status/1744795616818217432
 
@@ -322,6 +328,8 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Community & Social 
 
+⛏🖥 Miners Highlight # 3 - Bokiko - https://vxtwitter.com/alephium/status/1753459274783887393
+
 Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
@@ -387,6 +395,10 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
+
+👨🏼‍💻 HKTHN series! Dev Onboard Thread! - https://vxtwitter.com/alephium/status/1752028946399654269
+
+👨🏼‍💻 HKTHN series! What do the devs say about Alephium? - https://vxtwitter.com/alephium/status/1750930344055087255
 
 🌈 Front-end magic - https://vxtwitter.com/alephium/status/1750549153153953845
 
@@ -456,6 +468,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## External Podcasts & Publications
+
+Alephium Qu’est-ce que c’est, comment ça fonctionne et comment en acheter ? - https://coinacademy.fr/alephium-alph-fondamental/
 
 Nym Project's blog post about the Alephium wallet built by @Mika and @nop33! - https://twitter.com/alephium/status/1710291031759982803
 
