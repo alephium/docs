@@ -26,30 +26,30 @@ Bevor Sie tiefer eintauchen, empfehlen wir Ihnen, die folgenden Ressourcen sorgf
   - [Alephium's Community Belohnungs-Programm](https://medium.com/@alephium/introducing-community-rewards-f4638bbf14bf)
   - [Der ultimative Leitfaden zu Proof-of-Less-Work, dem Universum und allem dazwischen...](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
   - [Einführung in sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
-  - [ALPHred, die Virtuelle Maschine](https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025)
+  - [ALPHred, die virtuelle Maschine](https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025)
   - [Das Leman Network Upgrade ist Live!](https://medium.com/@alephium/the-leman-network-upgrade-is-live-f52c89b7dd6a)
 
-## Chain Daten
+## Chain Data
 
 ### Wie viele ALPH befinden sich im Umlauf?
 
-Die Umlaufmenge können Sie auf dem Alephium [Explorer](https://explorer.alephium.org) oder durch Verwendung des [Endpunkts für zirkulierende ALPH](https://backend.mainnet.alephium.org/infos/supply/circulating-alph) herausfinden.
+Die Umlaufmenge können Sie mit dem Alephium [Explorer](https://explorer.alephium.org) oder durch Verwendung des [Endpunkts für zirkulierende ALPH](https://backend.mainnet.alephium.org/infos/supply/circulating-alph) herausfinden.
 
 ### Wie wird die Umlaufmenge berechnet?
 
-Es wird nach der [Methodik von CoinMarketCap](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-) berechnet.
+Sie wird nach der [Methodik von CoinMarketCap](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-) berechnet.
 
 Die Umlaufmenge entspricht der Anzahl der existierenden ALPH abzüglich:
 
-- Des Gesamtsaldo (gesperrt und entsperrt) der Teilnehmer an privaten Verkäufen, den vom Projekt kontrollierten Adressen und den vom Team kontrollierten Adressen. Gemäß CMC: _"Tokens werden im Allgemeinen erst als im Umlauf befindlich betrachtet, nachdem sie die ursprüngliche Reserve-Wallet verlassen haben (d.h., ausgehende Überweisungen sind eher repräsentativ für die Absicht, die Münze in Umlauf zu bringen, als lediglich eine Freigabe)."_.
+- Des Gesamtsaldos (gesperrt und entsperrt) der Teilnehmer an privaten Verkäufen, den vom Projekt kontrollierten Adressen und den vom Team kontrollierten Adressen. Gemäß CMC: _"Tokens werden im Allgemeinen erst als im Umlauf befindlich betrachtet, nachdem sie die ursprüngliche Reserve-Wallet verlassen haben (d.h., ausgehende Überweisungen sind eher repräsentativ für die Absicht, die Münze in Umlauf zu bringen, als lediglich eine Freigabe)."_.
 - Allen gesperrten ALPH von anderen Adressen.
 
-### Wie kann ich mein Wallet-Guthaben überprüfen und welche sind die Adressen mit den größten Beständen?
+### Wie kann ich mein Wallet-Guthaben überprüfen, und welche Adressen haben die größten Bestände?
 
 Um das Guthaben einer bestimmten Wallet zu überprüfen, ist der [Explorer](https://explorer.alephium.org) die erste Anlaufstelle.  
 Community-Mitglieder haben eine [Alph Richlist](https://alph-richlist.vercel.app/) erstellt, die die Adressen mit den größten Beständen auflistet.
 
-Zusätzlich können Sie die Inhaber von gewrappten ALPH/ERC20 auf [etherscan.io](https://etherscan.io/token/0x590F820444fA3638e022776752c5eEF34E2F89A6#balances)
+Zusätzlich können Sie die Inhaber von gewrappten ALPH/ERC20 auf [etherscan.io](https://etherscan.io/token/0x590F820444fA3638e022776752c5eEF34E2F89A6#balances) überprüfen.
 
 ### Was ist die minimalste Transaktionsgebühr?
 
@@ -63,30 +63,30 @@ Das Alephium Mainnet unterstützt derzeit über 400 Transaktionen pro Sekunde (T
 
 Alephium erlaubt bis zu 18 Dezimalstellen, und seine kleinste Einheit wird Phi genannt. Ein Phi entspricht `0.000000000000000001` ALPH, oder `10^-18` ALPH, während 1 ALPH `10^18` Phi entspricht.
 
-## dApps
+## DApps
 
 ### Gibt es eine DEX auf Alephium?
 
-Alephium verfügt über einen [DEX-Prototyp](https://alephium.github.io/alephium-dex/#/swap) der im Testnetz läuft. Erfahren Sie mehr darüber im [Artikel zum DEX-Prototyp](https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce).
+Alephium verfügt über einen [DEX-Prototyp](https://alephium.github.io/alephium-dex/#/swap) der im Testnet läuft. Erfahren Sie mehr darüber im [Artikel zum DEX-Prototyp](https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce).
 
 Die [DEX Contracts](https://github.com/alephium/alephium-dex/tree/master/contracts) wurden gründlich von den Kernentwicklern getestet, was sie zuverlässig und effizient macht. Sie können problemlos verzweigt und für Projekte verwendet werden.
 
-### Gibt es dApps auf Alephium?
+### Gibt es DApps auf Alephium?
 
 Die meisten bisher auf Alephium erstellten Projekte sind im [Awesome Alephium Repository](https://github.com/alephium/awesome-alephium) aufgeführt. Um Ihren Beitrag hinzuzufügen, reichen Sie einen Pull Request ein!
 
-Alephium befindet sich noch in einem sehr frühen Stadium, die Infrastruktur (einschließlich einer [Bridge](https://github.com/alephium/wormhole-fork)) und die Dokumentation zur Erleichterung der Entwicklung von dApps werden kontinuierlich verbessert.
+Alephium befindet sich noch in einem sehr frühen Stadium, die Infrastruktur (einschließlich einer [Bridge](https://github.com/alephium/wormhole-fork)) und die Dokumentation zur Erleichterung der Entwicklung von DApps werden kontinuierlich verbessert.
 Alephium verfügt über eine Reihe [gut gepflegter Prototypen](https://docs.alephium.org/dapps/ecosystem#prototypes) die als Grundlage oder Inspiration für Ihr Projekt dienen können.
 
-Wenn Sie eine dApp erstellen möchten, werfen Sie einen Blick auf unseren [Leitfaden zum Einstieg in dApps](https://docs.alephium.org/dapps/getting-started).
+Wenn Sie eine DApp erstellen möchten, werfen Sie einen Blick auf unseren [Leitfaden zum Einstieg in DApps](https://docs.alephium.org/dapps/getting-started).
 
-### Warum kann sich eine dApp nur mit einer meiner Adressen verbinden?
+### Warum kann sich eine DApp nur mit einer meiner Adressen verbinden?
 
-Alephium funktioniert als eine geschichete (sharded) Blockchain, bei der Adressen und Vertragszustände in mehrere Gruppen organisiert sind. Wenn es um dApps geht, können diese in jeder dieser Gruppen bereitgestellt werden. Es gibt jedoch einen Haken: dApps können nur von Adressen in derselben Gruppe verwendet werden.
+Alephium funktioniert als eine Sharded-Blockchain, bei der Adressen und Vertragszustände in mehrere Gruppen organisiert sind. Wenn es um DApps geht, können diese in jeder dieser Gruppen bereitgestellt werden. Es gibt jedoch einen Haken: DApps können nur von Adressen in derselben Gruppe verwendet werden.
 
-Wenn Sie sich also mit einer dApp verbinden, wird diese speziell nach Adressen fragen, die zur gleichen Gruppe gehören wie die dApp selbst. Dieses Gruppensystem stellt sicher, dass alles reibungslos innerhalb der geteilten Struktur von Alephium funktioniert.
+Wenn Sie sich also mit einer DApp verbinden, wird diese speziell nach Adressen fragen, die zur gleichen Gruppe gehören wie die DApp selbst. Dieses Gruppensystem stellt sicher, dass alles reibungslos innerhalb der geschicheten Struktur von Alephium funktioniert.
 
-Beachten Sie, dass dieses Problem die Verwendung von dApps betrifft. Normale Transaktionen bieten eine ähnliche Benutzererfahrung wie nicht geschichete (sharded) Blockchains. Das Kernentwicklerteam ist entschlossen, die Verwaltung von Vermögenswerten über verschiedene Gruppen hinweg zu verbessern, um sie benutzerfreundlicher für dApp-Benutzer zu gestalten.
+Beachten Sie, dass dieses Problem die Verwendung von DApps betrifft. Normale Transaktionen bieten eine ähnliche Benutzererfahrung wie nicht Sharded-Blockchains. Das Kernentwicklerteam ist entschlossen, die Verwaltung von Vermögenswerten über verschiedene Gruppen hinweg zu verbessern, um sie benutzerfreundlicher für DApp-Benutzer zu gestalten.
 
 ## Entwicklung
 
@@ -98,14 +98,14 @@ Die Roadmap finden sie auf unserer [Webseite](https://alephium.org/#next) und in
 
 Sie können den öffentlichen Dienst von Alephium überwachen für:
 
-- Das Hauptnetzerk auf https://status.mainnet.alephium.org
-- Das Testnetzerk auf https://status.testnet.alephium.org
+- Das Mainnet auf https://status.mainnet.alephium.org
+- Das Testnet auf https://status.testnet.alephium.org
 
 ### Wo kann ich eine API abfragen?
 
-Um eine API abzufragen, müssen Sie eine vollständigen Knoten (Full Node) ausführen ([Anleitung](https://wiki.alephium.org/full-node/getting-started)).  
+Um eine API abzufragen, müssen Sie einen Full Node (vollständigen Knoten) ausführen ([Anleitung](https://wiki.alephium.org/full-node/getting-started)).  
 Alephium verwendet OpenAPI, um mit Full Nodes zu interagieren. Sie können direkt Ihr lokales Swagger UI über `127.0.0.1:12973/docs` öffnen, sobald Ihre Full Node ausgeführt wird. 
-Alternativ können Sie jeden OpenAPI-Client verwenden, um die [openapi.json](https://raw.githubusercontent.com/alephium/alephium/master/api/src/main/resources/openapi.json) aus dem Repository von Alephium zu importieren.
+Alternativ ist es möglich jeden OpenAPI-Client zu verwenden, um die [openapi.json](https://raw.githubusercontent.com/alephium/alephium/master/api/src/main/resources/openapi.json) aus dem Repository von Alephium zu importieren.
 
 ### Haben Sie ein Förder-, Belohnungs- oder Prämienprogramm?
 
@@ -117,27 +117,27 @@ Die meisten bisher auf Alephium erstellten Projekte sind im [Awesome Alephium Re
 
 ## Full Node (Vollständiger Knoten)
 
-### Gibt es eine Belohnung für das Betreiben einer Full Node?
+### Gibt es eine Belohnung für den Betrieb einer Full Node?
 
 Alephium verwendet einen Proof-of-(Less)-Work-Konsensmechanismus, was bedeutet, dass es im Gegensatz zu Proof-of-Stake-Netzwerken keine nativen monetären Belohnungen für das Betreiben eines Full Nodes gibt. Das Betreiben Ihres eigenen Node bietet jedoch andere Vorteile wie Dezentralisierung, unabhängige Überprüfung, Datenschutz und wirtschaftliche Selbstbestimmung. Der Ausdruck *"not your node, not your network"* unterstreicht die Bedeutung des Betreibens Ihres eigenen Node, da die Abhängigkeit von einem Node eines Dritten für die Interaktion mit der Blockchain bedeutet, diesem Dritten zu vertrauen. Obwohl die Verbindung zu einem Node eines Dritten im Allgemeinen sicher ist, bevorzugen einige Personen die Aufrechterhaltung ihres eigenen Vertrauens- und Datenschutzniveaus.
 
 ### Was benötige ich, um einen Full Node auszuführen?
 
-Eine Full Node von Alephium ist leichtgewichtig und kann auf den meisten Geräten laufen, einschließlich Raspberry Pi oder sogar auf einem Smartphone. Um Ihren eigenen Node einzurichten und auszuführen, folgen Sie bitte dem [Leitfaden zum Einstieg des Betriebs eines Full Node](https://docs.alephium.org/full-node/getting-started/).
+Ein Full Node von Alephium ist leichtgewichtig und kann auf den meisten Geräten laufen, einschließlich eines Raspberry Pi oder sogar auf einem Smartphone. Um Ihren eigenen Node einzurichten und auszuführen, folgen Sie bitte dem [Leitfaden zum Einstieg des Betriebs eines Full Node](https://docs.alephium.org/full-node/getting-started/).
 
 ### Ist es möglich, auf Alephium zu staken?
 
-Alephium bietet kein natives Staking auf seiner Blockchain an, da es nicht auf einem PoS-Konsensmechanismus basiert. Allerdings könnten DeFi-Liquiditätspools in Zukunft Staking-Möglichkeiten für Benutzer anbieten.
+Alephium bietet kein natives Staking auf seiner Blockchain an, da es nicht auf einem PoS-Konsensmechanismus basiert. Allerdings könnten DeFi-Liquiditätspools in Zukunft die Möglichkeit des Staking für Benutzer anbieten.
 
 ## Listungen & Börsen
 
-### Was ist Ihr Token-Kürzel?
+### Was ist Ihr Token-Ticker?
 
-Das Token-Kürzel für Alephium lautet [ALPH](https://medium.com/@alephium/introducing-alph-8381dbd9f88d).
+Das Token-Ticker für Alephium lautet [ALPH](https://medium.com/@alephium/introducing-alph-8381dbd9f88d).
 
 ### Wie lange dauert es, bis Einzahlungen auf Börsen angezeigt werden?
 
-Börsen benötigen in der Regel eine höhere Anzahl von Bestätigungen für PoW-Ketten, um ausreichende Sicherheit zu gewährleisten. Derzeit fordern die meisten Börsen zwischen 30 und 60 Bestätigungen für Alephium, was etwa 30 Minuten bis eine Stunde entspricht.
+Börsen benötigen in der Regel eine höhere Anzahl von Bestätigungen für PoW-Chains, um ausreichende Sicherheit zu gewährleisten. Derzeit fordern die meisten Börsen zwischen 30 und 60 Bestätigungen für Alephium, was etwa 30 Minuten bis eine Stunde entspricht.
 
 ### Auf welchen Börsen ist Alephium derzeit gelistet?
 
@@ -151,13 +151,13 @@ Es gibt einen [ausführlichen Artikel, der die Blockbelohnungen von Alephium erk
 
 ### Was ist der Grund, die Blockbelohnung für 500 Minuten zu sperren, obwohl die Blockzeit nur 64 Sekunden beträgt?
 
-Die 500-minütige Sperrfrist ist so konzipiert, um Re-Org-Angriffe zu verhindern, ähnlich wie die etwa 1000-minütige Sperrfrist für geschürfte Belohnungen bei Bitcoin.
+Die 500-minütige Sperrfrist ist so konzipiert, um Re-Org-Angriffe zu verhindern, ähnlich wie die 1000-minütige Sperrfrist für geschürfte Belohnungen bei Bitcoin.
 
 ### Warum habe ich 4 Mining-Adressen?
 
-Alephium ist eine geschichete (sharded) Blockchain mit `G` Gruppen und `G*G` Shards. Aufgrund dieses Designs benötigt jede Gruppe ihre eigene Mining-Adresse.
+Alephium ist eine Sharded-Blockchain mit `G` Gruppen und `G*G` Shards. Aufgrund dieses Designs benötigt jede Gruppe ihre eigene Mining-Adresse.
 
-Derzeit hat Alephium 4 Gruppen und 16 Shards in seinem Mainnet. Daher werden 4 Mining-Adressen benötigt, eine für jede Gruppe.
+Derzeit besitzt Alephium 4 Gruppen und 16 Shards in seinem Mainnet. Daher werden 4 Mining-Adressen benötigt, eine für jede Gruppe.
 
 ### Wie viele Münzen werden pro Tag geschürft?
 
@@ -174,11 +174,11 @@ Zum Zeitpunkt der letzten Aktualisierung dieses Eintrags betrug die durchschnitt
 
 ### Ist Alephium ASIC-Resistent?
 
-Nein, Alephium ist darauf ausgelegt, ASIC-freundlich zu sein, ähnlich wie Bitcoin. Die Aufrechterhaltung von ASIC-Resistenz kann äußerst herausfordernd, wenn nicht sogar unmöglich sein, wie bei anderen Blockchains, die sich gezwungen sahen, ihre Mining-Algorithmen zu ändern. Alephium hat sich dazu entschlossen, die Priorität auf ein sicheres und stabiles Netzwerk vor die Resistenz gegenüber spezialisierter Hardware zu setzen. Wenn es soweit ist, kann die Verwendung von ASICs auf Alephium die Leistung und die Treue der Miner unterstützen, da die Investition in hardwarespezifische Ausrüstung die Wahrscheinlichkeit erhöht, dass die Miner engagiert bleiben, was das Risiko plötzlicher Verschiebungen in der Mining-Leistung verringert.
+Nein, Alephium ist darauf ausgelegt, ASIC-freundlich zu sein, genau wie Bitcoin. Die Aufrechterhaltung von ASIC-Resistenz kann äußerst herausfordernd, wenn nicht sogar unmöglich, wie bei anderen Blockchains, die sich gezwungen sahen, Forks durchzuführen und ihre Mining-Algorithmen zu ändern. Alephium hat sich dafür entschieden, die Priorität auf ein sicheres und stabiles Netzwerk zu legen, anstatt Widerstand gegen spezialisierte Hardware zu bieten. Wenn die Zeit gekommen ist, kann die Verwendung von ASICs auf Alephium die Leistung und die Treue der Miner unterstützen. Die Investition in hardware, die speziell für die Blockchain entwickelt wurde, macht es wahrscheinlicher, dass Miner engagiert bleiben und verringert das Risiko plötzlicher Verschiebungen in der Mining-Leistung.
 
 ### Welche Mining Software kann ich verwenden, um ALPH zu schürfen?
 
-Unterhalb ist eine Liste bekannter Mining Software für Alephium aufgelistet. Bitte beachten Sie, dass die Liste möglicherweise nicht vollständig ist, da es schwierig ist, neue Mining Software aktuell zu halten. Fühlen Sie sich frei, einen Pull-Request einzureichen, um die Liste zu ergänzen.
+Unterhalb ist eine Liste bekannter Mining Software für Alephium aufgelistet. Beachten Sie, dass die Liste unvollständig sein kann, da es schwierig ist, neue Miner im Auge zu behalten. Sie können gerne einen Pull Request einreichen, um weitere hinzuzufügen.
 
 - https://www.bzminer.com/guides/how-to-mine-alephium/
 - https://lolminer.site/
@@ -188,41 +188,41 @@ Unterhalb ist eine Liste bekannter Mining Software für Alephium aufgelistet. Bi
 - https://trex-miner.com/
   https://github.com/trexminer/T-Rex
 
-Sie können auch [Alephium's GPU Miner](https://github.com/alephium/gpu-miner) verwenden, jedoch ist er nicht so effizient wie die anderen in dieser Liste.
+Sie können auch den [Alephium GPU Miner](https://github.com/alephium/gpu-miner) verwenden, jedoch ist dieser nicht so effizient wie die anderen in dieser Liste.
 
 ## Tech
 
 ### Warum eine weitere L1-Blockchain? Gibt es nicht schon zu viele?
 
-Die Blockchain hat sich von einer disruptiven Technologie zu einer möglichen Mainstream-Lösung für verschiedene Sektoren entwickelt. Aufgrund dieses Paradigmenwechsels geben die meisten Projekte die Grundwerte von Dezentralisierung, Selbstbestimmung und Sicherheit auf, um die Skalierbarkeit zu verfolgen, die für derartige Anwendungen erforderlich ist. Alephium erzielt dasselbe Ergebnis, ohne diese Grundprinzipien zu beeinträchtigen, und ist einzigartig positioniert, um das Interesse der Branche an (s)UTXO und Po(L)W zu wecken und die Bewegung von UTXO-basierten DeFi- und Smart-Vertragsanwendungen anzuführen.
+Die Blockchain hat sich von einer disruptiven Technologie zu einer möglichen Mainstream-Lösung für verschiedene Sektoren entwickelt. Aufgrund dieses Paradigmenwechsels geben die meisten Projekte die Grundwerte von Dezentralisierung, Selbstbestimmung und Sicherheit auf, um die Skalierbarkeit zu verfolgen, die für derartige Anwendungen erforderlich ist. Alephium erzielt dasselbe Ergebnis, ohne dabei die Grundprinzipien zu beeinträchtigen, und ist einzigartig positioniert, um das Interesse der Branche an (s)UTXO und Po(L)W zu wecken und die Bewegung von UTXO-basierten DeFi- und Smart-Vertragsanwendungen anzuführen.
 
 Darüber hinaus gab es einige wichtige technologische Motivationen für den Aufbau von Alephium:
 
 1. Horizontale Skalierung durch Sharding
 2. Viele der neuen Layer 1 (L1)-Blockchains sind ressourcenintensiv und machen es teuer, einen vollständigen Knoten zu betreiben, was langfristig zu einem Mangel an Dezentralisierung und Desintermediation führen kann. Alephiums Ansatz ähnelt dem von Bitcoin, bei dem jeder einen vollständigen Knoten (Full Node) betreiben und das Netzwerk überprüfen kann. _"Don't trust, verify."_
-3. Viele neue L1-Blockchains verwenden das Account-Modell oder sind EVM-kompatibel und erben dessen Schwächen. Alephium hat eine neue virtuelle Maschine (VM) auf Basis des Unspent Transaction Output (UTXO)-Modells erstellt, um ein neues Programmierparadigma mit höherem Sicherheitsniveau für dezentrale Anwendungen (dApps) zu bieten.
+3. Viele neue L1-Blockchains verwenden das Account-Modell oder sind EVM-kompatibel und erben dessen Schwächen. Alephium hat eine neue virtuelle Maschine (VM) auf Basis des Unspent Transaction Output (UTXO)-Modells erstellt, um ein neues Programmierparadigma mit höherem Sicherheitsniveau für dezentrale Anwendungen (DApps) zu bieten.
 4. Die meisten neuen L1-Blockchains verwenden den Proof-of-Stake (PoS)-Konsensmechanismus. Alephium hat sich dafür entschieden, auf dem Proof-of-Work (PoW) aufzubauen, da es ein einfacherer, konsistenterer und robusterer Konsensmechanismus für die Erreichung der Dezentralisierung ist.
 
 ### Unterstützt Alephium Smart Contracts?
 
-Ja, Alephium unterstützt Smart Contracts. Es wurde speziell entwickelt, um ein skalierbares und sicheres Netzwerk für Smart Contracts und dezentrale Anwendungen zu sein.
+Ja, Alephium unterstützt Smart Contracts. Es wurde speziell dafür entwickelt, ein skalierbares und sicheres Netzwerk für Smart Contracts und dezentrale Anwendungen zu sein.
 
 ### Warum beträgt die Blockzeit 64 Sekunden? Gibt es dafür einen bestimmten Grund?
 
-Die Endgültigkeit bei Proof-of-Work (PoW)-Blockchains basiert auf der Menge an Arbeit, die in neuen Blöcken angesammelt wird, und nicht auf der Blockzeit. Dies bedeutet, dass, wenn eine Transaktion N Blöcke mit einer Blockzeit von T benötigt, um bestätigt zu werden, sie 2N Blöcke benötigen wird, um bestätigt zu werden, wenn die Blockzeit auf T/2 halbiert wird. Was zu derselben Zeitspanne für die Bestätigung führen würde.
+Die Endgültigkeit (Finality) in Proof-of-Work (PoW)-Blockchains basiert auf der Menge an Arbeit, die in neuen Blöcken akkumuliert wird, anstatt auf der Blockzeit. Dies bedeutet, dass, wenn eine Transaktion N Blöcke mit einer Blockzeit T benötigt, um bestätigt zu werden, sie dann 2N Blöcke benötigen wird, um bestätigt zu werden, wenn die Blockzeit auf T/2 halbiert wird. Dies würde zu derselben Zeitspanne für die Bestätigung führen.
 
 Obwohl kürzere Blockzeiten eine bessere Benutzererfahrung bieten, bringen sie auch einige Nachteile mit sich:
 
-- Es werden mehr Orphan-Blöcke erzeugt. Die Rate von Uncle-Blöcken bei PoW Ethereum liegt bei 10% oder mehr, während die Uncle-Rate von Bitcoin weniger als 1% beträgt.
-- Erhöhter Overhead im P2P-Netzwerk. Dieses Problem ist für PoS-Blockchains schwerwiegender, da Berichte darauf hindeuten, dass bis zu 90% der Transaktionen auf Solana Validator-Nachrichten sind.
+- Mehr Waisenblöcke werden produziert. Die Rate an Onkelblöcken im PoW-Netzwerk von Ethereum beträgt 10% oder mehr, während die Waisenblockrate bei Bitcoin weniger als 1% beträgt.
+- Erhöhter Overhead im P2P-Netzwerk. Dieses Problem ist für PoS-Blockchains besonders schwerwiegend, da Berichte darauf hinweisen, dass bis zu 90% der Transaktionen auf Solana Validator-Nachrichten sind.
 
 Um langfristig eine leichte und effiziente Blockchain zu gewährleisten, sollten solche Overheads vermieden werden. Daher startete Alephium mit einer Blockzeit von 64 Sekunden, die einen Kompromiss zwischen Bitcoin und neueren Blockchains mit kürzeren Blockzeiten darstellt.
 
-Für diejenigen, die Blockzeiten und sofortige Endgültigkeit priorisieren, können Layer-2-Lösungen auf Alephium aufgebaut werden, und die Blockzeit kann in Zukunft verringert werden, wenn die Blockchain reift oder die Internetgeschwindigkeit zunimmt. Letztendlich ist eine leichte, skalierbare und effiziente Layer-1 für den Kryptowährungsraum unerlässlich.
+Für diejenigen, die Blockzeiten und sofortige Endgültigkeit priorisieren, können Layer-2-Lösungen auf Alephium aufgebaut werden, und die Blockzeit kann in Zukunft verringert werden, wenn die Blockchain reift oder die Internetgeschwindigkeit zunimmt. Letztendlich ist eine leichte, skalierbare und effiziente Layer-1-Lösung für den Kryptowährungsraum unerlässlich.
 
 ### Wie lange dauert es, bis eine Transaktion durchgeführt wird?
 
-1 Sekunde sollte ausreichen, um die eingehende Transaktion im Mempool zu sehen. Die Blockzeit von Alephium beträgt derzeit 64 Sekunden. Die ökonomische Endgültigkeit hängt von der Menge und Ihrem Risikomanagement ab. Für eine kleine Transaktion ist der Mempool wahrscheinlich ausreichend, und 1-4 Blöcke reichen für die meisten Transaktionen aus. Wenn Sie jedoch eine Börse sind und mit großen Beträgen handeln, werden Sie wahrscheinlich auf einige Dutzend bis Hunderte von Blöcken warten.
+1 Sekunde sollte ausreichen, um die eingehende Transaktion im Mempool zu sehen. Die Blockzeit von Alephium beträgt derzeit 64 Sekunden. Die ökonomische Endgültigkeit hängt von der Menge und Ihrem Risikomanagement ab. Für eine kleine Transaktion ist der Mempool wahrscheinlich ausreichend, und 1-4 Blöcke reichen für die meisten Transaktionen aus. Wenn Sie jedoch eine Börse beitreiben und mit großen Beträgen handeln, werden Sie wahrscheinlich auf einige Dutzend bis Hunderte von Blöcken warten.
 
 Sie können mehr über das Konzept der Blockzeit und der Zeit bis zur Endgültigkeit in diesen Artikeln lesen:
 
@@ -231,9 +231,9 @@ Sie können mehr über das Konzept der Blockzeit und der Zeit bis zur Endgültig
 
 ### Warum habt ihr euch für PoLW entschieden und nicht für PoS?
 
-Die Blockchain-Technologie befindet sich noch in ihren Anfangsphasen, und eine häufige Frage ist, welche Blockchain-Infrastruktur in den nächsten 10 Jahren für die Unterstützung von dApps, einschließlich DeFi, benötigt wird.
+Die Blockchain-Technologie befindet sich noch in ihren Anfangsphasen, und eine häufige Frage ist, welche Blockchain-Infrastruktur in den nächsten 10 Jahren für die Unterstützung von DApps, einschließlich DeFi, benötigt wird.
 
-Alephium wurde mit der Überzeugung aufgebaut, dass eine skalierbare Blockchain mit hoher Durchsatzrate und niedrigen Transaktionsgebühren sowie einem hohen Maß an Programmierbarkeit wie bei Ethereum und der Zuverlässigkeit und Sicherheit von Bitcoin notwendig ist. Das Ziel war es, einen "skalierbaren Bitcoin mit einer zuverlässigen Smart Contract-Lösung" zu schaffen.
+Alephium wurde mit der Überzeugung entwickelt, dass eine skalierbare Blocskchain mit hoher Durchsatzrate und niedrigen Transaktionsgebühren, kombiniert mit einem hohen Maß an Programmierbarkeit wie bei Ethereum sowie der Zuverlässigkeit und Sicherheit von Bitcoin, notwendig ist.  Das Ziel war es, einen "skalierbaren Bitcoin mit einer zuverlässigen Smart Contract-Lösung" zu schaffen.
 
 Nach dem Lindy-Effekt ist trotz der jüngsten Erfolge mit PoS das Bitcoin-Modell und das Sharding mit PoW nach wie vor der robusteste und dezentralste Weg, um eine skalierbare Blockchain aufzubauen. Insbesondere:
 
@@ -245,17 +245,17 @@ Nach dem Lindy-Effekt ist trotz der jüngsten Erfolge mit PoS das Bitcoin-Modell
 
 ### Was sind stateful UTXOs und wie unterscheiden sie sich von anderen UTXO-Modellen?
 
-Es gibt zwei Arten von Zuständen in der Blockchain-Technologie: veränderlicher Zustand (wie in Ethereum) und unveränderlicher Zustand (wie bei UTXO oder eUTXO). Der veränderliche Zustand ist flexibler und ausdrucksstärker, wie es durch das lebendige Ökosystem von Ethereum belegt wurde. Allerdings bietet das UTXO-Modell inhärente Sicherheitsvorteile.
+Es gibt zwei Arten von Zuständen in der Blockchain-Technologie: veränderlicher Zustand (wie in Ethereum) und unveränderlicher Zustand (wie bei UTXO oder eUTXO). Der veränderliche Zustand ist flexibler und ausdrucksstärker, wie es durch das lebendige Ökosystem von Ethereum belegt. Allerdings bietet das UTXO-Modell inhärente Sicherheitsvorteile.
 
 [Alephium's stateful UTXO model](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749) kombiniert die Vorteile beider. Es unterstützt veränderliche Zustände, wie sie für Smart Contracts in Ethereum zu finden sind, während es die Sicherheitsvorteile des UTXO-Modells für Vermögenswerte nutzt.
 
-### Ist Alephium anfällig für dasselbe Parallelitäts-Problem wie das klassische und erweiterte UTXO-Modell, das zu niedriger TPS führen kann?
+### Ist Alephium anfällig für die gleichen Konfliktprobleme wie das klassische und erweiterte UTXO-Modell, die zu einer niedrigen Transaktionen pro Sekunde (TPS) führen können??
 
-Nein, Alephium hat diese Einschränkung nicht. Alephiums stateful UTXO-Modell kombiniert das klassische UTXO-Modell mit dem Account-Modell und unterstützt veränderliche Zustände. Dies stellt sicher, dass dApps auf veränderliche Vertragszustände parallel zugreifen können und jede Möglichkeit eines Parallelitäts-Problems eliminiert wird.
+Nein, Alephium hat diese Einschränkung nicht. Alephiums stateful UTXO-Modell kombiniert das klassische UTXO-Modell mit dem Account-Modell und unterstützt veränderliche Zustände. Dadurch können DApps parallelen Zugriff auf veränderliche Vertragszustände haben, was jede Möglichkeit von Konfliktproblemen ausschließt.
 
 ### Warum nicht 1 Million Shards haben?
 
-Das Netzwerk ist der Hauptengpass für die Erhöhung der Anzahl der Shards. Jeder Knoten muss `2G - 1` andere Shards für die Konsistenz aufrechterhalten. Wenn die durchschnittliche Netzwerkbandbreite ausreicht, kann G so hoch wie 32 festgelegt werden. Obwohl auch einige Rechenüberlastungen vorhanden sind, bleibt die Netzwerkanbindung der hauptsächliche Engpass.
+Die Netzwerkanbindung ist der Hauptengpass für die Erhöhung der Anzahl der Shards. Jeder Knoten muss `2G - 1` andere Shards für die Konsistenz aufrechterhalten. Wenn die durchschnittliche Netzwerkbandbreite ausreicht, kann G so hoch wie 32 festgelegt werden. Obwohl auch einige Rechenüberlastungen vorhanden sind, bleibt die Netzwerkanbindung der hauptsächliche Engpass.
 
 ### Wie verläuft der Prozess, die Anzahl der Shards auf Alephium zu erhöhen?
 
@@ -267,9 +267,9 @@ Sicherheitsbedenken können bei geschichteten Blockchains auftreten, wenn sie ni
 
 Alephium hat es andererseits mit seinem Blockflow-Algorithmus gelöst. Die Mining-Arbeit über verschiedene Shards hinweg wird aufgrund von Blockabhängigkeiten akkumuliert. Ein Angreifer, der versucht, einen Shard neu zu organisieren, müsste auch alle seine Abhängigkeiten neu organisieren. Eine intuitive und vereinfachte Möglichkeit dies zu betrachten, ist, dass alle Shards miteinander Merge-Mining betreiben.
 
-### Gibt es eine Quershard-Atomicity für Token und Smart Contracts auf Alephium?
+### Gibt es in Alephium eine atomare Transaktion zwischen Shards für Tokens und Smart Contracts?
 
-Auf Alephium sind Tokens atomar über Shards hinweg zusammensetzbar, was bedeutet, dass es möglich ist, Tokens von einem Shard zu einem anderen Shard atomar in einer Transaktion zu übertragen. Allerdings haben Smart Contracts in Alephiums zustandsbewusstem UTXO-Modell token- und zustandsbezogene Komponenten, wobei jedoch nur Tokens über Shard-Grenzen hinweg atomar sind; Zustände sind geteilt und daher nicht zusammensetzbar. Diese Designentscheidung spiegelt Alephiums tokenzentrischen Ansatz wider und ermöglicht ein einfacheres Zustandsdesign, das an eine partitionierte Datenbank erinnert. Dieser Kompromiss ist vorteilhafter als die aktuellen Layer-2-Trends, die an Token-Atomicity mangelt, und derzeit existiert keine praktikable Lösung für vollständige Zustandszusammensetzbarkeit
+Auf Alephium sind Tokens zwischen Shards atomar zusammensetzbar, was bedeutet, dass es möglich ist, Tokens in einer Transaktion atomar von einem Shard zu einem anderen Shard zu transferieren. Allerdings haben Smart Contracts im zustandsbasierten UTXO-Modell von Alephium Token- und Zustandskomponenten. Nur Tokens ermöglichen eine atomare Übergreifung zwischen Shards; die Zustände sind geschardet und daher nicht zusammensetzbar. Diese Designentscheidung spiegelt den tokenzentrierten Ansatz von Alephium wider und ermöglicht ein einfacheres Zustandsdesign, das einem partitionierten Datenbankmodell ähnelt. Dieser Kompromiss ist kostengünstiger als die aktuellen Trends auf Layer-2, die an atomarer Komposabilität von Tokens mangelt. Derzeit existiert keine praktische Lösung für eine vollständige Zustandskomposabilität.
 
 ### Sind Flash Loans auf Alephium möglich?
 
@@ -277,15 +277,15 @@ Nein, Flash Loans sind auf [Alephiums virtueller Maschine, Alphred](https://medi
 
 ### Wie werden Alephium-Adressen generiert? Gibt es eine Möglichkeit, eine Bitcoin Legacy-Adresse von einer Alephium-Adresse zu unterscheiden?
 
-Alephium verwendet dieselbe Kurve wie Bitcoin (secp256k1-Kurve), um Adressen zu generieren, aber einen anderen Hash-Algorithmus (blake2b). Allerdings sind Alephium-Adressen normalerweise länger als Bitcoin-Adressen, da sie einen 32-Byte-Hash anstelle eines 20-Byte-Hash verwenden..
+Alephium verwendet dieselbe Kurve wie Bitcoin (secp256k1-Kurve), um Adressen zu generieren, aber einen anderen Hash-Algorithmus (blake2b). Allerdings sind Alephium-Adressen normalerweise länger als Bitcoin-Adressen, da sie einen 32-Byte-Hash anstelle eines 20-Byte-Hash verwenden.
 
 ### Kann ich meine Mainnet-Adresse im Testnet verwenden?
 
-Alephium-Adressen werden vom Algorithmus selbst generiert und sind netzwerkagnostisch (Testnet, Mainnet, Devnet usw.). Es ist nicht notwendig, mit einem Netzwerkknoten (oder sogar dem Internet) verbunden zu sein, um eine Brieftasche und Adressen zu erstellen. Jede Alephium-Adresse existiert im Grunde genommen in allen Netzwerken, auch in solchen, die noch nicht generiert/entdeckt wurden.
+Alephium-Adressen werden vom Algorithmus selbst generiert und sind netzwerkunabhängig (Testnet, Mainnet, Devnet usw.). Es ist nicht notwendig, mit einem Netzwerkknoten (oder sogar dem Internet) verbunden zu sein, um eine Wallet und Adressen zu erstellen. Jede Alephium-Adresse existiert im Grunde genommen in allen Netzwerken, auch in solchen, die noch nicht generiert/entdeckt wurden.
 
-In früheren Krypto-Netzwerken enthielten Transaktionen keine Netzwerkinformationen und konnten auf anderen Netzwerken "replayed" werden. Es wurde daher nicht empfohlen, dieselben Adressen auf verschiedenen Netzwerken zu verwenden. Alephium enthält die Netzwerk-ID in seinen Transaktionen, daher ist es durchaus akzeptabel, dieselbe Adresse auf verschiedenen Netzwerken zu verwenden.
+In früheren Krypto-Netzwerken enthielten Transaktionen keine Netzwerkinformationen und konnten auf anderen Netzwerken "wiedergegeben" werden. Es wurde daher nicht empfohlen, dieselben Adressen auf verschiedenen Netzwerken zu verwenden. Alephium enthält die Netzwerk-ID in seinen Transaktionen, daher ist es durchaus akzeptabel, dieselbe Adresse auf verschiedenen Netzwerken zu verwenden.
 
-Wenn Sie Ihre Brieftasche mit einem Netzwerk verknüpfen, z. B. Testnet, können Sie einen Testnet-Knoten bitten, Ihr Adressguthaben zu überprüfen. Wenn Sie die Netzwerkeinstellungen Ihrer Brieftasche ändern, um sich mit dem Mainnet zu verbinden, zeigt ein Mainnet-Knoten Ihr Adressguthaben im Mainnetzwerk an. Jede Adresse hat also ein Guthaben in jedem Netzwerk, und Sie können das Guthaben Ihrer Adresse in diesem speziellen Netzwerk anzeigen, indem Sie sich damit verbinden.
+Wenn Sie Ihr Wallet mit einem Netzwerk verknüpfen, z. B. Testnet, können Sie einen Testnet-Knoten bitten, Ihr Adressguthaben zu überprüfen. Wenn Sie die Netzwerkeinstellungen Ihrer Wallet ändern, um sich mit dem Mainnet zu verbinden, zeigt ein Mainnet-Knoten Ihr Adressguthaben im Mainnetzwerk an. Jede Adresse hat also ein Guthaben in jedem Netzwerk, und Sie können das Guthaben Ihrer Adresse in diesem speziellen Netzwerk anzeigen, indem Sie sich damit verbinden.
 
 ### Warum hat Alephium beschlossen, seine eigene virtuelle Maschine und Programmiersprache für Smart Contracts zu entwicklen?
 
@@ -309,7 +309,7 @@ Die aktuell niedrigstmögliche Gas-Gebühr beträgt `10^-7` ALPH oder `0.0000001
 
 Alephium hat keine Halbierungen wie Bitcoin. Sein Emissionszeitplan hängt von der Netzwerk-Hashrate und dem Zeitstempel ab. Die Mining-Rewards werden dynamisch mit jedem Block angepasst. Weitere Informationen dazu finden Sie in diesen Artikeln:
 
-- [Blockbelohnung](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
+- [Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 - [Proof of Less Work](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
 
 ### Wenn Token verbrannt werden, wird es in der Zukunft einen Zeitpunkt geben, an dem die Menge an existierenden ALPH nahezu null sein wird?
@@ -329,19 +329,19 @@ Es ist zu beachten, dass die Schätzung der 1-Milliarden-Obergrenze vor der Impl
 Alephium bietet derzeit:
 
 - Eine [Desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
-- Eine [Weberweiterungs-Wallet](https://github.com/alephium/extension-wallet) verfügbar für [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) und [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
+- Eine [Webextension Wallet](https://github.com/alephium/extension-wallet) verfügbar für [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) und [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 - Eine [Mobile Wallet](https://github.com/alephium/mobile-wallet) wird derzeit entwickelt.
 
 Zusätzlich zu den offiziellen Wallets gibt es eine Reihe von Wallets von Drittanbietern.
 
 ### Ist geplant, dass Alephium von Hardware-Wallets unterstützt wird?
 
-Die Unterstützung von Hardware-Wallets anzubieten, hat für Alephium hohe Priorität. Eine Integration von Ledger ist derzeit in Arbeit und wird im Entwicklermodus mit dem Webextension-Wallet `v0.7.0` verfügbar sein..
+Die Unterstützung von Hardware-Wallets anzubieten, hat für Alephium hohe Priorität. Eine Integration von Ledger ist derzeit in Arbeit und wird im Entwicklermodus mit der Webextension-Wallet `v0.7.0` verfügbar sein.
 Die offizielle Veröffentlichung auf Ledger ist ein längerer Prozess mit mehreren Phasen, der Zeit in Anspruch nehmen wird.
 
-### Gibt es eine Möglichkeit beim Importieren meines Seeds in das Desktop-Wallet, alle generierten Adressen zu importieren?
+### Gibt es eine Möglichkeit beim Importieren meines Seeds in die Desktop Wallet, alle generierten Adressen zu importieren?
 
-Nachdem Sie Ihre Wallet mithilfe der Wiederherstellungsphrase importiert haben, kann die Wallet nun das verbundene Netzwerk scannen, um alle aktiven Adressen zu entdecken, die Sie in der Vergangenheit verwendet haben. Eine aktive Adresse ist eine Adresse, die mindestens eine Transaktion aufweist. Für die manuelle Adresssuche gehen Sie zum Abschnitt "Adressen" und klicken Sie auf das Schraubenschlüssel-Symbol neben der Schaltfläche "+ Neue Adresse". Nachdem Sie auf die Schaltfläche "Suchen" in der Option "Aktive Adressen entdecken" geklickt haben, zeigt die Desktop-Wallet alle aktiven Adressen an, die mit dieser Wiederherstellungsphrase verknüpft sind.
+Nachdem Sie Ihre Wallet mithilfe der Wiederherstellungsphrase importiert haben, kann die Wallet nun das verbundene Netzwerk scannen, um alle aktiven Adressen zu finden, die Sie in der Vergangenheit verwendet haben. Eine aktive Adresse ist eine Adresse, die mindestens eine Transaktion aufweist. Für die manuelle Adresssuche gehen Sie zum Abschnitt "Adressen" und klicken Sie auf das Schraubenschlüssel-Symbol neben der Schaltfläche "+ Neue Adresse". Nachdem Sie auf die Schaltfläche "Suchen" in der Option "Aktive Adressen finden" geklickt haben, zeigt die Desktop-Wallet alle aktiven Adressen an, die mit dieser Wiederherstellungsphrase verknüpft sind.
 
 ### Welche Daten werden bei der Analyse der Desktop-Wallet gesammelt?
 
@@ -352,10 +352,9 @@ Der Open-Source-Code von Alephium ermöglicht es Benutzern, zu überprüfen, wel
 
 Die `0.001` ALPH ist die minimalste Anforderung pro UTXO, um UTXO-Spamming zu vermeiden. Dieser Betrag wird vom Netzwerk nicht verbraucht und wird an die Zieladresse gelangen, genauso wie die Tokens.
 
-### Warum ist es wichtig, Ihren geheimen Wiederherstellungsphrase zu sichern?
+### Warum ist es wichtig, Ihre geheimen Wiederherstellungsphrase zu sichern?
 
-Das Sichern Ihrer geheimen Wiederherstellungsphrase ist von hoher Bedeutung, da es als der Hauptschlüssel zu Ihrem Wallet fungiert. Wenn Sie den Zugriff auf Ihr Wallet verlieren (z. B. aufgrund von Geräteverlust, Funktionsstörung oder App-Löschung), ist die geheime Wiederherstellungsphrase die einzige Möglichkeit, Ihre Mittel wiederherzustellen und darauf zuzugreifen.
-Ohne ihn könnten alle im Wallet gespeicherten Vermögenswerte dauerhaft verloren gehen. Behandeln Sie ihn mit äußerster Sorgfalt und bewahren Sie ihn sicher und privat auf.
+Das Sichern Ihrer geheimen Wiederherstellungsphrase ist entscheidend, da sie als der Hauptschlüssel zu Ihrem Wallet fungiert. Wenn Sie den Zugriff auf Ihr Wallet verlieren (z. B. durch Geräteverlust, Funktionsstörung oder App-Löschung), ist die geheime Wiederherstellungsphrase die einzige Möglichkeit, Ihre Mittel wiederherzustellen und darauf zuzugreifen. Ohne sie könnten alle im Wallet gespeicherten Vermögenswerte dauerhaft verloren gehen. Behandeln Sie sie daher mit äußerster Sorgfalt und bewahren Sie sie sicher und privat auf.
 
 ## Sonstiges
 

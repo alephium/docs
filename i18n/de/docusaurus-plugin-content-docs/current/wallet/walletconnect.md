@@ -9,4 +9,4 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 <UntranslatedPageText />
 
   
-## *Kommt bald*
+## *Kommt in kürze*

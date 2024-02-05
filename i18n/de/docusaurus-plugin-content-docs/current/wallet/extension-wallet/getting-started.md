@@ -15,9 +15,9 @@ und
 
 <img src={require("./media/new-wallet-1.png").default} alt="Create wallet"/>
 
-1. Klicken sie auf das Alephium Extension Wallet-Symbol in Ihrem Browser.
-2. Auf der Startseite klicken sie auf die Schaltfläche `Neue Wallet`.
-3. Geben sie das Passwort ein, um Ihre Wallet zu schützen.
+1. Klicken Sie auf das Alephium Extension Wallet-Symbol in Ihrem Browser.
+2. Auf der Startseite klicken Sie auf die Schaltfläche `Neue Wallet`.
+3. Geben Sie das Passwort ein, um Ihre Wallet zu schützen.
 4. Fertig! Ihre Wallet ist erstellt.
 
 Ihre Wallet hat jetzt noch keine Vermögenswerte. Im nächsten Schritt übertragen wir etwas ALPH auf diese Wallet.
@@ -46,7 +46,7 @@ Sie können auch `ALPH` von einem anderen Konto auf Ihr Konto übertragen:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-alph-3.png").default} alt="Review transfer" width="250" />
 
-Nachdem sie die Transfertransaktion signiert haben, können sie den Transaktionsstatus im Tab `Aktivität` überwachen. 
+Nachdem Sie die Transfertransaktion signiert haben, können Sie den Transaktionsstatus im Tab `Aktivität` überwachen. 
 Sobald die Transaktion bestätigt ist, wird der übertragene  `ALPH`-Betrag auf dem Empfängerkonto angezeigt.
 
 <img src={require("./media/received-alph-1.png").default} alt="Pending Tx" width="250"/>
@@ -68,7 +68,7 @@ des `ALPH`-Tokens:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-alphpaca-3.png").default} alt="Transfer Token 3" width="250" />
 
-Bitte lesen sie den Leitfaden zu [Fungiblen Tokens](/tokens/fungible-tokens) für weitere Informationen 
+Bitte lesen Sie den Leitfaden zu [Fungiblen Tokens](/tokens/fungible-tokens) für weitere Informationen 
 zu fungiblen Tokens.
 
 ### NFT-Unterstützung
@@ -81,7 +81,7 @@ Die Alephium Extension-Wallet unterstützt auch die Anzeige und Übertragung von
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-nft.png").default} alt="Transfer NFT" width="250" />
 
-Bitte lesen sie den Leitfaden zu [Non-fungible Tokens (NFTs)](/tokens/non-fungible-tokens) für weitere Informationen zu NFTs.
+Bitte lesen Sie den Leitfaden zu [Non-fungible Tokens (NFTs)](/tokens/non-fungible-tokens) für weitere Informationen zu NFTs.
 
 ### Konten verwalten
 
@@ -91,7 +91,7 @@ Die Alephium Extension-Wallet ermöglicht es Benutzern, gleichzeitig mehrere Kon
 Zum Beispiel kann Alice ein Konto für `Gehalt`, ein Konto für `Sparen` und ein weiteres Konto für `Reise 2023` haben. 
 
 #### Konto erstellen
-Um ein zusätzliches Konto hinzuzufügen, befolgen sie die unten stehenden Schritte:
+Um ein zusätzliches Konto hinzuzufügen, befolgen Sie die unten stehenden Schritte:
 
 <img src={require("./media/manage-accounts-1.png").default} alt="Overview" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -106,10 +106,10 @@ Es gibt einige Optionen, die wir vor dem Erstellen eines Kontos auswählen könn
 - `Sign`: Die verfügbaren Optionen sind `Standard` und `Schnorr`. `Standard`
   repräsentiert den Standard-Alephium-Signaturtyp, der z.B. zum Signieren von 
   Alephium-Transaktionen   verwendet wird, während `Schnorr` den `BIP340`
-  Schnorr-Signaturtyp repräsentiert, welcher nützlich ist, wenn sie mit Protokollen wie 
+  Schnorr-Signaturtyp repräsentiert, welcher nützlich ist, wenn Sie mit Protokollen wie 
   [Nostr](https://nostr.com/) interagieren. 
 - `Account Type`: Die verfügbaren Optionen sind `Alephium Account` oder 
-  `Ledger Account`. Weitere Details zur Ledger-Integration finden sie im 
+  `Ledger Account`. Weitere Details zur Ledger-Integration finden Sie im 
   [Ledger](/wallet/ledger)-Leitfaden.
 
 Nach Auswahl der gewünschten Optionen wird ein neues Konto erstellt und ist bereit zur Verwendung.

@@ -18,7 +18,7 @@ Dies hat einige Auswirkungen:
 1. Einfache Vermögensübertragungen zwischen Benutzern erfordern nur UTXOs, die sich in der Sicherheit bei der Verwaltung von Vermögenswerten bewährt haben. Hier sind keine Smart Contracts beteiligt.
 2. Wenn Smart Contracts Vermögenswerte im Auftrag der Besitzer übertragen müssen, sind keine separaten Genehmigungstransaktionen erforderlich. Die Genehmigung ist im UTXO-Modell implizit: Wenn der Input, der einen bestimmten Token enthält, in der Transaktion autorisiert ist, ausgegeben zu werden, hat der Besitzer bereits seine Zustimmung zur Verwendung dieses Tokens im Kontext dieser Transaktion erteilt. Dies bedeutet, dass die Smart Contracts, die in derselben Transaktion aufgerufen werden, potenziell den Token übertragen können.
 
-Nun stellt sich die Frage: In der zweiten Situation, wie können wir sicherstellen, dass die implizit in der Transaktion über das UTXO-Modell genehmigten Vermögenswerte sicher von den Smart Contracts verarbeitet werden können? Die Antwort lautet: Ralphs Asset Permission System (APS).
+Nun stellt sich die Frage: In der zweiten Situation, wie können wir sicherstellen, dass die in der Transaktion über das UTXO-Modell implizit genehmigten Vermögenswerte sicher von den Smart Contracts verarbeitet werden können? Die Antwort lautet: Ralphs Asset Permission System (APS).
 
 ## Fluss von Vermögenswerten
 

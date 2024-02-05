@@ -7,13 +7,13 @@ sidebar_label: Non-fungible Tokens
 Non-fungible tokens (NFTs) auf Alephium weisen im Vergleich zu 
 NFTs auf anderen Blockchains mehrere einzigartige Merkmale auf:
 
-- Echte Eigentumsübertragung basierend auf dem UTXO-Modell: Wie andere Arten von Tokens auf Alephium werden NFTs sicher durch UTXOs verwaltet, die sich direkt im Besitz von Adressen befinden. Da UTXOs durch die privaten Schlüssel der Benutzer geschützt sind, bleiben die Vermögenswerte der Benutzer auch dann sicher, wenn es Fehler im NFT-Vertrag gibt.
+- Echte Eigentumsübertragung basierend auf dem UTXO-Modell: Wie andere Arten von Tokens auf Alephium werden NFTs sicher durch UTXOs verwaltet, die sich direkt im Besitz von Adressen befinden. Da UTXOs durch die privaten Schlüssel der Benutzer geschützt sind, bleiben die Vermögenswerte der Benutzer auch dann sicher, wenn es Fehler im NFT-Contract gibt.
 
 - Erstklassige Unterstützung für NFTs: Tokens sind native Vermögenswerte auf Alephium. Daher können die NFTs der Benutzer einfach von Wallets, Explorern und dApps gefunden und angezeigt werden, ohne auf Dienste von Drittanbietern angewiesen zu sein.
 
-- Höhere Sicherheit dank Alephiums VM und Vertragssprache: Alephiums Virtual Machine (VM) und Vertragssprache eliminieren die Notwendigkeit für eine separate Genehmigungstransaktion während des NFT-Handels, was die damit verbundenen Risiken reduziert. Dies vereinfacht den Prozess des Schreibens sicherer NFT-Verträge für Entwickler mithilfe von Tools wie dem [Asset Permission System](/ralph/asset-permission-system).
+- Höhere Sicherheit dank Alephiums VM und Vertragssprache: Alephiums Virtual Machine (VM) und seine Contract-Sprache eliminieren die Notwendigkeit für eine separate Genehmigungstransaktion während des NFT-Handels, was die damit verbundenen Risiken reduziert. Dies vereinfacht den Prozess des Schreibens sicherer NFT-Verträge für Entwickler mithilfe von Tools wie dem [Asset Permission System](/ralph/asset-permission-system).
 
-- Sub-Vertragsystem: In Alephium gibt es keine [Mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types)-Datenstruktur. Kollektionen werden mit einem übergeordneten Vertrag (der Kollektion) und [Sub-Contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (den Einzelteilen) erstellt. Jeder Sub-Contract repräsentiert ein NFT in dieser Kollektion, und alle Metadaten sind damit verbunden. Dies ist eine native Funktion der Alephium-Blockchain, die es ermöglicht, dass Alephiums NFTs einzigartig (ein Token pro Sub-Contract) oder halb-fungibel sind, da derselbe Minting-Contract mehr als ein Token erstellen kann.
+- Sub-Vertragsystem: In Alephium gibt es keine [Mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types)-Datenstruktur. Kollektionen werden mit einem übergeordneten Contracts (der Kollektion) und [Sub-Contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (den Einzelteilen) erstellt. Jeder Sub-Contract repräsentiert ein NFT in dieser Kollektion, und alle Metadaten sind damit verbunden. Dies ist eine native Funktion der Alephium-Blockchain, die es ermöglicht, dass Alephiums NFTs einzigartig (ein Token pro Sub-Contract) oder halb-fungibel sind, da derselbe Minting-Contract mehr als ein Token erstellen kann.
 
 - Effiziente Transaktionsbündelung: Mehrere NFTs und Benutzer können an einer einzigen Transaktion beteiligt sein.
 
@@ -104,23 +104,23 @@ interface NFTTokenUriMetaData {
 
 Der [AlephiumNFT](https://github.com/alephium/alephium-nft) Marktplatz ist 
 ein Proof-of-Concept-NFT-Marktplatz, der die Fähigkeiten von NFTs auf Alephium 
-präsentiert. Hier können sie NFT-Sammlungen erstellen, NFTs entdecken, prägen 
+präsentiert. Hier können Sie NFT-Sammlungen erstellen, NFTs entdecken, prägen 
 und handeln. Sie können auch [Opensea Drop](https://docs.opensea.io/docs/drops-on-opensea)-style 
 öffentliche Verkaufskampagnen für Ihre NFT-Sammlungen starten. Diese Kampagnen werden auf 
 dem `AlephiumNFT`-Marktplatz als `Flows` bezeichnet.
 
 Die Erstellung eigener NFT-Sammlungen sollte recht einfach sein. 
-Folgen sie diesem  [Twitter thread](https://twitter.com/alephium/status/1674397159947649030) für weitere Details.
-Wenn sie einen `Flow` auf dem `AlephiumNFT` Marktplatz erstellen möchten, 
+Folgen Sie diesem  [Twitter thread](https://twitter.com/alephium/status/1674397159947649030) für weitere Details.
+Wenn Sie einen `Flow` auf dem `AlephiumNFT` Marktplatz erstellen möchten, 
 kann Ihnen [@alephium/cli](https://www.npmjs.com/package/@alephium/cli) mit seinem
 `nft` Unterbefehl dabei helfen.
 
 #### Flows erstellen
 
-Angenommen, sie möchten einen öffentlichen Verkauf für Ihre NFT-Sammlung 
-starten, die `5` individuelle NFTs hat. Bevor sie einen `Flow` dafür 
-erstellen, sollten sie zunächst `5` Bilder bereithalten. Wenn nicht, bietet
- `@alephium/cli` einen Befehl, mit dem sie Bilder mithilfe von OpenAI's
+Angenommen, Sie möchten einen öffentlichen Verkauf für Ihre NFT-Sammlung 
+starten, die `5` individuelle NFTs hat. Bevor Sie einen `Flow` dafür 
+erstellen, sollten Sie zunächst `5` Bilder bereithalten. Wenn nicht, bietet
+ `@alephium/cli` einen Befehl, mit dem Sie Bilder mithilfe von OpenAI's
 [DALL.E](https://openai.com/research/dall-e)-Modellen generieren können:
 
 ```bash
@@ -130,8 +130,8 @@ npx @alephium/cli@latest nft generate-images-with-openai --number 5 -d /tmp/imag
 
 Das erstellt `5` Bilder mit der Aufforderung 
 `imagine all the people, living life in peace` und speichert 
-sie unter dem Verzeichnis `/tmp/imagine`. Bitte überspringen 
-sie diesen Schritt, wenn sie bereits Bilder für Ihre Sammlung 
+Sie unter dem Verzeichnis `/tmp/imagine`. Bitte überspringen 
+Sie diesen Schritt, wenn Sie bereits Bilder für Ihre Sammlung 
 entworfen haben.
 
 Angenommen, die Bilder sind unter dem Verzeichnis `/tmp/imagine`
@@ -159,8 +159,8 @@ für eine YAML-Datei namens  `imagine.yaml`:
 4.jpg:
 ```
 
-Wenn sie mit den Bildern und Metadaten Ihrer Sammlung zufrieden sind, 
-führen sie den folgenden Befehl aus, um die Bilder und Metadaten auf 
+Wenn Sie mit den Bildern und Metadaten Ihrer Sammlung zufrieden sind, 
+führen Sie den folgenden Befehl aus, um die Bilder und Metadaten auf 
 IPFS hochzuladen:
 
 ```bash
@@ -213,15 +213,15 @@ Token Metadataz:
 ```
 
 Nachdem `NFTBaseUri` erstellt wurde, sind wir bereit, den `Flow` auf dem `AlephiumNFT` Marktplatz 
-zu starten::
+zu starten:
 
 <img src={require("./media/create-flow-page.png").default} alt="Create FLow Page"/>
 
-Wie oben dargestellt, können sie das Bild der Sammlung, die maximale 
+Wie oben dargestellt, können Sie das Bild der Sammlung, die maximale 
 Stapel-Mint-Größe, den Mint-Preis, den Namen und die Beschreibung der 
 Sammlung sowie den wichtigsten NFT-Basis-URI eingeben, den wir im letzten 
-Schritt erstellt haben. Nachdem sie auf die Schaltfläche `Create NFT Collection`
-geklickt und die Transaktion signiert haben, erstellen sie erfolgreich Ihren ersten `Flow`,
+Schritt erstellt haben. Nachdem Sie auf die Schaltfläche `Create NFT Collection`
+geklickt und die Transaktion signiert haben, erstellen Sie erfolgreich Ihren ersten `Flow`,
 teilen den Link und starten den öffentlichen Verkauf Ihrer NFT-Sammlung!
 
 <img src={require("./media/flow-page.png").default} alt="FLow Page"/>
@@ -245,7 +245,7 @@ Es ist nicht allzu schwierig, andere NFT-Sammlungen vorzutäuschen
 und Benutzer zu betrügen. Die[Token-Liste](https://github.com/alephium/token-list) 
 ermöglicht es, bekannte NFT-Sammlungen im Alephium-Ökosystem zu whitelisten, 
 sodass dApps und Wallets die Benutzer vor nicht überprüften NFT-Sammlungen warnen 
-können. Hier sehen sie, wie die Extension Wallet eine NFT-Sammlung vor und nachdem sie 
+können. Hier sehen Sie, wie die Extension Wallet eine NFT-Sammlung vor und nachdem Sie 
 in die Token-Liste aufgenommen wurde, anzeigt.
 
 <img src={require("./media/unverified-nft-collection.png").default} alt="Unverified" width="250"/>

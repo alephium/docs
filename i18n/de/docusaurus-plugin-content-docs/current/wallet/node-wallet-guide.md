@@ -1,7 +1,7 @@
 ---
 sidebar_position: 40
 title: Node Wallet
-sidebar_label: Node wallet
+sidebar_label: Node Wallet
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";

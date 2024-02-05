@@ -9,13 +9,13 @@ Fungible Token Standard
 
 In Alephium können neue Tokens ausgegeben werden, wenn neue Verträge 
 bereitgestellt werden. Die ID des neu ausgegebenen Tokens ist dieselbe 
-wie die ID des Vertrags, der es ausgibt. Sie können sich an diese
+wie die ID des Contracts, der es ausgibt. Sie können sich an diese
 [Anleitung](/dapps/build-dapp-from-scratch) wenden, um Details darüber 
-zu erfahren, wie sie auf Alephium von Grund auf neue Tokens ausgeben können.
+zu erfahren, wie Sie auf Alephium von Grund auf neue Tokens ausgeben können.
 
 Tokens sind in der Regel mit Informationen wie
 `name`, `decimals`, `totalSupply` usw. verbunden. Das Ziel des Token-Standards 
-ist es, Einschränkungen für den Token-ausgebenden Vertrag festzulegen, damit es 
+ist es, Einschränkungen für den Token-ausgebenden Contract festzulegen, damit es 
 für dApps und Wallets einfacher wird, Token-Typen zu erschließen und 
 Token-Informationen abzurufen.
 
@@ -57,8 +57,8 @@ Contract TokenFaucet(
 }
 ```
 
-Sobald ein Token-Vertrag die
-[IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)-Schnittstelle implementiert, wie der oben gezeigte `TokenFaucet`-Vertrag, ermöglicht es dem SDK, 
+Sobald ein Token-Contract die
+[IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)-Schnittstelle implementiert, wie der oben gezeigte `TokenFaucet`-Contract, ermöglicht es dem SDK, 
 Informationen auf eine standardisierte Weise abzurufen:
 
 ```typescript
@@ -98,7 +98,7 @@ const tokenInterfaceId = await web3.getCurrentNodeProvider().guessStdInterfaceId
 expect(tokenInterfaceId).toEqual('0001')
 ```
 
-Für ein funktionierendes und vollständigeres Beispiel werfen sie bitte 
+Für ein funktionierendes und vollständigeres Beispiel werfen Sie bitte 
 einen Blick auf das [NextJS-Template](https://github.com/alephium/nextjs-template)-Repository.
 
 ### Wallet Unterstützung
@@ -119,14 +119,14 @@ Nachfolgend ein Beispiel für die Anzeige und Übertragung des `PACA` Tokens mit
 
 Neben den grundlegenden Informationen wie `name`, `symbol` und
 `decimals` usw., enthalten fungible Tokens in der Regel auch andere Metadaten 
-wie `description` und `logoURI` , damit dApps und Wallets sie ordnungsgemäß 
+wie `description` und `logoURI` , damit dApps und Wallets Sie ordnungsgemäß 
 anzeigen können.
 
 Das Ziel der [Token-Liste](https://github.com/alephium/token-list)
 ist es, eine Vertrauensquelle für die Token-ID und die Metadaten der 
 bekannten Tokens im Alephium-Ökosystem zu sein, damit Wallets und 
 dApps Benutzer vor nicht verifizierten Tokens warnen können. Hier sehen 
-sie, wie die Erweiterungsbrieftasche ein Token vor und nachdem es zur 
+Sie, wie die Erweiterungsbrieftasche ein Token vor und nachdem es zur 
 Token-Liste hinzugefügt wurde, anzeigt.
 
 <img src={require("./media/unverified-token.png").default} alt="Unverified" width="250"/>

@@ -1,7 +1,7 @@
 ---
 sidebar_position: 40
-title: Extension-Wallet für dApps
-sidebar_label: Integration von dApps
+title: Extension-Wallet für DApps
+sidebar_label: Integration von DApps
 ---
 
 Die Alephium Extension Wallet fügt ein globales Objekt 

@@ -10,13 +10,13 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 Alephium unterstützt `m-of-n` Multi-Signature-Adressen.
 
-Die entsprechenden Befehle für Multi-Sig finden sie unter [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) im Abschnitt `Multi-signature`. Stellen sie sicher, dass ihr Full Node läuft, damit sie auf die Swagger UI zugreifen können.
+Die entsprechenden Befehle für Multi-Sig finden Sie unter [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) im Abschnitt `Multi-signature`. Stellen Sie sicher, dass ihr Full Node läuft, damit Sie auf die Swagger UI zugreifen können.
 
 ## Erstellen einer Multi-Sig-Adresse
 
-1. Holen sie alle öffentlichen Schlüssel der Konten für diese Multi-Sig.
+1. Holen Sie alle öffentlichen Schlüssel der Konten für diese Multi-Sig.
 
-   Der öffentliche Schlüssel kann mit der Wallet abgerufen werden, indem sie folgenden Befehl aufrufen:
+   Der öffentliche Schlüssel kann mit der Wallet abgerufen werden, indem Sie folgenden Befehl aufrufen:
 
    ```
    GET /wallets/{wallet_name}/addresses/{address}
@@ -31,7 +31,7 @@ Die entsprechenden Befehle für Multi-Sig finden sie unter [http://127.0.0.1:129
    }
    ```
 
-2. Zum Beispiel, wenn sie eine Multi-Sig-Adresse mit 3 Konten erstellen möchten, die 2 Signaturen zum Entsperren benötigt (2-of-3), können sie folgendes tun:
+2. Zum Beispiel, wenn Sie eine Multi-Sig-Adresse mit 3 Konten erstellen möchten, die 2 Signaturen zum Entsperren benötigt (2-of-3), können Sie folgendes tun:
 
    ```
    POST /multisig/address
@@ -53,14 +53,14 @@ Die entsprechenden Befehle für Multi-Sig finden sie unter [http://127.0.0.1:129
    }
    ```
 
-   > ⚠️ WARNUNG: Stellen sie sicher, dass sie die Reihenfolge der öffentlichen Schlüssel beibehalten; sie müssen später dieselbe Reihenfolge angeben.
+   > ⚠️ WARNUNG: Stellen Sie sicher, dass Sie die Reihenfolge der öffentlichen Schlüssel beibehalten; Sie müssen später dieselbe Reihenfolge angeben.
 
    Gelder können jetzt an diese Adresse gesendet werden.
 
-3. Um die Gelder zu nutzen, müssen sie eine Multi-Sig-Transaktion erstellen.  
-   Übergeben sie die öffentlichen Schlüssel, die die 
+3. Um die Gelder zu nutzen, müssen Sie eine Multi-Sig-Transaktion erstellen.  
+   Übergeben Sie die öffentlichen Schlüssel, die die 
    Transaktion signieren werden, in unserem Beispiel 2.  
-   Stellen sie sicher, dass die Reihenfolge dieselbe ist wie bei der Adresserstellung:
+   Stellen Sie sicher, dass die Reihenfolge dieselbe ist wie bei der Adresserstellung:
 
    ```
    POST /multisig/build
@@ -108,7 +108,7 @@ Die entsprechenden Befehle für Multi-Sig finden sie unter [http://127.0.0.1:129
    }
    ```
 
-5. Sammlen sie die Signaturen, in unserem Beispiel 2 (weil `m=2`) , und senden sie schließlich die Transaktion:
+5. Sammlen Sie die Signaturen, in unserem Beispiel 2 (weil `m=2`) , und senden Sie schließlich die Transaktion:
 
    > HINWEIS: Die Reihenfolge der Signaturen muss dieselbe wie die der öffentlichen Schlüssel sein.
 

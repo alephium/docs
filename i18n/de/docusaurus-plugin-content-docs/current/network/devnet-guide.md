@@ -14,11 +14,11 @@ Die Installation des Full Nodes für das Devnet erfolgt genauso wie für das Mai
 
 **Die `user.conf` muss vor dem Starten des Full Nodes modifiziert werden.**.
 
-Bitte beachten sie, dass die Standardadresse und der Port für die REST-API [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) sind.
+Bitte beachten Sie, dass die Standardadresse und der Port für die REST-API [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) sind.
 
 ## Konfiguration
 
-In der Datei `$HOME/.alephium/user.conf` (`user.conf`, wenn Docker verwendet wird) müssen sie Folgendes hinzufügen:
+In der Datei `$HOME/.alephium/user.conf` (`user.conf`, wenn Docker verwendet wird) müssen Sie Folgendes hinzufügen:
 
 ```
 // in most cases, modify the following two lines
@@ -39,17 +39,17 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
-Setzen sie bitte Ihre eigenen Adressen für die Genesis-Zuweisungen ein. Sie können auch `num-zeros-at-least-in-hash` eduzieren, um das Mining zu beschleunigen.
+Setzen Sie bitte Ihre eigenen Adressen für die Genesis-Zuweisungen ein. Sie können auch `num-zeros-at-least-in-hash` eduzieren, um das Mining zu beschleunigen.
 
-Weitere Konfigurationen finden sie in `$HOME/.alephium/network-4/`, und Protokolle können in `$HOME/.alephium/logs/` gefunden werden.
+Weitere Konfigurationen finden Sie in `$HOME/.alephium/network-4/`, und Protokolle können in `$HOME/.alephium/logs/` gefunden werden.
 
-Wenn sie `user.conf` ändern, ist es besser, `$HOME/.alephium/network-4/` u löschen, bevor sie den Full Node neu starten.
+Wenn Sie `user.conf` ändern, ist es besser, `$HOME/.alephium/network-4/` u löschen, bevor Sie den Full Node neu starten.
 
 ## Mining
 
 Devnet mit der Beispielkonfigurationsdatei kann automatisch neue Blöcke für alle neuen Transaktionen minen. Es ist nicht erforderlich, die CPU für das Mining zu verwenden.
 
-Wenn sie das Devnet für Mining-Tests verwenden möchten, setzen sie bitte eine relativ hohe Schwierigkeit wie folgt:
+Wenn Sie das Devnet für Mining-Tests verwenden möchten, setzen Sie bitte eine relativ hohe Schwierigkeit wie folgt:
 
 ```
 alephium.consensus.num-zeros-at-least-in-hash = 24

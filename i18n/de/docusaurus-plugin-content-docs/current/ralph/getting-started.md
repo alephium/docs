@@ -11,14 +11,14 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 ## Einführung
 
 Ralph ist die Programmiersprache für Smart Contracts auf der Alephium-Blockchain und konzentriert sich auf drei Ziele: Sicherheit, Einfachheit und Effizienz. Dieses Tutorial bietet Tipps zum Schreiben von sauberen, idiomatischen und sicheren Ralph Smart Contracts. Wir folgen den folgenden Prinzipien bei der Gestaltung von Ralph:
-1. Halte die DSL (Domain Specific Language) für Smart Contracts so einfach wie möglich.
+1. Halten Sie die DSL (Domain Specific Language) für Smart Contracts so einfach wie möglich.
 2. Es sollte eine – und vorzugsweise nur eine – offensichtliche Möglichkeit geben, es zu tun.
 3. Integriere bewährte Praktiken von Anfang an.
 
 ## Typen
 
-Ralph ist eine statisch typisierte Sprache, aber dank Typinferenz müssen sie den Typ für lokale Variablen und Konstanten nicht angeben.
-Alle Typen in Ralph sind Werttypen, das heißt, sie werden immer kopiert, wenn sie als Funktionsargumente verwendet oder zugewiesen werden.
+Ralph ist eine statisch typisierte Sprache, aber dank Typinferenz müssen Sie den Typ für lokale Variablen und Konstanten nicht angeben.
+Alle Typen in Ralph sind Werttypen, das heißt, Sie werden immer kopiert, wenn Sie als Funktionsargumente verwendet oder zugewiesen werden.
 Derzeit unterstützt Ralph nur die folgenden Datentypen:
 
 ### Primitive Typen
@@ -201,7 +201,7 @@ fn foo() -> () {
 ```
 
 :::note
-Anweisungen wie `break` und `continue` werden in `for` und `while`-Schleifen nicht unterstützt, da sie in einigen Fällen als schlechte Praxis angesehen werden können. Es wird empfohlen, sie durch ein vorzeitiges `return` oder eine [assert function](/ralph/built-in-functions#assert) zu ersetzen.
+Anweisungen wie `break` und `continue` werden in `for` und `while`-Schleifen nicht unterstützt, da Sie in einigen Fällen als schlechte Praxis angesehen werden können. Es wird empfohlen, Sie durch ein vorzeitiges `return` oder eine [assert function](/ralph/built-in-functions#assert) zu ersetzen.
 :::
 
 :::note
@@ -285,7 +285,7 @@ Contract Foo() {
 
 ### Eingebaute Funktionen
 
-Ralph bietet viele eingebaute Funktionen, auf die sie [hier](/ralph/built-in-functions) verweisen können.
+Ralph bietet viele eingebaute Funktionen, auf die Sie [hier](/ralph/built-in-functions) verweisen können.
 
 ### Annotationen
 
@@ -298,7 +298,7 @@ Die `@using`-Annotation hat vier optionale Felder:
 * `checkExternalCaller = true/false`: ob die Funktion den Aufrufer überprüft. Der Standardwert ist `true` für Verträge.
 * `updateFields = true/false`: ob die Funktion Vertragsfelder ändert. Der Standardwert ist  `false` für Verträge.
 
-#### Verwendung von vorab genehmigten Vermögenswerten
+#### Verwendung von vorab genehmigten Assets
 
 In Ralph muss der Aufrufer, wenn eine Funktion Vermögenswerte verwendet, die Vermögenswerte ausdrücklich genehmigen. Und alle Funktionen im Aufrufstapel müssen mit `@using(preapprovedAssets = true)`.
 
@@ -348,7 +348,7 @@ Für die Annotation `assetsInContract` überprüft der Compiler Folgendes:
 
 1. Wenn eine Funktion mit `assetsInContract = true` annotiert ist, aber keine Vertragsvermögen verwendet, gibt der Compiler einen Fehler aus.
 
-Weitere Informationen zur Berechtigung für Vermögenswerte finden sie [hier](/ralph/asset-permission-system).
+Weitere Informationen zur Berechtigung für Vermögenswerte finden Sie [hier](/ralph/asset-permission-system).
 
 #### Feldaktualisierungen
 
@@ -376,7 +376,7 @@ Contract Foo(a: U256, mut b: Boolean) {
 }
 ```
 
-#### Überprüfung des externen Aufrufers
+#### Check External Caller
 
 In Smart Contracts müssen wir oft überprüfen, ob der Aufrufer der Vertragsfunktion autorisiert ist. Um Bugs durch nicht autorisierte Aufrufer zu vermeiden, gibt der Compiler Warnungen für alle öffentlichen Funktionen aus, die nicht nach externen Aufrufern überprüfen. Die Warnung kann mit der Annotation `@using(checkExternalCaller = false)` unterdrückt werden.
 
@@ -443,7 +443,7 @@ Contract Foo() {
 }
 ```
 
-## Verträge (Contracts)
+## Contracts (Verträge)
 
 :::info
 Jeder Alephium-Vertrag hat drei Formen der eindeutigen Identifikation:
@@ -548,7 +548,7 @@ Contract Token() {
 }
 ```
 
-### Untervertrag (SubContract)
+### SubContract (Untervertrag)
 
 Alephiums virtuelle Maschine unterstützt Unterverträge. Unterverträge können als map-ähnliche Datenstruktur verwendet werden, sind jedoch weniger anfällig für das Problem des wachsenden Speicherplatzes. Ein Untervertrag kann von einem übergeordneten Vertrag mit einem eindeutigen Untervertragspfad erstellt werden.
 
@@ -589,9 +589,9 @@ Contract Foo(barTemplateId: ByteVec) {
 
 ### Erstellung eines Vertrags innerhalb eines Vertrags
 
-Ralph unterstützt die programmatische Erstellung von Verträgen innerhalb von Verträgen. Ralph stellt einige integrierte Funktionen zum Erstellen von Verträgen bereit. Weitere Informationen finden sie [hier](/ralph/built-in-functions#contract-functions).
+Ralph unterstützt die programmatische Erstellung von Verträgen innerhalb von Verträgen. Ralph stellt einige integrierte Funktionen zum Erstellen von Verträgen bereit. Weitere Informationen finden Sie [hier](/ralph/built-in-functions#contract-functions).
 
-Wenn sie mehrere Instanzen eines Vertrags erstellen möchten, sollten sie die integrierten Funktionen `copyCreateContract!` verwenden, was eine Menge On-Chain-Speicher und Transaktionsgasgebühren reduzieren wird.
+Wenn Sie mehrere Instanzen eines Vertrags erstellen möchten, sollten Sie die integrierten Funktionen `copyCreateContract!` verwenden, was eine Menge On-Chain-Speicher und Transaktionsgasgebühren reduzieren wird.
 
 ```rust
 Contract Foo(a: ByteVec, b: Address, mut c: U256) {
@@ -609,7 +609,7 @@ TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
 
 ### Migration
 
-Alephium-Verträge können mit zwei Migrationsfunktionen aktualisiert werden: [migrate!](/ralph/built-in-functions#migrate) und [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Hier sind drei typische Möglichkeiten, sie zu verwenden:
+Alephium-Verträge können mit zwei Migrationsfunktionen aktualisiert werden: [migrate!](/ralph/built-in-functions#migrate) und [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Hier sind drei typische Möglichkeiten, Sie zu verwenden:
 
 ```Rust
 fn upgrade(newCode: ByteVec) -> () {

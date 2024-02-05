@@ -34,7 +34,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Offizielle Links & Accounts
 
-Website - https://alephium.org/
+Webseite - https://alephium.org/
 
 Dokumentation - https://docs.alephium.org/
 
@@ -52,7 +52,7 @@ Linkedin - https://www.linkedin.com/company/74304166
 
 ### Stateful UTXO
 
-Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
+Einführung in das stateful UTXO-Model - hhttps://medium.com/@eonicP/einführung-in-das-zustandsbehaftete-utxo-modell-7e609c963a23
 
 sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447
 
@@ -62,20 +62,20 @@ sUTXO #3 - General explanation - https://twitter.com/alephium/status/16153890977
 
 UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
 
-Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 1 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-de2cf2063615
+Geheimnisse des stateful UTXO: Der ultimative Leitfaden zu Alephiums Accounting Modell — Part 1 - https://medium.com/@waldialephium/tech-talk-2-geheimnisse-des-stateful-utxo-der-ultimative-leitfaden-zu-alephiums-accounting-d498e5b6e451
 
 Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 2 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-f6b6868ef873
 
-An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1690004285818327040
+Eine Einführung in das stateful UTXO - https://twitter.com/alephium/status/1690004285818327040
 
-An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
+Eine Einführung in das stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
 
 ### Proof-of-Less-Work
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
 Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
 
-Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
+Konsens Algorithmus - https://twitter.com/alephium/status/1562066898904158208
 
 ### Alphred Virtual Machine
 Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025

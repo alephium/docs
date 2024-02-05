@@ -12,15 +12,15 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Docker verwenden
 
-Wenn sie ein lokales Entwicklungsnetzwerk mit Unterstützung für den Explorer erstellen möchten, verwenden sie bitte `docker-compose` und befolgen sie die Anweisungen in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
+Wenn Sie ein lokales Entwicklungsnetzwerk mit Unterstützung für den Explorer erstellen möchten, verwenden Sie bitte `docker-compose` und befolgen Sie die Anweisungen in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
 
 ## Manuelle Verwendung von JAR-Dateien
 
 ### Full node
 
-Laden sie die Datei `alephium-x.x.x.jar` vom [Github Release](https://github.com/alephium/alephium/releases/latest) herunter (klicken sie nicht doppelt darauf, sie kann nicht auf diese Weise gestartet werden).
+Laden Sie die Datei `alephium-x.x.x.jar` vom [Github Release](https://github.com/alephium/alephium/releases/latest) herunter (klicken Sie nicht doppelt darauf, die Datei kann nicht auf diese Weise gestartet werden).
 
-Schreiben sie eine Konfigurationsdatei unter  `~/.alephium/user.conf`. Die unten stehende stammt aus unserem [Alephium-Stack-Repo](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
+Schreiben Sie eine Konfigurationsdatei unter  `~/.alephium/user.conf`. Die unten stehende stammt aus unserem [Alephium-Stack-Repo](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
 
 ```conf
 # Import this mnemonic to have 4'000'000 token allocated for your addresses
@@ -81,8 +81,8 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
-Hinweis: Das Mnemonic (24 Wörter) und die entsprechenden Adressen wurden zu Entwicklungs­zwecken erstellt. sie können es verwenden oder Ihr eigenes erstellen, verwenden sie es jedoch niemals auf dem `mainnet`.
-sie können auch weitere Adressen hinzufügen, wenn sie möchten. Wenn sie die Adressen später ändern möchten, müssen sie Ihr Devnet löschen und neu starten.
+Hinweis: Das Mnemonic (24 Wörter) und die entsprechenden Adressen wurden zu Entwicklungs­zwecken erstellt. Sie können es verwenden oder Ihr eigenes erstellen, verwenden Sie es jedoch niemals auf dem `mainnet`.
+Sie können auch weitere Adressen hinzufügen, wenn Sie möchten. Wenn Sie die Adressen später ändern möchten, müssen Sie Ihr Devnet löschen und neu starten.
 
 
 Sie können Ihr Devnet jetzt starten: `devnet`:
@@ -97,9 +97,9 @@ Sie können nun auf die API des Full Nodes zugreifen: `http://localhost:22973/do
 
 Voraussetzung: https://www.postgresql.org/
 
-Laden sie die Datei `explorer-backend-x.x.x.jar` vom [Github Release](https://github.com/alephium/explorer-backend/releases/latest) herunter.
+Laden Sie die Datei `explorer-backend-x.x.x.jar` vom [Github Release](https://github.com/alephium/explorer-backend/releases/latest) herunter.
 
-erbinden sie sich mit PostgreSQL und erstellen sie eine Datenbank für Ihr Devnet.
+Verbinden Sie sich mit PostgreSQL und erstellen Sie eine Datenbank für Ihr Devnet.
 
 ```sql
 CREATE DATABASE devnet;

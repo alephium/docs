@@ -39,7 +39,7 @@ curl -L https://github.com/touilleio/alephium-standalone/raw/main/snapshot-loade
 
 ## Starten eines eigenständigen Containers
 
-Und schließlich, wenn Sie dieses Setup schnell ausprobieren möchten, erledigt ein OCI-Image, das einfach das offizielle `alephium/alephium`-Image erweitert, automatisch alle oben beschriebenen Schritte: `touilleio/alephium-standalone`. Sein [Quellcode](https://github.com/touilleio/alephium-standalone) enthält alle erforderlichen Details zur Verwendung..
+Und schließlich, wenn Sie dieses Setup schnell ausprobieren möchten, erledigt ein OCI-Image, das einfach das offizielle `alephium/alephium`-Image erweitert, automatisch alle oben beschriebenen Schritte: `touilleio/alephium-standalone`. Sein [Quellcode](https://github.com/touilleio/alephium-standalone) enthält alle erforderlichen Details zur Verwendung.
 
 Ein kurzer Referenzbefehl zum Starten des eigenständigen Containers ist unten für die einfache Verwendung aufgeführt:
 

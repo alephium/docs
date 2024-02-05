@@ -1,7 +1,7 @@
 ---
 sidebar_position: 30
-title: Dapp-Rezepte
-sidebar_label: Dapp-Rezepte
+title: DApp-Rezepte
+sidebar_label: DApp-Rezepte
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -12,7 +12,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ### Zustand des Smart Contracts abrufen
 
-Wenn sie den Befehl `npx @alephium/cli compile` verwenden, um einen Smart Contract zu kompilieren, wird TypeScript-Code basierend auf dem Smart Contract generiert. Nehmen wir den [Token Faucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract als Beispiel,
+Wenn Sie den Befehl `npx @alephium/cli compile` verwenden, um einen Smart Contract zu kompilieren, wird TypeScript-Code basierend auf dem Smart Contract generiert. Nehmen wir den [Token Faucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)-Smart Contract als Beispiel,
 [hier](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) ist der generierte TypeScript-Code. Wir können den generierten TypeScript-Code verwenden, um den Zustand des Smart Contracts abzurufen:
 
 ```typescript
@@ -110,7 +110,7 @@ const txStatus = await nodeProvider.transactions.getTransactionsStatus({ txId })
 Sie können den Transaktionsstatus anhand von `txStatus.type` unterscheiden:
 
 1. `MemPooled`: Dies bedeutet, dass die Transaktion im Mempool ist
-2. `Confirmed`: Die Transaktion wurde bestätigt, und sie können die Bestätigungen mit `txStatus.chainConfirmations` abrufen
+2. `Confirmed`: Die Transaktion wurde bestätigt, und Sie können die Bestätigungen mit `txStatus.chainConfirmations` abrufen
 3. `TxNotFound`:  Die Transaktion existiert nicht
 
 ## Hooks
@@ -154,7 +154,7 @@ Wenn der Rückgabewert `undefined` ist, deutet dies darauf hin, dass die Wallet 
 
 * `wallet.signer`: Sie können den Signer verwenden, um Transaktionen zu signieren.
 * `wallet.account`: Dies ist das aktuell verbundene Konto.
-* `wallet.nodeProvider`: Sie können den Node-Provider verwenden, um mit dem Full Node zu kommunizieren. Beachten sie, dass dieser Wert `undefined` sein kann.
+* `wallet.nodeProvider`: Sie können den Node-Provider verwenden, um mit dem Full Node zu kommunizieren. Beachten Sie, dass dieser Wert `undefined` sein kann.
 
 ### useBalance
 
@@ -187,7 +187,7 @@ Das `useTxStatus`-Hook akzeptiert auch einen optionalen Rückrufparameter vom Ty
 
 ### Rate limit
 
-Der `NodeProvider` wird verwendet, um beim Entwickeln einer dApp mit dem Full Node zu kommunizieren, und sie können die von Alephium öffentlich bereitgestellten  [API services](./public-services.md) verwenden. Aber alle APIs unterliegen einer Ratenbegrenzung, um Spam zu verhindern. Wenn der Client also in einer bestimmten Zeitspanne zu viele Anfragen sendet, erhält er den HTTP-429-Fehler.
+Der `NodeProvider` wird verwendet, um beim Entwickeln einer DApp mit dem Full Node zu kommunizieren, und Sie können die von Alephium öffentlich bereitgestellten  [API services](./public-services.md) verwenden. Aber alle APIs unterliegen einer Ratenbegrenzung, um Spam zu verhindern. Wenn der Client also in einer bestimmten Zeitspanne zu viele Anfragen sendet, erhält er den HTTP-429-Fehler.
 
 Sie können [fetch-retry](https://github.com/jonbern/fetch-retry) verwenden, um dieses Problem zu lösen:
 

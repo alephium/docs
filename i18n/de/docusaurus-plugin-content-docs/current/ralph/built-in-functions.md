@@ -1,14 +1,14 @@
 ---
 sidebar_position: 20
-title: Built-in Funktionen
-sidebar_label: Built-in Funktionen
+title: Built-in Functions
+sidebar_label: Built-in Functions
 ---
 
 <!---
 This file is auto-generated with "scripts/generate-builtin-functions.js"
 -->
 
-Die integrierten Funktionen (Built-in Functions) sind in mehrere Kategorien unterteilt:
+Die Built-in Functions (integrierten Funktionen) sind in mehrere Kategorien unterteilt:
 [Contract](#contract-functions),
 [SubContract](#subcontract-functions),
 [Asset](#asset-functions),
@@ -17,7 +17,7 @@ Die integrierten Funktionen (Built-in Functions) sind in mehrere Kategorien unte
 [Conversion](#conversion-functions),
 [ByteVec](#bytevec-functions),
 [Cryptography](#cryptography-functions).
-Alle integrierten Funktionen haben das Suffix `!`.
+Alle Built-in Functions haben das Suffix `!`.
 Alle Byte-Codierungen verwenden die Byte-Reihenfolge Big Endian.
 
 ## Vertragsfunktionen
@@ -196,11 +196,11 @@ Gibt die Adresse des Aufrufers zurück. Wenn es in einem TxScript verwendet wird
 fn contractInitialStateHash!(contractId:ByteVec) -> (ByteVec)
 ```
 
-Gibt den anfänglichen Zustandshash des Vertrags zurück.
+Gibt den Hash des anfänglichen Zustands des Vertrags zurück.
 
 > @param **contractId** *die ID des Eingangsvertrags*
 >
-> @returns *der Anfangszustandshash des Vertrags*
+> @returns *den Hash des Anfangszustands des Vertrags*
 
 ---
 
@@ -210,11 +210,10 @@ Gibt den anfänglichen Zustandshash des Vertrags zurück.
 fn contractCodeHash!(contractId:ByteVec) -> (ByteVec)
 ```
 
-Gibt den Vertragscodehash des Vertrags zurück.
-
+Gibt den Contract-Code-Hash des Vertrags zurück.
 > @param **contractId** *die ID des Eingangsvertrags*
 >
-> @returns *der Vertragscodehash des Vertrags*
+> @returns *der Contract-Code-Hash des Vertrags*
 
 ---
 
@@ -224,9 +223,9 @@ Gibt den Vertragscodehash des Vertrags zurück.
 fn callerInitialStateHash!() -> (ByteVec)
 ```
 
-Gibt den anfänglichen Zustandshash des Aufrufervertrags zurück.
+Gibt den Hash des anfänglichen Zustands des Caller-Vertrags zurück.
 
-> @returns *der Anfangszustandshash des Aufrufervertrags*
+> @returns *den Hash des anfänglichen Zustands des Caller-Vertrags*
 
 ---
 
@@ -236,9 +235,9 @@ Gibt den anfänglichen Zustandshash des Aufrufervertrags zurück.
 fn callerCodeHash!() -> (ByteVec)
 ```
 
-Gibt den Vertragscodehash des Aufrufervertrags zurück.
+Gibt den Contract-Code-Hash des Caller-Vertrags, also dem Aufrufer zurück.
 
-> @returns *der Vertragscodehash des Aufrufervertrags*
+> @returns *den Contract-Code-Hash des Caller-Vertrags*
 
 ---
 
@@ -252,7 +251,7 @@ fn contractExists!(contractId:ByteVec) -> (Bool)
 
 > @param **contractId** *die ID des zu testenden Eingangsvertrags*
 >
-> @returns *true, wenn der Vertrag auf der Kette existiert, andernfalls false*
+> @returns *true, wenn der Vertrag in der Kette existiert, andernfalls false*
 
 ---
 
@@ -278,7 +277,7 @@ fn migrate!(newBytecode:ByteVec) -> ()
 
 Migriert den Code des Vertrags.
 
-> @param **newBytecode** *das neue Bytecode für den Vertrag, zu dem migriert werden soll*
+> @param **newBytecode** *der neue Bytecode für den Vertrag, zu dem migriert werden soll*
 >
 > @returns
 
@@ -294,9 +293,9 @@ Migriert sowohl den Code als auch die Felder des Vertrags.
 
 > @param **newBytecode** *der Bytecode für den Vertrag, zu dem migriert werden soll*
 >
-> @param **newEncodedImmFields** *die codierten unveränderlichen Felder für den Vertrag, zu dem migriert werden soll*
+> @param **newEncodedImmFields** *die als unveränderlich codierten Felder für den Vertrag, zu dem migriert werden soll*
 >
-> @param **newEncodedMutFields** *die codierten veränderlichen Felder für den Vertrag, zu dem migriert werden soll*
+> @param **newEncodedMutFields** *die als unveränderlich codierten Felder für den Vertrag, zu dem migriert werden soll*
 >
 > @returns
 
@@ -340,9 +339,9 @@ Erstellt einen neuen Untervertag ohne Token-Ausgabe.
 >
 > @param **bytecode** *der Bytecode des zu erstellenden Unter-Vertrags*
 >
-> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
+> @param **encodedImmFields** *die als unveränderlich codierten Felder als ByteVec*
 >
-> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
+> @param **encodedMutFields** *die als unveränderlich codierten Felder als ByteVec*
 >
 > @returns *die ID des erstellten Vertrags*
 
@@ -360,9 +359,9 @@ Erstellt einen neuen Untervertag mit Token-Ausgabe.
 >
 > @param **bytecode** *der Bytecode des zu erstellenden Unter-Vertrags*
 >
-> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
+> @param **encodedImmFields** *die als unveränderlich codierten Felder als ByteVec*
 >
-> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
+> @param **encodedMutFields** *die als unveränderlich codierten Felder als ByteVec*
 >
 > @param **issueTokenAmount** *die Menge der auszugebenden Token*
 >
@@ -384,9 +383,9 @@ Erstellt einen neuen Untervertag ohne Token-Ausgabe durch Kopieren des Codes ein
 >
 > @param **contractId** *die ID des zu kopierenden Vertrags*
 >
-> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
+> @param **encodedImmFields** *die als unveränderlich codierten Felder als ByteVec*
 >
-> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
+> @param **encodedMutFields** *die als unveränderlich codierten Felder als ByteVec*
 >
 > @returns *die ID des erstellten Vertrags*
 
@@ -404,9 +403,9 @@ Erstellt einen neuen Untervertag mit Token-Ausgabe durch Kopieren des Codes eine
 >
 > @param **contractId** *die ID des zu kopierenden Vertrags*
 >
-> @param **encodedImmFields** *die codierten unveränderlichen Felder als ByteVec*
+> @param **encodedImmFields** *die als unveränderlich codierten Felder als ByteVec*
 >
-> @param **encodedMutFields** *die codierten veränderlichen Felder als ByteVec*
+> @param **encodedMutFields** *die als unveränderlich codierten Felder als ByteVec*
 >
 > @param **issueTokenAmount** *die Menge der auszugebenden Token*
 >
@@ -424,9 +423,9 @@ fn subContractId!(subContractPath:ByteVec) -> (ByteVec)
 
 Gibt die ID des Untervertags zurück.
 
-> @param **subContractPath** *der Pfad des Unter-Vertrags*
+> @param **subContractPath** *der Pfad des SubContract*
 >
-> @returns *die ID des Unter-Vertrags*
+> @returns *die ID des SubContract*
 
 ---
 
@@ -438,11 +437,11 @@ fn subContractIdOf!(contract:<Contract>, subContractPath:ByteVec) -> (ByteVec)
 
 Gibt die ID des Untervertags zurück.
 
-> @param **contract** *der übergeordnete Vertrag des Unter-Vertrags*
+> @param **contract** *der übergeordnete Vertrag des SubContract*
 >
-> @param **subContractPath** *der Pfad des Unter-Vertrags*
+> @param **subContractPath** *der Pfad des USubContract*
 >
-> @returns *die ID des Unter-Vertrags*
+> @returns *die ID des SubContract*
 
 ---
 
@@ -454,11 +453,11 @@ fn subContractIdInParentGroup!(contract:<Contract>, subContractPath:ByteVec) -> 
 
 Gibt die ID des Untervertags zurück.
 
-> @param **contract** *der übergeordnete Vertrag des Unter-Vertrags*
+> @param **contract** *der übergeordnete Vertrag des SubContract*
 >
-> @param **subContractPath** *der Pfad des Unter-Vertrags*
+> @param **subContractPath** *der Pfad des SubContract*
 >
-> @returns *die ID des Unter-Vertrags*
+> @returns *die ID des SubContract*
 
 ---
 
@@ -472,7 +471,7 @@ fn approveToken!(fromAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 
 Genehmigt die Verwendung einer bestimmten Menge an Token von der angegebenen Adresse.
 
-> @param **fromAddress** *der übergeordnete Vertrag des Unter-Vertrags*
+> @param **fromAddress** *der übergeordnete Vertrag des SubContract*
 >
 > @param **tokenId** *das zu genehmigende Token*
 >
@@ -580,7 +579,7 @@ fn lockApprovedAssets!(address:Address, timestamp:U256) -> ()
 
 Sperrt das aktuelle genehmigte Vermögen.
 
-> @param **address** *die Adresse, zu der die Vermögen gesperrt werden sollen*
+> @param **address** *die Adresse, in der die Vermögen gesperrt werden sollen*
 >
 > @param **timestamp** *der Zeitstempel, bis zu dem die Vermögen gesperrt werden sollen*
 >
@@ -600,7 +599,7 @@ Testet die Bedingung oder überprüft Invarianten.
 
 > @param **condition** *die zu überprüfende Bedingung*
 >
-> @param **errorCode** *der Fehlercode, der geworfen wird, wenn die Überprüfung fehlschlägt*
+> @param **errorCode** *der Fehlercode, der ausgeworfen wird, wenn die Überprüfung fehlschlägt*
 >
 > @returns
 
@@ -616,7 +615,7 @@ fn checkCaller!(condition:Bool, errorCode:U256) -> ()
 
 > @param **condition** *die zu überprüfende Bedingung*
 >
-> @param **errorCode** *der Fehlercode, der geworfen wird, wenn die Überprüfung fehlschlägt*
+> @param **errorCode** *der Fehlercode, der ausgeworfen wird, wenn die Überprüfung fehlschlägt*
 >
 > @returns
 
@@ -656,7 +655,7 @@ Gibt zurück, ob eine Adresse eine Vertragsadresse ist.
 fn zeros!(n:U256) -> (ByteVec)
 ```
 
-Gibt ein ByteVec von Nullen zurück.
+Gibt einen ByteVec von Nullen zurück.
 
 > @param **n** *die Anzahl der Nullen*
 >
@@ -684,7 +683,7 @@ Beendet die Anwendung sofort.
 fn mulModN!(x:U256, y:U256, n:U256) -> (U256)
 ```
 
-Berechnet x * y % n.
+Berechnet **x * y % n**.
 
 > @param **x** *x*
 >
@@ -702,7 +701,7 @@ Berechnet x * y % n.
 fn addModN!(x:U256, y:U256, n:U256) -> (U256)
 ```
 
-Berechnet (x + y) % n.
+Berechnet **(x + y) % n**.
 
 > @param **x** *x*
 >
@@ -720,7 +719,7 @@ Berechnet (x + y) % n.
 fn u256Max!() -> (U256)
 ```
 
-Gibt den maximalen Wert von U256 zurück.
+Gibt den maximalen Wert von **U256** zurück.
 
 > @returns *der maximale Wert von U256*
 
@@ -732,7 +731,7 @@ Gibt den maximalen Wert von U256 zurück.
 fn i256Max!() -> (I256)
 ```
 
-Gibt den maximalen Wert von I256 zurück.
+Gibt den maximalen Wert von **I256** zurück.
 
 > @returns *der maximale Wert von I256*
 
@@ -744,7 +743,7 @@ Gibt den maximalen Wert von I256 zurück.
 fn i256Min!() -> (I256)
 ```
 
-Gibt den minimalen Wert von I256 zurück.
+Gibt den minimalen Wert von **I256** zurück.
 
 > @returns *der minimale Wert von I256*
 
@@ -818,7 +817,7 @@ Gibt die aktuelle Transaktions-ID zurück.
 fn txInputAddress!(txInputIndex:U256) -> (Address)
 ```
 
-Gibt die n-te Transaktionseingangsadresse zurück.
+Gibt die **n**-te Transaktionseingangsadresse zurück.
 
 > @param **txInputIndex** *der Index der Transaktionseingabe*
 >
@@ -844,7 +843,7 @@ Gibt die Anzahl der Transaktionseingänge zurück.
 fn txGasPrice!() -> (U256)
 ```
 
-Gibt den aktuellen Transaktionsgaspreis zurück.
+Gibt den aktuellen Gaspreis der Transaktion zurück.
 
 > @returns *der aktuelle Transaktions-Gaspreis*
 
@@ -856,7 +855,7 @@ Gibt den aktuellen Transaktionsgaspreis zurück.
 fn txGasAmount!() -> (U256)
 ```
 
-Gibt die aktuelle Transaktionsgasmenge zurück.
+Gibt die aktuelle Gasmenge der Transaktion zurück.
 
 > @returns *die aktuelle Transaktions-Gasmenge*
 
@@ -880,7 +879,7 @@ Gibt die aktuelle Transaktionsgebühr zurück.
 fn verifyAbsoluteLocktime!(lockUntil:U256) -> ()
 ```
 
-Überprüft, ob die absolute Verriegelungszeit vor dem Block-Zeitstempel liegt, andernfalls schlägt es fehl.
+Überprüft, ob die absolute Sperrzeit vor dem Block-Zeitstempel liegt, andernfalls schlägt es fehl.
 
 > @param **lockUntil** *der Zeitstempel, bis zu dem die Sperre gültig ist*
 >
@@ -910,9 +909,9 @@ fn verifyRelativeLocktime!(txInputIndex:U256, lockDuration:U256) -> ()
 fn dustAmount!() -> (U256)
 ```
 
-Gibt den Staubbetrag einer UTXO zurück.
+Gibt den Dust-Betrag einer UTXO zurück.
 
-> @returns *der Staubbetrag eines UTXO*
+> @returns *der Dust-Betrag eines UTXO*
 
 ---
 
@@ -924,7 +923,7 @@ Gibt den Staubbetrag einer UTXO zurück.
 fn toI256!(from:U256) -> (I256)
 ```
 
-Konvertiert U256 in I256.
+Konvertiert **U256** in **I256**.
 
 > @param **from** *ein zu konvertierendes U256*
 >
@@ -938,7 +937,7 @@ Konvertiert U256 in I256.
 fn toU256!(from:I256) -> (U256)
 ```
 
-Konvertiert I256 in U256.
+Konvertiert **I256** in **U256**.
 
 > @param **from** *ein zu konvertierendes I256*
 >
@@ -952,11 +951,11 @@ Konvertiert I256 in U256.
 fn toByteVec!(from:Bool|I256|U256|Address) -> (ByteVec)
 ```
 
-Konvertiert Bool/I256/U256/Adresse in ByteVec
+Konvertiert **Bool/I256/U256/Adresse** in ByteVec
 
 > @param **from** *ein Bool|I256|U256|Adresse, das konvertiert werden soll*
 >
-> @returns *ein ByteVec*
+> @returns *einen ByteVec*
 
 ---
 
@@ -996,7 +995,7 @@ fn byteVecToAddress!(bytes:ByteVec) -> (Address)
 
 Konvertiert ByteVec in Adresse.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine Adresse*
 
@@ -1008,9 +1007,9 @@ Konvertiert ByteVec in Adresse.
 fn u256To1Byte!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in 1 Byte.
+Konvertiert **U256** in **1 Byte**.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
 > @returns *1 Byte*
 
@@ -1022,9 +1021,9 @@ Konvertiert U256 in 1 Byte.
 fn u256To2Byte!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in 2 Big-Endian-Bytes.
+Konvertiert **U256** in **2 Big-Endian-Bytes**.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
 > @returns *2 Bytes*
 
@@ -1036,9 +1035,9 @@ Konvertiert U256 in 2 Big-Endian-Bytes.
 fn u256To4Byte!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in 4 Big-Endian-Bytes
+Konvertiert **U256** in **4 Big-Endian-Bytes**.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
 > @returns *4 Bytes*
 
@@ -1050,9 +1049,9 @@ Konvertiert U256 in 4 Big-Endian-Bytes
 fn u256To8Byte!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in 8 Byte im Big-Endian-Format.
+Konvertiert **U256** in **8 Byte im Big-Endian**-Format.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
 > @returns *8 Bytes*
 
@@ -1064,9 +1063,9 @@ Konvertiert U256 in 8 Byte im Big-Endian-Format.
 fn u256To16Byte!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in 16 Big-Endian-Bytes.
+Konvertiert **U256** in **16 Big-Endian-Bytes**.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
 > @returns *16 Bytes*
 
@@ -1078,9 +1077,9 @@ Konvertiert U256 in 16 Big-Endian-Bytes.
 fn u256To32Byte!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in 32 Big-Endian-Bytes.
+Konvertiert **U256** in **32 Big-Endian-Bytes**.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
 > @returns *32 Bytes*
 
@@ -1092,11 +1091,11 @@ Konvertiert U256 in 32 Big-Endian-Bytes.
 fn u256ToString!(u256:U256) -> (ByteVec)
 ```
 
-Konvertiert U256 in Zeichenkette in ByteVec.
+Konvertiert **U256** in Zeichenkette in ByteVec.
 
-> @param **u256** *die Eingabe-U256*
+> @param **u256** *die U256-Eingabe*
 >
-> @returns *die in ByteVec umgewandelte Zeichenkette*
+> @returns *die in den ByteVec umgewandelte Zeichenkette*
 
 ---
 
@@ -1106,9 +1105,9 @@ Konvertiert U256 in Zeichenkette in ByteVec.
 fn i256ToString!(i256:I256) -> (ByteVec)
 ```
 
-Konvertiert I256 in Zeichenkette in ByteVec.
+Konvertiert **I256** in Zeichenkette in ByteVec.
 
-> @param **i256** *die Eingabe-U256*
+> @param **i256** *die U256-Eingabe*
 >
 > @returns *die in ByteVec umgewandelte Zeichenkette*
 
@@ -1120,9 +1119,9 @@ Konvertiert I256 in Zeichenkette in ByteVec.
 fn boolToString!(bool:Bool) -> (ByteVec)
 ```
 
-Konvertiert Bool in Zeichenkette in ByteVec.
+Konvertiert **Bool** in Zeichenkette in **ByteVec**.
 
-> @param **bool** *die Eingabe-Bool*
+> @param **bool** *die Bool-Eingabe*
 >
 > @returns *die in ByteVec umgewandelte Zeichenkette*
 
@@ -1134,9 +1133,9 @@ Konvertiert Bool in Zeichenkette in ByteVec.
 fn u256From1Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Konvertiert 1 Byte in U256.
+Konvertiert **1 Byte** in **U256**.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine U256*
 
@@ -1148,9 +1147,9 @@ Konvertiert 1 Byte in U256.
 fn u256From2Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Konvertiert 2 Big-Endian-Bytes in U256.
+Konvertiert **2 Big-Endian-Bytes** in **U256**.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine U256*
 
@@ -1162,9 +1161,9 @@ Konvertiert 2 Big-Endian-Bytes in U256.
 fn u256From4Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Konvertiert 4 Big-Endian-Bytes in U256.
+Konvertiert **4 Big-Endian-Bytes** in **U256**.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine U256*
 
@@ -1176,9 +1175,9 @@ Konvertiert 4 Big-Endian-Bytes in U256.
 fn u256From8Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Konvertiert 8 Big-Endian-Bytes in U256.
+Konvertiert **8 Big-Endian-Bytes** in **U256**.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine U256*
 
@@ -1190,9 +1189,9 @@ Konvertiert 8 Big-Endian-Bytes in U256.
 fn u256From16Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Konvertiert 16 Big-Endian-Bytes in U256.
+Konvertiert **16 Big-Endian-Bytes** in **U256**.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine U256*
 
@@ -1204,9 +1203,9 @@ Konvertiert 16 Big-Endian-Bytes in U256.
 fn u256From32Byte!(bytes:ByteVec) -> (U256)
 ```
 
-Konvertiert 32 Big-Endian-Bytes in U256.
+Konvertiert **32 Big-Endian-Bytes** in **U256**.
 
-> @param **bytes** *die Eingabe-ByteVec*
+> @param **bytes** *die ByteVec-Eingabe*
 >
 > @returns *eine U256*
 
@@ -1220,11 +1219,11 @@ Konvertiert 32 Big-Endian-Bytes in U256.
 fn size!(bytes:ByteVec) -> (U256)
 ```
 
-Gibt die Größe des ByteVec zurück.
+Gibt die Größe des **ByteVec** zurück.
 
-> @param **bytes** *eine ByteVec*
+> @param **bytes** *ein ByteVec*
 >
-> @returns *die Größe der ByteVec*
+> @returns *die Größe des ByteVec*
 
 ---
 
@@ -1234,15 +1233,15 @@ Gibt die Größe des ByteVec zurück.
 fn byteVecSlice!(bytes:ByteVec, from:U256, until:U256) -> (ByteVec)
 ```
 
-Wählt ein Intervall von Bytes aus.
+Wählt ein Intervall von **Bytes** aus.
 
-> @param **bytes** *eine ByteVec*
+> @param **bytes** *ein ByteVec*
 >
-> @param **from** *der niedrigste Index, der von der ByteVec einbezogen werden soll*
+> @param **from** *der niedrigste Index, der von dem ByteVec einbezogen werden soll*
 >
-> @param **until** *der niedrigste Index, der von der ByteVec ausgeschlossen werden soll*
+> @param **until** *der niedrigste Index, der von dem ByteVec ausgeschlossen werden soll*
 >
-> @returns *aeine ByteVec, die die Elemente ab Index oder höher enthält, bis (aber nicht einschließlich) Index, von dieser ByteVec erstreckt*
+> @returns *a ein ByteVec, der die Elemente ab Index oder höher enthält, bis (aber nicht einschließlich) Index, von diesem ByteVec erstreckt*
 
 ---
 
@@ -1252,11 +1251,11 @@ Wählt ein Intervall von Bytes aus.
 fn encodeToByteVec!(...any) -> (ByteVec)
 ```
 
-Kodiert Eingaben als Big-Endian ByteVec.
+Kodiert Eingaben als **Big-Endian ByteVec**.
 
 > @param **any** *eine Sequenz von Eingabewerten*
 >
-> @returns *eine ByteVec, die die Eingaben kodiert*
+> @returns *ein ByteVec, die die Eingaben kodiert*
 
 ---
 
@@ -1268,7 +1267,7 @@ Kodiert Eingaben als Big-Endian ByteVec.
 fn blake2b!(data:ByteVec) -> (ByteVec)
 ```
 
-Berechnet den Blake2b-256-Hash der Eingabe.
+Berechnet den **Blake2b-256-Hash** der Eingabe.
 
 > @param **data** *die zu hashenden Eingabedaten*
 >
@@ -1282,7 +1281,7 @@ Berechnet den Blake2b-256-Hash der Eingabe.
 fn keccak256!(data:ByteVec) -> (ByteVec)
 ```
 
-Berechnet den Keccak256-Hash der Eingabe.
+Berechnet den **Keccak256-Hash** der Eingabe.
 
 > @param **data** *die zu hashenden Eingabedaten*
 >
@@ -1296,7 +1295,7 @@ Berechnet den Keccak256-Hash der Eingabe.
 fn sha256!(data:ByteVec) -> (ByteVec)
 ```
 
-Berechnet den Sha256-Hash der Eingabe.
+Berechnet den **Sha256-Hash** der Eingabe.
 
 > @param **data** *die zu hashenden Eingabedaten*
 >
@@ -1310,7 +1309,7 @@ Berechnet den Sha256-Hash der Eingabe.
 fn sha3!(data:ByteVec) -> (ByteVec)
 ```
 
-Berechnet den Sha3-Hash der Eingabe.
+Berechnet den **Sha3-Hash** der Eingabe.
 
 > @param **data** *die zu hashenden Eingabedaten*
 >
@@ -1324,7 +1323,7 @@ Berechnet den Sha3-Hash der Eingabe.
 fn verifyTxSignature!(publicKey:ByteVec) -> ()
 ```
 
-Überprüft die Transaktions-SecP256K1-Signatur eines öffentlichen Schlüssels. Die Signatur ist gegen die Transaktions-ID signiert.
+Überprüft die **Transaktions-SecP256K1-Signatur** eines öffentlichen Schlüssels. Die Signatur ist gegen die Transaktions-ID signiert.
 
 > @param **publicKey** *der öffentliche Schlüssel (33 Bytes) des Signierenden*
 >
@@ -1338,9 +1337,9 @@ fn verifyTxSignature!(publicKey:ByteVec) -> ()
 fn getSegregatedSignature!() -> (ByteVec)
 ```
 
-Die segregierte Signatur der Transaktion
+Die getrennte Signatur der Transaktion
 
-> @returns *die segregierte Signatur der Transaktion*
+> @returns *die getrennte Signatur der Transaktion*
 
 ---
 
@@ -1350,7 +1349,7 @@ Die segregierte Signatur der Transaktion
 fn verifySecP256K1!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 ```
 
-Überprüft die SecP256K1-Signatur der Eingabe und des öffentlichen Schlüssels.
+Überprüft die **SecP256K1-Signatur** der Eingabe und des öffentlichen Schlüssels.
 
 > @param **data** *die Daten (32 Bytes), die eigentlich signiert werden sollten*
 >
@@ -1368,7 +1367,7 @@ fn verifySecP256K1!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 fn verifyED25519!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 ```
 
-Überprüft die ED25519-Signatur der Eingabe und des öffentlichen Schlüssels.
+Überprüft die **ED25519-Signatur** der Eingabe und des öffentlichen Schlüssels.
 
 > @param **data** *die Daten (32 Bytes), die eigentlich signiert werden sollten*
 >
@@ -1386,7 +1385,7 @@ fn verifyED25519!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 fn verifyBIP340Schnorr!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
 ```
 
-Überprüft die BIP340 Schnorr-Signatur der Eingabe und des öffentlichen Schlüssels.
+Überprüft die **BIP340 Schnorr-Signatur** der Eingabe und des öffentlichen Schlüssels.
 
 > @param **data** *die Daten (32 Bytes), die eigentlich signiert werden sollten*
 >

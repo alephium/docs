@@ -4,7 +4,7 @@ title: Übersicht
 sidebar_label: Übersicht
 ---
 
-Tokens sind in Alephium Bürger erster Klasse. Genau wie das native Token ALPH werden 
+Tokens sind in Alephium *First-class citizen*. Genau wie das native Token ALPH werden 
 alle Tokens auf Alephium von UTXOs verwaltet, die direkt von Adressen gehalten werden.
 
 Dieses Design hat einige Vorteile im Vergleich zu anderen Blockchains:
@@ -36,11 +36,11 @@ Um die Arbeit mit Tokens im Alephium-Ökosystem zu erleichtern:
 - Tools zur Unterstützung beim Start von NFT-Public-Sales im [Opensea-Drop](https://docs.opensea.io/docs/drops-on-opensea)-Stil, 
   genannt `Flow`.
 
-In der Seite [Fungible Tokens](/tokens/fungible-tokens) erfahren sie mehr über 
+In der Seite [Fungible Tokens](/tokens/fungible-tokens) erfahren Sie mehr über 
 den fungiblen Token-Standard, wie man fungible Tokens ausgibt, wie man Token-Metadaten 
 abruft und wie man fungible Tokens in Wallets überträgt, usw.
 
-Auf der Seite [Non-fungible Tokens](/tokens/non-fungible-tokens) erfahren sie mehr 
-über den nicht fungiblen Token-Standard, wie sie Ihre eigenen NFT-Sammlungen erstellen 
+Auf der Seite [Non-fungible Tokens](/tokens/non-fungible-tokens) erfahren Sie mehr 
+über den nicht fungiblen Token-Standard, wie Sie Ihre eigenen NFT-Sammlungen erstellen 
 und Ihre erste NFT-Public-Sale-Kampagne namens
 `Flows` im [NFT Marktplatz](https://testnet.nft.alephium.org/) starten können.

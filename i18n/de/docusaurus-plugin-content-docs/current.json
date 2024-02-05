@@ -8,7 +8,7 @@
     "description": "The label for category Full Node in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Building dApps": {
-    "message": "dApps erstellen",
+    "message": "DApps erstellen",
     "description": "The label for category Building dApps in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Ralph Language": {
@@ -24,7 +24,7 @@
     "description": "The label for category Desktop Wallet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Extension wallet": {
-    "message": "Extension wallet",
+    "message": "Extension Wallet",
     "description": "The label for category Extension wallet in sidebar tutorialSidebar"
   },
   "sidebar.tutorialSidebar.category.Integration": {

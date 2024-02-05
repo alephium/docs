@@ -13,7 +13,7 @@ Dieses Dokument soll es Mining-Pools und Minern erleichtern, Alephium zu integri
 * das Kommunikationsprotokoll zwischen dem Mining-Pool und dem Full Node
 * wie der Miner den Blockhash basierend auf den Mining-Jobs berechnet
 
-Hinsichtlich der Implementierung des Kommunikationsprotokolls zwischen Mining-Pool und Minern können sie sich auf das Stratum-Protokoll [hier](alephium-stratum.md) beziehen. Beachten sie, dass Mining-Pools das Protokoll nicht genau befolgen.
+Hinsichtlich der Implementierung des Kommunikationsprotokolls zwischen Mining-Pool und Minern können Sie sich auf das Stratum-Protokoll [hier](alephium-stratum.md) beziehen. Beachten Sie, dass Mining-Pools das Protokoll nicht genau befolgen.
 In diesem Dokument werde ich den Code von [mining-pool](https://github.com/alephium/mining-pool) und [gpu-miner](https://github.com/alephium/gpu-miner) als Referenz verwenden.
 
 
@@ -46,7 +46,7 @@ Sobald der Mining-Pool die `Jobs` -Nachricht vom Full Node empfängt, kann er di
 
 Sobald der Mining-Pool eine gültige `nonce` vom Miner erhält, kann er den Block an den Full Node senden, wobei der Block aus der `nonce`, `headerBlob` und `txsBlob` besteht. Sie können den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/pool.js#L119) verwenden.
 
-Dann können sie den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) verwenden, um eine gültige `SubmitBlock`-Nachricht zu konstruieren und diese Nachricht an den Full Node zu senden.
+Dann können Sie den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) verwenden, um eine gültige `SubmitBlock`-Nachricht zu konstruieren und diese Nachricht an den Full Node zu senden.
 
 Nachdem der Full Node den Block überprüft hat, sendet er eine `SubmitBlockResult` -Nachricht, um dem Mining-Pool mitzuteilen, ob der Block gültig ist. Sie können den bereitgestellten Code [hier](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) verwenden, um die `SubmitBlockResult`-Nachricht zu parsen.
 
