@@ -4,7 +4,7 @@ title: Transaction
 sidebar_label: Transaction
 ---
 
-A transaction in Alephium denotes the process of transferring an entity, such as Alephium's native cryptocurrency ALPH, tokens, or contract data, from some addresses to other ones within the network. Beyond facilitating the exchange of value, transactions also play a pivotal role in executing smart contracts. These contracts allow for the implementation of programmable logic, enabling a diverse range of functionalities and decentralized applications on the Alephium blockchain.
+A transaction in Alephium denotes the process of transferring an asset, such as Alephium's native cryptocurrency ALPH, tokens, or contract data, from some addresses to other ones within the network. Beyond facilitating the exchange of value, transactions also play a pivotal role in executing smart contracts. These contracts allow for the implementation of programmable logic, enabling a diverse range of functionalities and decentralized applications on the Alephium blockchain.
 
 ## Prerequisites
 
