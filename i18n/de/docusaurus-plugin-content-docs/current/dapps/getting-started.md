@@ -318,12 +318,12 @@ node dist/src/token.js
 
 ## Verbindung zu den Wallets
 
-DApps erfordern eine Wallet-Integration für Benutzer der DApp, um sich zu authentifizieren und mit der Alephium-Blockchain zu interagieren, z. B. das Signieren von Transaktionen. Derzeit können DApps sowohl mit der [Extension Wallet](../wallet/extension-wallet/DApp)
+DApps erfordern eine Wallet-Integration für Benutzer der DApp, um sich zu authentifizieren und mit der Alephium-Blockchain zu interagieren, z. B. das Signieren von Transaktionen. Derzeit können DApps sowohl mit der [Extension Wallet](../wallet/extension-wallet/dapp)
 als auch mit [WalletConnect](../wallet/walletconnect) integriert werden. Bitte beachten Sie die jeweiligen Seiten für weitere Details.
 
 ## Weitere Informationen
 
-- Um mehr über das Ökosystem zu erfahren, besuchen Sie bitte die [Übersicht des Ökosystems](/DApps/ecosystem).
-- Um mehr über das Web3 SDK zu erfahren, besuchen Sie bitte die [Anleitung zum Web3 SDK](/DApps/alephium-web3).
+- Um mehr über das Ökosystem zu erfahren, besuchen Sie bitte die [Übersicht des Ökosystems](/dapps/ecosystem).
+- Um mehr über das Web3 SDK zu erfahren, besuchen Sie bitte die [Anleitung zum Web3 SDK](/dapps/alephium-web3).
 - Um mehr über die Ralph-Sprache zu erfahren, besuchen Sie bitte die [Anleitung zu Ralph](/ralph/getting-started).
-- Um zu lernen, wie man eine Nextjs DApp erstellt, besuchen Sie bitte [Erstellen Sie eine DApp mit Nextjs](/DApps/build-DApp-with-nextjs.md)
+- Um zu lernen, wie man eine Nextjs DApp erstellt, besuchen Sie bitte [Erstellen Sie eine DApp mit Nextjs](/dapps/build-dapp-with-nextjs.md)
