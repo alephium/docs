@@ -707,6 +707,26 @@ Foo(bazId).foo()
 let _ = Bar(bazId).bar()
 ```
 
+The reason why a contract can only implement one interface in Ralph is that, when calling contract methods, Ralph uses method indices to load and call contract methods.
+If we allow a contract to implement multiple interface, calling contract methods through the interface may result in using the wrong method index. For example:
+
+```
+Interface Foo {
+  pub fn foo() -> ();
+}
+
+Interface Bar {
+  pub fn bar() -> ();
+}
+
+Contract Baz() implements Foo, Bar {
+  pub fn foo() -> () {}
+  pub fn bar() -> () {}
+}
+```
+
+In this case, both `Foo(bazContractId).foo()` and `Bar(bazContractId).bar()` would use method index 0 to call the `Baz` contract.
+
 :::note
 Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph), so creating a large number of sub-contracts is not practical.
 :::

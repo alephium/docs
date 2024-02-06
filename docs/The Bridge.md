@@ -106,3 +106,15 @@ And if you interact with the smart contract directly, you can bridge all erc20 t
 ### 8. I bridged ETH and/or USDC, and there’s no liquidity on AYIN pools, what can I do?
 
 Before bridging any token, please check that there is enough liquidity available, otherwise you might have to bridge those tokens back.
+
+
+### 9. How do i add the ALPH ERC-20 token to my Metamask? 
+
+In order to have the ALPH ERC-20 token show in your Metamask wallet you are going to need to do the following : 
+
+- Get the Token Contract from [here](https://etherscan.io/token/0x590F820444fA3638e022776752c5eEF34E2F89A6)
+- Open & Unlock your metamask
+- Click on "Import Token"
+- Select "Custom Token" 
+- Copy & Paste the contract into the first field. 
+- Press "Next" & then "Import"

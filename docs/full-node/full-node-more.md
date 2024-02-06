@@ -104,9 +104,18 @@ requirement.
 
 Here are the steps to prune the Alephium full node:
 
+### Using Jar File
+
 1. Make sure the Alephium full node is stopped
-2. Download `alephium-tools-2.6.1.jar` from https://github.com/alephium/alephium/releases/tag/v2.6.1
+2. Download `alephium-tools-x.y.z.jar` from https://github.com/alephium/alephium/releases
 3. If you changed the default Alephium home directory, set the the `ALEPHIUM_HOME` environment variable
-4. Run the following command `java -cp alephium-tools-2.6.1.jar org.alephium.tools.PruneStorage` to start pruning
+4. Run the following command `java -cp alephium-tools-x.y.z.jar org.alephium.tools.PruneStorage` to start pruning
 5. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
 6. Restart the Alephium full node
+
+### Using Docker
+
+1. Make sure the Alephium full node is stopped
+2. Run the following command `docker run -it -v ${YOUR_ALEPHIUM_HOME}:/alephium-home/.alephium alephium/alephium-tools:x.y.z org.alephium.tools.PruneStorage`
+3. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
+4. Restart the Alephium full node

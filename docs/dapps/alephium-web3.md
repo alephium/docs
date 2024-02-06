@@ -168,7 +168,7 @@ await nodeWallet.lock()
 
 ```typescript
 // Create a PrivateKeyWallet from private key
-const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5', undefined, nodeProvider)
+const wallet =  new PrivateKeyWallet({privateKey: 'a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5', keyType: undefined, nodeProvider: web3.getCurrentNodeProvider()})
 
 // Create a PrivateKeyWallet from mnemonic and group, here it will create an account on group 0
 const wallet = PrivateKeyWallet.FromMnemonicWithGroup(
