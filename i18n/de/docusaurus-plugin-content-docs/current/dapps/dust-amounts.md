@@ -8,7 +8,7 @@ Alephium's einzigartiges
 [sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
 kombiniert die Sicherheit des UTXO-Modells mit der Ausdrucksstärke 
 des Account-Modells. Alle Vermögenswerte in Alephium, einschließlich 
-des nativen ALPH und anderer [Tokes](/tokens/overview), werden durch 
+des nativen ALPH und anderer [Tokens](/tokens/overview), werden durch 
 UTXOs verwaltet. Obwohl das UTXO-Modell viele Sicherheitsvorteile mit 
 sich bringt (siehe [Asset Permission System](http://localhost:3000/ralph/asset-permission-system)), 
 geht es auch mit einem Kompromiss einher, der UX-Auswirkungen hat, 
@@ -23,11 +23,11 @@ Aufrechterhaltung eines relativ kleinen UTXO-Sets ist wichtig für
 Alephium, um die beste Version von sich selbst zu bewahren: effizient, 
 leistungsfähig und skalierbar. 
 
-UTXOs mit sehr geringem Wert können auch unwirtschaftlich zu verwenden 
-sein, wenn die Transaktionsgebühr für die Ausgabe eines UTXOs höher ist 
-als der Wert des UTXOs selbst. Im Laufe der Zeit könnte dies dazu führen, 
-dass die Benutzer nicht im Einklang mit der langfristigen Gesundheit des 
-Systems handeln.
+UTXOs mit sehr geringem Wert können auch unwirtschaftlich werden, wenn die 
+Transaktionsgebühr für die Ausgabe eines UTXOs höher ist als der Wert des 
+UTXOs selbst.Da es möglich ist, die Vertragskaution zurückzuerhalten, nachdem 
+der Vertrag zerstört wurde, schafft dies hoffentlich die richtigen Anreize für 
+Entwickler, die Größe des Vertragszustands auf einem gesunden Niveau zu halten.
 
 Dies ist ein Problem, dem alle UTXO-basierten Blockchains gegenüberstehen. 
 Um die Größe des UTXO-Sets zu kontrollieren, führte Bitcoin Core das Konzept 
