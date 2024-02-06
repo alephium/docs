@@ -16,7 +16,7 @@ Wenn Sie den Befehl `npx @alephium/cli compile` verwenden, um einen Smart Contra
 [hier](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) ist der generierte TypeScript-Code. Wir können den generierten TypeScript-Code verwenden, um den Zustand des Smart Contracts abzurufen:
 
 ```typescript
-import { TokenFaucet } from 'artifacts/ts' // Note that you may need to change the import path according to your project directory structure
+import { TokenFaucet } from 'artifacts/ts' // Beachten Sie, dass Sie möglicherweise den Importpfad gemäß der Verzeichnisstruktur Ihres Projekts ändern müssen.
 import { web3, NodeProvider } from '@alephium/web3'
 
 const nodeUrl = 'http://127.0.0.1:12973'
@@ -27,10 +27,10 @@ const tokenFaucetAddress = 'y1btMZHTvMvHEqLTdx1JHvEXq3tmVfqsY2rwM669upiT'
 const tokenFaucet = TokenFaucet.at(tokenFaucetAddress)
 const contractState = await tokenFaucet.fetchState()
 
-// The names in `contractState.fields` are the same as the field names in the TokeFaucet contract
+// Die Namen in contractState.fields sind die gleichen wie die Feldnamen im TokenFaucet-Vertrag.
 const { symbol, name, decimals, supply, balance  } = contractState.fields
 
-// You can also get the assets owned by the contract
+// Sie können auch die Vermögenswerte abrufen, die dem Vertrag gehören.
 const { alphAmount, tokens } = contractState.asset
 ```
 
@@ -61,33 +61,33 @@ Wir können die Abhebungsereignisse mit dem folgenden Ansatz abonnieren:
 import { TokenFaucet, TokenFaucetTypes } from 'artifacts/ts'
 import { EventSubscribeOptions } from '@alephium/web3'
 
-// `TokenFaucetTypes.WithdrawEvent` is a generated TypeScript type
+// `TokenFaucetTypes.WithdrawEvent ist ein generierter TypeScript-Typ.
 const options: EventSubscribeOptions<TokenFaucetTypes.WithdrawEvent> = {
-  // We specify the pollingInterval as 4 seconds, which will query the contract for new events every 4 seconds
+  // Wir geben das pollingInterval als 4 Sekunden an, was bedeutet, dass der Vertrag alle 4 Sekunden nach neuen Ereignissen abgefragt wird.
   pollingInterval: 4000,
-  // The `messageCallback` will be called every time we recive a new event
+  // Die `messageCallback` wird jedes Mal aufgerufen, wenn wir ein neues Ereignis erhalten.
   messageCallback: (event: TokenFaucetTypes.WithdrawEvent): Promise<void> => {
     console.log(`Withdraw(${event.fields.to}, ${event.fields.amount})`)
     return Promise.resolve()
   },
-  // The `errorCallback` will be called when an error occurs, here we unsubscribe the subscription and log the error
+  // Die `errorCallback` wird aufgerufen, wenn ein Fehler auftritt. Hierbei melden wir uns vom Abonnement ab und protokollieren den Fehler.
   errorCallback: (error, subscription): Promise<void> => {
     console.error(error)
     subscription.unsubscribe()
     return Promise.resolve()
   },
-  // The `onEventCountChanged` callback is an optional parameter that will be called when the contract event count changes
+  // Der `onEventCountChanged-Callback` ist ein optionales Argument, das aufgerufen wird, wenn sich die Anzahl der Vertragsereignisse ändert.
   onEventCountChanged: (eventCount): Promise<void> => {
   },
 }
 
-// We subscribe to contract events starting from event count 0.
-// We can also persist the current event count within the `onEventCountChanged` callback,
-// allowing us to subscribe from the last event count for the next subscription.
+/ Wir abonnieren Vertragsereignisse ab dem Ereignis-Zählerstand 0.
+// Wir können auch den aktuellen Ereignis-Zählerstand innerhalb des onEventCountChanged-Rückrufs persistieren,
+// was es uns ermöglicht, ab dem letzten Ereignis-Zählerstand für das nächste Abonnement zu abonnieren.
 const fromEventCount = 0
 const subscription = tokenFaucet.subscribeWithdrawEvent(options, fromEventCount)
 
-// Unsubscribe the subscription
+// Das Abonnement wird gekündigt.
 subscription.unsubscribe()
 ```
 
@@ -145,7 +145,7 @@ function Component() {
   if (connectionStatus === 'connecting') return <div>Connecting</div>
   if (connectionStatus === 'disconnected') return <div>Disconnected</div>
 
-  // connected
+  // `Verbunden`
   return <div>{account}</div>
 }
 ```
@@ -194,7 +194,7 @@ Sie können [fetch-retry](https://github.com/jonbern/fetch-retry) verwenden, um 
 ```typescript
 import * as fetchRetry from 'fetch-retry'
 
-// We specify up to 10 retries, with 1 second retry delay
+// Wir geben bis zu 10 Wiederholungsversuche an, mit einer Wiederholungsverzögerung von 1 Sekunde.
 const retryFetch = fetchRetry.default(fetch, {
   retries: 10,
   retryDelay: 1000

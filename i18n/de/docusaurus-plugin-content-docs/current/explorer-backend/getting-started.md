@@ -19,7 +19,7 @@ Laden Sie die Datei  `explorer-backend-x.x.x.jar` von [Github-Release](https://g
 1. Starten Sie den `postgresql`-Dienst.
 2. Melden Sie sich bei der PostgreSQL-Shell mit dem Standardbenutzer `postgres` an:
    ```shell
-   psql postgres # or `psql -U postgres` depending on your OS
+   psql postgres # or `psql -U postgres` abhängig von Ihrem Betriebssystem
    ```
 3. Stellen Sie sicher, dass die Rolle `postgres` existiert, und erstellen Sie diese bei Bedarf.
    Alle Rollen auflisten:

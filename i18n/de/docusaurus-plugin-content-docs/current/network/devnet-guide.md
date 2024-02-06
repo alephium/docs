@@ -21,7 +21,7 @@ Bitte beachten Sie, dass die Standardadresse und der Port für die REST-API [htt
 In der Datei `$HOME/.alephium/user.conf` (`user.conf`, wenn Docker verwendet wird) müssen Sie Folgendes hinzufügen:
 
 ```
-// in most cases, modify the following two lines
+// In den meisten Fällen, ändern Sie die folgenden beiden Zeilen:
 alephium.genesis.allocations = [{address = "<your-own-address>", amount = 1000000000000000000000000, lock-duration = 0 seconds}] // 1 million token allocated for your address
 alephium.consensus.num-zeros-at-least-in-hash = 0
 

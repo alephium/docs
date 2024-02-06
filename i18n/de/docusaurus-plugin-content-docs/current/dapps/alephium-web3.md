@@ -16,16 +16,16 @@ npm install --save @alephium/web3
 
 ## Mit Alephium verbinden
 
-Der `NodeProvider` ist eine Abstraktion einer Verbindung zum Alephium-Netzwerk. Sie können einen `NodeProvider` erhalten, indem Sie:
+Der `NodeProvider` ist eine Abstraktion einer Verbindung zum Alephium-Netzwerk. Sie können einen `NodeProvider` erstellen, indem Sie:
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
 ```
 
-Oder geben Sie die `API_KEY` an, wenn Sie `alephium.api.api-key` in Ihrer Konfigurationsdatei für den vollständigen Node haben:
+Oder geben Sie einen `API_KEY` an, wenn Sie `alephium.api.api-key` in Ihrer Konfigurationsdatei für den Full Node haben:
 
 ```typescript
-const API_KEY = // alephium.api.api-key from your full node config
+const API_KEY = // alephium.api.api-key aus Ihrer Konfiguration des Full Nodes
 const nodeProvider = new NodeProvider('http://localhost:22973', API_KEY)
 ```
 
@@ -40,14 +40,14 @@ web3.setCurrentNodeProvider(<nodeURL>)
 Sobald Sie einen `NodeProvider` haben, besteht eine Verbindung zur Blockchain, die Sie verwenden können, um den aktuellen Vertragszustand abzufragen, historische Vertragsereignisse abzurufen, bereitgestellte Verträge nachzuschlagen und so weiter.
 
 ```typescript
-// Get the blockchain height from the given chain index
+// Erhalten Sie die Blockchain-Höhe aus dem angegebenen Kettenindex
 await nodeProvider.blockflow.getBlockflowChainInfo({
   fromGroup: 0,
   toGroup: 0
 })
 // { currentHeight: 315 }
 
-// Get the block from the given block hash
+// Erhalten Sie den Block aus dem angegebenen Blockhash
 await nodeProvider.blockflow.getBlockflowBlocksBlockHash('1ccfe845988ebf878384dd2dc9e55920261566c2ad9143963180222059ffd3b0')
 // {
 //   hash: '1ccfe845988ebf878384dd2dc9e55920261566c2ad9143963180222059ffd3b0',
@@ -81,7 +81,7 @@ await nodeProvider.blockflow.getBlockflowBlocksBlockHash('1ccfe845988ebf878384dd
 //   target: '20ffffff'
 // }
 
-// Get the transaction status
+// Erhalten Sie den Transaktionsstatus
 await nodeProvider.transactions.getTransactionsStatus({
   txId: 'f33da0d8f4c00d68e2d5818cb9617219a1108b801f387fc8d1595287e4dbf2aa'
 })
@@ -94,7 +94,7 @@ await nodeProvider.transactions.getTransactionsStatus({
 //   toGroupConfirmations: 295
 // }
 
-// Get the account balance
+// Erhalten Sie das Guthaben
 await nodeProvider.addresses.getAddressesAddressBalance('1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH')
 // {
 //   balance: '999972904436900000000000',
@@ -111,7 +111,7 @@ await nodeProvider.addresses.getAddressesAddressBalance('1DrDyTr9RpRsQnDnXo2YRiP
 // }
 ```
 
-## In die BLockchain schreiben
+## In die Blockchain schreiben
 
 Transaktionen werden verwendet, um den Zustand der Blockchain zu ändern. Jede Transaktion muss mit einem privaten Schlüssel signiert werden, was über den  `SignerProvider` erfolgen kann. Und es gibt zwei `SignerProvider` in `alephium/web3-wallet`.
 
@@ -130,13 +130,13 @@ Beide Wallets werden für die Entwicklung und Bereitstellung von Verträgen verw
 Bitte folge dieser [Anleitung](/wallet/node-wallet-guide) um eine Full Node Wallet zu erstellen.
 
 ```typescript
-// Create a node wallet by wallet name
+// Erstellen Sie eine Node-Wallet mit dem Wallet-Namen.
 const nodeWallet = new NodeWallet('alephium-web3-test-only-wallet', nodeProvider)
 
-// Unlock the wallet with password
+// Entsperren Sie die Wallet mit dem Passwort
 await nodeWallet.unlock('alph')
 
-// Get accounts
+// Erhalten Sie Konten
 await nodeWallet.getAccounts()
 // [
 //   {
@@ -146,7 +146,7 @@ await nodeWallet.getAccounts()
 //   }
 // ]
 
-// Transfer 1 ALPH to 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT
+// Übertragen Sie 1 ALPH an 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT
 await nodeWallet.signAndSubmitTransferTx({
   signerAddress: '1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH',
   destinations: [{
@@ -160,17 +160,18 @@ await nodeWallet.signAndSubmitTransferTx({
 //   toGroup: 0
 // }
 
-// Lock the wallet
+// Sperren Sie die Wallet
 await nodeWallet.lock()
 ```
 
 ### PrivateKeyWallet
 
 ```typescript
-// Create a PrivateKeyWallet from private key
+// 
+Erstellen Sie eine PrivateKeyWallet aus dem privaten Schlüssel
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5', undefined, nodeProvider)
 
-// Create a PrivateKeyWallet from mnemonic and group, here it will create an account on group 0
+// Erstellen Sie eine PrivateKeyWallet aus Mnemonic und Gruppe; hier wird ein Konto in Gruppe 0 erstellt
 const wallet = PrivateKeyWallet.FromMnemonicWithGroup(
   'vault alarm sad mass witness property virus style good flower rice alpha viable evidence run glare pretty scout evil judge enroll refuse another lava',
   0,
@@ -186,7 +187,7 @@ console.log(wallet.account)
 //   group: 0
 // }
 
-// Transfer 1 ALPH to 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT
+// Übertragen Sie 1 ALPH an 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT
 await wallet.signAndSubmitTransferTx({
   signerAddress: wallet.account.address,
   destinations: [{
@@ -213,15 +214,15 @@ Das SDK bietet Funktionen für Unittests, die den Contract wie eine normale Tran
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
-// Build the project first
+// Bauen Sie zuerst das Projekt 
 await Project.build()
 
-// Test the `withdraw` method of the `TokenFaucet` contract, it will NOT change the blockchain state
+// Testen Sie die withdraw-Methode des TokenFaucet-Vertrags; sie wird den Blockchain-Zustand NICHT ändern
 const testContractAddress = randomContractAddress()
-// The `TokenFaucet` is generated in the getting-started guide
+// Der TokenFaucet wurde im Einführungshandbuch generiert
 const result = await TokenFaucet.tests.withdraw({
   address: testContractAddress,
-  // Initial state of the test contract
+  // Anfangszustand des Testvertrags
   initialFields: {
     symbol: Buffer.from('TF', 'utf8').toString('hex'),
     name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -229,7 +230,7 @@ const result = await TokenFaucet.tests.withdraw({
     supply: 10n ** 18n,
     balance: 10n
   },
-  // Assets owned by the test contract before a test
+  // Vermögenswerte, die dem Testvertrag vor einem Test gehören
   initialAsset: {
     alphAmount: 10n ** 18n,
     tokens: [{
@@ -237,9 +238,9 @@ const result = await TokenFaucet.tests.withdraw({
       amount: 10n
     }]
   },
-  // Arguments to test the target function of the test contract
+  // Argumente, um die Ziel-Funktion des Testvertrags zu testen
   testArgs: { amount: 1n },
-  // Assets owned by the caller of the function
+  // Vermögenswerte, die dem Aufrufer der Funktion gehören
   inputAssets: [{
     address: wallet.account.address,
     asset: { alphAmount: 10n ** 18n }
@@ -274,14 +275,14 @@ const faucet = TokenFaucet.at(tokenAddress)
 const initialState = await faucet.fetchState()
 const initialBalance = initialState.fields.balance
 
-// Call `withdraw` function 10 times
+// Rufen Sie die withdraw-Funktion 10-mal auf
 for (let i = 0; i < 10; i++) {
   await Withdraw.execute(signer, {
     initialFields: { token: tokenId, amount: 1n },
     attoAlphAmount: DUST_AMOUNT * 2n
   })
 
-  //!!! Blockchain state is changed !!!
+  //!!! Der Blockchain-Zustand wurde verändert !!!
   const newState = await faucet.fetchState()
   const newBalance = newState.fields.balance
   expect(newBalance).toEqual(initialBalance - BigInt(i) - 1n)
@@ -297,10 +298,10 @@ web3.setCurrentNodeProvider('http://localhost:22973')
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
 await Project.build()
 
-// Create a transaction to deploy the contract and submit the transaction to the Alephium network:
-// `initialFields` is required if the contract has fields
-// `initialAttoAlphAmount` must be greater than or equal to 1 ALPH, assets will be sent to the contract from the transaction sender account
-// `issueTokenAmount` specifies the amount of tokens to issue
+// Erstellen Sie eine Transaktion, um den Vertrag zu bereitstellen, und übermitteln Sie die Transaktion an das Alephium-Netzwerk:
+// `initialFields ist erforderlich, wenn der Vertrag Felder hat
+// `initialAttoAlphAmount muss größer oder gleich 1 ALPH sein; Vermögenswerte werden vom Konto des Transaktionssenders an den Vertrag gesendet
+// `issueTokenAmount gibt die Menge der auszugebenden Token an
 const issueTokenAmount = 10n
 const deployResult = await TokenFaucet.deploy(wallet, {
   initialFields: {
@@ -332,7 +333,7 @@ console.log(JSON.stringify(deployResult, null, 2))
 //   }
 // }
 
-// Get the contract state
+// Erhalten Sie den Zustand des Vertrags
 const tokenFaucet = deployResult.instance
 const contractState = await tokenFaucet.fetchState()
 console.log(JSON.stringify(contractState, null, 2))
@@ -395,14 +396,14 @@ web3.setCurrentNodeProvider('http://localhost:22973')
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
 await Project.build()
 
-// Contract address from the deploy result
+// Vertragsadresse aus dem Bereitstellungsergebnis
 const contractAddress = deployResult.instance.address
 
-// Contract id from the deploy result
+// Vertrags-ID aus dem Bereitstellungsergebnis
 const contractId = deployResult.instance.contractId
 
-// Create a call contract transaction, `initialFields` is required if the script has fields
-// The `Withdraw` is generated in the getting-started guide
+// Erstellen Sie eine Aufruf-Vertragstransaktion; initialFields ist erforderlich, wenn das Skript Felder hat
+// Die Withdraw wurde im Einführungshandbuch generiert
 const executeResult = await Withdraw.execute(wallet, {
   initialFields: {
     token: contractId,
@@ -421,7 +422,7 @@ console.log(JSON.stringify(executeResult, null, 2))
 //   "groupIndex": 0
 // }
 
-// Get the account balance
+// Erhalten Sie das Kontoguthaben
 const balance = await wallet.nodeProvider.addresses.getAddressesAddressBalance(wallet.account.address)
 console.log(JSON.stringify(balance, null, 2))
 // {
@@ -445,15 +446,15 @@ Vertragsereignisse werden durch Vertragsadresse mit Offsets indiziert, und Sie k
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
-// Contract address from the contract deploy result
+// Vertragsadresse aus dem Bereitstellungsergebnis des Vertrags
 const contractAddress = deployResult.instance.address
 
-// Query contract events from index 0, and the `limit` cannot be greater than 100
+// Abfrage von Vertragsereignissen ab Index 0, und die limit darf nicht größer als 100 sein
 const result = await nodeProvider.events.getEventsContractContractaddress(
   contractAddress, {start: 0, limit: 100}
 )
 
-// In the next query you can start with `result.nextStart`
+// In der nächsten Abfrage können Sie mit `result.nextStart` beginnen
 console.log(JSON.stringify(result, null, 2))
 // {
 //   "events": [
@@ -476,15 +477,15 @@ console.log(JSON.stringify(result, null, 2))
 //   "nextStart": 1
 // }
 
-// Sometimes, events might be emitted from non-canonical blocks because of block reorg, you can check if the block in the main chain
+// Manchmal können Ereignisse aus nicht-kanonischen Blöcken aufgrund von Block-Reorganisationen ausgesendet werden; Sie können überprüfen, ob der Block in der Hauptkette ist
 await nodeProvider.blockflow.getBlockflowIsBlockInMainChain({blockHash: events[0].blockHash})
 // true
 
-// Get the current contract event counter
+// Erhalten Sie den aktuellen Zähler für Vertragsereignisse
 await nodeProvider.events.getEventsContractContractaddressCurrentCount(contractAddress)
 // 1
 
-// You can also get events by transaction id if `alephium.node.event-log.index-by-tx-id` is enabled in your full node configuration file
+// Sie können Ereignisse auch nach Transaktions-ID abrufen, wenn `alephium.node.event-log.index-by-tx-id` in Ihrer Konfigurationsdatei für den Vollknoten aktiviert ist
 await nodeProvider.events.getEventsTxIdTxid('c29e9cb10b3e0b34979b9daac73151d98ee4de8f913e66aa0f0c8dc0cb99a617')
 // {
 //   "events": [
@@ -513,19 +514,19 @@ Zusätzlich zur Abfrage von Ereignissen einzeln können Sie Ereignisse auch durc
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
-// The `TokenFaucet` contract instance from deploy result
+// Die TokenFaucet-Vertragsinstanz aus dem Bereitstellungsergebnis
 const tokenFaucet = deployResult.instance
-// The `TokenFaucetTypes.WithdrawEvent` is generated in the getting-started guide
+// Die `TokenFaucetTypes.WithdrawEvent` wurde im Einführungshandbuch generiert
 const events: TokenFaucetTypes.WithdrawEvent[] = []
 const subscribeOptions = {
-  // It will check for new events from the full node every `pollingInterval`
+  // Es wird alle `pollingInterval` nach neuen Ereignissen vom Vollknoten überprüfen
   pollingInterval: 500,
-  // The callback function will be called for each event
+  // Die Callback-Funktion wird für jedes Ereignis aufgerufen
   messageCallback: (event: TokenFaucetTypes.WithdrawEvent): Promise<void> => {
     events.push(event)
     return Promise.resolve()
   },
-  // This callback function will be called when an error occurs
+  // Diese Callback-Funktion wird aufgerufen, wenn ein Fehler auftritt
   errorCallback: (error: any, subscription): Promise<void> => {
     console.log(error)
     subscription.unsubscribe()
@@ -533,7 +534,7 @@ const subscribeOptions = {
   }
 }
 
-// Subscribe the contract events from index 0
+// Abonnieren Sie die Vertragsereignisse ab Index 0
 const subscription = tokenFaucet.subscribeWithdrawEvent(subscribeOptions, 0)
 await new Promise((resolve) => setTimeout(resolve, 1000))
 console.log(JSON.stringify(events, null, 2))
@@ -551,7 +552,7 @@ console.log(JSON.stringify(events, null, 2))
 //   }
 // ]
 
-// Unsubscribe
+// Abbestellen
 subscription.unsubscribe()
 ```
 

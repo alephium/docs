@@ -84,7 +84,7 @@ Schauen wir uns die Funktion `marketPlace.listNFT` etwas genauer an:
 Contract NFTMarketPlace(
     nftListingTemplateId: ByteVec
 ) {
-    // Other code are omitted for brevity
+    // Übriger Code wurde aus Gründen der Kürze ausgelassen.
 
     pub fn getListingFee() -> U256 {
         return 0.1 ALPH
@@ -97,16 +97,16 @@ Contract NFTMarketPlace(
     ) -> (Address) {
         assert!(price > 0, ErrorCodes.NFTPriceIsZero)
 
-        // Only owner can list the NFT
+        // Nur der Eigentümer kann das NFT auflisten.
         let tokenOwner = callerAddress!()
 
         let (encodeImmutableFields, encodeMutableFields) = NFTListing.encodeFields!(tokenId, tokenOwner, selfAddress!(), commissionRate, price)
-        // Create the listing contract
+        // Erstellen Sie den Listungsvertrag.
         let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, tokenId: 1}(
             tokenId, nftListingTemplateId, encodeImmutableFields, encodeMutableFields
         )
 
-        // Charge the listing fee
+        // Erheben Sie die Listungsgebühr.
         transferTokenToSelf!(tokenOwner, ALPH, listingFee)
 
         return contractIdToAddress!(nftListingContractId)
@@ -129,7 +129,7 @@ oder es wird ein Kompilierfehler gemeldet. In diesem Fall aktualisiert
 `listNFT` das Vermögen des Vertrags `NFTMarketPlace` indem es die `listingFee` darauf überträgt:
 
 ```rust
-// Charge the listing fee
+// Erheben Sie die Listungsgebühr
 transferTokenToSelf!(tokenOwner, ALPH, listingFee)
 ```
 

@@ -23,7 +23,7 @@ Laden Sie die Datei `alephium-x.x.x.jar` vom [Github Release](https://github.com
 Schreiben Sie eine Konfigurationsdatei unter  `~/.alephium/user.conf`. Die unten stehende stammt aus unserem [Alephium-Stack-Repo](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
 
 ```conf
-# Import this mnemonic to have 4'000'000 token allocated for your addresses
+# Importieren Sie diese Mnemonic, um 4.000.000 Token Ihrer Adresse zuzuweisen.
 #
 # vault alarm sad mass witness property virus style good flower rice alpha viable evidence run glare pretty scout evil judge enroll refuse another lava
 

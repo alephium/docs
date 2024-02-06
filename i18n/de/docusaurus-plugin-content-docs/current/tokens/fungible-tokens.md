@@ -23,7 +23,7 @@ Die Standard [fungible-Token-Interface](https://github.com/alephium/alephium-web
 `totalSupply` des Tokens. Sie ist auch mit der `@std`-Annotation mit der ID `#0001` versehen:
 
 ```rust
-// Standard interface for fungible tokens
+// Standard-Schnittstelle für fungible Tokens
 @std(id = #0001)
 Interface IFungibleToken {
   pub fn getSymbol() -> ByteVec
@@ -32,7 +32,7 @@ Interface IFungibleToken {
   pub fn getTotalSupply() -> U256
 }
 
-// A `TokenFaucet` contract that implements the `IFungibleToken` interface
+// Ein `TokenFaucet-Vertrag`, der die Schnittstelle `IFungibleToken` implementiert
 Contract TokenFaucet(
     symbol: ByteVec,
     name: ByteVec,
@@ -62,13 +62,13 @@ Sobald ein Token-Contract die
 Informationen auf eine standardisierte Weise abzurufen:
 
 ```typescript
-// Use SDK to call methods individually
+// Verwenden Sie das SDK, um Methoden einzeln aufzurufen
 const getDecimalResult = await tokenFaucet.methods.getDecimals()
 const getTotalSupplyResult = await tokenFaucet.methods.getTotalSupply()
 const getNameResult = await tokenFaucet.methods.getName()
 console.log("TokenFaucet name, decimals, totalSupply", getNameResult.returns, getDecimalResult.returns, getTotalSupplyResult.returns)
 
-// Use SDK to call all multiple methods at the same time
+// Verwenden Sie das SDK, um alle mehreren Methoden gleichzeitig aufzurufen
 const multicallResult = await tokenFaucet.multicall({
   getDecimals: {},
   getTotalSupply: {},
@@ -89,11 +89,11 @@ ermöglicht es dem SDK auch, den Typ eines Tokens zu erraten,
 damit dApps und Wallets diese entsprechend behandeln können:
 
 ```typescript
-// Guess token type
+// Token-Typ erraten
 const tokenType = await web3.getCurrentNodeProvider().guessStdTokenType(tokenFaucet.contractId)
 expect(tokenType).toEqual('fungible')
 
-// Guess token interface id
+// Token-Schnittstellen-ID erraten
 const tokenInterfaceId = await web3.getCurrentNodeProvider().guessStdInterfaceId(tokenFaucet.contractId)
 expect(tokenInterfaceId).toEqual('0001')
 ```

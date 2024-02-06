@@ -28,20 +28,20 @@ Sowohl NFT-Kollektionen als auch individuelle NFTs verfügen über Metadaten, wi
 und [INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral)-Schnittstellen standardisieren die Methoden zum Abrufen dieser Metadaten.
 
 ```rust
-// Standard interface for NFT collection
+// Standard-Schnittstelle für NFT-Kollektionen
 @std(id = #0002)
 Interface INFTCollection {
    pub fn getCollectionUri() -> ByteVec
    pub fn totalSupply() -> U256
    pub fn nftByIndex(index: U256) -> INFT
-   pub fn validateNFT(nftId: ByteVec, nftIndex: U256) -> () // Validates that the NFT is part of the collection, otherwise throws exception.
+   pub fn validateNFT(nftId: ByteVec, nftIndex: U256) -> () // Überprüft, ob das NFT Teil der Kollektion ist, andernfalls wirft es eine Ausnahme.
 }
 
-// Standard interface for NFT
+// Standard-Schnittstelle für NFTs
 @std(id = #0003)
 Interface INFT {
    pub fn getTokenUri() -> ByteVec
-   pub fn getCollectionIndex() -> (ByteVec, U256) // Returns collection id and index of the NFT in the collection.
+   pub fn getCollectionIndex() -> (ByteVec, U256) // Gibt die Sammlungs-ID und den Index des NFT in der Kollektion zurück.
 }
 ```
 
@@ -49,11 +49,11 @@ Sie sind auch mit den `@std`-Annotationen versehen,
 um es dApps und Wallets zu erleichtern, ihre Contract-/Token-Typen zu inferieren.
 
 ```typescript
-// Guess NFT token type
+// Erraten Sie den NFT-Token-Typ
 const nftTokenType = await web3.getCurrentNodeProvider().guessStdTokenType(nft.contractId)
 expect(nftTokenType).toEqual('non-fungible')
 
-// Check if a contract is a NFT collection
+// Überprüfen Sie, ob ein Vertrag eine NFT-Kollektion ist
 const isNFTCollection = await web3.getCurrentNodeProvider().guessFollowsNFTCollectionStd(nftCollection.contractId)
 console.log("Is NFT collection", isNFTCollection)
 ```
@@ -65,11 +65,11 @@ und
 implementieren, bietet das SDK eine kanonische Methode zum Abrufen ihrer jeweiligen Metadaten:
 
 ```typescript
-// NFT Collection Metadata
+// Metadaten für NFT-Kollektion
 const collectionMetadata = await web3.getCurrentNodeProvider().fetchNFTCollectionMetaData(nftCollection.contractId)
 console.log("NFT Collection URI, totalSupply", collectionMetadata.collectionUri, collectionMetadata.totalSupply)
 
-// NFT Metadata
+// NFT-Metadaten
 const nftMetadata = await web3.getCurrentNodeProvider().fetchNFTMetadata(nft.contractId)
 console.log("NFT Token URI, collection address", nftMetadata.tokenUri, nftMetadata.collectionAddress)
 ```
@@ -78,9 +78,9 @@ Für NFT-Kollektionen ist eine der Metadaten `collectionUri`, die eine URI ist u
 
 ```typescript
 interface NFTCollectionUriMetaData {
-  name: string            // Name of the NFT collection
-  description: string     // General description of the NFT collection
-  image: string           // A URI to the image that represents the NFT collection
+  name: string            // Name der NFT-Kollektion
+  description: string     // Allgemeine Beschreibung der NFT-Kollektion
+  image: string           // Eine URI zum Bild, das die NFT-Kollektion repräsentiert
 }
 ```
 
@@ -88,10 +88,10 @@ Für individuelle NFTs ist eine der Metadaten `tokenUri`, die eine URI ist und a
 
 ```typescript
 interface NFTTokenUriMetaData {
-  name: string                           // Name of the NFT
-  description?: string                   // General description of the NFT
-  image: string                          // A URI to the image that represents the NFT
-  attributes?: [                         // Attributes of the NFT
+  name: string                           // Name des NFT
+  description?: string                   // Allgemeine Beschreibung des NFT
+  image: string                          // Eine URI zum Bild, das das NFT repräsentiert
+  attributes?: [                         // Attribute des NFT
     {
       trait_type: string
       value: string | number | boolean
@@ -144,18 +144,18 @@ für eine YAML-Datei namens  `imagine.yaml`:
 0.jpg  1.jpg  2.jpg  3.jpg  4.jpg
 
 > cat imagine.yaml
-0.jpg:                              # File name of the image
-  attributes:                       # Attributes of the NFT, optional
-    - color: blue                   # Value of the attributes can be `number`, `boolean` or `string`
+0.jpg:                              # Dateiname des Bildes
+  attributes:                       # Attribute des NFT, optional
+    - color: blue                   # Wert der Attribute kann `number`, `boolean` oder `string` sein
     - is_outdoor: true
 1.jpg:
-  description: Imagine is too naive # Description of the NFT, optional
+  description: Imagine is too naive # Beschreibung des NFT, optional
 2.jpg:
-  name: Imagine in Asia             # Name of the NFT, optional
+  name: Imagine in Asia             # Name des NFT, optional
   attributes:
     - color: blue
     - is_outdoor: false
-3.jpg:                              # Name is auto-generated as #${index} if not specified, e.g. #04
+3.jpg:                              # Name wird automatisch generiert als #${index}, wenn nicht angegeben, z.B. #04
 4.jpg:
 ```
 

@@ -52,11 +52,11 @@ Werfen Sie einen Blick in den Ordner `contracts/` dort finden Sie `token.ral`:
 ```rust
 import "std/fungible_token_interface"
 
-// Defines a contract named `TokenFaucet`.
-// A contract is a collection of fields (its state) and functions.
-// Once deployed, a contract resides at a specific address on the Alephium blockchain.
-// Contract fields are permanently stored in contract storage.
-// A contract can issue an initial amount of token at its deployment.
+// Definiert einen Vertrag namens `TokenFaucet`.
+// Ein Vertrag ist eine Sammlung von Feldern (seinem Zustand) und Funktionen.
+// Nach der Bereitstellung befindet sich ein Vertrag an einer bestimmten Adresse in der Alephium-Blockchain.
+// Vertragsfelder werden dauerhaft im Vertragsspeicher gespeichert.
+// Ein Vertrag kann bei seiner Bereitstellung eine anfängliche Menge an Token ausgeben.
 Contract TokenFaucet(
     symbol: ByteVec,
     name: ByteVec,
@@ -65,56 +65,56 @@ Contract TokenFaucet(
     mut balance: U256
 ) implements IFungibleToken {
 
-    // Events allow for logging of activities on the blockchain.
-    // Alephium clients can listen to events in order to react to contract state changes.
+    // Ereignisse ermöglichen das Protokollieren von Aktivitäten auf der Blockchain.
+    // Alephium-Clients können Ereignissen lauschen, um auf Änderungen im Vertragszustand zu reagieren.
     event Withdraw(to: Address, amount: U256)
 
     enum ErrorCodes {
         InvalidWithdrawAmount = 0
     }
 
-    // A public function that returns the initial supply of the contract's token.
-    // Note that the field must be initialized as the amount of the issued token.
+    // Eine öffentliche Funktion, die die anfängliche Versorgung mit Token des Vertrags zurückgibt.
+    // Beachten Sie, dass das Feld als die Menge der ausgegebenen Token initialisiert werden muss.
     pub fn getTotalSupply() -> U256 {
         return supply
     }
 
-    // A public function that returns the symbol of the token.
+    // Eine öffentliche Funktion, die das Symbol des Tokens zurückgibt.
     pub fn getSymbol() -> ByteVec {
         return symbol
     }
 
-    // A public function that returns the name of the token.
+    // Eine öffentliche Funktion, die den Namen des Tokens zurückgibt.
     pub fn getName() -> ByteVec {
         return name
     }
 
-    // A public function that returns the decimals of the token.
+    // Eine öffentliche Funktion, die die Dezimalstellen des Tokens zurückgibt.
     pub fn getDecimals() -> U256 {
         return decimals
     }
 
-    // A public function that returns the current balance of the contract.
+    // Eine öffentliche Funktion, die den aktuellen Kontostand des Vertrags zurückgibt.
     pub fn balance() -> U256 {
         return balance
     }
 
-    // A public function that transfers tokens to anyone who calls it.
-    // The function is annotated with `updateFields = true` as it changes the contract fields.
-    // The function is annotated as using contract assets as it does.
+    // Eine öffentliche Funktion, die Token an jeden überträgt, der sie aufruft.
+    // Die Funktion ist mit `updateFields = true annotiert`, da sie die Vertragsfelder ändert.
+    // Die Funktion ist als Verwendung von Vertragsvermögenswerten annotiert.
     @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
     pub fn withdraw(amount: U256) -> () {
-        // Debug events can be helpful for error analysis
+        // Debug-Ereignisse können bei der Fehleranalyse hilfreich sein.
         emit Debug(`The current balance is ${balance}`)
 
-        // Make sure the amount is valid
+        // Stellen Sie sicher, dass der Betrag gültig ist.
         assert!(amount <= 2, ErrorCodes.InvalidWithdrawAmount)
-        // Functions postfixed with `!` are built-in functions.
+        // Funktionen, die mit ! enden, sind integrierte Funktionen.
         transferTokenFromSelf!(callerAddress!(), selfTokenId!(), amount)
-        // Ralph does not allow underflow.
+        // Ralph erlaubt keine Unterdeckung.
         balance = balance - amount
 
-        // Emit the event defined earlier.
+        // Lösen Sie das zuvor definierte Ereignis aus.
         emit Withdraw(callerAddress!(), amount)
     }
 }
@@ -123,12 +123,12 @@ Contract TokenFaucet(
 und `withdraw.ral` :
 
 ```rust
-// Defines a transaction script.
-// A transaction script is a piece of code to interact with contracts on the blockchain.
-// Transaction scripts can use the input assets of transactions in general.
-// A script is disposable and will only be executed once along with the holder transaction.
+// Definiert ein Transaktionsskript.
+// Ein Transaktionsskript ist ein Code-Stück, um mit Verträgen auf der Blockchain zu interagieren.
+// Transaktionsskripte können im Allgemeinen die Eingangsvermögenswerte von Transaktionen verwenden.
+// Ein Skript ist verbrauchbar und wird nur einmal zusammen mit der Transaktion des Inhabers ausgeführt.
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
-    // Call token contract's withdraw function.
+    // Rufen Sie die Abhebungsfunktion des Token-Vertrags auf.
     token.withdraw(amount)
 }
 ```
@@ -159,7 +159,7 @@ describe('unit tests', () => {
   let testContractAddress: string
   let testParamsFixture: TestContractParams<TokenFaucetTypes.Fields, { amount: bigint }>
 
-  // We initialize the fixture variables before all tests
+  // Wir initialisieren die Fixture-Variablen vor allen Tests
   beforeAll(async () => {
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
     await Project.build()
@@ -167,11 +167,11 @@ describe('unit tests', () => {
     testTokenId = testContractId
     testContractAddress = addressFromContractId(testContractId)
     testParamsFixture = {
-      // a random address that the test contract resides in the tests
+      // Eine zufällige Adresse, an der der Testvertrag in den Tests vorhanden ist.
       address: testContractAddress,
-      // assets owned by the test contract before a test
+      // Vermögenswerte, die dem Testvertrag vor einem Test gehören.
       initialAsset: { alphAmount: 10n ** 18n, tokens: [{ id: testTokenId, amount: 10n }] },
-      // initial state of the test contract
+      // Anfangszustand des Testvertrags.
       initialFields: {
         symbol: Buffer.from('TF', 'utf8').toString('hex'),
         name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -179,13 +179,13 @@ describe('unit tests', () => {
         supply: 10n ** 18n,
         balance: 10n
       },
-      // arguments to test the target function of the test contract
+      // Argumente zum Testen der Ziel-Funktion des Testvertrags.
       testArgs: { amount: 1n },
       // assets owned by the caller of the function
       inputAssets: [{ address: testAddress, asset: { alphAmount: 10n ** 18n } }]
     }
   })
-  //See more test in `test/unit/token.test.ts`
+  // Weitere Tests finden Sie in `test/unit/token.test.ts`
 })
 ```
 
@@ -210,18 +210,18 @@ import { Deployer, DeployFunction, Network } from '@alephium/cli'
 import { Settings } from '../alephium.config'
 import { TokenFaucet } from '../artifacts/ts'
 
-// This deploy function will be called by cli deployment tool automatically
-// Note that deployment scripts should prefixed with numbers (starting from 0)
+// Diese Bereitstellungsfunktion wird automatisch vom CLI-Bereitstellungstool aufgerufen.
+// Beachten Sie, dass Bereitstellungsskripte mit Zahlen (beginnend ab 0) vorangestellt sein sollten.
 const deployFaucet: DeployFunction<Settings> = async (
   deployer: Deployer,
   network: Network<Settings>
 ): Promise<void> => {
-  // Get settings
+  // Einstellungen abrufen
   const issueTokenAmount = network.settings.issueTokenAmount
   const result = await deployer.deployContract(TokenFaucet, {
-    // The amount of token to be issued
+    // Die Menge der auszugebenden Token
     issueTokenAmount: issueTokenAmount,
-    // The initial states of the faucet contract
+    // Die Anfangszustände des Faucet-Vertrags
     initialFields: {
       symbol: Buffer.from('TF', 'utf8').toString('hex'),
       name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -262,22 +262,22 @@ import { TokenFaucet, Withdraw } from '../artifacts/ts'
 
 async function withdraw() {
   web3.setCurrentNodeProvider('http://127.0.0.1:22973')
-  // Compile the contracts of the project if they are not compiled
+  // Kompilieren Sie die Verträge des Projekts, wenn sie nicht kompiliert sind.
   Project.build()
 
-  // Attention: test wallet is used for demonstration purpose
+  // Achtung: Test-Wallet wird zu Demonstrationszwecken verwendet.
   const signer = await testNodeWallet()
 
   const deployments = await Deployments.load(configuration, 'devnet')
 
-  // The test wallet has four accounts with one in each address group
-  // The wallet calls withdraw function for all of the address groups
+  // Die Test-Wallet hat vier Konten, eins in jeder Adressengruppe.
+  // Die Brieftasche ruft die Abhebungsfunktion für alle Adressengruppen auf.
   for (const account of await signer.getAccounts()) {
-    // Set an active account to prepare and sign transactions
+    // Setzen Sie ein aktives Konto, um Transaktionen vorzubereiten und zu signieren.
     await signer.setSelectedAccount(account.address)
     const accountGroup = account.group
 
-    // Load the metadata of the deployed contract in the right group
+    // Laden Sie die Metadaten des bereitgestellten Vertrags in der richtigen Gruppe.
     const deployed = deployments.getDeployedContractResult(accountGroup, 'TokenFaucet')
     if (deployed === undefined) {
       console.log(`The contract is not deployed on group ${account.group}`)
@@ -286,14 +286,14 @@ async function withdraw() {
     const tokenId = deployed.contractInstance.contractId
     const tokenAddress = deployed.contractInstance.address
 
-    // Submit a transaction to use the transaction script
+    // Übermitteln Sie eine Transaktion, um das Transaktionsskript zu verwenden.
     await Withdraw.execute(signer, {
       initialFields: { token: tokenId, amount: 1n },
       attoAlphAmount: DUST_AMOUNT
     })
 
     const faucet = TokenFaucet.at(tokenAddress)
-    // Fetch the latest state of the token contract
+    // Holen Sie sich den neuesten Stand des Token-Vertrags.
     const state = await faucet.fetchState()
     console.log(JSON.stringify(state.fields, null, '  '))
   }

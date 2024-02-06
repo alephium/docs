@@ -48,7 +48,7 @@ Der Server gibt Ihnen 4 Adressen für den nächsten Schritt zurück:
 
 Nachdem Sie Ihre 4 Miner-Adressen erhalten haben, müssen Sie diese Ihrem Node zuweisen, damit Sie Belohnungen erhalten, wenn er mit dem Mining beginnt. Dies kann erreicht werden, indem Sie den folgenden Inhalt in die Datei `.alephium/user.conf` unter Ihrem Home-Verzeichnis hinzufügen[^1]:
 
-    alephium.network.external-address = "x.x.x.x:9973" // put your public IP here; otherwise remove this line
+    alephium.network.external-address = "x.x.x.x:9973" // Setzen Sie hier Ihre öffentliche IP-Adresse ein; andernfalls entfernen Sie diese Zeile.
     alephium.mining.miner-addresses = [
       "1HiYeRbypJQK4nc6EFYWiRVdsdYukQKq8SvKQsfJ3wiR8",
       "1HD3q1G7qVoeyNA4U6HbBhFvv1FLUWNGwNavPamScpVLa",

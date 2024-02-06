@@ -11,7 +11,7 @@ Dieses Design hat einige Vorteile im Vergleich zu anderen Blockchains:
 
 - Token-Transfers zwischen Benutzern erfordern nur UTXOs, die sich in der Praxis in Bezug 
   auf ihre Sicherheit bei der Verwaltung von Vermögenswerten bewährt haben.
-- Es ist einfacher für Wallets und dApps, die Tokens der Benutzer zu finden, 
+- Es ist einfacher für Wallets und DApps, die Tokens der Benutzer zu finden, 
   einschließlich sowohl fungibler als auch nicht fungibler Tokens.
 - Wenn Smart Contracts Tokens übertragen müssen, sind keine zusätzlichen Genehmigungstransaktionen 
   erforderlich, da die Genehmigung im UTXO-Modell implizit ist. Alephium nutzt sein einzigartiges 
@@ -25,7 +25,7 @@ Um die Arbeit mit Tokens im Alephium-Ökosystem zu erleichtern:
 - [Token standards](https://github.com/alephium/alephium-web3/tree/master/packages/web3/std)
   werden im SDK eingeführt, um standardisierte Schnittstellen für sowohl fungible als auch 
   nicht fungible Tokens zu definieren.
-- Im SDK werden Utility-Funktionen definiert, um häufige Aufgaben für dApps 
+- Im SDK werden Utility-Funktionen definiert, um häufige Aufgaben für DApps 
   und Wallets beim Umgang mit Tokens zu erleichtern, wie z. B. das Erraten 
   von Token-Typen und das Extrahieren von Token-Metadaten.
 - [Token list](https://github.com/alephium/token-list) wird verwendet, 

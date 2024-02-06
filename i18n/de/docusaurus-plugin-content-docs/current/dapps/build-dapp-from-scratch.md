@@ -64,17 +64,17 @@ Die letzte Methode ist der Ort, wo die Magie geschieht:
 ```rust
 @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
 pub fn withdraw(amount: U256) -> () {
-    // Debug events can be helpful for error analysis
+    // Debug-Ereignisse können bei der Fehleranalyse hilfreich sein.
     emit Debug(`The current balance is ${balance}`)
 
-    // Make sure the amount is valid
+    // Stellen Sie sicher, dass der Betrag gültig ist.
     assert!(amount <= 2, ErrorCodes.InvalidWithdrawAmount)
-    // Functions postfixed with `!` are built-in functions.
+    // Funktionen, die mit ! enden, sind integrierte Funktionen.
     transferTokenFromSelf!(callerAddress!(), selfTokenId!(), amount)
-    // Ralph does not allow underflow.
+    // Ralph erlaubt keine Unterdeckung (underflow).
     balance = balance - amount
 
-    // Emit the event defined earlier.
+    // Emitiere das zuvor definierte Ereignis.
     emit Withdraw(callerAddress!(), amount)
 }
 ```
@@ -96,7 +96,7 @@ export type Settings = {}
 const configuration: Configuration<Settings> = {
   networks: {
     devnet: {
-      //Make sure the two values match what's in your devnet configuration
+      // Stellen Sie sicher, dass die beiden Werte mit dem in Ihrer DevNet-Konfiguration übereinstimmen.
       nodeUrl: 'http://localhost:22973',
       networkId: 2
     }
@@ -147,17 +147,17 @@ import { TokenFaucet } from '../artifacts/ts'
 describe('unit tests', () => {
   it('Withdraws 1 token from TokenFaucet', async () => {
 
-    // Use the correct host and port
+    // Verwenden Sie den richtigen Host und Port.
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
     await Project.build()
 
     const testContractId = randomContractId()
     const testParams = {
-      // a random address that the test contract resides in the tests
+      // Eine zufällige Adresse, an der der Testvertrag in den Tests vorhanden ist.
       address: addressFromContractId(testContractId),
-      // assets owned by the test contract before a test
+      // Vermögenswerte, die dem Testvertrag vor einem Test gehören.
       initialAsset: { alphAmount: 10n ** 18n, tokens: [{ id: testContractId, amount: 10n }] },
-      // initial state of the test contract
+      // Anfangszustand des Testvertrags.
       initialFields: {
         symbol: Buffer.from('TF', 'utf8').toString('hex'),
         name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -165,9 +165,9 @@ describe('unit tests', () => {
         supply: 10n ** 18n,
         balance: 10n
       },
-      // arguments to test the target function of the test contract
+      // Argumente, um die Ziel-Funktion des Testvertrags zu testen.
       testArgs: { amount: 1n },
-      // assets owned by the caller of the function
+      // Vermögenswerte, die dem Aufrufer der Funktion gehören.
       inputAssets: [{ address: testAddress, asset: { alphAmount: 10n ** 18n } }]
     }
 
@@ -222,16 +222,16 @@ import { Deployer, DeployFunction, Network } from '@alephium/cli'
 import { Settings } from '../alephium.config'
 import { TokenFaucet } from '../artifacts/ts'
 
-// This deploy function will be called by cli deployment tool automatically
-// Note that deployment scripts should prefixed with numbers (starting from 0)
+// Diese Bereitstellungsfunktion wird automatisch vom CLI-Bereitstellungstool aufgerufen.
+// Beachten Sie, dass Bereitstellungsskripte mit Zahlen (beginnend bei 0) vorangestellt sein sollten.
 const deployFaucet: DeployFunction<Settings> = async (
   deployer: Deployer
 ): Promise<void> => {
   const issueTokenAmount = 100n
   const result = await deployer.deployContract(TokenFaucet, {
-    // The amount of token to be issued
+    // Die Menge der auszugebenden Token.
     issueTokenAmount: issueTokenAmount,
-    // The initial states of the faucet contract
+    // Die Anfangszustände des Faucet-Vertrags.
     initialFields: {
       symbol: Buffer.from('TF', 'utf8').toString('hex'),
       name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -278,7 +278,7 @@ const configuration: Configuration<void> = {
     devnet: {
       nodeUrl: 'http://localhost:22973',
       networkId: 2,
-      //The private key of my genesis address 132mqFF2BuxGigdaMTGSruuW29kmEs2eEGcpquG4YZRNh
+      // Der private Schlüssel meiner Genesis-Adresse lautet: 132mqFF2BuxGigdaMTGSruuW29kmEs2eEGcpquG4YZRNh
       privateKeys: ['672c8292041176c9056bb0dd1d91d34711ceed2493b5afc83f2012b27df2c559']
     }
   }
@@ -410,26 +410,26 @@ import { TokenFaucet, Withdraw } from '../artifacts/ts'
 
 async function withdraw() {
 
-  //Select our network defined in alephium.config.ts
+  // Wählen Sie unser im alephium.config.ts definiertes Netzwerk aus.
   const network = configuration.networks.devnet
 
-  //NodeProvider is an abstraction of a connection to the Alephium network
+  // Der NodeProvider ist eine Abstraktion einer Verbindung zum Alephium-Netzwerk.
   const nodeProvider = new NodeProvider(network.nodeUrl)
 
-  //Sometimes, it's convenient to setup a global NodeProvider for your project:
+  // Manchmal ist es bequem, einen globalen NodeProvider für Ihr Projekt einzurichten:
   web3.setCurrentNodeProvider(nodeProvider)
 
-  //Connect our wallet, typically in a real application you would connect your web-extension or desktop wallet
+  // Verbinden Sie unsere Brieftasche, in einer echten Anwendung würden Sie in der Regel Ihre Web-Erweiterung oder Desktop-Wallet verbinden.
   const wallet = new PrivateKeyWallet({privateKey: '672c8292041176c9056bb0dd1d91d34711ceed2493b5afc83f2012b27df2c559' })
 
-  // Compile the contracts of the project if they are not compiled
+  // Kompilieren Sie die Verträge des Projekts, wenn sie nicht kompiliert sind.
   Project.build()
 
-  //.deployments contains the info of our `TokenFaucet` deployement, as we need to now the contractId and address
-  //This was auto-generated with the `cli deploy` of our `scripts/0_deploy_faucet.ts`
+  // Bereitstellungen enthalten Informationen zu unserer TokenFaucet-Bereitstellung, da wir die Contract-ID und Adresse benötigen.
+  // Dies wurde automatisch mit dem cli deploy unseres scripts/0_deploy_faucet.ts generiert.
   const deployments = await Deployments.from('.deployments.devnet.json')
 
-  //Make sure it match your address group
+  // Stellen Sie sicher, dass es mit Ihrer Adressgruppe übereinstimmt.
   const accountGroup = 1
 
   const deployed = deployments.getDeployedContractResult(accountGroup, 'TokenFaucet')
@@ -438,19 +438,19 @@ async function withdraw() {
     const tokenId = deployed.contractInstance.contractId
     const tokenAddress = deployed.contractInstance.address
 
-    // Submit a transaction to use the transaction script
-    // It uses our `wallet` to sing the transaction.
+    // Senden Sie eine Transaktion ab, um das Transaktionsskript zu verwenden.
+    // Es verwendet unsere Brieftasche, um die Transaktion zu signieren.
     await Withdraw.execute(wallet, {
       initialFields: { token: tokenId, amount: 1n },
       attoAlphAmount: DUST_AMOUNT
     })
 
-    // Fetch the latest state of the token contract, `mut balance` should have change
+    // Holen Sie sich den neuesten Stand des Token-Vertrags, mut balance sollte sich geändert haben.
     const faucet = TokenFaucet.at(tokenAddress)
     const state = await faucet.fetchState()
     console.log(state.fields)
 
-    // Fetch wallet balance see if token is there
+    // Holen Sie sich das Brieftaschenguthaben, um zu sehen, ob das Token vorhanden ist.
     const balance = await wallet.nodeProvider.addresses.getAddressesAddressBalance(wallet.account.address)
     console.log(balance)
   } else {
@@ -458,7 +458,7 @@ async function withdraw() {
   }
 }
 
-// Let's perform one withdraw
+// Führen wir eine Abhebung durch.
 withdraw()
 ```
 
@@ -494,7 +494,7 @@ const configuration: Configuration<Settings> = {
   networks: {
     devnet: {
       nodeUrl: 'http://localhost:22973',
-      networkId: 2, //Use the same as in your devnet configuration
+      networkId: 2, // Verwenden Sie dasselbe wie in Ihrer DevNet-Konfiguration.
       privateKeys: ['672c8292041176c9056bb0dd1d91d34711ceed2493b5afc83f2012b27df2c559'],
       settings: {}
     },

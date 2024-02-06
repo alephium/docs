@@ -111,9 +111,9 @@ Wenn ein Benutzer eine Transaktion durchführt, können Sie das Guthaben des Ben
 Hier ist ein einfaches Beispiel:
 
 ```typescript
-// The useBalance hook returns two values:
-// 1. balance: the current balance
-// 2. updateBalanceForTx: used to update the balance when the user makes a transaction.
+// Das `useBalance-Hook` gibt zwei Werte zurück:
+// 1. balance: der aktuelle Kontostand
+// 2. updateBalanceForTx: wird verwendet, um den Kontostand zu aktualisieren, wenn der Benutzer eine Transaktion durchführt.
 const { balance, updateBalanceForTx } = useBalance()
 
 const withdrawCallback = useCallback(async () => {

@@ -36,7 +36,7 @@ Für GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1
 
 Nun können Sie Swagger UI verwenden, als ob kein API-Schlüssel vorhanden wäre.
 
-## Wie mache ich die API meines Full Node öffentlich zugänglich?
+## Wie mache ich die API meiner Full Node öffentlich zugänglich?
 
 1. Richten Sie Ihren API-Schlüssel gemäß der oben stehenden Anleitung ordnungsgemäß ein.
 
@@ -69,12 +69,12 @@ Um das Problem zu beheben:
 
 Viele Benutzer bevorzugen es, den Alephium-Datenordner auf einer anderen Festplatte als der primären Startfestplatte zu speichern. Hierzu können Sie die Umgebungsvariable `ALEPHIUM_HOME` im Alephium-Full-Node-Jar nutzen:
 
-1. Stoppen Sie das Alephium-Full-Node-Jar
+1. Stoppen Sie die Alephium Full Node-Jar
 2. Verschieben Sie den Alephium-Datenordner (normalerweise unter `%userprofile%\.alephium` für Windows oder `~/.alephium` für Linux und macOS) an den neuen Speicherort
 3. Fügen Sie eine Umgebungsvariable `ALEPHIUM_HOME` auf Systemebene hinzu, die auf den neuen Speicherort verweist. Dies können Sie entweder auf Systemebene durchführen oder einfach eine Batch-Datei erstellen, die die Variable vor dem Starten des Alephium-Jars festlegt.
 4. Starten Sie den Alephium-Node neu
 
-Wenn Sie den Docker-Full-Node verwenden, passen Sie einfach die Definitionen der eingebundenen Ordner in der Docker-Datei an, um auf das neue Verzeichnis zu zeigen, und starten Sie dann den Node neu.
+Wenn Sie den Docker - Full Node verwenden, passen Sie einfach die Definitionen der eingebundenen Ordner in der Docker-Datei an, um auf das neue Verzeichnis zu zeigen, und starten Sie dann den Node neu.
 
 ## Anpassen des Protokolls
 
@@ -107,4 +107,4 @@ Hier sind die Schritte des Prunings des Alephium Full Nodes:
 3. Wenn Sie das Standard-Alephium-Verzeichnis geändert haben, setzen Sie die Umgebungsvariable `ALEPHIUM_HOME`
 4. Führen Sie den folgenden Befehl aus:  `java -cp alephium-tools-2.6.1.jar org.alephium.tools.PruneStorage` um mit dem Beschneiden zu beginnen.
 5. Warten Sie, bis der Befehl abgeschlossen ist. Der Festplattenspeicher sollte auf etwa 20 GB reduziert sein.
-6. Starten Sie den Alephium-Full-Node neu.
+6. Starten Sie den Alephium Full Node neu.

@@ -45,7 +45,7 @@ users:
     plain_text_passwd: installfest2021
     lock_passwd: false
     chpasswd: { expire: false }
-#    ssh_authorized_keys: # Optionally ad ssh key here, if you don't want the password.
+#    ssh_authorized_keys: # Optional hier den SSH-Schlüssel hinzufügen, wenn Sie das Passwort nicht verwenden möchten.
 #      - ssh-ed25519 xxxxxxxxxxxxxxxxxx
 
 packages:
