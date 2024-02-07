@@ -13,7 +13,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 **Skalierbar für Entwickler. Sicher für Benutzer. Dezentralisiert für alle.**
 
-Innovatives Sharding trifft auf expressive sUTXO und effizientes Proof-of-Less-Work, um skalierbare dApps für den realen Einsatz zu sichern.
+Innovatives Sharding trifft auf expressive sUTXO und effizientes Proof-of-Less-Work, um skalierbare DApps für den realen Einsatz zu sichern.
 
 ---
 
@@ -27,11 +27,11 @@ Neben einem beeindruckenden Team, einer herausragenden Gemeinschaft und viel Ene
 
 **Es ist weniger energieintensiv dank POLW.** Proof of Less Work kombiniert physische Arbeit und Coin-Ökonomie, um die erforderliche Arbeit für das Minen neuer Blöcke dynamisch anzupassen. Unter gleichen Netzwerkbedingungen verwendet Alephium nur ⅛ der Energie im Vergleich zu Bitcoin.
 
-**Es verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred).** Es löst viele der kritischen Probleme der aktuellen dApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
+**Es verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred).** Es löst viele der kritischen Probleme der aktuellen DApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
 
 **Es verfügt über eine eigene Programmiersprache für dApps.** Ralph ähnelt der Rust-Syntax, daher sein Name. Es ermöglicht das einfachere Erstellen effizienter und sicherer Smart Contracts im Vergleich zu Solidity. Es ist speziell darauf ausgerichtet, die Erstellung von dezentralen Finanzanwendungen zu erleichtern!
 
-Durch die Kombination all dieser Innovationen bietet Alephium eine stark nachgefragte Lösung in der Branche: eine skalierbare Blockchain, die auf bewährten Ideen von Bitcoin aufbaut, um zuverlässige, leistungsstarke und sichere DeFi- und dApps-Funktionen zu liefern. Und wir sind live!
+Durch die Kombination all dieser Innovationen bietet Alephium eine stark nachgefragte Lösung in der Branche: eine skalierbare Blockchain, die auf bewährten Ideen von Bitcoin aufbaut, um zuverlässige, leistungsstarke und sichere DeFi- und DApps-Funktionen zu liefern. Und wir sind live!
 
 **Schauen Sie sich unsere [Whitepapers][whitepaper] an!**
 
@@ -57,7 +57,7 @@ Zusätzlich werden die Hälfte der Transaktionsgebühren mit jedem Block verbran
 Das Gesamtangebot wird berechnet, indem die Tokens, die beim Genesis-Block abgebaut wurden (siehe Aufschlüsselung oben), und die Blockbelohnungen seit dem Mainnet-Launch addiert werden.
 
 Alephium verwendet die CMC-Methode, um das Umlaufangebot von ALPH zu berechnen. Dieses besteht aus: der Gesamtanzahl der vorhandenen ALPH, von der der Saldo (gesperrt & nicht gesperrt) der Privatverkaufsinvestoren, den Finanzressourcen, des Ökosystems, der Berater/Auftragnehmer, der projektgesteuerten Vermögenswerte und aller gesperrten ALPH von anderen Adressen abgezogen wird.
-Im Allgemeinen finden Sie unser Umlaufangebot auf der Startseite unseres [Explorers](https://explorer.alephium.org/#/blocks). Wenn Sie eine detailliertere Erklärung der Coinmarketcap-Methodik wünschen, finden Sie diese [hier.](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-)
+Im Allgemeinen finden Sie unser Umlaufangebot auf der Startseite unseres [Explorers](https://explorer.alephium.org/). Wenn Sie eine detailliertere Erklärung der Coinmarketcap-Methodik wünschen, finden Sie diese [hier.](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-)
 
 Wenn Sie die Endpunkte benötigen, finden Sie diese hier: [Gesamtangebot](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Umlaufangebot](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserviertes Angebot](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Gesperrte ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
 
