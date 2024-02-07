@@ -76,9 +76,9 @@ Die [DEX Contracts](https://github.com/alephium/alephium-dex/tree/master/contrac
 Die meisten bisher auf Alephium erstellten Projekte sind im [Awesome Alephium Repository](https://github.com/alephium/awesome-alephium) aufgeführt. Um Ihren Beitrag hinzuzufügen, reichen Sie einen Pull Request ein!
 
 Alephium befindet sich noch in einem sehr frühen Stadium, die Infrastruktur (einschließlich einer [Bridge](https://github.com/alephium/wormhole-fork)) und die Dokumentation zur Erleichterung der Entwicklung von DApps werden kontinuierlich verbessert.
-Alephium verfügt über eine Reihe [gut gepflegter Prototypen](https://docs.alephium.org/dapps/ecosystem#prototypes) die als Grundlage oder Inspiration für Ihr Projekt dienen können.
+Alephium verfügt über eine Reihe [gut gepflegter Prototypen](dapps/ecosystem#prototypes) die als Grundlage oder Inspiration für Ihr Projekt dienen können.
 
-Wenn Sie eine DApp erstellen möchten, werfen Sie einen Blick auf unseren [Leitfaden zum Einstieg in DApps](https://docs.alephium.org/dapps/getting-started).
+Wenn Sie eine DApp erstellen möchten, werfen Sie einen Blick auf unseren [Leitfaden zum Einstieg in DApps](dapps/getting-started).
 
 ### Warum kann sich eine DApp nur mit einer meiner Adressen verbinden?
 
@@ -92,7 +92,7 @@ Beachten Sie, dass dieses Problem die Verwendung von DApps betrifft. Normale Tra
 
 ### Wo finde ich die Roadmap?
 
-Die Roadmap finden sie auf unserer [Webseite](https://alephium.org/#next) und in der [Dokumentation](https://docs.alephium.org/#roadmap).  Sie können auch die wöchentlichen Entwicklungsaktualisierungen auf [Discord](https://alephium.org/discord), [Twitter](https://twitter.com/alephium) oder auf [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) verfolgen..
+Die Roadmap finden sie auf unserer [Webseite](https://alephium.org/#next) und in der [Dokumentation](#roadmap).  Sie können auch die wöchentlichen Entwicklungsaktualisierungen auf [Discord](https://alephium.org/discord), [Twitter](https://twitter.com/alephium) oder auf [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1) verfolgen..
 
 ### Wo kann ich den Status der von Alephium öffentlich betriebenen Dienste überwachen?
 
@@ -103,7 +103,7 @@ Sie können den öffentlichen Dienst von Alephium überwachen für:
 
 ### Wo kann ich eine API abfragen?
 
-Um eine API abzufragen, müssen Sie einen Full Node (vollständigen Knoten) ausführen ([Anleitung](https://wiki.alephium.org/full-node/getting-started)).  
+Um eine API abzufragen, müssen Sie einen Full Node (vollständigen Knoten) ausführen ([Anleitung](full-node/getting-started)).  
 Alephium verwendet OpenAPI, um mit Full Nodes zu interagieren. Sie können direkt Ihr lokales Swagger UI über `127.0.0.1:12973/docs` öffnen, sobald Ihre Full Node ausgeführt wird. 
 Alternativ ist es möglich jeden OpenAPI-Client zu verwenden, um die [openapi.json](https://raw.githubusercontent.com/alephium/alephium/master/api/src/main/resources/openapi.json) aus dem Repository von Alephium zu importieren.
 
@@ -123,7 +123,7 @@ Alephium verwendet einen Proof-of-(Less)-Work-Konsensmechanismus, was bedeutet, 
 
 ### Was benötige ich, um einen Full Node auszuführen?
 
-Ein Full Node von Alephium ist leichtgewichtig und kann auf den meisten Geräten laufen, einschließlich eines Raspberry Pi oder sogar auf einem Smartphone. Um Ihren eigenen Node einzurichten und auszuführen, folgen Sie bitte dem [Leitfaden zum Einstieg des Betriebs eines Full Node](https://docs.alephium.org/full-node/getting-started/).
+Ein Full Node von Alephium ist leichtgewichtig und kann auf den meisten Geräten laufen, einschließlich eines Raspberry Pi oder sogar auf einem Smartphone. Um Ihren eigenen Node einzurichten und auszuführen, folgen Sie bitte dem [Leitfaden zum Einstieg des Betriebs eines Full Node](full-node/getting-started/).
 
 ### Ist es möglich, auf Alephium zu staken?
 

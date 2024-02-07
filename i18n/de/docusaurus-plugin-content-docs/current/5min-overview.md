@@ -19,21 +19,21 @@ Innovatives Sharding trifft auf expressive sUTXO und effizientes Proof-of-Less-W
 
 ## Warum ist Alephium besonders?
 
-Neben einem beeindruckenden Team, einer herausragenden Gemeinschaft und viel Energie zeichnen uns folgende technische Besonderheiten aus:
+Neben einem beeindruckenden Team, einer herausragenden Gemeinschaft und viel Energie zeichnen Alephium folgende technische Besonderheiten aus:
 
-**Es skaliert durch Sharding.** Alephium basiert auf einem neuartigen und umfassenden Sharding-Algorithmus namens BlockFlow. Dieser verbessert das UTXO-Modell von BTC, um es skalierbar zu machen, und verwendet die DAG-Datenstruktur, um Konsens zwischen verschiedenen Shards zu erreichen. Dies ermöglicht bis zu 10.000 Transaktionen pro Sekunde (derzeit mehr als 400 TPS im Vergleich zu Bitcoins 7 TPS).
+**Skaliert durch Sharding.** Alephium basiert auf einem neuartigen und umfassenden Sharding-Algorithmus namens BlockFlow. Dieser verbessert das UTXO-Modell von BTC, um es skalierbar zu machen, und verwendet die DAG-Datenstruktur, um Konsens zwischen verschiedenen Shards zu erreichen. Dies ermöglicht bis zu 10.000 Transaktionen pro Sekunde (derzeit mehr als 400 TPS im Vergleich zu Bitcoins 7 TPS).
 
-**Es ist programmierbar und sicher.** Alephium bietet ein zustandsbehaftetes UTXO-Modell, das Layer-1-Skalierbarkeit und das gleiche Maß an Programmierbarkeit wie das auf ETH implementierte Account-Modell verwendet, während es gleichzeitig sicherer ist.
+**Programmierbar und Sicher.** Alephium bietet ein zustandsbehaftetes UTXO-Modell, das Layer-1-Skalierbarkeit und das gleiche Maß an Programmierbarkeit wie das auf ETH implementierte Account-Modell verwendet, während es gleichzeitig sicherer ist.
 
-**Es ist weniger energieintensiv dank POLW.** Proof of Less Work kombiniert physische Arbeit und Coin-Ökonomie, um die erforderliche Arbeit für das Minen neuer Blöcke dynamisch anzupassen. Unter gleichen Netzwerkbedingungen verwendet Alephium nur ⅛ der Energie im Vergleich zu Bitcoin.
+**Weniger energieintensiv dank POLW.** Proof of Less Work kombiniert physische Arbeit und Coin-Ökonomie, um die erforderliche Arbeit für das Minen neuer Blöcke dynamisch anzupassen. Unter gleichen Netzwerkbedingungen verwendet Alephium nur ⅛ der Energie im Vergleich zu Bitcoin.
 
-**Es verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred).** Es löst viele der kritischen Probleme der aktuellen DApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
+**Verbessert die On-Chain-Struktur mit seiner eigenen benutzerdefinierten VM (Alphred).** Es löst viele der kritischen Probleme der aktuellen DApps-Plattformen mit erheblichen Verbesserungen bei Sicherheit, Entwicklungserfahrung und der Einführung neuer Paradigmen wie trustless P2P Smart Contracts Transaktionen.
 
-**Es verfügt über eine eigene Programmiersprache für dApps.** Ralph ähnelt der Rust-Syntax, daher sein Name. Es ermöglicht das einfachere Erstellen effizienter und sicherer Smart Contracts im Vergleich zu Solidity. Es ist speziell darauf ausgerichtet, die Erstellung von dezentralen Finanzanwendungen zu erleichtern!
+**Verfügt über eine eigene Programmiersprache für DApps.** Ralph ähnelt der Rust-Syntax, daher sein Name. Es ermöglicht das einfachere Erstellen effizienter und sicherer Smart Contracts im Vergleich zu Solidity. Es ist speziell darauf ausgerichtet, die Erstellung von dezentralen Finanzanwendungen zu erleichtern!
 
 Durch die Kombination all dieser Innovationen bietet Alephium eine stark nachgefragte Lösung in der Branche: eine skalierbare Blockchain, die auf bewährten Ideen von Bitcoin aufbaut, um zuverlässige, leistungsstarke und sichere DeFi- und DApps-Funktionen zu liefern. Und wir sind live!
 
-**Schauen Sie sich unsere [Whitepapers][whitepaper] an!**
+**Schehen Sie sich unsere [Whitepapers][whitepaper] an!**
 
 ---
 
@@ -67,9 +67,9 @@ Wenn Sie die Endpunkte benötigen, finden Sie diese hier: [Gesamtangebot](https:
 
 ## Wenn Sie Entwickler sind, starten Sie hier
 
-Finden Sie unsere neuestes [Node-Release auf GitHub][node-release].
+Sie finden unser neuestes Node-Release auf [GitHub][node-release].
 
-Entdecken Sie und tragen Sie zu unseren Hauptprojekten [auf GitHub][github] bei:
+Entdecken und tragen Sie zu unseren Hauptprojekten [auf GitHub][github] bei:
 
 - [Full Node][full-node]
 - [Desktop Wallet][desktop-wallet]
@@ -84,7 +84,7 @@ Entdecken Sie und tragen Sie zu unseren Hauptprojekten [auf GitHub][github] bei:
 
 ### Etwas auf Alephium entwickeln?
 
-Beginne mit dem [Web3 SDK][web3-sdk], und wenn du eine dApp erstellen möchtest, schau [hier](./dapps/Getting-Started) vorbei. 
+Beginne mit dem [Web3 SDK][web3-sdk], und wenn du eine DApp erstellen möchtest, schau [hier](./dapps/Getting-Started) vorbei. 
 Sobald Ihr Projekt veröffentlicht ist, informieren Sie alle, indem Sie einen Pull Request (PR) senden, um Ihr Projekt zu [Awesome Alephium][awesome]!
 Die Alephium [Markenrichtlinie][brand-guide] könnte ebenfalls nützlich sein.
 
@@ -92,11 +92,11 @@ Die Alephium [Markenrichtlinie][brand-guide] könnte ebenfalls nützlich sein.
 
 ## Wenn du Miner bist, starte hier
 
-Beginne, indem du dem dedizierten [Mining Kanal auf Discord][mining-discord] beitrittst.
+Beginnen Sie, indem Sie dem dedizierten [Mining Kanal auf Discord][mining-discord] beitreten.
 
-Finde unser [Miner Starter Packet auf Github][miner-starter-pack].
+Sie finden unser Miner Starter Packet [auf Github][miner-starter-pack].
 
-und den spezifischen Repos:
+und spezifische Repos:
 
 - https://github.com/alephium/gpu-miner
 - https://github.com/alephium/fpga-miner
@@ -104,7 +104,7 @@ und den spezifischen Repos:
 
 Hier ist ein Video über [Wie starte ich mit dem Solo Mining][solo-mining-video].
 
-Und wenn du lieber einem Pool beitreten möchtest, findest du eine Liste der verfügbaren Pools im [Pool Mining Guide](./mining/pool-mining-guide).
+Und wenn Sie lieber einem Pool beitreten möchten, finden Sie eine Liste der verfügbaren Pools im [Pool Mining Guide](./mining/pool-mining-guide).
 
 ---
 
@@ -118,7 +118,7 @@ Und wenn du lieber einem Pool beitreten möchtest, findest du eine Liste der ver
 
 ## [Kaufen/Verkaufen][markets]
 
-⚠️ Einige Handelspaare verfügen über eine geringe Liquidität. Überprüfen Sie immer die Liquidität, bevor Sie einen Handelsplatz auswählen oder ein Asset überbrücken.
+⚠️ Einige Handelspaare verfügen über eine geringere Liquidität. Überprüfen Sie immer die Liquidität, bevor Sie einen Handelsplatz auswählen oder ein Asset überbrücken.
 
 ---
 

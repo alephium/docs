@@ -270,8 +270,8 @@ async function withdraw() {
 
   const deployments = await Deployments.load(configuration, 'devnet')
 
-  // Die Test-Wallet hat vier Konten, eins in jeder Adressengruppe.
-  // Die Brieftasche ruft die Abhebungsfunktion für alle Adressengruppen auf.
+  // Die Test-Wallet hat vier Konten, eines in jeder Adressengruppe.
+  // Die Wallet ruft die Abhebungsfunktion für alle Adressengruppen auf.
   for (const account of await signer.getAccounts()) {
     // Setzen Sie ein aktives Konto, um Transaktionen vorzubereiten und zu signieren.
     await signer.setSelectedAccount(account.address)
