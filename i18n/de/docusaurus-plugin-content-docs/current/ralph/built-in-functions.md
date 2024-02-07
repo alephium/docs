@@ -1271,7 +1271,7 @@ Berechnet den **Blake2b-256-Hash** der Eingabe.
 
 > @param **data** *die zu hashenden Eingabedaten*
 >
-> @returns *das 32-Byte-Hashergebnis*
+> @returns *das 32-bytes-Hashergebnis*
 
 ---
 
