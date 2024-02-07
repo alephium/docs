@@ -20,7 +20,7 @@ Die Built-in Functions (integrierten Funktionen) sind in mehrere Kategorien unte
 Alle Built-in Functions haben das Suffix `!`.
 Alle Byte-Codierungen verwenden die Byte-Reihenfolge Big Endian.
 
-## Vertragsfunktionen
+## Contract Functions
 ---
 ### createContract
 

@@ -100,7 +100,7 @@ Contract TokenFaucet(
     }
 
     // Eine öffentliche Funktion, die Token an jeden überträgt, der sie aufruft.
-    // Die Funktion ist mit `updateFields = true annotiert`, da sie die Vertragsfelder ändert.
+    // Die Funktion ist mit `updateFields = true` annotiert, da sie die Vertragsfelder ändert.
     // Die Funktion ist als Verwendung von Vertragsvermögenswerten annotiert.
     @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
     pub fn withdraw(amount: U256) -> () {
@@ -111,7 +111,7 @@ Contract TokenFaucet(
         assert!(amount <= 2, ErrorCodes.InvalidWithdrawAmount)
         // Funktionen, die mit ! enden, sind integrierte Funktionen.
         transferTokenFromSelf!(callerAddress!(), selfTokenId!(), amount)
-        // Ralph erlaubt keine Unterdeckung.
+        // Ralph erlaubt keine Unterlauf.
         balance = balance - amount
 
         // Lösen Sie das zuvor definierte Ereignis aus.
@@ -141,7 +141,7 @@ npx @alephium/cli@latest compile
 
 Die kompilierten Artefakte befinden sich nun im Verzeichnis `artifacts`.
 
-Dieser Befehl generiert auch TypeScript-Code basierend auf den kompilierten Artefakten. Der generierte TypeScript-Code befindet sich im Verzeichnis  `artifacts/ts`. Sie können mit dem generierten TypeScript-Code einfacher mit der Alephium-Blockchain interagieren.
+Dieser Befehl generiert auch TypeScript-Code basierend auf den kompilierten Artefakten. Der generierte TypeScript-Code befindet sich im Verzeichnis `artifacts/ts`. Sie können mit dem generierten TypeScript-Code einfacher mit der Alephium-Blockchain interagieren.
 
 ## Testen Sie ihren Smart Contract
 
@@ -243,7 +243,7 @@ Führen Sie die Bereitstellung aus mit:
 npx @alephium/cli@latest deploy
 ```
 
-Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Smart Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren Sie Ihre  `alephium.config.ts` und verwenden Sie anschließend folgende Option `--network`:
+Dies wird den Token-Faucet in Gruppe 0 des Devnet bereitstellen. Um den Smart Contract auf dem Testnet (oder einem anderen Netzwerk) bereitzustellen, aktualisieren Sie Ihre `alephium.config.ts` und verwenden Sie anschließend folgende Option `--network`:
 
 ```
 npx @alephium/cli@latest deploy --network testnet
