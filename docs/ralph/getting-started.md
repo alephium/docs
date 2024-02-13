@@ -69,6 +69,17 @@ let c = #
 let a = @1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH
 ```
 
+#### String
+
+Ralph does not have a native type for strings, but you can define string literals which is encoded in `ByteVec`.
+
+```rust
+// String literals starts with `b`.
+let a = b`Hello`
+let b = b`World`
+let c = a ++ b` ` ++ c
+```
+
 ### Fixed Size Array
 
 The syntax for fixed-size arrays is influenced by Rust.
