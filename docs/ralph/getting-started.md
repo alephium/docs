@@ -574,13 +574,13 @@ Contract Foo(barTemplateId: ByteVec) {
 
   @using(preapprovedAssets = true, checkExternalCaller = false)
   pub fn set(caller: Address, key: U256, value: U256) -> () {
-    let path = u256To8Bytes!(key)
-    let (encodedImmFields, encodedMutFields) = Foo.encodeFields!(value) // Contract `Bar` has only one field
+    let path = toByteVec!(key)
+    let (encodedImmFields, encodedMutFields) = Bar.encodeFields!(value) // Contract `Bar` has only one field
     // Create a sub contract from the given key and value.
     // The sub contract id is `blake2b(blake2b(selfContractId!() ++ path))`.
     // It will fail if the sub contract already exists.
-    let contractId = copyCreateSubContract!{caller -> 1 alph}(
-      u256To8Bytes!(path),
+    let contractId = copyCreateSubContract!{caller -> ALPH: 1 alph}(
+      path,
       barTemplateId,
       encodedImmFields,
       encodedMutFields
@@ -589,7 +589,7 @@ Contract Foo(barTemplateId: ByteVec) {
   }
 
   pub fn get(key: U256) -> U256 {
-    let path = u256To8Bytes(key)
+    let path = toByteVec!(key)
     // Get the sub contract id by the `subContractId!` built-in function
     let contractId =  subContractId!(path)
     return Bar(contractId).getValue()
