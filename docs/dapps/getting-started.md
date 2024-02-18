@@ -51,9 +51,11 @@ Next, change the workspace to the tutorial project:
 cd alephium-tutorial
 ```
 
-Have a look in the `contracts/` folder, you can find `token.ral`:
+Have a look in the `contracts/` folder, you can find `token.ral` and `withdraw.ral`:
 
-<details><p>
+<details>
+<summary>token.ral</summary>
+<p>
 
 ```rust
 import "std/fungible_token_interface"
@@ -128,9 +130,9 @@ Contract TokenFaucet(
 
 </p></details>
 
-and `withdraw.ral` :
-
-<details><p>
+<details>
+<summary>withdraw.ral</summary>
+<p>
 
 ```rust
 // Defines a transaction script.
@@ -159,7 +161,9 @@ This command also generates typescript code based on the compiled artifacts. The
 
 The sample project comes with tests `test/unit/token.test.ts` for your contract:
 
-<details><p>
+<details>
+<summary>token.test.ts</summary>
+<p>
 
 ```typescript
 import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
@@ -221,7 +225,9 @@ npx @alephium/cli@latest test
 
 Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
 
-<details><p>
+<details>
+<summary>0_deploy_faucet.ts</summary>
+<p>
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
@@ -273,7 +279,9 @@ npx @alephium/cli@latest deploy --network testnet
 
 Now, you can build the source code `src/token.ts` :
 
-<details><p>
+<details>
+<summary>token.ts</summary>
+<p>
 
 ```typescript
 import { Deployments } from '@alephium/cli'
