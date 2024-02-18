@@ -13,7 +13,7 @@ This document aims to make it easier for mining pools and miners to integrate al
 * the communication protocol between the mining pool and the full node
 * how the miner calculates the block hash based on the mining jobs
 
-Regarding the implementation of the communication protocol between mining pool and miners, you can refer to the stratum protocol [here](alephium-stratum.md). Note that mining pools does not follow exactly the protocol.
+Regarding the implementation of the communication protocol between mining pool and miners, you can refer to the stratum protocol [here](/mining/alephium-stratum.md). Note that mining pools does not follow exactly the protocol.
 
 In this document I will use the code of [mining-pool](https://github.com/alephium/mining-pool) and [gpu-miner](https://github.com/alephium/gpu-miner) as a reference.
 
