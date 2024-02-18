@@ -21,6 +21,10 @@ Prerequisites:
 - [nodejs](https://nodejs.org/en/) version >= 16 installed
 - `npm` version >= 8 installed
 
+:::info
+If you experience slowness with `npm` and `npx`, consider give `bun` and `bunx` a try.
+:::
+
 ## Create a new dApp project
 
 To create the tutorial project, open a new terminal and run:
@@ -48,6 +52,8 @@ cd alephium-tutorial
 ```
 
 Have a look in the `contracts/` folder, you can find `token.ral`:
+
+<details><p>
 
 ```rust
 import "std/fungible_token_interface"
@@ -120,7 +126,11 @@ Contract TokenFaucet(
 }
 ```
 
+</p></details>
+
 and `withdraw.ral` :
+
+<details><p>
 
 ```rust
 // Defines a transaction script.
@@ -132,6 +142,8 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
     token.withdraw(amount)
 }
 ```
+
+</p></details>
 
  To compile your contracts, run:
 
@@ -146,6 +158,8 @@ This command also generates typescript code based on the compiled artifacts. The
 ## Test your contract
 
 The sample project comes with tests `test/unit/token.test.ts` for your contract:
+
+<details><p>
 
 ```typescript
 import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
@@ -189,6 +203,8 @@ describe('unit tests', () => {
 })
 ```
 
+</p></details>
+
 You can run them with:
 
 ```
@@ -204,6 +220,8 @@ npx @alephium/cli@latest test
 ## Deploy your contract
 
 Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
+
+<details><p>
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
@@ -237,6 +255,8 @@ const deployFaucet: DeployFunction<Settings> = async (
 export default deployFaucet
 ```
 
+</p></details>
+
 You can run it using:
 
 ```
@@ -252,6 +272,8 @@ npx @alephium/cli@latest deploy --network testnet
 ## Interact with the deployed contract
 
 Now, you can build the source code `src/token.ts` :
+
+<details><p>
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -302,6 +324,8 @@ async function withdraw() {
 withdraw()
 
 ```
+
+</p></details>
 
 Simply run:
 
