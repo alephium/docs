@@ -1,7 +1,7 @@
 ---
 sidebar_position: 50
-title: Integration
-sidebar_label: Integration
+title: Mining
+sidebar_label: Mining
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
