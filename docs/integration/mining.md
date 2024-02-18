@@ -1,7 +1,7 @@
 ---
 sidebar_position: 50
-title: Integration
-sidebar_label: Integration
+title: Mining
+sidebar_label: Mining
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -13,7 +13,7 @@ This document aims to make it easier for mining pools and miners to integrate al
 * the communication protocol between the mining pool and the full node
 * how the miner calculates the block hash based on the mining jobs
 
-Regarding the implementation of the communication protocol between mining pool and miners, you can refer to the stratum protocol [here](alephium-stratum.md). Note that mining pools does not follow exactly the protocol.
+Regarding the implementation of the communication protocol between mining pool and miners, you can refer to the stratum protocol [here](/mining/alephium-stratum.md). Note that mining pools does not follow exactly the protocol.
 
 In this document I will use the code of [mining-pool](https://github.com/alephium/mining-pool) and [gpu-miner](https://github.com/alephium/gpu-miner) as a reference.
 
@@ -60,3 +60,50 @@ In alephium, the size of the `nonce` is 24 bytes, and the hash of the block is: 
 ### Checking the ChainIndex
 
 In addition to checking the target, the miner also needs to check the chain index of the block as alephium encodes the chain index into the block hash. You can refer to the code provided [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) to check whether the chain index of the block hash is correct.
+
+## UTXO Management
+
+Due to the limited number of inputs that can be included in each transaction, withdrawals may fail if miner's wallet is filled with small UTXOs. In practice, some miners tend to send mining rewards directly to exchange addresses. If that is the case please follow the guide [here](/integration/exchange#utxo-management).
+
+If node wallet is used for mining, here are the simpler and more efficient ways to consolidate the UTXOs.
+
+### Consolidate UTXOs for the active address
+
+```shell
+# Consolidate UTXOs for the active address
+curl -X 'POST' \
+  'http://127.0.0.1:22973/wallets/my-wallet/sweep-active-address' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "toAddress": "1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3"
+}'
+```
+
+Note that this will only consolidate the UTXOs for the active address. To consolidate UTXOs for other addresses, we need to update each of them as active address and run the same command above. 
+
+```shell
+# Change active address
+curl -X 'POST' \
+  'http://127.0.0.1:22973/wallets/my-wallet/change-active-address' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "address": "1AujpupFP4KWeZvqA7itsHY9cLJmx4qTzojVZrg8W9y"
+}'
+```
+
+### Consolidate UTXOs for the all addresses
+
+The simplest way to consolidate UTXOs for all the addresses in the node wallet is to use the `sweep-all-addresses` endpoint:
+
+```shell
+# Consolidate UTXOs for all addresses
+curl -X 'POST' \
+  'http://127.0.0.1:22973/wallets/my-wallet/sweep-all-addresses \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "toAddress": "1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3"
+}'
+```
