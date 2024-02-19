@@ -253,6 +253,8 @@ Feb/24 💜 x 30'000 Twitter Followers - https://vxtwitter.com/alephium/status/1
 
 Feb/24 🛠 We are ON ⚒ Hackathon -  https://vxtwitter.com/alephium/status/1757094840846733451?s=20
 
+Feb/24 🏆 New Hackathon Sponsor 🚨 - https://vxtwitter.com/alephium/status/1755290796755161538
+
 Jan/24 Rhône Network Upgrade 🧵#2 - https://x.com/alephium/status/1752376284754420186?s=20
 
 Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
