@@ -78,6 +78,11 @@ Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984
 Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
 ### Blockflow
+
+An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
+
+About Sharding : https://x.com/alephium/status/1747255798034796657?s=20
+
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
 
 Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
@@ -86,7 +91,6 @@ Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
 Sharding - https://twitter.com/alephium/status/1648310491763331078
 
-An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
 ### Ralph Programming Language
 Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
@@ -176,7 +180,9 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
-Feb/24 - 🎙Ergo x Kadena x Alephium @Flux X space - https://twitter.com/i/spaces/1YqxoDORagzKv
+Feb/24 - HoC X Space - https://twitter.com/i/spaces/1BRKjPjmAevJw?s=20
+
+Feb/24 - Ergo x Kadena x Alephium @Flux X space - https://x.com/RunOnFlux/status/1755621620801003822?s=20
 
 Jan/24 - Crypto Roundtable with tsncrypto - https://x.com/alephium/status/1750142614534504831?s=20
 
@@ -242,6 +248,10 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Feb/24 💜 x 30'000 Twitter Followers - https://vxtwitter.com/alephium/status/1757430069817974869?s=20
+
+Feb/24 🛠 We are ON ⚒ Hackathon -  https://vxtwitter.com/alephium/status/1757094840846733451?s=20
 
 Feb/24 🏆 New Hackathon Sponsor 🚨 - https://vxtwitter.com/alephium/status/1755290796755161538
 
@@ -337,6 +347,9 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+
+Builders Highlight #7 - alphpad 
+https://vxtwitter.com/alephium/status/1757398937441607906?s=20
 
 Builders Highlight #6 - What the Duck 
 https://medium.com/@alephium/builders-highlight-6-what-the-duck-0aedc602ecfd
