@@ -176,6 +176,8 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Feb/24 - 🎙Ergo x Kadena x Alephium @Flux X space - https://twitter.com/i/spaces/1YqxoDORagzKv
+
 Jan/24 - Crypto Roundtable with tsncrypto - https://x.com/alephium/status/1750142614534504831?s=20
 
 Jan/24 - AMA with Crypto Picsou - https://x.com/CryptoPicsou/status/1748757066548752679?s=20
@@ -240,6 +242,8 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Milestones 
+
+Feb/24 🏆 New Hackathon Sponsor 🚨 - https://vxtwitter.com/alephium/status/1755290796755161538
 
 Jan/24 Rhône Network Upgrade 🧵#2 - https://x.com/alephium/status/1752376284754420186?s=20
 
