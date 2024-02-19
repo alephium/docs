@@ -81,7 +81,7 @@ Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
 An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
-About Sharding : https://x.com/alephium/status/1747255798034796657?s=20
+About Sharding - https://x.com/alephium/status/1747255798034796657
 
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
 
@@ -89,8 +89,7 @@ Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
 
 Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
-Sharding - https://twitter.com/alephium/status/1648310491763331078
-
+Sharding - https://twitter.com/alephium/status/1632742909379215360
 
 ### Ralph Programming Language
 Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
