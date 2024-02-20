@@ -11,8 +11,8 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 In this guide we'll learn how to run a full node on [Flux](https://runonflux.io/),
 and how to expose the API.
 
-How to get started with Flux is out of scope of this page, but you can refer to
-Flux official doc for this. We will assume here that you own enough Flux to start
+How to get started with Flux is out of scope for this page, but you can refer to
+Flux official documentation if needed. We will assume here that you own enough Flux to start
 an App.
 
 ## Get the Full Node App from the Marketplace
@@ -22,7 +22,7 @@ Select the App named *AlephiumNode*.
 
 ## Expose the API
 
-By default, the Full Node App has only the P2P port (39973 on Flux nodes) exposed. If you want to expose the API port, you'll need to update the specification of your Flux App as follow. But keep in mind that exposing the API might be a security concern except if you know what you're doing.
+By default, the Full Node App only has the P2P port (39973 on Flux nodes) exposed. If you want to expose the API port, you'll need to update the specification of your Flux App as follow. Please keep in mind that exposing the API might be a security concern unless you know what you're doing.
 
 1. Manage your application
 
