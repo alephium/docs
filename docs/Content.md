@@ -14,6 +14,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 * [Explainer Series](#explainer-series)
 * [TechTalks & AMAs](#techtalks--amas)
 * [Milestones](#milestones)
+* [Hackathon](#hackathon)
 * [Community & Social](#community--social)
 * [External Podcasts & Publications](#external-podcasts--publications)
 * [Events, presentations & conferences](#events-presentations--conferences)
@@ -264,8 +265,6 @@ Jan/24 🌊 Announcing the Rhône Network Upgrade #1 ♾ - https://vxtwitter.com
 
 Jan/24 ⚙️ Tech Writings of 2023 🛠 - https://vxtwitter.com/alephium/status/1744795616818217432
 
-Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
-
 Jan/24 The dApps, the whole dApps, nothing but the dApps - https://vxtwitter.com/alephium/status/1743268517309513949
 
 Dec/23 2023 Front-end recap - https://vxtwitter.com/alephium/status/1741402507203764614
@@ -338,6 +337,18 @@ Sep/21 Pre-sale Q3 2021 - https://medium.com/@alephium/alephium-closes-3-6m-pre-
 Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-8381dbd9f88d
 
 May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
+
+## Hackathon 
+
+Hackathon Website : https://alephium.org/hackathon/
+
+Feb/24 ⚒️ Hackathon Week 2 is starting! - https://x.com/alephium/status/1759621786004865431?s=20
+
+Feb/24 💥 Week 1 recap 🪛  - https://x.com/alephium/status/1759633141646475452?s=20
+
+Feb/24 Hackathon Kick-off call February 12th - https://www.youtube.com/watch?v=zlEU6FqDWd8
+
+Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
 ## Community & Social 
 
