@@ -98,7 +98,7 @@ If that doesn’t work, open an issue here.
 
 ### 7. Can we only bridge USDT from ETH to ALPH?
 
-No. You can also bridge USDC, ETH, DAI, WBTC & ALPH.
+No. For example, you can also bridge USDC, ETH, DAI, WBTC & ALPH. Using the provided UI, you can bridge all tokens from [1inch list](https://tokenlists.org/token-list?url=tokens.1inch.eth)
 
 And if you interact with the smart contract directly, you can bridge all erc20 tokens you want.
 
@@ -108,7 +108,7 @@ And if you interact with the smart contract directly, you can bridge all erc20 t
 Before bridging any token, please check that there is enough liquidity available, otherwise you might have to bridge those tokens back.
 
 
-### 9. How do i add the ALPH ERC-20 token to my Metamask? 
+### 9. How do I add the ALPH ERC-20 token to my Metamask? 
 
 In order to have the ALPH ERC-20 token show in your Metamask wallet you are going to need to do the following : 
 
