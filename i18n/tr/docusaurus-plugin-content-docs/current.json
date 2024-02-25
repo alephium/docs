@@ -1,0 +1,54 @@
+{
+  "version.label": {
+    "message": "Sonraki",
+    "description": "Yan tarafta mevcut sürüm için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Full Node": {
+    "message": "Tam Düğüm (Full Node)",
+    "description": "Yan tarafta 'Tam Düğüm' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Building dApps": {
+    "message": "dApps Oluşturma",
+    "description": "Yan tarafta 'dApps Oluşturma' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Ralph Language": {
+    "message": "Ralph Dili",
+    "description": "Yan tarafta 'Ralph Dili' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Wallet": {
+    "message": "Cüzdan",
+    "description": "Yan tarafta 'Cüzdan' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Desktop Wallet": {
+    "message": "Masaüstü Cüzdan",
+    "description": "Yan tarafta 'Masaüstü Cüzdan' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Extension wallet": {
+    "message": "Eklenti Cüzdanı",
+    "description": "Yan tarafta 'Eklenti Cüzdanı' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "Entegrasyon",
+    "description": "Yan tarafta 'Entegrasyon' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Mining": {
+    "message": "Madencilik",
+    "description": "Yan tarafta 'Madencilik' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Network": {
+    "message": "Ağ",
+    "description": "Yan tarafta 'Ağ' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Explorer Backend": {
+    "message": "Keşif Arka Ucu",
+    "description": "Yan tarafta 'Keşif Arka Ucu' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Tokens": {
+    "message": "Jetonlar",
+    "description": "Yan tarafta 'Jetonlar' kategorisi için etiket"
+  },
+  "sidebar.tutorialSidebar.category.Misc": {
+    "message": "Çeşitli",
+    "description": "Yan tarafta 'Çeşitli' kategorisi için etiket"
+  }
+}

@@ -247,10 +247,10 @@ const config = {
     ],
     require.resolve("docusaurus-plugin-image-zoom"),
   ],
-  // i18n: {
-  //   defaultLocale: "en",
-  //   locales: ["en", "fr"],
-  // },
+   i18n: {
+     defaultLocale: "en",
+     locales: ["en", "tr"],
+   },
 };
 
 module.exports = config;
