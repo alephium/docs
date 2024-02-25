@@ -26,7 +26,7 @@ required disk space to download and to extract the snapshot:
 ```shell
 ALEPHIUM_HOME=~/.alephium
 ALEPHIUM_NETWORK=mainnet
-curl -L "$(curl -s https://archives.alephium.org/archives/$ALEPHIUM_NETWORK/full-node-data/_latest.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
+curl -L "$(curl -sL https://archives.alephium.org/archives/$ALEPHIUM_NETWORK/full-node-data/_latest.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
 ```
 
 A specific file `_latest.txt` is updated for your convenience, always pointing to the latest snapshot available.
