@@ -1,58 +1,56 @@
 ---
 sidebar_position: 10
-title: Getting Started
-sidebar_label: Getting started
+title: Başlarken
+sidebar_label: Başlarken
 ---
 
-## Requirements
+## Gereksinimler
 
-- Java (11 or 17 is recommended)
+- Java (11 veya 17 önerilir)
 - [PostgreSQL](https://www.postgresql.org)
-- [A running full-node](full-node/getting-started.md)
+- [Çalışan tam düğüm](full-node/getting-started.md)
 
-## Download Application File
+## Uygulama Dosyasını İndirin
 
-Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest).
+[GitHub sürümünden](https://github.com/alephium/explorer-backend/releases/latest) `explorer-backend-x.x.x.jar` dosyasını indirin.
 
-## Create the database:
+## Veritabanını Oluşturun:
 
-1. Start the `postgresql` service.
-2. Login to the PostgreSQL shell with the default `postgres` user:
+1. `postgresql` servisini başlatın.
+2. PostgreSQL kabuğuna varsayılan `postgres` kullanıcısı ile giriş yapın:
    ```shell
    psql postgres # or `psql -U postgres` depending on your OS
    ```
-3. Ensure that the `postgres` role exists, and if not, create it.
-   List all roles:
+3. `postgres` rolünün var olduğundan ve yoksa oluşturulduğundan emin olun.
+   Tüm rolleri listele:
    ```shell
    postgres=# \du
    ```
-   Create `postgres` role:
+   `postgres` rolünü oluşturun:
    ```shell
    postgres=# CREATE ROLE postgres WITH LOGIN;
    ```
-4. Then, create the database:
+4. Daha sonra, veritabanını oluşturun:
    ```shell
    postgres=# CREATE DATABASE explorer;
    ```
 
-## Start your explorer-backend
+## Explorer-backend'inizi Başlatın
 
 ```shell
 java -jar explorer-backend-x.x.x.jar
 ```
 
-Your explorer-backend will start to sync with the full node. It might take long the first time
+Explorer-backend'iniz tam düğümle senkronize olmaya başlayacaktır. İlk sefer buzun sürebilir
 
-## Start from a snapshot
+## Anlık Görüntüden Başlama
 
-To reduce the first syncing time, you can restore one of our snapshot.
+İlk senkronizasyon süresini azaltmak için, anlık görüntülerden birini geri yükleyebilirsiniz.
 
-Snapshots are available at https://archives.alephium.org/#mainnet/explorer-db/
-
-Download the latest one, extract it, and run:
+Anlık görüntüler [archives.alephium.org](https://archives.alephium.org/#mainnet/explorer-db/) adresinde bulunmaktadır.
 
 ```shell
 psql explorer < explorer-db-xxx.pg_dump
 ```
 
-Please note that the `explorer` database must have been created before and be empty.
+Lütfen `explorer` veritabanının önceden oluşturulmuş ve boş olması gerektiğini unutmayın.
