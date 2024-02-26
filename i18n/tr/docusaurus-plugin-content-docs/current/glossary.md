@@ -11,7 +11,7 @@ Bu, özellikle Alephium'u ve genel olarak Blok Zincirlerini anlamak için kullan
 
 ### Alephium
 
-Alephium, PoW ve UTXO kavramlarını ölçeklendirme ve iyileştirme hedefiyle geliştirilen ilk operasyonel sharded L1 blok zinciridir. Merkeziyetsizlik, öz-kendi-soberlik ve güvenlik, yüksek performans, erişilebilirlik ve enerji verimliliği ile birleşir ve DeFi ve akıllı sözleşme uygulamaları için optimize edilmiş bir geliştirici dostu ağda buluşur.
+Alephium, PoW ve UTXO kavramlarını ölçeklendirme ve iyileştirme hedefiyle geliştirilen ilk operasyonel sharded L1 blok zinciridir. Merkeziyetsizlik, öz egemenlik ve güvenlik, yüksek performans, erişilebilirlik ve enerji verimliliği ile birleşir ve DeFi ve akıllı sözleşme uygulamaları için optimize edilmiş bir geliştirici dostu ağda buluşur.
 
 Teknik tasarımından arayüzlerine kadar Alephium, günümüzde merkezi olmayan uygulamaların karşılaştığı erişilebilirlik, ölçeklenebilirlik ve güvenlik sorunlarını ele almak üzere oluşturulmuştur.
 
@@ -28,7 +28,7 @@ Alephium'da akıllı sözleşmeler, Ralph dili kullanılarak yazılır ve Alphre
 ### Blake 3 Algoritması (Hash Fonksiyonu)
 [Blake 3 Algoritması](https://github.com/BLAKE3-team/BLAKE3), bir kriptografik hash fonksiyonudur. Bir hash fonksiyonu, herhangi bir uzunluktaki bir giriş dizisini alıp sabit uzunlukta bir çıkış dizesine dönüştüren matematiksel bir fonksiyondur. Sabit uzunluklu çıkış, hash değeri olarak bilinir.
 
-Hash fonksiyonlarının bir blok zincirinde birçok kullanım alanı vardır: [Merkle Tree](#merkle-ağacı), Proof of Work Consensus, Dijital İmzalar ve Blok Zinciri kendisi (çünkü bir blok zincirindeki her blok başlığı önceki bloğun başlığının hash'ini içerir). Örneğin, Bitcoin, SHA-256'yı kullanır.
+Hash fonksiyonlarının bir blok zincirinde birçok kullanım alanı vardır: [Merkle Ağacı](#merkle-ağacı), Proof of Work Consensus, Dijital İmzalar ve Blok Zinciri kendisi (çünkü bir blok zincirindeki her blok başlığı önceki bloğun başlığının hash'ini içerir). Örneğin, Bitcoin, SHA-256'yı kullanır.
 
 Alephium, madencilik için kriptografik hash fonksiyonu olarak Blake 3 Algoritmasını kullanır.
 
