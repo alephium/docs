@@ -1,73 +1,68 @@
 ---
 sidebar_position: 50
-title: Mining
-sidebar_label: Mining
+title: Madencilik
+sidebar_label: Madencilik
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Bu belge, madencilik havuzlarının ve madencilerin alephium'u entegre etmesini kolaylaştırmayı amaçlamaktadır. Bu belge genellikle şunları içerir:
 
-<UntranslatedPageText />
+* madencilik havuzu ile tam düğüm arasındaki iletişim protokolü
+* madencinin maden işlerine dayanarak blok hash'ini nasıl hesapladığı
 
-This document aims to make it easier for mining pools and miners to integrate alephium. This document mainly includes:
+Madencilik havuzu ile madenciler arasındaki iletişim protokolünün uygulanması hakkında daha fazla bilgi için, stratum protokolüne [buradan](/mining/alephium-stratum.md) bakabilirsiniz. Madencilik havuzları tam olarak protokolü takip etmez.
 
-* the communication protocol between the mining pool and the full node
-* how the miner calculates the block hash based on the mining jobs
+Bu belgede bir referans olarak [madencilik havuzu](https://github.com/alephium/mining-pool) ve [gpu madencisi](https://github.com/alephium/gpu-miner) kodunu kullanacağım.
 
-Regarding the implementation of the communication protocol between mining pool and miners, you can refer to the stratum protocol [here](/mining/alephium-stratum.md). Note that mining pools does not follow exactly the protocol.
+## Madencilik Havuzu
 
-In this document I will use the code of [mining-pool](https://github.com/alephium/mining-pool) and [gpu-miner](https://github.com/alephium/gpu-miner) as a reference.
+Madencilik havuzu, maden işleri almak için alephium tam düğümüne bağlanmalıdır ve varsayılan madencilik api sunucusu `localhost:10973` 'tür.
 
-
-## Mining Pool
-
-The mining pool needs to connect to the alephium full node to get mining jobs, and the default mining api server is `localhost:10973`.
-
-The mining pool communicates with the full node through a binary protocol, the format of the message is as follows:
+Madencilik havuzu, tam düğümle bir binar protokol aracılığıyla iletişim kurar, mesaj formatı aşağıdaki gibidir:
 
 ```
 MessageSize(4 bytes) + Message(1 byte MessageType + Payload)
 ```
 
-### Getting Jobs From Full Node
+### Tam Düğümden İşler Almak
 
-Every time the full node receives a new block, it sends a `Jobs` message to the mining pool. You can also set the time interval in the [mining configuration](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/system_prod.conf.tmpl#L6) of the full node to send `Jobs` messages when there are no new blocks.
+Her tam düğüm yeni bir blok aldığında, bir `Jobs` mesajı gönderir. Tam düğümün, yeni bir blok olmadığında da `Jobs` mesajı göndermek için zaman aralığını [buradaki](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/system_prod.conf.tmpl#L6) madencilik yapılandırmasında ayarlayabilirsiniz.
 
-Because there are 16 chains in alephium now, there will be 16 block templates in each `Jobs` message. And the block template consists of the following fields:
+Alephium'da şu anda 16 zincir bulunduğundan, her `Jobs` mesajında 16 blok şablonu olacaktır. Ve blok şablonu aşağıdaki alanlardan oluşur:
 
-* `fromGroup` and `toGroup`: the chain index of the block template.
-* `headerBlob`: the serialized binary data of the [BlockHeader](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/BlockHeader.scala#L28), excluding the first 24 bytes(nonce).
-* `txsBlob`: the serialized binary data of the transactions.
-* `targetBlob`: the serialized binary data of the [Target](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/Target.scala#L32).
+* `fromGroup` ve `toGroup`: blok şablonunun zincir dizini.
+* `headerBlob`: [BlockHeader](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/BlockHeader.scala#L28) 'nin seri haldeki ikili verisi, ilk 24 baytı(nonce) hariç.
+* `txsBlob`: işlemlerin seri haldeki ikili verisi.
+* `targetBlob`: [Target](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/Target.scala#L32) 'nin seri haldeki ikili verisi.
 
-You can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js) to learn more about the format of the `Jobs` message and how to parse the `Jobs` message.
+`Jobs` mesajının formatı ve `Jobs` mesajının nasıl ayrıştırılacağı hakkında daha fazla bilgi için sağlanan kodlara [buradan](https://github.com/alephium/mining-pool/blob/master/lib/messages.js) bakabilirsiniz.
 
-Once the mining pool receives the `Jobs` message from the full node, it can send the mining jobs to miners based on their hashrate. For each chain, calculating the nonce only requires the `targetBlob` and `headerBlob` fields. Therefore, the mining pool can save bandwidth by excluding the `txsBlob` field when sending mining jobs to miners. You can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/blockTemplate.js#L51).
+Madencilik havuzu, tam düğümden `Jobs` mesajını aldığında, madencilere hashrate'lerine dayanarak maden işlerini gönderebilir. Her zincir için, nonce hesaplamak yalnızca `targetBlob` ve `headerBlob` alanlarını gerektirir. Bu nedenle, madencilik havuzu, madencilere maden işlerini gönderirken `txsBlob` alanını dışarıda bırakarak bant genişliği tasarrufu yapabilir. Kodlara [buradan](https://github.com/alephium/mining-pool/blob/master/lib/blockTemplate.js#L51) bakabilirsiniz.
 
-### Submitting Blocks To Full Node
+### Blokları Tam Düğüme Gönderme
 
-Once the mining pool receives a valid `nonce` from the miner, it can send the block to the full node, where the block is composed of `nonce`, `headerBlob` and `txsBlob`, you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/pool.js#L119).
+Madencilik havuzu, bir madenciden geçerli bir `nonce` aldığında, bloğu tam düğüme gönderebilir, blok `nonce`, `headerBlob` ve `txsBlob`'dan oluşur, kodlara [buradan](https://github.com/alephium/mining-pool/blob/master/lib/pool.js#L119) bakabilirsiniz.
 
-Then you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) to construct a valid `SubmitBlock` message and send this message to the full node.
+Ardından, geçerli bir `SubmitBlock` mesajı oluşturmak için sağlanan kodlara [buradan](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) bakabilirsiniz.
 
-After the full node verifies the block, it will send a `SubmitBlockResult` message to tell the mining pool whether the block is valid, you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) to parse the `SubmitBlockResult` message.
+Tam düğüm bloğu doğruladıktan sonra, madencilik havuzuna bloğun geçerli olup olmadığını belirten bir `SubmitBlockResult` mesajı gönderecektir, bu mesajın nasıl ayrıştırılacağına [buradan](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) bakabilirsiniz.
 
-## Miner
+## Madenci
 
-### Calculating the BlockHash
+### Blok Hash'ini Hesaplama
 
-In alephium, the size of the `nonce` is 24 bytes, and the hash of the block is: `blake3(blake3(serialize(blockHeader))`. As mentioned before, `blockBlob` in each job is the serialized binary data of `BlockHeader` excluding the `nonce` field. Therefore, when the miner calculates the block hash, it needs to preappend the `nonce` to the front of the `headerBlob`, you can refer to the code provided [here](https://github.com/alephium/gpu-miner/blob/master/src/worker.h#L135) and [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#L314).
+Alephium'da, `nonce`'un boyutu 24 bayttır ve bloğun hash'i: `blake3(blake3(serialize(blockHeader))` 'dir. Yukarıda belirtildiği gibi, her işteki `blockBlob`, `BlockHeader` 'ın seri haldeki ikili verisidir ve `nonce` alanını içermez. Bu nedenle, madenci blok hash'ini hesaplarken, `nonce`'u `headerBlob`'un önüne eklemesi gerekir, kodlara [buradan](https://github.com/alephium/gpu-miner/blob/master/src/worker.h#L135) ve [buradan](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#L314) bakabilirsiniz.
 
-### Checking the ChainIndex
+### Zincir Endeksini Kontrol Etme
 
-In addition to checking the target, the miner also needs to check the chain index of the block as alephium encodes the chain index into the block hash. You can refer to the code provided [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) to check whether the chain index of the block hash is correct.
+Madenci, hedefi kontrol etmenin yanı sıra, alephium zincir endeksini de kontrol etmelidir, çünkü alephium, zincir endeksini blok hash'ine kodlar. Zincir endeksinin blok hash'ının doğru olup olmadığını kontrol etmek için [buradan](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) kodlara bakabilirsiniz.
 
-## UTXO Management
+## UTXO Yönetimi
 
-Due to the limited number of inputs that can be included in each transaction, withdrawals may fail if miner's wallet is filled with small UTXOs. In practice, some miners tend to send mining rewards directly to exchange addresses. If that is the case please follow the guide [here](/integration/exchange#utxo-management).
+Her işlemde dahil edilebilecek girişlerin sınırlı sayıda olması nedeniyle, maden işçisinin cüzdanı küçük UTXO'larla doluysa, çekilmeler başarısız olabilir. Uygulamada, bazı madenciler maden ödüllerini doğrudan borsa adreslerine göndermeyi tercih ederler. Bu durumda lütfen [buradaki](/integration/exchange#utxo-management) kılavuzu izleyin.
 
-If node wallet is used for mining, here are the simpler and more efficient ways to consolidate the UTXOs.
+Eğer tam düğüm cüzdanı madencilik için kullanılıyorsa, aktif adres için UTXO'ları konsolide etmenin daha basit ve daha verimli yolları vardır.
 
-### Consolidate UTXOs for the active address
+### Aktif adres için UTXO'ları konsolide etme
 
 ```shell
 # Consolidate UTXOs for the active address
@@ -80,7 +75,7 @@ curl -X 'POST' \
 }'
 ```
 
-Note that this will only consolidate the UTXOs for the active address. To consolidate UTXOs for other addresses, we need to update each of them as active address and run the same command above. 
+Unutmayın ki bu, yalnızca aktif adres için UTXO'ları konsolide eder. Diğer adresler için UTXO'ları konsolide etmek için, her birini aktif adres olarak güncellememiz ve yukarıdaki komutu çalıştırmamız gerekir.
 
 ```shell
 # Change active address
@@ -93,9 +88,9 @@ curl -X 'POST' \
 }'
 ```
 
-### Consolidate UTXOs for the all addresses
+### Tüm adresler için UTXO'ları konsolide etme
 
-The simplest way to consolidate UTXOs for all the addresses in the node wallet is to use the `sweep-all-addresses` endpoint:
+Tam düğüm cüzdanındaki tüm adresler için UTXO'ları konsolide etmenin en basit yolu `sweep-all-addresses` uç noktasını kullanmaktır:
 
 ```shell
 # Consolidate UTXOs for all addresses

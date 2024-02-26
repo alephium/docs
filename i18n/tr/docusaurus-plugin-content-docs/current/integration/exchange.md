@@ -1,38 +1,38 @@
 ---
 sidebar_position: 40
-title: Exchange
-sidebar_label: Exchange
+title: Borsa
+sidebar_label: Borsa
 ---
 
-Integration prototype with Alephium's SDK: https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts
+Alephium'in SDK'sı ile entegrasyon prototipi: [https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts](https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts)
 
-This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
+Bu kılavuz, bir kripto para birimi borsasının Alephium'u entegre etmek için gereken temel API'ler ve bilgileri açıklar.
 
-## Getting started
+## Başlarken
 
-### Local development network
+### Yerel geliştirme ağı
 
-To integrate Alephium, an exchange must run a full node. Additionally, the explorer-backend can be run for debugging and additional indexing. 
+Alephium'u entegre etmek için bir borsanın bir tam düğüm çalıştırması gerekir. Ayrıca, hata ayıklama ve ek dizinleme için explorer-backend de çalıştırılabilir.
 
-To create a local development network with explorer support, follow the instructions in the [alephium-stack](https://github.com/alephium/alephium-stack#devnet) repository. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
+Explorer desteği ile yerel bir geliştirme ağı oluşturmak için, [alephium-stack](https://github.com/alephium/alephium-stack#devnet) deposundaki talimatları izleyin. Başlatıldıktan sonra, Swagger UI, tam düğüm ve explorer backend için API arabirimine erişilebilir.
 
-* Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
-* Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
-* Explorer front-end: [http://localhost:23000](http://localhost:23000)
+* Tam düğüm Swagger UI'sı: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
+* Explorer backend Swagger UI'sı: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
+* Explorer ön ucu: [http://localhost:23000](http://localhost:23000)
 
-### APIs
+### API'ler
 
-To keep the guide concise, relevant API queries will be provided in the doc instead of Swagger UI screenshots.
+Kılavuzu kısa tutmak için, ilgili API sorguları, Swagger UI ekran görüntüleri yerine belgelerde sağlanacaktır.
 
-The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains generated Typescript APIs for both the [full node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) and [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
+[web3 SDK](https://github.com/alephium/alephium-web3#packages), hem [tam düğüm](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) için hem de [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts) için oluşturulmuş TypeScript API'lerini içerir.
 
-### Test wallet
+### Test cüzdanı
 
 :::caution
-The node wallet is for testing the APIs of full node. To generate hot wallets for depositing, please check [wallet generation](exchange#wallet-generation).
+Düğüm cüzdanı, tam düğümün API'lerini test etmek içindir. Yatırım yapmak için sıcak cüzdanlar için test cüzdanları oluşturmak için [cüzdan oluşturma](exchange#wallet-generation) kısmına bakın.
 :::
 
-Let's recover the test wallet by executing the following API. The test wallet has 1million ALPH for the address `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH`.
+Aşağıdaki API'yi çalıştırarak test cüzdanını kurtaralım. Test cüzdanı için adres `1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH` adresi için 1 milyon ALPH'e sahiptir.
 
 ```shell
 curl -X 'PUT' \
@@ -51,7 +51,7 @@ curl -X 'PUT' \
 # }
 ```
 
-Get the public key of the address by querying:
+Adresin genel anahtarını sorgulayarak başlayalım:
 
 ```shell
 curl -X 'GET' \
@@ -67,11 +67,11 @@ curl -X 'GET' \
 # }
 ```
 
-## Transaction APIs
+## İşlem API'leri
 
-### Create a transaction
+### Bir işlem oluşturma
 
-Let's build a transaction to send `1.23 ALPH` to address `1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3`.
+`1.23 ALPH`'yi `1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3` adresine göndermek için bir işlem oluşturalım.
 
 ```shell
 # `fromPublicKey` is the public key of the wallet address
@@ -101,9 +101,9 @@ curl -X 'POST' \
 # }
 ```
 
-### Sign a transaction
+### Bir işlemi imzalama
 
-Let's sign the transaction id:
+İşlem kimliğini imzalayalım:
 
 ```shell
 curl -X 'POST' \
@@ -120,9 +120,9 @@ curl -X 'POST' \
 # }
 ```
 
-### Submit a transaction
+### Bir işlem gönderme
 
-Let's submit the transaction to the network:
+İşlemi ağa gönderelim:
 
 ```shell
 # `unsignedTx` is from the response of transaction building
@@ -145,11 +145,11 @@ curl -X 'POST' \
 # }
 ```
 
-## Block APIs
+## Blok API'leri
 
-### Get block hash with transaction ID
+### İşlem Kimliği ile Blok Anahtarı Al
 
-To get the block hash of a confirmed transaction, you can use the full node API:
+Onaylanmış bir işlemin blok anahtarını almak için, tam düğüm API'sini kullanabilirsiniz:
 
 ```shell
 curl -X 'GET' \
@@ -167,7 +167,7 @@ curl -X 'GET' \
 # }
 ```
 
-### Get block with block hash
+### Blok anahtarı ile blok al
 
 ```shell
 curl -X 'GET' \
@@ -188,9 +188,9 @@ curl -X 'GET' \
 # }
 ```
 
-### Polling for blocks
+### Bloklar için polling
 
-In Alephium, you can fetch all the blocks from all the chains for a given time interval because it is a sharded blockchain with multiple chains operating at different heights simultaneously.
+Alephium'da, bir dizi zincirde birden fazla zincirin aynı anda farklı yüksekliklerde çalıştığı bir parçalı blok zinciri olduğu için belirli bir zaman aralığı için tüm blokları alabilirsiniz.
 
 ```shell
 curl -X 'GET' \
@@ -207,7 +207,7 @@ curl -X 'GET' \
 # }
 ```
 
-You can retrieve blocks for each chain individually using this endpoint:
+Bu uç nokta kullanılarak her zincir için blokları alabilirsiniz:
 ```shell
 curl -X 'GET' \
   'http://127.0.0.1:22973/blockflow/chain-info?fromGroup=2&toGroup=3' \
@@ -232,13 +232,13 @@ curl -X 'GET' \
 
 ## UTXO Management
 
-### Why UTXO management?
+### Neden UTXO yönetimi?
 
-In practice, some miners tend to send mining rewards directly to exchange addresses, resulting in a large number of small-valued UTXOs in the exchange's hot wallets. However, due to the limited number of inputs that can be included in each transaction, withdrawals may fail if the hot wallet is filled with these small UTXOs.
+Uygulamada, bazı madenciler genellikle doğrudan borsa adreslerine madencilik ödülleri gönderirler, bu da borsanın sıcak cüzdanlarında çok sayıda düşük değerli UTXO'ya yol açar. Ancak, her işleme dahil edilebilecek sınırlı sayıda giriş olduğundan, sıcak cüzdan bu küçük UTXO'larla doluysa çekimler başarısız olabilir.
 
-### How to consolidate small-valued UTXOs?
+### Düşük değerli UTXO'ları nasıl birleştirebilirsiniz?
 
-If your exchange already has a proper UTXO management framework in place, you are in good shape. However, if you don't, there is a simple solution available. You can utilize the sweep endpoint to consolidate the small-valued UTXOs of a specific address. Please note that this feature is only accessible starting from full node `2.3.0`.
+Bir borsanız zaten uygun bir UTXO yönetim çerçevesine sahipse, işleriniz yolundadır. Ancak, yoksa basit bir çözüm mevcuttur. Belirli bir adresin küçük değerli UTXO'larını birleştirmek için süpürme uç noktasını kullanabilirsiniz. Lütfen bu özelliğin tam düğüm `2.3.0` sürümünden itibaren erişilebilir olduğunu unutmayın.
 
 ```shell
 # `maxAttoAlphPerUTXO` refers to the maximum amount of ALPH in the UTXOs to be consolidated.
@@ -254,9 +254,9 @@ curl -X 'POST' \
 }'
 ```
 
-### How to work with designated UTXOs?
+#### Belirlenen UTXO'larla nasıl çalışılır?
 
-To create transactions more efficiently, an exchange is recommended to store the set of UTXOs of their hot wallets and then provide specific UTXOs through the API.
+İşlemleri daha verimli bir şekilde oluşturmak için, bir borsanın sıcak cüzdanlarının UTXO setini saklaması ve ardından API aracılığıyla belirli UTXO'ları sağlaması önerilir.
 
 ```shell
 curl -X 'POST' \
@@ -280,7 +280,7 @@ curl -X 'POST' \
 }'
 ```
 
-`hint` and `key` for the UTXO are fetched from the first output of the first transaction we made. `key` is unique and can be used to index the UTXO.
+UTXO için `ipucu` ve `anahtar`'ı, oluşturduğumuz ilk işlemin ilk çıktısından alınır. `anahtar` benzersizdir ve UTXO'ları dizinlemek için kullanılabilir.
 
 ```shell
 curl -X 'GET' \
@@ -313,25 +313,24 @@ curl -X 'GET' \
 # }
 ```
 
-## More Information
+## Daha Fazla Bilgi
 
-### Wallet generation
+### Cüzdan oluşturma
 
-To generate multiple addresses for users, you can use the [HD-wallet in the web3 SDK](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185).
+Kullanıcılar için birden fazla adres oluşturmak için [web3 SDK'daki HD-cüzdanı](https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185) kullanabilirsiniz.
 
-### Sharding
+### Parçalama (Sharding)
 
-Alephium is a sharded blockchain and its addresses are split into 4 groups on the mainnet. However, one can: 
-- Send ALPH to multiple addresses that belong to the same address group in a single transaction. All the destination addresses must belong to the same group.
-- Send ALPH from multiple addresses that belong to the same address group in a single transaction. All the sending addresses must belong to the same group.
-- Send ALPH from multiple addresses that belong to the same group to multiple addresses that belong to another group. All the sending addresses must belong to the same group, and all the destination addresses must belong to the same group too.
+Alephium, bir parçalı blok zinciri olduğundan ve adresleri ana ağda 4 gruba ayrıldığından, bir işlemde aynı gruplara ait birden fazla adrese ALPH gönderebilirsiniz. Tüm hedef adreslerin aynı gruba ait olması gerekir.
+Aynı gruplara ait birden fazla adresten ALPH gönderebilirsiniz. Tüm gönderme adreslerinin aynı gruba ait olması gerekir.
+Aynı gruplara ait birden fazla adresten diğer bir gruba ait birden fazla adrese ALPH gönderebilirsiniz. Tüm gönderme adreslerinin aynı gruba ait olması gerekir ve tüm hedef adreslerin aynı gruba ait olması gerekir.
 
-To get the group of an address, you can refer to the web3 SDK function [groupOfAddress(address)](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/utils/utils.ts#L85-L103).
+Bir adresin grubunu almak için web3 SDK fonksiyonuna [groupOfAddress(address)](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/utils/utils.ts#L85-L103) bakabilirsiniz.
 
-### Gas computation
+### Gaz hesaplama
 
-Alephium's transaction fees are determined by the amount of gas allocated and the gas price. A maximum gas amount of 625,000 can be assigned to each transaction.
-The default gas price is set at `1e11` attoALPH per gas unit. When conducting a simple transfer transaction, the gas amount can be computed using the following pseudo code:
+Alephium'un işlem ücretleri, ayrılan gaz miktarı ve gaz fiyatına bağlıdır. Her işleme maksimum 625,000 gaz miktarı atanabilir.
+Varsayılan gaz fiyatı, her gaz birimi başına `1e11` attoALPH olarak ayarlanmıştır. Basit bir transfer işlemi yaparken, gaz miktarı aşağıdaki sözde kod kullanılarak hesaplanabilir:
 
 ```Typescript
 txInputBaseGas = 2000
