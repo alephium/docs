@@ -1,54 +1,50 @@
 ---
 sidebar_position: 10
-title: Solo Mining Guide
-sidebar_label: Solo mining guide
+title: Solo Madencilik Kılavuzu
+sidebar_label: Solo madencilik kılavuzu
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+# Solo Madencilik Kılavuzu
 
-<UntranslatedPageText />
+İlk olarak, [Tam Düğüm Başlangıç Kılavuzu](full-node/getting-started.md) adımlarını izlemeniz gerekmektedir. Bunu yaparak düğümünüzü indirebilir, başlatabilir ve Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) kullanabilirsiniz.
 
-# Solo Mining Guide
+## Madencilik bilgileri
 
-You must first follow the steps in the [Full Node Starter Guide](full-node/getting-started.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+- Toplamda 4 adres grubu ve 16 zincir bulunmaktadır
+- Hedef blok süresi 64 saniyedir
+- Her gün ortalama olarak `24 * 60 * 60 / 64 * 16 = 21600` blok üretilmektedir
+- Blok ödülleri şu anda 3 ALPH'tır
+- Üretilen tüm paralar 500 dakika boyunca kilitlidir
 
-## Mining information
+Daha fazla bilgi için lütfen bu makaleyi okuyun: [Blok Ödülleri](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33).
 
-- 4 address groups and 16 chains in total
-- the target block time is 64 seconds
-- everyday, `24 * 60 * 60 / 64 * 16 = 21600` blocks are mined on average
-- the block rewards are 3 ALPH right now
-- all of the mined coins are locked for 500 minutes
+Ağ hash oranını tahmini olarak tam düğümünüzün günlük tutanaklarından veya tam düğümün Grafana gösterge tablosundan alabilirsiniz, eğer [docker-compose](full-node/docker-guide.md) ile çalıştırırsanız.
 
-For more information about mining rewards, please read this article [Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33).
+## Madenci cüzdanı
 
-You could get the estimated network hashrate from the log of your full node, or from the Grafana dashboard of the full node if you run it with [docker-compose](full-node/docker-guide.md).
+Öncelikle, madencilik için ayrılmış bir cüzdan oluşturmanız gerekmektedir. _Geleneksel bir cüzdanın_ aksine, bir _madenci cüzdanı_, her adres grubu için madencilik ödülleri toplamak için kullanılan birden fazla adres içerir.
 
-## Miner wallet
+#### Madenci cüzdanınızı oluşturun
 
-First, you must create a dedicated wallet for mining. As opposed to a _traditional wallet_, a _miner wallet_ has multiple addresses which are used to collect mining rewards for each address group.
+![madenci-cuzdani-olustur-sorgu](media/miner-wallet-create-query.png)
 
-#### Create your miner wallet
+Sunucu size yeni cüzdanın ezgilerini döndürecektir. Lütfen bunu yedekleyin ve güvenli bir şekilde saklayın.
 
-![miner-wallet-create-query](media/miner-wallet-create-query.png)
+![madenci-cuzdani-olustur-yanit](media/miner-wallet-create-response.png)
 
-The server will return you the new wallet mnemonic. Please backup and store it securely.
+#### Madenci adreslerinizi listeleme
 
-![miner-wallet-create-response](media/miner-wallet-create-response.png)
+![madenci-cuzdani-listele-adresler-sorgu](media/miner-wallet-list-addresses-query.png)
 
-#### List your miner addresses
+Sunucu size bir sonraki adımlar için 4 adres döndürecektir:
 
-![miner-wallet-list-addresses-query](media/miner-wallet-list-addresses-query.png)
+![madenci-cuzdani-listele-adresler-yanit](media/miner-wallet-list-addresses-response.png)
 
-The server will return you 4 addresses for the next step:
+## Madenci adreslerini yapılandırma
 
-![miner-wallet-list-addresses-response](media/miner-wallet-list-addresses-response.png)
+Şimdi 4 madenci adresinizi aldığınıza göre, düğümünüze atayarak madencilik yaparken ödül alabilirsiniz. Bunun için `.alephium/user.conf` dosyasına aşağıdaki içeriği eklemeniz gerekmektedir, ev klasörünüz altında[^1]:
 
-## Configure miner addresses
-
-Now that you have gotten your 4 miner addresses, you must assign it to your node so you can earn rewards when it starts mining. This can be done by adding the following content in the file `.alephium/user.conf` under your home folder[^1]:
-
-    alephium.network.external-address = "x.x.x.x:9973" // put your public IP here; otherwise remove this line
+    alephium.network.external-address = "x.x.x.x:9973" // buraya genel IP'nizi yazın; aksi halde bu satırı kaldırın
     alephium.mining.miner-addresses = [
       "1HiYeRbypJQK4nc6EFYWiRVdsdYukQKq8SvKQsfJ3wiR8",
       "1HD3q1G7qVoeyNA4U6HbBhFvv1FLUWNGwNavPamScpVLa",
@@ -56,58 +52,58 @@ Now that you have gotten your 4 miner addresses, you must assign it to your node
       "19vvD3QbfEYbJexk6yCtnDNpRrfr3xQv2Pzc6x265MRhD"
     ]
 
-Please restart your node to make these new configs take effect. Please be sure to add them in the same order they were returned by the endpoint, as they are sorted according to their group.
+Bu yeni yapılandırmaların etkili olması için lütfen düğümünüzü yeniden başlatın. Lütfen bunları aynı sırayla eklediğinizden emin olun, çünkü adresler gruplarına göre sıralanmıştır.
 
-## Security
+## Güvenlik
 
-By default, the API interface of Alephium is bound to localhost, your API endpoints are secure. However, if you configured `alephium.api.network-interface`, your endpoints might be exposed to public network. This can be dangerous as anyone would be able to access your miner wallet. Please consider to configure API Key following this guide: [API Key](full-node/full-node-more.md#api-key).
+Varsayılan olarak, Alephium'un API arayüzü localhost'a bağlıdır, API uç noktalarınız güvenlidir. Ancak, `alephium.api.network-interface`'i yapılandırdıysanız, uç noktalarınız genel ağa açık hale gelebilir. Bu, herhangi birinin madenci cüzdanınıza erişebileceği tehlikeli olabilir. Lütfen API Anahtarını yapılandırmak için bu kılavuzu takip etmeyi düşünün: [API Anahtarı](full-node/full-node-more.md#api-key).
 
-Please also consider to create another secure wallet and move your funds to that wallet using `sweep-all-addresses` endpoint regularly.
+Lütfen ayrıca düzenli olarak `sweep-all-addresses` uç noktasını kullanarak başka bir güvenli cüzdana daha fonlarınızı taşımayı düşünün.
 
-## Start mining
+## Madenciliği Başlatma
 
-### Make sure your full node is synced
+### Tam düğümünüzün senkronize olduğundan emin olun
 
-You could verify that by executing this endpoint:
+Bunu yaparak, bu uç noktayı yürüterek doğrulayabilirsiniz:
 
-![full-node-synced-query](media/full-node-synced-query.png)
+![tam-dugum-senkron-sorgu](media/full-node-synced-query.png)
 
-If you see `"synced": true` in the response, then you are ready to go.
+Yanıtta `"synced": true` görürseniz, o zaman hazırsınız demektir.
 
 ### Nvidia GPU
 
-Please follow the instructions on [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner#readme) to run the gpu miner for Nvidia GPUs.
+Nvidia GPU'lar için gpu madencisini çalıştırmak için lütfen [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner#readme) talimatlarını izleyin.
 
-Alternatively, you could run the gpu-miner with docker by following the documents here [https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional)
+Alternatif olarak, gpu-mineri docker ile çalıştırarak bu belgeleri takip edebilirsiniz: [https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional)
 
 ### AMD GPU
 
-Please follow the instructions on [https://github.com/alephium/amd-miner](https://github.com/alephium/amd-miner#readme) to run the gpu miner for AMD GPUs. Note that the performance of AMD miner is not in par with Nvidia miner.
+AMD GPU'lar için gpu madencisini çalıştırmak için lütfen [https://github.com/alephium/amd-miner](https://github.com/alephium/amd-miner#readme) talimatlarını izleyin. AMD madencinin performansının Nvidia madencinin performansıyla aynı olmadığını unutmayın.
 
-If you have any questions, feel free to reach out to the developers on [Discord](https://alephium.org/discord).
+Herhangi bir sorunuz varsa, geliştiricilerle [Discord](https://alephium.org/discord) üzerinden iletişime geçmekten çekinmeyin.
 
-## More info on miner wallet
+## Madenci cüzdanı hakkında daha fazla bilgi
 
-Here are more endpoints that are useful for miners.
+İşte madenciler için kullanışlı olan daha fazla uç nokta.
 
-#### Get your balance
+#### Bakiyenizi alın
 
-![miner-wallet-balance-query](media/miner-wallet-balance-query.png)
+![madenci-cuzdani-bakiye-sorgu](media/miner-wallet-balance-query.png)
 
-#### Change your active address
+#### Etkin adresinizi değiştirme
 
-![miner-wallet-change-active-address](media/miner-wallet-change-active-address.png)
+![madenci-cuzdani-etkin-adresi-degistir](media/miner-wallet-change-active-address.png)
 
-#### Transfer all your funds on the active address to another address
+#### Etkin adreste bulunan tüm fonları başka bir adrese aktarın
 
-![miner-wallet-sweep-all-query](media/miner-wallet-sweep-all-query.png)
+![madenci-cuzdani-tum-fonlari-aktar-sorgu](media/miner-wallet-sweep-all-query.png)
 
-#### Unlock your wallet
+#### Cüzdanınızı kilidini açın
 
-![miner-wallet-unlock-query](media/miner-wallet-unlock-query.png)
+![madenci-cuzdani-kilidini-ac-sorgu](media/miner-wallet-unlock-query.png)
 
-#### Restore your miner wallet
+#### Madenci cüzdanınızı geri yükleyin
 
-![miner-wallet-restore-query](media/miner-wallet-restore-query.png)
+![madenci-cuzdani-geri-yukle-sorgu](media/miner-wallet-restore-query.png)
 
-[^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
+[^1]: Ev klasörü sistemlerinize bağlıdır: Windows'ta `C:\Users\<kullanıcı-adınız>`, macOS'te `/Users/<kullanıcı-adınız>`, Linux'ta `/home/<kullanıcı-adınız>`.

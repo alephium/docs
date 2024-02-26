@@ -4,18 +4,14 @@ title: Alephium Stratum
 sidebar_label: Alephium stratum
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Öneri: [https://eips.ethereum.org/EIPS/eip-1571](https://eips.ethereum.org/EIPS/eip-1571) adresindeki EIP-1571'e dayanmaktadır.
+Mesajlar, EIP-1571'in JSON-RPC-2.0 belirtimini takip eder.
 
-<UntranslatedPageText />
-
-The proposal is based on: [https://eips.ethereum.org/EIPS/eip-1571](https://eips.ethereum.org/EIPS/eip-1571).
-Messages follow EIP-1571's JSON-RPC-2.0 specification.
-
-? - denotes that a property is optional
+? - bir özelliğin isteğe bağlı olduğunu belirtir
 
 ```
-Methods:
-  Requests:
+Yöntemler:
+  İstekler:
     mining.hello
     mining.subscribe
     mining.authorize
@@ -23,7 +19,7 @@ Methods:
     mining.noop
     connection.set_gzip
 
-  Notifications
+  Bildirimler
     mining.set_extranonce
     mining.set_target
     mining.set_cleanjobs

@@ -1,57 +1,53 @@
 ---
 sidebar_position: 30
-title: Troubleshooting
+title: Sorun Giderme
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+# Sorun Giderme
 
-<UntranslatedPageText />
+#### Neden 4 madenci adresimden sadece 1'ini geri yükleyebiliyorum?
 
-# Troubleshooting
+Madenci adresinizi geri yüklerken `isMiner = true` olarak belirtmeniz gerekmektedir. Lütfen buradaki örneğe bakınız: [Madenci Cüzdanını Geri Yükleme](solo-mining-guide.md#madenci-cüzdanınızı-geri-yükleyin)
 
-#### Why I can only restore 1 of my 4 miner addresses ?
+#### Madencimi aynı alt ağdaki başka bir bilgisayarımın tam düğümüne nasıl bağlarım?
 
-You have to specify `isMiner = true` when restoring your miner address. Please checkout the example here: [Restore-Miner-Wallet](solo-mining-guide.md#restore-your-miner-wallet)
-
-#### How to connect my miner to my full node on another computer in the same subnet ?
-
-1. Add the following to your `user.conf` and restart your full node.
+1. `user.conf` dosyanıza aşağıdakini ekleyin ve tam düğümünüzü yeniden başlatın.
 
 ```
 alephium.mining.api-interface = "0.0.0.0"
 ```
 
-2. Run your miner with `-a IP`, where the IP is your full node's IP in the subnet.
+2. Madencinizi `-a IP` ile çalıştırın, burada IP alt ağdaki tam düğümünüzün IP'sidir.
 
-#### How to use the Swagger UI of my VPS hosted full node ?
+#### VPS'de barındırılan tam düğümünün Swagger UI'ını nasıl kullanırım?
 
-SSH port forwarding is recommended:
+SSH port yönlendirmesi önerilir:
 
 ```
 ssh user@server  -L 12973:127.0.0.1:12973
 ```
 
-#### How to access the Swagger UI of my full node on another computer in the same subnet ?
+#### Aynı alt ağdaki başka bir bilgisayardaki tam düğümümün Swagger UI'ına nasıl erişirim?
 
-1. Add the following to your `user.conf` and restart your full node.
+1. `user.conf` dosyanıza aşağıdakini ekleyin ve tam düğümünüzü yeniden başlatın.
 
 ```
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-2. Change the `host` of Swagger UI to be the IP of your full node.
+2. Swagger UI'nın `host`unu tam düğümünüzün IP'si olarak değiştirin.
 
-#### My miner (via run-miner.sh) cannot connect to my full node on another computer
+#### Madencim (run-miner.sh ile) başka bir bilgisayardaki tam düğümüme bağlanamıyor
 
-The script `run-miner.sh` connects to `127.0.0.1` by default. You will need to add `-a IP` into `run-miner.sh`.
+`run-miner.sh` betiği varsayılan olarak `127.0.0.1` adresine bağlanır. `run-miner.sh` içine `-a IP` eklemeniz gerekecektir.
 
-#### Why the miner uses huge amount of memory on HiveOS?
+#### Neden Madenci, HiveOS'ta büyük miktarda bellek kullanıyor?
 
-You should deactivate the `log to write in RAM` with command `logs-on`.
+`logs-on` komutu ile `RAM'a yazma` seçeneğini devre dışı bırakmanız gerekmektedir.
 
-#### How to customize the auto-lock timeout for wallets?
+#### Cüzdanlar için otomatik kilitleme zamanlayıcısını nasıl özelleştiririm?
 
-You could change the auto-lock timeout of wallet with the following configuration:
+Aşağıdaki yapılandırmayla cüzdanın otomatik kilitleme zaman aşımını değiştirebilirsiniz:
 
 ```
 alephium.wallet.locking-timeout = 10 minutes
