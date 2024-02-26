@@ -1,18 +1,14 @@
 ---
 sidebar_position: 20
-title: Internationalization and Localization
-sidebar_label: Internationalization and localization
+title: Uluslararasılaştırma ve Yerelleştirme
+sidebar_label: Uluslararasılaştırma ve yerelleştirme
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
-# Internationalization and Localization (i18n)
+# Uluslararasılaştırma ve Yerelleştirme (i18n)
 
 ## Discord
 
-Find the following languages in [the official Discord](https://alephium.org/discord)
+Aşağıdaki dilleri [resmi Discord'da](https://alephium.org/discord) bulabilirsiniz:
 
 - AR 🌙العربية
 - CN 🐼 中文
@@ -23,42 +19,42 @@ Find the following languages in [the official Discord](https://alephium.org/disc
 - SP 🌮español
 - TR 🐺türkçe
 
-## Known localized community driven user-groups
+## Bilinen yerelleştirilmiş topluluk destekli kullanıcı grupları
 
-### Telegram groups
+### Telegram grupları
 
-Localized groups (these are non-official groups, created and modded by independant third-parties Alephium has no control on)
+Yerelleştirilmiş gruplar (bunlar resmi olmayan gruplardır, üçüncü taraflar tarafından oluşturulmuş ve moderasyonu yapılmıştır, Alephium'un kontrolü yoktur)
 
-Russian 🇷🇺 - https://t.me/alephiumgroup_ru
+Rusça 🇷🇺 - https://t.me/alephiumgroup_ru
 
-Spanish 🇪🇦 - https://t.me/minerosAlephium
+İspanyolca 🇪🇦 - https://t.me/minerosAlephium
 
-Chinese 🇨🇳 - https://t.me/alephiumCN
+Çince 🇨🇳 - https://t.me/alephiumCN
 
-German (DACH) 🇩🇪 - https://t.me/alphgermanofficial
+Almanca (DACH) 🇩🇪 - https://t.me/alphgermanofficial
 
-Turkish 🇹🇷 - https://t.me/AlephiumTurkey
+Türkçe 🇹🇷 - https://t.me/AlephiumTurkey
 
-Holland 🇳🇱 - https://t.me/AlephiumgroupNL
+Flemenkçe 🇳🇱 - https://t.me/AlephiumgroupNL
 
-Portuguese 🇵🇹 🇧🇷 - https://t.me/Alephium_pt
+Portekizce 🇵🇹 🇧🇷 - https://t.me/Alephium_pt
 
-Vietnamese 🇻🇳 - https://t.me/alephiumvn
+Vietnamca 🇻🇳 - https://t.me/alephiumvn
 
-Indonesia 🇮🇩 - https://t.me/AlephiumID
+Endonezce 🇮🇩 - https://t.me/AlephiumID
 
-French FR - https://t.me/Alephiumfr
+Fransızca FR - https://t.me/Alephiumfr
 
-Polish PL - https://t.me/alephiumPL
+Lehçe PL - https://t.me/alephiumPL
 
-Topical groups
+Konu grupları
 
-Mining https://t.me/alephium_mining
+Madencilik https://t.me/alephium_mining
 
-Trading https://t.me/alephium_trading
+Ticaret https://t.me/alephium_trading
 
-Bots
+Botlar
 
-Whales alert https://t.me/alphwhalesalert
+Balina uyarıları https://t.me/alphwhalesalert
 
-Insights https://t.me/alephiumin
+Görüşler https://t.me/alephiumin

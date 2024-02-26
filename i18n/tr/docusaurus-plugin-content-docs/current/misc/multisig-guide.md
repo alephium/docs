@@ -1,28 +1,24 @@
 ---
 sidebar_position: 30
-title: Multisig Guide
-sidebar_label: Multisig guide
+title: Çoklu İmza Kılavuzu
+sidebar_label: Çoklu imza kılavuzu
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Alephium, `m-of-n` çoklu imza adreslerini desteklemektedir.
 
-<UntranslatedPageText />
+Çoklu imza ile ilgili komutu [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) adresindeki `Çoklu-imza` bölümünde bulabilirsiniz. Tam düğümünüzün çalıştığından emin olun, böylece Swagger UI'ye erişebilirsiniz.
 
-Alephium is supporting `m-of-n` multi-signature addresses.
+## Çoklu imza adresi oluşturma
 
-You can find the related command for multisig at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) under the `Multi-signature` section. Make sure that your full node is running so that you can access the Swagger UI.
+1. İmzalanacak hesapların tüm genel anahtarlarını alın.
 
-## Create a multisig address
-
-1. Get all the public keys of the accounts for that multisig.
-
-   Public key can be retrieve with the wallet by calling:
+   Genel anahtar, cüzdanı şu şekilde çağırarak alınabilir:
 
    ```
    GET /wallets/{wallet_name}/addresses/{address}
    ```
 
-   response:
+   cevap:
 
    ```json
    {
@@ -31,7 +27,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-2. For example, if you want to create a multisig address with 3 accounts that needs 2 signatures to unlock (2-of-3), you can do:
+2. Örneğin, 3 hesap ile (2-of-3) kilidini açmak için 2 imza gereken bir çoklu imza adresi oluşturmak istiyorsanız, şunu yapabilirsiniz:
 
    ```
    POST /multisig/address
@@ -45,7 +41,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   response:
+   cevap:
 
    ```json
    {
@@ -53,13 +49,13 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   > ⚠️ WARNING: Make sure to remember the order of the public keys, you'll need to provide the same order later.
+   > ⚠️ UYARI: Genel anahtarların sırasını hatırlamayı unutmayın, daha sonra aynı sırayı sağlamanız gerekecektir.
 
-   Funds can now be send to that address.
+Artık bu adrese fon gönderilebilir.
 
-3. To use the funds, you need to build a multisig transaction.  
-   Pass the public keys that will sign the transaction, 2 in our example.  
-   Make sure to have the same order as during the address creation:
+3. Fonları kullanmak için, çoklu imza işlemi oluşturmanız gerekir.
+İmzalayacak genel anahtarları geçirin, örneğimizde 2.
+Adres oluşturulurken aynı sıraya sahip olduğunuzdan emin olun:
 
    ```
    POST /multisig/build
@@ -78,7 +74,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   response:
+   cevap:
 
    ```json
    {
@@ -89,7 +85,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-4. You can now send the `txId` to the people that need to sign the transaction. Everyone can sign it using their wallet:
+4. Şimdi txId'yi işlemi imzalaması gereken kişilere gönderebilirsiniz. Herkes cüzdanlarını kullanarak imzalayabilir:
 
    ```
    POST /wallets/{wallet_name}/sign
@@ -98,7 +94,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-   response:
+   cevap:
 
    ```json
    {
@@ -106,9 +102,9 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
    }
    ```
 
-5. Collect the signatures, 2 in our example (because `m=2`) and finally send the transaction:
+5. İmzaları toplayın, örneğimizde 2 (çünkü `m=2`) ve son olarak işlemi gönderin:
 
-   > NOTE: The signatures order needs to be the same as the public keys.
+   > NOT: İmza sırasının genel anahtarlarla aynı olması gerekir.
 
    ```
    POST /multisig/submit
@@ -122,7 +118,7 @@ You can find the related command for multisig at [http://127.0.0.1:12973/docs](h
 
    ```
 
-   response:
+   cevap:
 
    ```json
    {
