@@ -40,8 +40,8 @@
     "description": "Yan tarafta 'Ağ' kategorisi için etiket"
   },
   "sidebar.tutorialSidebar.category.Explorer Backend": {
-    "message": "Keşif Arka Ucu",
-    "description": "Yan tarafta 'Keşif Arka Ucu' kategorisi için etiket"
+    "message": "Explorer Backend",
+    "description": "Yan tarafta 'Explorer Backend' kategorisi için etiket"
   },
   "sidebar.tutorialSidebar.category.Tokens": {
     "message": "Jetonlar",
