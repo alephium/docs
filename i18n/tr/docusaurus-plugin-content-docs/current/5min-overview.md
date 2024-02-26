@@ -17,7 +17,7 @@ Yenilikçi sharding, ifade edici sUTXO ve etkin Az İş Kanıtı ile gerçek dü
 
 Harika bir ekip, olağanüstü bir topluluk ve çok fazla enerjinin yanı sıra, işte teknik özelliklerimiz:
 
-**Sharding ile ölçeklenir**. Alephium, BlockFlow adlı yeni ve tam bir sharding algoritması üzerine inşa edilmiştir. BTC'nin UTXO modelini ölçeklendirmek için iyileştirir ve farklı shardlar arasında uzlaşma sağlamak için DAG veri yapısını kullanır. Bu, Şu anda Bitcoins'in 7 TPS'sine kıyasla 10.000 İşlem/s'ye kadar izin verecektir (şu anda 400 TPS'den fazla).
+**Sharding ile ölçeklenir**. Alephium, BlockFlow adlı yeni ve bütün bir sharding algoritması üzerine inşa edilmiştir. BTC'nin UTXO modelini ölçeklendirmek için iyileştirir ve farklı shardlar arasında uzlaşma sağlamak için DAG veri yapısını kullanır. Bu, Şu anda Bitcoin'in 7 TPS'sine kıyasla 10.000 İşlem/s'ye kadar izin verecektir (şu anda 400 TPS'den fazla).
 
 **Programlanabilir ve güvenli**. Alephium, ETH üzerinde uygulanan hesap modeli kadar programlanabilirlik sunan bir durumlu UTXO modeli önerirken daha güvenlidir.
 

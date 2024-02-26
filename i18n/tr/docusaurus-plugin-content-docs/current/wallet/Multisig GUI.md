@@ -1,154 +1,149 @@
 ---
 sidebar_position: 90
-title: Multisig GUI
-sidebar_label: Multisig GUI
+title: Çoklu İmza Arayüzü
+sidebar_label: Çoklu İmza Arayüzü
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## Alephium Araç Seti: Çoklu İmza Cüzdanı Oluşturma Kılavuzu
 
-<UntranslatedPageText />
-
-## The Alephium Toolkit: A Guide to Creating a Multisig Wallet
-
-*Multisignature wallets are essential to a maturing infrastructure, as they provide more granularity & security in managing $ALPH wallets. The core-team is very happy to unveil the Multisig Wallet Creation tool, the first in the [Alephium Toolkit](https://alephium.github.io/alephium-toolkit/)!*
+*Çoklu imza cüzdanları, daha fazla granülerlik ve güvenlik sağladığı için olgunlaşan bir altyapıda temel bir rol oynarlar. Çekirdek ekibimiz, Alephium Araç Seti'nin ilk parçası olan Çoklu İmza Cüzdanı Oluşturma aracını gururla sunmaktan mutluluk duyuyor!*
 
 ![image](https://github.com/alephium/docs/assets/88235023/29f9c9e9-02e4-4d26-80bb-7d0e5c14b6d0)
 
 
-### Why use a Multisig?
+### Neden Çoklu İmza Kullanmalı?
 
-A multisig (multi-signature) wallet in cryptocurrency is used for enhanced security and joint control of assets. It requires multiple signatures to authorize a transaction, making it harder for attackers to access funds. It’s useful for people or organizations needing consensus before spending, serves as a backup solution if one key is lost, helps in regulatory compliance, and reduces the single point of failure risk associated with single key wallets.
+Kripto paralarda çoklu imza (multi-signature) cüzdanlar, artırılmış güvenlik ve varlıkların ortak kontrolü için kullanılır. Bir işlemi yetkilendirmek için birden fazla imza gerektirir, bu da saldırganların fonlara erişimini zorlaştırır. Harcamadan önce uzlaşma gereken kişiler veya kuruluşlar için faydalıdır, bir anahtar kaybolduğunda yedek bir çözüm olarak hizmet eder, düzenleyici uyumluluğa yardımcı olur ve tek anahtarlı cüzdanlarla ilişkilendirilen tek bir başarısızlık noktası riskini azaltır.
 
-Whether you want to have a setup where more than one person is in charge of funds (for example when funds belong to a company or association), or you want to have multiple keys for your own wallet, it is a good security practice to have it in a multisig wallet. We’ve talked about it in the past!
+Fonların birden fazla kişi tarafından yönetilmesini istiyorsanız (örneğin, fonlar bir şirkete veya derneğe aitse) veya kendi cüzdanınız için birden fazla anahtarınız olmasını istiyorsanız, bunu çoklu imza cüzdanında yapmak iyi bir güvenlik uygulamasıdır. Bu konuda daha önce konuştuk!
 
-Use the following guide to create a multisig wallet, and learn how to prepare transactions, sign and send them. Do not hesitate to let us know if you have any questions in our Discord.
+Aşağıdaki kılavuzu kullanarak bir çoklu imza cüzdanı oluşturun ve işlemleri hazırlama, imzalama ve gönderme konusunda bilgi edinin. Discord'da herhangi bir sorunuz varsa çekinmeden bize bildirin.
 
-### How does the multisig work?
-While multisig transactions are similar in nature to simple transactions, there are some structural differences in the process.
+### Çoklu imzanın nasıl çalıştığı?
+Çoklu imza işlemleri, basit işlemlere benzer olmasına rağmen, işlem sürecinde bazı yapısal farklılıklar bulunmaktadır.
 
-First, someone needs to build the transaction, which means to indicate the recipient, amount and how many (and which) signers need to sign it.
+İlk olarak, birisi işlemi oluşturmalıdır, yani alıcıyı, miktarı ve işlemi imzalamak için kaç (ve hangi) imzalayıcının gerektiğini belirtmelidir.
 
-Then, the signers must sign the transaction and report back with their signatures.
+Ardından, imzalayıcılar işlemi imzalamalı ve imzalarını rapor etmelidir.
 
-Finally, the builder assembles the signatures and sends the transaction.
+Son olarak, oluşturucu imzaları birleştirir ve işlemi gönderir.
 
-In this example tutorial, we’ll conceive of a multisig where M out of N people needs to sign to be able to send transactions.
+Bu örnek eğitimde, M'nin N kişinin işlemi imzalaması gereken bir çoklu imza hayal edeceğiz.
 
 
-**1 — Get all the Public Keys**
+**1 — Tüm Halka Açık Anahtarları Alın**
 
-The first step is to get the Public keys of all signers who will be part of the multisig.
+İlk adım, çoklu imza'nın tüm imzalayıcılarının Halka açık anahtarlarını almak için şunları içerir.
 
-All the signers need to complete the following steps:
+Tüm imzalayıcılar aşağıdaki adımları tamamlamalıdır:
 
-* Access https://alephium.github.io/alephium-toolkit/.
-* The landing page is the “Wallet Info”.
-* Click on the “Connect Alephium” button in the top right.
-* Choose the wallet type you want to connect with the dApp.
-* After the successful connection, your wallet information will appear in the wallet info section.
-* Copy your public key, and send it to the creator of the multisig.
+* https://alephium.github.io/alephium-toolkit/ adresine erişin.
+* Karşılama sayfası "Cüzdan Bilgisi"dir.
+* Sağ üst köşedeki "Alephium'a Bağlan" düğmesine tıklayın.
+* dApp ile bağlanmak istediğiniz cüzdan türünü seçin.
+* Başarılı bağlantıdan sonra, cüzdan bilgileriniz cüzdan bilgisi bölümünde görüntülenecektir.
+* Halka açık anahtarınızı kopyalayın ve çoklu imzanın oluşturucusuna gönderin.
 
 ![image](https://github.com/alephium/docs/assets/88235023/235b6c73-5519-4231-9f46-21e822843bfe)
 
 
-**2 — Create the Wallet**
+**2 — Cüzdanı Oluşturun**
 
-The second step consists of creating the multisig with the public keys of all signers. The creator of the multisig (which can be any of the signers (or someone else) has to complete the following steps:
+İkinci adım, tüm imzalayıcıların halka açık anahtarlarıyla çoklu imzayı oluşturmaktan oluşur. Çoklu imzanın oluşturucusu (imzalayıcılardan herhangi biri (veya başka biri) olabilir) şunları tamamlamalıdır:
 
 ![image](https://github.com/alephium/docs/assets/88235023/43f25034-30af-4b70-9565-2514b656138c)
 
-* Navigate to [Create Multisig Wallet](https://alephium.github.io/alephium-toolkit/)
-* Choose a name for your multisig wallet
-* “Add Signer” and input all “public keys” from each signer (and name them correctly!). Add as many as there are potential signers.
-* Choose the number of signatures required to send a transaction (2 out of 3, 3 out of 5, or any M out of N): this is the quorum required by your multisig to actually send a transaction.
-* Click on “Create Multisig”
-* The next screen shows a recap of the multisig’s configuration. Check that it’s all good.
-* Click “Export”: this will copy the wallet information you need to send back to all other signers so that they can import it.
+* [Çoklu İmza Cüzdanı Oluştur](https://alephium.github.io/alephium-toolkit/) sayfasına gidin
+* Çoklu imzanız için bir ad seçin
+* Her imzalayıcının "halka açık anahtarlarını" girin (ve bunları doğru bir şekilde adlandırın!). Olası imzalayıcılar kadar ekleyin.
+* Bir işlemi gönderebilmek için gereken imzaların sayısını seçin (3'ten 2, 5'ten 3 veya herhangi bir M'den N'ye): bu çoklu imzanızın gerçekte bir işlem gönderebilmek için gereken kotağıdır.
+* "Çoklu İmza Oluştur" a tıklayın
+* Sonraki ekran, çoklu imzanın yapılandırmasının bir özetini gösterir. Her şeyin yolunda olduğunu kontrol edin.
+* "Dışa Aktar" a tıklayın: Bu, diğer tüm imzalayıcılara geri göndermeleri için ihtiyacınız olan cüzdan bilgilerini kopyalar.
 
+**3 — Çoklu imza cüzdanını içe aktarın** 
 
-**3 — Import the multisig wallet** 
-
-In this third step, the signers will import the multisig wallet, so they are able to subsequently sign transactions. All the signers have to complete the following:
+Bu üçüncü adımda, imzalayıcılar işlemleri imzalamak için çoklu imza cüzdanını içe aktaracaklardır. Tüm imzalayıcılar aşağıdakileri tamamlamalıdır:
 
 ![image](https://github.com/alephium/docs/assets/88235023/ddf154db-31c7-45b4-bd37-48c61811ebc5)
 
-* Navigate to [Import Multisig Wallet](https://alephium.github.io/alephium-toolkit/#/multisig/import)
-* Click on “Import Multisig”
-* You can now either build and/or sign transactions in that particular multisig
-* The next step is to put some money on the multisig, so you can actually build, sign and then send a transaction!
+* [Çoklu İmza Cüzdanını İçe Aktar](https://alephium.github.io/alephium-toolkit/#/multisig/import) sayfasına gidin
+* "Çoklu İmza İçe Aktar" a tıklayın
+* Artık bu belirli çoklu imzada işlem oluşturabilir ve/veya imzalayabilirsiniz
+* Bir sonraki adım, bazı fonları çoklu imzaya koymaktır, böylece gerçekten bir işlem oluşturabilir, imzalayabilir ve ardından gönderebilirsiniz!
 
 
-**4 — Send $ALPH to the multisig**
+**4 — $ALPH'yi çoklu imzaya gönderin**
 
-Before you can make transactions with the multisig, you need to send some $ALPH to it.
+Çoklu imza ile işlem yapmadan önce, ona bir miktar $ALPH göndermeniz gerekir.
 
 ![image](https://github.com/alephium/docs/assets/88235023/f16d17dd-1520-4869-8506-6ab0e0cc8209)
 
-* Go to [Show Multisig Wallet](https://alephium.github.io/alephium-toolkit/#/multisig/show)
-* Copy the “address” content
-* Go to your wallet of choice (can be another multisig, the desktop, or extension wallet) and paste the address in the recipient field, choose the amount, the token, and send! — You can also give this address to someone else to pay to the multisig!
-* (If you want to send a token, remember you will need some $ALPH to pay for gas anyway, so send some too)
+* [Çoklu İmza Cüzdanını Göster](https://alephium.github.io/alephium-toolkit/#/multisig/show) sayfasına gidin
+* "Adres" içeriğini kopyalayın
+* İstediğiniz cüzdanınıza gidin (başka bir çoklu imza, masaüstü veya uzantı cüzdanı olabilir) ve adresi alıcı alanına yapıştırın, miktarı, tokenı seçin ve gönderin! — Bu adresi başkasına da çoklu imzaya ödeme yapması için verebilirsiniz!
+* (Bir token göndermek istiyorsanız, yine de gaz için bazı $ALPH göndermeniz gerekeceğini unutmayın, bu yüzden biraz da gönderin)
 
 
-**5 — Build a transaction**
+**5 — Bir işlem oluşturun**
 
-Any party to a multisig wallet can now act as the builder of a transaction. So get on your builder’s hat, and start building a transaction:
+Herhangi bir çoklu imza cüzdanı tarafından şimdi bir işlemi oluşturma yetkisine sahip olabilir. Dolayısıyla işlem oluşturucusu olarak harekete geçin ve bir işlem oluşturmaya başlayın:
 
 ![image](https://github.com/alephium/docs/assets/88235023/25a813a5-bbdc-4ade-874f-aa1d3c256368)
 
-* Navigate to [Build Transaction](https://alephium.github.io/alephium-toolkit/#/multisig/build-tx)
-* Choose your multisig from the list, select the signers you need/want, the amount and the recipient’s address for the transaction. Check well that you selected the correct signers, and that you are satisfying the quorum requirement!
-* Click “Build Transaction”. You’ll get a text blurb, which is essentially an unsigned transaction.
-* Copy this, and send it to the signers you selected.
+* [İşlem Oluştur](https://alephium.github.io/alephium-toolkit/#/multisig/build-tx) sayfasına gidin
+* Listeden çoklu imzanızı seçin, ihtiyacınız/istediğiniz imzalayıcıları, miktarı ve işlem için alıcının adresini seçin. Doğru imzalayıcıları seçtiğinizden ve kota gereksinimini karşıladığınızdan emin olun!
+* "İşlem Oluştur" a tıklayın. Bir işaretsiz işlem olan temel bir metin parçası alırsınız.
+* Bunun kopyasını alın ve seçtiğiniz imzalayıcılara gönderin.
 
 ![image](https://github.com/alephium/docs/assets/88235023/df652c60-e247-4b6d-8363-e847729ef0d7)
 
-**6 — Sign the Transaction**
+**6 — İşlemi İmzalayın**
 
-You are a party to a multisig transaction, the builder of the transaction sent you a transaction to sign in the form of a long text blurb, this is what you need to do:
+Bir çoklu imza işlemine taraf olduğunuzda, işlem oluşturucusu tarafından bir işlemi imzalamak için uzun bir metin parçası olarak gönderilen bir işlemi imzalamak istiyorsunuzdur, işte yapmanız gerekenler:
 
 ![image](https://github.com/alephium/docs/assets/88235023/2c4bc5fa-c262-4d8b-a102-03ab20529689)
 
-* Go to [Sign Transaction](https://alephium.github.io/alephium-toolkit/#/multisig/sign-tx)
-* Make sure you are a party to the multisig (if you haven’t imported the multisig wallet, this is not going to work, see step 3)
-* Input the transaction details
-* Verify the transaction parameters!
-* Click on “Sign”
-* Your wallet will open and show the transaction: sign the transaction.
-* On the “sign transaction” page, below the transaction hash, a signature will appear
-* Copy the signature & paste it on the “Build Transaction” page (or send it back to the transaction builder!)
+* [İşlem İmzalama](https://alephium.github.io/alephium-toolkit/#/multisig/sign-tx) sayfasına gidin
+* Çoklu imzaya taraf olduğunuzdan emin olun (çoklu imza cüzdanını içe aktarmadıysanız, bu çalışmayacak, bkz. adım 3)
+* İşlem ayrıntılarını girin
+* İşlem parametrelerini doğrulayın!
+* "İmzala" ya tıklayın
+* Cüzdanınız açılacak ve işlemi gösterecek: işlemi imzalayın.
+* "İmzala işlem" sayfasında, işlem kimliğinin altında, bir imza görünecektir
+* İmzayı kopyalayın ve "İşlem Oluştur" sayfasına yapıştırın (veya işlem oluşturucusuna geri gönderin!)
 
 ![image](https://github.com/alephium/docs/assets/88235023/c11ff378-ff58-4eef-9db3-021041205c3d)
 
-**7— Send the Transaction**
+**7 — İşlemi Gönderin**
 
-At this stage, the wallet has been created, a transaction has been built and distributed to all signers, they have signed the transaction and sent back the signatures to the builder. He must now do the following:
+Bu aşamada, cüzdan oluşturuldu, bir işlem oluşturuldu ve tüm imzalayıcılara dağıtıldı, işlemleri imzaladılar ve imzaları oluşturucuya geri gönderdiler. Şimdi yapması gerekenler şunlardır:
 
 ![image](https://github.com/alephium/docs/assets/88235023/2c1107b7-11f7-4cd0-982a-4c60ee90d924)
 
-* Go back to the [“build transaction”](https://alephium.github.io/alephium-toolkit/#/multisig/build-tx) page
-* Input the signatures in the relevant field
-* Click “submit”: the transaction will be sent.
-* You can click on “view on explorer” to check it on the explorer
+* [“İşlemi Oluştur”](https://alephium.github.io/alephium-toolkit/#/multisig/build-tx) sayfasına geri dönün
+* İmzaları ilgili alana girin
+* "Gönder" e tıklayın: işlem gönderilecektir.
+* İzleyicide kontrol etmek için “keşfedici üzerinde görüntüle” ye tıklayabilirsiniz
 
 ![image](https://github.com/alephium/docs/assets/88235023/6fcec318-8c61-4c33-9157-d9cd66f0e3d8)
 
-And that’s it!
+Ve işte bu kadar!
 
-You have successfully created and created and used a Multisig wallet to send a transaction on Alephium. For those who value both security and flexibility and need a way to share the funds ownership with others, a Multisig wallet is a powerful tool to have in your crypto arsenal. Remember, the future of finance is not just about owning digital assets but [securing them smartly](https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444).
+Alephium üzerinde başarılı bir şekilde çoklu imza cüzdanı oluşturdunuz ve bir işlem göndermek için kullandınız. Hem güvenlik hem de esneklik değer verenler ve fonların sahipliğini başkalarıyla paylaşma ihtiyacı duyanlar için, çoklu imza cüzdanı kripto silahınızda güçlü bir araçtır. Unutmayın, finansın geleceği yalnızca dijital varlıklara sahip olmakla ilgili değil, [akıllıca güvenliğini sağlamakla ilgilidir](https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444).
 
-*Let us know what you think, follow the evolution of the code on [Github](https://github.com/alephium), follow the news on [Twitter](https://twitter.com/alephium) & [Medium](https://medium.com/@alephium) or come interact onboard on [Discord](https://discord.com/invite/GEbcpajCJG) & [Telegram](https://t.me/alephiumgroup)!*
+*Düşüncelerinizi bize bildirin, kodun gelişimini [Github](https://github.com/alephium) üzerinden takip edin, haberleri [Twitter](https://twitter.com/alephium) & [Medium](https://medium.com/@alephium) üzerinden takip edin veya [Discord](https://discord.com/invite/GEbcpajCJG) & [Telegram](https://t.me/alephiumgroup) üzerinde etkileşime geçin!*
 
-### Multisig FAQ:
+### Çoklu İmza SSS:
 
-**Why is the multisig wallet address so long?**
+**Neden çoklu imza cüzdan adresi çok uzun?**
 
-We wanted to make the native multisig as simple as possible, so the address contains more information for now. Eventually, we may implement shorter multisig addresses based on smart contracts as well, similar to what’s usable on Ethereum.
+Yerel çoklu imzayı mümkün olduğunca basit hale getirmek istedik, bu nedenle adres şu anda daha fazla bilgi içerir. Sonunda, Ethereum'da kullanılabilir olan akıllı sözleşmelere dayalı daha kısa çoklu imza adreslerini de benzer şekilde uygulayabiliriz.
 
-**Does 3 out of 5 mean that any 3 out of all 5 signers can sign?**
+**5'ten 3, herhangi 3'ten 5'i mi ifade ediyor?**
 
-No. When you build a transaction, you need to designate specifically which 3 signers out of the 5 have to sign. A transaction is only valid if signed by the 3 signers designated during the building process. If you’d like to change the set of signers for a transaction, you have to rebuild it.
+Hayır. Bir işlem oluşturduğunuzda, 5 imzalayıcıdan 3'ünün belirtilmesi gereken 3 imzalayıcıyı belirlemelisiniz. Bir işlem, sadece oluşturma sürecinde belirlenen 3 imzalayıcı tarafından imzalandığında geçerlidir. Bir işlem için imzalayıcı kümesini değiştirmek istiyorsanız, yeniden oluşturmanız gerekir.
 
-**Is the toolkit the only way to create and use multi-signature wallets?**
+**Araç takımı, çoklu imza cüzdanlarını oluşturmak ve kullanmak için tek yol mudur?**
 
-No, multi-signature wallets can be created and managed using the node wallet. Find the tutorial for this [here](https://docs.alephium.org/misc/multisig-guide/).
+Hayır, çoklu imza cüzdanları düğüm cüzdanını kullanarak oluşturulabilir ve yönetilebilir. Buna ilişkin öğreticiyi [burada](https://docs.alephium.org/misc/multisig-guide/) bulabilirsiniz.

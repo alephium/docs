@@ -1,27 +1,23 @@
 ---
 sidebar_position: 40
-title: Node Wallet
-sidebar_label: Node wallet
+title: Node Cüzdanı
+sidebar_label: Node Cüzdanı
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Cüzdan API'sine [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) adresindeki Swagger UI aracılığıyla veya `curl` kullanarak erişilebilir. Tam düğümünüzün çalıştığından emin olun, böylece Swagger UI'ye erişebilirsiniz.
 
-<UntranslatedPageText />
+## Yeni bir cüzdan oluşturun
 
-The wallet API can be called using our Swagger UI at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) or by using `curl`. Make sure that your full node is running so you could access the Swagger UI.
-
-## Create a new wallet
-
-You can create a new wallet by doing a POST with the following data on `/wallets`.
+Aşağıdaki verilerle `/wallets` adresine POST işlemi yaparak yeni bir cüzdan oluşturabilirsiniz.
 
 ```json
 {
   "password": "123456",
-  "walletName": "foo" //optional (wallet-x) by default
+  "walletName": "foo" //isteğe bağlı (varsayılan olarak wallet-x)
 }
 ```
 
-The server must response successfully giving you our new wallet mnemonic.
+Sunucunun, yeni cüzdan mnemoniklerimizi size başarıyla vermesi gerekmektedir.
 
 ```json
 {
@@ -30,7 +26,7 @@ The server must response successfully giving you our new wallet mnemonic.
 }
 ```
 
-Fetch your new wallet address by `GET /wallets/{wallet_name}/addresses`
+Yeni cüzdan adresinizi  `GET /wallets/{wallet_name}/addresses` ile alın.
 
 ```json
 {
@@ -39,8 +35,7 @@ Fetch your new wallet address by `GET /wallets/{wallet_name}/addresses`
 }
 ```
 
-If you already created a wallet once but it got deleted or you don't remember your password, you can restore your wallet with your `mnemonic` using:
-
+Daha önce bir kez bir cüzdan oluşturduysanız ancak silindi veya şifrenizi hatırlamıyorsanız,  `mnemonic` kullanarak cüzdanınızı geri yükleyebilirsiniz:
 ```
 PUT /wallets
 {
@@ -50,9 +45,9 @@ PUT /wallets
 }
 ```
 
-## Lock/Unlock
+## Kilitleme/Açma
 
-You wallet will automatically be locked after some time, you'll need to unlock it if you want to use it:
+Bir süre sonra cüzdanınız otomatik olarak kilitlenecektir, kullanmak istiyorsanız kilidini açmanız gerekecektir:
 
 ```
 POST /wallets/{wallet_name}/unlock
@@ -61,16 +56,15 @@ POST /wallets/{wallet_name}/unlock
 }
 ```
 
-You can also manually lock it:
+Ayrıca manuel olarak kilitleyebilirsiniz:
 
 ```
 POST /wallets/{wallet_name}/lock
 ```
 
-## Query for balance
+## Bakiye sorgusu
 
-You can check the current balance with `GET /wallets/{wallet_name}/balances`
-response:
+Mevcut bakiyeyi `GET /wallets/{wallet_name}/balances` ile kontrol edebilirsiniz. Yanıt:
 
 ```json
 {
@@ -84,9 +78,9 @@ response:
 }
 ```
 
-## Transfering funds
+## Fon transferi
 
-You can submit a transaction from a wallet to an address by doing:
+Bir cüzdandan bir adrese bir işlem gönderebilirsiniz:
 
 ```
 POST /wallets/{wallet_name}/transfer
@@ -98,7 +92,7 @@ POST /wallets/{wallet_name}/transfer
 }
 ```
 
-The server must response succussfully with the transaction id and the group information.
+Sunucu, işlem kimliği ve grup bilgileriyle başarılı bir şekilde yanıt vermelidir.
 
 ```json
 {

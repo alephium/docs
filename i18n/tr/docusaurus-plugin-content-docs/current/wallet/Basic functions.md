@@ -1,102 +1,100 @@
 ---
 sidebar_position: 70
-title: Basic Functions
-sidebar_label: Basic Functions
+title: Temel Fonksiyonlar
+sidebar_label: Temel Fonksiyonlar
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+# Temel Fonksiyonlar
 
-# Basic Functions
+## Uzantı Cüzdanında Belirli Bir Grup İçin Yeni Bir Adres Nasıl Oluşturulur
 
-## How to generate a new address for a specific group in the Extension Wallet
+Belirli bir gruba bir adres oluşturmanın nasıl yapılacağına dair bir rehber burada bulunmaktadır. 
+Bazen bu, Alephium Blok Zincirindeki dApp'lerle etkileşim kurmak için gereklidir. (Gruplar ve Alephium'daki [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) hakkında daha fazla bilgi için [buraya](https://twitter.com/alephium/status/1681307477961482241) tıklayın).
 
-Here's a tutorial on how to create an address for a specific group. 
-Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
+1. Uzantı Cüzdanınızı kilitleyin.
 
-1. Unlock your Extension Wallet.
+![adım01](https://github.com/alephium/docs/assets/88235023/efa34122-c996-4a5b-a1bc-a2c3d97b36bd)
 
-![step01](https://github.com/alephium/docs/assets/88235023/efa34122-c996-4a5b-a1bc-a2c3d97b36bd)
-
-2. Click on the Wallet Name in the top left corner.
+2. Sol üst köşedeki Cüzdan Adına tıklayın.
   
-![step02](https://github.com/alephium/docs/assets/88235023/8c169719-ebe5-4556-a967-ffae987bc4c3)
+![adım02](https://github.com/alephium/docs/assets/88235023/8c169719-ebe5-4556-a967-ffae987bc4c3)
 
-3. Press the “+” button in the top right corner.
+3. Sağ üst köşedeki “+” düğmesine basın.
   
-![step03](https://github.com/alephium/docs/assets/88235023/a84a7019-d8b2-4045-9133-f10a115e3512)
+![adım03](https://github.com/alephium/docs/assets/88235023/a84a7019-d8b2-4045-9133-f10a115e3512)
 
-*4. Click on the “Group” dropdown menu and select a group of your choice.
+*4. “Grup” açılır menüsüne tıklayın ve istediğiniz bir grubu seçin.
   
-![step04](https://github.com/alephium/docs/assets/88235023/f3192c1e-9cf8-432b-9283-784c97ea3108)
+![adım04](https://github.com/alephium/docs/assets/88235023/f3192c1e-9cf8-432b-9283-784c97ea3108)
 
-Optionally you could choose to use Schnorr signatures (more information about this feature can be found [here](https://twitter.com/alephium/status/1648310494661595137)). Once you’re done, click “Create a new Alephium Account.”
+İsteğe bağlı olarak Schnorr imzalarını kullanmayı seçebilirsiniz (bu özelliğe ilişkin daha fazla bilgi [burada](https://twitter.com/alephium/status/1648310494661595137) bulunabilir). İşiniz bittiğinde, “Yeni Bir Alephium Hesabı Oluştur” düğmesine tıklayın.
 
-You can repeat this process for every group (0, 1, 2, 3) you want an address on.
-
-
-
-## How to generate a new address for a specific group in the Desktop Wallet
-
-Here's a tutorial on how to create an address for a specific group. 
-Sometimes this is needed to interact with dApps on the Alephium Blockchain. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
-
-1. Unlock your Desktop Wallet.
-
-![stepp01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
-
-2. Click on the “Addresses & Contacts” menu.
-
-![stepp02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
-
-3. Press the blue “New Address” button.
-
-![stepp03](https://github.com/alephium/docs/assets/88235023/57595a9a-1588-43ff-a7cc-8d57b08e108f)
-
-Once the menu shows up, choose a name and a colour for your new address.
-
-Then, turn on the “Advanced options” toggle and select the group you want to generate your new address on.
-
-Press “Generate”. You can repeat this process for every group you want an address on (0, 1, 2, 3) or use the next method for batch address creation.
-
-## How to generate a new address for all groups at once in the Desktop Wallet
-
-1. Unlock your Desktop Wallet.
-
-![stepp01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
-
-2. Click on the “Addresses & Contacts” menu.
-
-![stepp02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
-
-3. Click on the "wrench" icon (advanced operations).
-
-![stepp04](https://github.com/alephium/docs/assets/88235023/19999aec-b9dc-4b40-bb7b-3ee8dfab49cf)
-
-Once the menu appears, click the blue "Start" button in the "Generate one address per group" section. In the popup, choose a name for the wallets. Then click on the blue "Generate" button.
-
-Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
+Bu işlemi her grup (0, 1, 2, 3) için istediğiniz adres için tekrarlayabilirsiniz.
 
 
-## Requesting Testnet ALPH on the Extension Wallet
 
-1. Switch from “Mainnet” to “Testnet”
+## Masaüstü Cüzdanında Belirli Bir Grup İçin Yeni Bir Adres Nasıl Oluşturulur
+
+Belirli bir gruba bir adres oluşturmanın nasıl yapılacağına dair bir rehber burada bulunmaktadır. 
+Bazen bu, Alephium Blok Zincirindeki dApp'lerle etkileşim kurmak için gereklidir. (Gruplar ve Alephium'daki [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) hakkında daha fazla bilgi için [buraya](https://twitter.com/alephium/status/1681307477961482241) tıklayın).
+
+1. Masaüstü Cüzdanınızı kilitleyin.
+
+![adım01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
+
+2. “Adresler & İletişim” menüsüne tıklayın.
+
+![adım02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
+
+3. Mavi “Yeni Adres” düğmesine basın.
+
+![adım03](https://github.com/alephium/docs/assets/88235023/57595a9a-1588-43ff-a7cc-8d57b08e108f)
+
+Menü göründüğünde, yeni adresiniz için bir isim ve renk seçin.
+
+Ardından, “Gelişmiş seçenekler” anahtarını açın ve yeni adresinizi oluşturmak istediğiniz grubu seçin.
+
+“Oluştur” a basın. Bu işlemi her grup için istediğiniz adres için tekrarlayabilirsiniz (0, 1, 2, 3) veya toplu adres oluşturma için bir sonraki yöntemi kullanabilirsiniz.
+
+## Masaüstü Cüzdanında Tüm Gruplar İçin Bir Anda Yeni Bir Adres Nasıl Oluşturulur
+
+1. Masaüstü Cüzdanınızı kilitleyin.
+
+![adım01](https://github.com/alephium/docs/assets/88235023/549cf7e5-472d-40f9-82c3-95d55d87bd73)
+
+2. “Adresler & İletişim” menüsüne tıklayın.
+
+![adım02](https://github.com/alephium/docs/assets/88235023/fa500925-2282-4cbb-a4fe-8287f156fd05)
+
+3. “Anahtar” simgesine (gelişmiş işlemler) tıklayın.
+
+![adım04](https://github.com/alephium/docs/assets/88235023/19999aec-b9dc-4b40-bb7b-3ee8dfab49cf)
+
+Menü göründüğünde, "Her gruba bir adres oluştur" bölümünde mavi "Başlat" düğmesine tıklayın. Açılan pencerede, cüzdanlar için bir isim seçin. Daha sonra mavi "Oluştur" düğmesine tıklayın.
+
+Şimdi her grupta bir adresiniz var. (Gruplar ve Alephium'daki [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) hakkında daha fazla bilgi için [buraya](https://twitter.com/alephium/status/1681307477961482241) tıklayın).
+
+
+## Uzantı Cüzdanında Testnet ALPH İsteği
+
+1. "Ana Ağ"dan "Test Ağı"na geçin
 
 ![faucet001](https://github.com/alephium/docs/assets/88235023/2c83938e-d91a-4f64-9aa9-5ff275a77fd2)
 
-2. Click on “+Add Funds”, and then press “request $ALPH”
+2. “+Fon Ekle”'ye tıklayın ve ardından “$ALPH isteği”'ni seçin
 
 ![faucet002](https://github.com/alephium/docs/assets/88235023/85c4403d-1281-4005-b8dc-e1704b60c508)
 
-In about 1-2 minutes you should receive 12 testnet $ALPH in your balance.
+1-2 dakika içinde bakiyenize 12 testnet $ALPH almalısınız.
 
-# Requesting Testnet ALPH on the Desktop Wallet
+# Masaüstü Cüzdanında Testnet ALPH İsteği
 
-1. Switch from “Mainnet” to “Testnet”
+1. "Ana Ağ"dan "Test Ağı"na geçin
 
 ![faucet01](https://github.com/alephium/docs/assets/88235023/b0c6dcc1-3e21-4dac-92fc-2f371ef9d513)
 
-2. Open “Settings”, choose “Developer Tools”, enable “developer tools”, and click on “Receive testnet tokens”
+2. “Ayarlar”'ı açın, “Geliştirici Araçları”'nu seçin, “geliştirici araçlarını etkinleştir”'i etkinleştirin ve “test ağı tokenlerini al”'ı tıklayın
 
 ![faucet02](https://github.com/alephium/docs/assets/88235023/d8ba431b-f556-4734-afe3-faef821822c4)
 
-You will receive 12 Testnet $ALPH in about 1-2 minutes!
+Yaklaşık 1-2 dakika içinde 12 Testnet $ALPH alacaksınız!

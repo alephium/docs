@@ -1,138 +1,134 @@
 ---
 sidebar_position: 50
-title: Ledger
-sidebar_label: Ledger
+title: Defter(Ledger)
+sidebar_label: Defter(Ledger)
 ---
-
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ![IMG_8932-2](https://github.com/alephium/alephium/assets/88235023/010e915e-0ecd-4f8f-808e-4223202eaecd)
 
-## This is a tutorial on how to install the Alephium App in your ledger and use it to sign transactions
+## Bu, Ledger'ınıza Alephium Uygulamasını nasıl kuracağınızı ve işlemleri imzalamak için nasıl kullanacağınızı anlatan bir rehberdir
 
-🚨 *Important information: The Alephium App for Ledger Devices is a custom/community App developed by Alephium. It is not available on Ledger Live (yet!). It requires you to download other software on your computer and has several manual technical steps. Proceed only if you are sure that you understand how to perform this operation!*
+🚨 *Önemli bilgi: Alephium Cihazları için Alephium Uygulaması, Alephium tarafından özel/topluluk Uygulaması olarak geliştirilmiştir. Şu anda Ledger Live'da mevcut değildir. Bu işlemi nasıl gerçekleştireceğinizi anladığınızdan eminseniz devam edin!*
 
-🚨 *Since this is an early Alpha version, it is advisable to use a new/fresh ledger with no other coins managed on it.*
+🚨 *Bu, erken Alfa sürümü olduğundan, üzerinde yönetilen başka paralar olmayan yeni/başlangıç bir cihaz kullanmanız önerilir.*
 
-🚨 *The Ledger app only works with the latest version (v0.7.0) of the extension wallet for now.*
+🚨 *Şu anda Ledger uygulaması sadece en son sürüm (v0.7.0) uzantı cüzdanıyla çalışmaktadır.*
 
-### Video Tutorial
-A tutorial in a video format can be found here: https://www.youtube.com/watch?v=YBQy_siZh6w
+### Video Rehberi
+Video formatında bir rehber burada bulunabilir: https://www.youtube.com/watch?v=YBQy_siZh6w
 
-### Written Tutorial
+### Yazılı Rehber
 
-**1 — Download the new wallet release from**: Chrome — [Extension Wallet](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) / Firefox — [Extension Wallet](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
-
-
-**2 — Install the necessary software** (if you already have PIP & Python installed, jump to step 3)
-
-You will need Python and PIP installed on your computer to get the Alephium App on your Ledger:
-
-* Python ([how to for Windows](https://www.simplilearn.com/tutorials/python-tutorial/python-installation-on-windows#:~:text=To%20download%20Python%2C%20you%20need,then%20select%20the%20Windows%20option.), [how to for Mac](https://docs.python.org/3/using/mac.html), [how to for Linux](https://docs.python-guide.org/starting/install3/linux/))
-* PIP ([how to for Windows](https://www.dataquest.io/blog/install-pip-windows/), [how to for Mac](https://www.groovypost.com/howto/install-pip-on-a-mac/), [how to for Linux](https://docs.python-guide.org/starting/install3/linux/))
+**1 — Yeni cüzdan sürümünü şuradan indirin**: Chrome — [Uzantı Cüzdanı](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) / Firefox — [Uzantı Cüzdanı](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 
 
-**3 — Install the Ledger Python Library**
+**2 — Gerekli yazılımı kurun** (eğer zaten PIP ve Python kuruluysa, adım 3'e geçin)
+
+Ledger'ınıza Alephium Uygulamasını almak için bilgisayarınızda Python ve PIP kurulu olması gerekmektedir:
+
+* Python ([Windows için nasıl](https://www.simplilearn.com/tutorials/python-tutorial/python-installation-on-windows#:~:text=Python%20indirmek%20i%C3%A7in%2C%20Python%20web,and%20run%20the%20installer.), [Mac için nasıl](https://docs.python.org/3/using/mac.html), [Linux için nasıl](https://docs.python-guide.org/starting/install3/linux/))
+* PIP ([Windows için nasıl](https://www.dataquest.io/blog/install-pip-windows/), [Mac için nasıl](https://www.groovypost.com/howto/install-pip-on-a-mac/), [Linux için nasıl](https://docs.python-guide.org/starting/install3/linux/))
+
+
+**3 — Ledger Python Kütüphanesini Kurun**
 
 ![image](https://github.com/alephium/docs/assets/88235023/fade8c08-f3a1-41b2-b7e9-9a3cd638a683)
 
-We are going to use the Ledger Python Library (you can find it here). It is necessary because you are going to install a custom App onto your Ledger Device.
+Ledger Python Kütüphanesini kullanacağız (burada bulabilirsiniz). Bu, özel bir Uygulamayı Ledger Cihazınıza yükleyeceğiniz için gereklidir.
 
-To install the Ledger Python Library just open a terminal window and type the following:
+Ledger Python Kütüphanesini kurmak için terminal penceresini açın ve aşağıdaki komutu yazın:
 
 **pip3 install — upgrade protobuf setuptools ecdsa**
 
 **pip3 install ledgerwallet**
 
-This will make all upgrades and install the Ledger Wallet Library that will be needed for the next step.
+Bu, tüm yükseltmeleri yapacak ve bir sonraki adımda gerekecek olan Ledger Cüzdan Kütüphanesini kuracaktır.
 
-![Install Ledger App](https://github.com/alephium/docs/assets/88235023/f3f096e3-fb9b-4a8c-9a98-a060112b0f5f)
+![Ledger Uygulamasını Yükle](https://github.com/alephium/docs/assets/88235023/f3f096e3-fb9b-4a8c-9a98-a060112b0f5f)
 
-**4 — Download the Alephium Ledger App to your computer**
+**4 — Alephium Ledger Uygulamasını bilgisayarınıza indirin**
 
-Go to the following GitHub repository: https://github.com/alephium/ledger-alephium and download it.
+Aşağıdaki GitHub deposuna gidin: https://github.com/alephium/ledger-alephium ve indirin.
 
-🚨*To download the repository, click on the “Code” green button and choose “Download Zip.”*
+🚨*Depoyu indirmek için, "Code" yeşil düğmesine tıklayın ve "Download Zip" seçeneğini seçin.*
 
 ![image](https://github.com/alephium/docs/assets/88235023/f699b669-1b00-4b2e-9649-5cedd221e0cb)
 
-Download and unzip it in a folder you have easy access to and all read/write permissions.
+İndirin ve kolayca erişebileceğiniz ve tüm okuma/yazma izinlerine sahip olduğunuz bir klasöre çıkarın.
 
-**5 — Install the Alephium App on your Ledger Device**
+**5 — Alephium Uygulamasını Ledger Cihazınıza Kurun**
 
-Your Ledger now needs to be connected to your computer and unlocked.
+Ledger'ınız şimdi bilgisayarınıza bağlanmalı ve kilidi açılmalıdır.
 
-Go to the GitHub repository (https://github.com/alephium/ledger-alephium/tree/master) and scroll down to find the command that applies to your Ledger version:
+GitHub deposuna gidin (https://github.com/alephium/ledger-alephium/tree/master) ve sizin Ledger sürümünüze uygun olan komutu bulmak için aşağı kaydırın:
 
 ![image](https://github.com/alephium/docs/assets/88235023/6c5df18d-c59f-4ae4-ad8c-3e7bceb65014)
 
-With this information, go to the console terminal and run the command to install the Alephium App:
+Bu bilgiyle, konsol terminaline gidin ve Alephium Uygulamasını kurmak için komutu çalıştırın:
 
-🚨 *Important information: You need to run the command inside the folder you downloaded the files from GitHub.*
+🚨 *Önemli bilgi: Komutu GitHub'dan dosyaları indirdiğiniz klasörün içinde çalıştırmanız gerekmektedir.*
 
-In this example, the Ledger Nano S is being used:
+Bu örnekte, Ledger Nano S kullanılmaktadır:
 
 ![image](https://github.com/alephium/docs/assets/88235023/d92896ef-5f9b-43a6-8f53-ab56f38c1700)
 
-After running this command you will need to validate the installation of the Alephium App in your Ledger Device. Go through all approvals and add your pin to validate the installation.
+Bu komutu çalıştırdıktan sonra, Alephium Uygulamasını Ledger Cihazınıza kurma işlemini doğrulamanız gerekecektir. Kurulumu doğrulamak için tüm onayları geçirin ve pininizi ekleyin.
 
-When successful, the Alephium icon will appear on your device.
+Başarılı olduğunda, Alephium simgesi cihazınızda görünecektir.
 
 ![image](https://github.com/alephium/docs/assets/88235023/7c41b2d3-ea5a-44ca-bd05-46338cf3274c)
 
-Now you are ready to use your Ledger to sign transactions on Alephium! 🎉
+Şimdi Ledger'ınızı Alephium'da işlemleri imzalamak için kullanmaya hazırsınız! 🎉
 
-**6 — Use your Ledger with the Extension Wallet**
+**6 — Uzantı Cüzdanınızı Ledger ile kullanın**
 
-Go to the browser where you installed the browser extension wallet, and open it.
+Uzantı cüzdanınızı kurduğunuz tarayıcıya gidin ve açın.
 
-🚨 *The Ledger app only works with the latest version (v0.7.0) of the extension wallet for now. If you don’t have it, you can install it from [here (Chrome)](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj/related) or [here (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/).*
+🚨 *Şu anda Ledger uygulaması sadece en son sürüm (v0.7.0) uzantı cüzdanıyla çalışmaktadır. Eğer yoksa, [buradan (Chrome)](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj/related) veya [buradan (Firefox)](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/) yükleyebilirsiniz.*
 
-Create a new address in your extension wallet: Click on the current address name, and then in the “+” icon. That will lead you to Ledger Connection page:
+Uzantı cüzdanınızda yeni bir adres oluşturun: Mevcut adres adına tıklayın ve ardından " +" simgesine tıklayın. Bu sizi Ledger Bağlantı sayfasına yönlendirecektir:
 
-* Plug in your Ledger and unlocked it;
-* Open the Alephium App (make sure you validated all steps!)
-* Select your Ledger device from the list;
-* Finish the configuration.
+* Ledger'ınızı takın ve kilidini açın;
+* Alephium Uygulamasını açın (tüm adımları doğruladığınızdan emin olun!)
+* Listeden Ledger cihazınızı seçin;
+* Yapılandırmayı tamamlayın.
 
-![install new wallet](https://github.com/alephium/alephium/assets/88235023/5fa7e000-2f77-4b44-9dfa-13b784e05eba)
+![yeni cüzdan kurulumu](https://github.com/alephium/alephium/assets/88235023/5fa7e000-2f77-4b44-9dfa-13b784e05eba)
 
-**7 — Use the Ledger Device to send a transaction!**
+**7 — İşlem Göndermek için Ledger Cihazını Kullanın!**
 
-All the steps here are the usual ones we have seen before using the extension wallet:
+Buradaki tüm adımlar, uzantı cüzdanını kullanarak gördüğümüz tipik adımlardır:
 
-* Click on the “Send” button
+* "Gönder" düğmesine tıklayın
 
 ![image](https://github.com/alephium/docs/assets/88235023/17eaf25a-5629-48cb-bee7-996513e9a7b4)
 
-* Choose the token you want to send:
+* Göndermek istediğiniz tokenı seçin:
 
 ![image](https://github.com/alephium/docs/assets/88235023/60a3ed3b-04f7-447a-9472-886147d2b5d4)
 
-* Select the recipient’s address:
+* Alıcının adresini seçin:
 
 ![image](https://github.com/alephium/docs/assets/88235023/b6b7aae2-4c9e-4048-934e-95caa93bf577)
 
-* Review the transaction details and click on “Sign with Ledger.”
+* İşlem detaylarını gözden geçirin ve "Ledger ile imzala" ya tıklayın.
 
 ![image](https://github.com/alephium/docs/assets/88235023/fde7b7c2-b864-468e-bb3f-66448fe8a4d2)
 
-* Sign the transaction in your Ledger Device, and follow its completion in “Activity” section:
+* İşlemi Ledger Cihazınızda imzalayın ve "Aktivite" bölümünde tamamlanmasını izleyin:
 
 ![image](https://github.com/alephium/docs/assets/88235023/efffc0de-01f8-48d7-a67c-ed1487c95483)
 
-** 8 — Use the Ledger Device to interact with dApps in Alephium** 
+** 8 — Ledger Cihazıyla Alephium'da dApp'lerle etkileşime girin** 
 
-Now that you have a already sign a transaction with yout Ledger Device, it is time to connect it to a dApp. This process is also straightforward.
+Artık Ledger Cihazınızla bir işlem imzaladınız, sıra onu bir dApp'e bağlamakta. Bu işlem de kolaydır.
 
-Access the [Alephium DEX on Testnet](https://alephium.github.io/alephium-dex). Click in the “Connect Alephium” button on the top right. Select the extension wallet in the prompt and the Ledger account.
+[Testnet'te Alephium DEX'e](https://alephium.github.io/alephium-dex) erişin. Sağ üst köşedeki "Alephium ile Bağlan" düğmesine tıklayın. İstekte bulunun ve uzantı cüzdanını ve Ledger hesabını seçin.
 
-![connect with dex](https://github.com/alephium/alephium/assets/88235023/f3e6cf9e-e632-4bc0-84a8-67f38d067311)
+![dex ile bağlan](https://github.com/alephium/alephium/assets/88235023/f3e6cf9e-e632-4bc0-84a8-67f38d067311)
 
-Now you are connected to the Alephium DEX. Make a swap transaction and use your Ledger to sign it. The process is similar to a transfer.
+Artık Alephium DEX'e bağlısınız. Bir takas işlemi yapın ve bunu imzalamak için Ledger'ınızı kullanın. İşlem, bir transfer işlemine benzer şekilde gerçekleşir.
 
-![unnamed](https://github.com/alephium/alephium/assets/88235023/bb263f71-3801-4be3-86cd-d7a18b525e0a)
+![isimsiz](https://github.com/alephium/alephium/assets/88235023/bb263f71-3801-4be3-86cd-d7a18b525e0a)
 
-If you have questions or suggestions, please come to [Alephium’s Discord](http://alephium.org/discord), [Telegram](https://t.me/alephiumgroup), or reach out on [Twitter](https://twitter.com/alephium)!
+Sorularınız veya önerileriniz varsa, lütfen [Alephium'un Discord](http://alephium.org/discord), [Telegram](https://t.me/alephiumgroup) kanalına gelin veya [Twitter'dan](https://twitter.com/alephium) bize ulaşın!

@@ -4,8 +4,4 @@ title: WalletConnect
 sidebar_label: WalletConnect
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
-Coming soon
+Çok yakında!
