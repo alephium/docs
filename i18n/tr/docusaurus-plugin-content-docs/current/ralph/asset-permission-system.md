@@ -1,50 +1,23 @@
 ---
 sidebar_position: 60
-title: Asset Permission System (APS)
-sidebar_label: Asset permission system (APS)
+title: Varlık İzin Sistemi (APS)
+sidebar_label: Varlık İzin Sistemi (APS)
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Varlık İzin Sistemi (APS), Ralph'ın benzersiz özelliklerinden biridir. Kod düzeyinde varlıkların akışını açıkça belirtir, geliştiricilere ve akıllı sözleşme kullanıcılarına tüm varlık transferlerinin amaçlandığı gibi gerçekleştiği konusunda güven sağlar. UTXO modeli ile birlikte, EVM gibi sistemlerdeki token onay risklerini ortadan kaldırarak daha basit ve daha güvenli bir kullanıcı deneyimi sunar.
 
-<UntranslatedPageText />
+Alephium, varlıkların, dahil olmak üzere, yerel ALPH ve diğer tokenlerin UTXO'lar tarafından yönetildiği [sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749) modelini kullanırken, akıllı sözleşmeler ve durumları hesap tabanlı model kullanılarak yönetilir.
 
-The Asset Permission System (APS) is one of Ralph's unique
-features. It explicitly stipulates the flow of assets at code level,
-giving confidence to developers and users of the smart contracts that
-all asset transfers happen as intended. Together with the UTXOs model,
-it also offers a simpler and more secure user experience by
-eliminating the token approval risks in systems such as EVM.
+Bu birkaç sonuç doğurur:
 
-Alephium uses the
-[sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
-model where assets, including the native ALPH and other tokens are
-managed by UTXOs while smart contracts and their states are managed
-using account-based model.
+1. Kullanıcılar arasındaki basit varlık transferleri sadece UTXO'ları gerektirir ve varlıkları yönetme konusunda güvenliği kanıtlanmıştır. Burada akıllı sözleşmeler devreye girmez.
+2. Akıllı sözleşmeler, sahiplerinin adına varlık transfer etmek istediğinde, ayrı onay işlemleri gerekmez. Onay, UTXO modelinde zımni olarak yapılır: belirli bir tokeni içeren girişin işlemde harcanmasına izin verilirse, sahibi o tokenin bu işlem bağlamında kullanımına zaten onay vermiş demektir; yani aynı işlemde çağrılan akıllı sözleşmeler potansiyel olarak tokeni aktarabilir.
 
-This has a few implications:
+Şimdi soru şudur: ikinci durumda, UTXO modelini kullanarak işlemde zımni olarak onaylanan varlıkların akıllı sözleşmeler tarafından güvenli bir şekilde işleneceğinden nasıl emin olabiliriz? Cevap, Ralph'ın Varlık İzin Sistemi (APS)'dir.
 
-1. Simple asset transfers among users only require UTXOs, which is
-   battle tested for its security in managing assets. Here no smart
-   contracts are involved.
-2. When smart contracts need to transfer assets on behalf of the
-   owners, no separate approval transactions are required. The
-   approval is implicit in the UTXO model: if the input that contains
-   a particular token is authorized to be spent in the transaction,
-   then the owner has already given consent to the usage of that token
-   in the context of this transaction, meaning that the smart
-   contracts that get invoked in the same transaction can
-   potentially transfer the token.
+## Varlık Akışı
 
-Now the question is: in the second situation, how can we make sure
-that the assets implicitly approved in the transaction using the UTXO
-model can be handled securely by the smart contracts? The answer is
-Ralph's Asset Permission System (APS).
-
-## Flow of Assets
-
-To interact with the smart contracts in Alephium, a transaction needs
-to execute a `TxScript`. In the following example transaction, there
-are two inputs, one fixed outputs and a `TxScript`:
+Alephium'daki akıllı sözleşmelerle etkileşim kurmak için bir işlemin bir `TxScript`i yürütmesi gerekir. Aşağıdaki örnek işlemde iki giriş, bir sabit çıkış ve bir `TxScript` bulunmaktadır:
 
 ```
                   ----------------
@@ -60,16 +33,12 @@ are two inputs, one fixed outputs and a `TxScript`:
                   ----------------
 ```
 
-Two things are worth noting here:
+Burada iki şey dikkate değerdir:
 
-1. Even though there is only one fixed output, there will be more
-   outputs generated for this transaction. The generated outputs
-   depend on the result of the `TxScript` execution.
-2. The total assets available for `TxScript` (including the smart
-   contracts it invokes) are `5.1` ALPHs and `1` Token A, because we
-   need to subtract the `1` ALPH in fixed output.
+1. Yalnızca bir sabit çıkış olsa bile, bu işlem için daha fazla çıkış oluşturulacaktır. Oluşturulan çıkışlar, `TxScript` yürütmesinin sonucuna bağlıdır.
+2. `TxScript` için mevcut olan toplam varlıklar (çağrılan akıllı sözleşmeler de dahil olmak üzere), `1` ALPH ve `1` Token A'dır, çünkü sabit çıkışta `1` ALPH çıkarılması gerekir.
 
-Let's say the `TxScript` looks something like this:
+Varsayalım ki `TxScript` şuna benziyor:
 
 ```rust
 TxScript ListNFT(
@@ -85,34 +54,23 @@ TxScript ListNFT(
 }
 ```
 
-As you may have guessed, Token A is an NFT token and the purpose of
-the above `TxScript` is to list it through a marketplace smart contract.
+Muhtemelen tahmin ettiğiniz gibi, Token A bir NFT tokenidir ve yukarıdaki `TxScript` in amacı bunu bir pazar yeri akıllı sözleşmesi aracılığıyla listelemektir.
 
-The following line of code is of particular interest:
+Özellikle ilginç olan şu satırdır:
 
 ```rust
 marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
 ```
 
-The code inside of the curly braces explicitly approves that
-`approvedAlphAmount` ALPH and `1` token A are allowed to be spent in
-the `marketPlace.listNFT` function, even though the total amount of
-assets available for `TxScript` are `5.1` and `1` for ALPH and token A
-respectively.
+Ayraçların içindeki kod, `approvedAlphAmount` ALPH ve `1` token A'nın, toplam varlıkların sırasıyla `5.1` ve `1` ALPH ve token A için mevcut olduğu halde, `marketPlace.listNFT` işlevinde harcanmasına izin verildiğini açıkça onaylar.
 
-The following scenarios could happen:
+Aşağıdaki senaryolar meydana gelebilir:
 
-1. If `approvedAlphAmount` turns out to be more than `5.1` ALPH, then
-   the transaction fails with `NotEnoughBalance` error.
-2. If `approvedAlphAmount` is less than `5.1` ALPH, say `1.1` ALPH,
-   then maximum amount of assets that `marketPlace.listNFT` can handle
-   are `1.1` ALPHs and `1` token A. `marketPlace.listNFT` does not
-   have access to the rest of the `4` ALPHs.
-3. If `marketPlace.listNFT` has not spent the entirety of the approved
-   assets, the remaining assets will be returned back to their owner
-   when `marketPlace.listNFT` returns.
+1. Eğer `approvedAlphAmount`, `5.1` ALPH'den fazlaysa, o zaman işlem `YeterliBakiyeYok` hatası ile başarısız olur.
+2. Eğer `approvedAlphAmount`, `5.1` ALPH'den azsa, örneğin `1.1` ALPH ise, o zaman `marketPlace.listNFT`'nin ele alabileceği varlıkların maksimum miktarı `1.1` ALPH ve `1` token A'dır. `marketPlace.listNFT`, kalan `4` ALPH'e erişemez.
+3. Eğer `marketPlace.listNFT`, onaylanan varlıkların tamamını harcamamışsa, kalan varlıklar, `marketPlace.listNFT` döndüğünde sahiplerine geri döner.
 
-Let's look a bit closer to the `marketPlace.listNFT` function:
+Şimdi biraz daha yakından `marketPlace.listNFT` işlevine bakalım:
 
 ```rust
 Contract NFTMarketPlace(
@@ -148,45 +106,30 @@ Contract NFTMarketPlace(
 }
 ```
 
-First thing to notice is the annotation for the `listNFT` method:
+İlk dikkat edilmesi gereken şey, `listNFT` yöntemi için yapılan açıklamadır:
 
 ```rust
 @using(preapprovedAssets = true, assetsInContract = true, updateFields = false)
 ```
 
-`preapprovedAssets = true` tells VM that the `listNFT` method intends
-to use some assets and the caller is supposed to approve a set of
-necessary assets or else a compilation error will be
-reported. Compilation will also fail if the caller tries to approve
-assets for a method where `preapprovedAssets = false`.
+`preapprovedAssets = true`, `listNFT` yönteminin bazı varlıkları kullanmayı amaçladığını ve çağrıcının gerekli varlıkları onaylaması gerektiğini belirtir, aksi takdirde bir derleme hatası rapor edilir. Çağrıcının `preapprovedAssets = false` olduğu bir yöntem için varlıkları onaylamaya çalışması durumunda derleme de başarısız olacaktır.
 
-`assetsInContract = true` indicates to the VM that the `listNFT`
-method wants to update the asset of the `NFTMarketPlace`
-contract. Compiler will make sure that the `listNFT` method indeed
-does that or else an compilation error will be reported. In this case,
-`listNFT` updates the asset of the `NFTMarketPlace` contract by
-transferring the `listingFee` to it:
+`assetsInContract = true`, `listNFT` yönteminin, `NFTMarketPlace` sözleşmesinin varlığını güncellemek istediğini VM'ye bildirir. Derleyici, `listNFT` yönteminin bunu gerçekten yapmasını sağlar, aksi takdirde bir derleme hatası rapor edilir. Bu durumda, `listNFT`, `listingFee`'yi aktararak `NFTMarketPlace` sözleşmesinin varlığını günceller:
 
 ```rust
 // Charge the listing fee
 transferTokenToSelf!(tokenOwner, ALPH, listingFee)
 ```
 
-`updateFields` annotation is out of scope for this documentation.
+`updateFields` açıklaması bu belgelendirme kapsamı dışındadır.
 
-`marketPlace.listNFT` method is invoked by `TxScript` `ListNFT`, as
-shown below:
+`marketPlace.listNFT` yöntemi, aşağıda gösterildiği gibi `TxScript` `ListNFT` tarafından çağrılır:
 
 ```rust
 marketPlace.listNFT{callerAddress!() -> ALPH: approvedAlphAmount, tokenAId: 1}(tokenAId, price)
 ```
 
-When `marketPlace.listNFT` is executed by the VM, it is authorized to
-spend `1.1` ALPH and `1` token from the caller of the script. If
-`marketPlace.listNFT` in turn calls other methods, it can approve a
-subset of these approved assets to that method as well. For example,
-in `marketPlace.listNFT` we have the following code to create a NFT
-listing:
+`marketPlace.listNFT`, `TxScript`'in çağrıcısından `1.1` ALPH ve `1` token harcaması için yetkilendirilmiştir. Eğer `marketPlace.listNFT` başka yöntemleri çağırıyorsa, bu onaylanan varlıkların bir alt kümesini o yönteme de onaylayabilir. Örneğin, `marketPlace.listNFT` içinde bir NFT listelemesi oluşturmak için aşağıdaki kodu bulunmaktadır:
 
 ```rust
 let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, tokenId: 1}(
@@ -194,11 +137,7 @@ let nftListingContractId = copyCreateSubContract!{tokenOwner -> ALPH: 1 alph, to
 )
 ```
 
-As we can see, `marketPlace.listNFT` method approves `1` ALPH and `1`
-Token A to the `copyCreateSubContract!` built-in function from its own
-pool of approved assets (`1.1` ALPH and `1` Token A), before it sends
-the `listingFee` to the `NFTMarketPlace` contract itself. The flow of
-assets is illustrated below:
+Görüleceği gibi, `marketPlace.listNFT` yöntemi, kendi onaylanmış varlıklar havuzundan (`1.1` ALPH ve `1` Token A) `copyCreateSubContract!` yerleşik fonksiyonuna `1` ALPH ve `1` Token A'yı onaylar, ardından `listingFee`'yi `NFTMarketPlace` sözleşmesine göndermeden önce. Varlık akışı aşağıda gösterilmiştir:
 
 ```
   Caller of the TxScript
@@ -219,15 +158,9 @@ assets is illustrated below:
                                                   (0.1 ALPH)
 ```
 
-As we can imagine, if we have a bigger tree of method calls, the
-approved fund will cascade from the root of the tree all the way to
-the leaves like water. Asset Permission System makes this flow of the
-fund throughout the method calls explicit and enforce constraints to
-each of the methods as to what tokens and how much of them can be
-spent.
+Daha büyük bir yöntem çağrı ağacına sahipsek, onaylanan fonlar, su gibi, ağacın kökünden yapraklara kadar akar. Varlık İzin Sistemi, bu fon akışını yöntem çağrıları boyunca açıkça belirginleştirir ve her bir yönteme hangi tokenlerin ve ne kadarının harcanabileceğine dair kısıtlamalar getirir.
 
-Going back to the transaction, after the execution of the `TxScript`
-the generated outputs should look something like this:
+İşleme geri dönerek, `TxScript`in yürütülmesinden sonra oluşturulan çıkışlar aşağıdakilere benzemelidir:
 
 ```
                         ----------------
@@ -244,11 +177,6 @@ the generated outputs should look something like this:
                         ----------------
 ```
 
-## Summary
+## Özet
 
-Asset Permission System (APS) dictates the flow of assets in smart
-contracts. The explicit approval of the assets for each method
-invocation ensures that the methods can never spend more than what
-they are authorized for. Together with the UTXO model, it offers an
-asset management solution that is simpler, more reliable and more
-secure.
+Varlık İzin Sistemi (APS), akıllı sözleşmelerde varlıkların akışını belirler. Her yöntem çağrısı için varlıkların açıkça onaylanması, yöntemlerin yetkilendirildiklerinden fazlasını asla harcamayacaklarından emin olur. UTXO modeli ile birlikte, daha basit, daha güvenilir ve daha güvenli bir varlık yönetimi çözümü sunar.

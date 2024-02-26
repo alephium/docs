@@ -1,25 +1,27 @@
 ---
 sidebar_position: 10
-title: Getting Started
-sidebar_label: Getting started
+title: Başlarken
+sidebar_label: Başlarken
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Introduction
+## Giriş
 
-Ralph is the smart contract programming language for the Alephium blockchain, which focuses on three goals: security, simplicity and efficiency. This tutorial provides tips for writing clean, idiomatic, and secure Ralph smart contracts. We follow the following principles when designing Ralph:
-1. Make the smart contract DSL as simple as possible.
-2. There should be one-- and preferably only one --obvious way to do it.
-3. Make good practices built-in.
+Ralph, güvenlik, basitlik ve verimlilik olmak üzere üç ana hedefe odaklanan Alephium blockchain için akıllı sözleşme programlama dilidir. Bu öğretici, temiz, idiyomatik ve güvenli Ralph akıllı sözleşmeleri yazma ipuçları sağlar. Ralph tasarlarken aşağıdaki prensipleri takip ediyoruz:
+1. Akıllı sözleşme DSL'ini mümkün olduğunca basit tutun.
+2. Yapılacak tek ve tercihen açık bir yol olmalıdır.
+3. İyi uygulamaları yerleşik hale getirin.
 
-## Types
+## Türler
 
-Ralph is a statically typed language, but you don't need to specify the type for local variables and constants thanks to type inference.
-All types of Ralph are value types, i.e. they are always copied when they are used as function arguments or assigned.
-Currently, Ralph only supports the following data types:
+Ralph, statik bir tipli dil olmasına rağmen, yerel değişkenler ve sabitler için tip belirtmenize gerek yoktur, çünkü tür çıkarımına sahiptir.
+Ralph'ın tüm türleri değer türleridir, yani işlev argümanları olarak veya atanırken her zaman kopyalanırlar.
+Şu anda, Ralph yalnızca aşağıdaki veri türlerini destekler:
+
+Türlerin ve fonksiyon tiplerinin çevirisi yapılmamıştır, çünkü Ralph'ın türleri ve fonksiyonları genellikle İngilizce'de kullanılan terimlerdir.
 
 ### Primitive Types
 

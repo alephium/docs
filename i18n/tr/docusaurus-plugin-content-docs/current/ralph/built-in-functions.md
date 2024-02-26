@@ -8,6 +8,9 @@ sidebar_label: Built-in functions
 This file is auto-generated with "scripts/generate-builtin-functions.js"
 -->
 
+Bu sayfa otomatik olarak oluşturulmuştur. Bu sayfada, Ralph'ın yerleşik işlevleri ve bunların kullanımı hakkında bilgi bulabilirsiniz.
+Otomatik oluşturulduğu ve hızlıca değişebileceği için, bu sayfada yer alan bilgilerin çevirisi yapılmamıştır.
+
 The built-in functions are divided into several categories:
 [Contract](#contract-functions),
 [SubContract](#subcontract-functions),
