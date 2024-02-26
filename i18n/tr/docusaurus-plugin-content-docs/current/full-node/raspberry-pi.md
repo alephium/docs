@@ -1,33 +1,29 @@
 ---
 sidebar_position: 30
-title: Full Node on Raspberry Pi
-sidebar_label: Full node on Raspberry Pi
+title: Raspberry Pi'de Tam Düğüm
+sidebar_label: Raspberry Pi'de Tam Düğüm
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Bu kılavuzda öğreneceğiz:
 
-<UntranslatedPageText />
+- Bir Raspberry Pi 4'ü nasıl kurulur
+- Docker'laştırılmış bir Alephium tam düğümü örneğini nasıl çalıştıracağımız
 
-In this guide we'll learn:
+## Bir Raspberry Pi 4 kurulumu
 
-- How to install a Raspberry Pi 4
-- How to run a docker'ized instance of Alephium full node
+Bu ilk bölüm, bir Raspberry Pi 4'e Ubuntu 20.04 sunucusunu nasıl kuracağımın kişisel yolunu detaylandıracaktır.
+Bunun için bir Raspberry Pi 4 (açıkçası), bir SD Kart (en az 8 GB) ve bir SD Kart okuyucusuna ihtiyacınız olacak.
+SD Kartı flaşlamak için macOS'tan kabuk komutları kullanılacak, ancak Windows'ta karşılığını bulacaksınız.
 
-## How to install a Raspberry Pi 4
+![Zor işe hazırlık yapılıyor](media/flashing.jpeg)
 
-This first section will detail my personal way of installing Ubuntu 20.04 server on a Raspberry Pi 4.
-It requires to have a Raspberry Pi 4 (obviously), a SD Card (8 GB is the minimum) and an SD Card reader to flash the SD Card.
-It will be illustrated using shell command from macOS, but you'll find the equivalent in Windows.
+İlk olarak, Ubuntu'nun kurulumunu yapılandıracağız. Bunun için Ubuntu 20.04 ve üstüne gömülü olan cloud-init kullanılacaktır.
+Bu yapılandırma, varsayılan `ubuntu` kullanıcısından farklı bir kullanıcı oluşturur ve birkaç paket kurar.
 
-![Getting ready for the hard work](media/flashing.jpeg)
+### Önyüklemeyi yapılandırın
 
-First of all we will configure the installation Ubuntu. We're using cloud-init for that since it is built in Ubuntu 20.04 and above.
-This configuration creates a user (different from the `ubuntu` default) and installs a few packages.
-
-### Configure the boot
-
-Put the snippet below in a file named `user-data.yml` and save it. This one creates a user `alephium` with the password `installfest2021`.
-You can customize the content of this file if you know what you're doing.
+Aşağıdaki parçacığı `user-data.yml` adında bir dosyaya koyun ve kaydedin. Bu, `alephium` adında bir kullanıcı oluşturur ve `installfest2021` şifresini kurar.
+Bu dosyanın içeriğini özelleştirebilirsiniz, eğer ne yaptığınızı biliyorsanız.
 
 ```yaml
 #cloud-config
@@ -70,11 +66,11 @@ power_state:
   mode: reboot
 ```
 
-### Flash the SD Card
+### SD Kartı flaşla
 
-Now, we'll flash the SD Card including this file `user-data.yml`.
+Şimdi, bu dosya `user-data.yml` ile birlikte SD Kartı flaşlayacağız.
 
-I'm using the tool [flash](https://github.com/hypriot/flash/) for this, which does most of the hard work for you.
+Bunun için [flash](https://github.com/hypriot/flash/) aracını kullanıyorum, çünkü çoğu zor işi sizin için yapıyor.
 
 ```shell
 curl -LO https://github.com/hypriot/flash/releases/download/2.7.2/flash
@@ -83,47 +79,45 @@ chmod +x flash
 ./flash --userdata user-data.yml https://cdimage.ubuntu.com/releases/20.04/release/ubuntu-20.04.4-preinstalled-server-arm64+raspi.img.xz
 ```
 
-The command above will ask for confirmation that `/dev/disk2` is the SD Card and not your harddrive, and will ask your password
-because flashing a SD Card requires admin privileges.
+Yukarıdaki komut, `/dev/disk2`'nin SD Kart olduğunu ve sabit diskiniz olmadığını onaylamanızı ve bir SD Kartı flaşlamanın yönetici ayrıcalıkları gerektirdiği için şifrenizi isteyecektir.
 
-Once the command above completes, you can insert the SD Card in your Raspberry Pi and turn it on.
-It takes a handful of minutes for the first boot to execute fully, and your Raspberry Pi is ready to be used.
-Once the node is ready, you can ssh into it using `alephium` as username, and `installfest2021` as password!
+Yukarıdaki komut tamamlandığında, SD Kartı Raspberry Pi'nize takabilir ve açabilirsiniz.
+İlk başlatma tamamlanana kadar birkaç dakika sürer ve Raspberry Pi'niz kullanıma hazır hale gelir.
+Düğüm hazır olduğunda, kullanıcı adı `alephium` ve şifre olarak `installfest2021` kullanarak ona ssh ile bağlanabilirsiniz!
 
 ```shell
 ssh alephium@alephium
 ```
 
-If `alephium` host is unknown, you'll have to search for the IP address of the node, most likely on your router configuration app/page.
+Eğer `alephium` ana bilgisayarı bilinmiyorsa, düğümün IP adresini bulmanız gerekecek, muhtemelen router yapılandırma uygulaması/sayfasında.
 
-And that's it, your Raspberry Pi is running Ubuntu 20.04 with Docker, and is ready to run an Alephium full node.
+Ve işte bu, Raspberry Pi'niz Ubuntu 20.04 ile çalışıyor ve Docker'a hazır durumda, ve Alephium tam düğümünü çalıştırmaya hazır.
 
 🚀
 
 ![Raspberry pi 4](media/pies.jpeg)
 
-## How to run a docker'ized instance of Alephium full node
+## Docker'laştırılmış Alephium tam düğümü örneğini çalıştırma
 
-This second section is not specific to a Raspberry Pi, but can be generalized to any server/vm/computer with SSH access.
-We will run the most basic version of a Alephium full node using docker, and then iterate to make our setup more
-convenient to work with.
+Bu ikinci bölüm, bir Raspberry Pi ile ilgili değil, ancak herhangi bir sunucu/vm/bilgisayar için genelleştirilebilir ve SSH erişimine sahip olabilir.
+En temel bir Alephium tam düğümünü docker kullanarak çalıştıracağız ve sonra kurulumumuzu daha kullanışlı hale getirmek için ilerleyeceğiz.
 
-As a pre-requisite of this section, we must have a server with SSH access, and more precisely running Ubuntu 20.04 or more recent.
-The previous section explains how to do that with a Raspberry Pi, but an AWS EC2 instance would also do the job.
+Bu bölümün önkoşulu, SSH erişimine sahip bir sunucunun olması gerektiğidir ve daha kesin olarak Ubuntu 20.04 veya daha yeni bir sürümünün çalıştırılması gerekmektedir.
+Önceki bölüm, bunu bir Raspberry Pi ile nasıl yapacağınızı açıklar, ancak AWS EC2 örneği de işi yapacaktır.
 
-### Connect to the server
+### Sunucuya bağlanın
 
-This should be an easy step, using the `ssh` command. Run:
+Bu adım kolay olmalı, `ssh` komutunu kullanarak. Çalıştırın:
 
 ```shell
 ssh alephium@alephium
 ```
 
-### Installing docker and docker-compose
+### Docker ve docker-compose kurulumu
 
-Let's install docker and docker-compose quickly, so that we'll be all set to run the Alephium full node.
+Docker ve docker-compose'u hızlı bir şekilde kurarak, Alephium tam düğümünü çalıştırmaya hazır olacağız.
 
-Once ssh'ed, run the following commands:
+SSH ile bağlandıktan sonra, aşağıdaki komutları çalıştırın:
 
 ```shell
 sudo apt install -y docker.io docker-compose
@@ -135,9 +129,9 @@ Great, docker should be running:
 docker ps
 ```
 
-### Run the full node
+### Tam düğümü çalıştırma
 
-Now we can run the full node, in a single line, as follow:
+Şimdi tam düğümü çalıştırabiliriz, tek bir satırda aşağıdaki gibi:
 
 ```shell
 docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:latest
@@ -145,11 +139,9 @@ docker run -it --rm -p 12973:12973 --name alephium alephium/alephium:latest
 
 ### Docker-compose
 
-Docker-compose is a bit more convenient way of running a container, especially if the command starts to contain
-volumes, more ports, environment variables, etc...
+Docker-compose, özellikle komut hacmi, daha fazla bağlantı noktası, ortam değişkenleri, vb. içeren komutlara sahipse, bir konteyner çalıştırmanın biraz daha uygun bir yoludur.
 
-So, below is the service definition you can put in a `docker-compose.yml` file, and simply call `docker-compose up -d` to
-start your full node from this definition.
+Bu nedenle, aşağıda bir `docker-compose.yml` dosyasına koyabileceğiniz hizmet tanımı verilmiştir, ve bu tanımdan tam düğümünüzü başlatmak için `docker-compose up -d` komutunu çağırabilirsiniz.
 
 ```yaml
 version: "3"

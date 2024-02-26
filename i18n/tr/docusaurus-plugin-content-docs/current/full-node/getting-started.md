@@ -1,56 +1,52 @@
 ---
 sidebar_position: 10
-title: Getting Started
-sidebar_label: Getting started
+title: Başlarken
+sidebar_label: Başlarken
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## Gereksinimler
 
-<UntranslatedPageText />
+Bilgisayarınızda Java'nın kurulu olduğundan emin olun (11 veya 17 önerilir):
 
-## Requirements
+- Windows veya macOS: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
+- Ubuntu: Terminal'de `sudo apt install default-jdk` komutunu çalıştırın
 
-Ensure that Java (11 or 17 is recommended) is installed on your computer:
+## Uygulama Dosyasını İndirme
 
-- Windows or macOS: [https://adoptopenjdk.net/](https://adoptopenjdk.net/)
-- Ubuntu: run `sudo apt install default-jdk` in Terminal
+Dosyayı `alephium-x.x.x.jar` [Github sürümünden](https://github.com/alephium/alephium/releases/latest) indirin (bu şekilde çift tıklamayın, bu şekilde başlatılamaz).
 
-## Download Application File
+## Düğümünüzü Başlatın
 
-Download file `alephium-x.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
-
-## Start your node
-
-1. Open the search and type in `Terminal` (for Mac and Ubuntu) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, type `cd your-jar-file-path` to enter the folder in which the **alephium-x.x.x.jar** file is saved.
-3. Type the following command and press Enter to launch the full node:
+1. Arama kutusunu açın ve `Terminal` (Mac ve Ubuntu için) veya `Command Prompt` (Windows için) yazın.
+2. Terminal/Komut İstemi programında, **alephium-x.x.x.jar** dosyasının kaydedildiği klasöre girmek için `cd your-jar-file-path` komutunu yazın.
+3. Aşağıdaki komutu yazın ve Enter tuşuna basarak tam düğümü başlatın:
    ```shell
    java -jar alephium-x.x.x.jar
    ```
 
-🎉 _**Tada, your node is running**_
+🎉 _**Tada, düğümünüz çalışıyor**_
 
-- Your node will start to sync with the network. It might take long the first time. Your node has been fully synced once the block height in the terminal logs is equal to the one found in the latest blocks of the [explorer].
-- If you close the terminal the node will be turned off.
-- All of the blockchain data is stored in `.alephium` under your home folder[^1].
+- Düğümünüz ağ ile senkronize olmaya başlayacaktır. İlk kez uzun sürebilir. Düğümünüz tamamen senkronize olmuş olacaktır terminal günlüklerindeki blok yüksekliği en son bloklardaki ile eşit olduğunda ([explorer]'da bulunan).
+- Terminali kapatırsanız, düğüm kapanacaktır.
+- Tüm blok zinciri verileri ev klasörünüzün altındaki `.alephium` klasöründe saklanır[^1].
 
 ### Swagger
 
-We use OpenAPI to interact with the full node. You can directly open Swagger UI through [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+Tam düğümle etkileşimde bulunmak için OpenAPI kullanıyoruz. [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) adresinden Swagger UI'yi doğrudan açabilirsiniz.
 
-Alternatively, you can use any OpenAPI client to
-import the `openapi.json` file from our repository ([download](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.json)).
+Alternatif olarak, herhangi bir OpenAPI istemcisini
+bizim deposundaki (`openapi.json` dosyasını ([indir](https://github.com/alephium/alephium/raw/master/api/src/main/resources/openapi.json))) içe aktarabilirsiniz.
 
-### Mining
+### Madencilik
 
-For mining tutorial, you can follow our [Solo Mining Guide](mining/solo-mining-guide.md) or [Pool Mining Guide](mining/pool-mining-guide.md).
+Madencilik için öğretici için [Solo Madencilik Kılavuzu](mining/solo-mining-guide.md) veya [Havuz Madencilik Kılavuzu](mining/pool-mining-guide.md)'nu takip edebilirsiniz.
 
-### Wallet
+### Cüzdan
 
-You could download the desktop wallet from here [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
+Masaüstü cüzdanı buradan [GitHub](https://github.com/alephium/desktop-wallet/releases/latest) indirebilirsiniz.
 
-Alternatively, our full node has a builtin wallet with advanced features, you can follow our [Wallet Guide](wallet/node-wallet-guide.md) to learn how to use it.
+Alternatif olarak, tam düğümümüz gelişmiş özelliklere sahip bir yerleşik cüzdan içerir, bunu nasıl kullanacağınızı öğrenmek için [Cüzdan Kılavuzu](wallet/node-wallet-guide.md)'nu takip edebilirsiniz.
 
-[^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.
+[^1]: Ev klasörü sistemlerinize bağlıdır: Windows'ta `C:\Users\<your-username>`, macOS'ta `/Users/<your-username>`, Linux'ta `/home/<your-username>`.
 
 [explorer]: https://explorer.alephium.org

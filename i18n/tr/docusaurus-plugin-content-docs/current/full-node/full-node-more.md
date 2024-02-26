@@ -1,121 +1,118 @@
 ---
 sidebar_position: 40
-title: More and Troubleshooting
-sidebar_label: More and troubleshooting
+title: Daha Fazla ve Sorun Giderme
+sidebar_label: Daha Fazla ve Sorun Giderme
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## API Anahtarı
 
-<UntranslatedPageText />
+Tam düğümünüzün dinlenme uç noktalarına erişimi sınırlamak için API anahtarını kullanmak iyi bir uygulamadır.
 
-## API Key
+### API Anahtarı Kurulumu
 
-It's a good practice to use API key to limit the access to your full node's rest endpoints.
-
-### API Key Setup
-
-Please add the following to your `user.conf` by replacing the zeros with your own key (>= 32 characters).
+Lütfen `user.conf` dosyanıza aşağıdaki satırları ekleyerek sıfırları kendi anahtarınızla (>= 32 karakter) değiştirin.
 
 ```
-alephium.api.api-key = "--- your own key with >= 32 characters"
+alephium.api.api-key = "--- 32 karakterden uzun kendi anahtarınız"
 ```
 
-Restart your full node to make this take effect.
 
-#### API Key Generation
+Bu değişikliğin geçerli olması için tam düğümünüzü yeniden başlatın.
 
-On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
+#### API Anahtarı Oluşturma
 
-### Use API Key
+GNU/Linux üzerinde: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
 
-1. Click on the `Authorize` button on the top right of your Swagger UI:
+### API Anahtarı Kullanımı
+
+1. Swagger UI'nin sağ üstündeki `Authorize` düğmesine tıklayın:
    ![full-node-api-key-auth0](media/full-node-api-key-auth0.png)
 
-2. Fill in the value box with your key and click the authorize button:
+2. Değer kutusuna anahtarınızı yazın ve yetkilendirme düğmesine tıklayın:
    ![full-node-api-key-auth1](media/full-node-api-key-auth1.png)
 
-Now you could use Swagger UI as if there is no API key.
+Artık Swagger UI'yi API anahtarı olmadan kullanabilirsiniz.
 
-## How to make the full node API publicly accessible ?
+## Tam düğüm API'sinin genel erişilebilir hale getirilmesi nasıl yapılır?
 
-1. Set up your API key properly following the guide above.
+1. Yukarıdaki rehbere uygun şekilde API anahtarınızı ayarlayın.
 
-2. Add the following to your `user.conf` and restart your full node.
-
-```
-alephium.api.network-interface = "0.0.0.0"
-```
-
-## How to access the Swagger UI of my full node on another computer in the same subnet ?
-
-1. Add the following to your `user.conf` and restart your full node.
+2. Aşağıdaki satırları `user.conf` dosyanıza ekleyin ve tam düğümünüzü yeniden başlatın.
 
 ```
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-2. Change the `host` of Swagger UI to be the subnet IP of your full node.
+## Aynı alt ağdaki başka bir bilgisayardan tam düğümün Swagger UI'sine nasıl erişilir?
 
-## Error "java.lang.AssertionError: assumption failed"
+1. Aşağıdaki satırları `user.conf` dosyanıza ekleyin ve tam düğümünüzü yeniden başlatın.
 
-This error often occurs due to connection loss during node synchronization and means that some of the files are corrupted.
-To fix the problem:
+```
+alephium.api.network-interface = "0.0.0.0"
+```
 
-1. Delete the folder .alephium `rm .alephium`
 
-2. Restart the node and wait for synchronization `java -jar alephium-x.x.x.jar`
+2. Swagger UI'nin `host`'unu tam düğümünüzün alt ağ IP'sine değiştirin.
 
-## Moving the Alephium data folder
+## Hata "java.lang.AssertionError: assumption failed"
 
-Many users prefer to keep the Alephium data folder on a different disk than the primary boot disk. To do so with the Alephium full node jar, you can use the `ALEPHIUM_HOME` environment variable:
+Bu hata genellikle düğüm senkronizasyonu sırasında bağlantı kaybından kaynaklanır ve bazı dosyaların bozulduğu anlamına gelir.
+Sorunu düzeltmek için:
 
-1. Stop the Alephium full node jar
-2. Move the Alephium data folder (normally at `%userprofile%\.alephium` for Windows or `~/.alephium` for Linux and macOS) to the new location
-3. Add an environment variable `ALEPHIUM_HOME` to the system pointing to the new location. You can either do this at the system level or simply create a batch file that sets the variable prior to starting the Alephium jar.
-4. Restart the Alephium node
+1. .alephium klasörünü silin `rm .alephium`
 
-If using the docker full node, then simply change the mounted folder definitions in the docker file to point to the new home then restart.
+2. Düğümü yeniden başlatın ve senkronizasyonu bekleyin `java -jar alephium-x.x.x.jar`
 
-## Customize Logging
+## Alephium veri klasörünün taşınması
 
-There are several environment variables used for logging:
+Birçok kullanıcı, Alephium veri klasörünü birincil önyükleme diskinin dışında farklı bir diske tutmayı tercih eder. Alephium tam düğüm jar'ı ile bunu yapmak için, `ALEPHIUM_HOME` ortam değişkenini kullanabilirsiniz:
 
-- `ALEPHIUM_LOG_LEVEL` could change the console log level.
-- `ALEPHIUM_ENABLE_DEBUG_LOGGING` could enable debug logging.
-- `ALEPHIUM_HOME` could change the home folder of the full node, therefore the folder of logs
+1. Alephium tam düğüm jar'ını durdurun
+2. Alephium veri klasörünü (normalde Windows için `%userprofile%\.alephium` veya Linux ve macOS için `~/.alephium`) yeni konuma taşıyın
+3. Yeni konuma işaret eden bir `ALEPHIUM_HOME` ortam değişkeni sisteme ekleyin. Bunun için değişkeni sistem düzeyinde ekleyebilirsiniz veya Alephium jar'ını başlatmadan önce değişkeni ayarlayan bir toplu dosya oluşturabilirsiniz.
+4. Alephium düğümünü yeniden başlatın
 
-Below is an example with all of the possible logging options:
+Docker tam düğümü kullanıyorsanız, sadece docker dosyasındaki monte edilen klasör tanımlarını yeni eve işaret etmek için değiştirin ve sonra yeniden başlatın.
+
+## Günlüğü Özelleştirme
+
+Günlükleme için kullanılan birkaç ortam değişkeni vardır:
+
+- `ALEPHIUM_LOG_LEVEL` konsol günlüğü seviyesini değiştirebilir.
+- `ALEPHIUM_ENABLE_DEBUG_LOGGING` hata ayıklama günlüğünü etkinleştirebilir.
+- `ALEPHIUM_HOME` tam düğümün ev klasörünü değiştirebilir, bu nedenle günlüklerin klasörü değişir
+
+Aşağıda tüm olası günlükleme seçenekleriyle bir örnek bulunmaktadır:
 
 ```
 ALEPHIUM_HOM=<folder> ALEPHIUM_LOG_LEVEL=<DEBUG | INFO | WARN | ERROR> ALEPHIUM_ENABLE_DEBUG_LOGGING=<true | false> java -jar alephium-x.x.x.jar
 ```
 
-It's also possible to override the [logging configuration file](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml) of Alephium.
+Ayrıca, Alephium'un [günlük yapılandırma dosyasını](https://github.com/alephium/alephium/blob/master/flow/src/main/resources/logback.xml) geçersiz kılabilirsiniz.
 
 ```
 java -Dlogback.configurationFile=/path/to/config.xml alephium-x.x.x.jar
 ```
 
-## Pruning
+## Budama
 
-A fully sync-ed Alephium full node requires more than 80 GB of disk space to store blockchain data. Since
-version `2.6.1` the Alephium full node supports storage pruning which can significantly reduce the storage
-requirement.
+Tam senkronize edilmiş bir Alephium tam düğümü, blok zincir verilerini depolamak için 80 GB'den fazla disk alanı gerektirir. Versiyon `2.6.1`'den itibaren Alephium tam düğümü depolama budamasını destekler, bu da depolama gereksinimini önemli ölçüde azaltabilir.
 
-Here are the steps to prune the Alephium full node:
+İşte Alephium tam düğümünü budamak için adımlar:
 
-### Using Jar File
+### Jar Dosyası Kullanarak
 
-1. Make sure the Alephium full node is stopped
-2. Download `alephium-tools-x.y.z.jar` from https://github.com/alephium/alephium/releases
-3. If you changed the default Alephium home directory, set the the `ALEPHIUM_HOME` environment variable
-4. Run the following command `java -cp alephium-tools-x.y.z.jar org.alephium.tools.PruneStorage` to start pruning
-5. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
-6. Restart the Alephium full node
+1. Alephium tam düğümünün durduğundan emin olun
+2. `alephium-tools-x.y.z.jar` dosyasını https://github.com/alephium/alephium/releases adresinden indirin
+3. Varsayılan Alephium ana dizinini değiştirdiyseniz, `ALEPHIUM_HOME` ortam değişkenini ayarlayın
+4. Aşağıdaki komutu çalıştırın `java -cp alephium-tools-x.y.z.jar org.alephium.tools.PruneStorage` budamayı başlatmak için
+5. Komutun tamamlanmasını bekleyin, disk alanı yaklaşık 20 GB'a düşmelidir
+6. Alephium tam düğümünü yeniden başlatın
 
-### Using Docker
+### Docker Kullanarak
 
-1. Make sure the Alephium full node is stopped
-2. Run the following command `docker run -it -v ${YOUR_ALEPHIUM_HOME}:/alephium-home/.alephium alephium/alephium-tools:x.y.z org.alephium.tools.PruneStorage`
-3. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
-4. Restart the Alephium full node
+1. Alephium tam düğümünün durduğundan emin olun
+2. Aşağıdaki komutu çalıştırın `docker run -it -v ${YOUR_ALEPHIUM_HOME}:/alephium-home/.alephium alephium/alephium-tools:x.y.z org.alephium.tools.PruneStorage`
+3. Komutun tamamlanmasını bekleyin, disk alanı yaklaşık 20 GB'a düşmelidir
+4. Alephium tam düğümünü yeniden başlatın
+

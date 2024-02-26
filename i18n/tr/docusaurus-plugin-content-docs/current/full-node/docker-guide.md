@@ -1,11 +1,7 @@
 ---
 sidebar_position: 20
-title: Dockerized Full Node Guide
-sidebar_label: Dockerized full node guide
+title: Dockerize Edilmiş Tam Düğüm Kılavuzu
+sidebar_label: Dockerize edilmiş tam düğüm kılavuzu
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
-You can find the instructions on how run a full node with `docker-compose` in 1 minute here: [https://github.com/alephium/alephium-stack](https://github.com/alephium/alephium-stack)
+`docker-compose` ile bir tam düğümü nasıl çalıştıracağınız hakkındaki talimatları burada 1 dakika içinde bulabilirsiniz: [https://github.com/alephium/alephium-stack](https://github.com/alephium/alephium-stack)

@@ -1,29 +1,25 @@
 ---
 sidebar_position: 50
-title: Devnet
-sidebar_label: Devnet
+title: Geliştirme Ağı (Devnet)
+sidebar_label: Geliştirme Ağı (Devnet)
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+# Yerel Bir Devnet Oluşturun
 
-<UntranslatedPageText />
+## Docker Kullanarak
 
-# Create a local Devnet
+Eğer yerel bir geliştirme ağı oluşturmak ve keşif desteği almak istiyorsanız, lütfen `docker-compose` kullanın ve [alephium-stack](https://github.com/alephium/alephium-stack#devnet) rehberindeki talimatları izleyin.
 
-## Using Docker
+## Jar dosyalarını manuel olarak kullanma
 
-If you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
+### Tam düğüm
 
-## Manually using jar files
+Dosyayı (`alephium-x.x.x.jar`) [Github yayınından](https://github.com/alephium/alephium/releases/latest) indirin (çift tıklamayın, bu şekilde başlatılamaz).
 
-### Full node
-
-Download file `alephium-x.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
-
-Write a configuration file at `~/.alephium/user.conf`, the one below is taken from our [alephium-stack repo](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
+`~/.alephium/user.conf` adresinde bir yapılandırma dosyası yazın, aşağıdaki örnek [alephium-stack deposundan](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) alınmıştır:
 
 ```conf
-# Import this mnemonic to have 4'000'000 token allocated for your addresses
+# Bu tanımlama anahtarını içe aktarın, adresleriniz için ayrılmış 4'000'000 jeton almak için
 #
 # vault alarm sad mass witness property virus style good flower rice alpha viable evidence run glare pretty scout evil judge enroll refuse another lava
 
@@ -52,7 +48,7 @@ alephium.genesis.allocations = [
 
 alephium.consensus.num-zeros-at-least-in-hash = 0
 alephium.consensus.uncle-dependency-gap-time = 0 seconds
-alephium.network.leman-hard-fork-timestamp = 1643500800000 # GMT: 30 January 2022 00:00:00
+alephium.network.leman-hard-fork-timestamp = 1643500800000 # GMT: 30 Ocak 2022 00:00:00
 
 alephium.network.network-id = 4
 alephium.discovery.bootstrap = []
@@ -72,7 +68,7 @@ alephium.network.bind-address  = "0.0.0.0:19973"
 alephium.network.internal-address  = "alephium:19973"
 alephium.network.coordinator-address  = "alephium:19973"
 
-# arbitrary mining addresses
+# rastgele madencilik adresleri
 alephium.mining.miner-addresses = [
   "1FsroWmeJPBhcPiUr37pWXdojRBe6jdey9uukEXk1TheA",
   "1CQvSXsmM5BMFKguKDPpNUfw1idiut8UifLtT8748JdHc",
@@ -81,31 +77,29 @@ alephium.mining.miner-addresses = [
 ]
 ```
 
-Note: The mnemonic (24 words) and the corresponding addresses were created for development purposes, you can use it or create your own, but never use it on `mainnet`.
-      You can also add more addresses if you want. If you want change the addresses afterward, you'll need to erase and restart your devnet.
-
-
-You can now start your `devnet`:
+Not: Mnemonik (24 kelime) ve ilgili adresler, geliştirme amaçları için oluşturulmuştur, bunu kullanabilir veya kendi mnemonik ve adresinizi oluşturabilirsiniz, ancak asla bunu mainnet üzerinde kullanmayın.
+Daha fazla adres ekleyebilirsiniz. Adresleri daha sonra değiştirmek isterseniz, devnetinizi silip yeniden başlatmanız gerekecektir.
+Şimdi `devnet`'inizi başlatabilirsiniz:
 
 ```sh
 java -jar alephium-x.x.x.jar
 ```
 
-You can now access the full node's API at: `http://localhost:22973/docs`
+Artık tam düğümün API'sine şu adresten erişebilirsiniz: `http://localhost:22973/docs`
 
 ### Explorer-backend
 
-Requirement: https://www.postgresql.org/
+Gereksinim: https://www.postgresql.org/
 
-Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest)
+Dosyayı (`explorer-backend-x.x.x.jar`) [Github yayınından](https://github.com/alephium/explorer-backend/releases/latest) indirin.
 
-Connect to PostgreSQL and create a database for your devnet
+PostgreSQL'ye bağlanın ve devnetiniz için bir veritabanı oluşturun
 
 ```sql
 CREATE DATABASE devnet;
 ```
 
-You can check [the configuration file](https://github.com/alephium/explorer-backend/blob/feature/contract-subcontract/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
+Hangi ayarların geçersiz kılınabileceğini görmek için [yapılandırma dosyasına](https://github.com/alephium/explorer-backend/blob/feature/contract-subcontract/app/src/main/resources/application.conf) bakabilirsiniz. Daha sonra `explorer-backend`'inizi yapılandırabilir ve başlatabilirsiniz:
 
 ```sh
 export BLOCKFLOW_NETWORK_ID=2

@@ -1,27 +1,18 @@
 ---
 sidebar_position: 35
-title: Loading from a snapshot
-sidebar_label: Loading from snapshot
+title: Bir anlık görüntüden yükleme
+sidebar_label: Bir anlık görüntüden yükleme
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+# Tam düğüm
 
-<UntranslatedPageText />
+[başlangıç kılavuzunda](./getting-started) açıklandığı gibi, bir tam düğümün ilk çalıştırılması, diğer ağ düğümleriyle tam senkronize olana kadar birkaç saat alır veya farklı bir ifadeyle, tüm blok zincirinin bir kopyasını indirene kadar.
 
-# Full node
+Bu ilk senkronizasyon sürecini hızlandırmak için anlık görüntüler, [özel Alephium Arşivleri deposunda](https://archives.alephium.org) mevcuttur. Bir otomatik süreç, hem [test ağı](https://archives.alephium.org/#testnet/) hem de [ana ağ](https://archives.alephium.org/#mainnet/) için anlık görüntüler yükler.
 
-The very first run of a full node, as described in the [getting started](./getting-started) takes few hours until 
-it is fully in sync with the other nodes in the network, or said differently, until it downloaded a copy of the entire blockchain.
+## Bir anlık görüntü indirme
 
-In order to speed up this initial sync process, snapshots are available in the
-[dedicated Alephium Archives repository](https://archives.alephium.org). An automated process upload snapshots
-for both [testnet](https://archives.alephium.org/#testnet/) and [mainnet](https://archives.alephium.org/#mainnet/) networks.
-
-## Downloading a snapshot
-
-When preparing the full node for its first run, just before launching it, you can download the latest snapshot and
-extract (it's a `tar` file) it at the right location. The snippet below even does this inline, i.e. without doubling the
-required disk space to download and to extract the snapshot:
+Tam düğümü ilk çalıştırmaya hazırlarken, başlatmadan hemen önce en son anlık görüntüyü indirebilir ve (bu bir `tar` dosyasıdır) doğru konuma çıkarabilirsiniz. Aşağıdaki kod parçacığı bunu hatta disk alanını ikiye katlamadan yapar, yani indirme ve anlık görüntünün çıkarılması için gerekli olan disk alanı ihtiyacını karşılar:
 
 ```shell
 ALEPHIUM_HOME=~/.alephium
@@ -29,12 +20,11 @@ ALEPHIUM_NETWORK=mainnet
 curl -L "$(curl -sL https://archives.alephium.org/archives/$ALEPHIUM_NETWORK/full-node-data/_latest.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
 ```
 
-A specific file `_latest.txt` is updated for your convenience, always pointing to the latest snapshot available.
+Özel bir `_latest.txt` dosyası, her zaman en son kullanılabilir anlık görüntüye işaret edecek şekilde güncellenir.
 
-## Using a ready-made script
+## Hazır bir betik kullanma
 
-While the command given above works, it does not cover all the edge failure cases that can happen and can lead the full node
-database in an inconsistent state. Luckily a ready-to-use script will help you with this task.
+Yukarıda verilen komut işe yarasa da, tüm kenar durumları kapsamaz ve tam düğüm veritabanını tutarsız bir duruma getirebilecek hatalı durumları ele almaz. Neyse ki, bu görevi yapmak için hazır kullanıma hazır bir betik size yardımcı olur.
 
 ```shell
 ALEPHIUM_HOME=/tmp
@@ -42,13 +32,12 @@ ALEPHIUM_NETWORK=mainnet
 curl -L https://github.com/touilleio/alephium-standalone/raw/main/snapshot-loader.sh | env ALEPHIUM_HOME=${ALEPHIUM_HOME} ALEPHIUM_NETWORK=${ALEPHIUM_NETWORK} sh
 ```
 
-## Launching a standalone container
+## Bağımsız bir konteyner başlatma
 
-And finally if you want to try this setup quickly, an OCI image, simply extending the official `alephium/alephium` image, is doing all the steps
-describe above automagically: `touilleio/alephium-standalone`. [Its source code](https://github.com/touilleio/alephium-standalone)
-provides all the required details around its usage.
+Ve son olarak, bu kurulumu hızlı bir şekilde denemek istiyorsanız, resmi `alephium/alephium` görüntüsünü genişleten bir OCI görüntüsü, yukarıdaki adımları otomatik olarak yapmaktadır: `touilleio/alephium-standalone`. [Kaynak kodu](https://github.com/touilleio/alephium-standalone)
+kullanımı hakkında gerekli tüm ayrıntıları sağlar.
 
-A quick reference command to run the standalone container is given below for convenience:
+Bağımsız konteynerı çalıştırmak için hızlı bir referans komutu aşağıda verilmiştir:
 
 ```
 ALEPHIUM_HOME=/tmp
@@ -58,10 +47,9 @@ docker run -p 39973:39973 -p 127.0.0.1:12973:12973 \
   -e ALEPHIUM_NETWORK=${ALEPHIUM_NETWORK} touilleio/alephium-standalone:latest
 ```
 
-# Explorer database
+# Explorer veritabanı
 
-[Alephium Archives repository](https://archives.alephium.org) is also populated with explorer database snapshots. The snapshot
-can be loaded in the postgresql database of the explorer backend at the first run, using the command below:
+[Alephium Arşivleri deposu](https://archives.alephium.org) ayrıca keşif veritabanı anlık görüntüleri ile doldurulmuştur. Anlık görüntü, postgresql veritabanındaki keşif arka ucu (backend) için ilk çalıştırıldığında aşağıdaki komut kullanılarak yüklenebilir:
 
 ```shell
 ALEPHIUM_NETWORK=mainnet
