@@ -1,120 +1,118 @@
-# The Bridge
+# Köprü
 
-## Tutorials & Links
+## Öğreticiler ve Bağlantılar
 
-Bridge Website : https://bridge.alephium.org/#/
+Köprü Websitesi: https://bridge.alephium.org/#/
 
-Bridge Explorer Website : https://explorer.bridge.alephium.org/
+Köprü Keşif Websitesi: https://explorer.bridge.alephium.org/
 
-Bridge Tutorial Article ( Mainnet ) : https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
+Köprü Öğretici Makalesi (Ana Ağ): https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
 
-The Alephium Bridge How does it work? How to use it? ( Article ) : https://medium.com/@alephium/the-alephium-bridge-a787d90b2e4a
+Alephium Köprüsü Nasıl Çalışır? Nasıl Kullanılır? (Makale): https://medium.com/@alephium/the-alephium-bridge-a787d90b2e4a
 
-Bridge Tutorial ( Mainnet ) : https://www.youtube.com/watch?v=xoYVzbwBAjg 
+Köprü Öğretici (Ana Ağ): https://www.youtube.com/watch?v=xoYVzbwBAjg
  
-## Bridge FAQ
+## Köprü SSS
 
-### 1. I have waited long enough, and it is not letting me redeem! What should I do? 
+### 1. Yeterince bekledim ve hak talep edemiyorum! Ne yapmalıyım?
 
-Please bear in mind that: 
+Lütfen şunları dikkate alın:
 
-- Bridging from ETH to ALPH takes an average of 15-20 minutes.
+- ETH'den ALPH'a köprü kurma işlemi ortalama 15-20 dakika sürer.
 
-- Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 105 blocks and at least 112 minutes. If one of the conditions is not met, redemption is not possible (yet).
+- ALPH'tan ETH'ye köprü kurma işlemi biraz daha uzun sürebilir. İşlemin iki koşulu karşılaması gerekir: en az 105 blok ve en az 112 dakika. Koşullardan biri karşılanmazsa, hak talebinde bulunulamaz (henüz).
 
-In most cases, waiting a little bit longer to redeem your tokens is enough. 
+Çoğu durumda, tokenlerinizi talep etmek için biraz daha beklemek yeterlidir.
 
-If it still doesn’t work, please try to disconnect & reconnect your wallets to the bridge, and try to redeem again (see
+Hala çalışmıyorsa, lütfen köprüye bağlı cüzdanlarınızı bağlantısız hale getirin ve yeniden talep etmeyi deneyin (bkz.
 
-If that doesn’t work, open an issue here.
-
-
-### 2. The Bridge alerted me that I need to create a new wallet address! What does that mean? 
-
-To interact with most dapps on Alephium, you need to create a Group 0 address. Here's how:
-
-### Desktop:
-
-Go to the addresses tab and click on "+ New address".
-Tick the advanced options and select "Group 0".
-Click on generate to create the address.
-Transfer your funds to this address for bridging.
-
-### Extension:
-
-Click on your current wallet in the top left corner of the app.
-Select the plus icon to add a new address.
-Choose the desired group for the new address.
-Transfer your funds to this address for bridging.
+Bu çalışmazsa, burada bir sorun açın.
 
 
-### Mobile:
+### 2. Köprü, yeni bir cüzdan adresi oluşturmam gerektiğini bildirdi! Bu ne anlama geliyor?
 
-The mobile app will generate the address for you.
-Fund the generated address.
-Proceed with the bridge process.
+Alephium'daki çoğu dapp ile etkileşim kurmak için Grup 0 adresi oluşturmanız gerekmektedir. İşte nasıl yapılır:
 
+### Masaüstü:
 
-Remember to transfer your funds to the newly created addresses for bridging.
+Adresler sekmesine gidin ve "+ Yeni adres"i tıklayın.
+Gelişmiş seçenekleri işaretleyin ve "Grup 0"ı seçin.
+Adresi oluşturmak için üretmek üzerine tıklayın.
+Köprü için bu adrese fonlarınızı aktarın.
 
-### 3. I am getting “failed to fetch” errors! 
+### Uzantı:
 
-This error is related to your wallet locking itself. The steps to go around this are simple:
-
-
-- Copy your Transaction Hash from the bottom of the page, just in case.
-- Refresh the page
-- Switch to the “Transactions” tab.
-- Reconnect your wallets
-- Recover your transaction.
-
-### 4. The confirmations won’t update.
+Uygulamanın sol üst köşesindeki mevcut cüzdanınıza tıklayın.
+Yeni bir adres eklemek için artı simgesini seçin.
+Yeni adres için istenen grubu seçin.
+Köprü için bu adrese fonlarınızı aktarın.
 
 
-Usually that means that one of your wallets has locked itself. Please copy your Transaction Hash from the bottom of the page, refresh the page, reconnect your wallets and head over to the redeem tab where you can recover the transaction using your Transaction Hash. 
+### Mobil:
+
+Mobil uygulama sizin için adresi oluşturacaktır.
+Oluşturulan adrese fonları aktarın.
+Köprü işlemine devam edin.
 
 
+Köprüleme için yeni oluşturulan adreslere fonlarınızı aktardığınızı unutmayın.
 
-### 5. Transaction has over 105 confirmations and I can't redeem!
+### 3. "Alınamadı" hataları alıyorum!
 
-Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 105 blocks and at least 112 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
-
-- “Issue 1. I have waited long enough, and it is not letting me redeem! What do I do?”
-- “Issue 6. I am getting a VAA error! And I can't redeem.” 
-
-If that doesn’t work, open an issue here.
-
-### 6. I am getting a VAA error! And I can't redeem.
+Bu hata, cüzdanınızın kendini kilitlemesi ile ilgilidir. Bu durumu aşmanın adımları basittir:
 
 
-If you are getting a VAA error, and waiting before trying again didn’t work, try the following steps: 
+- Sayfanın alt kısmından İşlem Hash'inizi kopyalayın, belki lazım olur.
+- Sayfayı yenileyin
+- "İşlemler" sekmesine geçin.
+- Cüzdanlarınızı yeniden bağlayın
+- İşleminizi kurtarın.
 
-- Close the tab, and re-open it.
-- Connect your wallets.
-- Recover your operation from the “Transactions” tab.
-- Try again.
-
-If that doesn’t work, open an issue here.
-
-### 7. Can we only bridge USDT from ETH to ALPH?
-
-No. For example, you can also bridge USDC, ETH, DAI, WBTC & ALPH. Using the provided UI, you can bridge all tokens from [1inch list](https://tokenlists.org/token-list?url=tokens.1inch.eth)
-
-And if you interact with the smart contract directly, you can bridge all erc20 tokens you want.
+### 4. Onaylar güncellenmiyor.
 
 
-### 8. I bridged ETH and/or USDC, and there’s no liquidity on AYIN pools, what can I do?
-
-Before bridging any token, please check that there is enough liquidity available, otherwise you might have to bridge those tokens back.
+Genellikle bu, cüzdanlarınızdan birinin kendini kilitlemiş olması anlamına gelir. Lütfen sayfanın alt kısmından İşlem Hash'inizi kopyalayın, sayfayı yenileyin, cüzdanlarınızı yeniden bağlayın ve işlemi kurtarabileceğiniz hak talep etme sekmesine gidin.
 
 
-### 9. How do I add the ALPH ERC-20 token to my Metamask? 
+### 5. İşlem 105 onaydan fazla ve hak talep edemiyorum!
 
-In order to have the ALPH ERC-20 token show in your Metamask wallet you are going to need to do the following : 
+ALPH'ten ETH'ye köprü kurma işlemi biraz daha uzun sürebilir. İşlemin iki koşulu karşılaması gerekir: en az 105 blok ve en az 112 dakika. Koşullardan biri karşılanmazsa, hak talebinde bulunulamaz (henüz). Sorun devam ederse, aşağıdakilerde sağlanan çözümleri deneyin:
 
-- Get the Token Contract from [here](https://etherscan.io/token/0x590F820444fA3638e022776752c5eEF34E2F89A6)
-- Open & Unlock your metamask
-- Click on "Import Token"
-- Select "Custom Token" 
-- Copy & Paste the contract into the first field. 
-- Press "Next" & then "Import"
+- "Sorun 1. Yeterince bekledim ve hak talep edemiyorum! Ne yapmalıyım?"
+- "Sorun 6. VAA hatası alıyorum! Ve hak talep edemiyorum."
+
+Bu çalışmazsa, burada bir sorun açın.
+
+### 6. VAA hatası alıyorum! Ve hak talep edemiyorum.
+
+
+VAA hatası alıyorsanız ve yeniden denemeden önce beklemek işe yaramadıysa, aşağıdaki adımları deneyin:
+
+- Sekmeyi kapatın ve yeniden açın.
+- Cüzdanlarınızı bağlayın.
+- İşleminizi "İşlemler" sekmesinden kurtarın.
+- Yeniden deneyin.
+
+Bu çalışmazsa, burada bir sorun açın.
+
+### 7. Sadece USDT'yi ETH'ten ALPH'a köprü kurabilir miyiz?
+
+Hayır. Örneğin, USDC, ETH, DAI, WBTC ve ALPH da dahil olmak üzere diğer tüm tokenları da köprüleyebilirsiniz. Sağlanan UI kullanarak, [1inch listesindeki](https://tokenlists.org/token-list?url=tokens.1inch.eth) tüm tokenları köprüleyebilirsiniz.
+
+Ve akıllı sözleşmeyle doğrudan etkileşim kurarsanız, istediğiniz tüm erc20 tokenları köprüleyebilirsiniz.
+
+### 8. ETH ve/veya USDC köprüledim, ancak AYIN havuzlarında likidite yok, ne yapabilirim?
+
+Herhangi bir tokeni köprülemeden önce, yeterli likidite olup olmadığını kontrol edin, aksi takdirde bu tokenları geri köprülemeniz gerekebilir.
+
+
+### 9. ALPH ERC-20 tokenını Metamask'ıma nasıl eklerim?
+
+ALPH ERC-20 tokenınızı Metamask cüzdanınızda görmek için aşağıdaki adımları izlemeniz gerekecektir:
+
+- [Buradan](https://etherscan.io/token/0x590F820444fA3638e022776752c5eEF34E2F89A6) Token Sözleşmesini alın.
+- Metamask'ınızı açın ve kilidini açın.
+- "Token Ekle"ye tıklayın.
+- "Özel Token"u seçin
+- Sözleşmeyi ilk alana kopyalayın ve yapıştırın.
+- "İleri" ve ardından "Ekle"ye basın.

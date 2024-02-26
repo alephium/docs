@@ -1,34 +1,30 @@
 ---
 sidebar_position: 12
-sidebar_label: The Content Repo
-title: The Content Repo
+sidebar_label: İçerik Deposu
+title: İçerik Deposu
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
-## Table of Contents
-* [Official links & accounts](#official-links--accounts) 
-* [Tech Series](#tech-series)
-* [Explainer Series](#explainer-series)
-* [TechTalks & AMAs](#techtalks--amas)
-* [Milestones](#milestones)
+## İçindekiler
+* [Resmi bağlantılar ve hesaplar](#resmi-bağlantılar--hesaplar) 
+* [Teknoloji Serileri](#teknoloji-serileri)
+* [Açıklayıcı Seriler](#açıklayıcı-seriler)
+* [Teknoloji Tartışmaları ve AMA'lar](#teknoloji-tartışmaları-ve-ama-lar)
+* [Kilometre Taşları](#kilometre-taşları)
 * [Hackathon](#hackathon)
-* [Community & Social](#community--social)
-* [External Podcasts & Publications](#external-podcasts--publications)
-* [Events, presentations & conferences](#events-presentations--conferences)
-* [Partnerships & PRs](#partnerships--prs)
-* [Reading Lists](#reading-lists)
-* [People to follow](#people-to-follow)
-* [Libraries & Developer Resources](#libraries--developer-resources)
-* [Apply to a grant](#apply-for-grants)
+* [Topluluk ve Sosyal](#topluluk-ve-sosyal)
+* [Harici Podcastler ve Yayınlar](#harici-podcastler--yayınlar)
+* [Etkinlikler, sunumlar ve konferanslar](#etkinlikler-sunumlar-ve-konferanslar)
+* [Ortaklıklar ve Halk İlişkileri](#ortaklıklar--halk-ilişkileri)
+* [Okuma Listeleri](#okuma-listeleri)
+* [Takip Edilecek Kişiler](#takip-edilecek-kişiler)
+* [Kütüphaneler ve Geliştirici Kaynakları](#kütüphaneler--geliştirici-kaynakları)
+* [Bir hibe için başvurun](#hibe-için-başvurun)
 
 ## Official links & accounts
 
 Website - https://alephium.org/
 
-Documentation - https://docs.alephium.org/
+Dokümantasyon - https://docs.alephium.org/
 
 Github - https://github.com/alephium
 
@@ -40,37 +36,39 @@ Telegram -  https://t.me/alephiumgroup
 
 Linkedin - https://www.linkedin.com/company/74304166
 
-## Tech Series
+## Teknoloji Serileri
 
-### Stateful UTXO
+### Durumsal UTXO
 
-Stateful UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
+Durumsal UTXO - https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749
 
-sUTXO #1 - Merkle Trees - https://twitter.com/alephium/status/1599808960038461447
+sUTXO #1 - Merkle Ağaçları - https://twitter.com/alephium/status/1599808960038461447
 
-sUTXO #2 - Contract Rent - https://twitter.com/alephium/status/1602684789655420928
+sUTXO #2 - Sözleşme Kira - https://twitter.com/alephium/status/1602684789655420928
 
-sUTXO #3 - General explanation - https://twitter.com/alephium/status/1615389097744568320
+sUTXO #3 - Genel açıklama - https://twitter.com/alephium/status/1615389097744568320
 
-UTXO ELI5 Explainer - https://twitter.com/alephium/status/1675111759957327872
+UTXO ELI5 Açıklayıcı - https://twitter.com/alephium/status/1675111759957327872
 
-Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 1 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-de2cf2063615
+Durumsal UTXO'nun Sırları: Alephium'un muhasebe modelinin ultima kılavuzu — Bölüm 1 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-de2cf2063615
 
-Mysteries of stateful UTXO: The Ultimate Guide to Alephium’s accounting model — Part 2 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-f6b6868ef873
+Durumsal UTXO'nun Sırları: Alephium'un muhasebe modelinin ultima kılavuzu — Bölüm 2 - https://medium.com/@alephium/tech-talk-2-mysteries-of-stateful-utxo-the-ultimate-guide-to-alephiums-accounting-model-and-f6b6868ef873
 
-An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1690004285818327040
+Durumsal UTXO'ya Giriş - https://twitter.com/alephium/status/1690004285818327040
 
-An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
+Durumsal UTXO'ya Giriş - https://twitter.com/alephium/status/1692177660389314905
 
-### Proof-of-Less-Work
-Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
+### Daha az İş Kanıtı
 
-Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
+Az İş Kanıtı - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
-Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
+Az İş Kanıtı - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
+
+Konsensüs Algoritması - https://twitter.com/alephium/status/1562066898904158208
 
 ### Alphred Virtual Machine
-Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
+
+Alphred Sanal Makinesi - https://medium.com/@alephium/alphred-virtual-machine-the-definitive-guide-7e2d447f3d3b
 
 Alphred VM #1 - https://twitter.com/alephium/status/1648310483148218370
 
@@ -78,7 +76,7 @@ Alphred VM #2 - https://twitter.com/alephium/status/1648310486096809984
 
 Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
-### Blockflow
+### Blok Akışı
 
 An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
@@ -92,17 +90,17 @@ Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
 Sharding - https://twitter.com/alephium/status/1632742909379215360
 
-### Ralph Programming Language
+### Ralph Programlama Dili
 Ralph is the domain-specific language (DSL) - https://twitter.com/alephium/status/1675867624184627201
 
 Ralph and Solidity Code Comparison - https://twitter.com/alephium/status/1643961985841905664
 
-### Asset Permission System
+### Varlık İzni Sistemi
 Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33
 
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
-## Explainer Series
+## Açıklayıcı Seriler
 
 💡 Understanding the sUTXO model - https://vxtwitter.com/alephium/status/1749827565634855028
 
@@ -172,13 +170,13 @@ NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
-## Monthly Retrospective
+## Aylık Değerlendirme
 
 Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
 
 Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
-## TechTalks & AMAs
+## Teknoloji Tartışmaları ve AMA'lar
 
 Feb/24 - HoC X Space - https://twitter.com/i/spaces/1BRKjPjmAevJw?s=20
 
@@ -247,7 +245,7 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
-## Milestones 
+## Kilometre Taşları
 
 Feb/24 💜 x 30'000 Twitter Followers - https://vxtwitter.com/alephium/status/1757430069817974869?s=20
 
@@ -350,7 +348,7 @@ Feb/24 Hackathon Kick-off call February 12th - https://www.youtube.com/watch?v=z
 
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
-## Community & Social 
+## Topluluk ve Sosyal
 
 ⛏🖥 Miners Highlight # 3 - Bokiko - https://vxtwitter.com/alephium/status/1753459274783887393
 
@@ -467,7 +465,7 @@ Introducing Community Rewards - https://medium.com/@alephium/introducing-communi
 
 DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v=0heJBclJwEA&t=113s
 
-## Tutorials & Workshops
+## Eğitimler ve Workshoplar
 
 Alephium Bridge: The Written Tutorial - https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
 
@@ -496,7 +494,7 @@ How to use the Alephium Bridge (testnet) - part 1 - https://www.youtube.com/watc
 How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watch?v=TziFpCgM3-0&t
 
 
-## External Podcasts & Publications
+## Harici Podcastler ve Yayınlar
 
 Alephium Qu’est-ce que c’est, comment ça fonctionne et comment en acheter ? - https://coinacademy.fr/alephium-alph-fondamental/
 
@@ -532,7 +530,7 @@ Heidi News - https://www.heidi.news/cyber/alephium-une-blockchain-3-0-developpee
 
 Token Insights - https://tokeninsight.medium.com/project-research-paper-of-alephium-8001323353e7
 
-## Events, presentations & conferences 
+## Etkinlikler, sunumlar ve konferanslar
 
 What is Alephium? - https://www.youtube.com/watch?v=v2L4jEvoSIU
 
@@ -566,7 +564,7 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
-## Partnerships & PRs
+## Ortaklıklar ve Halk İlişkileri
 
 DappNode - Announcement - https://medium.com/@alephium/pushing-for-decentralization-alephium-and-dappnode-join-forces-c98845d9a9da
 
@@ -590,7 +588,7 @@ Bitcoin Association Switzerland - https://medium.com/@alephium/alephium-becomes-
 
 UTXO alliance - https://medium.com/@alephium/alephium-joins-the-utxo-alliance-6476b479dd84
 
-## Reading Lists
+## Okuma Listeleri
 
 1. https://twitter.com/alephium/status/1548224145703313408
 2. https://twitter.com/alephium/status/1553395039778119682
@@ -631,22 +629,22 @@ UTXO alliance - https://medium.com/@alephium/alephium-joins-the-utxo-alliance-64
 39. https://twitter.com/alephium/status/1658134671648251907
 40. https://twitter.com/alephium/status/1660228530851184642
 
-## People to Follow
+## Takip Edilecek Kişiler
 
 Cheng Wang: https://twitter.com/wachmc
 
-First Tweet - https://twitter.com/alephium/status/1095960264837685249
+İlk Tweet - https://twitter.com/alephium/status/1095960264837685249
 
 Wow visual - https://twitter.com/gemforgem/status/1441427580578455554
 
 Hongchao: https://twitter.com/hongchao
 
-## Libraries & Developer Resources
+## Kütüphaneler ve Geliştirici Kaynakları
 
-Docs - https://docs.alephium.org/
+Dokümanlar - https://docs.alephium.org/
 
 Github - https://github.com/alephium
 
-## Apply for Grants
+## Bir hibe için başvurun
 
 Apply for grants - https://github.com/alephium/community/blob/master/Grant%26RewardProgram.md

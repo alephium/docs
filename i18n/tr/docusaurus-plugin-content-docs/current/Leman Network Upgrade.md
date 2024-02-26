@@ -1,109 +1,109 @@
 ---
 sidebar_position: 60
-title: Leman Network Upgrade
-sidebar_label: Leman Network Upgrade
+title: Leman Ağı Yükseltmesi
+sidebar_label: Leman Ağı Yükseltmesi
 ---
 
 :::info
-This page may be subject to future updates
+Bu sayfa gelecekteki güncellemelere tabi olabilir
 :::
 
-On this page you will find all information regarding the Leman Network Upgrade. The Leman Network Upgrade is next step in the development of Alephium and will bring new functionalities and features to the blockchain.
+Bu sayfada Leman Ağı Yükseltmesi ile ilgili tüm bilgileri bulacaksınız. Leman Ağı Yükseltmesi, Alephium'un gelişiminde bir sonraki adımdır ve blokzincirine yeni işlevler ve özellikler getirecektir.
 
-## Why the Leman Upgrade?
+## Neden Leman Yükseltmesi?
 
-Alephium has been live on mainnet since Nov 8th 2021. The core devs have since focused on increasing the performance and security of the whole stack, as well as enabling a top-of-the-class dApp developer experience.
+Alephium, 8 Kasım 2021'den bu yana ana ağda yayında. Çekirdek geliştiriciler o zamandan beri tüm yığının performansını ve güvenliğini artırmaya odaklanmış, aynı zamanda en iyi sınıf dApp geliştirici deneyimini sağlamayı amaçlamıştır.
 
-After being tested sufficiently on testnet, the Leman Upgrade brings these important improvements to the mainnet. As these changes are significant, the upgrade will introduce new features and changes that are not be backward-compatible, requiring an upgrade of all nodes.
+Test ağında yeterince test edildikten sonra, Leman Yükseltmesi bu önemli iyileştirmeleri ana ağa getiriyor. Bu değişiklikler önemli olduğundan, yükseltme geriye dönük uyumlu olmayan yeni özellikler ve değişiklikler getirecek ve tüm düğümlerin yükseltilmesini gerektirecektir.
 
-You can find a full write up on the reasoning and implications on the Leman Upgrade (reasoning) [here](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e).
+Leman Yükseltmesi (neden) ile ilgili tam bir yazıya [buradan](https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e) ulaşabilirsiniz.
 
-As well as an update on the state of preparation for the upgrade itself [here](https://medium.com/@alephium/the-leman-upgrade-2-232e3374abc4).
+Ve yükseltmenin kendisi için hazırlık durumu hakkında güncellemeye [buradan](https://medium.com/@alephium/the-leman-upgrade-2-232e3374abc4) ulaşabilirsiniz.
 
-And a Technical Talk about the features introduced with the Leman Network Upgrade [here](https://www.youtube.com/watch?v=n7ycJUIfbVg)
+Ve Leman Ağı Yükseltmesi ile tanıtılan özellikler hakkında Teknik Bir Konuşma [buradan](https://www.youtube.com/watch?v=n7ycJUIfbVg) ulaşabilirsiniz.
 
-## Improved devX experience for developers
+## Geliştiriciler için İyileştirilmiş devX Deneyimi
 
 ### SDK
 
-Set of tools to interact to and develop dApps on Alephium
+Alephium üzerinde dApp'ler geliştirmek ve etkileşim kurmak için bir dizi araç
 
 - Github: [https://github.com/alephium/alephium-web3](https://github.com/alephium/alephium-web3)
-- Docs: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/dapps/alephium-web3)
+- Dokümanlar: [https://docs.alephium.org/dapps/alephium-web3](https://docs.alephium.org/dapps/alephium-web3)
  
 ### Ralph
 
-Alephium's programming language for dApps development
+Alephium'un dApp'ler için programlama dili
 
 - Github: [https://github.com/alephium/ralphc](https://github.com/alephium/ralphc)
-- Docs:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
+- Dokümanlar:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
 
-### dApps Prototypes
+### dApp Prototipleri
 
-Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/dapps/build-dapp-from-scratch
+Şimdi şeyler inşa et! Alephium'da dApp'ler nasıl oluşturulur: https://docs.alephium.org/dapps/build-dapp-from-scratch
 
-Examples of dApps already built:
+Zaten oluşturulan dApp'lerin örnekleri:
 
-- NFT Marketplace: Mint, buy and sell NFTs
+- NFT Pazarı: NFT'leri oluşturun, satın alın ve satın
 
 Github: [alephium/alephium-nft#1](https://github.com/alephium/alephium-nft)
 
-- DEX: Swap tokens or become a Liquidity Provider (LP) on a Decentralized Exchange (DEX)
+- DEX: Token'ları takas edin veya Bir Merkezi Olmayan Borsada (DEX) Likidite Sağlayıcısı (LP) olun
 
 Github: https://github.com/Lbqds/alephium-dex/tree/master/contracts
 
-### Public Services
+### Genel Hizmetler
 
-Faucet and APIs
+Faucet ve API'lar
 
-Public Services: [https://docs.alephium.org/dapps/public-services](https://docs.alephium.org/dapps/public-services)
+Genel Hizmetler: [https://docs.alephium.org/dapps/public-services](https://docs.alephium.org/dapps/public-services)
 
-## Expanding the user experience
+## Kullanıcı Deneyimini Genişletme
 
-The Front End gets a complete revamp of everything + new tools! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
+Ön uç her şeyin tamamen yeniden tasarlanması + yeni araçlar alır! https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
 
 :::info
-Coming Soon: Test the next versions of the wallets (Desktop and Mobile)
+Yakında Geliyor: Cüzdanların (Masaüstü ve Mobil) sonraki sürümlerini deneyin
 :::
 
-Got questions? Join our [Discord](https://alephium.org/discord)
+Sorularınız mı var? [Discord](https://alephium.org/discord)'umuza katılın
 
-## Foundations for bridging to other chains
+## Diğer zincirlere köprüleme için temeller
 
-The core devs are developing a Bridge between Alephium and Ethereum.
+Çekirdek geliştiriciler, Alephium ile Ethereum arasında bir Köprü geliştiriyorlar.
 
-Its code can be found in the following link: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
+Kodunu aşağıdaki bağlantıda bulabilirsiniz: [https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium)
 
-The Alephium-Ethereum Bridge is deployed in the testnet.
+Alephium-Ethereum Köprüsü test ağında dağıtıldı.
 
-# Testnet 
+# Test Ağı 
 
-You can connect to the testnet and interact with the following applications & tools:
+Aşağıdaki uygulamalarla ve araçlarla test ağına bağlanabilir ve etkileşimde bulunabilirsiniz:
 
-### **Extension Wallet**
+### **Uzantı Cüzdanı**
 
-- Docs: https://docs.alephium.org/wallet/extension-wallet/overview
-⬇️ Download the extension wallet
-🔵 [Google Chrome store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
-🟠 [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
+- Dokümanlar: https://docs.alephium.org/wallet/extension-wallet/overview
+⬇️ Uzantı cüzdanını indirin
+🔵 [Google Chrome mağazası](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
+🟠 [Firefox Mağazası](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 
-### Testnet Block Explorer
+### Test Ağı Blok Keşifçisi
 
-- Link: https://testnet.alephium.org/
+- Bağlantı: https://testnet.alephium.org/
 
-### NFT Marketplace
+### NFT Pazarı
 
-- Link: https://alephium-nft.softfork.se/my-nfts
-- Tutorial on How to interact with the NFT Marketplace: https://medium.com/@alephium/alephium-launches-browser-extension-wallet-706dfeda98f5
+- Bağlantı: https://alephium-nft.softfork.se/my-nfts
+- NFT Pazarı ile Etkileşim Nasıl Olur: https://medium.com/@alephium/alephium-launches-browser-extension-wallet-706dfeda98f5
 
-### DEX on Alephium Testnet
+### Alephium Test Ağı'nda DEX
 
-- Link: https://alephium.github.io/alephium-dex
-- Tutorial on How to interact with the DEX: https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
-- How to mint a token on Alephium testnet: *Coming Soon*
+- Bağlantı: https://alephium.github.io/alephium-dex
+- DEX ile Etkileşim Nasıl Olur: https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
+- Alephium test ağında bir token nasıl oluşturulur: *Yakında*
 
-### Alephium Ethereum Bridge
+### Alephium Ethereum Köprüsü
 
-- Link: [https://portal-bridge.wormhole-testnet.softfork.se/](https://portal-bridge.wormhole-testnet.softfork.se/)
-- Tutorial on How to Interact with the Bridge: *Coming Soon*
-- Tutorial on How to Connect with Ethereum Goerli Testnet: *Coming Soon*
+- Bağlantı: [https://portal-bridge.wormhole-testnet.softfork.se/](https://portal-bridge.wormhole-testnet.softfork.se/)
+- Köprü ile Etkileşim Nasıl Olur: *Yakında*
+- Ethereum Goerli Test Ağı ile Nasıl Bağlantı Kurulur: *Yakında*

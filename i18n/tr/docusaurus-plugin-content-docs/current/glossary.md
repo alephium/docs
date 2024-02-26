@@ -1,66 +1,88 @@
 ---
 sidebar_position: 30
-sidebar_label: Glossary
+sidebar_label: Sözlük
 slug: /glossary
-title: Glossary
+title: Sözlük
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
-This is a list of useful concepts for understanding Alephium in particular and Blockchains in general.
+Bu, özellikle Alephium'u ve genel olarak Blok Zincirlerini anlamak için kullanışlı kavramların bir listesidir.
 
 ## A
 
 ### Alephium
 
-Alephium is the first operational sharded L1 blockchain scaling and enhancing PoW & UTXO concepts. Decentralization, self-sovereignty and security meet high-performance, accessibility and energy efficiency in a dev-friendly network optimized for DeFi & smart contract applications. 
+Alephium, PoW ve UTXO kavramlarını ölçeklendirme ve iyileştirme hedefiyle geliştirilen ilk operasyonel sharded L1 blok zinciridir. Merkeziyetsizlik, öz-kendi-soberlik ve güvenlik, yüksek performans, erişilebilirlik ve enerji verimliliği ile birleşir ve DeFi ve akıllı sözleşme uygulamaları için optimize edilmiş bir geliştirici dostu ağda buluşur.
 
-From its technical design to its interfaces, Alephium has been created to address the challenges of accessibility, scalability, and security encountered by decentralized applications today.
+Teknik tasarımından arayüzlerine kadar Alephium, günümüzde merkezi olmayan uygulamaların karşılaştığı erişilebilirlik, ölçeklenebilirlik ve güvenlik sorunlarını ele almak üzere oluşturulmuştur.
+
+### Akıllı Sözleşme 
+
+[Akıllı Sözleşme (AS)](https://en.wikipedia.org/wiki/Smart_contract), belirli bir kural setine göre yürütülebilen işlemlerin üçüncü bir tarafa, merkezi bir otoriteye veya harici mekanizmalara güvenmeye gerek kalmadan gerçekleştirilmesini sağlayan bir bilgisayar programıdır. Blok zincirinde, akıllı bir sözleşme, yerel Programlama Dili kullanılarak yazılır veya ona derlenir (çevrilir) ve genellikle blok zincirinin [Sanal Makinesi](#virtual-machine) üzerinde çalışır.
+
+Bir blok zincirindeki AS'ler, keyfi [durumu](#state) saklayabilir ve keyfi işlemleri gerçekleştirebilir. Son kullanıcılar, aynı zamanda işlemlerle etkileşime girerken de işlemleri kullanır. Ve AS işlemleri ayrıca diğer AS'leri çağırabilir. Bu işlemler, durumu değiştirebilir ve jetonları bir akıllı sözleşmeden diğerine veya bir hesaptan diğerine gönderebilir.
+
+Alephium'da akıllı sözleşmeler, Ralph dili kullanılarak yazılır ve Alphred Sanal Makinesinde çalışır.
 
 ## B
 
-### Blake 3 Algorithm (Hash Function)
-[Blake 3 Algorithm](https://github.com/BLAKE3-team/BLAKE3) is a cryptographic hash function. A hash function is a mathematical function that takes an input string of any length and converts it to a fixed-length output string. The fixed-length output is known as the hash value.
+### Blake 3 Algoritması (Hash Fonksiyonu)
+[Blake 3 Algoritması](https://github.com/BLAKE3-team/BLAKE3), bir kriptografik hash fonksiyonudur. Bir hash fonksiyonu, herhangi bir uzunluktaki bir giriş dizisini alıp sabit uzunlukta bir çıkış dizesine dönüştüren matematiksel bir fonksiyondur. Sabit uzunluklu çıkış, hash değeri olarak bilinir.
 
-Hash functions have a lot of use cases on a blockchain: in the [Merkle Tree](#merkle-tree), Proof of Work Consensus, Digital Signatures, and on the Blockchain itself (as each block header in a block in the blockchain contains the hash of the previous block header). Bitcoin, for example, uses the [SHA-256.](https://en.wikipedia.org/wiki/SHA-2)
+Hash fonksiyonlarının bir blok zincirinde birçok kullanım alanı vardır: [Merkle Tree](#merkle-tree), Proof of Work Consensus, Dijital İmzalar ve Blok Zinciri kendisi (çünkü bir blok zincirindeki her blok başlığı önceki bloğun başlığının hash'ini içerir). Örneğin, Bitcoin, SHA-256'yı kullanır.
 
-Alephium uses the Blake 3 Algorithm as its cryptographic hash function for mining.
+Alephium, madencilik için kriptografik hash fonksiyonu olarak Blake 3 Algoritmasını kullanır.
 
-### Block Reward
+### Blok Ödülü
 
-The block reward is an economic incentive for the miners to do their job of securing the network.
+Blok ödülü, madencilerin ağı güvence altına almaları için bir ekonomik teşviktir.
 
-It is paid in the blockchain’s native token. It is usually higher when the network is small and new and decreases over time as it matures.
+Blok zincirinin yerel jetonunda ödenir. Ağ küçük ve yeni olduğunda genellikle daha yüksektir ve zamanla olgunlaştıkça azalır.
 
-[Block Reward GitHub Implementation](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
+[Blok Ödülü GitHub Uygulaması](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/mining/Emission.scala)
 
-### Block Size
+### Blok Boyutu
 
-Block size is the data limit each block can handle. 
+Blok boyutu, her bloğun işleyebileceği veri limitidir. 
 
-It can be measured in different ways. In some blockchains, it is expressed in how much actual data the block can carry (for example, in Zcash, the block size is 2MB). In other blockchains, the block size is related to the computational processing limit it can consume from the network (usually expressed in gas). Ethereum’s and Alephium’s block sizes are measured this way.
+Farklı şekillerde ölçülebilir. Bazı blok zincirlerinde, bloğun gerçek veri taşıma kapasitesi olarak ifade edilir (örneğin, Zcash'te blok boyutu 2MB'dir). Diğer blok zincirlerinde, blok boyutu ağdan tüketebileceği hesaplama işlem sınırıyla ilişkilidir (genellikle gaz olarak ifade edilir). Ethereum'un ve Alephium'un blok boyutları bu şekilde ölçülür.
 
-### Block Time
+### Blok Zamanı
 
-Block Time is the time needed to compute the transactions inside a block and send it to the network.
+Blok Zamanı, işlemlerin bir blok içinde hesaplanması ve ağa gönderilmesi için gereken süredir.
 
-Transactions are gathered inside a block and checked by the miners (or validators on PoS blockchains). Usually, the Block Time is impacted by the mining difficulty, as it is adjusted to reflect the network's computational capacity (hashrate) over a given time.
+İşlemler bir blok içine toplanır ve madenciler (veya PoS blok zincirlerinde doğrulayıcılar) tarafından kontrol edilir. Genellikle, Blok Zamanı, ağın hesaplama kapasitesini (hashrate) belirlemek için ayarlanırken madencilik zorluğundan etkilenir.
 
-Alephium network has a difficulty adjustment on every block and has an expected block time of **64 seconds**.
+Alephium ağı her blokta zorluk ayarlaması yapar ve beklenen blok zamanı **64 saniyedir**.
 
-Additional resources: [Block Time and Block Size Article](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
-
-### Bridge
-
-A bridge is a protocol connecting separate blockchains to enable interactions between them. Each blockchain usually has its own technological features and doesn’t have a native way to communicate with other protocols. So the bridge is a set of smart contracts that links these different ecosystems.
- 
-A bridge can be more specialized, only allowing one type of interaction (like token transfers, for instance), or it can be more generalistic, allowing any kind of data transfer between the bridged blockchains.
+Ek kaynaklar: [Blok Zamanı ve Blok Boyutu Makalesi](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
 
 ## C
 
+## Ç
+
+### Çoklu İmza
+
+Çoklu İmzalı veya Çok İmzalı, bir işlemin ağa gönderilmesi için birden fazla özel anahtarın imzalamasını isteme sürecidir. Bu, ek bir güvenlik adımı olarak kullanılır.
+
+Genellikle, çok imzalı kurulum, belirli bir işlemin onaylanması ve gönderilmesi için bir minimal kuartum gerektirir. Örneğin, 9 potansiyel eş imzacı arasından 5 imzacı gerektiren bir çoklu imza 5'ten 9'a kadar.
+
+Alephium'un [Tam Düğüm Cüzdanı](/cuzdan/node-cuzdan-rehberi), çoklu imza adreslerini destekler
+
 ## D
+
+### Daha Az İş Kanıtı (veya PoLW)
+
+Bitcoin için Proof-of-Work veya Ethereum için Proof-of-Stake'e benzer şekilde, PoLW, Alephium'un konsensüs algoritmasıdır. Ağın enerji tüketimini güvenliği ve merkeziyetsizliği olumsuz etkilemeden optimize eder. Toplam birikmiş hashrate 1 Eh/s'yi geçtiğinde etkinleştirilir.
+
+Bu noktadan sonra, yeni bir blok çıkartmanın maliyetini kısmen içselleştirir, blok doğrulama sürecine bir sikke yakma mekanizması ekleyerek, genel olarak gerekli işlemci gücünün bir üst sınırını teşvik eder. Aynı ağ koşulları verildiğinde, Alephium'un, Bitcoin madenciliğinin tükettiğinin yalnızca ⅛'ini kullanması beklenir.
+
+Ek kaynaklar: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work, the universe and everything…](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
+
+### Durum
+
+Durum, bir makinenin birden fazla duruma sahip olabileceği, ancak herhangi bir zamanda yalnızca bir durumda olabileceği [bilgisayar bilimi kavramıdır.](https://en.wikipedia.org/wiki/State_(computer_science)) Bir blok zinciri bir durum makinesi olarak kabul edilir. Durum, sistemin mevcut durumunu açıklar ve işlemler (girişler ve çıkışlar) durum geçişlerini tetikler. İşlemler süreci daha verimli hale getirmek için bloklara toplandığında, bir bloğun eklenmesi asıl blok zincir durumunu değiştirir.
+
+Alephium, diğer UTXO muhasebe modellerinden faydalanmasına izin veren tam özellikli bir durum kullanır.
 
 ## E
 
@@ -68,92 +90,96 @@ A bridge can be more specialized, only allowing one type of interaction (like to
 
 ## G
 
-### Gas Amount Spent
+### Gaz Fiyatı
 
-Gas Spent is the amount of computations the miner uses to execute the transactions. The more functions the transaction has, the more complex its execution, and the more gas is spent. 
+Bu, gazın parasal değeridir. Gaz, bir blok zincirinde bir komutun yürütülmesi için gereken hesaplama çabası olarak tanımlanır. Gaz fiyatı, madencinin yaptığı iş için ödenen parasal karşılıktır. 
 
-For now, and as an anti-spam measure, there is a minimum value of 20’000 gas for any transaction on Alephium, meaning that your transaction fee will cost at least 0.002 ALPH. 
+Alephium'daki mevcut en düşük gaz fiyatı 10^-7 ALPH veya 0.0000001 ALPH'tır.
 
-As the network matures, this will be relaxed, and the market will define the price of transaction fees.
+### Genesis Blok
 
-### Gas Price
+Genesis Blok, bir blok zincirinin madenciliğe başladığı ilk bloğun adıdır. Bloklar bir üstüne diğerine yerleştirildikçe, Genesis Blok, temel veya başlangıçtır.
 
-This is the monetary value of the gas. Gas is defined as the computational effort to execute a command in a blockchain. The gas price is the monetary counterpart to pay for the work done by the miner. 
+Bazen Blok 0 veya Blok 1 olarak da adlandırılır. Bir blok bir blok zincirine yayınlandığında, önceki bloğa referans verir. Referans alınacak önceki blok olmadığı için, genesis blokları genellikle yazılımın içine sert kodlanmıştır.
 
-The current lowest possible gas price on Alephium is 10^-7 ALPH or 0.0000001 ALPH.
-
-### Genesis Block
-
-A Genesis Block is the name of a blockchain’s first block ever mined. As the blocks get layered one on top of the other, the Genesis Block is the foundation or beginning of it.
-
-It is also occasionally referred to as Block 0 or Block 1. When a block is broadcasted to the blockchain, it references the previous block. Because there is no previous block to reference, genesis blocks are generally hardcoded into the software.
-
-Alephium’s genesis block was mined on November 8th, 2021
+Alephium'un genesis bloğu 8 Kasım 2021'de madencilik yapıldı
 
 ## H
 
-### Hard Fork
+### Harcanan Gaz Miktarı
 
-A hard fork happens when a major upgrade on a network's protocol makes nodes or users running the previous version unable to send or validate transactions on the network after it.
+Harcanan Gaz, madencinin işlemleri yürütmek için kullandığı hesaplamaların miktarıdır. İşlemin daha fazla işlevi varsa, daha karmaşık bir yürütme ve daha fazla gaz harcanır. 
 
-As the upgrade is optional, sometimes some of the nodes or users decide not to do it, thus creating a different version of the blockchain from that point on. That happened with Ethereum and Ethereum Classic, for example.
+Şu anda, ve bir anti-spam önlemi olarak, Alephium'da herhangi bir işlem için minimum 20.000 gaz değeri bulunur, yani işlem ücretiniz en az 0,002 ALPH tutarında olur.
+
+Ağ olgunlaştıkça, bu gevşetilecek ve işlem ücretlerinin fiyatı piyasa tarafından belirlenecektir.
 
 ## I
+
+## İ
 
 ## J
 
 ## K
 
+### Köprü
+
+Bir köprü, farklı blok zincirlerini birbirine bağlayarak etkileşimleri mümkün kılan bir protokoldür. Her blok zinciri genellikle kendi teknolojik özelliklerine sahiptir ve diğer protokollarla iletişim kurma doğal bir yolunun yoktur. Bu nedenle, köprü, bu farklı ekosistemleri bağlayan bir dizi akıllı sözleşmeden oluşur.
+ 
+Bir köprü daha özelleştirilebilir olabilir, yalnızca bir tür etkileşimi (örneğin, jeton transferleri gibi) izin verir veya daha genel amaçlı olabilir, köprülenmiş blok zincirleri arasında her türlü veri transferine izin verir.
+
 ## L
 
 ## M
 
-### Merkle Tree
-
-A Merkle tree [is a structure](https://en.wikipedia.org/wiki/Merkle_tree) used in a blockchain to compress data more efficiently and securely.
-The blockchain packs the transactions in blocks. Each block has a header, and this header has a hash. This hash is stored on the Merkle Tree. The hash from the Merkle Tree is used to verify that a data set is the same as the original set of transactions without accessing the content inside the block. When visualized, this structure resembles a tree and can also be called a "binary hash tree."
-
-For example, Alephium uses three Merkle trees per group to store assets-UTXOs, contract logic, and contract state. 
-
-### Maximal Extractble Value (MEV)
-
-Miner or [Maximal Extractable Value (MEV)](https://ethereum.org/en/developers/docs/mev/) refers to the value obtained from a block mining in excess of the standard block reward and gas fees by changing, including, or removing transactions in a block.
-
-This difference is offered by actors referred to as “searchers” that analyze the mempool looking for profit opportunities by replacing the information on a given transaction, like the sender or receive address. To increase the likelihood of their transaction being chosen by the miner to be part of the next block produced, they are willing to pay a much higher gas fee than the average one, giving away or “sharing” part of the profit.
-
-### Mining Reward
+### Madencilik Ödülü
 
 ![](media/Block%20reward.png)
 
-Alephium’s reward for newly generated blocks is also called Mining Reward (MR). After distribution, the [block rewards](#block-reward) are locked for 500 minutes.
+Alephium'un yeni oluşturulan bloklar için ödülü aynı zamanda Madencilik Ödülü (MR) olarak adlandırılır. Dağıtımdan sonra, [blok ödülleri](#block-reward) 500 dakika boyunca kilitlenir.
 
-The mining reward is bound by two curves based on hashrate and timestamp. At a given time and for a given hashrate, the reward per block equals the minimum between the time-based reward and the hashrate-based reward.
+Madencilik ödülü, hashrate ve zaman damgasına dayalı iki eğriyle sınırlanmıştır. Belli bir zamanda ve belirli bir hashrate için blok başına ödül, zaman tabanlı ödül ve hashrate tabanlı ödül arasındaki minimumdur.
 
-Block Reward = min( time-based reward, hashrate-based reward).
+Blok Ödülü = min (zaman tabanlı ödül, hashrate tabanlı ödül).
 
-Additional resources: [Alephium Block Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
+Ek kaynaklar: [Alephium Blok Ödülleri](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 
-### Multisig
+### Maksimum Çıkartılabilir Değer (MEV)
 
-Multisig or Multisignature is the process of requesting more than one private key to co-sign a transaction for it to be broadcast to the network. It is used as an additional security step.
+Madenci veya [Maksimum Çıkartılabilir Değer (MEV)](https://ethereum.org/en/developers/docs/mev/), bir blok madenciliğinden standart blok ödülü ve gaz ücretleri fazlasıyla elde edilen değere atıfta bulunur.
 
-Usually, the multisig setup is done in a way that requires a minimal quorum of signers for a specific transaction to be approved and sent. For instance, a multisig of 5 out of 9 will require a quorum of 5 signers (among nine potential co-signers) to co-sign a transaction before it can be sent.
+Bu fark, "aramacılar" olarak adlandırılan aktörler tarafından sunulur ve bir blok madenciliği için bir sonraki üretilen bloğun bir parçası olmak için seçilen bir işlemin bilgilerini değiştirerek, dahil ederek veya kaldırarak elde edilir. Gönderen veya alıcı adresi gibi belirli bir işlemin bilgilerini değiştirerek karlılık fırsatlarını arayan. İşlemlerinin bir sonraki bloğun bir parçası olması için madenci tarafından seçilme olasılığını artırmak için ortalama değerin çok üzerinde bir gaz ücreti ödemeye isteklidirler ve kârın bir kısmını "paylaşırlar".
 
-Alephium’s [Full Node Wallet](/wallet/node-wallet-guide) supports multisig addresses
+### Merkle Ağacı
+
+Merkle ağacı, bir blok zincirinde verileri daha verimli ve güvenli bir şekilde sıkıştırmak için kullanılan bir yapıdır.
+Blok zinciri işlemleri bloklarda paketlenir. Her bloğun bir başlığı vardır ve bu başlığın bir hash'i vardır. Bu hash, Merkle Ağacında saklanır. Merkle Ağacından gelen hash, bir veri kümesinin blok içindeki içerik olmadan orijinal işlem kümesiyle aynı olduğunu doğrulamak için kullanılır. Görselleştirildiğinde, bu yapı bir ağaç gibi görünür ve "ikili hash ağacı" olarak da adlandırılabilir.
+
+Örneğin, Alephium, her grup başına üç Merkle ağacı kullanır ve bu ağaçlar varlık-UTXO'ları, sözleşme mantığı ve sözleşme durumu saklar.
 
 ## N
 
+### Nihaiye Zamanı
+
+Nihaiye Zamanı, bir işlemin ağa gönderildiği ve nihai (ve değiştirilemez) olarak kabul edildiği zamana kadar geçen süredir. İki ana nihaiyet kategorisi vardır: olasılıksal nihaiyet ve kesin nihaiyet.
+
+Çoğu blok zincir sistemi, olasılıksal işlem nihaiyeti sunar - bu, bir işlemin geçerli ve geri dönülemez olduğu olasılığının, zincire daha fazla blok eklenmesiyle arttığı anlamına gelir, ancak kesinlikle kesin değildir. Ağ, işlemin yeterince zaman ve blok ekleyerek kesin olduğu konusunda uzlaşır.
+
+Alephium'un blok zamanı ve blok boyutu, ağın işlem kabul hızını ve işlem nihaiyetini belirler. Alephium'da işlem nihaiyeti, işlemin bir blok zincirindeki kaç blok sürdüğüne bağlıdır.
+
 ## O
+
+## Ö
 
 ## P
 
-### Proof of Less Work (or PoLW)
+### Parçalama 
 
-Similar to Proof-of-Work for Bitcoin, or Proof-of-Stake for Ethereum (post-merge), PoLW is Alephium’s consensus algorithm. It optimizes the network's energy consumption without compromising its security & decentralisation. It is activated when the network surpasses 1 Eh/s of accumulated hashrate. 
+Parçalama, büyük veritabanlarını daha küçük, daha hızlı ve daha kolay yönetilen bölümlere ayıran bir veritabanı yönetimi stratejisidir. 
 
-After that, it partially internalizes the cost to mine a new block, by adding a coin-burning mechanism into the block validation process, incentivizing a cap on the processing power needed overall. Given the same network conditions, Alephium would only use ⅛ of the energy consumed by Bitcoin mining.
+Bu daha küçük parçalar, "parçalar" olarak adlandırılır, "bir bütünün küçük bir parçası" anlamına gelir. Parçalama, bir veritabanının çalıştırılması için gereken gücün bir tek bir bilgisayarın işleme kapasitesini aştığı durumlarda kullanılır. Parçalama, blok zincirinin boyutu, sanal makinenin işlemci kapasitesini ve ağın işlem kapasitesini aştığında gereklidir. Parçalama, ana blok zincirini ayrı parçalara böler ve düğümler yalnızca bir alt kümenin işlemlerini doğrular, paralel işlem doğrulamasına izin verir. Bu, ağın verimliliğini artırır. 
 
-Additional resources: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work, the universe and everything…](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
+Alephium'un blok zinciri parçalıdır ve Blok Akışı algoritması bunu yönetir. Şu anda, her biri dört parçadan oluşan dört grup bulunmaktadır.
 
 ## Q
 
@@ -161,98 +187,38 @@ Additional resources: [TECH TALK #1 — The Ultimate guide to Proof-of-Less-Work
 
 ## S
 
-### Sharding 
+### Sanal Makine
 
-Sharding is a strategy of database management that splits large databases into smaller, faster, more easily managed sections. 
+Bir sanal makine, bir bilgisayarın yazılımını çalıştırmak için tasarlanmış bir yazılım uygulamasıdır. Fiziksel bir bilgisayarın donanımını simüle eder ve işletim sistemi ve diğer yazılım uygulamalarını çalıştırmak için bir ortam sağlar. Sanal makineler, fiziksel makineye benzer bir şekilde çalışır ve kendi işletim sistemleri ve uygulamaları vardır.
 
-These smaller parts are called [“shards”](https://en.wikipedia.org/wiki/Shard_(database_architecture)), which means "a small part of a whole." Sharding is used when the power needed to run the database exceeds the processing capacity of a single computer. Sharding becomes necessary when the size of the blockchain exceeds the processing power of the Virtual Machine and the network. Sharding breaks up the main blockchain into separate segments, and the nodes verify only a subset of transactions, allowing parallel transaction validation. This increases the network throughput. 
+Blok zincirlerinde, bir sanal makine, akıllı sözleşmeler gibi kod parçalarını çalıştırmak için kullanılır. Blok zinciri üzerinde çalışan her düğüm, bir sanal makineyi çalıştırır ve akıllı sözleşmeleri bu sanal makine üzerinde çalıştırır.
 
-Alephium’s blockchain is sharded, and the Blockflow algorithm manages this. Currently, we have four groups with four shards in each one.
+Alephium'un Sanal Makinesi, Alphred olarak adlandırılır ve Ralph diliyle yazılan akıllı sözleşmeleri çalıştırır.
 
-### Smart Contract 
+### Sert Çatal
 
-[Smart Contract (SC)](https://en.wikipedia.org/wiki/Smart_contract) is a computer program that enables transactions to be executed by rules predefined, without needing to rely on a third party, central authority or external mechanisms. In the blockchain context, a smart contract is written using the native Programing Language or is compiled (translated) to it and usually runs on the blockchain’s [Virtual Machine.](#virtual-machine)
+Bir sert çatal, bir ağın protokolünde yapılan bir ana güncelleme, bu güncelleme ile önceki sürümü çalıştıran düğümler veya kullanıcılar artık ağda işlem gönderemez veya doğrulayamaz hale gelir.
 
-SCs on a blockchain can store arbitrary [state](#state) and execute arbitrary transactions. End clients also use transactions to interact with it. And the SC transactions can also invoke other SCs. These transactions might result in changing the state and sending coins from one smart contract to another or from one account to another.
+Güncelleme isteğe bağlı olduğundan, bazen düğümlerin veya kullanıcıların bir kısmı bunu yapmamaya karar verir ve bu da o noktadan itibaren farklı bir blok zinciri sürümünün oluşturulmasına neden olur. Örneğin, bu Ethereum ve Ethereum Classic'te meydana geldi.
 
-In Alephium, the smart contracts are written using the Ralph language and run on Alphred Virtual Machine.
-
-### State
-
-The state is a [computer science concept](https://en.wikipedia.org/wiki/State_(computer_science)) where a machine can have multiple states, but only one at any given time.
-
-A blockchain is considered to be a state machine. The state describes the system's current situation, and the transactions (inputs and outputs) trigger state transitions. As the transactions are bundled in blocks to make the process more efficient, the addition of a block is what changes the actual blockchain state.
-
-Alephium uses the stateful UTXO model, which, compared to other UTXO accounting models, allows it to benefit from a full-featured state. 
+## Ş
 
 ## T
-
-### Time to Finality
-
-Time to Finality is the time between when a transaction is submitted to the network and when it’s considered final (and immutable). There are two main categories of finality: probabilistic finality and deterministic finality.
-
-Most blockchain systems offer probabilistic transaction finality — this means that the probability that a transaction is valid and cannot be reversed increases with adding more blocks on the chain, but it’s never absolutely final. The network agrees that the transaction is final with enough time and blocks. This is how Bitcoin achieves finality, for example, a transaction is considered final after 6 blocks.
-
-Other blockchains use a deterministic transaction finality (sometimes called absolute finality) — this means that the transaction is considered final when it is added to the blockchain. Fantom is one example of it.
-
-Additional resource: [Time to Finality Article](https://medium.com/@alephium/time-to-finality-17d64eeffd25)
-
-### Token
-
-A token is a registry entry in a blockchain that follows a set of rules encoded by the smart contract issuing it. This definition makes it different from a cryptocurrency as the latter is the native asset of a blockchain like BTC or ETH, whereas tokens are built on an existing blockchain using smart contracts.
-
-Tokens can be categorized as fungible or non-fungible. Fungible tokens are identical and can seamlessly replace one another. On the other hand, non-fungible tokens (NFTs) are unique and provably scarce, meaning their histories can be traced down to the individual level.
-
-Tokens can also be categorized by their intended function: Utility, Security, or Currency Tokens. Currency tokens are created to be traded, like MakerDAO’s DAI or USDC. Utility tokens are focused on practical use, representing access to a given product or service. Security tokens are a digital representation of an underlying asset, such as a share in a company, voting right in a company or other centralized organization, or some tangible or digital article of value.
-
-### Transaction Fee 
-
-![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
-
-When someone does a transaction in Alephium, there’s a price to be paid to the miners for including it in a block. 
-
-This price is composed of two elements: the [Gas Price](#gas-price) in the network’s native token and the [Gas Amount Spent](#gas-amount-spent) on this transaction processing and can be defined by this equation:
-
-Transaction fee = Gas Price * Gas Amount Spent
-
-Additional resources: [Transaction fee GitHub Implementation](https://github.com/alephium/alephium/blob/v1.4.2/protocol/src/main/scala/org/alephium/protocol/model/Transaction.scala#L230-L239)
-
-### Transactions Per Second (TPS)
-
-Transactions Per Second (TPS) is a measure that comes from the [database systems](https://en.wikipedia.org/wiki/Transactions_per_second) environment, and it means how many transactions theoretically can happen in one second in a given system.
-
-In the blockchain context, it is used as a synonym for speed: how fast a transaction can be broadcasted to the network. The following equation calculates it:
- 
-TPS = (Block Size / Transaction Size ) /Block Time
-
-Additional resources:[Transactions Per Second Article](https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39)
 
 ## U
 
 ### UTXO
 
-[UTXO](https://en.wikipedia.org/wiki/Unspent_transaction_output) (Unspent Transaction Output) is the term for the amount of a specific currency that remains unspent after a cryptocurrency transaction.
+UTXO, "kullanılmamış işlem çıkışı" anlamına gelir. Bir UTXO, bir işlemin bir girdisi olarak harcandığında kullanılır ve bir çıktı olarak bir işleme dahil edildiğinde kullanılmış olarak işaretlenir.
 
-On a UTXO account model blockchain, the portion of what was sent and not spent in a transaction is used as an accounting method. Like double-entry accounting, each transaction has an input and output.
+Bitcoin ve diğer birçok kripto para birimi, UTXO tabanlı bir muhasebe modelini kullanır. Bu, bir hesabın dengesini izlemek yerine, her işlemin, tıpkı bir nakit paranın fiziksel olarak parçalanabilir olması gibi, bir girdi ve bir çıktı olarak kaydedilmesi anlamına gelir.
 
-Improved versions were built over it, like eUTXO, Cell System, or Alephium’s sUTXO.
+Alephium'un ölçeklenebilirlik ve hızını artırmak için bir UTXO muhasebesi kullanır.
+
+## Ü
 
 ## V
-
-### Virtual Machine
-
-A Virtual Machine (VM) is a software emulation of a physical computer to run programs and deploy apps.
-
-A virtual machine runs its own operating system and functions. Each node runs a copy of the VM to run the programs (smart contracts) and allow them to interact with each other and the blockchain itself. 
-
-Alephium’s Virtual machine is called Alphred and has a lot of very [interesting properties.](https://www.youtube.com/watch?v=VVYH9rBJAdA&list=PLqL60kqgLPBBrc64K-1Gs771FBTiLtYZE&index=29)
-
-
-## W
-
-## X
 
 ## Y
 
 ## Z
-
