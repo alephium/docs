@@ -4,10 +4,6 @@ title: Başlarken
 sidebar_label: Başlarken
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
 ## Giriş
 
 Ralph, güvenlik, basitlik ve verimlilik olmak üzere üç ana hedefe odaklanan Alephium blockchain için akıllı sözleşme programlama dilidir. Bu öğretici, temiz, idiyomatik ve güvenli Ralph akıllı sözleşmeleri yazma ipuçları sağlar. Ralph tasarlarken aşağıdaki prensipleri takip ediyoruz:
@@ -21,7 +17,9 @@ Ralph, statik bir tipli dil olmasına rağmen, yerel değişkenler ve sabitler i
 Ralph'ın tüm türleri değer türleridir, yani işlev argümanları olarak veya atanırken her zaman kopyalanırlar.
 Şu anda, Ralph yalnızca aşağıdaki veri türlerini destekler:
 
+:::info
 Türlerin ve fonksiyon tiplerinin çevirisi yapılmamıştır, çünkü Ralph'ın türleri ve fonksiyonları genellikle İngilizce'de kullanılan terimlerdir.
+:::
 
 ### Primitive Types
 

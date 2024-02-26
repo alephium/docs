@@ -1,15 +1,17 @@
 ---
 sidebar_position: 20
-title: Built-in Functions
-sidebar_label: Built-in functions
+title: Yerleşik Fonksiyonlar
+sidebar_label: Yerleşik fonksiyonlar
 ---
 
 <!---
 This file is auto-generated with "scripts/generate-builtin-functions.js"
 -->
 
+:::info
 Bu sayfa otomatik olarak oluşturulmuştur. Bu sayfada, Ralph'ın yerleşik işlevleri ve bunların kullanımı hakkında bilgi bulabilirsiniz.
 Otomatik oluşturulduğu ve hızlıca değişebileceği için, bu sayfada yer alan bilgilerin çevirisi yapılmamıştır.
+:::
 
 The built-in functions are divided into several categories:
 [Contract](#contract-functions),

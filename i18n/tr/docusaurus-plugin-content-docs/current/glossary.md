@@ -181,8 +181,6 @@ Bu daha küçük parçalar, "parçalar" olarak adlandırılır, "bir bütünün 
 
 Alephium'un blok zinciri parçalıdır ve Blok Akışı algoritması bunu yönetir. Şu anda, her biri dört parçadan oluşan dört grup bulunmaktadır.
 
-## Q
-
 ## R
 
 ## S

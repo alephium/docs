@@ -1,7 +1,7 @@
 ---
 sidebar_position: 50
-title: Defter(Ledger)
-sidebar_label: Defter(Ledger)
+title: Ledger
+sidebar_label: Ledger
 ---
 
 ![IMG_8932-2](https://github.com/alephium/alephium/assets/88235023/010e915e-0ecd-4f8f-808e-4223202eaecd)
