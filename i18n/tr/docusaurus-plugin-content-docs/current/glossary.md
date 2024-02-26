@@ -17,9 +17,9 @@ Teknik tasarımından arayüzlerine kadar Alephium, günümüzde merkezi olmayan
 
 ### Akıllı Sözleşme 
 
-[Akıllı Sözleşme (AS)](https://en.wikipedia.org/wiki/Smart_contract), belirli bir kural setine göre yürütülebilen işlemlerin üçüncü bir tarafa, merkezi bir otoriteye veya harici mekanizmalara güvenmeye gerek kalmadan gerçekleştirilmesini sağlayan bir bilgisayar programıdır. Blok zincirinde, akıllı bir sözleşme, yerel Programlama Dili kullanılarak yazılır veya ona derlenir (çevrilir) ve genellikle blok zincirinin [Sanal Makinesi](#virtual-machine) üzerinde çalışır.
+[Akıllı Sözleşme (AS)](https://tr.wikipedia.org/wiki/Ak%C4%B1ll%C4%B1_s%C3%B6zle%C5%9Fme), belirli bir kural setine göre yürütülebilen işlemlerin üçüncü bir tarafa, merkezi bir otoriteye veya harici mekanizmalara güvenmeye gerek kalmadan gerçekleştirilmesini sağlayan bir bilgisayar programıdır. Blok zincirinde, akıllı bir sözleşme, yerel Programlama Dili kullanılarak yazılır veya ona derlenir (çevrilir) ve genellikle blok zincirinin [Sanal Makinesi](#sanal-makine) üzerinde çalışır.
 
-Bir blok zincirindeki AS'ler, keyfi [durumu](#state) saklayabilir ve keyfi işlemleri gerçekleştirebilir. Son kullanıcılar, aynı zamanda işlemlerle etkileşime girerken de işlemleri kullanır. Ve AS işlemleri ayrıca diğer AS'leri çağırabilir. Bu işlemler, durumu değiştirebilir ve jetonları bir akıllı sözleşmeden diğerine veya bir hesaptan diğerine gönderebilir.
+Bir blok zincirindeki AS'ler, keyfi [durumu](#durum) saklayabilir ve keyfi işlemleri gerçekleştirebilir. Son kullanıcılar, aynı zamanda işlemlerle etkileşime girerken de işlemleri kullanır. Ve AS işlemleri ayrıca diğer AS'leri çağırabilir. Bu işlemler, durumu değiştirebilir ve jetonları bir akıllı sözleşmeden diğerine veya bir hesaptan diğerine gönderebilir.
 
 Alephium'da akıllı sözleşmeler, Ralph dili kullanılarak yazılır ve Alphred Sanal Makinesinde çalışır.
 
@@ -28,7 +28,7 @@ Alephium'da akıllı sözleşmeler, Ralph dili kullanılarak yazılır ve Alphre
 ### Blake 3 Algoritması (Hash Fonksiyonu)
 [Blake 3 Algoritması](https://github.com/BLAKE3-team/BLAKE3), bir kriptografik hash fonksiyonudur. Bir hash fonksiyonu, herhangi bir uzunluktaki bir giriş dizisini alıp sabit uzunlukta bir çıkış dizesine dönüştüren matematiksel bir fonksiyondur. Sabit uzunluklu çıkış, hash değeri olarak bilinir.
 
-Hash fonksiyonlarının bir blok zincirinde birçok kullanım alanı vardır: [Merkle Tree](#merkle-tree), Proof of Work Consensus, Dijital İmzalar ve Blok Zinciri kendisi (çünkü bir blok zincirindeki her blok başlığı önceki bloğun başlığının hash'ini içerir). Örneğin, Bitcoin, SHA-256'yı kullanır.
+Hash fonksiyonlarının bir blok zincirinde birçok kullanım alanı vardır: [Merkle Tree](#merkle-ağacı), Proof of Work Consensus, Dijital İmzalar ve Blok Zinciri kendisi (çünkü bir blok zincirindeki her blok başlığı önceki bloğun başlığının hash'ini içerir). Örneğin, Bitcoin, SHA-256'yı kullanır.
 
 Alephium, madencilik için kriptografik hash fonksiyonu olarak Blake 3 Algoritmasını kullanır.
 
@@ -66,7 +66,7 @@ Ek kaynaklar: [Blok Zamanı ve Blok Boyutu Makalesi](https://medium.com/@alephiu
 
 Genellikle, çok imzalı kurulum, belirli bir işlemin onaylanması ve gönderilmesi için bir minimal kuartum gerektirir. Örneğin, 9 potansiyel eş imzacı arasından 5 imzacı gerektiren bir çoklu imza 5'ten 9'a kadar.
 
-Alephium'un [Tam Düğüm Cüzdanı](/cuzdan/node-cuzdan-rehberi), çoklu imza adreslerini destekler
+Alephium'un [Tam Düğüm Cüzdanı](/wallet/node-wallet-guide), çoklu imza adreslerini destekler
 
 ## D
 
@@ -136,7 +136,7 @@ Bir köprü daha özelleştirilebilir olabilir, yalnızca bir tür etkileşimi (
 
 ![](media/Block%20reward.png)
 
-Alephium'un yeni oluşturulan bloklar için ödülü aynı zamanda Madencilik Ödülü (MR) olarak adlandırılır. Dağıtımdan sonra, [blok ödülleri](#block-reward) 500 dakika boyunca kilitlenir.
+Alephium'un yeni oluşturulan bloklar için ödülü aynı zamanda Madencilik Ödülü (MR) olarak adlandırılır. Dağıtımdan sonra, [blok ödülleri](#blok-ödülü) 500 dakika boyunca kilitlenir.
 
 Madencilik ödülü, hashrate ve zaman damgasına dayalı iki eğriyle sınırlanmıştır. Belli bir zamanda ve belirli bir hashrate için blok başına ödül, zaman tabanlı ödül ve hashrate tabanlı ödül arasındaki minimumdur.
 
