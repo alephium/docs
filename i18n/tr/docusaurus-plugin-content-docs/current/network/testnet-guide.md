@@ -1,33 +1,29 @@
 ---
 sidebar_position: 10
-title: Testnet Guide
-sidebar_label: Testnet guide
+title: Testnet Rehberi
+sidebar_label: Testnet rehberi
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Testnet için tam düğümün kurulumu ana ağla aynıdır: [Tam Düğüm Başlangıç Rehberi](full-node/getting-started.md)
 
-<UntranslatedPageText />
+**Tam düğümü başlatmadan önce `user.conf` dosyasını değiştirmeniz gerekmektedir**.
 
-The installation of full node for testnet is the same as the mainnet: [Full Node Starter Guide](full-node/getting-started.md)
+Lütfen REST API için varsayılan adres ve bağlantı noktasının [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) olduğunu unutmayın.
 
-**The `user.conf` must be modified before starting the full node**.
+## Yapılandırma
 
-Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
-
-## Configuration
-
-In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have to add:
+`$HOME/.alephium/user.conf` (`user.conf` kullanılıyorsa) dosyasına aşağıdaki satırları eklemelisiniz:
 
 ```
 alephium.network.network-id = 1
 alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
 ```
 
-## Mining
+## Madencilik
 
-In the testnet you can use the [CPU Miner Guide](cpu-miner-guide.md) to get some ALPH
+Testnet'te bazı ALPH almak için [CPU Madenci Rehberi](cpu-miner-guide.md)'ni kullanabilirsiniz.
 
-Append your miner addresses in `$HOME/.alephium/user.conf` like:
+Madenci adreslerinizi `$HOME/.alephium/user.conf` dosyasına aşağıdaki gibi ekleyin:
 
 ```
 alephium.mining.miner-addresses = [
@@ -40,11 +36,11 @@ alephium.mining.miner-addresses = [
 
 :::info 
 
-You can easily generate mining addresses by installing the [desktop wallet](../wallet/desktop-wallet/configure-mining-wallet), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
+[Desktop cüzdanı](../wallet/desktop-wallet/configure-mining-wallet) yükleyerek kolayca madencilik adresleri oluşturabilir ve 4 adet adres içeren bir cüzdan oluşturabilirsiniz. Ardından adresleri kopyalayıp yukarıdaki `user.conf` dosyasına yapıştırabilirsiniz.
 
 :::
 
-## Configuration example
+## Yapılandırma örneği
 
 ```
 alephium.api.network-interface = "0.0.0.0"

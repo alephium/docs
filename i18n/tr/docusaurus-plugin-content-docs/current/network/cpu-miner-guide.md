@@ -1,42 +1,38 @@
 ---
 sidebar_position: 30
-title: CPU Miner Guide
-sidebar_label: CPU miner guide
+title: CPU Madencilik Rehberi
+sidebar_label: CPU madencilik rehberi
 ---
-
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 :::info
 
-CPU mining is only for testing purpose. To use the testnet please visit [Testnet Guide](network/testnet-guide.md).
+CPU madenciliği yalnızca test amaçlıdır. Test ağı kullanmak için lütfen [Test Ağı Rehberi](network/testnet-guide.md)'ne göz atın.
 
-For mining in production please visit [Solo Mining Guide](mining/solo-mining-guide.md) or [Pool Mining Guide](mining/pool-mining-guide.md).
+Üretimde madencilik yapmak için lütfen [Tek Başına Madencilik Rehberi](mining/solo-mining-guide.md) veya [Havuz Madenciliği Rehberi](mining/pool-mining-guide.md)'ni ziyaret edin.
 
 :::
 
-You must first follow the steps in the [Full-node Guide](full-node/getting-started.md), in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
+Önce [Tam Düğüm Rehberi](full-node/getting-started.md)'ndeki adımları izlemeniz gerekmektedir, böylece düğümünüzü indirebilir, yapılandırabilir, başlatabilir ve Swagger (veya diğer OpenAPI istemcileri) kullanabilirsiniz.
 
-Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+Lütfen REST API için varsayılan adres ve bağlantı noktasının [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) olduğunu unutmayın.
 
-## Start mining
+## Madenciliği Başlat
 
-Please make sure that your local node is fully synced before mining. We will add validation for this in our next major release.
+Madencilik yapmadan önce yerel düğümünüzün tamamen senkronize olduğundan emin olun. Bir sonraki büyük sürümümüzde bunun için bir doğrulama ekleyeceğiz.
 
-You can **start** mining on your local node by doing a POST on `/miners/cpu-mining?action=start-mining`.
+Yerel düğümünüzde madenciliği başlatmak için `/miners/cpu-mining?action=start-mining` üzerine bir POST işlemi yaparak madenciliği **başlatabilirsiniz**.
 
-The server should answer simply with `true` to confirm that the mining process has now started.
+Sunucu, madencilik işleminin artık başladığını doğrulamak için basitçe `true` yanıtı vermelidir.
 
-Please note that you will need first to configure your miner's addresses as explain the [Create a new miner wallet](mining/solo-mining-guide.md#create-a-new-miner-wallet) section of the GPU Miner Guide.
+Lütfen madencinizin adreslerini yapılandırmak için önce GPU Madenci Rehberi'nin [Yeni bir madenci cüzdanı oluşturun](mining/solo-mining-guide.md#bir-yeni-madenci-cüzdanı-oluşturun) bölümünü incelemeniz gerekecektir.
 
-## Stop mining
+## Madenciliği Durdur
 
-Similarly, you can **stop** mining on your local node by doing a POST on `/miners/cpu-mining?action=stop-mining`.
+Benzer şekilde, yerel düğümünüzde madenciliği **durdurabilirsiniz** `/miners/cpu-mining?action=stop-mining` üzerine bir POST işlemi yaparak.
 
-## CPU Usage
+## CPU Kullanımı
 
-You could tune how much CPU resources for mining by using the following two configs:
+Madencilik için CPU kaynaklarını nasıl ayarlayabileceğinizi aşağıdaki iki yapılandırma ile yapabilirsiniz:
 
-    akka.actor.mining-dispatcher.fork-join-executor.parallelism-min = 1 // the minimal number of threads for mining
-    akka.actor.mining-dispatcher.fork-join-executor.parallelism-max = 4 // the maximal number of threads for mining
+    akka.actor.mining-dispatcher.fork-join-executor.parallelism-min = 1 // madencilik için minimum iş parçacığı sayısı
+    akka.actor.mining-dispatcher.fork-join-executor.parallelism-max = 4 // madencilik için maksimum iş parçacığı sayısı
