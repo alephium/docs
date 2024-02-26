@@ -1,48 +1,18 @@
 ---
 sidebar_position: 30
-title: Dust Amount
-sidebar_label: Dust Amount
+title: Toz Miktarı
+sidebar_label: Toz Miktarı
 ---
 
-Alephium's unique
-[sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
-model combines security of the UTXO model and the expressiveness of
-the account model. All assets in Alephium, including the native ALPH
-and other [tokes](/tokens/overview), are managed by UTXOs. Even though
-UTXO model brings many of the security benefits on to the table
-(e.g. see [Asset Permission
-System](http://localhost:3000/ralph/asset-permission-system)), it also
-comes with a tradeoff that has UX implications: specifically the
-concept of **dust amount**. The goal of this article is to bring
-some clarity to this topic.
+Alephium'un benzersiz [sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749) modeli, UTXO modelinin güvenliğini ve hesap modelinin ifade yeteneğini birleştirir. Alephium'daki tüm varlıklar, yerel ALPH ve diğer [jetonlar](/tokens/overview) dahil olmak üzere, UTXO'lar tarafından yönetilir. UTXO modeli birçok güvenlik avantajını masaya getirirken (örneğin, [Varlık İzin Sistemi'ni](http://localhost:3000/ralph/asset-permission-system) görün), aynı zamanda UX etkileri olan bir takasla da gelir: özellikle **toz miktarı** kavramı. Bu makalenin amacı bu konuda biraz netlik getirmektir.
 
-Every UTXO contributes to the size of the so-called [UTXO
-set](https://en.wikipedia.org/wiki/Unspent_transaction_output#UTXO_set).
-Without an effective mechanism to control its size, UTXO set could
-create significant performance bottlenecks to the blockchain,
-especially when it comes to IO. Maintaining a relatively small UTXO
-set is important for Alephium to keep becoming the best version of
-itself: efficient, performant and scalable. 
+Her UTXO, sözde [UTXO setinin](https://en.wikipedia.org/wiki/Unspent_transaction_output#UTXO_set) boyutuna katkıda bulunur. Boyutunun kontrol edilmesi için etkili bir mekanizmanın olmaması durumunda, UTXO seti, özellikle IO'ya gelindiğinde, blockchain için önemli performans engelleri yaratabilir. Nispeten küçük bir UTXO setinin korunması, Alephium'un kendisinin en iyi sürümü olmaya devam etmesi için önemlidir: etkin, performanslı ve ölçeklenebilir.
 
-UTXO with very small amount of value can also become uneconomical to
-spend if the transaction fee of spending an UTXO is more than the
-value of the UTXO itself. Over time this can potentialy create a
-situation where users are not incentive-compatible with the long term
-health of the system.
+Çok küçük bir değere sahip UTXO'lar da harcanması ekonomik olmayabilir, çünkü bir UTXO'nun harcanma işlem ücreti, UTXO'nun değerinden daha fazla olabilir. Zamanla, bu, kullanıcıların sistemin uzun vadeli sağlığı ile uyumlu olmadığı bir durum yaratabilir.
 
-This is a problem faced by all UTXO based blockchains. To control the
-size of the UTXO set, Bitcoin Core introduced the concept of [dust
-](https://bitcoin.stackexchange.com/questions/10986/what-is-meant-by-bitcoin-dust/41082#41082). If
-a user attempts to create a UTXO with a value that is below the dust
-limit, Bitcoin Core will not relay it to the network to avoid state
-bloat of the blockchain. The concept of **dust amount** in Alephium is
-similar to the dust limit in Bitcoin but even simpler to reason about
-since it doesn't change depending on the type of the transaction. If a
-transaction output does not have at least the **dust amount** of ALPH,
-Alephium blockchain will consider the transaction invalid.
+Bu, tüm UTXO tabanlı blockchain'lerin karşılaştığı bir sorundur. UTXO setinin boyutunu kontrol altında tutmak için, Bitcoin Core, [toz](https://bitcoin.stackexchange.com/questions/10986/what-is-meant-by-bitcoin-dust/41082#41082) kavramını tanıttı. Bir kullanıcı, bir UTXO'yu toz limitinin altında bir değerle oluşturmaya çalışırsa, Bitcoin Core, blockchain'in durum şişmesini önlemek için bunu ağa iletmez. Alephium'daki **toz miktarı** kavramı, Bitcoin'deki toz limitine benzer, ancak işlem türüne bağlı olarak değişmez, bu yüzden düşünmek daha da basittir. Bir işlem çıktısı, en az **toz miktarı** ALPH içermiyorsa, Alephium blockchain işlemi geçersiz olarak kabul eder.
 
-For regular UTXOs, the **dust amount** is `0.001` ALPH. This means
-that the following transaction are invalid:
+Düzenli UTXO'lar için, **toz miktarı** `0.001` ALPH'dir. Bu, aşağıdaki işlemlerin geçersiz olduğu anlamına gelir:
 
 ```
 1)                ----------------
@@ -79,32 +49,10 @@ that the following transaction are invalid:
                   ----------------
 ```
 
-The second and third case illustrate the situation where even if
-user's intention is to send token A, at least a dust amount of ALPH
-needs to be sent as well. Button line is, each regular UTXO at least
-requires `0.001` ALPH or else the transaction will fail. This simple
-approach ensures that there is an upper bound to the size of the UTXO
-set in the Alephium system.
+İkinci ve üçüncü durum, kullanıcının niyetinin Jeton A'yı göndermek olsa bile, en az bir toz miktarı ALPH'nin de gönderilmesi gerektiğini göstermektedir. Özetle, her düzenli UTXO en az `0.001` ALPH gerektirir, aksi takdirde işlem başarısız olur. Bu basit yaklaşım, Alephium sistemindeki UTXO setinin boyutunun bir üst sınırının olmasını sağlar.
 
-Each contract has exactly one UTXO in the Alephium system. The dust
-amount for contract UTXOs (also known as **contract deposit**) is
-currently set as `1` ALPH. Compared to the dust amount in the regular
-UTXOs, it puts a much more aggressive upper bound to the number of
-contracts in the system, which limits not only the size of the
-contract UTXO set, but also the size of the contract states managed
-using the account model as well. Since it is possible to reclaim the
-contract deposit after the contract is destroyed, it hopefully creates
-the right incentives for developers to keep the size of the contract
-state at a healthy level.
+Her sözleşmenin Alephium sisteminde tam olarak bir UTXO'su vardır. Sözleşme UTXO'ları için (ayrıca **sözleşme teminatı** olarak da bilinir) toz miktarı şu anda `1` ALPH olarak ayarlanmıştır. Düzenli UTXO'ların toz miktarına kıyasla, bu, sistemdeki sözleşme UTXO setinin boyutuna çok daha agresif bir üst sınır koyar ve aynı zamanda hesap modeli kullanılarak yönetilen sözleşme durumlarının boyutunu da sınırlar. Sözleşme yok edildikten sonra sözleşme teminatını geri almak mümkün olduğundan, umarım geliştiricilerin sözleşme durumunu sağlıklı bir seviyede tutmaları için doğru teşvikleri oluşturur.
 
-From the UX perspective, this means that creating a contract requires
-at least `1` ALPH as contract deposit. Concretely, if the mint price
-of an NFT is `100` ALPH, the total cost might be `101` ALPH after
-taking contract deposit into consideration. It also means that any
-transactions that reduce the balance of the contract to below `1` ALPH
-will fail.
+UX açısından, bunun anlamı bir sözleşmenin oluşturulması için en az `1` ALPH'nin sözleşme teminatı olarak gerektiğidir. Somut olarak, bir NFT'nin damga fiyatı `100` ALPH ise, sözleşme teminatını dikkate alarak toplam maliyet `101` ALPH olabilir. Ayrıca, herhangi bir işlem, sözleşmenin bakiyesini `1` ALPH'nin altına düşürüyorsa başarısız olur.
 
-In summary, while it does create some UX challenges, **dust amount**
-for UTXOs (and by extension **contract deposit**) is a pivotal to the
-performance, scalability and decentralization of the Alephium
-blockchain.
+Özetle, bazı UX zorlukları yaratmasına rağmen, UTXO'lar için **toz miktarı** (ve genişletilmiş olarak **sözleşme teminatı**) Alephium blockchain'inin performansı, ölçeklenebilirliği ve merkezi olmayanlığı için kilit bir öneme sahiptir.

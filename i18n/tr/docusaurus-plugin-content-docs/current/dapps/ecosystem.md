@@ -1,17 +1,13 @@
 ---
 sidebar_position: 30
-title: Ecosystem
-sidebar_label: Ecosystem
+title: Ekosistem
+sidebar_label: Ekosistem
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## Ağ
 
-<UntranslatedPageText />
-
-## Network
-
-- [Local Devnet](https://github.com/alephium/alephium-stack#devnet) (explorer included)
-- Testnet and Mainnet APIs are [documented here](/dapps/public-services#api-aliases)
+- [Yerel Geliştirme Ağı (Devnet)](https://github.com/alephium/alephium-stack#devnet) (dahil olan gezgin)
+- Testnet ve Mainnet API'ları [burada belgelenmiştir](/dapps/public-services#api-aliases)
 
 ## Dapp SDK
 - [@alephium/web3](https://www.npmjs.com/package/@alephium/web3)
@@ -20,27 +16,27 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 - [@alephium/cli](https://www.npmjs.com/package/@alephium/cli) 
 - [@alephium/web3-react](https://www.npmjs.com/package/@alephium/web3-react) 
 - [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet) 
-- [@alephium/walletconnect](https://www.npmjs.com/package/@alephium/walletconnect-provider) (to be updated) 
+- [@alephium/walletconnect](https://www.npmjs.com/package/@alephium/walletconnect-provider) (güncellenecek) 
 - [@alephium/token-list](https://www.npmjs.com/package/@alephium/token-list) 
 
-## Ralph Tools
-- [Vscode extension](https://marketplace.visualstudio.com/items?itemName=alephium.ralph-vscode-alephium)
-- [Vim plugin ](https://github.com/tdroxler/ralph.vim)
+## Ralph Araçları
+- [Vscode eklentisi](https://marketplace.visualstudio.com/items?itemName=alephium.ralph-vscode-alephium)
+- [Vim eklentisi ](https://github.com/tdroxler/ralph.vim)
 
-## Dapp Wallets
-- [Desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
-- Extension wallet:
-  - [Google Chrome Store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
-  - [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
-- Mobile wallet:
+## Dapp Cüzdanları
+- [Masaüstü cüzdan](https://github.com/alephium/desktop-wallet/releases/latest)
+- Uzantı cüzdanı:
+  - [Google Chrome Mağazası](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
+  - [Firefox Mağazası](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
+- Mobil cüzdan:
   - [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
   - [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
-## Examples
+## Örnekler
 
-Here are some well-maintained dApps that can be a great source of inspiration for building new dApps.
+Yeni dApp'ler inşa etmek için harika bir ilham kaynağı olabilecek, bakımı yapılan bazı dApp'ler.
 
-- [Examples](https://github.com/alephium/ralph-example)
+- [Örnekler](https://github.com/alephium/ralph-example)
 - [DEX](https://github.com/alephium/alephium-dex/tree/master/contracts) 
 - [NFT](https://github.com/alephium/alephium-nft) 
-- [Alephium Bridge](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 
+- [Alephium Köprüsü](https://github.com/alephium/wormhole-fork/tree/add-alephium-to-wormhole/alephium) 

@@ -1,44 +1,40 @@
 ---
 sidebar_position: 15
-title: Build dApp from scratch
-sidebar_label: Build dApp from scratch
+title: Sıfırdan dApp Oluşturma
+sidebar_label: Sıfırdan dApp Oluşturma
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+Bu kılavuz, bir Alephium dApp projesi oluşturmanın temellerini keşfedecektir.
 
-<UntranslatedPageText />
+Ön koşullar:
 
-This guide will explore the basics of creating an Alephium dApp project.
+- [TypeScript](https://www.typescriptlang.org/) dilinde kod yazabilme
+- Bir [terminal](https://en.wikipedia.org/wiki/Terminal_emulator) kullanabilme
+- Kurulu olan [nodejs](https://nodejs.org/en/) sürümü 16 veya daha yüksek olmalıdır
+- `npm` sürümü 8 veya daha yüksek olmalıdır
 
-Prerequisites:
+## Yeni bir dApp projesi oluşturun: Token Musluğu
 
-- Write code in [Typescript](https://www.typescriptlang.org/)
-- Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
-- [nodejs](https://nodejs.org/en/) version >= 16 installed
-- `npm` version >= 8 installed
+Bu öğreticide ilk dApp'ımızı yazacağız: Bir token musluğu.
 
-## Create a new dApp project: Token Faucet
+Buradaki kodlar, [başlangıç sayfamızdan](/dapps/getting-started) alınmıştır, ancak bu kılavuzu nasıl oluşturduğumuzu adım adım göreceğiz.
 
-In this tutorial we will write our first dApp: A token faucet.
-
-The code here is taken from our [getting started page](/dapps/getting-started), but we will see step by step how we build this guide.
-
-Create a new project folder and navigate into it:
+Yeni bir proje klasörü oluşturun ve içine gidin:
 
 ```sh
 mkdir alephium-faucet-tuto
 cd alephium-faucet-tuto
 ```
 
-Let's now create a `contracts` folder where we'll store all our contracts:
+Şimdi tüm sözleşmelerimizi saklayacağımız bir `contracts` klasörü oluşturalım:
 
 ```sh
 mkdir contracts
 ```
 
-Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
+İlk sözleşmemiz `token.ral` olacak ve [burada](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). bulunabilir. Tüm dosyayı `contracts` klasörünüze kopyalayabilirsiniz.
 
-Let's inspect it, piece by piece:
+Şimdi, parça parça inceleyelim:
 
 ```rust
 import "std/fungible_token_interface"
@@ -52,42 +48,43 @@ Contract TokenFaucet(
 ) implements IFungibleToken {
 ```
 
-The first four fields will be immutable values that store the data required to serve our [IFungibleToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral).
-`mut balance` is a mutable value that keeps track of how many tokens are left in this faucet.
+İlk dört alan, [IFungibleToken Arayüzümüze](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral) hizmet etmek için gereken verileri saklayan değişmez değerler olacaktır.
 
-You can see that our contract emits an `event` and defines an `error` code. Read the following for more info on [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
+`mut balance`, bu muslukta kaç jetonun kaldığını takip eden değişken bir değerdir.
 
-This is followed by 5 access methods for the different contract's arguments.
+Sözleşmemizin bir `event` yayınladığını ve bir `error`kodu tanımladığını görebilirsiniz. Daha fazla bilgi için [etkinlikler](https://wiki.alephium.org/ralph/getting-started#events) ve [hata işleme](https://wiki.alephium.org/ralph/getting-started#error-handling) hakkındaki bilgilere bakın.
 
-The last method is where the magic happens:
+Bu, farklı sözleşme argümanları için 5 erişim yöntemiyle takip edilir.
+
+Büyünün gerçekleştiği son yöntem:
 
 ```rust
 @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
 pub fn withdraw(amount: U256) -> () {
-    // Debug events can be helpful for error analysis
+    // Hata analizi için Hata Ayıklama etkinlikleri yararlı olabilir
     emit Debug(`The current balance is ${balance}`)
 
-    // Make sure the amount is valid
+    // Miktarın geçerli olduğundan emin olun
     assert!(amount <= 2, ErrorCodes.InvalidWithdrawAmount)
-    // Functions postfixed with `!` are built-in functions.
+    // `!` ile sonlanan işlevler yerleşik işlevlerdir.
     transferTokenFromSelf!(callerAddress!(), selfTokenId!(), amount)
-    // Ralph does not allow underflow.
+    // Ralph negatif değerlere izin vermez.
     balance = balance - amount
 
-    // Emit the event defined earlier.
+    // Daha önce tanımladığımız etkinliği yayınlayın.
     emit Withdraw(callerAddress!(), amount)
 }
 ```
 
-With the `assert!` we make sure no one takes more than 2 tokens at the same time.  
-`transferTokenFromSelf` will actually perform the transfer of the tokens.  
-We update the `mut balance` field with the new balance. In the case of underflow, an error will be raised and the transaction won't be performed.
-`callerAddress!()` and `selfTokenId!()` are built-in functions, you can read more about them in our [built-in functions page](/ralph/built-in-functions).
-## Compile your contract
+`assert!` ile aynı anda 2'den fazla jeton alan olmamasını sağlarız.  
+`transferTokenFromSelf`, jetonların gerçek transferini gerçekleştirir.  
+`mut balance` alanını yeni bakiye ile güncelliyoruz. Negatif durumda bir hata oluşur ve işlem gerçekleşmez.
+`callerAddress!()` ve `selfTokenId!()` yerleşik işlevlerdir, bunlar hakkında daha fazla bilgiyi [yerleşik işlevler sayfamızda](/ralph/built-in-functions) bulabilirsiniz.
+## Sözleşmenizi derleyin
 
-The compiler needs to contact the full node in order to compile the contract, you'll need to use the right information defined while [creating your devnet](/full-node/devnet). If you haven't start it, now it's the time.
-We define the node URL using the following config file: `alephium.config.ts`. 
-Create this file in the root directory of your project and paste the following code:
+Derleyicinin sözleşmeyi derlemek için tam düğümle iletişime geçmesi gerekir, [geliştirme ağınızı oluştururken](/full-node/devnet) tanımlanan doğru bilgileri kullanmanız gerekir. Henüz başlatmadıysanız, şimdi zamanıdır.
+Düğüm URL'sini aşağıdaki yapılandırma dosyası kullanarak tanımlıyoruz: `alephium.config.ts`. 
+Bu dosyayı projenizin kök dizininde oluşturun ve aşağıdaki kodu yapıştırın:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
@@ -97,7 +94,7 @@ export type Settings = {}
 const configuration: Configuration<Settings> = {
   networks: {
     devnet: {
-      //Make sure the two values match what's in your devnet configuration
+      // İki değerin, geliştirme ağınızda bulunan değerlerle eşleştiğinden emin olun
       nodeUrl: 'http://localhost:22973',
       networkId: 2
     }
@@ -107,38 +104,38 @@ const configuration: Configuration<Settings> = {
 export default configuration
 ```
 
-Now, let's compile:
+Şimdi derleyelim:
 
 ```sh
 npx @alephium/cli@latest compile
 ```
 
-It may ask you for some confirmation to install the latest `@alephium/cli` package. Select yes to proceed.
+Muhtemelen en son  `@alephium/cli` paketini yüklemek için bir onay isteyecektir. Devam etmek için evet'i seçin.
 
-Once the above command succeeds, you will notice that a new folder called `artifacts` was created. It contains several files related to your contract. For example, `artifacts/ts/TokenFaucet.ts` produces lots of helper functions like `at`, `fetchState`, `call*`, etc, as well as many test functions.
+Yukarıdaki komut başarılı olduğunda, `artifacts` adında yeni bir klasör oluşturulduğunu fark edeceksiniz. Bu klasör, sözleşmenize ilişkin birkaç dosyayı içerir. Örneğin,  `artifacts/ts/TokenFaucet.ts` , `at`, `fetchState`, `call*`, gibi birçok yardımcı işlev üretir, ayrıca birçok test işlevini içerir.
 
-## Test your contract
-The SDK provides unit test functionalities, which call the contract by sending a transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+## Sözleşmenizi test edin
+SDK, bir işlem göndererek sözleşmeyi çağıran birim test işlevselliği sağlar, ancak blok zinciri durumunu değiştirmek yerine, yeni sözleşme durumu, işlem çıktıları ve etkinlikleri döndürür.
 
-Install the test framework:
+Test çerçevesini yükleyin:
 
 ```sh
 npm install ts-jest @types/jest
 ```
 
-You'll also need our `@alephium/web3` package:
+Ayrıca `@alephium/web3` paketimize de ihtiyacınız olacak:
 
 ```sh
 npm install @alephium/web3 @alephium/web3-test
 ```
 
-Create a `test` folder:
+Bir `test` klasörü oluşturun:
 
 ```sh
 mkdir test
 ```
 
-and create the `test/token.test.ts` minimalistic test file with the following contents:
+ve aşağıdaki içeriğe sahip `test/token.test.ts` adında minimal test dosyasını oluşturun:
 
 ```typescript
 import { web3, Project, addressFromContractId } from '@alephium/web3'
@@ -146,19 +143,19 @@ import { randomContractId, testAddress } from '@alephium/web3-test'
 import { TokenFaucet } from '../artifacts/ts'
 
 describe('unit tests', () => {
-  it('Withdraws 1 token from TokenFaucet', async () => {
+  it('TokenFaucet\'ten 1 jeton çeker', async () => {
 
-    // Use the correct host and port
+    // Doğru ana bilgisayarı ve bağlantı noktasını kullanın
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
     await Project.build()
 
     const testContractId = randomContractId()
     const testParams = {
-      // a random address that the test contract resides in the tests
+      // test kontratının bulunduğu rastgele bir adres
       address: addressFromContractId(testContractId),
-      // assets owned by the test contract before a test
+      // bir testin öncesinde test kontratına ait varlıklar
       initialAsset: { alphAmount: 10n ** 18n, tokens: [{ id: testContractId, amount: 10n }] },
-      // initial state of the test contract
+      // test kontratının başlangıç durumu
       initialFields: {
         symbol: Buffer.from('TF', 'utf8').toString('hex'),
         name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -166,9 +163,9 @@ describe('unit tests', () => {
         supply: 10n ** 18n,
         balance: 10n
       },
-      // arguments to test the target function of the test contract
+      // test kontratının hedef işlevini test etmek için argümanlar
       testArgs: { amount: 1n },
-      // assets owned by the caller of the function
+      // işlevi çağrılayanın sahip olduğu varlıklar
       inputAssets: [{ address: testAddress, asset: { alphAmount: 10n ** 18n } }]
     }
 
@@ -178,9 +175,9 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) project.
+Daha karmaşık bir test, projemizdeki [şablonda](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) bulunabilir.
 
-Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
+Ayrıntılara fazla girmeden, TypeScript'in testi çalıştırabilmesi için bazı yapılandırmalara ihtiyacı vardır, bu yüzden projenizin kök dizininde `tsconfig.json` adında bir dosya oluşturun ve aşağıdaki gibi içeriğe sahip olduğundan emin olun:
 
 ```json
 {
@@ -196,44 +193,44 @@ Without entering too much into details, TypeScript needs some configuration to r
 }
 ```
 
-You can now run the test:
+Şimdi testleri çalıştırın:
 
 ```sh
 npx @alephium/cli@latest test
 ```
 
-You should be able to see on your terminal the output of calling the withdraw method.
+Çekme yöntemini çağırarak terminalinizde çıktıyı görebilmelisiniz.
 
-🎉 Congratulations! Have created your first contract and written a test to call it and test it locally! It's time to deploy your contract.
+🎉 Tebrikler! İlk sözleşmenizi oluşturdunuz ve onu çağırmak ve yerel olarak test etmek için bir test yazdınız! Artık sözleşmenizi dağıtma zamanı geldi.
 
-## Deploy your contract
+## Sözleşmenizi Dağıtın
 
-Now things are getting serious, we will deploy our contract on our `devnet` :rocket:
+Şimdi işler ciddiye biniyor, sözleşmemizi `devnet`imize dağıtacağız :rocket:
 
-The `deploy` command will execute all deployment scripts it finds inside the `scripts` folder. Create the `scripts` folder in the root folder of the project:
+`deploy` komutu, `scripts` klasörü içinde bulduğu tüm dağıtım betiklerini yürütür. Projemizin kök klasöründe `scripts` klasörünü oluşturun:
 
 ```sh
 mkdir scripts
 ```
 
-Let's create a deployment script file called `0_deploy_faucet.ts` into the `scripts` folder and paste the following code.  
-Note that deployment scripts should always be prefixed with numbers (starting from `0`).
+ `scripts` klasörüne `0_deploy_faucet.ts` adında bir dağıtım betik dosyası oluşturalım ve aşağıdaki kodu yapıştıralım.
+Unutmayın ki dağıtım betikleri her zaman sayılarla başlamalıdır (`0`dan başlayarak).
 
 ```typescript
 import { Deployer, DeployFunction, Network } from '@alephium/cli'
 import { Settings } from '../alephium.config'
 import { TokenFaucet } from '../artifacts/ts'
 
-// This deploy function will be called by cli deployment tool automatically
-// Note that deployment scripts should prefixed with numbers (starting from 0)
+// Bu dağıtım fonksiyonu, cli dağıtım aracı tarafından otomatik olarak çağrılacaktır
+// Dağıtım betiklerinin numaralandırılması gerektiğini unutmayın (0'dan başlayarak)
 const deployFaucet: DeployFunction<Settings> = async (
   deployer: Deployer
 ): Promise<void> => {
   const issueTokenAmount = 100n
   const result = await deployer.deployContract(TokenFaucet, {
-    // The amount of token to be issued
+    // Verilecek token miktarı
     issueTokenAmount: issueTokenAmount,
-    // The initial states of the faucet contract
+    // Musluk sözleşmesinin başlangıç durumları
     initialFields: {
       symbol: Buffer.from('TF', 'utf8').toString('hex'),
       name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -242,37 +239,37 @@ const deployFaucet: DeployFunction<Settings> = async (
       balance: issueTokenAmount
     }
   })
-  console.log('Token faucet contract id: ' + result.contractInstance.contractId)
-  console.log('Token faucet contract address: ' + result.contractInstance.address)
+  console.log('Token musluk sözleşme kimliği: ' + result.contractInstance.contractId)
+  console.log('Token musluk sözleşme adresi: ' + result.contractInstance.address)
 }
 
 export default deployFaucet
 ```
 
-The [deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) of the `Deployer` takes our contract and deploys it with the correct arguments. You can also add a `taskTag` argument to tag your deployment with a specific name. By default, it will use the contract name, but if you deploy the same contract multiple times with different initial fields, your `.deployment` file will get overridden. Using a specific `taskTag` solves this issue.
+Deployer'ın [deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) fonksiyonu, sözleşmemizi doğru argümanlarla dağıtır. Dağıtımı belirli bir adla etiketlemek için bir `taskTag` argümanı da ekleyebilirsiniz. Varsayılan olarak, sözleşme adını kullanacaktır, ancak aynı sözleşmeyi farklı başlangıç alanlarıyla birden çok kez dağıtırsanız, `.deployment` dosyanız geçersiz kılınır. Belirli bir `taskTag` kullanarak bu sorunu çözebilirsiniz.
 
-From the [DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293) interface, we can see that `initialFields` is mandatory as it contains the arguments for our `TokenFaucet` contract.
+[DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293) arayüzünden, `initialFields`'in zorunlu olduğunu görebiliriz, çünkü bu, `TokenFaucet` sözleşmemizin argümanlarını içerir.
 
-With `issueTokenAmount` you can define how many tokens you want to issue, this is required if you want to create a token, otherwise no token-id will be created.
+`issueTokenAmount` ile kaç token ihraç etmek istediğinizi belirleyebilirsiniz, bu bir token oluşturmak istiyorsanız gereklidir, aksi takdirde token-id oluşturulmayacaktır.
 
-Now, let's deploy!
+Şimdi, dağıtım yapalım!
 
 ```sh
 npx @alephium/cli@latest deploy
 ```
 
-...OOPS... It doesn't work???
+...HATA... Çalışmıyor mu???
 
-If you got the error `The node chain id x is different from configured chain id y`, go check your `networkId` in the devnet configuration and the `alephium.config.ts` file.
+Eğer `The node chain id x is different from configured chain id y` hatası alıyorsanız, `networkId`'nizi devnet yapılandırmanızda ve `alephium.config.ts` dosyanızda kontrol edin.
 
 `No UTXO found` ???
 
-Of course we didn't provide the `how-to-use-my-utxos`, we need to define our [privateKeys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46).
+Tabii ki `how-to-use-my-utxos`'u sağlamadık, [privateKeys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46) alanımızı tanımlamamız gerekiyor.
 
-You'll need to export the private keys from our wallet extension (might do it from our other wallets later), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
-If you used the docker way to launch your devnet, it might have work as we are defining [a default private key in our cli package](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) based on the genesis allocation.
+Cüzdan uzantımızdan özel anahtarları ihraç etmeniz gerekecek (daha sonra diğer cüzdanlarımızdan yapabiliriz), bir fon içeren bir cüzdanı kullanmaya dikkat edin, örneğin devnet'inizdeki genesis tahsisinden birinin cüzdanını kullanın. 
+Devnetinizi başlatmak için docker yoluyla başlattıysanız, kullandığımız cli paketimize [varsayılan özel anahtar](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) tanımlıyoruz.
 
-Let's update our `alephium.config.ts`
+Hadi `alephium.config.ts` dosyamızı güncelleyelim
 
 ```typescript
 const configuration: Configuration<void> = {
@@ -288,11 +285,11 @@ const configuration: Configuration<void> = {
 ```
 
 :::caution
-Real applications should use environment variables or similiar techniques for senstivie settings like `privateKeys`.
-Do not commit your private keys to source control.
+Gerçek uygulamalar, `privateKeys` gibi hassas ayarlar için ortam değişkenleri veya benzer teknikleri kullanmalıdır.
+Özel anahtarlarınızı kaynak kontrolüne göndermeyin.
 :::
 
-and retry to deploy:
+ve tekrar dağıtılmaya çalışalım:
 
 ```sh
 npx @alephium/cli@latest deploy
@@ -307,13 +304,13 @@ Token faucet contract address: 28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA
 ✅ Deployment scripts executed!
 ```
 
-Congratulations! Your contract is deployed. We can check the balance of the contract. Use `curl` and change the contract address based on your deployment result:
+Tebrikler! Sözleşmeniz dağıtıldı. Sözleşmenin bakiyesini kontrol edebiliriz. `curl` kullanarak ve çıkışı deployma sonucunuza göre değiştirerek sözleşme adresini kullanın:
 
 ```sh
 curl 'http://localhost:22973/addresses/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/balance'
 ```
 
-The response should look like this:
+Yanıt şuna benzer olmalıdır:
 
 ```json
 {
@@ -331,9 +328,9 @@ The response should look like this:
 }
 ```
 
-We can see our token id, with the 100 tokens we decided to issue.
+Oluşturmak istediğimiz 100 token ile token kimliğimizi görebiliriz.
 
-Let's check the contract state by first getting the group of our address: 
+Şimdi, sözleşme durumunu kontrol edelim, önce adres grubumuzu alalım: 
 
 ```sh
 curl 'http://localhost:22973/addresses/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA/group'
@@ -341,7 +338,7 @@ curl 'http://localhost:22973/contracts/28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y
 ```
 
 
-Contract state response:
+Sözleşme durumu yanıtı:
 ```json
 {
   "address": "28h7qSmkAAeNyoBuQKGyp1WG8VfdKPePCCFGKwp2Y8yyA",
@@ -384,25 +381,25 @@ Contract state response:
 }
 ```
 
-In the `immFields` we can see our initial `TokenFaucet` arguments (`symbol`, `name`, `decimals`, `supply`). We can also see that `mutFields` contains the current token balance. We'll check that field later after calling the faucet.
+`immFields` içinde başlangıçtaki `TokenFaucet` argümanlarımızı (`symbol`, `name`, `decimals`, `supply`) görebiliriz. Ayrıca `mutFields`'in mevcut token bakiyesini içerdiğini görebiliriz. Musluğu çağırdıktan sonra o alanı kontrol edeceğiz.
 
-The `deploy` command also created a `.deployments.devnet.json` file, with the deployment result. It's important to keep that file to easily interact with the contract, even though all information can be found on the blockchain.
+`deploy` komutu ayrıca `.deployments.devnet.json` dosyası oluşturdu, dağıtım sonucuyla. Bu dosyayı sözleşmeyle kolayca etkileşime girmek için saklamak önemlidir, ancak tüm bilgiler blok zincirinde bulunabilir.
 
-# Interact with the deployed contract
+# Dağıtılmış sözleşme ile etkileşime geçin
 
-Having a token faucet is nice, getting tokens from it is even better.
+Bir token musluğuna sahip olmak güzel, ondan token almak daha da iyidir.
 
-We can now write some code to interact with the faucet contract.
+Artık musluk sözleşmesiyle etkileşim kurmak için birkaç kod yazabiliriz.
 
-We'll need to install our `cli` package and the `typescript` dependency if it's not yet the case:
+`cli` paketimizi ve `typescript` bağımlılığını kurmamız gerekecek:
 
 ```
 npm install @alephium/cli typescript
 ```
 
-We will now see a different option to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
+Artık blok zinciriyle etkileşim kurmanın farklı bir yolu var. Daha önce `scripts/<number>_*` dosyalarımızla `DeployFunction`'ı kullanıyorduk, bu dosyalar CLI aracıyla otomatik olarak dağıtılıyordu.
 
-Another way is to create a skeleton web application project using TypeScript. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
+Başka bir yol, TypeScript kullanarak bir skelet web uygulama projesi oluşturmaktır. Projemizin kök klasöründe `src` klasörü ve içinde `tokens.ts` adında bir dosya oluşturun ve aşağıdaki içeriği yapıştırın.
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -465,7 +462,8 @@ async function withdraw() {
 withdraw()
 ```
 
-For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
+Dikkatli insanlar için, `artifacts`'tan yeni bir şey göreceksiniz: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral), `TokenFaucet` sözleşmesiyle etkileşimde kullanılması gereken bir [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript). Kodu oldukça basit. `contracts` klasöründe `withdraw.ral` adında bir dosya oluşturun ve aşağıdaki kodu yapıştırın:
+
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -473,19 +471,19 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 }
 ```
 
-We now need to recompile our contracts to get the artifact for `Withdraw`:
+Şimdi, sözleşmelerimizi derlememiz gerekiyor ve `Withdraw` için sanatı almak için:
 
 ```sh
 npx @alephium/cli@latest compile
 ```
 
-You can now compile the TypeScript code to JavaScript with:
+Artık TypeScript kodunu JavaScript'e derleyebilirsiniz:
 
 ```sh
 npx tsc --build .
 ```
 
-OOPS, you should get an error coming from the `alephium.config.ts`, until now the config was used as a simple JSON, but now `TypeScript` want it to respect its [interface](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L48-L62). Especially the `networks` is a record that need to contain the 3 `NetworkType`. You can try to fix it by yourself or update your `alephium.config.ts` file with:
+HATA, `alephium.config.ts`'den gelen bir hata almalısınız, şimdiye kadar yapılandırma basit bir JSON olarak kullanıldı, ancak şimdi `TypeScript` onun [arayüzünü](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L48-L62)ne saygı göstermesini istiyor. Özellikle `networks`, 3 `NetworkType` içeren bir kayıt olmalıdır. Kendiniz düzeltmeyi deneyebilir veya `alephium.config.ts` dosyanızı aşağıdaki gibi güncelleyebilirsiniz:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
@@ -517,34 +515,32 @@ const configuration: Configuration<Settings> = {
 export default configuration
 ```
 
-Now recompile
+Şimdi tekrar derleyin
 
 ```
 npx tsc --build .
 ```
 
-A `dist` folder should have been created, go ahead and interact with the deployed token faucet:
+Bir `dist` klasörü oluşturulmuş olmalı, devam edin ve dağıtılmış jeton musluğu ile etkileşime girin:
 
 ```
 node dist/src/token.js
 ```
 
-You should now be a proud owner of the token you created.
+Artık oluşturduğunuz token'ın gururlu sahibi olmalısınız.
 
 
-## What's next?
+## Bundan Sonra Ne Var?
 
-You can find a more complex example of the token faucet tutorial [in the alephium/nextjs-template](https://github.com/alephium/nextjs-template) project.
+Token musluğu öğreticisinin daha karmaşık bir örneğini [alephium/nextjs-template](https://github.com/alephium/nextjs-template) projesinde bulabilirsiniz.
 
-## Connect to the wallets
+## Cüzdanlara Bağlanın
 
-dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
-such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
-and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
+dApp, dApp kullanıcılarının, Alephium blok zinciriyle kimlik doğrulaması yapmak ve etkileşimde bulunmak gibi işlemleri imzalamak için cüzdan entegrasyonunu gerektirir. Şu anda dApp'ler hem [Uzantı Cüzdanı](../wallet/extension-wallet/dapp) hem de [WalletConnect](../wallet/walletconnect) ile entegre edilebilir. Daha fazla ayrıntı için ilgili sayfalara başvurun.
 
-## Learn more
+## Daha Fazla Bilgi
 
-- To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
-- To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
-- To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-- To learn how to build a Nextjs dApp, please visit [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)
+- Ekosistem hakkında daha fazla bilgi edinmek için lütfen [ekosistem genel bakışına](/dapps/ecosystem) göz atın.
+- Web3 SDK hakkında daha fazla bilgi edinmek için lütfen [web3 SDK kılavuzuna](/dapps/alephium-web3) göz atın.
+- Ralph dili hakkında daha fazla bilgi edinmek için lütfen [Ralph kılavuzuna](/ralph/getting-started) göz atın.
+- Bir Nextjs dApp nasıl oluşturulur, lütfen [Nextjs ile dApp oluşturma](/dapps/build-dapp-with-nextjs.md) sayfasına göz atın.

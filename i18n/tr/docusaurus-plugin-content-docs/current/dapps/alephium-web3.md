@@ -4,50 +4,46 @@ title: Web3 SDK
 sidebar_label: Web3 SDK
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
-
-## Installing
+## Kurulum
 
 ```
 npm install --save @alephium/web3
 ```
 
-## Connecting to Alephium
+## Alephium'a bağlanma
 
-`NodeProvider` is an abstraction of a connection to the Alephium network, you can get a `NodeProvider` by:
+`NodeProvider`, Alephium ağına bir bağlantı soyutlamasıdır, bir `NodeProvider` alabilirsiniz:
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
 ```
 
-Or specify the `API_KEY` if you have `alephium.api.api-key` in your full node configuration file:
+Veya tam düğüm yapılandırma dosyanızda alephium.api.api-key bulunuyorsa API_KEY'i belirtin:
 
 ```typescript
-const API_KEY = // alephium.api.api-key from your full node config
+const API_KEY = // tam düğüm yapılandırma dosyanızdaki alephium.api.api-key
 const nodeProvider = new NodeProvider('http://localhost:22973', API_KEY)
 ```
 
-Sometimes, it's convenient to setup a global `NodeProvider` for your project:
+Bazen, projeniz için global bir NodeProvider kurmak uygun olabilir:
 
 ```typescript
 web3.setCurrentNodeProvider(<nodeURL>)
 ```
 
-## Querying the Blockchain
+## Blockchain Sorgulama
 
-Once you have a `NodeProvider`, you have a connection to the blockchain, which you can use to query the current contract state, fetch historic contract events, look up deployed contracts and so on.
-
+Bir `NodeProvider`'a sahip olduktan sonra, mevcut sözleşme durumunu sorgulamak, geçmiş sözleşme etkinliklerini almak, dağıtılmış sözleşmeleri aramak vb. gibi işlemler için kullanabileceğiniz bir blok zincirine bağlantınız olur.
+'
 ```typescript
-// Get the blockchain height from the given chain index
+// Verilen zincir dizininden blok zincir yüksekliğini alın
 await nodeProvider.blockflow.getBlockflowChainInfo({
   fromGroup: 0,
   toGroup: 0
 })
 // { currentHeight: 315 }
 
-// Get the block from the given block hash
+// Verilen blok özetinden bloğu alın
 await nodeProvider.blockflow.getBlockflowBlocksBlockHash('1ccfe845988ebf878384dd2dc9e55920261566c2ad9143963180222059ffd3b0')
 // {
 //   hash: '1ccfe845988ebf878384dd2dc9e55920261566c2ad9143963180222059ffd3b0',
@@ -81,7 +77,7 @@ await nodeProvider.blockflow.getBlockflowBlocksBlockHash('1ccfe845988ebf878384dd
 //   target: '20ffffff'
 // }
 
-// Get the transaction status
+// İşlem durumunu alın
 await nodeProvider.transactions.getTransactionsStatus({
   txId: 'f33da0d8f4c00d68e2d5818cb9617219a1108b801f387fc8d1595287e4dbf2aa'
 })
@@ -94,7 +90,7 @@ await nodeProvider.transactions.getTransactionsStatus({
 //   toGroupConfirmations: 295
 // }
 
-// Get the account balance
+// Hesap bakiyesini al
 await nodeProvider.addresses.getAddressesAddressBalance('1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH')
 // {
 //   balance: '999972904436900000000000',
@@ -111,32 +107,32 @@ await nodeProvider.addresses.getAddressesAddressBalance('1DrDyTr9RpRsQnDnXo2YRiP
 // }
 ```
 
-## Writing to the blockchain
+## Blokzinciri'ne Yazma
 
-Transactions are used to change the state of the blockchain. Every transaction needs to be signed with a private key, which can be done through the `SignerProvider`. And there are two `SignerProvider` in `alephium/web3-wallet`.
+İşlemler, blokzincirinin durumunu değiştirmek için kullanılır. Her işlem, özel bir anahtar ile imzalanmalıdır ve bunu `SignerProvider`aracılığıyla yapabilirsiniz.`alephium/web3-wallet` iki `SignerProvider` bulunmaktadır.
 
-### Installing Web3 Wallet
+### Web3 Cüzdanını Kurma
 
 ```
 npm install --save @alephium/web3-wallet
 ```
 
 :::note
-Both wallets are used for contract development and deployment, please don't use them to store large amount of tokens.
+Her iki cüzdan da sözleşme geliştirme ve dağıtımı için kullanılır, lütfen büyük miktarda jeton saklamak için kullanmayın.
 :::
 
 ### NodeWallet
 
-Please follow the [guide](/wallet/node-wallet-guide) to create a full node wallet.
+Tam bir düğüm cüzdanı oluşturmak için lütfen [rehberi](/wallet/node-wallet-guide) takip edin.
 
 ```typescript
-// Create a node wallet by wallet name
+// Cüzdan adı ile bir düğüm cüzdanı oluşturun
 const nodeWallet = new NodeWallet('alephium-web3-test-only-wallet', nodeProvider)
 
-// Unlock the wallet with password
+// Şifre ile cüzdanı açın
 await nodeWallet.unlock('alph')
 
-// Get accounts
+// Hesapları alın
 await nodeWallet.getAccounts()
 // [
 //   {
@@ -146,7 +142,7 @@ await nodeWallet.getAccounts()
 //   }
 // ]
 
-// Transfer 1 ALPH to 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT
+// 1 ALPH'i 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT adresine transfer edin
 await nodeWallet.signAndSubmitTransferTx({
   signerAddress: '1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH',
   destinations: [{
@@ -160,17 +156,17 @@ await nodeWallet.signAndSubmitTransferTx({
 //   toGroup: 0
 // }
 
-// Lock the wallet
+// Cüzdanı kilitleyin
 await nodeWallet.lock()
 ```
 
 ### PrivateKeyWallet
 
 ```typescript
-// Create a PrivateKeyWallet from private key
+// Özel anahtar ile bir PrivateKeyWallet oluşturun
 const wallet =  new PrivateKeyWallet({privateKey: 'a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5', keyType: undefined, nodeProvider: web3.getCurrentNodeProvider()})
 
-// Create a PrivateKeyWallet from mnemonic and group, here it will create an account on group 0
+// Mnemonik ve grup ile bir PrivateKeyWallet oluşturun, burada hesap grubu 0'da bir hesap oluşturur
 const wallet = PrivateKeyWallet.FromMnemonicWithGroup(
   'vault alarm sad mass witness property virus style good flower rice alpha viable evidence run glare pretty scout evil judge enroll refuse another lava',
   0,
@@ -186,7 +182,7 @@ console.log(wallet.account)
 //   group: 0
 // }
 
-// Transfer 1 ALPH to 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT
+// 1 ALPH'i 15Z54erRksUHb7qxegcKN5DePMv96tXdc1jW26fW3REwT adresine transfer edin
 await wallet.signAndSubmitTransferTx({
   signerAddress: wallet.account.address,
   destinations: [{
@@ -201,27 +197,27 @@ await wallet.signAndSubmitTransferTx({
 // }
 ```
 
-## Contracts
+## Sözleşmeler
 
-Similar to Ethereum, a contract is an abstraction of program code which lives on the Alephium blockchain. Let's use the following example to illustrate how to test, deploy and call a contract, please follow the [guide](/dapps/getting-started) to create a project.
+Ethereum'a benzer şekilde, bir sözleşme, Alephium blokzincirinde yaşayan program kodu soyutlamasıdır. Bir proje oluşturmak için lütfen aşağıdaki örneği kullanarak bir sözleşmenin nasıl test edileceğini, dağıtılacağını ve çağrılacağını göstermeyi düşünün, lütfen bir proje oluşturmak için [rehberi](/dapps/getting-started) takip edin.
 
-### Test the contract
-#### Unit tests
+### Sözleşmeyi Test Etme
+#### Birim testleri
 
-The SDK provides unit testing functionality, which calls the contract like a normal transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+SDK, sözleşmeyi normal bir işlem gibi çağıran birim test işlevselliği sağlar, ancak blokzincir durumunu değiştirmek yerine, yeni sözleşme durumunu, işlem çıktılarını ve olayları döndürür.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
-// Build the project first
+// Projeyi ilk önce oluşturun
 await Project.build()
 
-// Test the `withdraw` method of the `TokenFaucet` contract, it will NOT change the blockchain state
+// `withdraw` metodunu `TokenFaucet` sözleşmesinde test edin, bu, blokzinciri durumunu DEĞİŞTİRMEZ
 const testContractAddress = randomContractAddress()
-// The `TokenFaucet` is generated in the getting-started guide
+// `TokenFaucet` başlangıç ​​rehberinde oluşturulur
 const result = await TokenFaucet.tests.withdraw({
   address: testContractAddress,
-  // Initial state of the test contract
+  // Test sözleşmesinin başlangıç durumu
   initialFields: {
     symbol: Buffer.from('TF', 'utf8').toString('hex'),
     name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
@@ -229,7 +225,7 @@ const result = await TokenFaucet.tests.withdraw({
     supply: 10n ** 18n,
     balance: 10n
   },
-  // Assets owned by the test contract before a test
+  // Bir test öncesi test kontratının sahip olduğu varlıklar
   initialAsset: {
     alphAmount: 10n ** 18n,
     tokens: [{
@@ -237,9 +233,9 @@ const result = await TokenFaucet.tests.withdraw({
       amount: 10n
     }]
   },
-  // Arguments to test the target function of the test contract
+  // Test kontratının hedef fonksiyonunu test etmek için kullanılan argümanlar
   testArgs: { amount: 1n },
-  // Assets owned by the caller of the function
+  // Fonksiyon çağırıcısının sahip olduğu varlıklar
   inputAssets: [{
     address: wallet.account.address,
     asset: { alphAmount: 10n ** 18n }
@@ -250,11 +246,11 @@ const contractState = result.contracts[0] as TokenFaucetTypes.State
 expect(contractState.address).toEqual(testContractAddress)
 ```
 
-A complete example can be found in our [`alephium-nextjs-template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
+Tam bir örnek, [`alephium-nextjs-template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) dosyasında bulunabilir.
 
-#### Integration tests
+#### Entegrasyon testleri
 
-Alongside unit tests, you can also run some integration tests, be careful as those one can change the blockchain state.
+Birim testlerin yanı sıra, bazı entegrasyon testlerini de çalıştırabilirsiniz, ancak bunların blok zinciri durumunu değiştirebileceğine dikkat edin.
 
 ```typescript
 web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
@@ -274,33 +270,33 @@ const faucet = TokenFaucet.at(tokenAddress)
 const initialState = await faucet.fetchState()
 const initialBalance = initialState.fields.balance
 
-// Call `withdraw` function 10 times
+// `withdraw` fonksiyonunu 10 kez çağır
 for (let i = 0; i < 10; i++) {
   await Withdraw.execute(signer, {
     initialFields: { token: tokenId, amount: 1n },
     attoAlphAmount: DUST_AMOUNT * 2n
   })
 
-  //!!! Blockchain state is changed !!!
+  //!!! Blok zinciri durumu değişir !!!
   const newState = await faucet.fetchState()
   const newBalance = newState.fields.balance
   expect(newBalance).toEqual(initialBalance - BigInt(i) - 1n)
 }
 ```
 
-More details can be found in our [integration test folder](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration)
+Daha fazla detay, [entegrasyon test klasörümüzde](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration) bulunabilir.
 
-### Deploy the contract
+### Sözleşmeyi dağıt
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
 await Project.build()
 
-// Create a transaction to deploy the contract and submit the transaction to the Alephium network:
-// `initialFields` is required if the contract has fields
-// `initialAttoAlphAmount` must be greater than or equal to 1 ALPH, assets will be sent to the contract from the transaction sender account
-// `issueTokenAmount` specifies the amount of tokens to issue
+// Sözleşmenin dağıtılması için bir işlem oluşturun ve işlemi Alephium ağına gönderin:
+// Sözleşmede alanlar varsa `initialFields` gereklidir
+// `initialAttoAlphMiktarı`, 1 ALPH'den büyük veya eşit olmalıdır, varlıklar işlem gönderen hesaptan sözleşmeye gönderilir
+// `issueTokenMiktarı`, çıkarılacak jeton miktarını belirtir
 const issueTokenAmount = 10n
 const deployResult = await TokenFaucet.deploy(wallet, {
   initialFields: {
@@ -332,7 +328,7 @@ console.log(JSON.stringify(deployResult, null, 2))
 //   }
 // }
 
-// Get the contract state
+// Sözleşme durumunu al
 const tokenFaucet = deployResult.instance
 const contractState = await tokenFaucet.fetchState()
 console.log(JSON.stringify(contractState, null, 2))
@@ -384,25 +380,25 @@ console.log(JSON.stringify(contractState, null, 2))
 // }
 ```
 
-From the output we can see that we have successfully deployed the contract, and there are 10 tokens in the contract asset.
+Çıktıdan görebileceğimiz gibi, sözleşmeyi başarıyla dağıttık ve sözleşme varlığında 10 jeton bulunmaktadır.
 
-### Call the contract
+### Sözleşmeyi çağır
 
-You can use scripts to call contracts on the Alephium blockchain, the script code will be executed when the transaction is submitted to the Alephium network, but the script code will not be stored in the blockchain's state.
+Alephium blok zincirindeki sözleşmeleri çağırmak için betikler kullanabilirsiniz, betik kodu, işlem Alephium ağına gönderildiğinde yürütülür, ancak betik kodu blok zincirinin durumuna kaydedilmez.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
 const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
 await Project.build()
 
-// Contract address from the deploy result
+// Dağıtım sonucundan sözleşme adresi
 const contractAddress = deployResult.instance.address
 
-// Contract id from the deploy result
+// Dağıtım sonucundan sözleşme kimliği
 const contractId = deployResult.instance.contractId
 
-// Create a call contract transaction, `initialFields` is required if the script has fields
-// The `Withdraw` is generated in the getting-started guide
+// Bir sözleşme çağrısı işlemi oluşturun, betik alanları varsa `initialFields` gereklidir
+// `Withdraw`, başlangıç kılavuzunda oluşturulur
 const executeResult = await Withdraw.execute(wallet, {
   initialFields: {
     token: contractId,
@@ -421,7 +417,7 @@ console.log(JSON.stringify(executeResult, null, 2))
 //   "groupIndex": 0
 // }
 
-// Get the account balance
+// Hesap bakiyesini al
 const balance = await wallet.nodeProvider.addresses.getAddressesAddressBalance(wallet.account.address)
 console.log(JSON.stringify(balance, null, 2))
 // {
@@ -439,21 +435,21 @@ console.log(JSON.stringify(balance, null, 2))
 // }
 ```
 
-### Query historic contract events
+### Geçmiş sözleşme etkinliklerini sorgula
 
-Contract events are indexed by contract address with offsets, and you can query historic events of a contract address by specifying the offset and limit (optional).
+Sözleşme etkinlikleri, sözleşme adresleri tarafından belirli bir ofsetle dizinlenir ve bir sözleşme adresinin geçmiş etkinliklerini ofset ve limit (isteğe bağlı) belirterek sorgulayabilirsiniz.
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
-// Contract address from the contract deploy result
+// Sözleşme dağıtım sonucundan sözleşme adresi
 const contractAddress = deployResult.instance.address
 
-// Query contract events from index 0, and the `limit` cannot be greater than 100
+// Sözleşme etkinliklerini indeks 0'dan sorgula ve `limit` 100'den büyük olamaz
 const result = await nodeProvider.events.getEventsContractContractaddress(
   contractAddress, {start: 0, limit: 100}
 )
 
-// In the next query you can start with `result.nextStart`
+// Sonraki sorguda `result.nextStart` ile başlayabilirsiniz
 console.log(JSON.stringify(result, null, 2))
 // {
 //   "events": [
@@ -476,15 +472,15 @@ console.log(JSON.stringify(result, null, 2))
 //   "nextStart": 1
 // }
 
-// Sometimes, events might be emitted from non-canonical blocks because of block reorg, you can check if the block in the main chain
+// Bazı durumlarda, blok yeniden düzenleme nedeniyle ana zincirde olmayan bloklardan etkinlikler yayımlanabilir, bloğun ana zincirde olup olmadığını kontrol edebilirsiniz
 await nodeProvider.blockflow.getBlockflowIsBlockInMainChain({blockHash: events[0].blockHash})
 // true
 
-// Get the current contract event counter
+// Geçerli sözleşme etkinlik sayaçını alın
 await nodeProvider.events.getEventsContractContractaddressCurrentCount(contractAddress)
 // 1
 
-// You can also get events by transaction id if `alephium.node.event-log.index-by-tx-id` is enabled in your full node configuration file
+// Ayrıca, `alephium.node.event-log.index-by-tx-id` tam düğüm yapılandırma dosyanızda etkinleştirilmişse, işlem kimliği ile etkinlikleri de alabilirsiniz
 await nodeProvider.events.getEventsTxIdTxid('c29e9cb10b3e0b34979b9daac73151d98ee4de8f913e66aa0f0c8dc0cb99a617')
 // {
 //   "events": [
@@ -507,25 +503,25 @@ await nodeProvider.events.getEventsTxIdTxid('c29e9cb10b3e0b34979b9daac73151d98ee
 // }
 ```
 
-### Listening to events
+### Etkinliklere dinleme
 
-In addition to querying events one by one, you can also get events by event subscription. It will periodically query and get new events.
+Tek tek sorgulamaya ek olarak, etkinlik aboneliği ile etkinlikleri de alabilirsiniz. Yeni etkinlikleri periyodik olarak sorgulayacak ve alacak.
 
 ```typescript
 web3.setCurrentNodeProvider('http://localhost:22973')
-// The `TokenFaucet` contract instance from deploy result
+// Dağıtım sonucundan `TokenFaucet` sözleşme örneği
 const tokenFaucet = deployResult.instance
-// The `TokenFaucetTypes.WithdrawEvent` is generated in the getting-started guide
+// `TokenFaucetTypes.WithdrawEvent` dağıtım kılavuzunda oluşturulur
 const events: TokenFaucetTypes.WithdrawEvent[] = []
 const subscribeOptions = {
-  // It will check for new events from the full node every `pollingInterval`
+  // Her `pollingInterval` zaman diliminde tam düğümden yeni etkinlikleri kontrol edecektir
   pollingInterval: 500,
-  // The callback function will be called for each event
+  // Her etkinlik için geri çağrı işlevi çağrılacaktır
   messageCallback: (event: TokenFaucetTypes.WithdrawEvent): Promise<void> => {
     events.push(event)
     return Promise.resolve()
   },
-  // This callback function will be called when an error occurs
+  // Bir hata oluştuğunda bu geri çağrı işlevi çağrılacaktır
   errorCallback: (error: any, subscription): Promise<void> => {
     console.log(error)
     subscription.unsubscribe()
@@ -533,7 +529,7 @@ const subscribeOptions = {
   }
 }
 
-// Subscribe the contract events from index 0
+// Sözleşme etkinliklerini indeks 0'dan abone olun
 const subscription = tokenFaucet.subscribeWithdrawEvent(subscribeOptions, 0)
 await new Promise((resolve) => setTimeout(resolve, 1000))
 console.log(JSON.stringify(events, null, 2))
@@ -551,13 +547,13 @@ console.log(JSON.stringify(events, null, 2))
 //   }
 // ]
 
-// Unsubscribe
+// Aboneliği iptal edin
 subscription.unsubscribe()
 ```
 
-## Utils
+## Araçlar
 
-### Conversion between contract id and contract address
+### Sözleşme kimliği ile sözleşme adresi arasında dönüşüm
 
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'
@@ -566,7 +562,7 @@ console.log(binToHex(contractIdFromAddress(contractAddress)) === contractId)
 // true
 ```
 
-### Get the group of an address
+### Adresin grubunu alın
 
 ```typescript
 const group = groupOfAddress('1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH')
@@ -574,7 +570,7 @@ console.log(group)
 // 0
 ```
 
-### Get the sub-contract id
+### Alt sözleşme kimliğini alın
 
 ```typescript
 const contractId = 'bfc891f2f7fbb466bd7808f71cc022debb71fd3c1ceb752b623eb9c48ec4d165'

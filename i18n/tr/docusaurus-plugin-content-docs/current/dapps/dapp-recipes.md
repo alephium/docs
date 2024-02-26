@@ -1,21 +1,17 @@
 ---
 sidebar_position: 30
-title: Dapp Recipes
-sidebar_label: Dapp Recipes
+title: Dapp Tarifleri
+sidebar_label: Dapp Tarifleri
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## Sözleşme
 
-<UntranslatedPageText />
+### Sözleşme durumunu alın
 
-## Contract
-
-### Fetch contract state
-
-When using the `npx @alephium/cli compile` command to compile a contract, it will generate TypeScript code based on the contract code.
-Taking the [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) contract as an example,
-[here](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) is the generated TypeScript code.
-We can use the generated TypeScript code to fetch the contract state:
+Bir sözleşmeyi derlemek için `npx @alephium/cli compile` komutunu kullandığınızda, sözleşme koduna dayalı olarak TypeScript kodu üretecektir.
+TokenFaucet sözleşmesini ([burada](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) bir örnek olarak alalım),
+üretilen TypeScript koduna [buradan](https://github.com/alephium/nextjs-template/blob/main/artifacts/ts/TokenFaucet.ts) erişebiliriz.
+Oluşturulan TypeScript kodunu kullanarak sözleşme durumunu alabiliriz:
 
 ```typescript
 import { TokenFaucet } from 'artifacts/ts' // Note that you may need to change the import path according to your project directory structure
@@ -36,9 +32,9 @@ const { symbol, name, decimals, supply, balance  } = contractState.fields
 const { alphAmount, tokens } = contractState.asset
 ```
 
-### Call contract method
+### Sözleşme yöntemini çağırma
 
-You can use the generated TypeScript code to call the contract methods, it is similar to the `eth_call` in Ethereum:
+Üretilen TypeScript kodunu sözleşme yöntemlerini çağırmak için kullanabilirsiniz, bu Ethereum'daki `eth_call` ile benzerdir:
 
 ```typescript
 import { TokenFaucet } from 'artifacts/ts'
@@ -53,12 +49,12 @@ const tokenFaucet = TokenFaucet.at(tokenFaucetAddress)
 const totalSupply = await tokenFaucet.methods.getTotalSupply()
 ```
 
-### Subscribe to contract events
+### Sözleşme etkinliklerine abone olma
 
-In the [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) contract,
-we have defined a [Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18) event.
-Every time the `withdraw` function is called, the contract will emit a `Withdraw` event.
-We can subscribe to the withdraw events using the following approach:
+TokenFaucet sözleşmesinde ([burada](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral) bir örnek olarak),
+[Withdraw](https://github.com/alephium/nextjs-template/blob/c846a675235198045cdf91ba0304aa287f2fc68d/contracts/token.ral#L18) adında bir etkinlik tanımladık.
+`withdraw` işlevi çağrıldığında her zaman, sözleşme bir `Withdraw` etkinliği yayınlar.
+Bu çekilme etkinliklerine şu yaklaşımı kullanarak abone olabiliriz:
 
 ```typescript
 import { TokenFaucet, TokenFaucetTypes } from 'artifacts/ts'
@@ -94,11 +90,11 @@ const subscription = tokenFaucet.subscribeWithdrawEvent(options, fromEventCount)
 subscription.unsubscribe()
 ```
 
-### Test functions with simulated block time
+### Simüle Edilmiş Blok Zamanıyla İşlevleri Test Etme
 
-It's possible to test functions with simulated block time in unit tests. For integration tests based on testnet or devnet, there is no way to change the block time though.
+Blok zamanı simüle edilmiş işlevleri test etmek mümkündür. Testnet veya devnet'e dayalı entegrasyon testleri için blok zamanını değiştirme yolu yoktur.
 
-Here is a simple example:
+İşte basit bir örnek:
 
 ```typescript
 import { TokenFaucet } from 'artifacts/ts'
@@ -111,9 +107,9 @@ const result = await TokenFaucet.tests.withdraw({
 })
 ```
 
-### Log debug messages
+### Hata Ayıklama İletilerini Kaydetme
 
-Ralph supports debug messages by emitting the built-in event `Debug`. Note that such events are ignored on mainnet.
+Ralph, yerleşik `Debug` etkinliğini yayınlayarak hata ayıklama iletilerini destekler. Bu tür etkinlikler ana ağda görmezden gelinir.
 
 ```typescript
 // Simple Ralph contract
@@ -133,11 +129,11 @@ const result = await Debug.tests.debug()
 console.log(result.debugMessages)
 ```
 
-## Transaction
+## İşlem
 
-### Query transaction status
+### İşlem durumunu sorgulama
 
-You can query the transaction status using the following approach:
+İşlem durumunu aşağıdaki yaklaşımı kullanarak sorgulayabilirsiniz:
 
 ```typescript
 import { NodeProvider } from '@alephium/web3'
@@ -149,15 +145,15 @@ const txId = '919d4e4b1080d74beb56a1f78ea7c0569a358e3ea3988058987cc1addf4b93cc'
 const txStatus = await nodeProvider.transactions.getTransactionsStatus({ txId })
 ```
 
-You can differentiate the transaction status using the `txStatus.type`:
+`txStatus.type` kullanarak işlem durumunu ayırt edebilirsiniz:
 
-1. `MemPooled`: this means the transaction is in the mempool
-2. `Confirmed`: the transaction has been confirmed, and you can get the confirmations using `txStatus.chainConfirmations`
-3. `TxNotFound`: the transaction does not exist
+1. `MemPooled`: bu, işlemin mempool'da olduğu anlamına gelir
+2. `Confirmed`: işlem onaylandı ve `txStatus.chainConfirmations` kullanarak onayları alabilirsiniz
+3. `TxNotFound`: işlem mevcut değil
 
 ## Hooks
 
-The `@alephium/web3-react` package provides several hooks to facilitate the development of frontend user interfaces.
+`@alephium/web3-react` paketi, ön uç kullanıcı arayüzlerinin geliştirilmesini kolaylaştırmak için birkaç kancaya sahiptir.
 
 ### useWalletConfig
 
@@ -174,7 +170,7 @@ export function Component() {
 }
 ```
 
-The `useWalletConfig` hook returns the configurations of the connect button and utility functions to update those configurations.
+`useWalletConfig` kancası, bağlantı düğmesi yapılandırmalarını ve bu yapılandırmaları güncellemek için yardımcı işlevleri döndürür.
 
 ### useWallet
 
@@ -192,11 +188,11 @@ function Component() {
 }
 ```
 
-If the return value is `undefined`, it indicates that the wallet is not connected. The returned wallet has the following fields:
+Dönüş değeri `undefined` ise, cüzdanın bağlı olmadığını belirtir. Dönen cüzdanın aşağıdaki alanları vardır:
 
-* `wallet.signer`: you can use the signer to sign transactions
-* `wallet.account`: this is the currently connected account
-* `wallet.nodeProvider`: you can use the node provider to communicate with the full node, note that this value may be `undefined`
+* `wallet.signer`: işlemleri imzalamak için işaretçiyi kullanabilirsiniz
+* `wallet.account`: bu, şu anda bağlı olan hesaptır
+* `wallet.nodeProvider`: tam düğümle iletişim kurmak için düğüm sağlayıcıyı kullanabilirsiniz, bu değer belirsiz olabilir
 
 ### useBalance
 
@@ -206,10 +202,10 @@ import { useBalance } from '@alephium/web3-react'
 const { balance, updateBalanceForTx } = useBalance()
 ```
 
-The `useBalance` hook returns two values:
+`useBalance` kancası iki değer döndürür:
 
-1. `balance`: the current balance of the connected account
-2. `updateBalanceForTx`: this is used to update the balance when the user makes a transaction. It takes a transaction id as a parameter, and it will update the balance once this transaction is confirmed.
+1. `balance`: bağlı hesabın mevcut bakiyesi
+2. `updateBalanceForTx`: kullanıcı bir işlem yaptığında bakiyeyi güncellemek için kullanılır. Bir işlem kimliğini parametre olarak alır ve bu işlem onaylandığında bakiyeyi günceller.
 
 ### useTxStatus
 
@@ -223,17 +219,15 @@ const confirmed = useMemo(() => {
 }, [txStatus])
 ```
 
-The `useTxStatus` hook also accepts an optional callback parameter of type `(txStatus: node.TxStatus) => Promise<any>`, it will be called after each transaction status query.
+`useTxStatus` kancası ayrıca isteğe bağlı bir geri çağrı parametresi kabul eder, türü `(txStatus: node.TxStatus) => Promise<any>`, bu her işlem durumu sorgusu sonrasında çağrılacaktır.
 
-## Utils
+## Araçlar
 
-### Rate limit
+### Hız sınırlaması
 
-`NodeProvider` is used to communicate with the full node when developing a dApp,
-and you can use the public [API services](./public-services.md) provided by Alephium. 
-But all APIs are rate limited to prevent spam. So if the client sends too many requests in a given amount of time, it will receive the HTTP 429 error.
+Bir dApp geliştirirken tam düğümle iletişim kurmak için `NodeProvider` kullanılır ve Alephium tarafından sağlanan [API hizmetleri](./public-services.md) kullanılabilir. Ancak, tüm API'lar spamı önlemek için hız sınırlamasına tabidir. Bu nedenle, istemcinin belirli bir süre içinde çok sayıda istek göndermesi durumunda, HTTP 429 hatası alacaktır.
 
-You can use the [fetch-retry](https://github.com/jonbern/fetch-retry) to solve this issue:
+Bu sorunu çözmek için [fetch-retry](https://github.com/jonbern/fetch-retry)'yi kullanabilirsiniz:
 
 ```typescript
 import * as fetchRetry from 'fetch-retry'
@@ -246,10 +240,9 @@ const retryFetch = fetchRetry.default(fetch, {
 const nodeProvider = new NodeProvider('node-url', undefined, retryFetch)
 ```
 
-### Custom wallet connect button
+### Özel cüzdan bağlantı düğmesi
 
-`@alephium/web3-react` provides the `AlephiumConnectButton` component to facilitate the development of user interfaces,
-you can also use the `AlephiumConnectButton.Custom` to customize the style of the connect button:
+`@alephium/web3-react`, kullanıcı arayüzlerinin geliştirilmesini kolaylaştırmak için `AlephiumConnectButton` bileşenini sağlar, bağlantı düğmesinin stiline özelleştirmek için `AlephiumConnectButton.Custom`'ı da kullanabilirsiniz:
 
 ```typescript
 import { AlephiumConnectButton } from '@alephium/web3'

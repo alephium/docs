@@ -1,36 +1,24 @@
----
 sidebar_position: 50
-title: Best practices
+title: En İyi Uygulamalar
 ---
 
 :::caution
-This page is WIP until our dApps stack is more stable 🚧
+Bu sayfa, dApp yığınımız daha kararlı olana kadar yapım aşamasındadır 🚧
 :::
 
-Every language has its own idioms, and Ralph is no different. It's important to
-follow these idioms so that others who can read Ralph are able to understand
-your code. Concise, secure and proficient code will generally follow.
+Her dilin kendi deyimleri vardır ve Ralph da bundan farklı değildir. Kodunuzu anlayabilen diğerlerinin, Ralph'i okuyabilen diğerlerinin kodunuzu anlayabilmesi için bu deyimleri izlemek önemlidir. Özet, güvenli ve uzman kod genellikle izlenecektir.
 
-## General advice
+## Genel tavsiyeler
 
-When writing smart contract programs, it's necessary to account for how much
-storage will be used and how much computation your contract will do.
-As space and computation increases, the cost of the contract rises. It's for
-this reason you should aim to make the contract as simple as possible, and keep
-as much space and computation off-chain as you can.
+Akıllı kontrat programları yazarken, kullanılacak depolama miktarını ve kontratınızın yapacağı hesaplamayı hesaba katmak gerekir. Alan ve hesaplama arttıkça, kontratın maliyeti artar. Bu nedenle, kontratı mümkün olduğunca basit tutmayı ve alanı ve hesaplamayı mümkün olduğunca dışarıda tutmayı hedeflemelisiniz.
 
-For example, rather than storing a full document, you can store its hash, as
-a proof the document exists.
+Örneğin, tam bir belgeyi saklamak yerine, belgenin varlığına dair bir kanıt olarak hash'ini saklayabilirsiniz.
 
-Another example is instead of storing a full sentence, you can store indices
-to an external dictionary, which can then re-construct the full sentence.
+Başka bir örnek, tam bir cümle saklamak yerine, dış bir sözlüğe indeksler saklayabilir ve daha sonra tam cümleyi yeniden oluşturabilirsiniz.
 
-Code that interacts with money must be regarded as high risk. Any high risk
-code should use many assert and approve calls within close proximity. This
-keeps the high risk code in one concentrated place, making it easier to audit
-for errors.
+Para ile etkileşim kuran kod, yüksek risk olarak kabul edilmelidir. Herhangi bir yüksek riskli kod, hatalar için denetim yapmayı kolaylaştırmak için bir araya getirilmiş birçok assert ve onay çağrısı kullanmalıdır.
 
-## Safety techniques
+## Güvenlik Teknikleri
 
 :::note
 TODO

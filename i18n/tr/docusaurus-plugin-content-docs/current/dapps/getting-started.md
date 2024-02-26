@@ -1,57 +1,55 @@
 ---
 sidebar_position: 5
-title: Getting Started
-sidebar_label: Getting started
+title: Başlarken
+sidebar_label: Başlarken
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## Genel Bakış
 
-<UntranslatedPageText />
+Alephium, dApp'lerinizi oluşturmanıza yardımcı olmak için çeşitli araçlar ve paketler önermektedir.
 
-## Overview
+Bu kılavuz, önerilen kurulumumuzu yüklemenize yardımcı olacaktır.
 
-Alephium proposes multiple tools and packages to help you build your dApps.
+Önkoşullar:
 
-This guide will help you install our recommended setup.
-
-Prerequisites:
-
-- Write code in [Typescript](https://www.typescriptlang.org/)
-- Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
-- [nodejs](https://nodejs.org/en/) version >= 16 installed
-- `npm` version >= 8 installed
+- Kodu [TypeScript](https://www.typescriptlang.org/) ile yazın
+- [Terminal](https://en.wikipedia.org/wiki/Terminal_emulator) ile çalışın
+- Yüklü [nodejs](https://nodejs.org/en/) sürümü >= 16
+- `npm` sürümü >= 8 yüklü
 
 :::info
-If you experience slowness with `npm` and `npx`, consider give `bun` and `bunx` a try.
+`npm` ve `npx` ile yavaşlık yaşarsanız, `bun` ve `bunx`'e bir şans vermek düşünülebilir.
 :::
 
-## Create a new dApp project
+## Yeni bir dApp projesi oluşturun
 
-To create the tutorial project, open a new terminal and run:
+Öğretici projesini oluşturmak için yeni bir terminal açın ve şunu çalıştırın:
 
 ```
 npx @alephium/cli@latest init alephium-tutorial
 ```
 
-This will create a new directory `alephium-tutorial` and initialize a sample project inside that directory.
 
-## Launch the local development network
+Bu, `alephium-tutorial` adında yeni bir dizin oluşturacak ve bu dizin içine örnek bir proje başlatacaktır.
 
-To compile and test your contracts, it's necessary to launch a local development network, and you can follow [this guide](/full-node/devnet) to launch a devnet.
+## Yerel geliştirme ağını başlatın
 
-Your new network is now launched using [this configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
+Kontratlarınızı derlemek ve test etmek için yerel bir geliştirme ağı başlatmak gereklidir ve bir geliştirme ağı başlatmak için [bu kılavuzu](/full-node/devnet) takip edebilirsiniz.
 
-The Typescript SDK is then able to interact with the network through REST endpoints.
+Yeni ağınız, [bu yapılandırmayı](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) ve test amaçları için yeterli ALPH'ye sahip 4 grup ile oluşturulmuştur.
 
-## Compile your contract
+Daha sonra, TypeScript SDK, REST uçları aracılığıyla ağla etkileşim kurabilir.
 
-Next, change the workspace to the tutorial project:
+## Kontratınızı derleyin
+
+Sonraki adımda, çalışma alanını öğretici projesine değiştirin:
 
 ```
 cd alephium-tutorial
 ```
 
-Have a look in the `contracts/` folder, you can find `token.ral` and `withdraw.ral`:
+
+`contracts/` klasörüne bir göz atın, `token.ral` ve `withdraw.ral` dosyalarını bulabilirsiniz:
 
 <details>
 <summary>token.ral</summary>
@@ -60,11 +58,11 @@ Have a look in the `contracts/` folder, you can find `token.ral` and `withdraw.r
 ```rust
 import "std/fungible_token_interface"
 
-// Defines a contract named `TokenFaucet`.
-// A contract is a collection of fields (its state) and functions.
-// Once deployed, a contract resides at a specific address on the Alephium blockchain.
-// Contract fields are permanently stored in contract storage.
-// A contract can issue an initial amount of token at its deployment.
+// `TokenFaucet` adında bir kontrat tanımlar.
+// Bir kontrat, alanları (durumu) ve fonksiyonları içeren bir koleksiyondur.
+// Dağıtıldıktan sonra, bir kontrat, Alephium blok zincirinde belirli bir adreste bulunur.
+// Kontrat alanları kalıcı olarak kontrat depolamasında saklanır.
+// Bir kontrat, dağıtımında bir başlangıç ​​miktarı jeton çıkarabilir.
 Contract TokenFaucet(
     symbol: ByteVec,
     name: ByteVec,
@@ -73,56 +71,56 @@ Contract TokenFaucet(
     mut balance: U256
 ) implements IFungibleToken {
 
-    // Events allow for logging of activities on the blockchain.
-    // Alephium clients can listen to events in order to react to contract state changes.
+    // Etkinlikler, blok zincirindeki faaliyetleri günlüğe kaydetmek için kullanılır.
+    // Alephium istemcileri, kontrat durum değişikliklerine tepki vermek için etkinlikleri dinleyebilir.
     event Withdraw(to: Address, amount: U256)
 
     enum ErrorCodes {
         InvalidWithdrawAmount = 0
     }
 
-    // A public function that returns the initial supply of the contract's token.
-    // Note that the field must be initialized as the amount of the issued token.
+    // Kontratın tokeninin başlangıç ​​arzını döndüren genel bir fonksiyon.
+    // Alanın, çıkarılan token miktarı olarak başlatılması gerektiğini unutmayın.
     pub fn getTotalSupply() -> U256 {
         return supply
     }
 
-    // A public function that returns the symbol of the token.
+    // Tokenin sembolünü döndüren genel bir fonksiyon.
     pub fn getSymbol() -> ByteVec {
         return symbol
     }
 
-    // A public function that returns the name of the token.
+    // Tokenin adını döndüren genel bir fonksiyon.
     pub fn getName() -> ByteVec {
         return name
     }
 
-    // A public function that returns the decimals of the token.
+    // Tokenin ondalık sayılarını döndüren genel bir fonksiyon.
     pub fn getDecimals() -> U256 {
         return decimals
     }
 
-    // A public function that returns the current balance of the contract.
+    // Kontratın mevcut bakiyesini döndüren genel bir fonksiyon.
     pub fn balance() -> U256 {
         return balance
     }
 
-    // A public function that transfers tokens to anyone who calls it.
-    // The function is annotated with `updateFields = true` as it changes the contract fields.
-    // The function is annotated as using contract assets as it does.
+    // Kendisini çağıran herkese tokenleri aktaran genel bir fonksiyon.
+    // Bu fonksiyon, kontrat alanlarını değiştirdiği için `updateFields = true` ile işaretlenmiştir.
+    // İşlev, kontrat varlıklarını kullandığı için contract assets olarak işaretlenmiştir.
     @using(assetsInContract = true, updateFields = true, checkExternalCaller = false)
     pub fn withdraw(amount: U256) -> () {
-        // Debug events can be helpful for error analysis
-        emit Debug(`The current balance is ${balance}`)
+        // Hata analizi için Hata ayıklama etkinlikleri yararlı olabilir
+        emit Debug(`Mevcut bakiye ${balance}`)
 
-        // Make sure the amount is valid
+        // Miktarın geçerli olduğundan emin olun
         assert!(amount <= 2, ErrorCodes.InvalidWithdrawAmount)
-        // Functions postfixed with `!` are built-in functions.
+        // '!' ile biten işlevler yerleşik işlevlerdir.
         transferTokenFromSelf!(callerAddress!(), selfTokenId!(), amount)
-        // Ralph does not allow underflow.
+        // Ralph'da taşma olmaz.
         balance = balance - amount
 
-        // Emit the event defined earlier.
+        // Önceden tanımlanmış etkinliği yayar
         emit Withdraw(callerAddress!(), amount)
     }
 }
@@ -135,31 +133,31 @@ Contract TokenFaucet(
 <p>
 
 ```rust
-// Defines a transaction script.
-// A transaction script is a piece of code to interact with contracts on the blockchain.
-// Transaction scripts can use the input assets of transactions in general.
-// A script is disposable and will only be executed once along with the holder transaction.
+// Bir işlem betiği tanımlar.
+// Bir işlem betiği, blok zincirindeki kontratlarla etkileşim için bir kod parçasıdır.
+// İşlem betikleri genelde işlemlerin giriş varlıklarını kullanabilir.
+// Bir betik tek kullanımlıktır ve sadece bir kez işlem ile birlikte yürütülür.
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
-    // Call token contract's withdraw function.
+    // token kontratının çekme işlevini çağırır.
     token.withdraw(amount)
 }
 ```
 
 </p></details>
 
- To compile your contracts, run:
+Kontratlarınızı derlemek için şunu çalıştırın:
 
 ```
 npx @alephium/cli@latest compile
 ```
 
-The compiled artifacts are in the directory `artifacts`.
+Derlenmiş artefaktlar `artifacts` dizinindedir.
 
-This command also generates typescript code based on the compiled artifacts. The generated typescript code are in the directory `artifacts/ts`. You can interact with the alephium blockchain more conveniently by using the generated typescript code.
+Bu komut ayrıca derlenmiş artefaklara dayalı olarak TypeScript kodu oluşturur. Oluşturulan TypeScript kodu `artifacts/ts`dizinindedir. Oluşturulan TypeScript kodunu kullanarak Alephium blok zinciriyle daha pratik bir şekilde etkileşim kurabilirsiniz.
 
-## Test your contract
+## Kontratınızı test edin
 
-The sample project comes with tests `test/unit/token.test.ts` for your contract:
+Örnek proje, kontratınız için `test/unit/token.test.ts` adlı testlerle birlikte gelir:
 
 <details>
 <summary>token.test.ts</summary>
@@ -209,21 +207,21 @@ describe('unit tests', () => {
 
 </p></details>
 
-You can run them with:
+Bu testleri şu şekilde çalıştırabilirsiniz:
 
 ```
 npm run test
 ```
 
-or
+veya
 
 ```
 npx @alephium/cli@latest test
 ```
 
-## Deploy your contract
+## Kontratınızı dağıtın
 
-Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
+Şimdi, kontratı dağıtmak için Alephium CLI ve bir dağıtım betiği olan `scripts/0_deploy_faucet.ts` kullanacağız:
 
 <details>
 <summary>0_deploy_faucet.ts</summary>
@@ -263,21 +261,21 @@ export default deployFaucet
 
 </p></details>
 
-You can run it using:
+Bunu kullanarak şunu çalıştırabilirsiniz:
 
 ```
 npx @alephium/cli@latest deploy
 ```
 
-This will deploy the token faucet to group 0 of devnet. To deploy on testnet (or any other network), update your `alephium.config.ts` and use the `--network` option:
+Bu, token musluğunu devnet'in 0. grubuna dağıtacaktır. Testnet'te (veya başka bir ağda) dağıtmak için `alephium.config.ts` dosyanızı güncelleyin ve `--network` seçeneğini kullanın:
 
 ```
 npx @alephium/cli@latest deploy --network testnet
 ```
 
-## Interact with the deployed contract
+## Dağıtılan kontratla etkileşime geçin
 
-Now, you can build the source code `src/token.ts` :
+Şimdi,  `src/token.ts`dosyasını oluşturabilirsiniz:
 
 <details>
 <summary>token.ts</summary>
@@ -335,27 +333,26 @@ withdraw()
 
 </p></details>
 
-Simply run:
+Sadece şunu çalıştırın:
 
 ```
 npm run build
 ```
 
-and interact with the deployed token faucet:
+ve dağıtılan token musluğu ile etkileşime geçin:
 
 ```
 node dist/src/token.js
 ```
 
-## Connect to the wallets
+## Cüzdanlara bağlanın
 
-dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
-such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
-and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
+dApp'ler, dApp kullanıcılarının kimlik doğrulaması yapmasını ve Alephium blok zinciriyle etkileşimde bulunmasını sağlamak için cüzdan entegrasyonu gerektirir,
+örneğin işlem imzalama. Şu anda dApp'ler hem [Extension Wallet](../wallet/extension-wallet/dapp) hem de [WalletConnect](../wallet/walletconnect) ile entegre edilebilir. Daha fazla ayrıntı için ilgili sayfalara başvurun.
 
-## Learn more
+## Daha fazlasını öğrenin
 
-- To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
-- To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
-- To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-- To learn how to build a Nextjs dApp, please visit [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)
+- Ekosistem hakkında daha fazla bilgi edinmek için lütfen [ekosistem genel bakışına](/dapps/ecosystem) gidin.
+- Web3 SDK hakkında daha fazla bilgi edinmek için lütfen [web3 SDK kılavuzuna](/dapps/alephium-web3) gidin.
+- Ralph dili hakkında daha fazla bilgi edinmek için lütfen [Ralph kılavuzuna](/ralph/getting-started) gidin.
+- Bir Nextjs dApp'in nasıl oluşturulacağını öğrenmek için lütfen [Nextjs ile dApp oluşturma](/dapps/build-dapp-with-nextjs.md) sayfasına gidin.

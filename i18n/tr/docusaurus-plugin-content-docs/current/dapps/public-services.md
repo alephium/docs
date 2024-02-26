@@ -1,46 +1,42 @@
 ---
 sidebar_position: 50
-title: Public Services
-sidebar_label: Public services
+title: Halk Hizmetleri
+sidebar_label: Halk hizmetleri
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+## Testnet Musluğu
 
-<UntranslatedPageText />
+Testnet Musluğu, belirli bir cüzdana testnet-v1 jetonları almanın bir yoludur.
 
-## Testnet Faucet
+### HTTP API'si Aracılığıyla
 
-The Testnet Faucet is a way to receive testnet-v1 tokens into a given wallet.
-
-### Via HTTP API
-
-Another way to receive testnet-v16 tokens is via an HTTP call, giving your wallet address in the request body, simply as follows:
+Testnet-v16 jetonları almanın başka bir yolu, istek gövdesinde cüzdan adresinizi vererek bir HTTP çağrısı yapmaktır, aşağıdaki gibi:
 
 ```
 curl -X POST -d '1H1GPLkoMGVUfxQcJgtjWTrKV1KJCQooEV5WxPMhP4Zjy' https://faucet.testnet.alephium.org/send
 ```
 
-Mind that the faucet is throttling requests for few minutes.
+Musluk, istekleri birkaç dakika boyunca kısıtlamaktadır.
 
-## Node and Explorer APIs
+## Node ve Gezgin API'ları
 
-Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
-* `https://wallet-v20.mainnet.alephium.org` for mainnet with node v2.X ([Doc](https://wallet-v20.mainnet.alephium.org/docs))
-* `https://wallet-v20.testnet.alephium.org` for testnet with node v2.X ([Doc](https://wallet-v20.testnet.alephium.org/docs))
-* `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Doc](https://backend-v113.mainnet.alephium.org/docs))
-* `https://backend-v113.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Doc](https://backend-v113.testnet.alephium.org/docs))
+Şu anda aşağıdaki API hizmetleri sürdürülmektedir. Tüm API'lar spamı önlemek için sınırlıdır.
+* Ana ağ için `https://wallet-v20.mainnet.alephium.org`, node v2.X ile ([Dokümantasyon](https://wallet-v20.mainnet.alephium.org/docs))
+* Test ağı için `https://wallet-v20.testnet.alephium.org`, node v2.X ile ([Dokümantasyon](https://wallet-v20.testnet.alephium.org/docs))
+* Ana ağ için `https://backend-v113.mainnet.alephium.org`, gezgin arka uç v1.13.X ile ([Dokümantasyon](https://backend-v113.mainnet.alephium.org/docs))
+* Test ağı için `https://backend-v113.testnet.alephium.org`, gezgin arka uç v1.13.X ile ([Dokümantasyon](https://backend-v113.testnet.alephium.org/docs))
 
-As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
+Proje hala aktif geliştirme aşamasında olduğu için, tüm API'lar sürümlenmiştir. Genellikle yalnızca en son sürümler sürdürülür, ancak API yükseltmeleri topluluğa önceden duyurulur.
 
-## API Aliases
+## API Takma Adları
 
-We maintain the following API aliases to give users time to migrate from the old API.
+Kullanıcıların eski API'den geçmelerine zaman tanımak için aşağıdaki API takma adlarını sürdürüyoruz.
 
 import aliases from "./api-aliases.json";
 
 export const Aliases = ({aliases, type}) => (
     <Box>
-        {aliases.length > 0 && <h3>{type} Aliases</h3>}
+        {aliases.length > 0 && <h3>{type} Takma Adlar</h3>}
         <ul>{aliases && aliases.map((alias) => {
             const from = alias['from'];
             const to = alias['to'];
@@ -50,13 +46,13 @@ export const Aliases = ({aliases, type}) => (
     </Box>
 )
 
-<Aliases aliases={aliases['current']} type='Current' />
-<Aliases aliases={aliases['deprecated']} type='Deprecated' />
+<Aliases aliases={aliases['current']} type='Mevcut' />
+<Aliases aliases={aliases['deprecated']} type='Kullanımdan Kaldırılan' />
 
-## API rate limiting
+## API Sınırlı Kullanımı
 
-To ensure the best performance and security, all of our public APIs have implemented rate limiting. This means that there is a limit on the number of requests you can make within a certain time period. As our services evolve and grow, the rate limit may be adjusted based on the actual usage of the service.
+En iyi performansı ve güvenliği sağlamak için tüm halka açık API'larımızda sınırlı kullanım uygulanmaktadır. Bu, belirli bir zaman dilimi içinde yapabileceğiniz istek sayısına bir sınır getirilmesi anlamına gelir. Hizmetlerimiz geliştikçe ve büyüdükçe, sınırların hizmetin gerçek kullanımına dayanarak ayarlanması mümkündür.
 
-To ensure a smooth experience while working within the rate limit, we highly recommend implementing cache and retry mechanisms when making requests to our API services. Caching responses can help reduce the number of API calls, while retrying failed requests can handle temporary issues or errors.
+Sınırlı kullanım içinde sorunsuz bir deneyim yaşamak için, API hizmetlerimize istek yaparken önbellek ve yeniden deneme mekanizmaları uygulamanızı kesinlikle öneririz. Yanıtların önbelleğe alınması, API çağrılarının sayısını azaltmaya yardımcı olurken, başarısız isteklerin yeniden denemesi geçici sorunları veya hataları ele alabilir.
 
-If your application is built with the React framework, you can leverage the ["SWR"](https://www.npmjs.com/package/swr) package available on npm. SWR provides convenient hooks for data fetching and caching, making it easier to work with APIs. Specifically, you can use the `useSWR` hook for handling mutable data and the `useSWRImmutable` hook for handling immutable data such as token metadata.
+Uygulamanız React çerçevesi ile oluşturulmuşsa, npm'de bulunan ["SWR"](https://www.npmjs.com/package/swr) paketinden faydalanabilirsiniz. SWR, veri alımı ve önbelleğe alma için uygun kancalar sağlar, bu da API'larla çalışmayı kolaylaştırır. Özellikle değişken verileri işlemek için `useSWR` kancasını ve jeton meta verileri gibi değişmez verileri işlemek için `useSWRImmutable` kancasını kullanabilirsiniz.
