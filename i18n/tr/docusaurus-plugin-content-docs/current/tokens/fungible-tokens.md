@@ -1,30 +1,19 @@
 ---
 sidebar_position: 20
-title: Fungible Tokens
-sidebar_label: Fungible Tokens
+title: Takas edilebilir Jetonlar
+sidebar_label: Takas edilebilir Jetonlar
 ---
 
-### Fungible Token Standard
+### Takas edilebilir Jetonl Standardı
 
-In Alephium, new tokens can be issued when deploying new
-contracts. The id of the newly issued token is the same as the id of
-the contract that issues it. You can refer to this
-[guide](/dapps/build-dapp-from-scratch) for details about how to issue
-tokens on Alephium from scratch.
+Alephium'da, yeni jetonlar yeni sözleşmeler yayımlandığında oluşturulabilir. Yeni oluşturulan jetonun kimliği, onu yayınlayan sözleşmenin kimliğiyle aynıdır. Bu konuda ayrıntılı bilgi için [bu kılavuzu](/dapps/build-dapp-from-scratch) inceleyebilirsiniz.
 
-Tokens are usually associated with information such as
-`name`, `decimals`, `totalSupply`, etc. The goal of the token standard is
-to put constraints on token-issuing contract so it becomes easier for
-dApps and wallets to infer token types and fetch token information.
+Jetonlar genellikle `ad`, `ondalık`, `toplamArz` gibi bilgilerle ilişkilendirilir. Jeton standardının amacı, jeton yayımlama sözleşmesine kısıtlamalar getirerek dApp'lerin ve cüzdanların jeton türlerini kolayca çıkarmasını ve jeton bilgilerini almasını sağlamaktır.
 
-The standard [fungible token
-interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
-defines methods to get the `name`, `symbol`, `decimals` as well as the
-`totalSupply` of the token. It is also annotated with the `@std`
-annotation with the id `#0001`:
+Standart [değiştirilebilir jeton arayüzü](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral), jetonun `sembol`, `ad`, `ondalık` ve `toplamArz` bilgilerini almak için yöntemler tanımlar. Ayrıca, `@std` belirteci ile `#0001` kimliğiyle işaretlenmiştir:
 
 ```rust
-// Standard interface for fungible tokens
+// Değiştirilebilir jetonlar için standart arayüz
 @std(id = #0001)
 Interface IFungibleToken {
   pub fn getSymbol() -> ByteVec
@@ -33,7 +22,7 @@ Interface IFungibleToken {
   pub fn getTotalSupply() -> U256
 }
 
-// A `TokenFaucet` contract that implements the `IFungibleToken` interface
+// `IFungibleToken` arayüzünü uygulayan bir `TokenFaucet` sözleşmesi
 Contract TokenFaucet(
     symbol: ByteVec,
     name: ByteVec,
@@ -58,82 +47,75 @@ Contract TokenFaucet(
 }
 ```
 
-Once a token contract implements
+Bir jeton sözleşmesi, yukarıdaki gibi
 [IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
-interface, like the `TokenFaucet` contract shown above, it enables SDK
-to get information in a standard way:
+arayüzünü uyguladığında, SDK'nın bilgileri standart bir şekilde almasını sağlar:
 
 ```typescript
-// Use SDK to call methods individually
+// SDK'yı yöntemleri ayrı ayrı çağırmak için kullanın
 const getDecimalResult = await tokenFaucet.methods.getDecimals()
 const getTotalSupplyResult = await tokenFaucet.methods.getTotalSupply()
 const getNameResult = await tokenFaucet.methods.getName()
-console.log("TokenFaucet name, decimals, totalSupply", getNameResult.returns, getDecimalResult.returns, getTotalSupplyResult.returns)
+console.log("TokenFaucet adı, ondalık, toplamArz", getNameResult.returns, getDecimalResult.returns, getTotalSupplyResult.returns)
 
-// Use SDK to call all multiple methods at the same time
+// SDK'yı aynı anda birden çok yöntemi çağırmak için kullanın
 const multicallResult = await tokenFaucet.multicall({
   getDecimals: {},
   getTotalSupply: {},
   getName: {},
 })
-console.log("TokenFaucet name, decimals, totalSupply", multicallResult.getName.returns, multicallResult.getDecimal.returns, multicallResult.getTotalSupply.returns)
+console.log("TokenFaucet adı, ondalık, toplamArz", multicallResult.getName.returns, multicallResult.getDecimal.returns, multicallResult.getTotalSupply.returns)
 ```
 
-In fact, SDK provides a canonical way to fetch all metadata for a fungible token.
+Aslında, SDK, bir değiştirilebilir jeton için tüm meta verileri almak için kanonik bir yol sağlar.
 
 ```typescript
 const metadata = await web3.getCurrentNodeProvider().fetchFungibleTokenMetaData(tokenFaucet.contractId)
-console.log("TokenFaucet name, decimals, totalSupply", metadata.name, metadata.decimals, metadata.totalSupply)
+console.log("TokenFaucet adı, ondalık, toplamArz", metadata.name, metadata.decimals, metadata.totalSupply)
 ```
 
 [IFungibleToken](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral)
-also enables SDK to guess the type of a token, so that dApps and
-wallets can handle them respectively:
+, bir jetonun türünü tahmin etmek için de SDK'ya olanak tanır, böylece dApp'ler ve cüzdanlar onları ilgili şekilde işleyebilir:
 
 ```typescript
-// Guess token type
+// Jeton türünü tahmin edin
 const tokenType = await web3.getCurrentNodeProvider().guessStdTokenType(tokenFaucet.contractId)
 expect(tokenType).toEqual('fungible')
 
-// Guess token interface id
+// Jeton arayüz kimliğini tahmin edin
 const tokenInterfaceId = await web3.getCurrentNodeProvider().guessStdInterfaceId(tokenFaucet.contractId)
 expect(tokenInterfaceId).toEqual('0001')
 ```
 
-For a working and more complete example, please take a look at the
-[nextjs-template](https://github.com/alephium/nextjs-template) repository.
+Çalışan ve daha kapsamlı bir örnek için, lütfen
+[nextjs-template](https://github.com/alephium/nextjs-template) deposuna göz atın.
 
-### Wallet Support
+### Cüzdan Desteği
 
-Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
-Wallet](/wallet/extension-wallet/overview) have native support for
-fungible tokens.
+Hem [Masaüstü Cüzdanı](/wallet/desktop-wallet/overview) hem [Uzantı
+Cüzdanı](/wallet/extension-wallet/overview), değiştirilebilir jetonlar için doğal destek sağlar.
 
-Following is an example of displaying and transfering the `PACA` token
-using extesion wallet:
+Aşağıda, uzantı cüzdanı kullanarak `PACA` jetonunu görüntüleme ve transfer etme örneği bulunmaktadır:
 
-<img src={require("./media/transfer-alphpaca-1.png").default} alt="Token Overview" width="250"/>
+\`\`\`jsx
+<img src={require("./media/transfer-alphpaca-1.png").default} alt="Jeton Genel Bakışı" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alphpaca-2.png").default} alt="Send Token" width="250" />
+<img src={require("./media/transfer-alphpaca-2.png").default} alt="Jeton Gönderme" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alphpaca-3.png").default} alt="Sign Tx" width="250" />
+<img src={require("./media/transfer-alphpaca-3.png").default} alt="İmzala Tx" width="250" />
+\`\`\`
 
-### Token List
+### Jeton Listesi
 
-Other than the basic information such as `name`, `symbol` and
-`decimals`, etc. Fungible tokens usually contain other metadata such
-as `description` and `logoURI` so that dApps and wallets can properly
-display them.
+Temel bilgilerin yanı sıra `ad`, `sembol` ve
+`ondalık` gibi diğer metaverileri içerir. Değiştirilebilir jetonlar genellikle dApp'lerin ve cüzdanların bunları düzgün bir şekilde göstermesi için `açıklama` ve `logoURI` gibi diğer metaverileri içerir.
 
-The goal of the [token list](https://github.com/alephium/token-list)
-is to be a source of trust for token id and metadata of the well known
-tokens in the Alephium ecosystem, so wallets and dApps can warn users
-for the unverified tokens. Here is how extension wallet displays a
-token before and after it is added into the token list.
+[Jeton listesi](https://github.com/alephium/token-list), Alephium ekosistemindeki tanınmış jetonların kimlik ve metaverileri için bir güven kaynağı olmayı amaçlar, böylece cüzdanlar ve dApp'ler kullanıcıları doğrulanmamış jetonlar konusunda uyarabilir. İşte uzantı cüzdanının bir jetonu eklenmeden önce ve sonra nasıl görüntülediği:
 
-<img src={require("./media/unverified-token.png").default} alt="Unverified" width="250"/>
+\`\`\`jsx
+<img src={require("./media/unverified-token.png").default} alt="Doğrulanmamış" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/verified-token.png").default} alt="Verified" width="250"/>
+<img src={require("./media/verified-token.png").default} alt="Doğrulanmış" width="250"/>
+\`\`\`
 
-Currently, a pull request is needed to add the token metadata to token
-list.
+Şu anda, jeton metaverilerini jeton listesine eklemek için bir pull isteği gereklidir.

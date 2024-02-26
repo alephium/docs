@@ -1,35 +1,28 @@
 ---
 sidebar_position: 30
-title: Non-fungible Tokens (NFTs)
-sidebar_label: Non-fungible Tokens
+title: Değiştirilebilir Olmayan Jetonlar (NFT'ler)
+sidebar_label: Değiştirilebilir Olmayan Jetonlar (NFT'ler)
 ---
 
-Non-fungible tokens (NFTs) on Alephium have several unique characteristics
-compared to NFTs on other blockchains:
+Alephium'daki değiştirilebilir olmayan jetonlar (NFT'ler), diğer blok zincirlerindeki NFT'lerle karşılaştırıldığında birkaç benzersiz özelliğe sahiptir:
 
-- True ownership based on the UTXO model: Like other types of tokens on Alephium, NFTs are securely managed by UTXOs, which are directly owned by addresses. Since UTXOs are protected by users' private keys, even if there are bugs in the NFT contract, users' assets remain safe.
+- UTXO modeline dayalı gerçek sahiplik: Alephium'daki diğer türdeki jetonlar gibi, NFT'ler de adresler tarafından doğrudan sahip olunan UTXO'larla güvenli bir şekilde yönetilir. UTXO'lar, kullanıcıların özel anahtarlarıyla korunduğundan, NFT sözleşmesinde hatalar olsa bile, kullanıcıların varlıkları güvende kalır.
 
-- First-class support for NFTs: Tokens are native assets on Alephium. As a result, users’ NFTs can be easily discovered and displayed by wallets, explorers, and dApps without relying on third-party services.
+- NFT'ler için birinci sınıf destek: Jetonlar, Alephium'da yerel varlıklardır. Sonuç olarak, kullanıcıların NFT'leri, üçüncü taraf hizmetlerine bağlı olmadan cüzdanlar, gezginler ve dApp'ler tarafından kolayca keşfedilip gösterilebilir.
 
-- Higher security thanks to Alephium’s VM and contract language: Alephium's virtual machine (VM) and contract language eliminate the need for a separate approval transaction during NFT trading, reducing associated risks. This simplifies the process of writing secure NFT contracts for developers with the help of tools such as the [Asset
-  Permission System](/ralph/asset-permission-system).
+- Alephium'un VM ve sözleşme dili sayesinde daha yüksek güvenlik: Alephium'un sanal makinesi (VM) ve sözleşme dili, NFT ticaretinde ayrı bir onay işlemine gerek kalmadan, ilişkili riskleri azaltarak daha yüksek güvenlik sağlar. Bu, [Varlık İzin Sistemi](/ralph/asset-permission-system) gibi araçların yardımıyla geliştiriciler için güvenli NFT sözleşmeleri yazma sürecini basitleştirir.
 
-- Sub-contract system: In Alephium, there is no [mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types) data structure. Collections are created with a parent contract (the collection) and [sub-contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (the items). Each sub-contract represents an NFT in this collection, and all metadata is tied to it. This is a native feature of the Alephium Blockchain that allows Alephium’s NFTs to be unique (one token per sub-contract) or semi-fungible, as the same minting contract can create more than one token.
+- Alt sözleşme sistemi: Alephium'da [eşleme](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types) veri yapısı bulunmaz. Koleksiyonlar, bir ana sözleşme (koleksiyon) ve [alt sözleşmeler](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (öğeler) ile oluşturulur. Her alt sözleşme, bu koleksiyondaki bir NFT'yi temsil eder ve tüm metaveri ona bağlıdır. Bu, Alephium Blok Zinciri'nin doğal bir özelliğidir ve Alephium'un NFT'lerinin benzersiz (bir alt sözleşme başına bir jeton) veya yarı-değiştirilebilir olmasını sağlar, çünkü aynı basım sözleşmesi birden fazla jeton oluşturabilir.
 
-- Efficient transaction batching: Multiple NFTs and users can be involved in a single transaction.
+- Verimli işlem toplu işleme: Tek bir işlemde birden fazla NFT ve kullanıcı yer alabilir.
 
-- Cheaper transaction fees and higher throughput: NFT transactions will benefit from Alephium's sharding algorithm.
+- Daha düşük işlem ücretleri ve daha yüksek işlem hızı: NFT işlemleri, Alephium'un parçalanma algoritmasından faydalanacaktır.
 
-- NFT scarcity: The supply of NFTs on Alephium is finite, as each NFT necessitates the deployment of its own individual sub-contract, which in turn requires a deposit of ALPH - currently set at 1 `ALPH`. This unique structure inherently imposes a limit on the production of NFTs on the platform, reinforcing the scarcity of NFTs on Alephium.
-  
-### Non-fungible Token Standard
+- NFT kıtlığı: Alephium'daki NFT'lerin arzı sınırlıdır, çünkü her NFT'nin kendi bireysel alt sözleşmesinin dağıtılması gerekmektedir ve bu da bir ALPH depozitosunu gerektirir - şu anda 1 `ALPH`. Bu benzersiz yapı, platformdaki NFT'lerin kıtlığını güçlendiren bir sınırlama getirir.
 
-Both NFT collections and individual NFTs have metadata associated with
-them, such as `collectionUri`, `totalSupply` and `tokenUri`, etc. The
-[INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
-and
-[INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral)
-interfaces standardize the methods to fetch these metadata.
+### Değiştirilebilir Olmayan Jeton Standartı
+
+Hem NFT koleksiyonları hem de bireysel NFT'lerle ilişkilendirilen metaveriler bulunmaktadır, örneğin `collectionUri`, `totalSupply` ve `tokenUri` vb. [INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral) ve [INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral) arabirimleri, bu metaverileri almak için yöntemleri standartlaştırır.
 
 ```rust
 // Standard interface for NFT collection
@@ -49,8 +42,7 @@ Interface INFT {
 }
 ```
 
-They are also annotated with the `@std` annotations to facilitate
-dApps and wallets to infer their contract/token types.
+Bu arabirimler, dApp'lerin ve cüzdanların sözleşme/jeton tiplerini çıkarmasını kolaylaştırmak için `@std` açıklamaları ile işaretlenmiştir.
 
 ```typescript
 // Guess NFT token type
@@ -62,11 +54,7 @@ const isNFTCollection = await web3.getCurrentNodeProvider().guessFollowsNFTColle
 console.log("Is NFT collection", isNFTCollection)
 ```
 
-For contracts that implement
-[INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
-and
-[INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral),
-SDK offers a canonical way to fetch their respective metadata:
+[INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral) ve [INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral) arabirimlerini uygulayan sözleşmeler için, SDK, ilgili metaverileri almanın kanonik bir yolunu sunar:
 
 ```typescript
 // NFT Collection Metadata
@@ -78,8 +66,7 @@ const nftMetadata = await web3.getCurrentNodeProvider().fetchNFTMetadata(nft.con
 console.log("NFT Token URI, collection address", nftMetadata.tokenUri, nftMetadata.collectionAddress)
 ```
 
-For NFT collection, one of the metadata is `collectionUri`, which is
-an URI that points to an JSON document with the following schema:
+NFT koleksiyonu için, metaverilerden biri `collectionUri`dir, bu, aşağıdaki şemaya sahip bir JSON belgesine işaret eden bir URI'dir:
 
 ```typescript
 interface NFTCollectionUriMetaData {
@@ -89,8 +76,7 @@ interface NFTCollectionUriMetaData {
 }
 ```
 
-For individual NFT, one of the metadata is `tokenUri`, which is an URI
-that points to an JSON document with the following schema:
+Bireysel NFT için, metaverilerden biri `tokenUri`dir, bu, aşağıdaki şemaya sahip bir JSON belgesine işaret eden bir URI'dir:
 
 ```typescript
 interface NFTTokenUriMetaData {
@@ -106,45 +92,29 @@ interface NFTTokenUriMetaData {
 }
 ```
 
-### AlephiumNFT Marketplace
+### AlephiumNFT Pazarı
 
-[AlephiumNFT](https://github.com/alephium/alephium-nft) marketplace is
-a proof-of-concept NFT marketplace to show case the capabilities of
-NFTs on Alephium. Here you can create NFT collections, discovery, mint
-and trade NFTs. You can also launch [Opensea
-Drop](https://docs.opensea.io/docs/drops-on-opensea) style public sale
-campaigns for your NFT collections. These campaigns are called `Flows`
-on `AlephiumNFT` marketplace.
+[AlephiumNFT](https://github.com/alephium/alephium-nft) pazarı, Alephium'daki NFT'lerin yeteneklerini sergilemek için bir kanıt-of-konsept NFT pazarıdır. Burada NFT koleksiyonları oluşturabilir, keşif yapabilir, NFT'ler basabilir ve ticaret yapabilirsiniz. Ayrıca, NFT koleksiyonlarınız için [Opensea
+  Drop](https://docs.opensea.io/docs/drops-on-opensea) tarzında halka açık satış kampanyaları başlatabilirsiniz. Bu kampanyalar, `AlephiumNFT` pazarında `Akışlar` olarak adlandırılır.
 
-Create your own NFT collections should be pretty
-straightforward. Follow this [Twitter
-thread](https://twitter.com/alephium/status/1674397159947649030) for
-more details. If you want to create a `Flow` on `AlephiumNFT`
-marketplace,
-[@alephium/cli](https://www.npmjs.com/package/@alephium/cli) has a
-`nft` subcommand that can help with that.
+Kendi NFT koleksiyonlarınızı oluşturmak oldukça
+basittir. Daha fazla ayrıntı için bu [Twitter
+dizisini](https://twitter.com/alephium/status/1674397159947649030) takip edin. Eğer bir `Flow` oluşturmak istiyorsanız, `@alephium/cli` sizin için yardımcı olabilecek bir `nft` alt komutuna sahiptir.
 
-#### Create Flows
+#### Akışlar Oluşturun
 
-Let's say you want to launch a public sale for your NFT collection
-that has `5` individual NFTs. Before you create a `Flow` for it, you
-should have `5` images ready first. If not, `@alephium/cli` offers a
-command for you to generate images using OpenAI's
-[DALL.E](https://openai.com/research/dall-e) models:
+Diyelim ki `5` bireysel NFT'ye sahip NFT koleksiyonunuz için halka açık bir satış başlatmak istiyorsunuz. Bunu yapmadan önce, bunun için hazır `5` görüntünüz olmalı. Değilse, `@alephium/cli`, OpenAI'in [DALL.E](https://openai.com/research/dall-e) modellerini kullanarak görüntüler oluşturmanıza yardımcı olacak bir komuta sahiptir:
 
 ```bash
 export OPENAI_API_KEY=xxxx-xxxx-xxxx-xxxx
 npx @alephium/cli@latest nft generate-images-with-openai --number 5 -d /tmp/imagine "imagine all the people, living life in peace"
 ```
 
-This will create `5` images with the prompt `imagine all the
-people, living life in peace` and store them under the `/tmp/imagine`
-directory. Please skip this step if you have designed the images for
-your collection already.
+Bu, `imagine all the
+people, living life in peace` girişi ile `5` görüntü oluşturacak ve bunları `/tmp/imagine` dizini altında saklayacaktır. Eğer koleksiyonunuz için görüntüleri zaten tasarladıysanız, bu adımı atlayabilirsiniz.
 
-Assuming that the images are ready under the `/tmp/imagine`
-directory. Next step is to create a metadata file in YAML format for
-your collection. Here is an example of an YAML file called `imagine.yaml`:
+Görüntülerin `/tmp/imagine` dizini altında hazır olduğunu varsayalım. Bir sonraki adım, koleksiyonunuz için YAML formatında bir metaveri dosyası oluşturmaktır. İşte `imagine.yaml` adlı bir YAML dosyası örneği:
+
 
 ```bash
 > ls /tmp/imagine
@@ -166,8 +136,7 @@ your collection. Here is an example of an YAML file called `imagine.yaml`:
 4.jpg:
 ```
 
-When you are happy about the images and metadata of your collection,
-run the following command to upload the images and metadata to IPFS:
+Görüntülerinizden ve koleksiyonunuzun metaverisinden memnun olduğunuzda, aşağıdaki komutu kullanarak görüntüleri ve metaveriyi IPFS'e yükleyin:
 
 ```bash
 > export IPFS_INFURA_PROJECT_ID=xxxx-xxxx-xxxx-xxxx
@@ -177,15 +146,11 @@ NFTBaseUri:
 https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/
 ```
 
-The `NFTBaseUri` points to an IPFS directory where `5` documents are
-named and stored based on their sequence in the `imagine.yaml` file:
+`NFTBaseUri`, `imagine.yaml` dosyasındaki sırasına göre adlandırılmış ve depolanmış `5` belgeye işaret eden bir IPFS dizinini gösterir:
 
 <img src={require("./media/ipfs-imagine-directory.png").default} alt="IPFS Imagine Directory"/>
 
-Each of the document points to the metadata of an NFT and can be
-referenced by their
-indexes. E.g. `https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/2`
-points to the metadata of the 3rd NFT:
+Her belge, bir NFT'nin metaverisine işaret eder ve dizin içindeki sırasına göre referanslanabilir. Örneğin `https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/2`, 3. NFT'nin metaverisine işaret eder:
 
 ```bash
 > curl https://ipfs.io/ipfs/QmaTXEGJQe5ZLg9TVEBJEpz3dwbzG9m7b6NWVogxnYgnbJ/2 | jq
@@ -205,8 +170,7 @@ points to the metadata of the 3rd NFT:
 }
 ```
 
-You can validate if a `NFTBaseUri` is valid using the following
-command:
+Bir `NFTBaseUri`'nin geçerli olup olmadığını doğrulayabilirsiniz:
 
 ```bash
 > npx @alephium/cli@latest nft validate-enumerable-nft-base-uri --nftBaseUri https://ipfs.io/ipfs/QmbLevU4kVnQCCoYt23mKhdowJ7TnNNT9dRyVw9AyQDJty/ --maxSupply 5
@@ -220,47 +184,32 @@ Token Metadataz:
 ]
 ```
 
-After `NFTBaseUri` is created, we are ready to launch the `Flow` on `AlephiumNFT` Marketplace:
+`NFTBaseUri` oluşturulduktan sonra, `Akış`'ı `AlephiumNFT` Pazarı'nda başlatmaya hazırız:
 
-<img src={require("./media/create-flow-page.png").default} alt="Create FLow Page"/>
+<img src={require("./media/create-flow-page.png").default} alt="Flow Sayfası Oluştur" />
 
-As illustrated above, you can put in the collection image, the max
-batch mint size, the mint price, the name and description of the
-collection, and most importantly the NFT base URI that we created in
-the last step. After you click the `Create NFT Collection` button and
-sign the transaction, you will successfully create your first `Flow`,
-share the link and start to launch the public sale of your NFT
-collection!
+Yukarıdaki gibi, koleksiyon görüntüsünü, maksimum toplu basım boyutunu, basım fiyatını, koleksiyonun adını ve açıklamasını, ve en önemlisi, bir önceki adımda oluşturduğumuz NFT taban URI'yi girebilirsiniz. `NFT Koleksiyonu Oluştur` düğmesine tıkladıktan ve işlemi imzaladıktan sonra, ilk `Flow`'unuzu başarıyla oluşturacak ve bağlantıyı paylaşacak ve NFT koleksiyonunuzun halka açık satışını başlatacaksınız!
 
-<img src={require("./media/flow-page.png").default} alt="FLow Page"/>
+<img src={require("./media/flow-page.png").default} alt="Flow Sayfası"/>
 
-### Wallet Support
+### Cüzdan Desteği
 
-Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
-Wallet](/wallet/extension-wallet/overview) have native support for
-non-fungible tokens.
+Hem [Masaüstü Cüzdanı](/wallet/desktop-wallet/overview) hem de [Uzantı
+Cüzdanı](/wallet/extension-wallet/overview) değiştirilebilir olmayan jetonlar için doğal destek sağlar.
 
-Following is an example of displaying and transfering a NFT in the
-`Imagine Collection` in the extension wallet:
+Aşağıda, uzantı cüzdanında `Imagine Collection` içinde bir NFT'nin görüntülenmesi ve transfer edilmesi örneği bulunmaktadır:
 
 <img
-src={require("./media/show-nft-collection-extension-wallet.png").default} alt="Show collection" width="250"/>
+src={require("./media/show-nft-collection-extension-wallet.png").default} alt="Koleksiyonu Göster" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-nft-collection-extension-wallet.png").default} alt="Transfer NFT" width="250" />
+<img src={require("./media/transfer-nft-collection-extension-wallet.png").default} alt="NFT Transferi" width="250" />
 
-### Token List
+### Jeton Listesi
 
-It is not too difficult to fake other NFT collections and scam
-users. [Token list](https://github.com/alephium/token-list) allows
-well known NFT collections in the Alephium ecosystem to be
-whitelisted, so that dApps and wallets can warn users for unverified
-NFT collections. Here is how extension wallet displays a NFT
-collection before and after it is added into the token list.
+Diğer NFT koleksiyonlarını taklit etmek ve kullanıcıları dolandırmak çok zor değildir. [Jeton listesi](https://github.com/alephium/token-list), Alephium ekosistemindeki tanınmış NFT koleksiyonlarını beyaz listeye alır, böylece dApp'ler ve cüzdanlar kullanıcıları doğrulanmamış NFT koleksiyonları konusunda uyarabilir. İşte uzantı cüzdanının, bir NFT koleksiyonunu jeton listesine eklenmeden önce ve sonra nasıl gösterdiği:
 
-<img src={require("./media/unverified-nft-collection.png").default} alt="Unverified" width="250"/>
+<img src={require("./media/unverified-nft-collection.png").default} alt="Doğrulanmamış" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/verified-nft-collection.png").default} alt="Verified" width="250"/>
+<img src={require("./media/verified-nft-collection.png").default} alt="Doğrulanmış" width="250"/>
 
-Currently, a pull request is needed to add the NFT collection to token
-list.
-
+Şu anda, NFT koleksiyonunu jeton listesine eklemek için bir pull isteği gereklidir.

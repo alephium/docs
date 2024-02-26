@@ -1,51 +1,29 @@
 ---
 sidebar_position: 10
-title: Overview
-sidebar_label: Overview
+title: Genel Bakış
+sidebar_label: Genel Bakış
 ---
 
-Tokens are first class citizens in Alephium. Just like the native
-token ALPH, all tokens on Alephium are managed by UTXOs, which are
-owned directly by addresses.
+Alephium'da jetonlar birinci sınıf vatandaşlardır. Yerel jeton ALPH gibi, Alephium'daki tüm jetonlar, adresler tarafından doğrudan sahip olunan UTXO'lar tarafından yönetilir.
 
-This design has a few advantages compared to other blockchains:
+Bu tasarım, diğer blok zincirlerine göre birkaç avantaja sahiptir:
 
-- Token transfers among users only require UTXOs, which is battle
-  tested for its security in managing assets.
-- Easier for wallets and dApps to discover users' tokens, including
-  both fungible and non-fungible tokens.
-- When smart contracts need to transfer tokens, no extra approval
-  transactions are required since the approval is implicit in the
-  UTXO model. Alephium leverages its unique [Asset Permission
-  System](/ralph/asset-permission-system) to ensure that tokens
-   are handled securely by the smart contracts.
-- Token transfer is very scalable because they can take full
-  advantage of Alephium's [Sharding](/glossary.md#sharding) design. 
+- Kullanıcılar arasındaki jeton transferleri yalnızca UTXO'ları gerektirir ve varlıkları yönetme güvenliği açısından test edilmiştir.
+- Cüzdanlar ve dApp'lerin, hem değiştirilebilir hem de değiştirilemez jetonlar dahil, kullanıcıların jetonlarını keşfetmesi daha kolaydır.
+- Akıllı sözleşmelerin jeton transferi yapması gerektiğinde, UTXO modelinde izin artık gerektirilmediği için ek bir onay işlemi gereksizdir. Alephium, jetonların akıllı sözleşmeler tarafından güvenli bir şekilde ele alınmasını sağlamak için benzersiz [Varlık İzin Sistemi](/ralph/asset-permission-system)'ni kullanır.
+- Jeton transferi çok ölçeklenebilirdir çünkü Alephium'un [Parçalanma](/glossary.md#sharding) tasarımından tam olarak faydalanabilirler.
 
-To make it easier to work with tokens in the Alephium ecosystem:
+Alephium ekosisteminde jetonlarla çalışmayı kolaylaştırmak için:
 
-- [Token
-  standards](https://github.com/alephium/alephium-web3/tree/master/packages/web3/std)
-  are introduced in the SDK to define standard interfaces for both
-  fungible and non-fungible tokens
-- Utilities functions are defined in the SDK to ease common tasks
-  for dApps and wallets when interacting with the tokens, such as
-  guessing token types and the extraction of token metadata.
-- [Token list](https://github.com/alephium/token-list) is used
-  establish a source of trust for well known fungible tokens and NFT
-  collections.
-- Native support for both fungible and non-fungible tokens in wallets
-  and explorer.
-- Tools to help launch [Opensea
-  Drop](https://docs.opensea.io/docs/drops-on-opensea) style NFT
-  public sale, called `Flow`.
+- [Jeton
+  standartları](https://github.com/alephium/alephium-web3/tree/master/packages/web3/std)
+  SDK'da tanıtılmıştır, bu standartlar, hem değiştirilebilir hem de değiştirilemez jetonlar için standart arabirimler tanımlar.
+- SDK'da, dApp'ler ve cüzdanlar için yaygın görevleri kolaylaştırmak için yardımcı program işlevleri tanımlanmıştır, örneğin jeton türlerini tahmin etme ve jeton metaverisinin çıkarılması.
+- [Jeton listesi](https://github.com/alephium/token-list), tanınmış değiştirilebilir jetonlar ve NFT koleksiyonları için güven kaynağı oluşturmak için kullanılır.
+- Cüzdanlarda ve gezginlerde hem değiştirilebilir hem de değiştirilemez jetonlar için doğal destek.
+- [Opensea
+  Drop](https://docs.opensea.io/docs/drops-on-opensea) tarzında NFT halka açık satışını başlatmaya yardımcı olan `Flow` adı verilen araçlar.
 
-In the [Fungible Tokens](/tokens/fungible-tokens) page, you will learn
-about the fungible token standard, how to issue fungible tokens, how
-to fetch token metadata and how to transfer fungible tokens in
-wallets, etc.
+[Fungible Tokens](/tokens/fungible-tokens) sayfasında, değiştirilebilir jeton standartını, değiştirilebilir jetonların nasıl ihraç edileceğini, jeton metaverisinin nasıl alınacağını ve cüzdanlarda değiştirilebilir jetonların nasıl transfer edileceğini öğreneceksiniz.
 
-In the [Non-fungible Tokens](/tokens/non-fungible-tokens) page, you will learn about
-the non-fungible token standard, how to create your own NFT
-collections and launch your first NFT public sale campaign called
-`Flows` in the [NFT marketplace](https://testnet.nft.alephium.org/).
+[Değiştirilebilir Olmayan Jetonlar](/tokens/non-fungible-tokens) sayfasında, değiştirilebilir olmayan jeton standartını, kendi NFT koleksiyonlarınızı nasıl oluşturacağınızı ve ilk NFT halka açık satış kampanyanızı `Flows` adı verilen [NFT pazarında](https://testnet.nft.alephium.org/) nasıl başlatacağınızı öğreneceksiniz.
