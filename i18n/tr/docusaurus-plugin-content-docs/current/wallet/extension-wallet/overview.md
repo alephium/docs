@@ -1,20 +1,11 @@
 ---
 sidebar_position: 10
-title: Overview
-sidebar_label: Overview
+title: Genel Bakış
+sidebar_label: Genel Bakış
 ---
 
-Alephium extension wallet helps users to store and manage their assets
-such as the native `ALPH` token, other fungible tokens as well as NFTs
-on the Alephium blockchain.  It also enables dApps to securely
-interact with the wallets, allowing dApp users to sign transactions,
-interact with the smart contracts, etc right from the browser.
+Alephium uzantı cüzdanı, kullanıcıların varlıklarını (yerel `ALPH` jetonu, diğer değiştirilebilir jetonlar ve NFT'ler gibi) Alephium blok zincirinde depolamalarına ve yönetmelerine yardımcı olur. Ayrıca, dApp'lerin güvenli bir şekilde cüzdanlarla etkileşimde bulunmasını sağlar, böylece dApp kullanıcıları tarayıcıdan doğrudan işlem imzalayabilir, akıllı sözleşmelerle etkileşimde bulunabilir, vb.
 
-<img src={require("./media/landing.png").default} alt="Execute Transction Script" />
+<img src={require("./media/landing.png").default} alt="İşlem Komutunu Yürüt" />
 
-In the [Getting Started](/wallet/extension-wallet/getting-started)
-page, you can find out the installation guide as well as some common
-usage scenarios for the extension wallet such as managing accounts,
-transferring tokens, displaying NFTs, etc. For more information on
-dApps integration, please check out the
-[dApps Integration](/wallet/extension-wallet/dapp) page.
+[Başlarken](/wallet/extension-wallet/getting-started) sayfasında, uzantı cüzdanının kurulum kılavuzunu ve hesap yönetimi, jeton transferi, NFT'lerin görüntülenmesi gibi yaygın kullanım senaryolarını bulabilirsiniz. Daha fazla bilgi için dApp entegrasyonunu içeren [dApp Entegrasyonu](/wallet/extension-wallet/dapp) sayfasını inceleyebilirsiniz.

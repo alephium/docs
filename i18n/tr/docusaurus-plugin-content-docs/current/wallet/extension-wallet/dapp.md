@@ -1,29 +1,26 @@
 ---
 sidebar_position: 40
-title: Extension Wallet for dApps
-sidebar_label: dApp integration
+title: dApp'ler için Uzantı Cüzdanı
+sidebar_label: dApp entegrasyonu
 ---
 
-The Alephium extension wallet injects a global object
-`window.alephiumProviders.alephium` into the dApps that the user
-interacts with. dApps can use this object to authenticate the user,
-request users account and communicate with the Alephium blockchain
-such as fetching user balance, contract state and submitting
-transactions, etc.
+Alephium uzantı cüzdanı, kullanıcının etkileşimde bulunduğu dApp'lere
+`window.alephiumProviders.alephium` global bir nesne enjekte eder. dApp'ler,
+bu nesneyi kullanarak kullanıcıyı doğrulayabilir, kullanıcı hesabını
+isteyebilir ve Alephium blockchain ile iletişim kurabilir, örneğin kullanıcı
+bakiyesini alabilir, sözleşme durumunu alabilir ve işlemler gönderebilir, vb.
 
-### Basic Setup
+### Temel Kurulum
 
-To detect the `window.alephiumProviders.alephium` object, we recommand
-to use the
+`window.alephiumProviders.alephium` nesnesini algılamak için
 [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
-package.
+paketini kullanmanızı öneririz.
 
 ```
 npm install --save @alephium/get-extension-wallet
 ```
 
-The following code shows how to connect to the extension wallet using
-pure typescript:
+Aşağıdaki kod, TypeScript kullanarak uzantı cüzdanına nasıl bağlanılacağını göstermektedir:
 
 ```ts
 import { getDefaultAlephiumWallet } from "@alephium/get-extension-wallet"
@@ -46,26 +43,23 @@ async function tryConnect() {
 }
 ```
 
-Users will be prompted to connect to the current dApp when
-`windowAlephium?.enable()` method is called:
+`windowAlephium?.enable()` yöntemi çağrıldığında, kullanıcılardan mevcut dApp'e bağlanmaları istenecektir:
 
 <img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="250" />
 
-After user clicks the `Connect` button, dApp is connected with users
-extension wallet.
+Kullanıcı "Bağlan" düğmesine tıkladıktan sonra, dApp kullanıcının uzantı cüzdanıyla bağlantı kurar.
 
 ### Web3 React
 
-For dApps built with react,
+React ile oluşturulan dApp'ler için,
 [@alephium/web3-react](https://www.npmjs.com/package/@alephium/web3-react)
-offers an easier way to authenticate with dApps using wallets,
-including extension wallet.
+uzantı cüzdanı dahil olmak üzere cüzdanları kullanarak dApp'lere kimlik doğrulaması yapmanın daha kolay bir yolunu sunar.
 
 ```
 npm install --save @alephium/web3-react
 ```
 
-A minimal example is shown below:
+Aşağıda basit bir örnek verilmiştir:
 
 ```typescript
 const App = () => {
@@ -77,25 +71,19 @@ const App = () => {
   );
 ```
 
-This will place a button in your dApp with the `retro` built-in
-theme. Once user clicks the button, a pop-up window will show up to
-ask user to select a wallet:
+Bu, dApp'inize `retro` dahili temalı bir düğme yerleştirecektir. Kullanıcı düğmeye tıkladığında, bir açılır pencere görüntülenir ve kullanıcıdan bir cüzdan seçmesi istenir:
 
 <img src={require("./media/connect-dapp-2.png").default} alt="Connect dApp Web3 React" />
 
-If user selects `Extension Wallet`, user will again be prompted to
-connect to the current dApp. After user clicks the `Connect` button,
-dApp is connected with users extension wallet.
+Kullanıcı `Extension Wallet` seçerse, kullanıcı tekrar mevcut dApp'e bağlanması için uyarılır. Kullanıcı `Bağlan` düğmesine tıkladıktan sonra, dApp kullanıcının uzantı cüzdanıyla bağlantı kurulur.
 
-Please refer to the
-[nextjs-template](https://github.com/alephium/nextjs-template) repo
-for a working and more complete example.
+Daha çalışan ve daha kapsamlı bir örnek için
+[nextjs-template](https://github.com/alephium/nextjs-template) deposuna başvurun.
 
-### Sign Transactions
+### İşlemleri İmzalama
 
-`windowAlephium` object implements the
-[InteractiveSignerProvider](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/signer/signer.ts#L80),
-which exposes the following methods for transaction signing:
+`windowAlephium` nesnesi, işlem imzalamak için aşağıdaki yöntemleri sunan
+[InteractiveSignerProvider](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/signer/signer.ts#L80)'ı uygular:
 
 ```ts
 abstract signAndSubmitTransferTx(params: SignTransferTxParams): Promise<SignTransferTxResult>
@@ -103,20 +91,15 @@ abstract signAndSubmitDeployContractTx(params: SignDeployContractTxParams): Prom
 abstract signAndSubmitExecuteScriptTx(params: SignExecuteScriptTxParams): Promise<SignExecuteScriptTxResult>
 abstract signAndSubmitUnsignedTx(params: SignUnsignedTxParams): Promise<SignUnsignedTxResult>
 abstract signUnsignedTx(params: SignUnsignedTxParams): Promise<SignUnsignedTxResult>
-// The message will be prefixed with 'Alephium Signed Message: ' before signing
-// so that the resulted signature cannot be reused for building transactions.
+// İmzalanmadan önce mesaj 'Alephium İmzalı Mesaj: ' ile öne eklenir
+// böylece elde edilen imza, işlem oluşturmak için yeniden kullanılamaz.
 abstract signMessage(params: SignMessageParams): Promise<SignMessageResult>
 ```
 
-When any of these method is executed, extension wallet will provide
-neccessary information depending on the type of the transaction and
-prompt user for signature. 
+Herhangi bir bu yöntem çalıştırıldığında, uzantı cüzdanı işlem türüne bağlı olarak gerekli bilgileri sağlayacak ve kullanıcıdan imza isteyecektir.
 
-The following is an example of a transaction for token transfer: user
-is transferring `2` `TokenFaucet` token from `Salary` account to
-`Saving` account.
+Aşağıda, bir token transferi için bir işlem örneği verilmiştir: Kullanıcı, `Salary` hesabından `Saving` hesabına `2` `TokenFaucet` token transfer ediyor.
 
 <img src={require("./media/transaction-signing-transfer.png").default} alt="Transaction Signing Transfer" width="250" />
 
-After user clicks the `Sign` button, the transction will be signed and
-submitted to the Alephium blockchain by the extension wallet.
+Kullanıcı `İmzala` düğmesine tıkladıktan sonra, işlem uzantı cüzdanı tarafından imzalanacak ve Alephium blockchain'e gönderilecektir.

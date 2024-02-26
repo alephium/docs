@@ -1,137 +1,108 @@
 ---
 sidebar_position: 20
-title: Getting Started
-sidebar_label: Getting started
+title: Başlarken
+sidebar_label: Başlarken
 ---
 
-### Installation
+### Kurulum
 
-Alephium extension wallet is available for both
-[Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
-and
-[Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/).
+Alephium uzantı cüzdanı hem [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) hem de [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/) için mevcuttur.
 
-### Create Wallet
+### Cüzdan Oluşturma
 
-<img src={require("./media/new-wallet-1.png").default} alt="Create wallet"/>
+<img src={require("./media/new-wallet-1.png").default} alt="Cüzdan oluşturma"/>
 
-1. Click the Alephium extension wallet icon on your browser
-2. On the landing page, click the `New wallet` button
-3. Enter the password to protect your wallet
-4. Done! Your wallet is created.
+1. Tarayıcınızdaki Alephium uzantı cüzdanı simgesine tıklayın.
+2. Ana sayfada, `Yeni cüzdan` düğmesine tıklayın.
+3. Cüzdanınızı korumak için şifreyi girin.
+4. Tamamlandı! Cüzdanınız oluşturuldu.
 
-Now your wallet does not have any assets. In the next step, let's
-transfer some ALPH to this wallet.
+Şimdi cüzdanınızda herhangi bir varlık bulunmamaktadır. Bir sonraki adımda, bu cüzdana bazı ALPH tokenları transfer edelim.
 
-### Transfer Assets
+### Varlık Transferi
 
 #### ALPH Token Faucet
 
-For `devnet` and `testnet`, extension wallet has a `ALPH` token faucet
-built-in. You can recieve `1000` `ALPH` for `devnet` and `12` `ALPH` for
-`testnet` respectively everytime.
+`devnet` ve `testnet` için, uzantı cüzdanında yerleşik bir `ALPH` token faucet bulunur. Her seferinde `devnet` için `1000` `ALPH` ve `testnet` için `12` `ALPH` alabilirsiniz.
 
-<img src={require("./media/token-faucet-1.png").default} alt="Receive Fund" width="250"/>
+<img src={require("./media/token-faucet-1.png").default} alt="Fon Al" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/token-faucet-2.png").default} alt="Token Faucet" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/token-faucet-3.png").default} alt="Token Received" width="250" />
+<img src={require("./media/token-faucet-3.png").default} alt="Token Alındı" width="250" />
 
-#### Transfer ALPH
+#### ALPH Transferi
 
-You can also transfer `ALPH` to your account from another acount:
+Başka bir hesaptan `ALPH` transferi de yapabilirsiniz:
 
-<img src={require("./media/transfer-alph-1.png").default} alt="Overview page" width="250"/>
+<img src={require("./media/transfer-alph-1.png").default} alt="Genel Bakış" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alph-2.png").default} alt="Transfer page" width="250" />
+<img src={require("./media/transfer-alph-2.png").default} alt="Transfer Sayfası" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alph-3.png").default} alt="Review transfer" width="250" />
+<img src={require("./media/transfer-alph-3.png").default} alt="Transferi İncele" width="250" />
 
-After signing the transfer transaction, you can monitor the
-transaction state from the `Activity` tab. As soon as the transaction
-is confirmed, the transferred `ALPH` amount is reflected on the
-receiving account.
+Transfer işlemini imzaladıktan sonra, işlemin durumunu `Aktivite` sekmesinden takip edebilirsiniz. İşlem onaylandığında, transfer edilen `ALPH` miktarı alıcı hesapta yansıtılır.
 
-<img src={require("./media/received-alph-1.png").default} alt="Pending Tx" width="250"/>
+<img src={require("./media/received-alph-1.png").default} alt="Bekleyen İşlem" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/received-alph-2.png").default} alt="Confirmed Tx" width="250" />
+<img src={require("./media/received-alph-2.png").default} alt="Onaylanmış İşlem" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/received-alph-3.png").default} alt="ALPH Received" width="250" />
+<img src={require("./media/received-alph-3.png").default} alt="ALPH Alındı" width="250" />
 
-That's it! You have successfully transfered some `ALPH`.
+Bu kadar! Başarıyla bir miktar `ALPH` transfer ettiniz.
 
-#### Transfer Tokens
+#### Token Transferi
 
-The process of transferring other fungible tokens is basically the
-same as transferring the `ALPH` token:
+Diğer değiştirilebilir tokenların transfer süreci, `ALPH` tokenını transfer etme süreciyle temelde aynıdır:
 
-<img src={require("./media/transfer-alphpaca-1.png").default} alt="Transfer Token 1" width="250"/>
+<img src={require("./media/transfer-alphpaca-1.png").default} alt="Token Transferi 1" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alphpaca-2.png").default} alt="Transfer Token 2" width="250" />
+<img src={require("./media/transfer-alphpaca-2.png").default} alt="Token Transferi 2" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alphpaca-3.png").default} alt="Transfer Token 3" width="250" />
+<img src={require("./media/transfer-alphpaca-3.png").default} alt="Token Transferi 3" width="250" />
 
-Please refer to the [Fungible Tokens](/tokens/fungible-tokens) guide
-for more information about fungible tokens.
+Daha fazla bilgi için lütfen [Değiştirilebilir Tokenlar](/tokens/fungible-tokens) rehberine başvurun.
 
-### NFT Support
+### NFT Desteği
 
-Alephium extension wallet also support displaying and transferring NFTs, as shown below:
+Alephium uzantı cüzdanı ayrıca NFT'leri görüntüleme ve transfer etme desteği sunar, aşağıda gösterildiği gibi:
 
-<img src={require("./media/display-nft-collections.png").default} alt="Display Collections" width="250"/>
+<img src={require("./media/display-nft-collections.png").default} alt="Koleksiyonları Görüntüle" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/display-nft-collection.png").default} alt="Display Collection" width="250" />
+<img src={require("./media/display-nft-collection.png").default} alt="Koleksiyonu Görüntüle" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-nft.png").default} alt="Transfer NFT" width="250" />
+<img src={require("./media/transfer-nft.png").default} alt="NFT Transferi" width="250" />
 
-Please refer to the [Non-fungible Tokens
-(NFTs)](/tokens/non-fungible-tokens) guide for more information about
-NFTs.
+Daha fazla bilgi için lütfen [Değiştirilemez Tokenlar (NFT'ler)](/tokens/non-fungible-tokens) rehberine başvurun.
 
-### Manage Accounts
+### Hesap Yönetimi
 
-Account in the Alephium extension wallet represents a digital
-container that consists of a public address and its corresponding
-private key, allowing user to receive, store and transfer assets on
-the Alephium blockchain.
+Alephium uzantı cüzdanındaki hesap, bir genel adres ve buna karşılık gelen özel anahtar içeren bir dijital konteyneri temsil eder ve kullanıcının Alephium blok zincirinde varlık almasına, saklamasına ve transfer etmesine olanak tanır.
 
-Alephium extension wallet allows users to manage multiple accounts at
-the same time. For example, Alice can have one account for `Salary`,
-one account for `Saving` and another account for `Trip 2023`. 
+Alephium uzantı cüzdanı, kullanıcıların aynı anda birden fazla hesabı yönetmelerine olanak tanır. Örneğin, Alice `Maaş`, `Tasarruf` ve `2023 Tatili` için ayrı ayrı birer hesap sahibi olabilir.
 
-#### Create Account
-To add an extra account, follow the steps below:
+#### Hesap Oluşturma
+Ek bir hesap eklemek için aşağıdaki adımları izleyin:
 
-<img src={require("./media/manage-accounts-1.png").default} alt="Overview" width="250"/>
+<img src={require("./media/manage-accounts-1.png").default} alt="Genel Bakış" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/manage-accounts-2.png").default} alt="Account List" width="250"/>
+<img src={require("./media/manage-accounts-2.png").default} alt="Hesap Listesi" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/manage-accounts-3.png").default} alt="Add Account" width="250"/>
+<img src={require("./media/manage-accounts-3.png").default} alt="Hesap Ekle" width="250"/>
 
-There are couple of options that we can choose before creating an
-account:
+Hesap oluşturmadan önce seçebileceğimiz birkaç seçenek bulunur:
 
-- `Group`: Available options are `0`, `1`, `2` or `3`. If `any` is
-  chosen, the group where the created account belongs to will be
-  random
-- `Sign`: Available options are `default` and `schnorr`. `default`
-  represents the default Alephium signature type used to e.g. sign
-  Alephium transactoins, whereas `schnorr` represents the `BIP340`
-  Schnorr signature type which is useful when interacting with
-  protocols like [Nostr](https://nostr.com/)
-- `Account Type`: Available options are `Alephium Account` or a
-  `Ledger Account`. For more details about the Ledger integration
-  please refer to the [Ledger](/wallet/ledger) guide.
+- `Grup`: Mevcut seçenekler `0`, `1`, `2` veya `3`'tür. `herhangi` seçilirse, oluşturulan hesabın ait olduğu grup rastgele olacaktır.
+- `İmza`: Mevcut seçenekler `varsayılan` ve `schnorr`dur. `varsayılan`, Alephium işlemlerini imzalamak için kullanılan varsayılan Alephium imza türünü temsil ederken, `schnorr`, [Nostr](https://nostr.com/) gibi protokollerle etkileşimde bulunurken kullanışlı olan `BIP340` Schnorr imza türünü temsil eder.
+- `Hesap Türü`: Mevcut seçenekler `Alephium Hesabı` veya `Ledger Hesabı`'dır. Ledger entegrasyonu hakkında daha fazla bilgi için lütfen [Ledger](/wallet/ledger) rehberine başvurun.
 
-After choosing the desired options, a new account will be created and
-ready to be used.
+İstenen seçenekleri seçtikten sonra, yeni bir hesap oluşturulacak ve kullanıma hazır olacaktır.
 
-#### Edit Account
-You can also edit the name of an existing account, export its private
-key, delete an account, etc:
+#### Hesap Düzenleme
+Varolan bir hesabın adını düzenleyebilir, özel anahtarını dışa aktarabilir, bir hesabı silebilir vb.:
 
-<img src={require("./media/manage-accounts-4.png").default} alt="Account List" width="250"/>
+<img src={require("./media/manage-accounts-4.png").default} alt="Hesap Listesi" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/manage-accounts-5.png").default} alt="Edit Account" width="250"/>
+<img src={require("./media/manage-accounts-5.png").default} alt="Hesap Düzenleme" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/manage-accounts-6.png").default} alt="Export Private Key" width="250"/>
+<img src={require("./media/manage-accounts-6.png").default} alt="Özel Anahtarı Dışa Aktar" width="250"/>

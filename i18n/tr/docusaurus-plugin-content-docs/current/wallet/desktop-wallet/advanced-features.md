@@ -1,66 +1,66 @@
 ---
 sidebar_position: 40
-title: Advanced Features
-sidebar_label: Advanced Features
+title: Gelişmiş Özellikler
+sidebar_label: Gelişmiş Özellikler
 ---
 
-# Advanced Features
+# Gelişmiş Özellikler
 
-## 1. UTXO consolidation
+## 1. UTXO birleştirme
 
 :::info
 
-Due to the nature of UTXO, every time a transaction is made, a couple of new Unspent Transaction Outputs are created, each containing various amounts of ALPH. If these UTXOs aren't consolidated every now and then, a UTXO can reach a point where it becomes so-called "dust". Meaning that if the amount in a UTXO is smaller than the cost of GAS to send the ALPHs it contains, these ALPHs cannot be moved anymore.
+UTXO'nun doğası gereği, her bir işlem yapıldığında, çeşitli miktarda ALPH içeren yeni Kullanılmamış İşlem Çıktıları (UTXO) oluşturulur. Bu UTXO'lar zaman zaman birleştirilmezse, bir UTXO, "toz" olarak adlandırılan bir noktaya ulaşabilir. Bir UTXO'daki miktar, içerdiği ALPH'leri göndermek için gereken GAZ maliyetinden daha küçükse, bu ALPH'ler artık taşınamaz.
 
-To make sure this doesn't happen, the wallet allows you to easily consolidate your UTXOs with the click of a button.
+Bunu önlemek için, cüzdan size bir düğmeye tıklayarak UTXO'larınızı kolayca birleştirme imkanı sunar.
 
 :::
 
-In the `Addresses` tab, click on the `Advanced operations` icon and choose `Consolidate UTXOs`.
+`Adresler` sekmesinde, `Gelişmiş işlemler` simgesine tıklayın ve `UTXO'ları birleştir` seçeneğini seçin.
 
-<img src={require("./media/af1.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
+<img src={require("./media/af1.png").default} alt="UTXO birleştirme" width="auto" style={{ height: '200px' }} />
 
-<img src={require("./media/af4.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
+<img src={require("./media/af4.png").default} alt="UTXO birleştirme" width="auto" style={{ height: '200px' }} />
 
-Select the address from which you want to consolidate the UTXOs and select the destination address (it can be the same address). Click on `Consolidate` and your UTXOs will be consolidated.
+UTXO'ları birleştirmek istediğiniz adresi seçin ve hedef adresi seçin (aynı adres olabilir). `Birleştir` düğmesine tıklayın ve UTXO'larınız birleştirilecektir.
 
-<img src={require("./media/af2.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
+<img src={require("./media/af2.png").default} alt="Ana sayfa" width="auto" style={{ height: '200px' }} />
 
-## 2. Passphrase (ADVANCED SECURITY FEATURE)
+## 2. Parola (GELİŞMİŞ GÜVENLİK ÖZELLİĞİ)
 
-Introduced in version 1.3.0
+Sürüm 1.3.0'da tanıtıldı
 
 :::caution
-Please, read the following documentation and this [article](https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59) before deciding to use this feature.
+Bu özelliği kullanmadan önce lütfen aşağıdaki belgelendirmeyi ve bu [makaleyi](https://medium.com/@alephium/bip39-passphrase-implementation-f87adecd6f59) okuyun.
 :::
 
-### 1. Important Takeaways
+### 1. Önemli Noktalar
 
-- The Passphrase is an advanced security feature that adds an additional word that you choose to your existing Secret Recovery Phrase.
-- Using a Passphrase will cause an entirely new wallet to be created which cannot be accessed via the Secret Recovery Phrase alone.
-- The desktop wallet password is different from the Passphrase. The password is only used on your computer to encrypt and store the Secret Recovery Phrase. The Passphrase is an additional word to that Secret Recovery Phrase and is not stored in the wallet.
-- Apart from adding another layer of security, the Passphrase grants you plausible deniability when under duress.
-- **If you decide to use a Passphrase, it is vital to store it and back it up securely in a different physical location than the Secret Recovery Phrase. You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet. **
+- Parola, mevcut Gizli Kurtarma Cümlesi'ne eklediğiniz bir ek kelime olan gelişmiş bir güvenlik özelliğidir.
+- Bir Parola kullanmak, yalnızca Gizli Kurtarma Cümlesi ile erişilemeyen tamamen yeni bir cüzdan oluşturur.
+- Masaüstü cüzdan parolası, Gizli Kurtarma Cümlesini şifrelemek ve depolamak için yalnızca bilgisayarınızda kullanılır. Parola, cüzdanda depolanmaz ve Gizli Kurtarma Cümlesine ek bir kelimedir.
+- Başka bir güvenlik katmanı eklemenin yanı sıra, Parola size inkar edilebilirlik sağlar.
+- **Parola kullanmaya karar verirseniz, Parolayı Gizli Kurtarma Cümlesinden farklı bir fiziksel konumda güvenli bir şekilde depolamak ve yedeklemek çok önemlidir. Parolanızı mükemmel bir şekilde hatırlamalısınız. Tek bir karakteri değiştirmek (örneğin, küçük harften büyük harfe geçmek bile), tamamen yeni bir cüzdanın oluşturulmasına neden olur.**
 
-Assuming you have created a wallet using the desktop wallet app, you have a list of 24 words referred to as your Secret Recovery Phrase. This phrase can be used to restore your wallet and access your funds. If this 24-word Secret Recovery Phrase gets stolen, the attacker will be able to steal your funds. To enhance the security of our desktop wallet users and to prevent loss of funds due to theft of the 24-word Secret Recovery Phrase, we implemented the [BIP39 passphrase](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed) feature.
+Masaüstü cüzdan uygulamasını kullanarak bir cüzdan oluşturduğunuzu varsayalım. Bu cümle, cüzdanınızı geri yüklemek ve fonlarınıza erişmek için kullanılabilir. Bu 24 kelimelik Gizli Kurtarma Cümlesi çalınırsa, saldırgan fonlarınızı çalabilir. Masaüstü cüzdan kullanıcılarımızın güvenliğini artırmak ve 24 kelimelik Gizli Kurtarma Cümlesinin çalınması nedeniyle fon kaybını önlemek için [BIP39 parola](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki#from-mnemonic-to-seed) özelliğini uyguladık.
 
-The Passphrase is an additional optional 25th word that you are free to choose for yourself. It can be composed of any lower/upper-case character, number, and/or signs and be as long as you want.
+Parola, kendiniz için istediğiniz ek isteğe bağlı 25. kelime olup, herhangi bir küçük/büyük harf karakteri, sayı ve/veya işaret içerebilir ve istediğiniz kadar uzun olabilir.
 
-### 2. How to use a passphrase
+### 2. Parola nasıl kullanılır
 
 :::warning
 
-It is important to remember that any unique Passphrase will generate and give access to a completely new wallet. It is vital to store and back up the Passphrase securely in a different physical location than the Secret Recovery Phrase. **You must remember your Passphrase perfectly. Changing a single character (even, for example, from lower to upper-case), will result in the generation of a completely new wallet.**
+Herhangi bir benzersiz Parola'nın tamamen yeni bir cüzdan oluşturacağını ve erişim sağlayacağını hatırlamak önemlidir. Parolayı Gizli Kurtarma Cümlesinden farklı bir fiziksel konumda güvenli bir şekilde depolamak ve yedeklemek çok önemlidir. **Parolanızı mükemmel bir şekilde hatırlamalısınız. Tek bir karakteri değiştirmek (örneğin, küçük harften büyük harfe geçmek bile), tamamen yeni bir cüzdanın oluşturulmasına neden olur.**
 
 :::
 
-To use a Passphrase, simply tick the `Use optional passphrase (advanced)` and enter the optional Passphrase of your choice.
+Parola kullanmak için, sadece `İsteğe bağlı parolayı kullan (gelişmiş)` seçeneğini işaretleyin ve istediğiniz isteğe bağlı Parolayı girin.
 
-<img src={require("./media/af5.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
+<img src={require("./media/af5.png").default} alt="Ana sayfa" width="auto" style={{ height: '200px' }} />
 
-### 3. Limitations of Passphrase-enabled wallets
+### 3. Parola etkinleştirilmiş cüzdanların sınırlamaları
 
-1. You cannot (yet) use colored labels for your generated addresses.
-2. Any additionally generated addresses will need to be re-generated after every login.
+1. Oluşturulan adresler için renkli etiketleri kullanamazsınız (henüz).
+2. Her oturum açmadan sonra ek olarak oluşturulan adresler yeniden oluşturulmalıdır.
 
-This may change in the future.
+Bu gelecekte değişebilir.

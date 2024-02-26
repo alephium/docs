@@ -1,17 +1,17 @@
 ---
 sidebar_position: 30
-title: Configure a Mining Wallet
-sidebar_label: Configure a Mining Wallet
+title: Madencilik Cüzdanını Yapılandırma
+sidebar_label: Madencilik Cüzdanını Yapılandırma
 ---
 
-# Configure a Mining Wallet
+# Madencilik Cüzdanını Yapılandırma
 
-A mining wallet is slightly different and needs to have **one address per group**. Currently, Alephium is running 4 groups, meaning it is needed to have 4 addresses. The desktop wallet can generate them easily for you.
+Bir madencilik cüzdanı biraz farklıdır ve **her grup için bir adres** içermelidir. Şu anda Alephium 4 grup çalıştırıyor, bu da 4 adresin gerektiği anlamına geliyor. Masaüstü cüzdanı bunları kolayca oluşturabilir.
 
-To do this, simply unfold the `Advanced Settings` in the welcome screen at the end of the wallet creation process.
+Bunu yapmak için, cüzdan oluşturma sürecinin sonunda hoş geldin ekranında `Gelişmiş Ayarlar`'ı açmanız yeterlidir.
 
-<img src={require("./media/mw1.png").default} alt="Prompt to create a new wallet" width="auto" style={{ height: '200px' }} />
+<img src={require("./media/mw1.png").default} alt="Yeni bir cüzdan oluşturma uyarısı" width="auto" style={{ height: '200px' }} />
 
-Alternatively, you can create additional addresses manually after you log into your wallet by going to the `Addresses` tab, click on the `Advanced operations` icon and choose `Generate one address per group`
+Alternatif olarak, cüzdanınıza giriş yaptıktan sonra `Adresler` sekmesine giderek `Gelişmiş işlemler` simgesine tıklayın ve `Her grup için bir adres oluştur` seçeneğini seçebilirsiniz.
 
-<img src={require("./media/af4.png").default} alt="Advanced management section" width="auto" style={{ height: '200px' }} />
+<img src={require("./media/af4.png").default} alt="Gelişmiş yönetim bölümü" width="auto" style={{ height: '200px' }} />
