@@ -108,6 +108,17 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Discord: https://discord.com/invite/gvWSs84
 - Telegram: https://t.me/HeroMinersPool
 
+#### Kryptex Pool
+
+- Website: https://pool.kryptex.com/alph
+- How to mine ALPH: https://pool.kryptex.com/en/articles/how-to-mine-alephium-en
+- How to create wallet: https://pool.kryptex.com/en/articles/alephium-wallet-en
+- Calculator: https://www.kryptex.com/en/mining-calculator
+- Discord: https://discord.gg/ejyx9PkCW3
+- Telegram: https://t.me/kryptex_chat_en
+- Twitter: https://www.twitter.com/KryptexMining
+- Table of the best GPUs for mining ALPH: https://www.kryptex.com/best-gpus-for-mining
+
 #### Metapool (Community pool)
 
 - Website: https://www.metapool.tech
