@@ -8,6 +8,26 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
+## Token
+
+### Fetch fungible token metadata
+
+```typescript
+nodeProvider.fetchFungibleTokenMetaData(tokenId)
+```
+
+### Fetch NFT metadata
+
+```typescript
+nodeProvider.fetchNFTMetaData(nftTokenId)
+```
+
+### Fetch Collection metadata
+
+```typescript
+nodeProvider.fetchNFTCollectionMetaData(nftCollectionId)
+```
+
 ## Contract
 
 ### Fetch contract state
@@ -226,6 +246,16 @@ const confirmed = useMemo(() => {
 The `useTxStatus` hook also accepts an optional callback parameter of type `(txStatus: node.TxStatus) => Promise<any>`, it will be called after each transaction status query.
 
 ## Utils
+
+### Prettify token amounts
+
+The web3 SDK provides a few utility functions to convert between currency and numbers
+
+```Typescript
+convertToAttoAlph(1.23) // 1230000000000000000
+convertToAlph(1230000000000000000) // 1.23
+number256ToNumber(1230000000000000000, 18) // 1.23
+```
 
 ### Rate limit
 
