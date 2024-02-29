@@ -398,7 +398,7 @@ On Telegram, the following community-managed groups are available:
 
 ### What's new?
 
-Check Alephium's announcement channels on [Discord](https://discord.gg/AFXKJNVFKJ) and [Telegram](https://t.me/Alephium_Announcement).
+Check Alephium's announcement channels on [Discord](https://alephium.org/discord) and [Telegram](https://t.me/Alephium_Announcement).
 We also have developments update every week on [Discord](https://alephium.org/discord), [Reddit](https://www.reddit.com/r/Alephium) & [Twitter](https://twitter.com/alephium).
 
 ### Why is the project named Alephium?
