@@ -282,7 +282,7 @@ const nodeProvider = new NodeProvider('node-url', undefined, retryFetch)
 you can also use the `AlephiumConnectButton.Custom` to customize the style of the connect button:
 
 ```typescript
-import { AlephiumConnectButton } from '@alephium/web3'
+import { AlephiumConnectButton } from '@alephium/web3-react'
 
 function CustomWalletConnectButton = () => {
   return (
