@@ -238,10 +238,6 @@ const config = {
             from: "/wallet/desktop-wallet-guide",
             to: "/wallet/desktop-wallet/overview",
           },
-          {
-            from: "/wallet/Desktop-Wallet-Guide",
-            to: "/wallet/desktop-wallet/overview",
-          },
         ],
       },
     ],
