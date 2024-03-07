@@ -342,7 +342,19 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 Hackathon Website : https://alephium.org/hackathon/
 
+😢 Last hackathon updates 🧵 - https://vxtwitter.com/alephium/status/1762545171580019198
+
+✅ The hackathon itself is over. - https://vxtwitter.com/alephium/status/1762438825911935437?s=20
+
+🛠 Hackathon is officially over ✅ - https://vxtwitter.com/alephium/status/1762251948718248000?s=20
+
+Feb/24 ⚒ Hackathon latest updates 🔥 - https://vxtwitter.com/alephium/status/1761077244628480178
+
 Feb/24 ⚒️ Hackathon Week 2 is starting! - https://x.com/alephium/status/1759621786004865431?s=20
+
+Feb/24 🫶 Hackathon Projects Tip 🤝 - https://vxtwitter.com/alephium/status/1760690257497137609?s=20
+
+Feb/24 🏆 New Hackathon Partner 🚨 - https://vxtwitter.com/alephium/status/1759997300410331483?s=20
 
 Feb/24 💥 Week 1 recap 🪛  - https://x.com/alephium/status/1759633141646475452?s=20
 
@@ -357,6 +369,9 @@ Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1
 Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+
+💚 Builders highlight  #8 ⚙️ - ngu.money
+https://vxtwitter.com/alephium/status/1763586261707829394
 
 Builders Highlight #7 - alphpad 
 https://vxtwitter.com/alephium/status/1757398937441607906?s=20
@@ -381,6 +396,12 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #16 - Mikael
+https://medium.com/@alephium/446980141ee3
+
+Community Highlight #15 - Chris45
+https://medium.com/@alephium/community-highlight-15-yulius-aka-chris45-036ae41a8037
 
 Community Highlight #14 - AnimalManJan
 https://medium.com/@alephium/community-highlight-14-animalmanjan-da8fd051bc38
