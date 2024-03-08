@@ -118,3 +118,12 @@ In order to have the ALPH ERC-20 token show in your Metamask wallet you are goin
 - Select "Custom Token" 
 - Copy & Paste the contract into the first field. 
 - Press "Next" & then "Import"
+
+
+### 10. I got an error when redeeming from Ethereum to Alephium, even after waiting enough time. What to do?
+
+- On Metamask, click on the "..." on the top right
+- Click on "connected site"
+- You will see the bridge as one of the dApps connected. Click on it to disconnect.
+- Refresh the [redeem page](https://bridge.alephium.org/#/redeem)
+- Now select Ethereum as the source chain and reconnect your metamask wallet.
