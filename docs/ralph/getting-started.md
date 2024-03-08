@@ -98,13 +98,32 @@ let a2 = [0i; 3]
 let a3 = [#00, #11, #22, #33]
 ```
 
+### Struct
+
+In Ralph, Struct can have fields that are either mutable or immutable. However, to assign a value to a field, all of the field selectors must be mutable.
+E.g. in order to set `foo.x.y.z = 123`, all `foo`, `x`, `y`, and `z` must be mutable.
+
+```rust
+struct Foo { x: U256, mut y: U256 }
+struct Bar { z: U256, mut foo: U256 }
+
+// f.y = 3 won't work as f is immutable despite the field y being mutable
+let f = Foo { x: 1, y: 2 }
+
+// ff = f won't work as ff.x is immutable despite ff and ff.y being mutable
+let mut ff = Foo { x: 1, y: 2 }
+ff.y = 3 // This works as both ff and y are mutable
+
+// b.foo.y = 5 won't work as b is immutable
+let b = Bar { z: 4, foo: f }
+
+let mut bb = Bar { z: 5, foo: f }
+bb.foo.y = 6 // This works as bb, foo, and y are all mutable
+```
+
 ### Mapping
 
 Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like data structure to provide map-like functionality and mitigate the state bloat issue.
-
-### Struct
-
-Currently, Ralph does not support user-defined data types, but it will be supported in the future.
 
 ## Functions
 
