@@ -318,7 +318,7 @@ Contract Foo() {
   // Function `foo` uses approved assets, and it will transfer 1 ALPH and 1 token to the contract from the `caller`
   @using(preapprovedAssets = true)
   fn foo(caller: Address, tokenId: ByteVec) -> () {
-    transferAlphToSelf!(caller, 1 alph)
+    transferTokenToSelf!(caller, ALPH, 1)
     transferTokenToSelf!(caller, tokenId, 1)
   }
 
