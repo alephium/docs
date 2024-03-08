@@ -121,7 +121,7 @@ let mut bb = Bar { z: 5, foo: f }
 bb.foo.y = 6 // This works as bb, foo, and y are all mutable
 ```
 
-### Mapping
+### Mapping (WIP)
 
 Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like data structure to provide map-like functionality and mitigate the state bloat issue.
 
