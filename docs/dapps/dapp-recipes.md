@@ -16,6 +16,18 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 nodeProvider.fetchFungibleTokenMetaData(tokenId)
 ```
 
+### Fetch the circulating supply/total supply of a token
+
+The following code retrieves the total supply programmed by the token developer.
+Note that actual contract verification is necessary for trustworthiness.
+```typescript
+(await nodeProvider.fetchFungibleTokenMetaData(tokenId)).totalSupply
+```
+
+There's no direct function for circulating supply following the ERC20 standard.
+
+TODO: query token issuance amount in the explorer backend to provide more trustworthy information.
+
 ### Fetch NFT metadata
 
 ```typescript
