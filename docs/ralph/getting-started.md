@@ -331,7 +331,7 @@ Ralph provides lots of builtin functions, you can refer to [here](/ralph/built-i
 ### Braces Syntax for Asset Approval
 
 In function calls, you could specify the amount of assets to be used by a function using braces syntax.
-Additional details about the Asset Approval System (APS) can be found [here](/ralph/asset-permission-system).
+Additional details about the Asset Permission System (APS) can be found [here](/ralph/asset-permission-system).
 
 ```rust
 // Approve a certain amount of token1 for swapping
