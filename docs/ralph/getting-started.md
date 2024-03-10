@@ -177,6 +177,15 @@ fn baz() -> () {
 }
 ```
 
+#### Anonymous variables
+
+You could use anonymous variables to use the unused variables with underscore.
+
+```rust
+let _ = foo()
+let (_, x) = bar()
+```
+
 ### Control Structures
 
 #### Return statements
