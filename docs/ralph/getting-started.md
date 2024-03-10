@@ -328,9 +328,10 @@ Contract Foo() {
 
 Ralph provides lots of builtin functions, you can refer to [here](/ralph/built-in-functions).
 
-### Curly-braces syntax for asset approval
+### Braces syntax for asset approval
 
-In function calls, you could specify the amount of assets to be used by a function using curly-braces syntax.
+In function calls, you could specify the amount of assets to be used by a function using braces syntax.
+Additional details about the Asset Approval System (APS) can be found [here](/ralph/asset-permission-system).
 
 ```rust
 // Approve a certain amount of token1 for swapping
