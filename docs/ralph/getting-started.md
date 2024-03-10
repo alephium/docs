@@ -125,6 +125,8 @@ bb.foo.y = 6 // This works as bb, foo, and y are all mutable
 
 Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like data structure to provide map-like functionality and mitigate the state bloat issue.
 
+We are going to implement mapping based subcontract, which is supposed to be delivered in Rhone upgrade.
+
 ## Functions
 
 Functions are the executable units of code, you can also define functions inside a contract.
