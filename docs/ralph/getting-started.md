@@ -339,6 +339,12 @@ tokenPair.swap{caller -> token1Id: amount1In}(caller, to, amount0In, amount1In, 
 
 // Approve a certain amount of ALPH for buying an NFT
 nftMarketplace.buyNFT{caller -> ALPH: totalPayment}(tokenId)
+
+// Approve multiple assets from multiple users
+otc.exchange{
+  user0 -> ALPH: amount00, tokenId: amount01;
+  user1 -> ALPH: amount10, tokenId: amount11
+}(user0, amount00, amount01, user1, amount10, amount11)
 ```
 
 ### Annotations
