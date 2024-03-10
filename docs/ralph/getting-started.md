@@ -46,7 +46,7 @@ let d = -1e18
 #### Bool
 
 ```rust
-// The type fo `a` and `b` is Bool.
+// The type of `a` and `b` is Bool.
 let a = false
 let b = true
 ```
