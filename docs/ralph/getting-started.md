@@ -328,6 +328,18 @@ Contract Foo() {
 
 Ralph provides lots of builtin functions, you can refer to [here](/ralph/built-in-functions).
 
+### Curly-braces syntax for asset approval
+
+In function calls, you could specify the amount of assets to be used by a function using curly-braces syntax.
+
+```rust
+// Approve a certain amount of token1 for swapping
+tokenPair.swap{caller -> token1Id: amount1In}(caller, to, amount0In, amount1In, amount0Out, amount1Out)
+
+// Approve a certain amount of ALPH for buying an NFT
+nftMarketplace.buyNFT{caller -> ALPH: totalPayment}(tokenId)
+```
+
 ### Annotations
 
 The Ralph function also supports annotations, currently the only valid annotation is the `@using` annotation, and user-defined annotations will be supported in the future if necessary.
