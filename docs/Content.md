@@ -519,6 +519,10 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
+Alephium’s Game-Changing Tech and Vision for a Decentralized World - https://beincrypto.com/alephium-tech-vision-for-decentralized-world/
+
+Alephium: Eine sichere und skalierbare Layer 1 Blockchain - https://www.btc-echo.de/news/alephium-eine-sichere-und-skalierbare-layer-1-blockchain-sponsored-178777/
+
 Alephium Qu’est-ce que c’est, comment ça fonctionne et comment en acheter ? - https://coinacademy.fr/alephium-alph-fondamental/
 
 Nym Project's blog post about the Alephium wallet built by @Mika and @nop33! - https://twitter.com/alephium/status/1710291031759982803
