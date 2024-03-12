@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Wallet
 
-### Connect Wallet to dApp 
+### Connect wallet to dApp
 
 The `@alephium/web3-react` provides powerful React components and hooks for connecting a wallet to your dApp.
 
