@@ -8,6 +8,61 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
+## Wallet
+
+### Connect wallet to dApp
+
+The `@alephium/web3-react` provides powerful React components and hooks for connecting a wallet to your dApp.
+
+```typescript
+// Alephium Context Provider
+<AlephiumWalletProvider theme='retro' network='devnet'>
+  <YourComponent />
+</AlephiumWalletProvider>
+
+// Connect button
+<AlephiumConnectButton />
+
+// Wallet hook
+const { connectionStatus, signer, account } = useWallet()
+
+// Balance hook
+const { balance } = useBalance()
+
+// Connect hook which is used by `<AlephiumConnectButton />` under the hood
+const { connect, disconnect } = useConnect()
+```
+
+### Web3 SDK wallets
+
+The SDK provides a few basic wallets for developers.
+
+```typescript
+// HD wallet
+const mnemonic = bip39.generateMnemonic(128)
+const hdWallet = new HDWallet({ mnemonic })
+
+// Private key wallet
+const wallet0 = new PrivateKeyWallet({ privateKey })
+const wallet1 = PrivateKeyWallet.Random()
+const wallet2 = PrivateKeyWallet.FromMnemonic({ mnemonic })
+```
+
+### Testing wallet
+
+The `@alephium/web3-test` library provides convenient wallets for testing purpose.
+
+```typescript
+// Devnet test wallet, which has 1 million ALPH by default
+const wallet = testNodeWallet()
+
+// Generate random signer wallet for testing
+const signer = getSigner()
+
+// Generate a list of random wallets for testing
+const signers = getSigners()
+```
+
 ## Token
 
 ### Fetch fungible token metadata
