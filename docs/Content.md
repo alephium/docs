@@ -82,7 +82,7 @@ Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
 An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
-About Sharding - https://x.com/alephium/status/1747255798034796657
+About Sharding - https://vxtwitter.com/alephium/status/1747255798034796657
 
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
 
@@ -120,7 +120,7 @@ Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
 
 Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
-🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1733086186707808578 
+🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1758526298539098233
 
 Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 
@@ -180,7 +180,7 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
-Feb/24 - HoC X Space - https://twitter.com/i/spaces/1BRKjPjmAevJw?s=20
+Feb/24 - HouseOfChimera X Space - https://twitter.com/i/spaces/1BRKjPjmAevJw?s=20
 
 Feb/24 - Ergo x Kadena x Alephium @Flux X space - https://x.com/RunOnFlux/status/1755621620801003822?s=20
 
@@ -255,7 +255,7 @@ Feb/24 🛠 We are ON ⚒ Hackathon -  https://vxtwitter.com/alephium/status/175
 
 Feb/24 🏆 New Hackathon Sponsor 🚨 - https://vxtwitter.com/alephium/status/1755290796755161538
 
-Jan/24 Rhône Network Upgrade 🧵#2 - https://x.com/alephium/status/1752376284754420186?s=20
+Jan/24 Rhône Network Upgrade 🧵#2 Gasless Transactions - https://vxtwitter.com/alephium/status/1752376284754420186
 
 Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
 
@@ -280,6 +280,8 @@ Dec/23 Ambassador Program Launch - https://vxtwitter.com/alephium/status/1736792
 Dec/23 Crowdsourcing Alphad.app new name! - https://vxtwitter.com/alephium/status/1734948427950399948
 
 Dec/23 Etherscan Update! - https://vxtwitter.com/alephium/status/1734581269684687010
+
+Nov/23 Faucet Update! - https://vxtwitter.com/alephium/status/1726556042425995760?s=20
 
 Nov/23 iOS app is live in the App Store! - https://vxtwitter.com/alephium/status/1724452430262534311 
 
@@ -342,6 +344,8 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 Hackathon Website : https://alephium.org/hackathon/
 
+Hackathon update ⚒ - https://vxtwitter.com/alephium/status/1767222314792571249?s=20
+
 😢 Last hackathon updates 🧵 - https://vxtwitter.com/alephium/status/1762545171580019198
 
 ✅ The hackathon itself is over. - https://vxtwitter.com/alephium/status/1762438825911935437?s=20
@@ -350,7 +354,7 @@ Hackathon Website : https://alephium.org/hackathon/
 
 Feb/24 ⚒ Hackathon latest updates 🔥 - https://vxtwitter.com/alephium/status/1761077244628480178
 
-Feb/24 ⚒️ Hackathon Week 2 is starting! - https://x.com/alephium/status/1759621786004865431?s=20
+Feb/24 ⚒️ Hackathon Week 2 is starting! - https://x.com/alephium/status/1759621786004865431
 
 Feb/24 🫶 Hackathon Projects Tip 🤝 - https://vxtwitter.com/alephium/status/1760690257497137609?s=20
 
@@ -360,9 +364,13 @@ Feb/24 💥 Week 1 recap 🪛  - https://x.com/alephium/status/17596331416464754
 
 Feb/24 Hackathon Kick-off call February 12th - https://www.youtube.com/watch?v=zlEU6FqDWd8
 
+Feb/24 Hackathon Update - https://vxtwitter.com/alephium/status/1755966713022288311
+
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
 ## Community & Social 
+
+⛏ Miners' Highlight # 4 - Nick Dimondi 🔥 - https://vxtwitter.com/alephium/status/1765787279736680475
 
 ⛏🖥 Miners Highlight # 3 - Bokiko - https://vxtwitter.com/alephium/status/1753459274783887393
 
@@ -399,6 +407,9 @@ https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
 Community Highlight #16 - Mikael
 https://medium.com/@alephium/446980141ee3
+
+Community Highlight #16 - mikaelpacc
+https://vxtwitter.com/alephium/status/1763238162082767097?s=20
 
 Community Highlight #15 - Chris45
 https://medium.com/@alephium/community-highlight-15-yulius-aka-chris45-036ae41a8037
@@ -443,6 +454,10 @@ Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlig
 
 Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
 https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
+
+🧬 Quick Ecosystem Update 🔥 - https://vxtwitter.com/alephium/status/1766120940847694329?s=20
+
+🚨 Request for ideas 💡 - https://vxtwitter.com/alephium/status/1763138040061435907
 
 👨🏼‍💻 HKTHN series! Dev Onboard Thread! - https://vxtwitter.com/alephium/status/1752028946399654269
 
