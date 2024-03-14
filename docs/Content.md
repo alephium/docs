@@ -13,6 +13,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 * [Tech Series](#tech-series)
 * [Explainer Series](#explainer-series)
 * [TechTalks & AMAs](#techtalks--amas)
+* [Network Upgrade #2 - Rhone](#Network-Upgrade-#2---Rhone)
 * [Milestones](#milestones)
 * [Hackathon](#hackathon)
 * [Community & Social](#community--social)
@@ -105,8 +106,6 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 ## Explainer Series
 
 💡 Understanding the sUTXO model - https://vxtwitter.com/alephium/status/1749827565634855028
-
-Network Upgrade 🧵#1 - https://vxtwitter.com/alephium/status/1738220571832594612
 
 Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
 
@@ -247,21 +246,19 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
+## Network Upgrade #2 - Rhone 
+
+Jan/24 Rhône Network Upgrade 🧵#3 Gasless Transactions - https://vxtwitter.com/alephium/status/1752376284754420186
+
+Jan/24 Network Upgrade 🧵#2 Block Reduction - https://vxtwitter.com/alephium/status/1738220571832594612
+
+Dec/23 Rhône Network Upgrade 🧵#1 Announcement- https://vxtwitter.com/alephium/status/1745820715054698901
+
 ## Milestones 
 
 Feb/24 💜 x 30'000 Twitter Followers - https://vxtwitter.com/alephium/status/1757430069817974869?s=20
 
-Feb/24 🛠 We are ON ⚒ Hackathon -  https://vxtwitter.com/alephium/status/1757094840846733451?s=20
-
-Feb/24 🏆 New Hackathon Sponsor 🚨 - https://vxtwitter.com/alephium/status/1755290796755161538
-
-Jan/24 Rhône Network Upgrade 🧵#2 Gasless Transactions - https://vxtwitter.com/alephium/status/1752376284754420186
-
-Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
-
 Jan/24 🔥 2024 is starting STRONG. - https://vxtwitter.com/alephium/status/1747995876457640253
-
-Jan/24 🌊 Announcing the Rhône Network Upgrade #1 ♾ - https://vxtwitter.com/alephium/status/1745820715054698901
 
 Jan/24 ⚙️ Tech Writings of 2023 🛠 - https://vxtwitter.com/alephium/status/1744795616818217432
 
@@ -358,6 +355,8 @@ Feb/24 ⚒️ Hackathon Week 2 is starting! - https://x.com/alephium/status/1759
 
 Feb/24 🫶 Hackathon Projects Tip 🤝 - https://vxtwitter.com/alephium/status/1760690257497137609?s=20
 
+Feb/24 🏆 New Hackathon Sponsor 🚨 - https://vxtwitter.com/alephium/status/1755290796755161538
+
 Feb/24 🏆 New Hackathon Partner 🚨 - https://vxtwitter.com/alephium/status/1759997300410331483?s=20
 
 Feb/24 💥 Week 1 recap 🪛  - https://x.com/alephium/status/1759633141646475452?s=20
@@ -365,6 +364,10 @@ Feb/24 💥 Week 1 recap 🪛  - https://x.com/alephium/status/17596331416464754
 Feb/24 Hackathon Kick-off call February 12th - https://www.youtube.com/watch?v=zlEU6FqDWd8
 
 Feb/24 Hackathon Update - https://vxtwitter.com/alephium/status/1755966713022288311
+
+Feb/24 🛠 We are ON ⚒ Hackathon -  https://vxtwitter.com/alephium/status/1757094840846733451?s=20
+
+Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alephium/status/1748348344450347430
 
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
