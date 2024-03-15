@@ -13,7 +13,8 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 * [Tech Series](#tech-series)
 * [Explainer Series](#explainer-series)
 * [TechTalks & AMAs](#techtalks--amas)
-* [Network Upgrade #2 - Rhone](#Network-Upgrade-#2---Rhone)
+* [Network Upgrade #2 - Rhone](#Network-Upgrade-#2---rhone)
+* [Network Upgrade #1 - Leman](#Network-Upgrade-#1---leman)
 * [Milestones](#milestones)
 * [Hackathon](#hackathon)
 * [Community & Social](#community--social)
@@ -161,8 +162,6 @@ Naming Alephium - https://twitter.com/alephium/status/1554467104858210305
 
 How many ALPH are mined per day? - https://twitter.com/alephium/status/1551905461103775745
 
-Leman Upgrade schnorr signatures : https://twitter.com/alephium/status/1648310494661595137
-
 Full Nodes - https://twitter.com/alephium/status/1592536671177699328
 
 NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680
@@ -225,8 +224,6 @@ Apr/23 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
 
 Apr/23 - Proof of less work AMA - https://x.com/alephium/status/1646113444461178882?s=20
 
-Mar/23 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
-
 Feb/23 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
 
 Jan/23 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
@@ -253,6 +250,24 @@ Jan/24 Rhône Network Upgrade 🧵#3 Gasless Transactions - https://vxtwitter.co
 Jan/24 Network Upgrade 🧵#2 Block Reduction - https://vxtwitter.com/alephium/status/1738220571832594612
 
 Dec/23 Rhône Network Upgrade 🧵#1 Announcement- https://vxtwitter.com/alephium/status/1745820715054698901
+
+## Network Upgrade #1 - Leman
+
+Apr/23 - Leman Upgrade schnorr signatures : https://twitter.com/alephium/status/1648310494661595137
+
+Mar/23 - The Leman Network Upgrade is Live! - https://medium.com/@alephium/the-leman-network-upgrade-is-live-f52c89b7dd6a
+
+Mar/23 - Leman Network Upgrade Activation - https://medium.com/@alephium/leman-network-upgrade-activation-on-march-30th-606884904c0c
+
+Mar/23 - The Leman Network Upgrade : Time to Check your nodes! - https://medium.com/@alephium/the-leman-network-upgrade-time-to-check-your-nodes-5f8a9297a4dd
+
+Jan/23 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
+
+Dec/22 - The Front End Leman Upgrade - https://medium.com/@alephium/the-front-end-leman-upgrade-948a98a3e2d
+
+Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2-232e3374abc4
+
+Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
 
@@ -309,8 +324,6 @@ Jun/23 Alephium NFT Marketplace Poc On Testnet - https://twitter.com/alephium/st
 May/23 Alephium Bridge on Testnet - https://medium.com/@alephium/the-alephium-bridge-is-live-on-testnet-e13454677fb8
 
 Mar/23 Alephium DEX PoC on Testnet - https://medium.com/@alephium/dex-prototype-live-on-testnet-bac5e7d095ce
-
-Mar/23 Leman Network Upgrade - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 Nov/22 1 year of Mainnet - https://medium.com/@alephium/one-year-of-mainnet-b7ed5d3024ee
 
