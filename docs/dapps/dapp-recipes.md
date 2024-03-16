@@ -312,6 +312,34 @@ const confirmed = useMemo(() => {
 
 The `useTxStatus` hook also accepts an optional callback parameter of type `(txStatus: node.TxStatus) => Promise<any>`, it will be called after each transaction status query.
 
+## Unit Testing
+
+The web3 SDK generates TS utility functions for testing contracts. You can unit test a single function with `ContractName.tests.functionName(params)`.
+Each test takes the current contract state as input and returns the updated contract state.
+
+### Test the same contract twice in a row
+
+One could reuse the returned contract state as input to re-test the same contract.
+
+```typescript
+const testResult0 = await TokenFaucet.tests.withdraw(testParams0)
+
+// the balance of the test token is: 10 - 1 = 9
+const contractState0 = testResult0.contracts[0] as TokenFaucetTypes.State
+expect(contractState0.fields.balance).toEqual(9n)
+
+// reuse the contract state from the previous test
+const testResult1 = await TokenFaucet.tests.withdraw({
+  ...testParamsFixture,
+  initialFields: contractState0.fields,
+  initialAsset: contractState0.asset,
+})
+
+// the balance of the test token is: 9 - 1 = 8
+const contractState1 = testResult1.contracts[0] as TokenFaucetTypes.State
+expect(contractState1.fields.balance).toEqual(8n)
+```
+
 ## Utils
 
 ### Prettify token amounts
