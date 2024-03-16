@@ -330,7 +330,7 @@ expect(contractState0.fields.balance).toEqual(9n)
 
 // reuse the contract state from the previous test
 const testResult1 = await TokenFaucet.tests.withdraw({
-  ...testParamsFixture,
+  ...testParams0,
   initialFields: contractState0.fields,
   initialAsset: contractState0.asset,
 })
