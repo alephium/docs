@@ -100,25 +100,32 @@ let a3 = [#00, #11, #22, #33]
 
 ### Struct
 
-In Ralph, Struct can have fields that are either mutable or immutable. However, to assign a value to a field, all of the field selectors must be mutable.
+In Ralph, Structs can be globally defined and can contain fields that are either mutable or immutable. However, to assign a value to a field, all of the field selectors must be mutable.
 E.g. in order to set `foo.x.y.z = 123`, all `foo`, `x`, `y`, and `z` must be mutable.
 
 ```rust
+// Structs have to be defined globally
 struct Foo { x: U256, mut y: U256 }
 struct Bar { z: U256, mut foo: U256 }
 
-// f.y = 3 won't work as f is immutable despite the field y being mutable
-let f = Foo { x: 1, y: 2 }
+Contract Baz() {
+  ...
 
-// ff = f won't work as ff.x is immutable despite ff and ff.y being mutable
-let mut ff = Foo { x: 1, y: 2 }
-ff.y = 3 // This works as both ff and y are mutable
+  // f.y = 3 won't work as f is immutable despite the field y being mutable
+  let f = Foo { x: 1, y: 2 }
 
-// b.foo.y = 5 won't work as b is immutable
-let b = Bar { z: 4, foo: f }
+  // ff = f won't work as ff.x is immutable despite ff and ff.y being mutable
+  let mut ff = Foo { x: 1, y: 2 }
+  ff.y = 3 // This works as both ff and y are mutable
 
-let mut bb = Bar { z: 5, foo: f }
-bb.foo.y = 6 // This works as bb, foo, and y are all mutable
+  // b.foo.y = 5 won't work as b is immutable
+  let b = Bar { z: 4, foo: f }
+
+  let mut bb = Bar { z: 5, foo: f }
+  bb.foo.y = 6 // This works as bb, foo, and y are all mutable
+
+  ...
+}
 ```
 
 ### Mapping (WIP)
