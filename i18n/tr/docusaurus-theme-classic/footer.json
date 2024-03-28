@@ -1,0 +1,62 @@
+{
+  "link.title.Community": {
+    "message": "Topluluk",
+    "description": "Altbilgide 'Community' başlığına sahip olan alt bilgi bağlantıları sütununun başlığı"
+  },
+  "link.title.Resources": {
+    "message": "Kaynaklar",
+    "description": "Altbilgide 'Resources' başlığına sahip olan alt bilgi bağlantıları sütununun başlığı"
+  },
+  "link.title.More": {
+    "message": "Daha fazla",
+    "description": "Altbilgide 'More' başlığına sahip olan alt bilgi bağlantıları sütununun başlığı"
+  },
+  "link.item.label.Discord": {
+    "message": "Discord",
+    "description": "https://alephium.org/discord adresine yönlendiren ve 'Discord' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Telegram": {
+    "message": "Telegram",
+    "description": "https://t.me/alephiumgroup adresine yönlendiren ve 'Telegram' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Reddit": {
+    "message": "Reddit",
+    "description": "https://www.reddit.com/r/alephium adresine yönlendiren ve 'Reddit' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Twitter": {
+    "message": "Twitter",
+    "description": "https://twitter.com/alephium adresine yönlendiren ve 'Twitter' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Explorer": {
+    "message": "Gezgin",
+    "description": "https://explorer.alephium.org adresine yönlendiren ve 'Explorer' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Get the wallet": {
+    "message": "Cüzdanı Edinin",
+    "description": "https://github.com/alephium/desktop-wallet/releases/latest adresine yönlendiren ve 'Get the wallet' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Tokenomics": {
+    "message": "Token Ekonomisi",
+    "description": "https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c adresine yönlendiren ve 'Tokenomics' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.White papers": {
+    "message": "Teknik Dokümanlar",
+    "description": "https://github.com/alephium/white-paper/ adresine yönlendiren ve 'White papers' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "https://github.com/alephium adresine yönlendiren ve 'GitHub' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Alephium Website": {
+    "message": "Alephium Web Sitesi",
+    "description": "https://alephium.org adresine yönlendiren ve 'Alephium Website' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "link.item.label.Blog": {
+    "message": "Blog",
+    "description": "https://medium.com/@alephium adresine yönlendiren ve 'Blog' etiketi taşıyan altbilgi bağlantısı"
+  },
+  "copyright": {
+    "message": "Bazı hakları saklıdır 2024 Alephium. Docusaurus ile oluşturuldu.",
+    "description": "Altbilgi telif hakkı bildirimi"
+  }
+}

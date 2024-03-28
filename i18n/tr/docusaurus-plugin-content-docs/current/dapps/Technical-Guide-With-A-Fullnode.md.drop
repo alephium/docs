@@ -1,0 +1,755 @@
+---
+sidebar_position: 20
+title: Tam Düğüm ile Teknik Rehber
+---
+
+:::caution
+Bu sayfa, dApp yığınımız daha kararlı hale gelene kadar WIP'tir 🚧
+:::
+
+Bu belge, Alephium ana ağındaki akıllı kontratların oluşturulması, dağıtılması ve kullanımıyla ilgili rehberlik eder.
+
+Öncelikle herhangi bir kullanıcının **ALPH** tokenlerini takas etmesine izin veren bir kontratı dağıtacağız. Daha sonra, kontratı token satın almak için çağıran bir betik dağıtacağız.
+
+Bu belge, [Çin akıllı kontrat öğretici ve belgelerine](https://github.com/Lbqds/alephium-docs/blob/master/contract.md) dayanmaktadır, [Lbqds](https://github.com/Lbqds) tarafından.
+
+## Gereksinimler
+
+Bu öğretici için yerel olarak çalışan bir düğüm ve bir cüzdanınızın olması gerekmektedir. İlgili öğreticiler aşağıda listelenmiştir:
+
+- [Düğümünüzü nasıl başlatacağınızı](https://github.com/alephium/alephium/wiki/Starter-Guide---How-to-Launch-your-node)
+- [Bir cüzdanı nasıl kuracağınızı](https://github.com/alephium/alephium/wiki/Wallet-Guide)
+
+Bu öğreticide `demo-1` adında bir cüzdan kullanacağız.
+
+## Bir token kontratı oluşturun ve dağıtın
+
+Bu bölümde bir kontrat işlemini oluşturacak, derleyecek, imzalayacak ve göndereceğiz.
+
+### Bir token Kontratı Oluşturun
+
+Öncelikle aşağıda gösterildiği gibi bir token kontratı oluşturuyoruz:
+
+```rust
+TxContract MyToken(owner: Address, mut remain: U256) {
+  pub payable fn buy(from: Address, alphAmount: U256) -> () {
+    let tokenAmount = alphAmount * 1000
+    assert!(remain >= tokenAmount)
+    let tokenId = selfTokenId!()
+    transferAlph!(from, owner, alphAmount)
+    transferTokenFromSelf!(from, tokenId, tokenAmount)
+    remain = remain - tokenAmount
+  }
+}
+```
+
+Bu basit token kontratı, kullanıcıların kontrat sahibine `1:1000` oranında **ALPH** ödeyerek token satın almasına izin verir. Aşağıdaki yerleşik işlevleri kullanır:
+
+- `assert!(pred)`: `pred` değeri `false` olduğunda kontrat yürütmesini başarısız kılar
+- `selfTokenId!(a)`: Geçerli token kimliğini döndürür, bu aynı zamanda geçerli kontrat kimliğidir
+- `transferAlph!(from, to, alphAmount)`: Adresten `from` `to`'ya `alphAmount` **ALPH** transfer eder.
+- `transferTokenFromSelf!(to, tokenId, tokenAmount)`: `MyToken`'ın `to` adresine `tokenAmount` tokeni transfer eder.
+
+**Not**: `remain` değişkeni gerekli değildir ancak kontratın durum değişkenlerini anlamak için yardımcı olur. Kontrat durumunun nasıl depolandığını daha sonra açıklayacağız.
+
+### Bir Kontratı Derleyin
+
+Daha sonra, tam düğüm API'si aracılığıyla kontratı derliyoruz.
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/contracts/compile-contract' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "code": "TxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlph!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
+}'
+```
+
+Yanıt olarak kontratın ikili kodunu alıyoruz:
+
+```json
+{
+  "compiled": {
+    "type": "SimpleContractByteCode",
+    "bytecode": "0201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101"
+  },
+  "fields": {
+    "signature": "TxContract MyToken(owner:Address,mut remain:U256)",
+    "types": ["Address", "U256"]
+  },
+  "functions": [
+    {
+      "name": "buy",
+      "signature": "pub payable buy(from:Address,alphAmount:U256)->()",
+      "argTypes": ["Address", "U256"],
+      "returnTypes": []
+    }
+  ],
+  "events": []
+}
+```
+
+### İmzasız bir kontrat işlemi oluşturun
+
+Şimdi kontrat işlemini oluşturmalıyız. İlk olarak, şu anda kullanılan adresin publicKey'ini elde ediyoruz. Adres olarak `1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG` adresini kullanıyoruz.
+
+```bash
+curl 'http://127.0.0.1:12973/wallets/demo-1/addresses/1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG'
+```
+
+Aşağıdaki yanıtı alıyoruz:
+
+```json
+{
+  "address": "1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG",
+  "publicKey": "029347489f53e7050e5c7edb5ef305d33316772836370750ff747eb6dc3f5f47f1",
+  "group": 3,
+  "path": "m/44'/1234'/0'/0/0"
+}
+```
+
+Daha sonra kontrat işlemini oluşturuyoruz.
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/contracts/unsigned-tx/build-contract' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fromPublicKey": "029347489f53e7050e5c7edb5ef305d33316772836370750ff747eb6dc3f5f47f1",
+  "bytecode": "0201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101",
+  "initialFields": [{"type": "Address", "value": "1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG"}, {"type": "U256", "value": "10000000000000000000000000000"}],
+  "issueTokenAmount": "10000000000000000000000000000"
+}'
+```
+
+Parametreler şunlardır:
+
+- `fromPublicKey`: Şu anda kullanılan adresin genel anahtarı
+- `bytecode`: Kontrat ikili kodu
+- `initialFields`: Kontrat yapılandırıcısına iletilen başlangıç durum değişkenlerinin listesi
+- `issueTokenAmount`: Kontrat tarafından verilen toplam token sayısı
+
+Aşağıdaki yanıtı alıyoruz:
+
+```json
+{
+  "group": 3,
+  "unsignedTx": "000401010101000000081500bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e313c1e8d4a51000a21440300201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101144031020400bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e302c8204fce5e3e2502611000000013c8204fce5e3e25026110000000ae1880013880c1174876e80001adcf9eb78826cef24403641dea9e899dbbcfc7007c21e0ff46a76189d04a830986eb7c9e00029347489f53e7050e5c7edb5ef305d33316772836370750ff747eb6dc3f5f47f100",
+  "gasAmount": 57222,
+  "gasPrice": "100000000000",
+  "txId": "a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2",
+  "contractAddress": "2AKg3eFfeBANTSc1RPH4FUho8KrrzMdKMCiXeBc2X3taP"
+}
+```
+
+### Bir kontratı imzalayın
+
+Daha sonra, önceden alınan işlem hash'ini imzalıyoruz.
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/wallets/demo-1/sign' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "data": "a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2"
+}'
+```
+
+Yanıt imzayı içerir.
+
+```json
+{
+  "signature": "77373aeac77ca269169faada8a2f3f60301a4a0fe0f0a5d96d0c8c5551a176f140e7526662f7dbbe58b3294fcc63eac269f74e289da62c95ab8149728eb317af"
+}
+```
+
+### Bir kontratı gönderin
+
+Son olarak, kontrat işlemini Alephium ağına gönderiyoruz.
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/transactions/submit' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "unsignedTx": "000401010101000000081500bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e313c1e8d4a51000a21440300201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101144031020400bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e302c8204fce5e3e2502611000000013c8204fce5e3e25026110000000ae1880013880c1174876e80001adcf9eb757a0fc312c490625510071acc022635fa53f4649813549f0669095473a7a7d7600029347489f53e7050e5c7edb5ef305d33316772836370750ff747eb6dc3f5f47f100",
+  "signature": "77373aeac77ca269169faada8a2f3f60301a4a0fe0f0a5d96d0c8c5551a176f140e7526662f7dbbe58b3294fcc63eac269f74e289da62c95ab8149728eb317af"
+}'
+```
+
+İstek geçerliyse, aşağıdaki gibi bir yanıt alınır.
+
+```json
+{
+  "txId": "a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2",
+  "fromGroup": 3,
+  "toGroup": 3
+}
+```
+
+Kontrat oluşturma sürecini daha net anlamak için yukarıdaki işlemin belirli içeriğine bakalım. Şu anda bir işlemin içeriğini incelemek için kullanıcı dostu bir arayüz yok, bu nedenle işlem içeren bloğu düğüm API'si aracılığıyla almalıyız. (Bir işlemin blok hash'ini ya gezgin veya `GET /transaction/status?txId={txId}` uç noktasıyla alabilirsiniz)
+
+
+```bash
+curl 'http://127.0.0.1:12973/blockflow/blocks/08041abb8bc8d06c6b840ceb345a4f8953a9fbf9c32c08be34a63c93fd8dfcdf \
+```
+
+İşlemler listesi alıyoruz (burada okunabilirlik için yalnızca 5 işlemden 2'sini gösteriyoruz):
+
+```json
+{
+  "hash": "08041abb8bc8d06c6b840ceb345a4f8953a9fbf9c32c08be34a63c93fd8dfcdf",
+  "timestamp": 1652689725997,
+  "chainFrom": 3,
+  "chainTo": 3,
+  "height": 12,
+  "deps": [
+    "40d58f8563a6de46fa0efda4670aeb43a451b349d8af1403b341413d5010c0e0",
+    "30b0c63cf62aa6cdc1c72e8fc2f31703b8318654b65acaaece48ee503da87845",
+    "be73f0505c81184bc4691ee1ffeafaf7fbb091f412d500fc882aeecc8929e1fa",
+    "8f8ddaeddfd21b003ad39dfd1d7c4593d7f63d2951aecd16de8a749edf26c23c",
+    "6d258ca53dbe960adf19f899248e1d60c83ac65aac323a4ff195541b84ccfb4d",
+    "4862925410e6951836bd8808b94a8492ca5d718ec642d375f170e5b3b8ca51ce",
+    "c5a260997400e9512b6e1ca41c18653580e39ecdbd33c26f9ee971b6f2bb96cf"
+  ],
+  "transactions": [
+    {
+      "unsigned": {
+        "txId": "a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2",
+        "version": 0,
+        "networkId": 4,
+        "scriptOpt": "010101000000081500bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e313c1e8d4a51000a21440300201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101144031020400bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e302c8204fce5e3e2502611000000013c8204fce5e3e25026110000000ae18",
+        "gasAmount": 57222,
+        "gasPrice": "100000000000",
+        "inputs": [
+          {
+            "outputRef": {
+              "hint": -1378902345,
+              "key": "8826cef24403641dea9e899dbbcfc7007c21e0ff46a76189d04a830986eb7c9e"
+            },
+            "unlockScript": "00029347489f53e7050e5c7edb5ef305d33316772836370750ff747eb6dc3f5f47f1"
+          }
+        ],
+        "fixedOutputs": []
+      },
+      "scriptExecutionOk": true,
+      "contractInputs": [],
+      "generatedOutputs": [
+        {
+          "type": "ContractOutput",
+          "hint": 585739684,
+          "key": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+          "alphAmount": "1000000000000",
+          "address": "2AKg3eFfeBANTSc1RPH4FUho8KrrzMdKMCiXeBc2X3taP",
+          "tokens": [
+            {
+              "id": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+              "amount": "10000000000000000000000000000"
+            }
+          ]
+        },
+        {
+          "type": "AssetOutput",
+          "hint": -1378902345,
+          "key": "1d4b4f18b41e34e64d9e8fe6ee038ef8acaa8763f7b276b3b157120d393857bd",
+          "alphAmount": "6499975998000000000000",
+          "address": "1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG",
+          "tokens": [],
+          "lockTime": 0,
+          "additionalData": ""
+        }
+      ],
+      "inputSignatures": [
+        "1def939243491d681b68790a2c0d906c50a3f3bef453cc47ca6822b669d6437c565af0ba9d7cd191cd99144f8fa07fe07effe6c3b21d4a9e9898d1a4eea3ae82"
+      ],
+      "scriptSignatures": []
+    },
+    {
+      "unsigned": {
+        "txId": "ee023aea5778fd390cc16dc2a706647c3490cf888ed90cfe4505257863e7fb31",
+        "version": 0,
+        "networkId": 4,
+        "gasAmount": 20000,
+        "gasPrice": "1000000000",
+        "inputs": [],
+        "fixedOutputs": [
+          {
+            "hint": -11128529,
+            "key": "e895ec4b15e4b50e3c21e04f23dfa5e3ea424e8db92bb10d52c10b3761905665",
+            "alphAmount": "1879000000000000000",
+            "address": "17UjAgeAVixkYksn5snhQ4k1CpGAoBJmdsBNGdyHWqm4M",
+            "tokens": [],
+            "lockTime": 1652690325997,
+            "additionalData": "030300000180cbfbea2d"
+          }
+        ]
+      },
+      "scriptExecutionOk": true,
+      "contractInputs": [],
+      "generatedOutputs": [],
+      "inputSignatures": [],
+      "scriptSignatures": []
+    }
+  ],
+  "nonce": "c55b55079d5eb165ee7cc093ffde19f6867090621d16ef61",
+  "version": 0,
+  "depStateHash": "e500d692f7fe6daa400b81d4f78b300f78fbf926a20c03b51ada40b37f441ded",
+  "txsHash": "72913f92b28be354026409f9b7c0d11e2b763c99de5bb0eeb1bd9a6b92aabee8",
+  "target": "20ffffff"
+}
+```
+
+Sadece `a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2` kimliğine sahip işleme odaklanıyoruz.
+
+```json
+{
+  "unsigned": {
+    "txId": "a8fa7a28618fd361fc7d8f2ad51c772ef561406ffe4a8b4fe1a5e68e84e2a4e2",
+    "version": 0,
+    "networkId": 4,
+    "scriptOpt": "010101000000081500bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e313c1e8d4a51000a21440300201402c01010204001616011343e82c1702a0011602344db117031600a0001601a7160016031602aba00116022ba101144031020400bae81fae7fc67d18210b938e31e12d43c48cd9f89668957c7a5fd3e0e57f36e302c8204fce5e3e2502611000000013c8204fce5e3e25026110000000ae18",
+    "gasAmount": 57222,
+    "gasPrice": "100000000000",
+    "inputs": [
+      {
+        "outputRef": {
+          "hint": -1378902345,
+          "key": "8826cef24403641dea9e899dbbcfc7007c21e0ff46a76189d04a830986eb7c9e"
+        },
+        "unlockScript": "00029347489f53e7050e5c7edb5ef305d33316772836370750ff747eb6dc3f5f47f1"
+      }
+    ],
+    "fixedOutputs": []
+  },
+  "scriptExecutionOk": true,
+  "contractInputs": [],
+  "generatedOutputs": [
+    {
+      "type": "ContractOutput",
+      "hint": 585739684,
+      "key": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+      "alphAmount": "1000000000000",
+      "address": "2AKg3eFfeBANTSc1RPH4FUho8KrrzMdKMCiXeBc2X3taP",
+      "tokens": [
+        {
+          "id": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+          "amount": "10000000000000000000000000000"
+        }
+      ]
+    },
+    {
+      "type": "AssetOutput",
+      "hint": -1378902345,
+      "key": "1d4b4f18b41e34e64d9e8fe6ee038ef8acaa8763f7b276b3b157120d393857bd",
+      "alphAmount": "6499975998000000000000",
+      "address": "1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG",
+      "tokens": [],
+      "lockTime": 0,
+      "additionalData": ""
+    }
+  ],
+  "inputSignatures": [
+    "1def939243491d681b68790a2c0d906c50a3f3bef453cc47ca6822b669d6437c565af0ba9d7cd191cd99144f8fa07fe07effe6c3b21d4a9e9898d1a4eea3ae82"
+  ],
+  "scriptSignatures": []
+}
+```
+
+Bu işlemin bir girişi ve iki çıktısı var. Aşağıda bazı alanların açıklaması bulunmaktadır:
+
+- `outputRef`: UTXO'ya işaretçi
+- `key`: UTXO hash'i
+- `type`: işlem çıkışının türü, `ContractOutput` veya `AssetOutput`
+- `address`: `kontrat` veya `varlık` adresinin base58 kodlaması
+- `alphAmount`: Adrese ait **ALPH** miktarı
+- `tokens`: Adrese ait tokenlerin listesi
+- `tokens.id`: kontrat kimliği
+- `tokens.amount`: sahip olunan token miktarı
+
+İlk çıktı, yeni oluşturduğumuz kontrattır. Kontrat adresinin tam olarak tanımladığımız `issueTokenAmount` olduğunu görüyoruz.
+
+İkinci çıktı, adresimiz `1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG` tarafından gönderilen işlemin UTXO çıktısıdır. Bu adresin herhangi bir tokeni yoktur.
+
+## Bir betik oluşturun ve dağıtın
+
+Kontrat başarıyla oluşturulduktan sonra, `Mytoken.buy` yöntemini çağırmak için bir `TxScript` dağıtacağız. Bu örnekte, kontratı oluşturmak için kullanılanla farklı bir adres olan `1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h` adresini kullanarak ödeyeceğiz.
+
+Kontratı göndermek için kullanılan adresle aynı olmayan bir adresle de ödeme yapmak istiyorsanız, lütfen adresinizin kontratla aynı gruba ait olduğundan emin olun. Kontrat grubunu, işlem bloğunun `chainFrom` alanını kontrol ederek bulabilirsiniz. Örneğimizde, kontrat 3. gruptadır, ancak sizin için farklı bir grupta olabilir. Bir adresin grubunu `GET addresses/{address}/group` uç noktasında doğrulayabilirsiniz. Değilse, `POST/wallets/{wallet_name}/derive-next-address`'i kullanarak doğru gruptaki bir adres elde edene kadar yeni adresler türetebilirsiniz. Yeni adresler `0` bakiye ile başlatıldığından, bu yeni adrese bazı **ALPH** transfer etmeniz gerekecektir. Son olarak, etkin adresinizi `POST wallets/{wallet_name}/change-active-address` uç noktasında değiştirin.
+
+### Bir TxScript Oluşturun
+
+Öncelikle, birkaç token satın almak için `TxScript` oluşturuyoruz.
+
+```rust
+TxScript Main {
+  pub payable fn main() -> () {
+    approveAlph!(@1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h, 1000000000000000000)
+    let contract = MyToken(#e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c)
+    contract.buy(@1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h, 1000000000000000000)
+  }
+}
+```
+
+İşte bu kodun kısa bir açıklaması:
+
+- `approveAlph!(address, amount)`: Adresten belirtilen miktarda `ALPH`'ın betikte kullanılmasına izin verir.
+- Kontrat, `id` ile yüklenir
+- 1 **ALPH** karşılığında 1000 token almak için `MyToken.buy` yöntemini çağırın
+
+Sonraki adımlar önceki bölümlere çok benzer. Betiği derleyecek, oluşturacak, imzalayacak ve göndereceğiz.
+
+### Bir Betiği Derleyin
+
+Betikleri ikili kod haline getirmek için düğüm API'sini sorguluyoruz. **Lütfen `TxScript` kodunuzun ardından `MyToken` kontratının kaynak kodunu eklediğinizden emin olun.**
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/contracts/compile-script' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "code": "TxScript Main {\n  pub payable fn main() -> () {\n    approveAlph!(@1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h, 1000000000000000000)\n    let contract = MyToken(#e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c)\n    contract.buy(@1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h, 1000000000000000000)\n  }\n}\nTxContract MyToken(owner: Address, mut remain: U256) {\n  pub payable fn buy(from: Address, alphAmount: U256) -> () {\n    let tokenAmount = alphAmount * 1000\n    assert!(remain >= tokenAmount)\n    let tokenId = selfTokenId!()\n    transferAlph!(from, owner, alphAmount)\n    transferTokenFromSelf!(from, tokenId, tokenAmount)\n    remain = remain - tokenAmount\n  }\n}"
+}'
+```
+
+Aşağıdakine benzer bir yanıt alacaksınız:
+
+```json
+{
+  "compiled": {
+    "type": "SimpleScriptByteCode",
+    "bytecode": "010101000100091500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a7640000a2144020e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c17001500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a764000016000100"
+  },
+  "functions": [
+    {
+      "name": "main",
+      "signature": "pub payable main()->()",
+      "argTypes": [],
+      "returnTypes": []
+    }
+  ],
+  "events": []
+}
+```
+
+### İmzasız bir betik işlemi oluşturun
+
+İlk olarak, etkin adresin publicKey'ini alıyoruz:
+
+```bash
+curl 'http://127.0.0.1:12973/wallets/demo-1/addresses/1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h'
+```
+
+Buna benzer bir yanıt alırız:
+
+```json
+{
+  "address": "1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h",
+  "publicKey": "0203ff28b14840ee75f8e624ae4f35ae26c67e4e835975bbaac9a2046e622358d5",
+  "group": 3,
+  "path": "m/44'/1234'/0'/0/18"
+}
+```
+
+Daha sonra imzalı işlemi oluştururuz:
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/contracts/unsigned-tx/build-script' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fromPublicKey": "0203ff28b14840ee75f8e624ae4f35ae26c67e4e835975bbaac9a2046e622358d5",
+  "bytecode": "010101000100091500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a7640000a2144020e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c17001500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a764000016000100"
+}'
+```
+
+Aşağıdaki yanıtı alırız:
+
+```json
+{
+  "unsignedTx": "000401010101000100091500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a7640000a2144020e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c17001500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a76400001600010080013880c1174876e80001174aa36169adea3987f239001301642efa3e74c5ec1f1f185d1ab24ca2032f8bbfd267c7000203ff28b14840ee75f8e624ae4f35ae26c67e4e835975bbaac9a2046e622358d500",
+  "gasAmount": 42082,
+  "gasPrice": "100000000000",
+  "txId": "2fe9100b8ede85114a707314f9416ada97735b68a9db9693c7d7bbbf9326daf2",
+  "group": 3
+}
+```
+
+### Bir betik imzalayın
+
+Daha sonra, işlem hash'ini imzalarız:
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/wallets/demo-1/sign' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "data": "2fe9100b8ede85114a707314f9416ada97735b68a9db9693c7d7bbbf9326daf2"
+}'
+```
+
+Ve imzayı alırız:
+
+```json
+{
+  "signature": "df4b2e61c81304b3f3d34dd1f193010ff0d82abe53edd403c636823b1f71247a4908e963cf7c89284a30315d89ec72b3637cf50f023a6f905cd0c4e3d3c9941c"
+}
+```
+
+### Bir betik gönderin
+
+Son olarak işlemi gönderebiliriz.
+
+```bash
+curl -X 'POST' \
+  'http://127.0.0.1:12973/transactions/submit' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "unsignedTx": "000401010101000100091500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a7640000a2144020e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c17001500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a76400001600010080013880c1174876e80001174aa36169adea3987f239001301642efa3e74c5ec1f1f185d1ab24ca2032f8bbfd267c7000203ff28b14840ee75f8e624ae4f35ae26c67e4e835975bbaac9a2046e622358d500",
+  "signature": "df4b2e61c81304b3f3d34dd1f193010ff0d82abe53edd403c636823b1f71247a4908e963cf7c89284a30315d89ec72b3637cf50f023a6f905cd0c4e3d3c9941c"
+}'
+```
+
+Ve `txId` ve gruplar bilgilerini alırız:
+
+```json
+{
+  "txId": "2fe9100b8ede85114a707314f9416ada97735b68a9db9693c7d7bbbf9326daf2",
+  "fromGroup": 3,
+  "toGroup": 3
+}
+```
+
+Yine, işlemi Ana Ağ'da bulabiliriz, işlemi içeren bloğu sorgulayarak. Aşağıdaki işlem içeriğini gözlemliyoruz:
+
+
+```json
+{
+  "hash": "0f13b84553050263b173f3aa00386d3cc22863080d4b8642b4dcdfea15af0e6f",
+  "timestamp": 1652700335564,
+  "chainFrom": 3,
+  "chainTo": 3,
+  "height": 13,
+  "deps": [
+    "40d58f8563a6de46fa0efda4670aeb43a451b349d8af1403b341413d5010c0e0",
+    "30b0c63cf62aa6cdc1c72e8fc2f31703b8318654b65acaaece48ee503da87845",
+    "be73f0505c81184bc4691ee1ffeafaf7fbb091f412d500fc882aeecc8929e1fa",
+    "8f8ddaeddfd21b003ad39dfd1d7c4593d7f63d2951aecd16de8a749edf26c23c",
+    "6d258ca53dbe960adf19f899248e1d60c83ac65aac323a4ff195541b84ccfb4d",
+    "4862925410e6951836bd8808b94a8492ca5d718ec642d375f170e5b3b8ca51ce",
+    "08041abb8bc8d06c6b840ceb345a4f8953a9fbf9c32c08be34a63c93fd8dfcdf"
+  ],
+  "transactions": [
+    {
+      "unsigned": {
+        "txId": "2fe9100b8ede85114a707314f9416ada97735b68a9db9693c7d7bbbf9326daf2",
+        "version": 0,
+        "networkId": 4,
+        "scriptOpt": "010101000100091500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a7640000a2144020e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c17001500a095abc2f02eaf33573e17d9c5f6946da5903459f4e752146b847b3831a339c613c40de0b6b3a764000016000100",
+        "gasAmount": 42082,
+        "gasPrice": "100000000000",
+        "inputs": [
+          {
+            "outputRef": {
+              "hint": 390767457,
+              "key": "69adea3987f239001301642efa3e74c5ec1f1f185d1ab24ca2032f8bbfd267c7"
+            },
+            "unlockScript": "000203ff28b14840ee75f8e624ae4f35ae26c67e4e835975bbaac9a2046e622358d5"
+          }
+        ],
+        "fixedOutputs": []
+      },
+      "scriptExecutionOk": true,
+      "contractInputs": [
+        {
+          "hint": 585739684,
+          "key": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c"
+        }
+      ],
+      "generatedOutputs": [
+        {
+          "type": "AssetOutput",
+          "hint": -1378902345,
+          "key": "68e0b6a089ce4f6abd47d818e9accf5a88ac7714fef4eaa5b9a9d2099e5ad726",
+          "alphAmount": "1000000000000000000",
+          "address": "1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG",
+          "tokens": [],
+          "lockTime": 0,
+          "additionalData": ""
+        },
+        {
+          "type": "AssetOutput",
+          "hint": 390767457,
+          "key": "a11564f890f1cd3108834e0664dc1f97424cb7e1be4b68982a921a8fa2099846",
+          "alphAmount": "498992000000000000000",
+          "address": "1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h",
+          "tokens": [
+            {
+              "id": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+              "amount": "1000000000000000000000"
+            }
+          ],
+          "lockTime": 0,
+          "additionalData": ""
+        },
+        {
+          "type": "ContractOutput",
+          "hint": 585739684,
+          "key": "9f8296350b307d98914e54d748d1cef42293c277f57d3ad98b309c28edc5cdf8",
+          "alphAmount": "1000000000000",
+          "address": "2AKg3eFfeBANTSc1RPH4FUho8KrrzMdKMCiXeBc2X3taP",
+          "tokens": [
+            {
+              "id": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+              "amount": "9999999000000000000000000000"
+            }
+          ]
+        }
+      ],
+      "inputSignatures": [
+        "df4b2e61c81304b3f3d34dd1f193010ff0d82abe53edd403c636823b1f71247a4908e963cf7c89284a30315d89ec72b3637cf50f023a6f905cd0c4e3d3c9941c"
+      ],
+      "scriptSignatures": []
+    },
+    {
+      "unsigned": {
+        "txId": "d9468e7b33300cb2824147166c5ee441e3865f4bc23563e54aff117810a290fa",
+        "version": 0,
+        "networkId": 4,
+        "gasAmount": 20000,
+        "gasPrice": "1000000000",
+        "inputs": [],
+        "fixedOutputs": [
+          {
+            "hint": 17786109,
+            "key": "e19b512d57dab97c48d2352485abe76c6707c32dc7f308e4ca0051f40f2d2228",
+            "alphAmount": "1879000000000000000",
+            "address": "19Sxx6RVyenkDovv6LiMW2ymxP2UfxmvGZGhmNcxq5jqX",
+            "tokens": [],
+            "lockTime": 1652700935564,
+            "additionalData": "030300000180cc9dcdcc"
+          }
+        ]
+      },
+      "scriptExecutionOk": true,
+      "contractInputs": [],
+      "generatedOutputs": [],
+      "inputSignatures": [],
+      "scriptSignatures": []
+    }
+  ],
+  "nonce": "5c694b2fc6f235ff20bc02661ab3724b06e2d3ae92c97d47",
+  "version": 0,
+  "depStateHash": "74e3cb156bebf185dee4c3160841d1cfc812bf17be1a81744fbca18a0fefff79",
+  "txsHash": "73a5c883b253ef17faa935fe8edacf1ba9690f2d543dd206042b69e06170e631",
+  "target": "20ffffff"
+}
+```
+
+Görüldüğü gibi, bir kontrat girişi var ve `outputRef.key`, daha önce oluşturduğumuz kontrata işaret ediyor.
+
+```json
+"contractInputs": [
+  {
+    "hint": 585739684,
+    "key": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c"
+  }
+]
+```
+
+Bu sefer üç çıktımız var: iki varlık ve bir kontrat. İlk çıktı, kontrat sahibine ödenen 1 **ALPH** için yeni UTXO'dur.
+
+```json
+{
+  "type": "AssetOutput",
+  "hint": -1378902345,
+  "key": "68e0b6a089ce4f6abd47d818e9accf5a88ac7714fef4eaa5b9a9d2099e5ad726",
+  "alphAmount": "1000000000000000000",
+  "address": "1Dac89UqoyQ7NPvuoX5cnYDp44UQDDEo4iMrYQwToqiRG",
+  "tokens": [],
+  "lockTime": 0,
+  "additionalData": ""
+}
+```
+
+İkinci çıktı, kontrat sahibine ödeme için tüketilen UTXO'ların değişimiyle eşdeğer yeni bir UTXO'dur. Ek olarak, `tokens` listesindeki ilk öğe, şimdi satın aldığımız tokenlere karşılık gelir! Kimlik, kontratımızın kimliğine karşılık gelir.
+
+```json
+{
+  "type": "AssetOutput",
+  "hint": 390767457,
+  "key": "a11564f890f1cd3108834e0664dc1f97424cb7e1be4b68982a921a8fa2099846",
+  "alphAmount": "498992000000000000000",
+  "address": "1Borbt3zgchtQyrTrLxhUeAknP4cxYqYkNQUrth5V7U6h",
+  "tokens": [
+    {
+      "id": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+      "amount": "1000000000000000000000"
+    }
+  ],
+  "lockTime": 0,
+  "additionalData": ""
+}
+```
+
+Üçüncü çıktı, takas sonrası kontrattır. Token miktarının `10000000000000000000000000000` den `9999999000000000000000000000` e değiştiğini gözlemliyoruz. Fark, satın aldığımız token miktarına eşittir.
+
+```json
+{
+  "type": "ContractOutput",
+  "hint": 585739684,
+  "key": "9f8296350b307d98914e54d748d1cef42293c277f57d3ad98b309c28edc5cdf8",
+  "alphAmount": "1000000000000",
+  "address": "2AKg3eFfeBANTSc1RPH4FUho8KrrzMdKMCiXeBc2X3taP",
+  "tokens": [
+    {
+      "id": "e847a0a9212bcdc07ddc1b74526c0523f11042e13330c9d889e4bc16f74e084c",
+      "amount": "9999999000000000000000000000"
+    }
+  ]
+}
+```
+
+Tebrikler! Alephium'da ilk akıllı kontratınızı başarıyla dağıttınız ve kullandınız! 🚀
+
+## Kontrat Durumu
+
+Önceki bölümlerden görebileceğimiz gibi:
+
+- Bir kontrat oluşturulduğunda, bir kontrat çıkışı oluşturulur, token verilmiş olsa bile. Bir token verilmişse, çıkış token listesinde başlangıçta belirli bir sayıda token içerir.
+- Kontratı çağırmak, kontrat çıkışını tüketir ve yeni bir kontrat çıkışı oluşturur. Yukarıdaki örnekte, kontratın oluşturulduğunda oluşturulan kontrat çıkışı tüketilir ve ardından yeni bir kontrat çıkışı oluşturulur.
+- Kontratı çağırmak aynı zamanda kontratın durumunu değiştirebilir. Yukarıdaki örnekte, `MyToken.buy` çağrıldıktan sonra durum değişecektir.
+
+Kontrat durumunun özellikle neler içerdiğine bir göz atalım:
+
+```scala
+final case class ContractState private (
+    codeHash: Hash,
+    initialStateHash: Hash,
+    fields: AVector[Val],
+    contractOutputRef: ContractOutputRef
+)
+```
+
+
+
+alanlar şunlardır:
+
+- `codeHash`: Kontrat kodunun hash'i.
+- `initialStateHash`: Başlangıç kontrat durumunun hash'i
+- `fields`: Durum değerlerinin vektörü. Örneğin, `MyToken` örneğinde `AVector(owner, remain)`.
+- `contractOutputRef`: Kontrat çıkışına işaretçi
+
+Kontratı çağırma ve durumunu değiştirme süreci genellikle şöyle olur:
+
+1. Dünya Durumu'ndan kontrat durumunu yükleyin, bu, UTXO'lar, akıllı kontratlar durumu ve kodu için bir depolama alanıdır.
+2. Yürütme yöntemi ödenebilir olduğunda `contractOutputRef` tarafından işaret edilen kontrat çıkışını yükleyin
+3. Kontrat yürütmesi, kontrat durumunu değiştiriyorsa, Dünya Durumu'ndaki kontrat durumu güncellenecektir
+4. Kontrat yeni bir kontrat çıkışı üretirse, kontrat durumu güncellenecek ve eski kontrat çıkışı silinecektir
+
+Ek olarak, kontratlar oluştururken ve çağırırken karşılaşılabilecek hatalar ve çözümleri hakkında kısaca bahsedeceğiz:
+
+- NotEnoughBalance: Bu yalnızca madencilik ödüllerinin veya diğer transferlerin elde edilmesiyle çözülebilir.
+- OutOfGas: Varsayılan gaz oldukça küçüktür ve genellikle kontratlar oluşturulurken ve çağırılırken yeterli değildir, bu nedenle genellikle tüketilen gazı manuel olarak belirtmek gerekir.
+- AmountIsDustOrZero: Sistemin, çok küçük miktarlardaki çıktıları reddetmesini önlemek için bir önlem olarak, sistem çok küçük miktarlardaki çıktıları reddeder. Daha fazla bilgi için lütfen [buraya](misc/On-dust-outputs-and-state-explosion.md) bakınız.
+
+İlgilenen kişiler, farklı kontratlar oluşturmayı deneyebilir ve ETH uygulamalarını Alephium'a göç edebilirler.
