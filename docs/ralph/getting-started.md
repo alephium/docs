@@ -128,11 +128,46 @@ Contract Baz() {
 }
 ```
 
-### Mapping (WIP)
+### Map (Rhone Upgrade Only)
 
-Ralph uses [subcontract](/ralph/getting-started#subcontract) instead of map-like data structure to provide map-like functionality and mitigate the state bloat issue.
+The map data structure is currently available exclusively in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/rhone-devnet) of full node.
 
-We are going to implement mapping based subcontract, which is supposed to be delivered in Rhone upgrade.
+In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
+
+There are 3 essential built-in map methods `insert!, remove!, contains!`. Map values can be access and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage:
+
+```rust
+Contract Foo() {
+  // All maps must be defined here, before events and constants
+  map[Address, U256] counters
+
+  pub fn create() -> () {
+    let key = callerAddress!()
+    // Each map entry creation requires a minimal ALPH deposit
+    counters.insert!{key -> ALPH: mapEntryDeposit!()}(key, 0)
+  }
+
+  pub fn count() -> () {
+    let key = callerAddress!()
+    let value = counters[key]
+    // Update the map entry value
+    counters[key] = value + 1
+  }
+
+  pub fn clear() -> U256 {
+    let key = callerAddress!()
+    let value = counters[key]
+    // Each map entry removal redeems the map entry deposit
+    counters.remove!(key, key)
+    return value
+  }
+
+  pub fn contains() -> Bool {
+    // Check the existence of map entry
+    return counters.contains!(callerAddress!())
+  }
+}
+```
 
 ## Functions
 
