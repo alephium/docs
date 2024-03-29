@@ -134,12 +134,12 @@ The map data structure is currently available exclusively in the [devnet release
 
 In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
 
-There are 3 essential built-in map methods `insert!, remove!, contains!`. Map values can be access and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage:
+There are 3 essential built-in map methods `insert!, remove!, contains!`. Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage:
 
 ```rust
 Contract Foo() {
-  // All maps must be defined here, before events and constants
-  map[Address, U256] counters
+  // All maps must be defined here with `mapping[KeyType, ValueType]`, before events and constants
+  mapping[Address, U256] counters
 
   pub fn create() -> () {
     let key = callerAddress!()
@@ -156,9 +156,10 @@ Contract Foo() {
 
   pub fn clear() -> U256 {
     let key = callerAddress!()
+    let depositRecipient = key
     let value = counters[key]
     // Each map entry removal redeems the map entry deposit
-    counters.remove!(key, key)
+    counters.remove!(key, depositRecipient)
     return value
   }
 
