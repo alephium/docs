@@ -602,6 +602,18 @@ Locks the current approved assets.
 
 ---
 
+### payGasFee
+
+```Rust
+fn payGasFee!() -> ()
+```
+
+Pay gas fee.
+
+> @returns
+
+---
+
 ## Utils Functions
 ---
 ### assert
@@ -764,6 +776,20 @@ Returns the min value of I256.
 
 ---
 
+### groupOfAddress
+
+```Rust
+fn groupOfAddress!(address:Address) -> (U256)
+```
+
+Returns the group of the input address.
+
+> @param **address** *the input address*
+>
+> @returns *the group of the input address*
+
+---
+
 ### nullContractAddress
 
 ```Rust
@@ -773,6 +799,30 @@ fn nullContractAddress!() -> (Address)
 Returns the null contract address with contract id being zeros.
 
 > @returns *the null contract address with contract id being zeros*
+
+---
+
+### minimalContractDeposit
+
+```Rust
+fn minimalContractDeposit!() -> (U256)
+```
+
+The minimal contract deposit
+
+> @returns *the minimal ALPH amount for contract deposit*
+
+---
+
+### mapEntryDeposit
+
+```Rust
+fn mapEntryDeposit!() -> (U256)
+```
+
+The amount of ALPH required to create a map entry
+
+> @returns *the amount of ALPH required to create a map entry*
 
 ---
 
