@@ -134,7 +134,7 @@ The map data structure is currently available exclusively in the [devnet release
 
 In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
 
-There are 3 essential built-in map methods `insert!, remove!, contains!`. Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository.
+There are 3 essential built-in map methods `insert!, remove!, contains!`. Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository and the [unit tests here](https://github.com/alephium/alephium-web3/blob/master/test/contract.test.ts#L448-L477).
 
 ```rust
 Contract Foo() {
