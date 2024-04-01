@@ -1,6 +1,6 @@
 ---
-sidebar_position: 15
-title: Build dApp from scratch
+sidebar_position: 10
+title: Build dApp from Scratch
 sidebar_label: Build dApp from scratch
 ---
 

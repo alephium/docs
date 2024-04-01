@@ -1,7 +1,7 @@
 ---
 sidebar_position: 30
 title: Dust Amount
-sidebar_label: Dust Amount
+sidebar_label: Dust amount
 ---
 
 Alephium's unique

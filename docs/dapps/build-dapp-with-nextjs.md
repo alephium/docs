@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 15
 title: Build dApp with Nextjs
 sidebar_label: Build dApp with Nextjs
 ---
@@ -47,9 +47,9 @@ This will start both the Alephium full node and the [explorer
 backend](https://github.com/alephium/explorer-backend) on
 `devnet`. Explorer backend is needed for extension wallet to work.
 
-Now you can [compile](/dapps/getting-started.md#compiling-your-contract),
-[test](/dapps/getting-started.md#testing-your-contract) and
-[deploy](/dapps/getting-started.md#deploying-your-contract) your token
+Now you can [compile](/dapps/getting-started.md#compile-your-contract),
+[test](/dapps/getting-started.md#test-your-contract) and
+[deploy](/dapps/getting-started.md#deploy-your-contract) your token
 faucet contracts just as described in the [getting
 started](/dapps/getting-started.md) guide.
 
