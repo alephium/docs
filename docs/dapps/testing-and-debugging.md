@@ -230,8 +230,9 @@ contracts](/dapps/interact-with-contracts) for more details.
 
 ## Debugging
 
-Debug statement in Alephium has the same syntax as emitting
-events. For example:
+Debug statement in Alephium supports string interpolation. Printing
+debug messages has the same syntax as emitting [contract
+events](/dapps/events#contract-events). For example:
 
 ```rust
 Contract Math(mut counter: U256) {
@@ -242,10 +243,10 @@ Contract Math(mut counter: U256) {
     }
 }
 ```
-`add` function above is a pure function that doesn't update the state
-of the blockchain. When we integration test the `add` function, debug
-message will be printed out in both the terminal console and the full
-node log:
+In the example above, `add` function in `Math` contract is a pure
+function that doesn't update the state of the blockchain. When we test
+the `add` function using both unit and integration test, debug message
+will be printed out in both the terminal console and the full node log:
 
 ```bash
 # Your contract address should be different
@@ -253,10 +254,13 @@ node log:
 ```
 
 If `add` function does update the blockchain state, therefore
-requires `TxScript` to execute, then debug message will only be
-printed out in the full node log since the execution will not be
-carried out immediately.
+requires `TxScript` to execute, the debug message will only be
+printed out in the full node log for integration test because the
+execution doesn't happen right away so the result can not be returned
+to terminal console immediately. For unit tests, debug message
+will still be printed out in both the terminal console and the full
+node log.
 
-Under the hood, `Debug` is actually a special [system
+Under the hood, `Debug` is a special [system
 events](/dapps/events#system-events) which is only available in
 [devnet](/full-node/devnet).
