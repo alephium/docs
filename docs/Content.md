@@ -120,6 +120,8 @@ Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
 
 Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
+🧰 The Tools Thread - https://vxtwitter.com/alephium/status/1774812802265559313
+
 🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1758526298539098233
 
 Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
@@ -245,9 +247,11 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #2 - Rhone 
 
+Apr/24 Rhône Network Upgrade 🧵43 Storage Rent Fee Reduction - https://vxtwitter.com/alephium/status/1776255506849599836
+
 Jan/24 Rhône Network Upgrade 🧵#3 Gasless Transactions - https://vxtwitter.com/alephium/status/1752376284754420186
 
-Jan/24 Network Upgrade 🧵#2 Block Reduction - https://vxtwitter.com/alephium/status/1738220571832594612
+Jan/24 Network Upgrade 🧵#2 Block Time Reduction - https://vxtwitter.com/alephium/status/1738220571832594612
 
 Dec/23 Rhône Network Upgrade 🧵#1 Announcement- https://vxtwitter.com/alephium/status/1745820715054698901
 
@@ -394,6 +398,9 @@ Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.co
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
 
+Builders Highlight #9: Mobula
+https://medium.com/@alephium/builders-highlight-9-mobula-f9c45dc6c691
+
 💚 Builders highlight  #8 ⚙️ - ngu.money
 https://vxtwitter.com/alephium/status/1763586261707829394
 
@@ -403,23 +410,26 @@ https://vxtwitter.com/alephium/status/1757398937441607906?s=20
 Builders Highlight #6 - What the Duck 
 https://medium.com/@alephium/builders-highlight-6-what-the-duck-0aedc602ecfd
 
-Builders Highlight 5 - Deadrare
+Builders Highlight #5 - Deadrare
 https://medium.com/@alephium/builders-highlight-5-deadrare-d5ff90d6161e
 
-Builders Highlight 4 - No Trust Verify
+Builders Highlight #4 - No Trust Verify
 https://medium.com/@alephium/builders-highlight-4-no-trust-verify-9ea495ca826f
 
-Builders Highlight 3 - Ayin
+Builders Highlight #3 - Ayin
 https://medium.com/@alephium/builders-highlight-3-ayin-6be4a6bd4ec2
 
-Builders Highlight 2 - Alphpaca NFTs
+Builders Highlight #2 - Alphpaca NFTs
 https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
 
-Builders Highlight 1 - Sezame Wallet
+Builders Highlight #1 - Sezame Wallet
 https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #17, AlexandrianWisdom
+https://medium.com/@alephium/community-highlight-17-alexandrianwisdom-df44c791961f
 
 Community Highlight #16 - Mikael
 https://medium.com/@alephium/446980141ee3
