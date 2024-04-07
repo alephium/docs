@@ -187,7 +187,7 @@ Contract Add() {
 ```
 Since `add` function in `Math` contract not only updates the contract
 state but also transfer assets, we need to call it through
-[TxScript](/dapps/tx-script):
+[TxScript](/dapps/programming-model#txscript):
 
 ```rust
 TxScript AddScript(math: Math, x: U256, y: U256) {
@@ -198,7 +198,7 @@ In the integration test, we deploy both `Add` and `Math` contracts and
 then execute the `AddScript` script:
 
 ```typescript
-const [signer] = await getSigners(1)
+const signer = await getSigner()
 const { contractInstance: addContract } = await Add.deploy(signer, { initialFields: {} })
 const { contractInstance: mathContract } = await Math.deploy(signer, {
   initialFields: { add: addContract.contractId, counter: 0n },
@@ -215,8 +215,7 @@ const mathContractState = await mathContract.fetchState()
 expect(mathContractState.fields.counter).toEqual(1n)
 
 // contract balance in `Math` is updated
-const { balance } = await signer.nodeProvider.addresses.getAddressesAddressBalance(mathContract.address)
-expect(BigInt(balance)).toEqual(3n * ONE_ALPH)
+expect(BigInt(mathContractState.asset.alphAmount)).toEqual(3n * ONE_ALPH)
 
 // `Add` event in `Math` is emitted
 const { events } = await signer.nodeProvider.events.getEventsContractContractaddress(mathContract.address, { start: 0 })

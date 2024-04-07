@@ -18,7 +18,7 @@ transactions are mined with only the transaction ids returned to the
 caller.
 
 Interacting with contracts directly through the full node API can be
-tedious. Alephium's [Web3 SDK](/dapps/alephium-web3) abstrates away
+tedious. Alephium's [Web3 SDK](/dapps/alephium-web3) abstracts away
 many details by generating wrapper code for contracts and transaction
 scripts. Let's demonstrate its usefulness using the
 [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)
@@ -103,23 +103,20 @@ Contract TokenFaucet(
 
 The `TokenFaucet` contract has `5` public functions that only reads
 the contract states: `getTotalSupply`, `getSymbol`, `getName`,
-`getDecimals` and `balance`. It also has a function `withdraw`, which
-not updates the contract state, but also transfers assets.
+`getDecimals` and `balance`. It also has a function called `withdraw`,
+which not only updates the contract state, but also transfers assets.
 
-After [compiling](/dapps/getting-started#compile-your-contract) the
-contract, Alephium's [Web3 SDK](/dapps/alephium-web3) generates
-typescript class for the contract, which can be loaded in the
-
-It also has one method After `TokenFaucet` contract is compiled, a
+It also has one method After `TokenFaucet` contract is
+[compiled](/dapps/getting-started#compile-your-contract), a
 corresponding Typescript class is generated. We can get an instance of
 this class after deploying it to devnet:
 
 ```typescript
-import { DUST_AMOUNT } from '@alephium/web3
-import { getSigners } from '@alephium/web3-test'
+import { DUST_AMOUNT } from '@alephium/web3'
+import { getSigner } from '@alephium/web3-test'
 import { TokenFaucet, TokenFaucetTypes, Withdraw } from '../artifacts/ts'
 
-const [signer] = await getSigners(1)
+const signer = await getSigner()
 const deployResult = await TokenFaucet.deploy(signer, {
   initialFields: {
     symbol: stringToHex('TF'),
@@ -187,7 +184,7 @@ Alephium's SDK also generates a corresponding typescript class for the
 can use execute the transaction:
 
 ```typescript
-const [signer] = await getSigners(1)
+const signer = await getSigner()
 const withdrawResult = await Withdraw.execute(signer, {
   initialFields: { token: tokenFaucet.contractId, amount: 2n },
   attoAlphAmount: DUST_AMOUNT * 2n
@@ -258,9 +255,9 @@ about the APIs please refer to the [OpenAPI
 Documentation](https://wallet.mainnet.alephium.org/docs).
 
 Please read more detailed explanation about `TxScript`
-[here](/dapps/tx-script), a unique feature in Alephium that is more
-flexible and efficient way of creating transactions that interact with
-smart contracts.
+[here](/dapps/programming-model#txscript), a unique feature in
+Alephium that is more flexible and efficient way of creating
+transactions that interact with smart contracts.
 
 Events are crucial to build dApps, more information can be found
 [here](/dapps/events). 
