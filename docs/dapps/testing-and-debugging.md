@@ -1,6 +1,6 @@
 ---
 sidebar_position: 28
-title: Testing and debugging
+title: Testing and Debugging
 sidebar_label: Testing and debugging
 ---
 

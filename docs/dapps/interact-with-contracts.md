@@ -106,7 +106,7 @@ the contract states: `getTotalSupply`, `getSymbol`, `getName`,
 `getDecimals` and `balance`. It also has a function called `withdraw`,
 which not only updates the contract state, but also transfers assets.
 
-It also has one method After `TokenFaucet` contract is
+After `TokenFaucet` contract is
 [compiled](/dapps/getting-started#compile-your-contract), a
 corresponding Typescript class is generated. We can get an instance of
 this class after deploying it to devnet:
@@ -206,9 +206,9 @@ other useful information in the execution result include:
 - `gasAmount`: Gas cost of the transaction
 
 Function executed from `TxScript` can not return value to the caller
-directly because transaction will be processed later and the result is
-non-determistic depending on the future state of the blockchain when
-transaction is mined. `Events` are instead often used to gain insights
+directly because the transaction will be processed later and the result is
+non-deterministic depending on the future state of the blockchain when
+the transaction is mined. `Events` are instead often used to gain insights
 into the contract activities.
 
 ## Events Subscription
@@ -247,16 +247,16 @@ If there are more than one events emitted from the `TokenFaucet`
 contract, a function called `subscribeAllEvents` will also be
 generated to subscribe to all events emitted from the contract.
 
-## Futher Reading
+## Further Reading
 
 Alephium's [Web3 SDK](/dapps/alephium-web3) builds developer friendly
 abstractions on top of Alephium's full node APIs. For more details
 about the APIs please refer to the [OpenAPI
 Documentation](https://wallet.mainnet.alephium.org/docs).
 
-Please read more detailed explanation about `TxScript`
+Please read a more detailed explanation about `TxScript`
 [here](/dapps/programming-model#txscript), a unique feature in
-Alephium that is more flexible and efficient way of creating
+Alephium that is a more flexible and efficient way of creating
 transactions that interact with smart contracts.
 
 Events are crucial to build dApps, more information can be found
