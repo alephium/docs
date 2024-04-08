@@ -11,65 +11,33 @@ made in the [Ralph language](/ralph/getting-started) and [Alphred
 VM](/Content/#alphred-virtual-machine).
 
 Under [sUTXO](/Content/#stateful-utxo) model, assets are managed by
-UTXOs while contracts states are managed using account-based
+UTXOs while contract states are managed using account-based
 model. This brings a few interesting properties when it comes to
 programming:
 
-- Alephium supports Bitcoin like stateless programming purely done
+- Alephium supports Bitcoin-like stateless programming purely done
   within the scope of UTXOs. It supports its own version of
   [P2SH](https://learnmeabitcoin.com/technical/script/p2sh/) using
   Ralph language, which is much more powerful and dev friendly than
   Bitcoin script.
 - Alephium also supports EVM-style stateful programming that allows
   the manipulation of global contract state. However the fact that
-  assets are managed seperately using UTXOs not only removes a class
+  assets are managed separately using UTXOs not only removes a class
   of security and UX issues such as token approvals, but also makes
   many features possible at both the language and VM level, such as
   [Asset Permission System](/ralph/asset-permission-system).
-- The seperation of the assets and contract states, and the
+- The separation of the assets and contract states, and the
   combination of both stateless and stateful programming open up new
   possibilities for building dApps.
   
 Alephium's sharding architecture means that dApps, in some cases, need
 to be aware of the fact that Alephium currently runs 4 groups and 16
-chains. With continous improvements of the core infrastructure as well as
+chains. With continuous improvements of the core infrastructure as well as
 clever design from the dApps side, it is possible to achieve great
 balance between scalability and user experience.
 
 The goal of this guide is to explain some of Alephium's unique
 programming features.
-
-## AssetScript
-
-`AssetScript` allows Alephium to implement the equivalent of Bitcoin's
-[P2SH](https://learnmeabitcoin.com/technical/script/p2sh/)
-feature. In a nutshell, a `P2SH` UTXO stores the hash of a script that
-specifies the spending condition of this UTXO. When it comes time to
-spend such UTXOs, the script needs to be provided together with the
-required arguments to successfully execute the script.
-
-For example, Alephium's [Schnorr
-signature](https://en.wikipedia.org/wiki/Schnorr_signature) support is
-implemented using the following `AssetScript`:
-
-```rust
-AssetScript Schnorr(publicKey: ByteVec) {
-  pub fn unlock() -> () {
-    verifyBIP340Schnorr!(txId!(), publicKey, getSegregatedSignature!())
-  }
-}
-```
-As you can see, the script takes in a public key as parameter,
-verifies if the transaction signature is a valid Schnorr signature
-using the built-in function
-[verifyBIP340Schnorr](/ralph/built-in-functions#verifybip340schnorr). In
-order to spend a UTXO constructed using the hash of the script
-bytecode, a public key needs to be provided and the transaction
-needs to be signed with a valid Schnorr signature by its corresponding
-private key.
-
-`AssetScript` is stateless in the sense that it can not access
-anything outside of a given UTXO, including any contracts.
 
 ## TxScript
 
@@ -89,7 +57,7 @@ contracts. `TxScript` is also flexible and secure because it takes
 advantage of the full power of Ralph language and Alphred VM.
 
 As an example, following is the pseudo code of a `TxScript` that uses
-two DEXes to (naively) figure out the average exhange rate of USD to
+two DEXes to (naively) figure out the average exchange rate of USD to
 ALPH, and then donate $100 worth of ALPH to a charity:
 
 ```rust
@@ -104,7 +72,7 @@ TxScript Donate(dex1: Dex, dex2: Dex, charity: Charity) {
 Please see
 [here](/dapps/interact-with-contracts#txscript-transactions) for a
 more concrete example of how to interact with smart contract using
-`TxScript`. To better understand how assets flows from the inputs
+`TxScript`. To better understand how assets flow from the inputs
 through `Txscript` into the (fixed/generated) outputs, please read
 [Flow of Assets](/ralph/asset-permission-system#flow-of-assets).
 
@@ -123,10 +91,10 @@ for a more elaborate discussion.
 Under [sUTXO](/Content/#stateful-utxo) model, assets owned by regular
 addresses and contract addresses are both managed by UTXOs. The
 difference is that there is exactly one UTXO per contract address
-whereas regular address can have multiple UTXOs. 
+whereas regular addresses can have multiple UTXOs.
 
-A transaction under UTXO model have inputs and outputs. One important
-property of these transactions is that after asset is transferred to
+A transaction under the UTXO model has inputs and outputs. One important
+property of these transactions is that after assets are transferred to
 an output, the output can not be spent immediately within the same
 transaction.
 
@@ -143,11 +111,11 @@ transaction.
 This is fairly obvious for simple asset transfer. But this is also
 true when programming smart contracts. Here are a few examples:
 
-- If Alice recieves a loan from a lending platform, she can not use
+- If Alice receives a loan from a lending platform, she can not use
   the loan to by an NFT in the same transaction
 - If Bob withdraws asset from a HODL contract, Eve can not withdraw
   asset from the same HODL contract within the same transaction
-- If Alice transfers asset to Bob, Bob can not transfer the asset back
+- If Alice transfers assets to Bob, Bob can not transfer the asset back
   to Alice in the same transaction.
 
 This property is the reason why double dip issue and reentrancy
@@ -195,3 +163,35 @@ built-in function. The NFT sub-contract is created with one issued
 token to represent the NFT, and the NFT sub-contract can be referenced
 from the NFT collection contract using the
 [subContractId](/ralph/built-in-functions#subcontractid) function.
+
+## AssetScript
+
+`AssetScript` allows Alephium to implement the equivalent of Bitcoin's
+[P2SH](https://learnmeabitcoin.com/technical/script/p2sh/)
+feature. In a nutshell, a `P2SH` UTXO stores the hash of a script that
+specifies the spending condition of this UTXO. When it comes time to
+spend such UTXOs, the script needs to be provided together with the
+required arguments to successfully execute the script.
+
+For example, Alephium's [Schnorr
+signature](https://en.wikipedia.org/wiki/Schnorr_signature) support is
+implemented using the following `AssetScript`:
+
+```rust
+AssetScript Schnorr(publicKey: ByteVec) {
+  pub fn unlock() -> () {
+    verifyBIP340Schnorr!(txId!(), publicKey, getSegregatedSignature!())
+  }
+}
+```
+As you can see, the script takes in a public key as parameter,
+verifies if the transaction signature is a valid Schnorr signature
+using the built-in function
+[verifyBIP340Schnorr](/ralph/built-in-functions#verifybip340schnorr). In
+order to spend a UTXO constructed using the hash of the script
+bytecode, a public key needs to be provided and the transaction
+needs to be signed with a valid Schnorr signature by its corresponding
+private key.
+
+`AssetScript` is stateless in the sense that it can not access
+anything outside of a given UTXO, including any contracts.

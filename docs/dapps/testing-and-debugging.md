@@ -7,7 +7,7 @@ sidebar_label: Testing and debugging
 Testing is essential to ensure the functionality, quality and security
 of any software products. This is especially true when it comes to
 smart contracts development because once deployed, smart contracts are
-much more diffcult, if possible, to update compared to traditional
+much more difficult, if possible, to update compared to traditional
 software, and bugs in them can potentially lead to significant
 financial losses.
 
@@ -27,7 +27,7 @@ decisions when it comes to its testing framework:
   [devnet](/full-node/devnet), which has the same codebase as
   Alephium `mainnet` with differences only in configurations.
 
-Alephium also supports the ability to emit debug statement in the
+Alephium also supports the ability to emit debug statements in the
 smart contracts, which is very useful to diagnose issues during
 development.
 
@@ -50,8 +50,8 @@ Contract Math(mut counter: U256) {
 ```
 
 The `Math` contract has a `add` function that adds two numbers
-together. Everytime it's called, it also increments the `counter` and
-emit an `Add` event. Here is how we can test it using [Web3
+together. Every time it's called, it also increments the `counter` and
+emits an `Add` event. Here is how we can test it using [Web3
 SDK](/dapps/alephium-web3):
 
 ```typescript
@@ -110,12 +110,12 @@ transaction, in this case 2 `ALPH` from `testAddress` which will also
 be the `callerAddress` when calling `add` function because it's in the
 first input of the `inputAssets`. After executing the test, we can
 verify that the balance of the first output is increased to 3 `ALPH` since
-`Math` contract receives 1 `ALPH` for running the `add` function. The
+the `Math` contract receives 1 `ALPH` for running the `add` function. The
 balance of the second output becomes less because `testAddress` spends
 1 `ALPH` as well as the gas fee.
 
-Now that we tested the assets, how about when `Math` contract relies
-on another contract to do the job?
+Now that we tested the assets, how about when the `Math` contract
+relies on another contract to do the job?
 
 ```rust
 Contract Math(add: Add, mut counter: U256) {
@@ -155,7 +155,7 @@ expect(result.returns).toEqual(3n)
 ```
 `Add.stateForTest({})` creates a state of the `Add` contract that we
 can pass on to the `existingContracts` parameter. We also need to pass
-`addState.contractId` as a initial field to the `Math` contract. After
+`addState.contractId` as an initial field to the `Math` contract. After
 executing the test, we can verify the result with the same assertions
 as before.
 
@@ -242,7 +242,7 @@ Contract Math(mut counter: U256) {
     }
 }
 ```
-In the example above, `add` function in `Math` contract is a pure
+In the example above, the `add` function in `Math` contract is a pure
 function that doesn't update the state of the blockchain. When we test
 the `add` function using both unit and integration test, debug message
 will be printed out in both the terminal console and the full node log:
@@ -252,11 +252,11 @@ will be printed out in both the terminal console and the full node log:
 > Contract @ vrcKqNuMrGpA32eUgUvAB3HBfkN4eycM5uvXukwn5SxP - 1 + 2 = 3
 ```
 
-If `add` function does update the blockchain state, therefore
+If the `add` function does update the blockchain state, therefore
 requires `TxScript` to execute, the debug message will only be
 printed out in the full node log for integration test because the
 execution doesn't happen right away so the result can not be returned
-to terminal console immediately. For unit tests, debug message
+to the terminal console immediately. For unit tests, debug messages
 will still be printed out in both the terminal console and the full
 node log.
 

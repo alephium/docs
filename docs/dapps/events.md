@@ -10,7 +10,7 @@ critical role in facilitating efficient and transparent communication
 between smart contracts and off-chain applications.
 
 There are many use cases for events: DEX can use events to keep track
-of all the swaps happened in a token pair. NFT marketplace can use
+of all the swaps happening in a token pair. NFT marketplace can use
 events to store all the NFT listings. Oracle can use events to signal
 requests of certain offchain info from smart contracts. Bridge can use
 events to represent certain actions that require consensus from all
@@ -52,7 +52,7 @@ Contract Admin(mut admin: Address) {
 }
 ```
 
-In this example, an `AdminUpdated` event is emitted everytime `admin`
+In this example, an `AdminUpdated` event is emitted every time `admin`
 is updated. This information can be listened to by the off-chain
 applications to update their user interfaces or for auditing.
 
@@ -80,7 +80,7 @@ In `AdminUpdated`'s [event object](#event-data-structure),
 `contractAddress` represents the contract address of `adminInstance`,
 `eventIndex` is `0` since `AdminUpdated` is the first event defined in
 the `Admin` contract (0-based index). `fields` contains two
-addresses: one for the prevous admin, the other for the new admin.
+addresses: one for the previous admin, the other for the new admin.
 
 ## System Events
 
@@ -102,8 +102,8 @@ In the example above, the `Deploy` transaction script creates a new
 `Foo` contract from its contract bytecode. `Foo` contract has no
 contract fields, which is why `#00` is passed in as arguments to the
 [createContract](/ralph/built-in-functions#createcontract) function. A
-`ContractCreatedEvent` system event is emitted after `Foo` contract is
-created.
+`ContractCreatedEvent` system event is emitted after the `Foo`
+contract is created.
 
 Alephium's [Web3 SDK](/dapps/alephium-web3) provides a helper function
 to subscribe to the `ContractCreatedEvent` event:
@@ -143,7 +143,7 @@ Contract Foo() {
 }
 ```
 
-In the example above, after `destroy` function is called, `Foo`
+In the example above, after the `destroy` function is called, `Foo`
 contract will be destroyed and a `ContractDestroyedEvent` system event
 will be emitted by the Alephium full node.
 
@@ -170,6 +170,42 @@ In `ContractDestroyedEvent`'s [event object](#event-data-structure),
 `ContractDestroyedEvent` event. `contractAddress` is set to a special
 value calculated based on the `eventIndex` and contract
 group. `fields` contains the address of the destroyed contract.
+
+## Configuration
+
+Alephium's full node allows flexible configuration of how events
+should be stored and indexed. By default it doesn't store events to
+keep the full node lightweight.
+
+You can enable storing events using the following flag:
+
+```
+alephium.node.event-log.enabled=true
+```
+
+This allows us to query [contract
+events](/dapps/events#contract-events) and [system
+events](/dapps/events#system-events) based on the contract
+address.
+
+To enable querying events based on transaction id and block hash, you
+need to enable the following flags:
+
+```
+alephium.node.event-log.index-by-tx-id = true
+alephium.node.event-log.index-by-block-hash = true
+```
+
+By default, events emitted from all contracts are stored. But if you
+know what contracts you are interested in getting events for, you can
+use the following configuration:
+
+```
+alephium.node.event-log.contract-addresses = [$CONTRACT_ADDR_1, $CONTRACT_ADDR_2]
+```
+
+This way, you will save disk space because your full node only stores
+the events you are interested in.
 
 ## Further Reading
 
