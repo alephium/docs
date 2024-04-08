@@ -205,7 +205,7 @@ alephium.node.event-log.contract-addresses = [$CONTRACT_ADDR_1, $CONTRACT_ADDR_2
 ```
 
 This way, you will save disk space because your full node only stores
-the events you are interested in.
+the events emitted from the contracts specified here.
 
 ## Further Reading
 
