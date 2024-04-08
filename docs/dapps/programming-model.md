@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-title: Programming model
+title: Programming Model
 sidebar_label: Programming model
 ---
 
