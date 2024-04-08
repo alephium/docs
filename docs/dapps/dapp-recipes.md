@@ -1,7 +1,7 @@
 ---
-sidebar_position: 30
+sidebar_position: 40
 title: Dapp Recipes
-sidebar_label: Dapp Recipes
+sidebar_label: Dapp recipes
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";

@@ -1,7 +1,7 @@
 ---
-sidebar_position: 30
+sidebar_position: 35
 title: Dust Amount
-sidebar_label: Dust Amount
+sidebar_label: Dust amount
 ---
 
 Alephium's unique
@@ -24,9 +24,9 @@ especially when it comes to IO. Maintaining a relatively small UTXO
 set is important for Alephium to keep becoming the best version of
 itself: efficient, performant and scalable. 
 
-UTXO with very small amount of value can also become uneconomical to
+UTXO with a very small amount of value can also become uneconomical to
 spend if the transaction fee of spending an UTXO is more than the
-value of the UTXO itself. Over time this can potentialy create a
+value of the UTXO itself. Over time this can potentially create a
 situation where users are not incentive-compatible with the long term
 health of the system.
 
@@ -80,7 +80,7 @@ that the following transaction are invalid:
 ```
 
 The second and third case illustrate the situation where even if
-user's intention is to send token A, at least a dust amount of ALPH
+the user's intention is to send token A, at least a dust amount of ALPH
 needs to be sent as well. Button line is, each regular UTXO at least
 requires `0.001` ALPH or else the transaction will fail. This simple
 approach ensures that there is an upper bound to the size of the UTXO
