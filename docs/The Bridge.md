@@ -2,15 +2,11 @@
 
 ## Tutorials & Links
 
-Bridge Website : https://bridge.alephium.org/#/
-
-Bridge Explorer Website : https://explorer.bridge.alephium.org/
-
-Bridge Tutorial Article ( Mainnet ) : https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
-
-The Alephium Bridge How does it work? How to use it? ( Article ) : https://medium.com/@alephium/the-alephium-bridge-a787d90b2e4a
-
-Bridge Tutorial ( Mainnet ) : https://www.youtube.com/watch?v=xoYVzbwBAjg 
+- [Bridge Website](https://bridge.alephium.org/#/)
+- [Bridge Explorer Website](https://explorer.bridge.alephium.org/)
+- [The Alephium Bridge: How does it work? How to use it?](https://medium.com/@alephium/the-alephium-bridge-a787d90b2e4a)
+- [Bridge Tutorial (Article)](https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a)
+- [Bridge Tutorial (Video)](https://www.youtube.com/watch?v=xoYVzbwBAjg)
  
 ## Bridge FAQ
 

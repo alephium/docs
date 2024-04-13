@@ -18,8 +18,6 @@ For mining in production please visit [Solo Mining Guide](mining/solo-mining-gui
 
 You must first follow the steps in the [Full-node Guide](full-node/getting-started.md), in order to download, configure, start your node and use Swagger (or any other OpenAPI clients).
 
-Please note that the default address and port for the REST API is [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
-
 ## Start mining
 
 Please make sure that your local node is fully synced before mining. We will add validation for this in our next major release.

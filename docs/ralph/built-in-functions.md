@@ -605,11 +605,15 @@ Locks the current approved assets.
 ### payGasFee
 
 ```Rust
-fn payGasFee!() -> ()
+fn payGasFee!(payer:Address, amount:U256) -> ()
 ```
 
 Pay gas fee.
 
+> @param **payer** *payer of the gas*
+>
+> @param **amount** *the amount of gas to be paid in ALPH*
+>
 > @returns
 
 ---

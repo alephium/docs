@@ -45,9 +45,7 @@ Your explorer-backend will start to sync with the full node. It might take long 
 
 ## Start from a snapshot
 
-To reduce the first syncing time, you can restore one of our snapshot.
-
-Snapshots are available at https://archives.alephium.org/#mainnet/explorer-db/
+To reduce the first syncing time, you can restore one of our snapshot. Snapshots are available [here](https://archives.alephium.org/#mainnet/explorer-db/).
 
 Download the latest one, extract it, and run:
 

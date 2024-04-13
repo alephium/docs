@@ -17,8 +17,9 @@ an App.
 
 ## Get the Full Node App from the Marketplace
 
-[https://home.runonflux.io/apps/marketplace?q=alephium](https://home.runonflux.io/apps/marketplace?q=alephium)
-Select the App named *AlephiumNode*.
+Go to the [Flux
+Marketplace](https://home.runonflux.io/apps/marketplace?q=alephium)
+and select the App named *AlephiumNode*.
 
 ## Expose the API
 
