@@ -116,7 +116,13 @@ And if you’d rather join a pool, you will find list of available pools in the 
 
 ---
 
-## [Buy/sell][markets]
+## Exchanges
+
+###CEXs
+The full list of centralized exchanges is available on [CoinMarketCap][CoinMarketCap] and [Coingecko][Coingecko]
+
+###DEXs
+ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALPH). Full list of decentralized exchanges available on [Coingecko][Coingecko].
 
 ⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
 
@@ -210,6 +216,8 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 [wormhole-fork-repo]: https://github.com/alephium/wormhole-fork
 [brand-guide]: https://github.com/alephium/alephium-brand-guide
 [reward-grant]: https://github.com/alephium/community/tree/master
-[markets]: https://www.coingecko.com/en/coins/alephium#markets
+[Coingecko]: https://www.coingecko.com/en/coins/alephium#markets
+[CoinMarketCap]: https://coinmarketcap.com/currencies/alephium/#Markets
 [roadmap]: https://alephium.org/#next
 [milestones]: https://alephium.org/#milestones
+[AYIN]: https://www.ayin.app/
