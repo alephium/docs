@@ -124,9 +124,9 @@ You can create, sign, and broadcast transactions following this [guide](./exchan
 
 0.0001
 
-### Is there any rent or reservation?
+### Is there any dust limit or reservation?
 
-Yes, at least 0.001 ALPH for each output/UTXO.
+Yes, the dust amount is 0.001 ALPH and each at output/UTXO needs least 0.001 ALPH.
 
 ### Is there a timeout mechanism for a transaction in tx pool, and if so, how long does it deal?
 Yes, by default tx will be removed from mempool if it is not mined after 2 hours.
