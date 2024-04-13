@@ -43,8 +43,8 @@ If your translation is a mere Google translation without any correction, the Pul
 
 1. Find the ISO 689-1 two-letter code for your language [here](https://www.loc.gov/standards/iso639-2/php/English_list.php)
 2. Create a folder for the documents inside the `i18n` folder. For example german: `mkdir -p i18n/<ISO639-1>/docusaurus-plugin-content-docs/current` (_note that you will need to replace `<ISO639-1>` with the actual two-letter international code_).
-3. Copy all the content from `/docs` into the new folder: `cp -r docs i18n/<ISO639-1>/docusaurus-plugin-content-docs/current/` (_again, note that you will need to replace `<ISO639-1>` with the actual two-letter international code_).
-4. Remove all the `_category_.json` files from the subfolders inside `i18n/<ISO639-1>/docusaurus-plugin-content-docs/current`.
+3. Copy all the content from `/docs` into the new folder: `cp -r docs/ i18n/<ISO639-1>/docusaurus-plugin-content-docs/current/` (_again, note that you will need to replace `<ISO639-1>` with the actual two-letter international code_).
+4. Remove all the `_category_.json` files from the subfolders inside `i18n/<ISO639-1>/docusaurus-plugin-content-docs/current`: `find i18n/<ISO639-1>/docusaurus-plugin-content-docs/current -type f -name "_category_.json" -exec rm {} \;`
 5. Build the translation files for the navbar and the footer: `npm run write-translations -- --locale <ISO639-1>`.
 
 Now you can start translating any and all files in `i18n/<ISO639-1>/docusaurus-plugin-content-docs/current`
