@@ -116,9 +116,9 @@ No.
 
 ## Transactions
 
-### Types of transfers
+### Simple asset transfer
 
-Simple assets transfer can be created using this [endpoint](./exchange#create-a-transaction).
+Simple transfer can be created using this [endpoint](./exchange#create-a-transaction).
 
 ### Transfer process: sign transaction offline and broadcast it online
 
