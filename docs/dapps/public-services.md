@@ -25,10 +25,10 @@ Mind that the faucet is throttling requests for few minutes.
 ## Node and Explorer APIs
 
 Currently, the following API services are maintained. Note that all APIs are rate limited to prevent spam.
-* `https://wallet.mainnet.alephium.org` for mainnet with node v2.X ([Doc](https://wallet.mainnet.alephium.org/docs))
-* `https://wallet.testnet.alephium.org` for testnet with node v2.X ([Doc](https://wallet.testnet.alephium.org/docs))
-* `https://backend.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Doc](https://backend.mainnet.alephium.org/docs))
-* `https://backend.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Doc](https://backend.testnet.alephium.org/docs))
+* `https://wallet-v20.mainnet.alephium.org` for mainnet with node v2.X ([Doc](https://wallet.mainnet.alephium.org/docs))
+* `https://wallet-v20.testnet.alephium.org` for testnet with node v2.X ([Doc](https://wallet.testnet.alephium.org/docs))
+* `https://backend-v113.mainnet.alephium.org` for mainnet with explorer backend v1.13.X ([Doc](https://backend.mainnet.alephium.org/docs))
+* `https://backend-v113.testnet.alephium.org` for testnet with explorer backend v1.13.X ([Doc](https://backend.testnet.alephium.org/docs))
 
 As the project is still under active development, all APIs are versioned. Typically, only the latest versions are maintained, but any API upgrades will be announced to the community in advance.
 
