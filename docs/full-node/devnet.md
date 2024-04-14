@@ -95,7 +95,7 @@ You can now access the full node's API at: `http://localhost:22973/docs`
 
 ### Explorer-backend
 
-Requirement: https://www.postgresql.org/
+Requirement: [PostgreSQL](https://www.postgresql.org/)
 
 Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest)
 

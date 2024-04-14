@@ -4,7 +4,7 @@ title: Exchange
 sidebar_label: Exchange
 ---
 
-Integration prototype with Alephium's SDK: https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts
+There is an [integration prototype](https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts) using Alephium's SDK.
 
 This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
 

@@ -112,7 +112,7 @@ This is fairly obvious for simple asset transfer. But this is also
 true when programming smart contracts. Here are a few examples:
 
 - If Alice receives a loan from a lending platform, she can not use
-  the loan to by an NFT in the same transaction
+  the loan to buy an NFT in the same transaction
 - If Bob withdraws asset from a HODL contract, Eve can not withdraw
   asset from the same HODL contract within the same transaction
 - If Alice transfers assets to Bob, Bob can not transfer the asset back

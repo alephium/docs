@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 # Solo Mining Guide
 
-You must first follow the steps in the [Full Node Starter Guide](full-node/getting-started.md) in order to download, start your node and use Swagger [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs).
+You must first follow the steps in the [Full Node Starter Guide](full-node/getting-started.md) in order to download, start your node and use [Swagger UI](http://127.0.0.1:12973/docs).
 
 ## Mining information
 
@@ -76,13 +76,13 @@ If you see `"synced": true` in the response, then you are ready to go.
 
 ### Nvidia GPU
 
-Please follow the instructions on [https://github.com/alephium/gpu-miner](https://github.com/alephium/gpu-miner#readme) to run the gpu miner for Nvidia GPUs.
+Please follow the instructions on [GPU miner](https://github.com/alephium/gpu-miner#readme) to run the gpu miner for Nvidia GPUs.
 
-Alternatively, you could run the gpu-miner with docker by following the documents here [https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional)
+Alternatively, you could run the gpu-miner with docker by following the documents [here](https://github.com/alephium/alephium/tree/master/docker#gpu-miner-optional).
 
 ### AMD GPU
 
-Please follow the instructions on [https://github.com/alephium/amd-miner](https://github.com/alephium/amd-miner#readme) to run the gpu miner for AMD GPUs. Note that the performance of AMD miner is not in par with Nvidia miner.
+Please follow the instructions on [AMD miner](https://github.com/alephium/amd-miner#readme) to run the gpu miner for AMD GPUs. Note that the performance of AMD miner is not in par with Nvidia miner.
 
 If you have any questions, feel free to reach out to the developers on [Discord](https://alephium.org/discord).
 

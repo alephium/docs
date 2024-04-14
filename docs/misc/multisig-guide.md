@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 Alephium is supporting `m-of-n` multi-signature addresses.
 
-You can find the related command for multisig at [http://127.0.0.1:12973/docs](http://127.0.0.1:12973/docs) under the `Multi-signature` section. Make sure that your full node is running so that you can access the Swagger UI.
+You can find the related command for multisig [here](http://127.0.0.1:12973/docs/#/Multi-signature). Make sure that your full node is running so that you can access the Swagger UI.
 
 ## Create a multisig address
 
