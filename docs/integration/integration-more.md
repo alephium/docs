@@ -68,9 +68,9 @@ For customize the RPC port: add this line `alephium.network.rest-port = PORT` to
 
 ### RPC/SDK documentation link
 
-After running the full node, you can access the API doc at `http://full-node-ip:port/docs`.
+After running the full node, you can access the API doc at `http://full-node-ip:port/docs` or using [public fullnode](https://wallet.mainnet.alephium.org/docs).
 
-[JS/TS SDK documentation](https://github.com/alephium/alephium-web3).
+[JS/TS SDK](https://github.com/alephium/alephium-web3).
 
 ### Does the fullnode need to expose its port to the outside? If so, is it acceptable for the machine to have a NAT IP?
 
@@ -87,7 +87,7 @@ No, it’s not necessary.
 
 Address is base58 encoded string, there is no max length for address, but in most case the decoded address length is 33 bytes.
 
-There is a utility function in the TS SDK. [Link](https://github.com/alephium/alephium-web3/blob/v0.23.0/packages/web3/src/utils/exchange.ts#L23-L41)
+There is a utility function in the TS SDK. [Link](https://github.com/alephium/alephium-web3/blob/31823ffdc7e8c430e5d27f7ac980db3529724ef4/packages/web3/src/utils/exchange.ts#L23-L41)
 
 ### Access the address history
 
@@ -138,7 +138,7 @@ You can customize this config by add this line `alephium.mempool.unconfirmed-tx-
 
 ### Access the detailed information of a transaction
 
-You can get the tx details using this endpoint: `https://full-node-ip:port/transactions/details/YOUR-TX-ID`
+You can get the tx details using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Transactions/getTransactionsDetailsTxid)
 
 ### How to determine if a transaction failed
 
@@ -155,7 +155,7 @@ Alephium is a UTXO-based blockchain, recharging can be avoided by ensuring the s
 
 ### Get highest blocks
 
-You can get the current height using this endpoint: `http://full-node-ip:port/blockflow/chain-info?fromGroup=0&toGroup=0`, you need to replace the `fromGroup` and `toGroup` params as needed, which can be any value of [0, 1, 2, 3].
+You can get the current height using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Blockflow/getBlockflowChain-info)`, you need to replace the `fromGroup` and `toGroup` params as needed, which can be any value of [0, 1, 2, 3].
 
 ### What mechanism is in place to protect Alephium against 51% attack or to avoid chain forking ?
 
