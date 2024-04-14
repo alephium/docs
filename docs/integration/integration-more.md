@@ -17,21 +17,21 @@ sidebar_label: More and Troubleshooting
 
 ## Public API interface URL
 
-URL: https://wallet-v20.mainnet.alephium.org
+URL: https://wallet.mainnet.alephium.org
 
 All public APIs are listed and updated on the [Public services](../dapps/public-services.md) page.
 
 ## Official wallets
 
-Official desktop wallet: https://github.com/alephium/desktop-wallet/releases/latest
+[Official desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
 
 Official mobile wallet:
-* Android: https://play.google.com/store/apps/details?id=org.alephium.wallet
-* Apple: https://apps.apple.com/us/app/alephium-wallet/id6469043072
+* [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
+* [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
 Official web extension wallet:
-* Chrome: https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj
-* Firefox: https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/
+* [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
+* [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 
 ## Fullnode 
 
@@ -72,7 +72,7 @@ After running the full node, you can access the API doc at `http://full-node-ip:
 
 [JS/TS SDK documentation](https://github.com/alephium/alephium-web3).
 
-### Does the wallet node need to expose its port to the outside? If so, is it acceptable for the machine to have a NAT IP?
+### Does the fullnode need to expose its port to the outside? If so, is it acceptable for the machine to have a NAT IP?
 
 Yes and NAT IP is ok.
 
@@ -87,23 +87,27 @@ No, it’s not necessary.
 
 Address is base58 encoded string, there is no max length for address, but in most case the decoded address length is 33 bytes.
 
-There is a utility function in the TS SDK for it: `https://github.com/alephium/alephium-web3/blob/v0.23.0/packages/web3/src/utils/exchange.ts#L23-L41`.
+There is a utility function in the TS SDK. [Link](https://github.com/alephium/alephium-web3/blob/v0.23.0/packages/web3/src/utils/exchange.ts#L23-L41)
 
 ### Access the address history
 
 You can access the address history in two ways:
-* You can get the address history from the explorer, but you will need to run your own explorer-backend, installation [documentation](../explorer-backend/getting-started). Endpoint: `https://backend-v113.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressTransactions`.
+* You can get the address history from the explorer, but you will need to run your own explorer-backend, installation [documentation](../explorer-backend/getting-started). [Endpoint](https://backend.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressTransactions).
 * You can maintain your own database for that. Whenever you receive a new deposit.
 
 ### Access the balance of an address
 
-You can get the balance using this endpoint: `https://full-node-ip:port/addresses/YOUR-ADDRESS/balance`.
+You can get the balance using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressBalance).
+
+### Get the UTXOs of an address
+
+You can get the UTXOs using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressUtxos)
 
 ### Restoring and recovering Wallets
 
 You could restore your Wallets with your secret mnemonic or private keys:
-* SDK wallet: https://github.com/alephium/alephium-web3/blob/master/packages/web3-wallet/src/hd-wallet.ts#L112-L185
-* Full node wallet: https://wallet-v20.mainnet.alephium.org/docs/#/Wallets/putWallets
+* [SDK wallet](https://github.com/alephium/alephium-web3/blob/713f48088653a637aca15cbbfde1601207fe6940/packages/web3-wallet/src/hd-wallet.ts#L112-L185)
+* [Full node wallet](https://wallet.mainnet.alephium.org/docs/#/Wallets/putWallets)
 
 ### Does the Wallet supports memo function?
 
@@ -114,7 +118,7 @@ No.
 
 ### Types of transfers
 
-Simple token transfer can be created using this [endpoint](./exchange#create-a-transaction).
+Simple assets transfer can be created using this [endpoint](./exchange#create-a-transaction).
 
 ### Transfer process: sign transaction offline and broadcast it online
 
