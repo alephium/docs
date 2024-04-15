@@ -7,7 +7,7 @@ sidebar_label: Interact with contracts
 <UntranslatedPageText />
 
 Alephium's full node provides a set of
-[APIs](https://wallet.mainnet.alephium.org/docs/#/Contracts) to
+[APIs](https://node.mainnet.alephium.org/docs/#/Contracts) to
 interact with the deployed contracts. These interactions can be
 divided into two categories depending on whether they intend to update
 the state of the blockchain: *Contract calls* are read-only
@@ -252,7 +252,7 @@ generated to subscribe to all events emitted from the contract.
 Alephium's [Web3 SDK](/dapps/alephium-web3) builds developer friendly
 abstractions on top of Alephium's full node APIs. For more details
 about the APIs please refer to the [OpenAPI
-Documentation](https://wallet.mainnet.alephium.org/docs).
+Documentation](https://node.mainnet.alephium.org/docs).
 
 Please read a more detailed explanation about `TxScript`
 [here](/dapps/programming-model#txscript), a unique feature in
