@@ -212,7 +212,7 @@ the events emitted from the contracts specified here.
 The event subscription functions in Alephium's [Web3
 SDK](/dapps/alephium-web3) are built on top of Alephium's full node
 APIs. For more details about the APIs please refer to the [OpenAPI
-Documentation](https://wallet.mainnet.alephium.org/docs).
+Documentation](https://node.mainnet.alephium.org/docs).
 
 Other than `ContractEvent` and `SystemEvent`, there is in fact another
 (special) system event called `DebugEvent`, please refer to
