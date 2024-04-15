@@ -257,7 +257,19 @@ console.log(`TokenFaucet contract id: ${result.contractInstance.contractId}`)
 // TokenFaucet contract id: d6b3667c6eb5fdab1856ce7bbe75406ce9543bcbc57deaabd4c521ba4fce3b00
 ```
 
-Similarly, you can also load a `TxScript` from artifacts and call contracts:
+You can call contract method:
+
+```typescript
+import { addressFromContractId, callMethod } from '@alephium/web3'
+
+const tokenFaucetContractId = 'd6b3667c6eb5fdab1856ce7bbe75406ce9543bcbc57deaabd4c521ba4fce3b00'
+const contractInstance = contractFactory.at(addressFromContractId(tokenFaucetContractId))
+const result = await callMethod(contractFactory, contractInstance, 'getName', {}, () => tokenFaucetContract)
+console.log(`Token name: ${Buffer.from(result.returns as string, 'hex').toString('utf8')}`)
+// Token name: TokenFaucet
+```
+
+Similarly, you can also load a `TxScript` from artifacts and send transactions:
 
 ```typescript
 import { Script, ExecutableScript } from '@alephium/web3'
