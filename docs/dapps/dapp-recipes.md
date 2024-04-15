@@ -347,8 +347,8 @@ expect(contractState1.fields.balance).toEqual(8n)
 The web3 SDK provides a few utility functions to convert between currency and numbers
 
 ```Typescript
-convertToAttoAlph(1.23) // 1230000000000000000
-convertToAlph(1230000000000000000) // 1.23
+convertAlphAmountWithDecimals(1.23) // 1230000000000000000
+prettifyAttoAlphAmount(1230000000000000000) // 1.23
 number256ToNumber(1230000000000000000, 18) // 1.23
 ```
 
