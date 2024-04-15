@@ -126,7 +126,7 @@ You can create, sign, and broadcast transactions following this [guide](./exchan
 
 ### Transaction precision
 
-0.0001
+10^-18
 
 ### Is there any dust limit or reservation?
 
