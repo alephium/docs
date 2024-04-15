@@ -220,6 +220,63 @@ const result = await Debug.tests.debug()
 console.log(result.debugMessages)
 ```
 
+## Load contract/script from artifacts
+
+If you only have compiled artifacts and no contract/script source code, you can load contracts from artifacts.
+
+Here's an example of loading a contract from artifacts and deploying it:
+
+```typescript
+import { ContractFactory, ContractInstance, Fields } from '@alephium/web3'
+import { testPrivateKey } from '@alephium/web3-test'
+import { PrivateKeyWallet } from '@alephium/web3-wallet'
+import { default as tokenFaucetJson } from '../artifacts/TokenFaucet.ral.json'
+
+class TokenFaucetInstance extends ContractInstance {}
+class TokenFaucetFactory extends ContractFactory<TokenFaucetInstance, Fields> {
+  override at(address: string): TokenFaucetInstance {
+    return new TokenFaucetInstance(address)
+  }
+}
+
+const signer = new PrivateKeyWallet({ privateKey: testPrivateKey })
+const tokenFaucetContract = Contract.fromJson(tokenFaucetJson)
+const contractFactory = new TokenFaucetFactory(tokenFaucetContract)
+const result = await contractFactory.deploy(signer, {
+  initialFields: {
+    symbol: Buffer.from('TF', 'utf8').toString('hex'),
+    name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
+    decimals: 0n,
+    supply: 100n,
+    balance: 100n,
+    __stdInterfaceId: '0001' // the id for fungible token standard
+  },
+  issueTokenAmount: 100n
+})
+console.log(`TokenFaucet contract id: ${result.contractInstance.contractId}`)
+// TokenFaucet contract id: d6b3667c6eb5fdab1856ce7bbe75406ce9543bcbc57deaabd4c521ba4fce3b00
+```
+
+Similarly, you can also load a `TxScript` from artifacts and call contracts:
+
+```typescript
+import { Script, ExecutableScript } from '@alephium/web3'
+import { default as withdrawJson } from '../artifacts/Withdraw.ral.json'
+
+const tokenFaucetContractId = 'd6b3667c6eb5fdab1856ce7bbe75406ce9543bcbc57deaabd4c521ba4fce3b00'
+const withdrawScript = Script.fromJson(withdrawJson)
+const script = new ExecutableScript(withdrawScript)
+const result = await script.execute(signer, {
+  initialFields: {
+    token: tokenFaucetContractId,
+    amount: 1n
+  },
+  attoAlphAmount: DUST_AMOUNT
+})
+console.log(`Tx id: ${result.txId}`)
+// Tx id: 27528a56ecf4993248ec9467ee1dbb6122124c677d9e0e7cc12158dec8f5b4e9
+```
+
 ## Transaction
 
 ### Query transaction status
@@ -347,9 +404,9 @@ expect(contractState1.fields.balance).toEqual(8n)
 The web3 SDK provides a few utility functions to convert between currency and numbers
 
 ```Typescript
-convertAlphAmountWithDecimals(1.23) // 1230000000000000000
-prettifyAttoAlphAmount(1230000000000000000) // 1.23
-number256ToNumber(1230000000000000000, 18) // 1.23
+convertAlphAmountWithDecimals(1.23) // 1230000000000000000n
+prettifyAttoAlphAmount(1230000000000000000n) // '1.23'
+number256ToNumber(1230000000000000000n, 18) // 1.23
 ```
 
 ### Rate limit
