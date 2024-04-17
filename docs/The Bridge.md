@@ -22,7 +22,7 @@ In most cases, waiting a little bit longer to redeem your tokens is enough.
 
 If it still doesn’t work, please try to disconnect & reconnect your wallets to the bridge, and try to redeem again (see
 
-If that doesn’t work, open an issue here.
+If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
 
 ### 2. The Bridge alerted me that I need to create a new wallet address! What does that mean? 
@@ -78,7 +78,7 @@ Bridging from ALPH to ETH, will take a bit more time. The transaction needs to m
 - “Issue 1. I have waited long enough, and it is not letting me redeem! What do I do?”
 - “Issue 6. I am getting a VAA error! And I can't redeem.” 
 
-If that doesn’t work, open an issue here.
+If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
 ### 6. I am getting a VAA error! And I can't redeem.
 
@@ -90,7 +90,7 @@ If you are getting a VAA error, and waiting before trying again didn’t work, t
 - Recover your operation from the “Transactions” tab.
 - Try again.
 
-If that doesn’t work, open an issue here.
+If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
 ### 7. Can we only bridge USDT from ETH to ALPH?
 
