@@ -172,7 +172,7 @@ Contract Foo() {
 
 ## Operators
 
-### Arith operators
+### Arithmetic operators
 
 There are arithmetic operators such as `+`, `-`, `*`, `/`, `**`, and `%` available for `I256` and `U256` types, and these operators will check for overflow at runtime.
 
