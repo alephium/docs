@@ -202,7 +202,7 @@ Note that the comparison operators cannot be used with array types or struct typ
 
 ### Bit operators
 
-Ralph supports bit operators such as `&`, `|`, `^`, `<<`, and `>>`, here are some examples:
+Ralph supports bit operators such as `&`, `|`, `^`, `<<`, and `>>` only for the `U256` type, here are some examples:
 
 ```rust
 assert!(0xff & 0xf0 == 0xf0, 0)
