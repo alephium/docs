@@ -187,7 +187,7 @@ i256Min!() - 1i // overflow
 
 #### Modulo 2^256 operators
 
-There are also arithmetic operators modulo `2^256` for the `U256` type, here are some examples:
+For the `U256` type, there are arithmetic operators modulo `2^256`: `|+|, |-|, |*|, |**|`. Here are some examples:
 
 ```rust
 assert!(u256Max!() |+| 1 == 0, 0) // addition modulo 2^256
@@ -198,7 +198,7 @@ assert!((1 << 128) |**| 2 == 0, 0) // pow modulo 2^256
 
 #### Modulo N operators
 
-The VM also provides two advanced modulo functions, `addModN` and `mulModN`:
+The VM also provides two advanced modulo functions for the `U256` type, `addModN` and `mulModN`:
 
 ```rust
 assert!(mulModN!(2, 3, 4) == 2, 0) // (2 * 3) % 4
