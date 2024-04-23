@@ -137,7 +137,7 @@ In Ralph, Maps are defined as global contract attributes, eliminating the need f
 There are 3 essential built-in map methods `insert!, remove!, contains!`. Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository and the [unit tests here](https://github.com/alephium/alephium-web3/blob/master/test/contract.test.ts#L448-L477).
 
 ```rust
-Contract Foo() {
+Contract Counters() {
   // All maps must be defined here with `mapping[KeyType, ValueType]`, before events and constants
   mapping[Address, U256] counters
 
@@ -169,6 +169,11 @@ Contract Foo() {
     // Check the existence of map entry
     return counters.contains!(callerAddress!())
   }
+}
+
+TxScript CreateCounter(counters: Counters) {
+  let from = callerAddress!()
+  counters.insert{from -> ALPH: mapEntryDeposit!()}() // Approve minimal deposit for creating the map entry
 }
 ```
 
