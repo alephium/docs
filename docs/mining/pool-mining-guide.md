@@ -119,13 +119,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Twitter: https://www.twitter.com/KryptexMining
 - Table of the best GPUs for mining ALPH: https://www.kryptex.com/best-gpus-for-mining
 
-#### Metapool (Community pool)
-
-- Website: https://www.metapool.tech
-- Calculator: https://metapool.tech/dashboard#calculator
-- Telegram: https://t.me/metapool1
-- Discord: https://discord.gg/5TTzMDzJ
-
 #### Okminer 
 
 - Website (CN): https://okminer.com
