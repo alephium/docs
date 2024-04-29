@@ -120,13 +120,15 @@ Bridge Thread #2 - https://twitter.com/alephium/status/1722339218104754555
 
 Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
+🛠️ DevX Series lsp edition - https://twitter.com/alephium/status/1780265948790002132
+
 🧰 The Tools Thread - https://vxtwitter.com/alephium/status/1774812802265559313
 
 🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1758526298539098233
 
 Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 
-TxScripts and Smart COntracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
+TxScripts and Smart Contracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
 
 Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
 
@@ -179,6 +181,10 @@ Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https
 Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## TechTalks & AMAs
+
+Apr/24 - Bitrue X Space  https://twitter.com/i/spaces/1MnxnMmjmeLJO
+
+Mar/24 - StealthEX X Space - https://twitter.com/i/spaces/1ynJOyNnyLlKR
 
 Feb/24 - HouseOfChimera X Space - https://twitter.com/i/spaces/1BRKjPjmAevJw?s=20
 
@@ -247,7 +253,9 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #2 - Rhone 
 
-Apr/24 Rhône Network Upgrade 🧵43 Storage Rent Fee Reduction - https://vxtwitter.com/alephium/status/1776255506849599836
+Apr/24 Rhône Network Upgrade 🧵#5 Mapping - https://twitter.com/alephium/status/1778800481940459707
+
+Apr/24 Rhône Network Upgrade 🧵#4 Storage Rent Fee Reduction - https://vxtwitter.com/alephium/status/1776255506849599836
 
 Jan/24 Rhône Network Upgrade 🧵#3 Gasless Transactions - https://vxtwitter.com/alephium/status/1752376284754420186
 
@@ -358,6 +366,10 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 Hackathon Website : https://alephium.org/hackathon/
 
+Hackathon winners - https://medium.com/@alephium/hackathon-winners-announced-68d55711b99d
+
+Hackathon submissions - https://medium.com/@alephium/hackathon-1-pioneers-submissions-76b869089ace
+
 Hackathon update ⚒ - https://vxtwitter.com/alephium/status/1767222314792571249?s=20
 
 😢 Last hackathon updates 🧵 - https://vxtwitter.com/alephium/status/1762545171580019198
@@ -398,7 +410,10 @@ Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.co
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
 
-Builders Highlight #9: Mobula
+Builders Highlight #10 - Amolyus 
+https://medium.com/@alephium/builders-highlight-10-amolyus-39e03b6bd3f0
+
+Builders Highlight #9 - Mobula
 https://medium.com/@alephium/builders-highlight-9-mobula-f9c45dc6c691
 
 💚 Builders highlight  #8 ⚙️ - ngu.money
@@ -427,6 +442,9 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight 0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
+
+Community Highlight #18, Mowreez 
+https://medium.com/@alephium/community-highlight-18-mowreez-086215ca3e7e
 
 Community Highlight #17, AlexandrianWisdom
 https://medium.com/@alephium/community-highlight-17-alexandrianwisdom-df44c791961f
