@@ -182,6 +182,10 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## TechTalks & AMAs
 
+Apr/24 - NiceHash X Space - https://twitter.com/i/spaces/1gqGvQXWjwaKB
+
+Apr/24 - CoinEx X Space - https://twitter.com/i/spaces/1ynKOyVAmlwJR
+
 Apr/24 - Bitrue X Space  https://twitter.com/i/spaces/1MnxnMmjmeLJO
 
 Mar/24 - StealthEX X Space - https://twitter.com/i/spaces/1ynJOyNnyLlKR
@@ -252,6 +256,8 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
 ## Network Upgrade #2 - Rhone 
+
+Apr/24 Rhône Network Upgrade 🧵#6 Additional Improvements - https://twitter.com/alephium/status/1785312194889994733
 
 Apr/24 Rhône Network Upgrade 🧵#5 Mapping - https://twitter.com/alephium/status/1778800481940459707
 
@@ -410,7 +416,13 @@ Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.co
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
 
-Builders Highlight #10 - Amolyus 
+Builders Highlight #12: Linx
+https://medium.com/@alephium/builders-highlight-12-linx-0c9a315956fd
+
+Builders Highlight #11: Fugashu
+https://medium.com/@alephium/builders-highlight-11-fugashu-4f8566d1a8f0
+
+Builders Highlight #10: Amolyus
 https://medium.com/@alephium/builders-highlight-10-amolyus-39e03b6bd3f0
 
 Builders Highlight #9 - Mobula
@@ -440,7 +452,7 @@ https://medium.com/@alephium/builders-highlight-alphpaca-nfts-99c69775f04c
 Builders Highlight #1 - Sezame Wallet
 https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
-Builders Highlight 0 - Sahhar
+Builders Highlight #0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
 
 Community Highlight #18, Mowreez 
