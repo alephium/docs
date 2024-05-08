@@ -12,6 +12,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 * [Official links & accounts](#official-links--accounts) 
 * [Tech Series](#tech-series)
 * [Explainer Series](#explainer-series)
+* [Ecosystem Updates](#ecosystem-updates)
 * [TechTalks & AMAs](#techtalks--amas)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
@@ -179,6 +180,22 @@ You can access the whole list of Twitter Threads here: https://twitter.com/aleph
 Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
 
 Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+
+## Ecosystem Updates
+
+🧬 Weekly #EcosystemUpdate - 28/04/24 - https://twitter.com/alephium/status/1784614643618705459
+
+🧬 Weekly #EcosystemUpdate - 21/04/24 - https://twitter.com/alephium/status/1782061377382973446
+
+🧬 Weekly #EcosystemUpdate - 14/04/24 - https://twitter.com/alephium/status/1779450092287905995
+
+🧬 Weekly #EcosystemUpdate - 08/04/24 - https://twitter.com/alephium/status/1777297296818053294
+
+🧬 Weekly #EcosystemUpdate - 31/03/24 - https://twitter.com/alephium/status/1774405941905297449
+
+🧬 Weekly #EcosystemUpdate - 24/03/24 - https://twitter.com/alephium/status/1771894664813269375
+
+🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
 
