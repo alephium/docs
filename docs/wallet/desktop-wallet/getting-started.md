@@ -8,7 +8,7 @@ sidebar_label: Getting Started
 
 ## 1. Installation
 
-1. Download the executable file in line with your set-up (macOS, Windows, Linux) from the [latest release](https://github.com/alephium/desktop-wallet/releases/latest) and double click on it to install the application.
+1. Download the executable file in line with your set-up (macOS, Windows, Linux) from the [latest release](https://alephium.org/#wallets) and double click on it to install the application.
 2. On Linux and Windows, double click on the application to launch the desktop wallet. On macOS, you'll need to go to the Application folder, click right on the Alephium app and then click on _Open_ (don't double click, it won't work unless you allow it from the System Preferences).
 
 ## 2. Create Wallet
