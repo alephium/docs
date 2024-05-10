@@ -173,6 +173,10 @@ NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680
 
 NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
+Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
+
+Security checklist - https://twitter.com/alephium/status/1785691530566770864
+
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
 ## Monthly Retrospective
@@ -182,6 +186,8 @@ Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https
 Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
 
 ## Ecosystem Updates
+
+🧬 Weekly #EcosystemUpdate - 05/05/24 - https://twitter.com/alephium/status/1787192526337974402
 
 🧬 Weekly #EcosystemUpdate - 28/04/24 - https://twitter.com/alephium/status/1784614643618705459
 
@@ -274,6 +280,8 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #2 - Rhone 
 
+May/24 Rhône Network Upgrade on Testnet - https://twitter.com/alephium/status/1788855300230922500
+
 Apr/24 Rhône Network Upgrade 🧵#6 Additional Improvements - https://twitter.com/alephium/status/1785312194889994733
 
 Apr/24 Rhône Network Upgrade 🧵#5 Mapping - https://twitter.com/alephium/status/1778800481940459707
@@ -305,6 +313,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+May/24 - Rhône Network Upgrade on the Testnet - https://twitter.com/alephium/status/1788855300230922500
 
 Feb/24 💜 x 30'000 Twitter Followers - https://vxtwitter.com/alephium/status/1757430069817974869?s=20
 
