@@ -106,7 +106,7 @@ E.g. in order to set `foo.x.y.z = 123`, all `foo`, `x`, `y`, and `z` must be mut
 ```rust
 // Structs have to be defined globally
 struct Foo { x: U256, mut y: U256 }
-struct Bar { z: U256, mut foo: U256 }
+struct Bar { z: U256, mut foo: Foo }
 
 Contract Baz() {
   ...
@@ -125,6 +125,37 @@ Contract Baz() {
   bb.foo.y = 6 // This works as bb, foo, and y are all mutable
 
   ...
+}
+```
+
+In Ralph, structs are value types, not reference types. When assigned to a new struct variable, it copies all fields to the new struct variable:
+
+```rust
+struct Foo { x: U256, mut y: U256 }
+Contract Bar() {
+  pub fn bar() -> () {
+    let foo0 = Foo { x: 0, y: 1 }
+    let mut foo1 = foo0
+    foo1.x = 1 // modifying foo1.x will not change foo0.x
+    assert!(foo0.x == 0, 0)
+    assert!(foo1.x == 1, 0)
+  }
+}
+```
+
+Ralph also supports struct destruction, and the syntax is similar to TypeScript:
+
+```rust
+struct Foo { x: U256, y: U256 }
+Contract Bar() {
+  pub fn bar() -> () {
+    let foo = Foo { x: 0, y: 1 }
+    let Foo { mut x, y } = foo
+    x = 1
+
+    // the variables `x` and `y` already exist, we create two new variables `x1` and `y1`
+    let Foo { x: x1, y: y1 } = foo
+  }
 }
 ```
 
@@ -475,9 +506,10 @@ The Ralph function also supports annotations, currently the only valid annotatio
 The `@using` annotation has four optional fields:
 
 * `preapprovedAssets = true/false`: whether the function uses user-approved assets. The default value is `false` for contracts, `true` for scripts.
-* `assetsInContract = true/false`: whether the function uses contract assets. The default value is `false` for contracts
-* `checkExternalCaller = true/false`: whether the function checks the caller. The default value is `true` for contracts
-* `updateFields = true/false`: whether the function changes contract fields. The default value is `false` for contracts
+* `assetsInContract = true/false`: whether the function uses contract assets. The default value is `false`.
+* `payToContractOnly = true/false`: whether the funciton only transfers assets to the contract. The default value is `false`.
+* `checkExternalCaller = true/false`: whether the function checks the caller. The default value is `true`.
+* `updateFields = true/false`: whether the function changes contract fields. The default value is `false`.
 
 #### Using Approved Assets
 
@@ -530,6 +562,26 @@ For the `assetsInContract` annotation, the compiler will do the following checks
 1. If a function is annotated `assetsInContract = true` but does not use contract assets, the compiler will report an error
 
 You can find more information about asset permission at [here](/ralph/asset-permission-system).
+
+### Pay To Contract Only
+
+In the Rhone upgrade, we introduced the `@using(payToContractOnly = true/false)` annotation. You can set this annotation to `true` when the contract only accepts transfers. Functions annotated with `@using(payToContractOnly = true)` can be called multiple times within a single transaction.
+
+```rust
+Contract Foo() {
+  @using(preapprovedAssets = true, payToContractOnly = true)
+  pub fn payToContract(address: Address) -> () {
+    transferTokenToSelf!(address, ALPH, 1 alph)
+  }
+}
+
+TxScript Main(foo: Foo, address0: Address, address1: Address) {
+  foo.payToContract{address0 -> ALPH: 1 alph}(address0)
+  foo.payToContract{address1 -> ALPH: 1 alph}(address1)
+}
+```
+
+Note that `payToContractOnly` and `assetsInContract` cannot both be set to true simultaneously. Otherwise, the compiler will report an error.
 
 #### Update Fields
 
@@ -698,7 +750,9 @@ There is an example:
 
 ```rust
 Contract Foo(a: U256, mut b: I256, c: ByteVec, mut d: Bool) {
-  // functions
+  pub fn update(value: I256) -> () {
+    b = value
+  }
 }
 
 Contract Bar() {
@@ -709,6 +763,19 @@ Contract Bar() {
   }
 }
 ```
+
+In the Rhone upgrade, we support utilizing contract fields after deploying the contract in the same transaction. With the above example, you can call the `foo.update` after deploying the contract `Foo`:
+
+```rust
+@using(preapprovedAssets = true)
+fn createFoo(caller: Address, fooBytecode: ByteVec, a: U256, b: I256, c: ByteVec, d: Bool) -> (ByteVec) {
+  let (encodedImmFields, encodedMutFields) = Foo.encodeFields!(a, b, c, d)
+  let fooId = createContract!{caller -> 1 alph}(fooBytecode, encodedImmFields, encodedMutFields)
+  Foo(fooId).update(-1)
+}
+```
+
+Note that after deploying the contract, you cannot utilize contract assets in the same transaction.
 
 ### Events
 
@@ -766,6 +833,10 @@ Contract Foo(barTemplateId: ByteVec) {
   }
 }
 ```
+
+:::note
+Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph, it will be reduced to 0.1 alph after the Rhone upgrade is activated), so creating a large number of sub-contracts is not practical.
+:::
 
 ### Contract Creation inside a Contract
 
@@ -851,7 +922,6 @@ Interfaces are similar to abstract contracts with the following restrictions:
 * They cannot have any functions implemented.
 * They cannot inherit from other contracts, but they can inherit from other interfaces.
 * They cannot declare contract fields.
-* Contracts can only implements one interface.
 
 ```rust
 Interface Foo {
@@ -888,16 +958,17 @@ Foo(bazId).foo()
 let _ = Bar(bazId).bar()
 ```
 
-The reason why a contract can only implement one interface in Ralph is that, when calling contract methods, Ralph uses method indices to load and call contract methods.
-If we allow a contract to implement multiple interface, calling contract methods through the interface may result in using the wrong method index. For example:
+In the Rhone upgrade, we introduced the `@using(methodSelector = true/false)` annotation to support multiple interfaces inheritance. You can set the `methodSelector` to `true` if your contract needs to inherit from multiple interfaces:
 
-```
+```rust
+@using(methodSelector = true)
 Interface Foo {
-  pub fn foo() -> ();
+  pub fn foo() -> ()
 }
 
+@using(methodSelector = true)
 Interface Bar {
-  pub fn bar() -> ();
+  pub fn bar() -> ()
 }
 
 Contract Baz() implements Foo, Bar {
@@ -905,12 +976,6 @@ Contract Baz() implements Foo, Bar {
   pub fn bar() -> () {}
 }
 ```
-
-In this case, both `Foo(bazContractId).foo()` and `Bar(bazContractId).bar()` would use method index 0 to call the `Baz` contract.
-
-:::note
-Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph), so creating a large number of sub-contracts is not practical.
-:::
 
 ## TxScript
 
@@ -939,3 +1004,22 @@ TxScript Main(fooId: ByteVec) {
   }
 }
 ```
+
+## Gasless Transaction
+
+In the Rhone upgrade, we introduced support for gasless transactions. We can use the built-in `payGasFee` to pay transaction gas fees on behalf of the user, for example:
+
+```rust
+Contract Foo() {
+  pub fn foo() -> () {
+    payGasFee!(selfAddress!(), txGasFee!())
+  }
+}
+```
+
+The built-in `payGasFee` has two parameters:
+
+1. The first parameter is the payer address, in the example above, the contract paid the gas fee. But the payer address can also be the user addresse.
+2. The second parameter is the amount of gas to be paid, in the above example, the contract paid all the gas fees. You can choose to pay part of the gas fees.
+
+Note that gasless transactions do not mean that transactions do not require gas fees, but that others pay the gas fees on your behalf. You still need to have ALPH to send transactions.
