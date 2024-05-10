@@ -161,7 +161,7 @@ Contract Bar() {
 
 ### Map (Rhone Upgrade Only)
 
-The map data structure is currently available exclusively in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/rhone-devnet) of full node.
+The map data structure is currently available in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) and the testnet release of full node.
 
 In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
 
@@ -1011,6 +1011,7 @@ In the Rhone upgrade, we introduced support for gasless transactions. We can use
 
 ```rust
 Contract Foo() {
+  @using(assetsInContract = true)
   pub fn foo() -> () {
     payGasFee!(selfAddress!(), txGasFee!())
   }
@@ -1019,7 +1020,7 @@ Contract Foo() {
 
 The built-in `payGasFee` has two parameters:
 
-1. The first parameter is the payer address, in the example above, the contract paid the gas fee. But the payer address can also be the user addresse.
+1. The first parameter is the payer address, in the example above, the contract paid the gas fee. But the payer address can also be the user address.
 2. The second parameter is the amount of gas to be paid, in the above example, the contract paid all the gas fees. You can choose to pay part of the gas fees.
 
 Note that gasless transactions do not mean that transactions do not require gas fees, but that others pay the gas fees on your behalf. You still need to have ALPH to send transactions.
