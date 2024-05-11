@@ -63,7 +63,7 @@ The built-in functions are divided into several categories:
 }
 
 async function main() {
-    const url = 'https://raw.githubusercontent.com/alephium/alephium/rhone-upgrade/protocol/src/main/resources/ralph-built-in-functions.json' 
+    const url = 'https://raw.githubusercontent.com/alephium/alephium/master/protocol/src/main/resources/ralph-built-in-functions.json'
     const response = await fetch(url)
     const json = await response.json()
     // const json = require('./builtin.json')
