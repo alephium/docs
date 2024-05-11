@@ -33,7 +33,7 @@ Encode the fields for creating a contract
 
 > @param **...** *the fields of the to-be-created target contract*
 >
-> two *ByteVecs: the first one is the encoded immutable fields, and the second one is the encoded mutable fields*
+> @returns *two ByteVecs: the first one is the encoded immutable fields, and the second one is the encoded mutable fields*
 
 ---
 
@@ -507,7 +507,7 @@ Insert a key/value pair into the map. No brace syntax is required, as the minima
 >
 > @param **value** *the value to insert*
 >
-> 
+> @returns
 
 ---
 
@@ -523,7 +523,7 @@ Remove a key from the map
 >
 > @param **key** *the key to remove*
 >
-> 
+> @returns
 
 ---
 
@@ -537,7 +537,7 @@ Check whether the map contains a bindiing for the key
 
 > @param **key** *the key to check*
 >
-> true *if there is a binding for key in this map, false otherwise*
+> @returns *true if there is a binding for key in this map, false otherwise*
 
 ---
 
