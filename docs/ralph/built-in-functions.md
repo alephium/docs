@@ -493,7 +493,7 @@ Returns the id of the sub contract.
 
 ## Map Functions
 ---
-### <map>.insert
+### map.insert
 
 ```Rust
 fn <map>.insert!(depositorAddress: Address, key: <Bool | U256 | I256 | Address | ByteVec>, value: Any) -> ()
@@ -511,7 +511,7 @@ Insert a key/value pair into the map. No brace syntax is required, as the minima
 
 ---
 
-### <map>.remove
+### map.remove
 
 ```Rust
 fn <map>.remove!(depositRecipient: Address, key: <Bool | U256 | I256 | Address | ByteVec>)
@@ -527,7 +527,7 @@ Remove a key from the map
 
 ---
 
-### <map>.contains!
+### map.contains
 
 ```Rust
 fn <map>.contains!(key: <Bool | U256 | I256 | Address | ByteVec>)
