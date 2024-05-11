@@ -130,7 +130,7 @@ Contract Baz() {
 
 ### Map (Rhone Upgrade Only)
 
-The map data structure is currently available exclusively in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/rhone-devnet) of full node.
+The map data structure is currently available exclusively in the [devnet release](https://github.com/alephium/alephium-stack/tree/rhone-devnet) of full node.
 
 In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
 
