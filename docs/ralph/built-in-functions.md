@@ -11,6 +11,7 @@ This file is auto-generated with "scripts/generate-builtin-functions.js"
 The built-in functions are divided into several categories:
 [Contract](#contract-functions),
 [SubContract](#subcontract-functions),
+[Map](#map-functions),
 [Asset](#asset-functions),
 [Utils](#utils-functions),
 [Chain](#chain-functions),
@@ -22,6 +23,20 @@ All of the byte encoding use Big Endian byte order.
 
 ## Contract Functions
 ---
+### encodeFields
+
+```Rust
+fn <ContractName>.encodeFields!(...) -> (ByteVec, ByteVec)
+```
+
+Encode the fields for creating a contract
+
+> @param **...** *the fields of the to-be-created target contract*
+>
+> two *ByteVecs: the first one is the encoded immutable fields, and the second one is the encoded mutable fields*
+
+---
+
 ### createContract
 
 ```Rust
@@ -476,6 +491,56 @@ Returns the id of the sub contract.
 
 ---
 
+## Map Functions
+---
+### <map>.insert
+
+```Rust
+fn <map>.insert!(depositorAddress: Address, key: <Bool | U256 | I256 | Address | ByteVec>, value: Any) -> ()
+```
+
+Insert a key/value pair into the map. No brace syntax is required, as the minimal storage deposit will be deducted from the approved assets by the VM
+
+> @param **depositorAddress** *the address to pay the minimal storage deposit (0.1 ALPH) for the new map entry*
+>
+> @param **key** *the key to insert*
+>
+> @param **value** *the value to insert*
+>
+> 
+
+---
+
+### <map>.remove
+
+```Rust
+fn <map>.remove!(depositRecipient: Address, key: <Bool | U256 | I256 | Address | ByteVec>)
+```
+
+Remove a key from the map
+
+> @param **depositRecipient** *the address to receive the redeemed minimal storage deposit*
+>
+> @param **key** *the key to remove*
+>
+> 
+
+---
+
+### <map>.contains!
+
+```Rust
+fn <map>.contains!(key: <Bool | U256 | I256 | Address | ByteVec>)
+```
+
+Check whether the map contains a bindiing for the key
+
+> @param **key** *the key to check*
+>
+> true *if there is a binding for key in this map, false otherwise*
+
+---
+
 ## Asset Functions
 ---
 ### approveToken
@@ -824,7 +889,7 @@ The minimal contract deposit
 fn mapEntryDeposit!() -> (U256)
 ```
 
-The amount of ALPH required to create a map entry
+The amount of ALPH required to create a map entry, which is '0.1 ALPH' since Rhone upgrade
 
 > @returns *the amount of ALPH required to create a map entry*
 
