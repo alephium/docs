@@ -162,11 +162,13 @@ Contract Bar() {
 
 ### Map (Rhone Upgrade Only)
 
-The map data structure is currently available in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) and the [testnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) of full node.
+The map data structure is currently available in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) and the [testnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) of the full node.
 
-In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
+In Ralph, Maps are defined as global contract attributes, eliminating the need for initialization. The syntax is `mapping[KeyType, ValueType] mapName` where the `KeyType` can be any primitive types (Bool, U256, I256, Address, ByteVec), and the `ValueType` can be any type.
 
-There are 3 essential built-in map methods `insert!, remove!, contains!` ([doc](https://docs.alephium.org/ralph/built-in-functions/#map-functions)). Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository and the [unit tests here](https://github.com/alephium/alephium-web3/blob/master/test/contract.test.ts#L448-L477).
+Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
+
+There are 3 essential built-in map methods `insert!, remove!, contains!` (see [doc](https://docs.alephium.org/ralph/built-in-functions/#map-functions)). Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository and the [unit tests here](https://github.com/alephium/alephium-web3/blob/master/test/contract.test.ts#L448-L477).
 
 ```rust
 Contract Counters() {
