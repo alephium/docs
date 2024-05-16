@@ -83,7 +83,7 @@ Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
 ### Blockflow
 
-An Introduction to Blockflow : Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
+An Introduction to Blockflow: Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
 About Sharding - https://vxtwitter.com/alephium/status/1747255798034796657
 
@@ -176,6 +176,12 @@ NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
 
 Security checklist - https://twitter.com/alephium/status/1785691530566770864
+
+Beware of Scams #1 - https://twitter.com/alephium/status/1777716807539032430?t=LEZ6Dgls39JF4XibDjYSqw&s=19
+
+Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=ERLAvH9Dan8O7FZ0cVnrdA&s=19
+
+⚠️ About the token list - https://twitter.com/alephium/status/1779882118241456175
 
 You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
 
