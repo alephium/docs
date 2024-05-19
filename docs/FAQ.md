@@ -122,9 +122,9 @@ Most of what has been built on Alephium so far is listed on the [Awesome Alephiu
 
 Alephium uses a Proof of (Less) Work consensus mechanism, which means there is no native monetary reward for running a full node, unlike Proof of Stake networks. However, running your own node offers other benefits such as decentralization, independent verification, privacy, and economic self-sovereignty. The phrase _"not your node, not your network"_ highlights the importance of running your own node, as relying on a third party node for blockchain interaction means trusting that third party. While connecting to a third party node is generally safe, some individuals may prefer to maintain their own level of trust and privacy.
 
-### What do I need to run a full-node?
+### What do I need to run a full node?
 
-Alephium's full-node is lightweight and can run on most devices, including Raspberry-Pi or phones. To set-up and run your own node, please follow the [Full-node Getting Started guide](https://docs.alephium.org/full-node/getting-started/).
+Alephium's full node is lightweight and can run on most devices, including Raspberry-Pi or phones. To set-up and run your own node, please follow the [Full-node Getting Started guide](https://docs.alephium.org/full-node/getting-started/).
 
 ### Is it possible to stake on Alephium?
 

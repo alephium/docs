@@ -1,5 +1,5 @@
 ---
-sidebar_position: 40
+sidebar_position: 30
 title: Alephium Stratum
 sidebar_label: Alephium stratum
 ---

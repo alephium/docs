@@ -1,26 +1,48 @@
 ---
-sidebar_position: 50
-title: Devnet
-sidebar_label: Devnet
+sidebar_position: 40
+title: Local Devnet
+sidebar_label: Local devnet
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# Create a local Devnet
+Local devnet is essential to develop and test your dApps. It can be
+launched using similar steps outlined in the [get
+started](full-node/getting-started) guide using Java directly or with
+Docker.
 
 ## Using Docker
 
-If you want to create a local development network with explorer support, please use `docker-compose` and follow the instructions in [alphium-stack](https://github.com/alephium/alephium-stack#devnet).
+### Prerequisites
 
-## Manually using jar files
+- Ensure that [docker](https://docs.docker.com/get-docker/) and [docker-compose](https://docs.docker.com/compose/install/) are installed.
+- Clone the [alephium-stack](https://github.com/alephium/alephium-stack/tree/master/mainnet) repository.
 
-### Full node
+### Start your node
 
-Download file `alephium-x.x.x.jar` from [Github release](https://github.com/alephium/alephium/releases/latest) (do not double click on it, it can not be launched this way).
+1. Open search and type in `Terminal` (for Mac or Linux) or `Command Prompt` (for Windows).
+2. In the Terminal/Command Prompt program, run the following command:
 
-Write a configuration file at `~/.alephium/user.conf`, the one below is taken from our [alephium-stack repo](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
+```shell
+> cd $path-to-alephium-stack/devnet
+> docker-compose up -d
+```
+
+## Using Java
+
+### Full Node
+
+Please follow the same steps as described in full node's [get
+started](/full-node/getting-started#using-java) guide, with the
+extra step of overriding the default
+[user.conf](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
+file under your `ALEPHIUM_HOME` directory, by default it is `~/.alephium/user.conf`.
+
+<details>
+<summary>user.conf</summary>
+<p>
 
 ```conf
 # Import this mnemonic to have 4'000'000 token allocated for your addresses
@@ -80,24 +102,17 @@ alephium.mining.miner-addresses = [
   "16fZKYPCZJv2TP3FArA9FLUQceTS9U8xVnSjxFG9MBKyY"
 ]
 ```
-
-Note: The mnemonic (24 words) and the corresponding addresses were created for development purposes, you can use it or create your own, but never use it on `mainnet`.
-      You can also add more addresses if you want. If you want change the addresses afterward, you'll need to erase and restart your devnet.
-
-
-You can now start your `devnet`:
-
-```sh
-java -jar alephium-x.x.x.jar
-```
-
-You can now access the full node's API at: `http://localhost:22973/docs`
+</p>
+</details>
 
 ### Explorer-backend
 
-Requirement: [PostgreSQL](https://www.postgresql.org/)
+#### Prerequisites
 
-Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest)
+- Install [PostgreSQL](https://www.postgresql.org/)
+- Download `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest)
+
+#### Create database
 
 Connect to PostgreSQL and create a database for your devnet
 
@@ -105,11 +120,16 @@ Connect to PostgreSQL and create a database for your devnet
 CREATE DATABASE devnet;
 ```
 
-You can check [the configuration file](https://github.com/alephium/explorer-backend/blob/feature/contract-subcontract/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
+#### Launch explorer backend
 
-```sh
+You can check the [configuration file](https://github.com/alephium/explorer-backend/blob/feature/contract-subcontract/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
+
+```shell
 export BLOCKFLOW_NETWORK_ID=2
 export BLOCKFLOW_PORT=22973
 export DB_NAME=devnet
 java -jar explorer-backend-x.x.x.jar
 ```
+
+For more details please use explorer backend's [get
+started](/explorer-backend/getting-started) guide as reference.

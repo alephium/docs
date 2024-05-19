@@ -26,14 +26,13 @@ const config = {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
-            `https://github.com/alephium/wiki/tree/master${
-              locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
+            `https://github.com/alephium/wiki/tree/master${locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
-        // theme: {
-        //   customCss: require.resolve("./src/css/custom.css"),
-        // },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
       }),
     ],
   ],

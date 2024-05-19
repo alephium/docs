@@ -4,17 +4,17 @@ title: Exchange
 sidebar_label: Exchange
 ---
 
-There is an [integration prototype](https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts) using Alephium's SDK.
+This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange. 
 
-This guide explains the basic APIs and information required for integrating Alephium with a cryptocurrency exchange.
+There is an [integration prototype](https://github.com/alephium/alephium-web3/blob/master/test/exchange.test.ts) using Alephium's SDK if you prefer to read code instead.
 
 ## Getting started
 
 ### Local development network
 
-To integrate Alephium, an exchange must run a full node. Additionally, the explorer-backend can be run for debugging and additional indexing. 
+To integrate with Alephium, an exchange must [run a full node](/full-node/getting-started). Additionally, the exchange can also [run explorer backend](/explorer-backend/getting-started) for debugging and additional indexing. 
 
-To create a local development network with explorer support, follow the instructions in the [alephium-stack](https://github.com/alephium/alephium-stack#devnet) repository. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
+To create a local development network with explorer support, follow the instructions in the [Local devnet](/full-node/devnet#using-docker) guide. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
 
 * Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
 * Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)
@@ -22,7 +22,7 @@ To create a local development network with explorer support, follow the instruct
 
 ### APIs
 
-To keep the guide concise, relevant API queries will be provided in the doc instead of Swagger UI screenshots.
+To keep the guide concise, relevant API queries will be provided using `curl` examples.
 
 The [web3 SDK](https://github.com/alephium/alephium-web3#packages) contains generated Typescript APIs for both the [full node](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-alephium.ts) and [explorer backend](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/api/api-explorer.ts).
 

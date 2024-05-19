@@ -9,6 +9,59 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
+## Quickstart
+import {
+  LocalLanguageRegular,
+  PhoneDesktopRegular,
+  RocketRegular,
+  WalletRegular,
+  ShapeIntersectRegular,
+  BatterySaverRegular
+} from '@fluentui/react-icons';
+
+<CardSection
+  id="Quickstart"
+  description="Welcome to Alephium, the first operational sharded blockchain bringing scalability, ETH-inspired smart contracts, and dApps capabilities to Bitcoin's proven core technologies while ensuring better performance and improved energy efficiency."
+>
+  <Card
+    title="Build dApps"
+    icon={<PhoneDesktopRegular />}
+    to="/dapps/getting-started"
+    description="Get started with building dApps on Alephium using Ralph programming language and SDK"
+  />
+  <Card
+    title="Learn Ralph"
+    icon={<LocalLanguageRegular />}
+    to="/ralph/getting-started"
+    description="Learn Ralph, the smart contract programming language for Alephium that focuses on security, simplicity and efficiency."
+  />
+  <Card
+    title="Run Nodes"
+    icon={<RocketRegular />}
+    to="/full-node/getting-started"
+    description="Running Alephium full node is important for the security and decentralization of the network."
+  />
+  <Card
+    title="Wallets"
+    icon={<WalletRegular />}
+    to="/wallet/overview"
+    description="Running Alephium full node is important for the security and decentralization of the network."
+  />
+  <Card
+    title="Mining"
+    icon={<BatterySaverRegular />}
+    to="/mining/overview"
+    description="Alephium supports solo mining or mining with mining pools."
+  />
+  <Card
+    title="Integrations"
+    icon={<ShapeIntersectRegular />}
+    description={
+      <div>Integration guides for <a href="/integration/exchange">exchanges</a> and <a href="/integration/mining">mining pool</a>.</div>
+    }
+  />
+</CardSection>
+
 ## What is Alephium?
 
 **Scalable for devs. Secure for users. Decentralized for all.**

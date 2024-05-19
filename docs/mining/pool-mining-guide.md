@@ -8,9 +8,18 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-# Pool Mining Guide
+## For Miner
 
-You will find a complete list of known mining pools [on this link.](#community-pools)
+Please follow instructions of the respective mining pool. You will
+find a complete list of known mining pools [here](#community-pools).
+
+For `HiveOS`, `RaveOS` or `OKMiner` related questions, these resources might help you:
+
+- Hive OS: [Website](https://hiveos.farm), [Forum](https://hiveon.com/forum/), [Telegram](https://t.me/hiveoschat_en), [Discord](https://discord.gg/CVZeZdn)
+- Rave OS: [Website](https://raveos.com), [Email](support@raveos.com), [Telegram](https://t.me/raveossupport), [Discord](https://discord.gg/Dcdadz2)
+- OKMiner Mobile OS: [Website (CN)](https://okminer.com), [iOS](https://apps.apple.com/ru/app/okminer-os/id1494087547), [Android](https://downap.okminer.com/hashapk/okminer.apk), [Calculator](https://okminer.com/tools), [Telegram (CN)](https://t.me/okminer_CN), [Telegram (EN)](https://t.me/okminer_support)
+
+## For Pool Operator
 
 ### Build your own Pool
 
@@ -180,28 +189,3 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 ### SRBMiner
 
 - Download: [https://www.srbminer.com/download.html](https://www.srbminer.com/download.html)
-
-## If you have HiveOS or RaveOS related questions, these resources will help you
-
-### Hive OS
-
-- Website: [https://hiveos.farm](https://hiveos.farm)
-- Forum: [https://hiveon.com/forum/](https://hiveon.com/forum/)
-- Telegram: [https://t.me/hiveoschat_en](https://t.me/hiveoschat_en)
-- Discord: [https://discord.gg/CVZeZdn](https://discord.gg/CVZeZdn)
-
-### Rave OS
-
-- Mail support: support@raveos.com
-- Website: [https://raveos.com/](https://raveos.com/)
-- Telegram: [https://t.me/raveossupport](https://t.me/raveossupport)
-- Discord: [https://discord.gg/Dcdadz2](https://discord.gg/Dcdadz2)
-
-### OKMiner Mobile OS 
-
-- iOS: [https://apps.apple.com/ru/app/okminer-os/id1494087547](https://apps.apple.com/ru/app/okminer-os/id1494087547)
-- Android: [https://downap.okminer.com/hashapk/okminer.apk](https://downap.okminer.com/hashapk/okminer.apk)
-- Website (CN): https://okminer.com
-- Calculator: https://okminer.com/tools
-- Telegram (CN): https://t.me/okminer_CN
-- Telegram (EN): https://t.me/okminer_support

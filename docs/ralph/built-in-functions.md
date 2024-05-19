@@ -514,7 +514,7 @@ Insert a key/value pair into the map. No brace syntax is required, as the minima
 ### map.remove
 
 ```Rust
-fn <map>.remove!(depositRecipient: Address, key: <Bool | U256 | I256 | Address | ByteVec>)
+fn <map>.remove!(depositRecipient: Address, key: <Bool | U256 | I256 | Address | ByteVec>) -> ()
 ```
 
 Remove a key from the map
@@ -530,7 +530,7 @@ Remove a key from the map
 ### map.contains
 
 ```Rust
-fn <map>.contains!(key: <Bool | U256 | I256 | Address | ByteVec>)
+fn <map>.contains!(key: <Bool | U256 | I256 | Address | ByteVec>) -> Bool
 ```
 
 Check whether the map contains a bindiing for the key

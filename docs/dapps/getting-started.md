@@ -10,7 +10,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Overview
 
-Alephium proposes multiple tools and packages to help you build your dApps.
+Alephium provides multiple tools and packages to help you build your dApps.
 
 This guide will help you install our recommended setup.
 
