@@ -126,16 +126,16 @@ ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALP
 
 ⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
 
-## Open Source & Grant Program
+## Contribute as Developers
 
-Alephium's source code is fully open source. Discover and contribute to our main projects on [GitHub][github].
+Alephium is public, fully open source and decentralized. Discover and contribute to Alephium's main projects on [GitHub][github].
 
 If you are building a dApp, get start from
 [here](./dapps/Getting-Started). Once released, let everyone know by
 sending a PR to add your project to the [awesome-alephium][awesome] repo. The
 Alephium [Brand Guide][brand-guide] might also come in handy.
 
-Alephium has a [Reward & Grant Program][reward-grant], please join [discord][discord] for more information.
+Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](https://github.com/alephium/community/blob/master/BugBounty.md) program , please join [discord][discord] for further discussion.
 
 ## Join the Alephium Community!
 
