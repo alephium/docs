@@ -68,8 +68,6 @@ import {
 
 Innovative sharding meets expressive sUTXO and efficient Proof-of-Less-Work to secure scalable dApps for real-world use cases.
 
----
-
 ## Why is Alephium special?
 
 On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
@@ -88,9 +86,7 @@ Putting all these innovations together, Alephium delivers a highly demanded solu
 
 **Check out our [whitepapers][whitepaper]!**
 
----
-
-## Our tokenomics
+## Tokenomics
 
 The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (Nov. 8th, 2021), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
 
@@ -116,70 +112,30 @@ If you need the endpoints, find them here: [Total Supply](https://mainnet-backen
 
 **Find more details in our [Tokenomics Medium article][tokenomics-medium].**
 
----
-
-## If you’re a dev, start here
-
-Find our latest [node release on GitHub][node-release].
-
-Discover and contribute to our main projects [on GitHub][github]:
-
-- [Full node][full-node]
-- [Desktop wallet][desktop-wallet]
-- [Mobile wallet][mobile-wallet]
-- [Explorer][explorer]
-- [Web3 SDK][web3-sdk]
-- [Extension Wallet][extension-wallet-repo]
-- [Wallet Connect][walletconnect-repo]
-- [Bridge][wormhole-fork-repo]
-- [Awesome Alephium][awesome]
-- [Docs][docs]
-
-### Building something on Alephium?
-
-Start with the [Web3 SDK][web3-sdk] and if you’re building a dApp, head over [here](./dapps/Getting-Started). 
-Once released, let everyone know by sending a PR to add your project to [Awesome Alephium][awesome]!
-The Alephium [Brand Guide][brand-guide] might also come in handy.
-
-[Reward & Grant Program][reward-grant]
-
-## If you’re a miner, start here
-
-Start by joining the dedicated [Mining channel on Discord][mining-discord].
-
-Find our [Miner starter pack on Github][miner-starter-pack].
-
-and the specific repos:
-
-- https://github.com/alephium/gpu-miner
-- https://github.com/alephium/fpga-miner
-- https://github.com/alephium/mining-pool
-
-Here is a video of [how to get started for solo mining][solo-mining-video].
-
-And if you’d rather join a pool, you will find list of available pools in the [Pool Mining Guide](./mining/pool-mining-guide).
-
----
-
 ## Milestones & Roadmap
 
-[Completed Milestones][milestones]
-
-[Roadmap][roadmap]
-
----
+Please read the roadmap [here][roadmap] and completed milestones [here][milestones].
 
 ## Exchanges
 
-###CEXs
+### CEXs
 The full list of centralized exchanges is available on [CoinMarketCap][CoinMarketCap] and [Coingecko][Coingecko]
 
-###DEXs
+### DEXs
 ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALPH). Full list of decentralized exchanges available on [Coingecko][Coingecko].
 
 ⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
 
----
+## Open Source & Grant Program
+
+Alephium's source code is fully open source. Discover and contribute to our main projects on [GitHub][github].
+
+If you are building a dApp, get start from
+[here](./dapps/Getting-Started). Once released, let everyone know by
+sending a PR to add your project to the [awesome-alephium][awesome] repo. The
+Alephium [Brand Guide][brand-guide] might also come in handy.
+
+Alephium has a [Reward & Grant Program][reward-grant], please join [discord][discord] for more information.
 
 ## Join the Alephium Community!
 
@@ -201,8 +157,6 @@ ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALP
 - [Whitepapers][whitepaper]
 - [Medium][medium]
 - [GitHub][github]
-
----
 
 ## Non-official Content & Communities
 
@@ -228,9 +182,7 @@ You will find the complete list of internationalized channel [here](./misc/Inter
 - [Youtube 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
 - [Youtube 🇻🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PJq68hRBfw3xeXGlfVDWVr)
 
----
-
-## Our partners
+## Partners
 
 - [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
 - [Cetacean Capital](https://cetacean.capital/)

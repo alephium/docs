@@ -17,4 +17,10 @@ information that the miners should know:
 
 For more information about mining rewards, please read the [Block
 Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
-article.
+article. For code references, please refer to
+[gpu-miner](https://github.com/alephium/gpu-miner),
+[fpga-miner](https://github.com/alephium/fpga-miner) and
+[mining-pool](https://github.com/alephium/mining-pool) repositories.
+
+Please join the dedicated mining channel on [discord](https://alephium.org/discord) for
+more discussions.
