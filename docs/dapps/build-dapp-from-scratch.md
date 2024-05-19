@@ -8,7 +8,10 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-This guide will explore the basics of creating an Alephium dApp project.
+In the [getting started](/dapps/getting-started.md) guide, we set up a
+sample project and walk through common development tasks without
+diving into much details. In this guide, we will build the same dApp
+from scratch to explore the basics of creating a dApp on Alephium.
 
 Prerequisites:
 
@@ -17,17 +20,16 @@ Prerequisites:
 - [nodejs](https://nodejs.org/en/) version >= 16 installed
 - `npm` version >= 8 installed
 
-## Create a new dApp project: Token Faucet
+## Create a new project
 
-In this tutorial we will write our first dApp: A token faucet.
+Let's create a token faucet dApp. The smart contract code is taken
+from our [getting started](/dapps/getting-started) guide. 
 
-The code here is taken from our [getting started page](/dapps/getting-started), but we will see step by step how we build this guide.
-
-Create a new project folder and navigate into it:
+First, create a new project folder and navigate into it:
 
 ```sh
-mkdir alephium-faucet-tuto
-cd alephium-faucet-tuto
+mkdir alephium-faucet-tutorial
+cd alephium-faucet-tutorial
 ```
 
 Let's now create a `contracts` folder where we'll store all our contracts:
@@ -36,7 +38,7 @@ Let's now create a `contracts` folder where we'll store all our contracts:
 mkdir contracts
 ```
 
-Our first contract will be `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
+Our first contract is `token.ral` which can be found [here](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral). You can copy the whole file into your `contracts` folder.
 
 Let's inspect it, piece by piece:
 
@@ -52,12 +54,13 @@ Contract TokenFaucet(
 ) implements IFungibleToken {
 ```
 
-The first four fields will be immutable values that store the data required to serve our [IFungibleToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral).
-`mut balance` is a mutable value that keeps track of how many tokens are left in this faucet.
+The first four fields are immutable values required to serve the [IFungibleToken interface](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/fungible_token_interface.ral).
+`balance` is a mutable value that keeps track of how many tokens are left in this faucet.
 
-You can see that our contract emits an `event` and defines an `error` code. Read the following for more info on [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
+You can see that our contract emits an `event` and defines an `error`
+code. For more information please read [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
 
-This is followed by 5 access methods for the different contract's arguments.
+This is followed by 5 access methods for each of the contract's arguments.
 
 The last method is where the magic happens:
 
@@ -79,15 +82,21 @@ pub fn withdraw(amount: U256) -> () {
 }
 ```
 
-With the `assert!` we make sure no one takes more than 2 tokens at the same time.  
-`transferTokenFromSelf` will actually perform the transfer of the tokens.  
-We update the `mut balance` field with the new balance. In the case of underflow, an error will be raised and the transaction won't be performed.
-`callerAddress!()` and `selfTokenId!()` are built-in functions, you can read more about them in our [built-in functions page](/ralph/built-in-functions).
+With the `assert` we make sure no one takes more than 2 tokens at a
+time. `transferTokenFromSelf` does the actual transferring of the
+tokens from the token faucet contract to the caller. `balance` field
+is updated with the new value, in case of underflow, an error will be
+raised and the transaction won't be performed. `callerAddress` and
+`selfTokenId` are built-in functions, you can read more about them in
+our [built-in functions page](/ralph/built-in-functions).
+
 ## Compile your contract
 
-The compiler needs to contact the full node in order to compile the contract, you'll need to use the right information defined while [creating your devnet](/full-node/devnet). If you haven't start it, now it's the time.
-We define the node URL using the following config file: `alephium.config.ts`. 
-Create this file in the root directory of your project and paste the following code:
+The compiler needs to contact the [local devnet](/full-node/devnet) in
+order to compile the contract. If you haven't started it, now it's the
+time.  We define the node URL using the `alephium.config.ts` config
+file. Create this file in the root directory of your project and paste
+the following code:
 
 ```typescript
 import { Configuration } from '@alephium/cli'
@@ -118,7 +127,10 @@ It may ask you for some confirmation to install the latest `@alephium/cli` packa
 Once the above command succeeds, you will notice that a new folder called `artifacts` was created. It contains several files related to your contract. For example, `artifacts/ts/TokenFaucet.ts` produces lots of helper functions like `at`, `fetchState`, `call*`, etc, as well as many test functions.
 
 ## Test your contract
-The SDK provides unit test functionalities, which call the contract by sending a transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+The SDK provides a unit test framework, which allows the test case to
+interact with the contract without changing the blockchain
+state. Instead, it returns the new contract state, transaction
+outputs, and events for verification.
 
 Install the test framework:
 
@@ -126,7 +138,7 @@ Install the test framework:
 npm install ts-jest @types/jest
 ```
 
-You'll also need our `@alephium/web3` package:
+You'll also need the `@alephium/web3` and `@alephium/web3-test` packages:
 
 ```sh
 npm install @alephium/web3 @alephium/web3-test
@@ -178,8 +190,6 @@ describe('unit tests', () => {
 })
 ```
 
-A more complex test can be found in our [template](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts) project.
-
 Without entering too much into details, TypeScript needs some configuration to run the test so just create a file called `tsconfig.json` in the root directory of your project and paste the following code:
 
 ```json
@@ -208,7 +218,7 @@ You should be able to see on your terminal the output of calling the withdraw me
 
 ## Deploy your contract
 
-Now things are getting serious, we will deploy our contract on our `devnet` :rocket:
+Now things are getting serious, we will deploy the contract on `devnet` :rocket:
 
 The `deploy` command will execute all deployment scripts it finds inside the `scripts` folder. Create the `scripts` folder in the root folder of the project:
 
@@ -249,11 +259,25 @@ const deployFaucet: DeployFunction<Settings> = async (
 export default deployFaucet
 ```
 
-The [deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137) of the `Deployer` takes our contract and deploys it with the correct arguments. You can also add a `taskTag` argument to tag your deployment with a specific name. By default, it will use the contract name, but if you deploy the same contract multiple times with different initial fields, your `.deployment` file will get overridden. Using a specific `taskTag` solves this issue.
+The
+[deployContract](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L133-L137)
+of the `Deployer` takes the contract and deploys it with the correct
+arguments. You can also add a `taskTag` argument to tag your
+deployment with a specific name. By default, it will use the contract
+name, but if you deploy the same contract multiple times with
+different initial fields, your `.deployment` file will get
+overridden. Using a specific `taskTag` solves this issue.
 
-From the [DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293) interface, we can see that `initialFields` is mandatory as it contains the arguments for our `TokenFaucet` contract.
+From the
+[DeployContractParams](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/web3/src/contract/contract.ts#L1286-L1293)
+interface, we can see that `initialFields` is mandatory as it contains
+the arguments for our `TokenFaucet` contract.
 
-With `issueTokenAmount` you can define how many tokens you want to issue, this is required if you want to create a token, otherwise no token-id will be created.
+With `issueTokenAmount` you can define how many tokens you want to
+issue, this is required if you want to create a token, otherwise no
+tokens will be created. You can also use `issueTokenTo` to send the
+issued token to an recipient.
+
 
 Now, let's deploy!
 
@@ -265,11 +289,9 @@ npx @alephium/cli@latest deploy
 
 If you got the error `The node chain id x is different from configured chain id y`, go check your `networkId` in the devnet configuration and the `alephium.config.ts` file.
 
-`No UTXO found` ???
+`No UTXO found` ??? Of course, we didn't provide [private keys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46) for deployment.
 
-Of course we didn't provide the `how-to-use-my-utxos`, we need to define our [privateKeys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46).
-
-You'll need to export the private keys from our wallet extension (might do it from our other wallets later), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
+You'll need to export the private keys from the [wallets](/wallet/overview), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
 If you used the docker way to launch your devnet, it might have work as we are defining [a default private key in our cli package](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) based on the genesis allocation.
 
 Let's update our `alephium.config.ts`
@@ -288,11 +310,11 @@ const configuration: Configuration<void> = {
 ```
 
 :::caution
-Real applications should use environment variables or similiar techniques for senstivie settings like `privateKeys`.
+For production we should use environment variables or similiar techniques for senstivie information like `privateKeys`.
 Do not commit your private keys to source control.
 :::
 
-and retry to deploy:
+and try to re-deploy:
 
 ```sh
 npx @alephium/cli@latest deploy
@@ -390,11 +412,12 @@ The `deploy` command also created a `.deployments.devnet.json` file, with the de
 
 # Interact with the deployed contract
 
-Having a token faucet is nice, getting tokens from it is even better.
+Having a token faucet is nice, getting tokens from it is even
+better. We can now write some code to interact with the faucet
+contract.
 
-We can now write some code to interact with the faucet contract.
-
-We'll need to install our `cli` package and the `typescript` dependency if it's not yet the case:
+We'll need to install our `cli` package and the `typescript`
+dependency if it's not yet the case:
 
 ```
 npm install @alephium/cli typescript
@@ -402,7 +425,7 @@ npm install @alephium/cli typescript
 
 We will now see a different option to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
 
-Another way is to create a skeleton web application project using TypeScript. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
+Another way is to use a simple typescript application. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
 
 ```typescript
 import { Deployments } from '@alephium/cli'
@@ -532,19 +555,13 @@ node dist/src/token.js
 You should now be a proud owner of the token you created.
 
 
-## What's next?
-
-You can find a more complex example of the token faucet tutorial [in the alephium/nextjs-template](https://github.com/alephium/nextjs-template) project.
-
-## Connect to the wallets
-
-dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
-such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
-and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
-
 ## Learn more
 
-- To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
-- To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
-- To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-- To learn how to build a Nextjs dApp, please visit [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)
+If you want to learn more about how to interact with the token faucet
+with a web interface, please take a look at the guide to [Build dApp
+with Nextjs](/dapps/build-dapp-with-nextjs).
+
+- [Ecosystem](/dapps/ecosystem)
+- [Web3 SDK](/dapps/alephium-web3)
+- [Ralph](/ralph/getting-started)
+

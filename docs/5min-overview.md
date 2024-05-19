@@ -119,7 +119,7 @@ Please read the roadmap [here][roadmap] and completed milestones [here][mileston
 ## Exchanges
 
 ### CEXs
-The full list of centralized exchanges is available on [CoinMarketCap][CoinMarketCap] and [Coingecko][Coingecko]
+The full list of centralized exchanges is available on [CoinMarketCap][CoinMarketCap] and [Coingecko][Coingecko].
 
 ### DEXs
 ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALPH). Full list of decentralized exchanges available on [Coingecko][Coingecko].
@@ -135,7 +135,8 @@ If you are building a dApp, get start from
 sending a PR to add your project to the [awesome-alephium][awesome] repo. The
 Alephium [Brand Guide][brand-guide] might also come in handy.
 
-Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](https://github.com/alephium/community/blob/master/BugBounty.md) program , please join [discord][discord] for further discussion.
+Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](https://github.com/alephium/community/blob/master/BugBounty.md) program, please join [discord][discord] for further discussions.
+
 
 ## Join the Alephium Community!
 
