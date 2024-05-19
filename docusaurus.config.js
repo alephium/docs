@@ -168,10 +168,6 @@ const config = {
             to: "/full-node/getting-started",
           },
           {
-            from: "/Docker-Guide.html",
-            to: "/full-node/docker-guide",
-          },
-          {
             from: "/Full-Node-More.html",
             to: "/full-node/full-node-more",
           },
@@ -216,18 +212,6 @@ const config = {
           {
             from: "/5min-overview",
             to: "/",
-          },
-          {
-            from: "/Testnet-Guide.html",
-            to: "/network/testnet-guide",
-          },
-          {
-            from: "/Devnet-Guide.html",
-            to: "/network/devnet-guide",
-          },
-          {
-            from: "/CPU-Miner-Guide.html",
-            to: "/network/cpu-miner-guide",
           },
           {
             from: "/Internationalization-and-Localization.html",

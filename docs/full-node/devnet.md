@@ -1,7 +1,7 @@
 ---
 sidebar_position: 40
-title: Local Devnet
-sidebar_label: Local devnet
+title: Devnet
+sidebar_label: Devnet
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";

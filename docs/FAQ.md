@@ -1,5 +1,5 @@
 ---
-sidebar_position: 1
+sidebar_position: 24
 slug: /frequently-asked-questions
 sidebar_label: FAQ
 title: Frequently Asked Questions

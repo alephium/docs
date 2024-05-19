@@ -1,3 +1,9 @@
+---
+sidebar_position: 23
+sidebar_label: The Bridge
+title: The Bridge
+---
+
 # The Bridge
 
 ## Tutorials & Links
