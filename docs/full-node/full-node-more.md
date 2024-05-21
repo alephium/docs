@@ -77,7 +77,7 @@ alephium.api.network-interface = "0.0.0.0"
 This error often occurs due to connection loss during node synchronization and means that some of the files are corrupted.
 To fix the problem:
 
-1. Delete the `db` folder under `${ALEPHIUM_HOME}/${NETWORK}`. e.g. `rm ~/.alephium/mainnet/db`
+1. Delete the `db` folder under `${ALEPHIUM_HOME}/${NETWORK}`. e.g. `rm -rf ~/.alephium/mainnet/db`
 
 2. Restart the node and wait for synchronization.
 

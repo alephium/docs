@@ -60,7 +60,7 @@ The first four fields are immutable values required to serve the [IFungibleToken
 You can see that our contract emits an `event` and defines an `error`
 code. For more information please read [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
 
-This is followed by 5 access methods for each of the contract's arguments.
+This is followed by 5 access methods for each of the contract's fields.
 
 The last method is where the magic happens:
 

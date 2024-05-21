@@ -150,4 +150,7 @@ Alephium implemented the same 51% attack protection as [Ravencoin](https://tronb
 
 The maximum allowed reorg size is 100 blocks. It is recommend to check 110 blocks for higher safety.
 
+After Rhone upgrade, blocktime is reduced from 64 seconds to 16
+seconds, and the maximum allowed reorg size is adjusted to 200 blocks.
+
 [^1]: By default it is under `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, and `/home/<your-username>` in Linux.

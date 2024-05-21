@@ -45,7 +45,7 @@ import {
     title="Wallets"
     icon={<WalletRegular />}
     to="/wallet/overview"
-    description="Running Alephium full node is important for the security and decentralization of the network."
+    description="Alephium offers a suite of wallets which are designed for ease-of-use, to make Alephium’s technology accessible for all."
   />
   <Card
     title="Mining"
