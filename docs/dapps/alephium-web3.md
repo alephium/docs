@@ -8,21 +8,32 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-## Installing
+Alephium offers a powerful [Web3
+SDK](https://github.com/alephium/alephium-web3) that makes it easy to
+connect to and interact with the blockchain. It also provides tools
+and framework for compiling, testing and deploying contracts, among
+other features.
+
+This guide provides a brief overview of some common use cases for the
+[Web3 SDK](https://github.com/alephium/alephium-web3).
+
+## Install
 
 ```
 npm install --save @alephium/web3
 ```
 
-## Connecting to Alephium
+## Connect to Alephium
 
-`NodeProvider` is an abstraction of a connection to the Alephium network, you can get a `NodeProvider` by:
+`NodeProvider` is an abstraction of a connection to the Alephium
+network, you can get a `NodeProvider` instance by:
 
 ```typescript
 const nodeProvider = new NodeProvider('http://localhost:22973')
 ```
 
-Or specify the `API_KEY` if you have `alephium.api.api-key` in your full node configuration file:
+If the full node you are connecting to requires [API
+Key](/full-node/full-node-more#api-key), you can specify it like this:
 
 ```typescript
 const API_KEY = // alephium.api.api-key from your full node config
@@ -35,9 +46,13 @@ Sometimes, it's convenient to setup a global `NodeProvider` for your project:
 web3.setCurrentNodeProvider(<nodeURL>)
 ```
 
-## Querying the Blockchain
+## Query the Blockchain
 
-Once you have a `NodeProvider`, you have a connection to the blockchain, which you can use to query the current contract state, fetch historic contract events, look up deployed contracts and so on.
+Once you have a `NodeProvider`, you have a connection to the
+blockchain, which you can use to query blocks, transactions, contract
+states, balances and other general information about the blockchain.
+
+Here are a few examples:
 
 ```typescript
 // Get the blockchain height from the given chain index
@@ -111,11 +126,11 @@ await nodeProvider.addresses.getAddressesAddressBalance('1DrDyTr9RpRsQnDnXo2YRiP
 // }
 ```
 
-## Writing to the blockchain
+## Write to the blockchain
 
 Transactions are used to change the state of the blockchain. Every transaction needs to be signed with a private key, which can be done through the `SignerProvider`. And there are two `SignerProvider` in `alephium/web3-wallet`.
 
-### Installing Web3 Wallet
+### Install Web3 Wallet
 
 ```
 npm install --save @alephium/web3-wallet
@@ -127,7 +142,9 @@ Both wallets are used for contract development and deployment, please don't use 
 
 ### NodeWallet
 
-Please follow the [guide](/wallet/node-wallet-guide) to create a full node wallet.
+Please follow this [guide](/wallet/node-wallet-guide) to create a full
+node wallet. Here are a few examples of how to use Web3 Wallet SDK to
+interact with the node wallet:
 
 ```typescript
 // Create a node wallet by wallet name
@@ -166,6 +183,10 @@ await nodeWallet.lock()
 
 ### PrivateKeyWallet
 
+If you have mnemonic or private key, you can also use the Web3 Wallet
+SDK to create an instance of `PrivateKeyWallet`, which can then be
+used to sign transactions.
+
 ```typescript
 // Create a PrivateKeyWallet from private key
 const wallet =  new PrivateKeyWallet({privateKey: 'a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5', keyType: undefined, nodeProvider: web3.getCurrentNodeProvider()})
@@ -203,359 +224,24 @@ await wallet.signAndSubmitTransferTx({
 
 ## Contracts
 
-Similar to Ethereum, a contract is an abstraction of program code which lives on the Alephium blockchain. Let's use the following example to illustrate how to test, deploy and call a contract, please follow the [guide](/dapps/getting-started) to create a project.
+Similar to Ethereum, a contract is an abstraction of program code
+which lives on the Alephium blockchain.
 
-### Test the contract
-#### Unit tests
+Work with contracts using full node's API can be tedious, but [Web3
+SDK](https://github.com/alephium/alephium-web3) simplifies the process
+by abstracting away many details. For more detailed information on
+deploying and interacting with contracts using Web3 SDK, please refer
+to the [Interact with contracts](/dapps/interact-with-contracts)
+guide. The [Testing and debugging](/dapps/testing-and-debugging) guide
+provides an overview of how to perform unit and integration testing on
+your contracts, as well as how to diagnose issues using debug
+statement. If you want to query or subscribe to the contract or system
+events, the [Events](/dapps/events) guide will be helpful.
 
-The SDK provides unit testing functionality, which calls the contract like a normal transaction, but instead of changing the blockchain state, it returns the new contract state, transaction outputs, and events.
+## Utility functions
 
-```typescript
-web3.setCurrentNodeProvider('http://localhost:22973')
-const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
-// Build the project first
-await Project.build()
-
-// Test the `withdraw` method of the `TokenFaucet` contract, it will NOT change the blockchain state
-const testContractAddress = randomContractAddress()
-// The `TokenFaucet` is generated in the getting-started guide
-const result = await TokenFaucet.tests.withdraw({
-  address: testContractAddress,
-  // Initial state of the test contract
-  initialFields: {
-    symbol: Buffer.from('TF', 'utf8').toString('hex'),
-    name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
-    decimals: 18n,
-    supply: 10n ** 18n,
-    balance: 10n
-  },
-  // Assets owned by the test contract before a test
-  initialAsset: {
-    alphAmount: 10n ** 18n,
-    tokens: [{
-      id: binToHex(contractIdFromAddress(testContractAddress)),
-      amount: 10n
-    }]
-  },
-  // Arguments to test the target function of the test contract
-  testArgs: { amount: 1n },
-  // Assets owned by the caller of the function
-  inputAssets: [{
-    address: wallet.account.address,
-    asset: { alphAmount: 10n ** 18n }
-  }]
-})
-
-const contractState = result.contracts[0] as TokenFaucetTypes.State
-expect(contractState.address).toEqual(testContractAddress)
-```
-
-A complete example can be found in our [`alephium-nextjs-template`](https://github.com/alephium/nextjs-template/blob/main/test/unit/token.test.ts)
-
-#### Integration tests
-
-Alongside unit tests, you can also run some integration tests, be careful as those one can change the blockchain state.
-
-```typescript
-web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
-await Project.build()
-
-const accounts = signer.getAccounts()
-const account = accounts[0]
-const testAddress = account.address
-await signer.setSelectedAccount(testAddress)
-const testGroup = account.group
-
-const deployed = deployments.getDeployedContractResult(testGroup, 'TokenFaucet')
-const tokenId = deployed.contractInstance.contractId
-const tokenAddress = deployed.contractInstance.address
-
-const faucet = TokenFaucet.at(tokenAddress)
-const initialState = await faucet.fetchState()
-const initialBalance = initialState.fields.balance
-
-// Call `withdraw` function 10 times
-for (let i = 0; i < 10; i++) {
-  await Withdraw.execute(signer, {
-    initialFields: { token: tokenId, amount: 1n },
-    attoAlphAmount: DUST_AMOUNT * 2n
-  })
-
-  //!!! Blockchain state is changed !!!
-  const newState = await faucet.fetchState()
-  const newBalance = newState.fields.balance
-  expect(newBalance).toEqual(initialBalance - BigInt(i) - 1n)
-}
-```
-
-More details can be found in our [integration test folder](https://github.com/alephium/nextjs-template/blob/integration-test/test/integration)
-
-### Deploy the contract
-
-```typescript
-web3.setCurrentNodeProvider('http://localhost:22973')
-const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
-await Project.build()
-
-// Create a transaction to deploy the contract and submit the transaction to the Alephium network:
-// `initialFields` is required if the contract has fields
-// `initialAttoAlphAmount` must be greater than or equal to 1 ALPH, assets will be sent to the contract from the transaction sender account
-// `issueTokenAmount` specifies the amount of tokens to issue
-const issueTokenAmount = 10n
-const deployResult = await TokenFaucet.deploy(wallet, {
-  initialFields: {
-    symbol: Buffer.from('TF', 'utf8').toString('hex'),
-    name: Buffer.from('TokenFaucet', 'utf8').toString('hex'),
-    decimals: 18n,
-    supply: issueTokenAmount,
-    balance: issueTokenAmount
-  },
-  initialAttoAlphAmount: 10n ** 18n,
-  issueTokenAmount: issueTokenAmount
-})
-console.log(JSON.stringify(deployResult, null, 2))
-// {
-//   "signature": "ea95754bae7935311acf15d3323293f03bce89bb6c82939427da5e3074f0ada93b0cda24138dcec1de4e21a1a66dc1f0c8e99297e6ff8fe10587d1821cbae23f",
-//   "fromGroup": 0,
-//   "toGroup": 0,
-//   "unsignedTx": "000401010103000000091500bee85f379545a2ed9f6cceb331288842f378cf0f04012ad4ac8824aae7d6f80a13c40de0b6b3a7640000a2144055050609121b4024402d404a010000000102ce0002010000000102ce0102010000000102ce0202010000000102ce0302010000000102a0000201020101001116000e320c7bb4b11600aba00016002ba10005b416005f14160403025446030b546f6b656e4661756365740212020a140301020a130aae188000dfdfc1174876e8000137a444479fa782e8b88d4f95e28b3b2417e5bc30d33a5ae8486d4a8885b82b224259c1e6000381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b000",
-//   "gasAmount": 57311,
-//   "gasPrice": "100000000000",
-//   "txId": "c9adbbc02f34d2b3f2db8790354bca9f3d6f7a1fde9b9269a393d6693663c084",
-//   "contractAddress": "v8uU9yLfzUwqpJeS9Kd76DB75WJBcEuMdYgEQ2Gn8pLF",
-//   "groupIndex": 0,
-//   "contractId": "1581cc793fc7bafce6ef89eaf66404c9eec17561ef0e169ef2a4329c9f190c00",
-//   "instance": {
-//     "address": "v8uU9yLfzUwqpJeS9Kd76DB75WJBcEuMdYgEQ2Gn8pLF",
-//     "contractId": "1581cc793fc7bafce6ef89eaf66404c9eec17561ef0e169ef2a4329c9f190c00",
-//     "groupIndex": 0
-//   }
-// }
-
-// Get the contract state
-const tokenFaucet = deployResult.instance
-const contractState = await tokenFaucet.fetchState()
-console.log(JSON.stringify(contractState, null, 2))
-// {
-//   "address": "v8uU9yLfzUwqpJeS9Kd76DB75WJBcEuMdYgEQ2Gn8pLF",
-//   "contractId": "1581cc793fc7bafce6ef89eaf66404c9eec17561ef0e169ef2a4329c9f190c00",
-//   "bytecode": "050609121b4024402d404a010000000102ce0002010000000102ce0102010000000102ce0202010000000102ce0302010000000102a0000201020101001116000e320c7bb4b11600aba00016002ba10005b416005f",
-//   "initialStateHash": "236a82352f5e34f813ecf274385912ed0ba67f1c305c24f7a6934c18d32213b1",
-//   "codeHash": "641343b4f1c08b03969b127b452acc7535cad20231bc32af6c0b5f218dd8ff0c",
-//   "fields": {
-//     "symbol": "5446",
-//     "name": "546f6b656e466175636574",
-//     "decimals": "18",
-//     "supply": "10",
-//     "balance": "10"
-//   },
-//   "fieldsSig": {
-//     "names": [
-//       "symbol",
-//       "name",
-//       "decimals",
-//       "supply",
-//       "balance"
-//     ],
-//     "types": [
-//       "ByteVec",
-//       "ByteVec",
-//       "U256",
-//       "U256",
-//       "U256"
-//     ],
-//     "isMutable": [
-//       false,
-//       false,
-//       false,
-//       false,
-//       true
-//     ]
-//   },
-//   "asset": {
-//     "alphAmount": "1000000000000000000",
-//     "tokens": [
-//       {
-//         "id": "1581cc793fc7bafce6ef89eaf66404c9eec17561ef0e169ef2a4329c9f190c00",
-//         "amount": "10"
-//       }
-//     ]
-//   }
-// }
-```
-
-From the output we can see that we have successfully deployed the contract, and there are 10 tokens in the contract asset.
-
-### Call the contract
-
-You can use scripts to call contracts on the Alephium blockchain, the script code will be executed when the transaction is submitted to the Alephium network, but the script code will not be stored in the blockchain's state.
-
-```typescript
-web3.setCurrentNodeProvider('http://localhost:22973')
-const wallet = new PrivateKeyWallet('a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5')
-await Project.build()
-
-// Contract address from the deploy result
-const contractAddress = deployResult.instance.address
-
-// Contract id from the deploy result
-const contractId = deployResult.instance.contractId
-
-// Create a call contract transaction, `initialFields` is required if the script has fields
-// The `Withdraw` is generated in the getting-started guide
-const executeResult = await Withdraw.execute(wallet, {
-  initialFields: {
-    token: contractId,
-    amount: 1n
-  }
-})
-console.log(JSON.stringify(executeResult, null, 2))
-// {
-//   "signature": "16ec5eed788bfe7a803ec89f47d8ef7c1ac5f626ad88e4b46ecdde8be9fdef5719db49b09ef4e11a94901082e34c52629aafad4b9753483bf853ff695b19b9a4",
-//   "fromGroup": 0,
-//   "toGroup": 0,
-//   "unsignedTx": "0004010101030000000513010d0c1440201581cc793fc7bafce6ef89eaf66404c9eec17561ef0e169ef2a4329c9f190c0001058000a447c1174876e8000137a44447f11525fe8e58af5a02b2f81bbbf35ea3c1bdf319ffe76794709c9e9d4e80c599000381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b000",
-//   "gasAmount": 42055,
-//   "gasPrice": "100000000000",
-//   "txId": "c29e9cb10b3e0b34979b9daac73151d98ee4de8f913e66aa0f0c8dc0cb99a617",
-//   "groupIndex": 0
-// }
-
-// Get the account balance
-const balance = await wallet.nodeProvider.addresses.getAddressesAddressBalance(wallet.account.address)
-console.log(JSON.stringify(balance, null, 2))
-// {
-//   "balance": "999998990063400000000000",
-//   "balanceHint": "999998.9900634 ALPH",
-//   "lockedBalance": "0",
-//   "lockedBalanceHint": "0 ALPH",
-//   "tokenBalances": [
-//     {
-//       "id": "1581cc793fc7bafce6ef89eaf66404c9eec17561ef0e169ef2a4329c9f190c00",
-//       "amount": "1"
-//     }
-//   ],
-//   "utxoNum": 2
-// }
-```
-
-### Query historic contract events
-
-Contract events are indexed by contract address with offsets, and you can query historic events of a contract address by specifying the offset and limit (optional).
-
-```typescript
-const nodeProvider = new NodeProvider('http://localhost:22973')
-// Contract address from the contract deploy result
-const contractAddress = deployResult.instance.address
-
-// Query contract events from index 0, and the `limit` cannot be greater than 100
-const result = await nodeProvider.events.getEventsContractContractaddress(
-  contractAddress, {start: 0, limit: 100}
-)
-
-// In the next query you can start with `result.nextStart`
-console.log(JSON.stringify(result, null, 2))
-// {
-//   "events": [
-//     {
-//       "blockHash": "0c07e672c40629a5c943cc7e4ec677140cbd50fdc9dcacb6a1d30bc38c0e7b50",
-//       "txId": "c29e9cb10b3e0b34979b9daac73151d98ee4de8f913e66aa0f0c8dc0cb99a617",
-//       "eventIndex": 0,
-//       "fields": [
-//         {
-//           "type": "Address",
-//           "value": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH"
-//         },
-//         {
-//           "type": "U256",
-//           "value": "1"
-//         }
-//       ]
-//     }
-//   ],
-//   "nextStart": 1
-// }
-
-// Sometimes, events might be emitted from non-canonical blocks because of block reorg, you can check if the block in the main chain
-await nodeProvider.blockflow.getBlockflowIsBlockInMainChain({blockHash: events[0].blockHash})
-// true
-
-// Get the current contract event counter
-await nodeProvider.events.getEventsContractContractaddressCurrentCount(contractAddress)
-// 1
-
-// You can also get events by transaction id if `alephium.node.event-log.index-by-tx-id` is enabled in your full node configuration file
-await nodeProvider.events.getEventsTxIdTxid('c29e9cb10b3e0b34979b9daac73151d98ee4de8f913e66aa0f0c8dc0cb99a617')
-// {
-//   "events": [
-//     {
-//       "blockHash": "0c07e672c40629a5c943cc7e4ec677140cbd50fdc9dcacb6a1d30bc38c0e7b50",
-//       "contractAddress": "v8uU9yLfzUwqpJeS9Kd76DB75WJBcEuMdYgEQ2Gn8pLF",
-//       "eventIndex": 0,
-//       "fields": [
-//         {
-//           "type": "Address",
-//           "value": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH"
-//         },
-//         {
-//           "type": "U256",
-//           "value": "1"
-//         }
-//       ]
-//     }
-//   ]
-// }
-```
-
-### Listening to events
-
-In addition to querying events one by one, you can also get events by event subscription. It will periodically query and get new events.
-
-```typescript
-web3.setCurrentNodeProvider('http://localhost:22973')
-// The `TokenFaucet` contract instance from deploy result
-const tokenFaucet = deployResult.instance
-// The `TokenFaucetTypes.WithdrawEvent` is generated in the getting-started guide
-const events: TokenFaucetTypes.WithdrawEvent[] = []
-const subscribeOptions = {
-  // It will check for new events from the full node every `pollingInterval`
-  pollingInterval: 500,
-  // The callback function will be called for each event
-  messageCallback: (event: TokenFaucetTypes.WithdrawEvent): Promise<void> => {
-    events.push(event)
-    return Promise.resolve()
-  },
-  // This callback function will be called when an error occurs
-  errorCallback: (error: any, subscription): Promise<void> => {
-    console.log(error)
-    subscription.unsubscribe()
-    return Promise.resolve()
-  }
-}
-
-// Subscribe the contract events from index 0
-const subscription = tokenFaucet.subscribeWithdrawEvent(subscribeOptions, 0)
-await new Promise((resolve) => setTimeout(resolve, 1000))
-console.log(JSON.stringify(events, null, 2))
-// [
-//   {
-//     "contractAddress": "v8uU9yLfzUwqpJeS9Kd76DB75WJBcEuMdYgEQ2Gn8pLF",
-//     "blockHash": "0c07e672c40629a5c943cc7e4ec677140cbd50fdc9dcacb6a1d30bc38c0e7b50",
-//     "txId": "c29e9cb10b3e0b34979b9daac73151d98ee4de8f913e66aa0f0c8dc0cb99a617",
-//     "eventIndex": 0,
-//     "name": "Withdraw",
-//     "fields": {
-//       "to": "1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH",
-//       "amount": "1"
-//     }
-//   }
-// ]
-
-// Unsubscribe
-subscription.unsubscribe()
-```
-
-## Utils
+The Web3 SDK also provides many utility functions to simplify
+developers' tasks. Here are a few examples:
 
 ### Conversion between contract id and contract address
 
