@@ -9,8 +9,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 <UntranslatedPageText />
 
 Local devnet is essential to develop and test your dApps. It can be
-launched using similar steps outlined in the [get
-started](full-node/getting-started) guide using Java directly or with
+launched using similar steps outlined in the [get started](full-node/getting-started.md) guide using Java directly or with
 Docker.
 
 ## Using Docker
@@ -122,7 +121,7 @@ CREATE DATABASE devnet;
 
 #### Launch explorer backend
 
-You can check the [configuration file](https://github.com/alephium/explorer-backend/blob/feature/contract-subcontract/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
+You can check the [configuration file](https://github.com/alephium/explorer-backend/blob/master/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
 
 ```shell
 export BLOCKFLOW_NETWORK_ID=2
