@@ -9,8 +9,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 <UntranslatedPageText />
 
 Local devnet is essential to develop and test your dApps. It can be
-launched using similar steps outlined in the [get
-started](full-node/getting-started) guide using Java directly or with
+launched using similar steps outlined in the [get started](full-node/getting-started.md) guide using Java directly or with
 Docker.
 
 ## Using Docker
