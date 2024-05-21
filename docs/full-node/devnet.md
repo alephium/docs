@@ -121,7 +121,7 @@ CREATE DATABASE devnet;
 
 #### Launch explorer backend
 
-You can check the [configuration file](https://github.com/alephium/explorer-backend/blob/feature/contract-subcontract/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
+You can check the [configuration file](https://github.com/alephium/explorer-backend/blob/master/app/src/main/resources/application.conf) to see what settings can be override. You can then configure and launch your `explorer-backend` with:
 
 ```shell
 export BLOCKFLOW_NETWORK_ID=2
