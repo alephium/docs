@@ -51,6 +51,14 @@ Then you can refer to the code provided [here](https://github.com/alephium/minin
 
 After the full node verifies the block, it will send a `SubmitBlockResult` message to tell the mining pool whether the block is valid, you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) to parse the `SubmitBlockResult` message.
 
+### Rhone Upgrade
+
+In the Rhone upgrade, we introduced the ghost algorithm similar to ETH. A mainchain block may reference uncle blocks, and both the miner of the mainchain block and the miner of the uncle block will receive rewards. Therefore, the mining pool need to distribute rewards to the miners of the uncle blocks.
+
+You can refer to the implementation [here](https://github.com/alephium/mining-pool/pull/63/commits/5e0a9ea25616bba986883940c73aef34d547f35f), which uses the `getMainChainBlockByGhostUncle` endpoint introduced in the full node version v2.14.6. You need to upgrade your full node to v2.14.6.
+
+Another point to note is that you may need to wait for a while to confirm whether an orphan block is an uncle block. If the height of the orphan block is `h`, it can be referenced by a mainchain block with a height in the range of `[h+1, h+7]`. Therefore, you need to wait about `7 * 16s`. However, due to the variability in block time, you may need to wait longer to ensure that the uncle block miners also receive their rewards.
+
 ## Miner
 
 ### Calculating the BlockHash
