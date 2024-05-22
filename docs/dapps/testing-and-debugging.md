@@ -24,7 +24,7 @@ decisions when it comes to its testing framework:
   testing boilerplates to make writing and maintaining test cases much
   easier.
 - Tests are run against the Alephium full node in
-  [devnet](/full-node/devnet), which has the same codebase as
+  [devnet](/full-node/getting-started#devnet), which has the same codebase as
   Alephium `mainnet` with differences only in configurations.
 
 Alephium also supports the ability to emit debug statements in the
@@ -262,4 +262,4 @@ node log.
 
 Under the hood, `Debug` is a special [system
 events](/dapps/events#system-events) which is only available in
-[devnet](/full-node/devnet).
+[devnet](/full-node/getting-started#devnet).

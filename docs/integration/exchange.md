@@ -14,7 +14,7 @@ There is an [integration prototype](https://github.com/alephium/alephium-web3/bl
 
 To integrate with Alephium, an exchange must [run a full node](/full-node/getting-started). Additionally, the exchange can also [run explorer backend](/explorer-backend/getting-started) for debugging and additional indexing. 
 
-To create a local development network with explorer support, follow the instructions in the [Local devnet](/full-node/devnet#using-docker) guide. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
+To create a local development network with explorer support, follow the instructions in the [Local devnet](/full-node/getting-started#devnet) guide. Once launched, Swagger UI can be accessed for the API interface of the full node and the explorer backend.
 
 * Full node Swagger UI: [http://127.0.0.1:22973/docs](http://127.0.0.1:22973/docs)
 * Explorer backend Swagger UI: [http://127.0.0.1:9090/docs](http://127.0.0.1:9090/docs)

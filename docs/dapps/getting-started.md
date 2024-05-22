@@ -41,7 +41,7 @@ This will create a new directory `alephium-tutorial` and initialize a sample pro
 
 ## Launch the local development network
 
-To compile and test your contracts, it's necessary to [launch](/full-node/devnet) a local
+To compile and test your contracts, it's necessary to [launch](/full-node/getting-started#devnet) a local
 development network. Your local devnet will be launched using [this
 configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
 and generated addresses in 4 groups with enough ALPHs for testing

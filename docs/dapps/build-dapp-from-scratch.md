@@ -92,7 +92,7 @@ our [built-in functions page](/ralph/built-in-functions).
 
 ## Compile your contract
 
-The compiler needs to contact the [local devnet](/full-node/devnet) in
+The compiler needs to contact the [local devnet](/full-node/getting-started#devnet) in
 order to compile the contract. If you haven't started it, now it's the
 time.  We define the node URL using the `alephium.config.ts` config
 file. Create this file in the root directory of your project and paste
