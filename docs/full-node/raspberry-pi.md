@@ -1,7 +1,7 @@
 ---
 sidebar_position: 30
 title: Full Node on Raspberry Pi
-sidebar_label: Full node on Raspberry Pi
+sidebar_label: On Raspberry Pi
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -11,7 +11,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 In this guide we'll learn:
 
 - How to install a Raspberry Pi 4
-- How to run a docker'ized instance of Alephium full node
+- How to run a docker'ized instance of Alephium full node on Raspberry Pi 4
 
 ## How to install a Raspberry Pi 4
 
@@ -19,7 +19,7 @@ This first section will detail my personal way of installing Ubuntu 20.04 server
 It requires to have a Raspberry Pi 4 (obviously), a SD Card (8 GB is the minimum) and an SD Card reader to flash the SD Card.
 It will be illustrated using shell command from macOS, but you'll find the equivalent in Windows.
 
-![Getting ready for the hard work](media/flashing.jpeg)
+<img src={require("./media/flashing.jpeg").default} alt="Getting ready for the hard work" width="500"/>
 
 First of all we will configure the installation Ubuntu. We're using cloud-init for that since it is built in Ubuntu 20.04 and above.
 This configuration creates a user (different from the `ubuntu` default) and installs a few packages.
@@ -96,13 +96,11 @@ ssh alephium@alephium
 
 If `alephium` host is unknown, you'll have to search for the IP address of the node, most likely on your router configuration app/page.
 
-And that's it, your Raspberry Pi is running Ubuntu 20.04 with Docker, and is ready to run an Alephium full node.
+And that's it, your Raspberry Pi is running Ubuntu 20.04 with Docker, and is ready to run an Alephium full node! 🚀
 
-🚀
+<img src={require("./media/pies.jpeg").default} alt="Raspberry pi 4" width="500"/>
 
-![Raspberry pi 4](media/pies.jpeg)
-
-## How to run a docker'ized instance of Alephium full node
+## Run a docker'ized instance of Alephium full node
 
 This second section is not specific to a Raspberry Pi, but can be generalized to any server/vm/computer with SSH access.
 We will run the most basic version of a Alephium full node using docker, and then iterate to make our setup more

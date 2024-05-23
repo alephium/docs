@@ -1,7 +1,7 @@
 ---
-sidebar_position: 40
-title: More and Troubleshooting
-sidebar_label: More and troubleshooting
+sidebar_position: 50
+title: Troubleshooting
+sidebar_label: Troubleshooting
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -24,17 +24,33 @@ Restart your full node to make this take effect.
 
 #### API Key Generation
 
-On GNU/ Linux: `cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
+On Mac / Linux, run:
+
+```shell
+cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
+```
 
 ### Use API Key
 
+#### Swagger UI
+
 1. Click on the `Authorize` button on the top right of your Swagger UI:
-   ![full-node-api-key-auth0](media/full-node-api-key-auth0.png)
+
+<img src={require("./media/full-node-api-key-auth0.png").default}/>
 
 2. Fill in the value box with your key and click the authorize button:
-   ![full-node-api-key-auth1](media/full-node-api-key-auth1.png)
+
+<img src={require("./media/full-node-api-key-auth1.png").default}/>
 
 Now you could use Swagger UI as if there is no API key.
+
+#### Curl
+
+Specify the `X-API-KEY` header, e.g.
+
+```shell
+curl -H "X-API-KEY: ${your-api-key}" ${your-full-node-host}/infos/version
+```
 
 ## How to make the full node API publicly accessible ?
 
@@ -61,9 +77,9 @@ alephium.api.network-interface = "0.0.0.0"
 This error often occurs due to connection loss during node synchronization and means that some of the files are corrupted.
 To fix the problem:
 
-1. Delete the folder .alephium `rm .alephium`
+1. Delete the `db` folder under `${ALEPHIUM_HOME}/${NETWORK}`. e.g. `rm -rf ~/.alephium/mainnet/db`
 
-2. Restart the node and wait for synchronization `java -jar alephium-x.x.x.jar`
+2. Restart the node and wait for synchronization.
 
 ## Moving the Alephium data folder
 

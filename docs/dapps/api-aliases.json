@@ -13,6 +13,10 @@
             "to": "https://node.testnet.alephium.org"
         },
         {
+            "from": "https://node-v210.testnet.alephium.org",
+            "to": "https://node.testnet.alephium.org"
+        },
+        {
             "from": "https://wallet-v20.testnet.alephium.org",
             "to": "https://node.testnet.alephium.org"
         },
@@ -30,6 +34,10 @@
         },
         {
             "from": "https://backend-v113.testnet.alephium.org",
+            "to": "https://backend.testnet.alephium.org"
+        },
+        {
+            "from": "https://backend-v117.testnet.alephium.org",
             "to": "https://backend.testnet.alephium.org"
         },
         {
