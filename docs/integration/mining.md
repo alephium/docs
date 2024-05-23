@@ -43,6 +43,12 @@ You can refer to the code provided [here](https://github.com/alephium/mining-poo
 
 Once the mining pool receives the `Jobs` message from the full node, it can send the mining jobs to miners based on their hashrate. For each chain, calculating the nonce only requires the `targetBlob` and `headerBlob` fields. Therefore, the mining pool can save bandwidth by excluding the `txsBlob` field when sending mining jobs to miners. You can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/blockTemplate.js#L51).
 
+### Job distribution
+
+Some miner softwares work on a single job, while others support 16 jobs received from the pool. To maximize compatibility, the pool can send a single job to each miner.
+
+The simplest approach is to send a random job from the 16 available jobs to each miner. The ideal approach is to distribute the jobs evenly to miners based on their hashrate, ensuring each job receives the same amount of hashrate. While this method is more efficient, it will take more time to implement.
+
 ### Submitting Blocks To Full Node
 
 Once the mining pool receives a valid `nonce` from the miner, it can send the block to the full node, where the block is composed of `nonce`, `headerBlob` and `txsBlob`, you can refer to the code provided [here](https://github.com/alephium/mining-pool/blob/master/lib/pool.js#L119).
