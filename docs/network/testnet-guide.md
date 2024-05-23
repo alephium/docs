@@ -18,29 +18,13 @@ In the `$HOME/.alephium/user.conf` (`user.conf` if docker is used) file you have
 
 ```
 alephium.network.network-id = 1
-alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
 ```
+
+In the latest version, the testnet bootstrap URLs are hardcoded into the code, so you don't need to specify the `bootstrap` config in `user.config` anymore.
 
 ## Mining
 
-In the testnet you can use the [CPU Miner Guide](cpu-miner-guide.md) to get some ALPH
-
-Append your miner addresses in `$HOME/.alephium/user.conf` like:
-
-```
-alephium.mining.miner-addresses = [
-"1FsroWmeJPBhcPiUr37pWXdojRBe6jdey9uukEXk1TheA",
-"1CQvSXsmM5BMFKguKDPpNUfw1idiut8UifLtT8748JdHc",
-"193maApeJWrz9GFwWCfa982ccLARVE9Y1WgKSJaUs7UAx",
-"16fZKYPCZJv2TP3FArA9FLUQceTS9U8xVnSjxFG9MBKyY"
-]
-```
-
-:::info 
-
-You can easily generate mining addresses by installing the [desktop wallet](../wallet/desktop-wallet/configure-mining-wallet), and creating a wallet with 4 addresses. You can then copy the addresses and paste them in your `user.conf` file mentioned above.
-
-:::
+To maintain the stability of the testnet network, we only allow [specific addresses](https://github.com/alephium/alephium/blob/fb4c4947ee0d0c57424d74ea197f19e72dc46c60/protocol/src/main/scala/org/alephium/protocol/ALPH.scala#L104) to mine blocks in the testnet. If you need to test mining, please set up your own testnet.
 
 ## Configuration example
 
@@ -48,12 +32,5 @@ You can easily generate mining addresses by installing the [desktop wallet](../w
 alephium.api.network-interface = "0.0.0.0"
 alephium.mining.api-interface = "0.0.0.0"
 alephium.network.network-id = 1
-alephium.discovery.bootstrap = ["testnet-bootstrap0.alephium.org:9973","testnet-bootstrap1.alephium.org:9973"]
-alephium.mining.miner-addresses = [
-"1FsroWmeJPBhcPiUr37pWXdojRBe6jdey9uukEXk1TheA",
-"1CQvSXsmM5BMFKguKDPpNUfw1idiut8UifLtT8748JdHc",
-"193maApeJWrz9GFwWCfa982ccLARVE9Y1WgKSJaUs7UAx",
-"16fZKYPCZJv2TP3FArA9FLUQceTS9U8xVnSjxFG9MBKyY"
-]
 alephium.api.api-key-enabled = false
 ```
