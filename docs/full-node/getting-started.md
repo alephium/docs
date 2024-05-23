@@ -72,6 +72,10 @@ You can use [extension wallet](/wallet/Basic%20functions#request-testnet-alph-us
 or [desktop wallet](/wallet/Basic%20functions#request-testnet-alph-using-desktop-wallet)
 to get some `ALPH` from the testnet faucet.
 
+### Mining
+
+To maintain the stability of the testnet, we only allow [specific addresses](https://github.com/alephium/alephium/blob/fb4c4947ee0d0c57424d74ea197f19e72dc46c60/protocol/src/main/scala/org/alephium/protocol/ALPH.scala#L104) to mine blocks on the testnet. If you need to test mining, you can set up your own testnet using [this config](https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet).
+
 ## Devnet
 
 Local devnet is essential to develop and test your dApps. It can be
