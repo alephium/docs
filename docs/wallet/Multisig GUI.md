@@ -1,5 +1,5 @@
 ---
-sidebar_position: 90
+sidebar_position: 60
 title: Multisig GUI
 sidebar_label: Multisig GUI
 ---

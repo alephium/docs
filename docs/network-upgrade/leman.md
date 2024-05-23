@@ -1,7 +1,7 @@
 ---
-sidebar_position: 60
+sidebar_position: 10
 title: Leman Network Upgrade
-sidebar_label: Leman Network Upgrade
+sidebar_label: Leman
 ---
 
 :::info

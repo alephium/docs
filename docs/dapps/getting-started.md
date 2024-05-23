@@ -10,11 +10,13 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Overview
 
-Alephium proposes multiple tools and packages to help you build your dApps.
+Alephium offers a comprehensive suite of developer tools and libraries
+designed to assist in building your dApps. This guide will help you
+get started with an example dApp project, walking you through essential
+development tasks such as smart contract compilation, testing, and
+deployment.
 
-This guide will help you install our recommended setup.
-
-Prerequisites:
+### Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Operate in a [terminal](https://en.wikipedia.org/wiki/Terminal_emulator)
@@ -22,14 +24,16 @@ Prerequisites:
 - `npm` version >= 8 installed
 
 :::info
-If you experience slowness with `npm` and `npx`, consider give `bun` and `bunx` a try.
+If you experience slowness with `npm` and `npx`, consider give
+[bun](https://bun.sh) and [bunx](https://bun.sh/docs/cli/bunx) a try.
+
 :::
 
 ## Create a new dApp project
 
 To create the tutorial project, open a new terminal and run:
 
-```
+```shell
 npx @alephium/cli@latest init alephium-tutorial
 ```
 
@@ -37,11 +41,15 @@ This will create a new directory `alephium-tutorial` and initialize a sample pro
 
 ## Launch the local development network
 
-To compile and test your contracts, it's necessary to launch a local development network, and you can follow [this guide](/full-node/devnet) to launch a devnet.
+To compile and test your contracts, it's necessary to [launch](/full-node/getting-started#devnet) a local
+development network. Your local devnet will be launched using [this
+configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf)
+and generated addresses in 4 groups with enough ALPHs for testing
+purposes.
 
-Your new network is now launched using [this configuration](https://github.com/alephium/alephium-stack/blob/master/devnet/devnet.conf) and generated addresses in 4 groups with enough ALPHs for testing purposes.
-
-The Typescript SDK is then able to interact with the network through REST endpoints.
+The [Typescript SDK](https://github.com/alephium/alephium-web3) used
+in the sample project is then able to interact with the local devnet
+through REST endpoints.
 
 ## Compile your contract
 
@@ -349,13 +357,19 @@ node dist/src/token.js
 
 ## Connect to the wallets
 
-dApp requires wallet integration for users of the dApp to authenticate and interact with the Alephium blockchain,
-such as transactions signing. Currently dApps can be integrated with both [Extension Wallet](../wallet/extension-wallet/dapp)
-and [WalletConnect](../wallet/walletconnect). Please refer to the respective pages for more details.
+dApps require wallet integration to allow users to authenticate and interact with the Alephium blockchain,
+such as transactions signing. Currently dApps can be integrated with
+all [official wallets](/wallet/overview). For a more concrete example,
+please take a look at the example in [Build dApp with
+Nextjs](/dapps/build-dapp-from-scratch).
 
 ## Learn more
 
-- To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
-- To learn more about the web3 SDK, please visit the [guide of web3 SDK](/dapps/alephium-web3).
-- To learn more about Ralph language, please visit the [guide of Ralph](/ralph/getting-started).
-- To learn how to build a Nextjs dApp, please visit [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)
+If you want to learn more about how the sample project is set up,
+please take a look at the step-by-step guide to [Build dApp from
+scratch](/dapps/build-dapp-from-scratch).
+
+- [Ecosystem](/dapps/ecosystem)
+- [Web3 SDK](/dapps/alephium-web3)
+- [Ralph](/ralph/getting-started)
+- [Build dApp with Nextjs](/dapps/build-dapp-with-nextjs.md)

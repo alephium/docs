@@ -7,47 +7,30 @@ sidebar_label: More and Troubleshooting
 
 ## Coin name and ticker
 
-* Name: Alephium
-* Ticker/Symbol: ALPH
+* Name: `Alephium`
+* Ticker/Symbol: `ALPH`
 
-## Explorer URLs
+## Public services
 
-* Mainnet: https://explorer.alephium.org
-* Testnet: https://testnet.alephium.org/
-
-## Public API interface URL
-
-URL: https://wallet.mainnet.alephium.org
-
-All public APIs are listed and updated on the [Public services](../dapps/public-services.md) page.
+All latest public APIs are listed on the [Public services](../dapps/public-services.md) page.
 
 ## Official wallets
 
-[Official desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
+Please refer to the [wallet guide](/wallet/overview).
 
-Official mobile wallet:
-* [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
-* [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
+## Full node 
 
-Official web extension wallet:
-* [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
-* [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
-
-## Fullnode 
-
-### Node installation documents
-
-[Getting started with Fullnode](../full-node/getting-started.md)
+### Run a full node
+Please read the [get started](/full-node/getting-started.md) guide.
 
 ### Required disk size
+The current mainnet database size is around `95G`. [Pruned
+nodes](../full-node/full-node-more#pruning) can reduce the disk
+requirement to around `25G`.
 
-The current mainnet database size is around 85G. Documentation for [pruned nodes](../full-node/full-node-more#pruning).
+### Snapshots
 
-### Mainnet snapshots
-
-URL: [https://archives.alephium.org/#mainnet/](https://archives.alephium.org/#mainnet/)
-
-To use the snapshot, use the following [documentation](../full-node/loading-snapshot.md).
+Please read the [load snapshot](/full-node/loading-snapshot) guide.
 
 ### Block producing rate
 
@@ -58,19 +41,17 @@ The next network upgrade will reduce blocktime to 16s for all 16 chains resultin
 
 ### Configure file directory
 
-Data folder for fullnode can be changed, use the following [documentation](../full-node/full-node-more.md#moving-the-alephium-data-folder).
+Data folder for full node can be changed, use the following [documentation](../full-node/full-node-more.md#moving-the-alephium-data-folder).
 
-### How to customize RPC Port and directory of block data
+### Customize RPC Port
 
-For customize the directory of block data, you can refer to the doc [here](../full-node/full-node-more.md#moving-the-alephium-data-folder).
+To customize the RPC port: add this line `alephium.network.rest-port =
+PORT` to the `${ALEPHIUM_HOME}/user.conf` file[^1].
 
-For customize the RPC port: add this line `alephium.network.rest-port = PORT` to the `user.conf` file.
+### RPC documentation / SDK
 
-### RPC/SDK documentation link
-
-After running the full node, you can access the API doc at `http://full-node-ip:port/docs` or using [public fullnode](https://wallet.mainnet.alephium.org/docs).
-
-[JS/TS SDK](https://github.com/alephium/alephium-web3).
+- [Full Node API Documentation](https://node.mainnet.alephium.org/docs).
+- [Typescript/Javascript SDK](https://github.com/alephium/alephium-web3).
 
 ### Does the fullnode need to expose its port to the outside? If so, is it acceptable for the machine to have a NAT IP?
 
@@ -87,13 +68,17 @@ No, it’s not necessary.
 
 Address is base58 encoded string, there is no max length for address, but in most case the decoded address length is 33 bytes.
 
-There is a utility function in the TS SDK. [Link](https://github.com/alephium/alephium-web3/blob/31823ffdc7e8c430e5d27f7ac980db3529724ef4/packages/web3/src/utils/exchange.ts#L23-L41)
+There is a [utility function](https://github.com/alephium/alephium-web3/blob/31823ffdc7e8c430e5d27f7ac980db3529724ef4/packages/web3/src/utils/exchange.ts#L23-L41) in the TS SDK.
 
 ### Access the address history
 
 You can access the address history in two ways:
-* You can get the address history from the explorer, but you will need to run your own explorer-backend, installation [documentation](../explorer-backend/getting-started). [Endpoint](https://backend.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressTransactions).
-* You can maintain your own database for that. Whenever you receive a new deposit.
+* You can get the address history from the explorer, but you will need
+  to [run your own explorer
+  backend](../explorer-backend/getting-started). Here is the explorer
+  [endpoint](https://backend.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressTransactions)
+  you can use.
+* You can also maintain your own database, whenever you receive a new deposit.
 
 ### Access the balance of an address
 
@@ -126,11 +111,11 @@ You can create, sign, and broadcast transactions following this [guide](./exchan
 
 ### Transaction precision
 
-Alephium supports transaction precision up to 10^-18.
+Alephium supports transaction precision up to `10^-18`.
 
 ### Is there any dust limit or reservation?
 
-Yes, the dust amount is 0.001 ALPH and each at output/UTXO needs least 0.001 ALPH.
+Yes, the dust amount is `0.001` ALPH and each at output/UTXO needs least `0.001` ALPH.
 
 ### Is there a timeout mechanism for a transaction in tx pool, and if so, how long does it deal?
 Yes, by default tx will be removed from mempool if it is not mined after 2 hours.
@@ -138,13 +123,12 @@ You can customize this config by add this line `alephium.mempool.unconfirmed-tx-
 
 ### Access the detailed information of a transaction
 
-You can get the tx details using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Transactions/getTransactionsDetailsTxid)
+You can get the tx details using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Transactions/getTransactionsDetailsTxid).
 
 ### How to determine if a transaction failed
 
-If you submit your tx into the pool and get an internal server error message, it will fail.
-
-[API documentation](./exchange#submit-a-transaction)
+A transaction will if you [submit](./exchange#submit-a-transaction) it
+into the pool and get an internal server error message back.
 
 ### How to determine if a transaction is accurate and avoid cheating recharge
 
@@ -165,3 +149,8 @@ Alephium implemented the same 51% attack protection as [Ravencoin](https://tronb
 ### What is the maximum reorg/rollback possible on Alephium?
 
 The maximum allowed reorg size is 100 blocks. It is recommend to check 110 blocks for higher safety.
+
+After Rhone upgrade, blocktime is reduced from 64 seconds to 16
+seconds, and the maximum allowed reorg size is adjusted to 200 blocks.
+
+[^1]: By default it is under `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, and `/home/<your-username>` in Linux.

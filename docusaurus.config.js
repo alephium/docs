@@ -26,14 +26,13 @@ const config = {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
-            `https://github.com/alephium/wiki/tree/master${
-              locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
+            `https://github.com/alephium/wiki/tree/master${locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
-        // theme: {
-        //   customCss: require.resolve("./src/css/custom.css"),
-        // },
+        theme: {
+          customCss: require.resolve("./src/css/custom.css"),
+        },
       }),
     ],
   ],
@@ -169,10 +168,6 @@ const config = {
             to: "/full-node/getting-started",
           },
           {
-            from: "/Docker-Guide.html",
-            to: "/full-node/docker-guide",
-          },
-          {
             from: "/Full-Node-More.html",
             to: "/full-node/full-node-more",
           },
@@ -217,18 +212,6 @@ const config = {
           {
             from: "/5min-overview",
             to: "/",
-          },
-          {
-            from: "/Testnet-Guide.html",
-            to: "/network/testnet-guide",
-          },
-          {
-            from: "/Devnet-Guide.html",
-            to: "/network/devnet-guide",
-          },
-          {
-            from: "/CPU-Miner-Guide.html",
-            to: "/network/cpu-miner-guide",
           },
           {
             from: "/Internationalization-and-Localization.html",

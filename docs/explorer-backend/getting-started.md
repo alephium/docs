@@ -4,11 +4,11 @@ title: Getting Started
 sidebar_label: Getting started
 ---
 
-## Requirements
+## Prerequisites
 
 - Java (11 or 17 is recommended)
 - [PostgreSQL](https://www.postgresql.org)
-- [A running full-node](full-node/getting-started.md)
+- A running [full node](full-node/getting-started.md)
 
 ## Download Application File
 

@@ -130,6 +130,11 @@ const deployResult = await TokenFaucet.deploy(signer, {
 const tokenFaucet = deployResult.contractInstance
 ```
 
+**If you only have compiled artifacts and no contract and transaction
+script source code**, please refer to the [Load contract/script from
+artifacts](/dapps/dapp-recipes#load-contractscript-from-artifacts)
+guide.
+
 ## Contract Call
 
 Inside of the `TokenFaucet` typescript class, Alephium SDK generates
@@ -248,6 +253,12 @@ contract, a function called `subscribeAllEvents` will also be
 generated to subscribe to all events emitted from the contract.
 
 ## Further Reading
+
+This guide assumes that you have the source code of the contract and
+transaction script. If you only have compiled artifacts and no
+contract/script source code, please refer to the [Load contract/script
+from
+artifacts](/dapps/dapp-recipes#load-contractscript-from-artifacts) giude.
 
 Alephium's [Web3 SDK](/dapps/alephium-web3) builds developer friendly
 abstractions on top of Alephium's full node APIs. For more details
