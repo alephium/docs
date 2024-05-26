@@ -16,7 +16,7 @@ find a complete list of known mining pools [here](#community-pools).
 For `HiveOS`, `RaveOS` or `OKMiner` related questions, these resources might help you:
 
 - Hive OS: [Website](https://hiveos.farm), [Forum](https://hiveon.com/forum/), [Telegram](https://t.me/hiveoschat_en), [Discord](https://discord.gg/CVZeZdn)
-- Rave OS: [Website](https://raveos.com), [Email](support@raveos.com), [Telegram](https://t.me/raveossupport), [Discord](https://discord.gg/Dcdadz2)
+- Rave OS: [Website](https://raveos.com), [Email](mailto:support@raveos.com), [Telegram](https://t.me/raveossupport), [Discord](https://discord.gg/Dcdadz2)
 - OKMiner Mobile OS: [Website (CN)](https://okminer.com), [iOS](https://apps.apple.com/ru/app/okminer-os/id1494087547), [Android](https://downap.okminer.com/hashapk/okminer.apk), [Calculator](https://okminer.com/tools), [Telegram (CN)](https://t.me/okminer_CN), [Telegram (EN)](https://t.me/okminer_support)
 
 ## For Pool Operator
