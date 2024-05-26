@@ -17,6 +17,12 @@ For the implementation of the communication protocol between mining pools and mi
 
 This document references the code from the [mining-pool](https://github.com/alephium/mining-pool) and [gpu-miner](https://github.com/alephium/gpu-miner) repositories.
 
+:::tip Test Environment
+
+Due to difficulty instability on the testnet, mining has become permissioned since the Rhone upgrade. To assist with pool and miner testing, we have prepared a local testnet environment. You can check it out here: [Local Testnet Environment for Mining Pools](https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet).
+
+:::
+
 ## Connect to Full Node
 
 The mining pool needs to connect to the Alephium full node to get mining jobs. The default mining API server is `localhost:10973`.
@@ -68,11 +74,11 @@ You may need to wait for a while to confirm whether an orphan block is an uncle 
 
 ## Miner
 
-### Calculating the Block Hash
+### Calculate the Block Hash
 
 In Alephium, the `nonce` is 24 bytes, and the block hash is `blake3(blake3(serialize(blockHeader)))`. The `blockBlob` in each job is the serialized binary data of `BlockHeader`, excluding the `nonce` field. Therefore, when calculating the block hash, the miner needs to prepend the `nonce` to the `headerBlob`. Refer to the code [here](https://github.com/alephium/gpu-miner/blob/master/src/worker.h#L135) and [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#L314).
 
-### Checking the Chain Index
+### Check the Chain Index
 
 In addition to checking the target, the miner also needs to check the chain index of the block, as Alephium encodes the chain index into the block hash. Refer to the code [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) to verify whether the chain index of the block hash is correct.
 
