@@ -1,5 +1,5 @@
 ---
-sidebar_position: 30
+sidebar_position: 20
 title: Multisig Guide
 sidebar_label: Multisig guide
 ---

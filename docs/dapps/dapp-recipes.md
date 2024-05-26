@@ -424,7 +424,7 @@ number256ToNumber(1230000000000000000n, 18) // 1.23
 ### Rate limit
 
 `NodeProvider` is used to communicate with the full node when developing a dApp,
-and you can use the public [API services](./public-services.md) provided by Alephium. 
+and you can use the public [API services](/infrastructure/public-services.md) provided by Alephium. 
 But all APIs are rate limited to prevent spam. So if the client sends too many requests in a given amount of time, it will receive the HTTP 429 error.
 
 You can use the [fetch-retry](https://github.com/jonbern/fetch-retry) to solve this issue:

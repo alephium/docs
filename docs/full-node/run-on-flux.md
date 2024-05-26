@@ -1,5 +1,5 @@
 ---
-sidebar_position: 30
+sidebar_position: 20
 title: Full Node on Flux
 sidebar_label: On Flux
 ---

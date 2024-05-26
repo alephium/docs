@@ -198,15 +198,15 @@ const config = {
           },
           {
             from: "/Smart-Contract-Guide.html",
-            to: "/dapps/getting-started",
+            to: "/dapps/sdk/work-with-project/getting-started",
           },
           {
             from: "/Smart-Contract-More.html",
-            to: "/ralph/getting-started",
+            to: "/dapps/ralph/getting-started",
           },
           {
             from: "/Explorer-Backend-Starter-Guide.html",
-            to: "/explorer-backend/getting-started",
+            to: "/full-node/explorer-backend",
           },
           { from: "/Roadmap.html", to: "/" },
           {

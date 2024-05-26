@@ -11,7 +11,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 ## Network
 
 - [Local Devnet](https://github.com/alephium/alephium-stack#devnet) (explorer included)
-- Public APIs for mainnet and testnet are documented [here](/dapps/public-services#api-aliases)
+- Public APIs for mainnet and testnet are documented [here](/infrastructure/public-services#api-aliases)
 
 ## dApp SDK
 - [@alephium/web3](https://www.npmjs.com/package/@alephium/web3)

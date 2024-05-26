@@ -71,7 +71,7 @@ same as transferring the `ALPH` token:
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/transfer-alphpaca-3.png").default} alt="Transfer Token 3" width="250" />
 
-Please refer to the [Fungible Tokens](/tokens/fungible-tokens) guide
+Please refer to the [Fungible Tokens](/dapps/standards/fungible-tokens) guide
 for more information about fungible tokens.
 
 ### NFT Support
@@ -85,7 +85,7 @@ Alephium extension wallet also support displaying and transferring NFTs, as show
 <img src={require("./media/transfer-nft.png").default} alt="Transfer NFT" width="250" />
 
 Please refer to the [Non-fungible Tokens
-(NFTs)](/tokens/non-fungible-tokens) guide for more information about
+(NFTs)](/dapps/standards/non-fungible-tokens) guide for more information about
 NFTs.
 
 ### Manage Accounts
