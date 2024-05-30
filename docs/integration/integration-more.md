@@ -1,7 +1,7 @@
 ---
 sidebar_position: 60
 title: More and Troubleshooting
-sidebar_label: More and Troubleshooting
+sidebar_label: More and troubleshooting
 ---
 
 
@@ -12,7 +12,7 @@ sidebar_label: More and Troubleshooting
 
 ## Public services
 
-All latest public APIs are listed on the [Public services](../dapps/public-services.md) page.
+All latest public APIs are listed on the [Public services](/infrastructure/public-services.md) page.
 
 ## Official wallets
 
@@ -75,7 +75,7 @@ There is a [utility function](https://github.com/alephium/alephium-web3/blob/318
 You can access the address history in two ways:
 * You can get the address history from the explorer, but you will need
   to [run your own explorer
-  backend](../explorer-backend/getting-started). Here is the explorer
+  backend](/full-node/explorer-backend). Here is the explorer
   [endpoint](https://backend.mainnet.alephium.org/docs/#/Addresses/getAddressesAddressTransactions)
   you can use.
 * You can also maintain your own database, whenever you receive a new deposit.

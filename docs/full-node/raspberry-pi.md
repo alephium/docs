@@ -1,5 +1,5 @@
 ---
-sidebar_position: 30
+sidebar_position: 15
 title: Full Node on Raspberry Pi
 sidebar_label: On Raspberry Pi
 ---

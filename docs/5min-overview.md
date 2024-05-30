@@ -26,13 +26,13 @@ import {
   <Card
     title="Build dApps"
     icon={<PhoneDesktopRegular />}
-    to="/dapps/getting-started"
+    to="/dapps/overview"
     description="Get started with building dApps on Alephium using Ralph programming language and SDK."
   />
   <Card
     title="Learn Ralph"
     icon={<LocalLanguageRegular />}
-    to="/ralph/getting-started"
+    to="/dapps/ralph/getting-started"
     description="Learn Ralph, the smart contract programming language for Alephium that focuses on security, simplicity and efficiency."
   />
   <Card
@@ -131,7 +131,7 @@ ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALP
 Alephium is public, fully open source and decentralized. Discover and contribute to Alephium's main projects on [GitHub][github].
 
 If you are building a dApp, get start from
-[here](./dapps/Getting-Started). Once released, let everyone know by
+[here](/dapps/sdk/work-with-project/getting-started). Once released, let everyone know by
 sending a PR to add your project to the [awesome-alephium][awesome] repo. The
 Alephium [Brand Guide][brand-guide] might also come in handy.
 
