@@ -4,8 +4,8 @@ title: Tokens
 sidebar_label: Tokens
 ---
 
-Tokens are first class citizens in Alephium, just like the native
-token `ALPH`. All tokens on Alephium are managed by UTXOs, which is
+Tokens are first class citizens in Alephium. Just like the native
+token `ALPH`, all tokens on Alephium are managed by UTXOs, which is
 battle tested for its security in managing assets.
 
 This design has a few advantages compared to other blockchains:
@@ -55,4 +55,4 @@ To make it easier to work with tokens in the Alephium ecosystem:
 
 You can learn more about the [Fungible Token](/dapps/standards/fungible-tokens) and [Non-fungible Token
 ](/dapps/standards/non-fungible-tokens) standards, and learn how to
-create your [first fungible token](/dapps/tutorial/first-fungible-token) and [NFT](/dapps/tutorial/first-nft).
+create your [first fungible token](/dapps/tutorials/first-fungible-token) and [NFT](/dapps/tutorials/first-nft).
