@@ -26,7 +26,7 @@ import {
   <Card
     title="Build dApps"
     icon={<PhoneDesktopRegular />}
-    to="/dapps/tutorials/overview"
+    to="/dapps/overview"
     description="Get started with building dApps on Alephium using Ralph programming language and SDK."
   />
   <Card
