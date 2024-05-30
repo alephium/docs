@@ -192,7 +192,7 @@ or use `curl` command directly.
 
 Alephium's full node also comes with a built-in [node
 wallet](/wallet/node-wallet-guide). You are also encouraged to use
-[other wallets](/wallet/overview) to manage your assets and interact
+[other wallets](/wallet) to manage your assets and interact
 with the dApps.
 
 [^1]: The home folder depends on your system: `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, `/home/<your-username>` in Linux.

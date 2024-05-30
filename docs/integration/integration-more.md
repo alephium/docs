@@ -16,7 +16,7 @@ All latest public APIs are listed on the [Public services](/infrastructure/publi
 
 ## Official wallets
 
-Please refer to the [wallet guide](/wallet/overview).
+Please refer to the [wallet guide](/wallet).
 
 ## Full node 
 

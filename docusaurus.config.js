@@ -26,7 +26,10 @@ const config = {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
-            `https://github.com/alephium/wiki/tree/master${locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
+            `https://github.com/alephium/wiki/tree/master${
+              locale !== "en"
+                ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
+                : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
@@ -41,6 +44,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: "img/wiki-metadataimage.jpg",
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       navbar: {
         title: "Alephium",
         logo: {
@@ -134,7 +142,7 @@ const config = {
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-        additionalLanguages: ['bash', 'rust'],
+        additionalLanguages: ["bash", "rust"],
       },
       algolia: {
         appId: "BN8IMFOF55",

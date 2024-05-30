@@ -66,7 +66,7 @@ Alephium's core contributors.
 
 ### Wallet Support
 
-Official [wallets](/wallet/overview) and explorer have native support for
+Official [wallets](/wallet) and explorer have native support for
 fungible tokens.
 
 Following is an example of displaying and transfering the `PACA` token

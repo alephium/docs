@@ -357,7 +357,7 @@ node dist/src/token.js
 
 dApps require wallet integration to allow users to authenticate and interact with the Alephium blockchain,
 such as transactions signing. Currently dApps can be integrated with
-all [official wallets](/wallet/overview). For a more concrete example,
+all [official wallets](/wallet). For a more concrete example,
 please take a look at the example in [Build dApp with
 Nextjs](/dapps/sdk/work-with-project/build-dapp-from-scratch).
 
