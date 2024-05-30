@@ -166,7 +166,7 @@ Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](h
 Not moderated, endorsed or managed by Alephium
 :::
 
-You will find the complete list of internationalized channel [here](./misc/Internationalization-and-Localization)
+You will find the complete list of internationalized channel [here](/misc/Internationalization-and-Localization)
 
 ### Youtube
 
