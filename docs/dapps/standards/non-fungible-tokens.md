@@ -4,114 +4,122 @@ title: Non-fungible Tokens (NFTs)
 sidebar_label: Non-fungible Tokens
 ---
 
-### Overview
-
-Non-fungible tokens (NFTs) on Alephium have several unique characteristics
-compared to NFTs on other blockchains:
-
-- True ownership based on the UTXO model: Like other types of tokens on Alephium, NFTs are securely managed by UTXOs, which are directly owned by addresses. Since UTXOs are protected by users' private keys, even if there are bugs in the NFT contract, users' assets remain safe.
-
-- First-class support for NFTs: Tokens are native assets on Alephium. As a result, users’ NFTs can be easily discovered and displayed by wallets, explorers, and dApps without relying on third-party services.
-
-- Higher security thanks to Alephium’s VM and contract language: Alephium's virtual machine (VM) and contract language eliminate the need for a separate approval transaction during NFT trading, reducing associated risks. This simplifies the process of writing secure NFT contracts for developers with the help of tools such as the [Asset
-  Permission System](/dapps/concepts/asset-permission-system).
-
-- Sub-contract system: In Alephium, there is no [mapping](https://docs.soliditylang.org/en/v0.8.7/types.html#mapping-types) data structure. Collections are created with a parent contract (the collection) and [sub-contracts](http://localhost:3000/ralph/built-in-functions#subcontract-functions) (the items). Each sub-contract represents an NFT in this collection, and all metadata is tied to it. This is a native feature of the Alephium Blockchain that allows Alephium’s NFTs to be unique (one token per sub-contract) or semi-fungible, as the same minting contract can create more than one token.
-
-- Efficient transaction batching: Multiple NFTs and users can be involved in a single transaction.
-
-- Cheaper transaction fees and higher throughput: NFT transactions will benefit from Alephium's sharding algorithm.
-
-- NFT scarcity: The supply of NFTs on Alephium is finite, as each NFT necessitates the deployment of its own individual sub-contract, which in turn requires a deposit of ALPH - currently set at 1 `ALPH`. This unique structure inherently imposes a limit on the production of NFTs on the platform, reinforcing the scarcity of NFTs on Alephium.
-  
 ### Non-fungible Token Standard
 
-Both NFT collections and individual NFTs have metadata associated with
-them, such as `collectionUri`, `totalSupply` and `tokenUri`, etc. The
-[INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
-and
+On Alephium, an NFT collection is represented by an NFT collection
+contract. Individual NFTs within the NFT collections are represented
+by the NFT contract.
+
+### NFT
+
+An NFT has its own metadata such as `name`, `description` and
+`image`. It's also part of an NFT collection. The standard
 [INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral)
-interfaces standardize the methods to fetch these metadata.
+interface defines methods that return the URI for the NFT metadata, as
+well as the NFT collection it belongs to and its index within the
+collection.
 
 ```rust
-// Standard interface for NFT collection
-@std(id = #0002)
-Interface INFTCollection {
-   pub fn getCollectionUri() -> ByteVec
-   pub fn totalSupply() -> U256
-   pub fn nftByIndex(index: U256) -> INFT
-   pub fn validateNFT(nftId: ByteVec, nftIndex: U256) -> () // Validates that the NFT is part of the collection, otherwise throws exception.
-}
-
-// Standard interface for NFT
 @std(id = #0003)
+@using(methodSelector = false)
 Interface INFT {
+   // Token Uri points to a json file containing metadata for the NFT.
+   //
+   // The schema of the json file is:
+   // {
+   //     "title": "NFT Metadata",
+   //     "type": "object",
+   //     "properties": {
+   //         "name": {
+   //             "type": "string",
+   //             "description": "Name of the NFT"
+   //         },
+   //         "description": {
+   //             "type": "string",
+   //             "description": "General description of the NFT"
+   //         },
+   //         "image": {
+   //             "type": "string",
+   //             "description": "A URI to the image that represents the NFT"
+   //         }
+   //     }
+   // }
    pub fn getTokenUri() -> ByteVec
-   pub fn getCollectionIndex() -> (ByteVec, U256) // Returns collection id and index of the NFT in the collection.
+
+   // Returns collection id and index of the NFT in the collection.
+   pub fn getCollectionIndex() -> (ByteVec, U256)
 }
 ```
 
-They are also annotated with the `@std` annotations to facilitate
-dApps and wallets to infer their contract/token types.
+### NFT Collection
 
-```typescript
-// Guess NFT token type
-const nftTokenType = await web3.getCurrentNodeProvider().guessStdTokenType(nft.contractId)
-expect(nftTokenType).toEqual('non-fungible')
-
-// Check if a contract is a NFT collection
-const isNFTCollection = await web3.getCurrentNodeProvider().guessFollowsNFTCollectionStd(nftCollection.contractId)
-console.log("Is NFT collection", isNFTCollection)
-```
-
-For contracts that implement
+An NFT collection has its own metadata such as `name`, `description`
+and `image`. It also contain a set of NFTs. The
 [INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
-and
-[INFT](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_interface.ral),
-SDK offers a canonical way to fetch their respective metadata:
+interface defines methods to return URI for the NFT collection
+metadata and the total supply of the collection. It also defines
+methods to validate or return an NFT given its index.
 
-```typescript
-// NFT Collection Metadata
-const collectionMetadata = await web3.getCurrentNodeProvider().fetchNFTCollectionMetaData(nftCollection.contractId)
-console.log("NFT Collection URI, totalSupply", collectionMetadata.collectionUri, collectionMetadata.totalSupply)
+```rust
+import "std/nft_interface"
 
-// NFT Metadata
-const nftMetadata = await web3.getCurrentNodeProvider().fetchNFTMetadata(nft.contractId)
-console.log("NFT Token URI, collection address", nftMetadata.tokenUri, nftMetadata.collectionAddress)
-```
+@std(id = #0002)
+@using(methodSelector = false)
+Interface INFTCollection {
+   // Collection Uri points to a json file containing metadata for the NFT collection.
+   //
+   // The schema of the json file is:
+   // {
+   //     "title": "NFT Collection Metadata",
+   //     "type": "object",
+   //     "properties": {
+   //         "name": {
+   //             "type": "string",
+   //             "description": "Name of the NFT collection"
+   //         },
+   //         "description": {
+   //             "type": "string",
+   //             "description": "General description of the NFT collection"
+   //         },
+   //         "image": {
+   //             "type": "string",
+   //             "description": "A URI to the image that represents the NFT collection"
+   //         }
+   //     }
+   // }
+   pub fn getCollectionUri() -> ByteVec
 
-For NFT collection, one of the metadata is `collectionUri`, which is
-an URI that points to an JSON document with the following schema:
+   pub fn totalSupply() -> U256
 
-```typescript
-interface NFTCollectionUriMetaData {
-  name: string            // Name of the NFT collection
-  description: string     // General description of the NFT collection
-  image: string           // A URI to the image that represents the NFT collection
+   pub fn nftByIndex(index: U256) -> INFT
+
+   // Validates that the NFT is part of the collection, otherwise throws exception.
+   pub fn validateNFT(nftId: ByteVec, nftIndex: U256) -> ()
 }
 ```
 
-For individual NFT, one of the metadata is `tokenUri`, which is an URI
-that points to an JSON document with the following schema:
+To support NFT royalties,
+[INFTCollectionWithRoyalty](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_with_royalty_interface.ral)
+is defined with methods to calculate, pay and withdraw royalty:
 
-```typescript
-interface NFTTokenUriMetaData {
-  name: string                           // Name of the NFT
-  description?: string                   // General description of the NFT
-  image: string                          // A URI to the image that represents the NFT
-  attributes?: [                         // Attributes of the NFT
-    {
-      trait_type: string
-      value: string | number | boolean
-    }
-  ]
+```rust
+import "std/nft_collection_interface"
+
+@std(id = #000201)
+@using(methodSelector = false)
+Interface INFTCollectionWithRoyalty extends INFTCollection {
+    pub fn royaltyAmount(tokenId: ByteVec, salePrice: U256) -> (U256)
+
+    @using(preapprovedAssets = true)
+    pub fn payRoyalty(payer: Address, amount: U256) -> ()
+
+    pub fn withdrawRoyalty(to: Address, amount: U256) -> ()
 }
 ```
 
 ### Wallet Support
 
-Both [Desktop Wallet](/wallet/desktop-wallet/overview) and [Extension
-Wallet](/wallet/extension-wallet/overview) have native support for
+Official [wallets](/wallet/overview) and explorer have native support for
 non-fungible tokens.
 
 Following is an example of displaying and transfering a NFT in the

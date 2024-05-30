@@ -4,48 +4,55 @@ title: Tokens
 sidebar_label: Tokens
 ---
 
-Tokens are first class citizens in Alephium. Just like the native
-token ALPH, all tokens on Alephium are managed by UTXOs, which are
-owned directly by addresses.
+Tokens are first class citizens in Alephium, just like the native
+token `ALPH`. All tokens on Alephium are managed by UTXOs, which is
+battle tested for its security in managing assets.
 
 This design has a few advantages compared to other blockchains:
 
-- Token transfers among users only require UTXOs, which is battle
-  tested for its security in managing assets.
-- Easier for wallets and dApps to discover users' tokens, including
-  both fungible and non-fungible tokens.
-- When smart contracts need to transfer tokens, no extra approval
-  transactions are required since the approval is implicit in the
-  UTXO model. Alephium leverages its unique [Asset Permission
-  System](/dapps/concepts/asset-permission-system) to ensure that tokens
-   are handled securely by the smart contracts.
-- Token transfer is very scalable because they can take full
-  advantage of Alephium's [Sharding](/misc/glossary.md#sharding) design. 
+- True ownership: Tokens are securely managed by UTXOs, which are
+  directly owned by addresses. Since UTXOs are protected by users'
+  private keys, even if there are bugs in the token contract, users'
+  assets remain safe.
+- First-class support: Tokens are native assets on Alephium, therefore
+  both fungible and non-fungible tokens can be easily discovered and
+  displayed by wallets, explorers, and dApps without relying on
+  third-party services.
+- Better UX and higher security: When smart contracts need to transfer
+  tokens, no extra approval transactions are required since the
+  approval is implicit in the UTXO model. Alephium leverages its
+  unique [Asset Permission
+  System](/dapps/concepts/asset-permission-system) to ensure that
+  tokens are handled securely by the smart contracts.
+- Cheaper transaction fees and higher throughput: Token transfer is
+  very scalable because they can take full advantage of Alephium's
+  [sharding](/misc/glossary.md#sharding) design.
+- Efficient transaction batching: Multiple fungible and non-fungible
+  tokens can be involved in a single transaction.
+
+Specifically to NFTs:
+
+- Scarcity: Each NFT requires the deployment of its own individual
+  contract, which in turn requires a deposit of `ALPH`. This unique
+  structure imposes a upper limit on the production of NFTs on
+  Alephium.
+- Semi-fungible tokens: Each NFT has a corresponding issuing contract
+  with the associated metadata. Usually the contract issues one token
+  which makes the NFT unique. But it can also issue multiple tokens
+  to make the token semi-fungible.
 
 To make it easier to work with tokens in the Alephium ecosystem:
 
-- [Token
-  standards](https://github.com/alephium/alephium-web3/tree/master/packages/web3/std)
-  are introduced in the SDK to define standard interfaces for both
-  fungible and non-fungible tokens
-- Utilities functions are defined in the SDK to ease common tasks
-  for dApps and wallets when interacting with the tokens, such as
-  guessing token types and the extraction of token metadata.
-- [Token list](https://github.com/alephium/token-list) is used
-  establish a source of trust for well known fungible tokens and NFT
-  collections.
-- Native support for both fungible and non-fungible tokens in wallets
-  and explorer.
-- Tools to help launch [Opensea
-  Drop](https://docs.opensea.io/docs/drops-on-opensea) style NFT
-  public sale, called `Flow`.
+- Standards are defined for both [fungible
+  tokens](/dapps/standards/fungible-tokens) and [non-fungible
+  tokens](/dapps/standards/non-fungible-tokens).
+- [Web3 SDK](/dapps/sdk/getting-started) offers a set of utility
+  functions to help dApps and wallets to interact with the tokens,
+  such as guessing token types and extracting token metadata.
+- [Token list](https://github.com/alephium/token-list) is created as a
+  platform for token issuers to submit token metadata for proper
+  display in wallets, explorers, and other ecosystem interfaces. 
 
-In the [Fungible Tokens](/dapps/standards/fungible-tokens) page, you will learn
-about the fungible token standard, how to issue fungible tokens, how
-to fetch token metadata and how to transfer fungible tokens in
-wallets, etc.
-
-In the [Non-fungible Tokens](/dapps/standards/non-fungible-tokens) page, you will learn about
-the non-fungible token standard, how to create your own NFT
-collections and launch your first NFT public sale campaign called
-`Flows` in the [NFT marketplace](https://testnet.nft.alephium.org/).
+You can learn more about the [Fungible Token](/dapps/standards/fungible-tokens) and [Non-fungible Token
+](/dapps/standards/non-fungible-tokens) standards, and learn how to
+create your [first fungible token](/dapps/tutorial/first-fungible-token) and [NFT](/dapps/tutorial/first-nft).
