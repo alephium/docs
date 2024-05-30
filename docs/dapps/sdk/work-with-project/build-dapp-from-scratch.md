@@ -291,7 +291,7 @@ If you got the error `The node chain id x is different from configured chain id 
 
 `No UTXO found` ??? Of course, we didn't provide [private keys](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L39-L46) for deployment.
 
-You'll need to export the private keys from the [wallets](/wallet/overview), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
+You'll need to export the private keys from the [wallets](/wallet), make sure to use a wallet with funds, like the one from the genesis allocation of your devnet. 
 If you used the docker way to launch your devnet, it might have work as we are defining [a default private key in our cli package](https://github.com/alephium/alephium-web3/blob/d2b5b63cae015e843aa77b4cf484bc62a070f1d5/packages/cli/src/types.ts#L75) based on the genesis allocation.
 
 Let's update our `alephium.config.ts`

@@ -119,7 +119,7 @@ Interface INFTCollectionWithRoyalty extends INFTCollection {
 
 ### Wallet Support
 
-Official [wallets](/wallet/overview) and explorer have native support for
+Official [wallets](/wallet) and explorer have native support for
 non-fungible tokens.
 
 Following is an example of displaying and transfering a NFT in the

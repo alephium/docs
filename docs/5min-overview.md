@@ -26,7 +26,7 @@ import {
   <Card
     title="Build dApps"
     icon={<PhoneDesktopRegular />}
-    to="/dapps/overview"
+    to="/dapps"
     description="Get started with building dApps on Alephium using Ralph programming language and SDK."
   />
   <Card
@@ -44,18 +44,19 @@ import {
   <Card
     title="Wallets"
     icon={<WalletRegular />}
-    to="/wallet/overview"
+    to="/wallet"
     description="Alephium offers a suite of wallets which are designed for ease-of-use, to make Alephium’s technology accessible for all."
   />
   <Card
     title="Mining"
     icon={<BatterySaverRegular />}
-    to="/mining/overview"
+    to="/mining"
     description="Alephium supports solo mining or mining with mining pools."
   />
   <Card
     title="Integrations"
     icon={<ShapeIntersectRegular />}
+    to="/integration"
     description={
       <div>Integration guides for <a href="/integration/exchange">exchanges</a> and <a href="/integration/mining">mining pool</a>.</div>
     }
@@ -146,7 +147,7 @@ Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](h
 - [Telegram][telegram]
 - [Reddit][reddit]
 
-### Connect 
+### Connect
 
 - [Twitter][twitter]
 - [LinkedIn][linkedin]
