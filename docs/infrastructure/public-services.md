@@ -39,15 +39,15 @@ We maintain the following API aliases to give users time to migrate from the old
 import aliases from "./api-aliases.json";
 
 export const Aliases = ({aliases, type}) => (
-    <Box>
+    <div>
         {aliases.length > 0 && <h3>{type} Aliases</h3>}
         <ul>{aliases && aliases.map((alias) => {
             const from = alias['from'];
             const to = alias['to'];
             const additionalPath = from.includes('wallet') ? '/infos/version' : from.includes('backend') ? '/infos' : '';
-            return <li key={from}><code>{from}</code> (<a href={`${from}${additionalPath}`}>Test</a>) -> <code>{to}</code></li>;
+            return <li key={from}><code>{from}</code> (<a href={`${from}${additionalPath}`}>Test</a>) {`->`}gg <code>{to}</code></li>;
         })}</ul>
-    </Box>
+    </div>
 )
 
 <Aliases aliases={aliases['current']} type='Current' />

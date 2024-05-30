@@ -82,6 +82,6 @@ By default, the API interface of the Alephium full node is bound to
 `alephium.api.network-interface` to a public IP, all endpoints might
 be exposed to public network. In order to protect unauthorized access
 to the full node endpoints, please consider to set up [API
-key](full-node/full-node-more.md#api-key).
+key](/full-node/full-node-more#api-key).
 
 [^1]: By default it is under `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, and `/home/<your-username>` in Linux.

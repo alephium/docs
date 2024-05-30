@@ -4,6 +4,8 @@ title: Interact with Contracts
 sidebar_label: Interact with contracts
 ---
 
+import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
+
 <UntranslatedPageText />
 
 Alephium's full node provides a set of
