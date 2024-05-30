@@ -27,7 +27,7 @@ Restart your full node to make this take effect.
 On Mac / Linux, run:
 
 ```shell
-cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1`
+cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1
 ```
 
 ### Use API Key
