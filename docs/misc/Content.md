@@ -41,6 +41,10 @@ Discord - https://alephium.org/discord
 
 Telegram -  https://t.me/alephiumgroup
 
+Reddit - https://www.reddit.com/r/Alephium/
+
+Medium - https://medium.com/@alephium
+
 Linkedin - https://www.linkedin.com/company/74304166
 
 ## Tech Series
@@ -193,6 +197,10 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## Ecosystem Updates
 
+🧬 Weekly #EcosystemUpdate - 26/05/24 - https://x.com/alephium/status/1794765797635874877
+
+🧬 Weekly #EcosystemUpdate - 12/05/24 - https://x.com/alephium/status/1790027743759126770
+
 🧬 Weekly #EcosystemUpdate - 05/05/24 - https://twitter.com/alephium/status/1787192526337974402
 
 🧬 Weekly #EcosystemUpdate - 28/04/24 - https://twitter.com/alephium/status/1784614643618705459
@@ -210,6 +218,12 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+May/24 - Nym Community call - https://www.youtube.com/watch?v=7AA7xJzEEuY
+
+May/24 - Cryptohall24 Mining Interview - https://www.youtube.com/watch?v=XudpYH4znnQ
+
+May/24 - Uphold X Space - https://x.com/i/spaces/1BRJjPqdmYLKw
 
 Apr/24 - NiceHash X Space - https://twitter.com/i/spaces/1gqGvQXWjwaKB
 
@@ -286,6 +300,8 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #2 - Rhone 
 
+May/24 Rhône Network Upgrade Mainnet activation preparation - https://x.com/alephium/status/1793682101684130099
+
 May/24 Rhône Network Upgrade on Testnet - https://twitter.com/alephium/status/1788855300230922500
 
 Apr/24 Rhône Network Upgrade 🧵#6 Additional Improvements - https://twitter.com/alephium/status/1785312194889994733
@@ -319,6 +335,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+May/24 - Ambassador Program Starts - https://x.com/alephium/status/1794046844563292582
 
 May/24 - Rhône Network Upgrade on the Testnet - https://twitter.com/alephium/status/1788855300230922500
 
@@ -448,6 +466,9 @@ Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1
 Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
 Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+
+Builders Highlight #13: Phoenix Finance 
+https://medium.com/@alephium/builders-highlight-13-phoenix-finance-5fb19d782614
 
 Builders Highlight #12: Linx
 https://medium.com/@alephium/builders-highlight-12-linx-0c9a315956fd
