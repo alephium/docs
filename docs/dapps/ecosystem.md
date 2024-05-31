@@ -22,6 +22,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 - [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet) 
 - [@alephium/walletconnect](https://www.npmjs.com/package/@alephium/walletconnect-provider)
 - [@alephium/token-list](https://www.npmjs.com/package/@alephium/token-list) 
+- [@alphpro/web3-vue](https://www.npmjs.com/package/@alphpro/web3-vue)
 
 ## Ralph Tools
 - [Language server](https://github.com/alephium/ralph-lsp)
