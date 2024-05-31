@@ -66,7 +66,7 @@ After the full node verifies the block, it will send a `SubmitBlockResult` messa
 
 ### Rhone Upgrade
 
-:::note
+:::info Node Version
 You need to upgrade your full node to newer than v3.0.0.
 :::
 
@@ -74,7 +74,10 @@ The Rhone upgrade introduces the ghost algorithm similar to ETH. A mainchain blo
 
 You can use the `/blockflow/main-chain-block-by-ghost-uncle/{ghost_uncle_hash}` endpoint to check if an uncle block is referenced by a mainchain block. For example, for an uncle block on the testnet: `000000a564aee62ac46855b0a6a0736ec259e95c1252272de4fe202c371c1a20`, this endpoint will return the following mainchain block:
 
-```
+<details>
+<summary>Block Response Example</summary>
+<p>
+```javascript
 {
   "hash":"00000076f4adf5ee7ff91e0fda7088e12c8bdd1553b3c95288c37d04ad1ee3d0",
   "timestamp":1716261007992,
@@ -90,43 +93,7 @@ You can use the `/blockflow/main-chain-block-by-ghost-uncle/{ghost_uncle_hash}` 
     "0000002151846d02557e6008cdc314a946d29216ed2930c04ecac978bd600472",
     "00000075dcf3ed177ce0d161cc93c5f747d5f3688ba962dd928120119c4bc383"
   ],
-  "transactions":[
-    {
-      "unsigned":{
-        "txId":"962824b20728946ac70baa5f054093fee184950c3066ff5daf5b90157fdefcdb",
-        "version":0,
-        "networkId":1,
-        "gasAmount":20000,
-        "gasPrice":"1000000000",
-        "inputs":[],
-        "fixedOutputs":[
-          {
-            "hint":-14043139,
-            "key":"b5cc3300e327c75dafd9851a3799fccd42e4b832b716de2ba2cc6294e5fa1047",
-            "attoAlphAmount":"516356574480410178",
-            "address":"1AuWeE5Cwt2ES3473qnpKFV96z57CYL6mbTY7hva9Xz3h",
-            "tokens":[],
-            "lockTime":1716261607992,
-            "message":"00000000018f9920b27801000000a564aee62ac46855b0a6a0736ec259e95c1252272de4fe202c371c1a2000932ce688608b3f6e50ddfc62d97c683c03ab86c4c8fae33adca144f1d5bec3b0"
-          },
-          {
-            "hint":-14043139,
-            "key":"d875416baa71ded86a8ea251334c7bdefae3215a8052ae3ffe5b42d04f5a66f1",
-            "attoAlphAmount":"378398711069613566",
-            "address":"1AuWeE5Cwt2ES3473qnpKFV96z57CYL6mbTY7hva9Xz3h",
-            "tokens":[],
-            "lockTime":1716261607992,
-            "message":""
-          }
-        ]
-      },
-      "scriptExecutionOk":true,
-      "contractInputs":[],
-      "generatedOutputs":[],
-      "inputSignatures":[],
-      "scriptSignatures":[]
-    }
-  ],
+  "transactions":[ ... ],
   "nonce":"c04744ecf7889f3de49a1cef5fa994931dc7b95b607893be",
   "version":0,
   "depStateHash":"3bbd325821f969797b5284d47dfca956feced089aa69420027601c1817a77573",
@@ -140,6 +107,8 @@ You can use the `/blockflow/main-chain-block-by-ghost-uncle/{ghost_uncle_hash}` 
   ]
 }
 ```
+</p>
+</details>
 
 In the `ghostUncles` field, we can see that this mainchain block references the uncle block. And there are two outputs in the coinbase tx: the first output is the reward for the mainchain block, and the second is the reward for the uncle block.
 
