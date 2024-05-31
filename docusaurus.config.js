@@ -229,6 +229,22 @@ const config = {
             from: "/wallet/desktop-wallet-guide",
             to: "/wallet/desktop-wallet/overview",
           },
+          {
+            from: "/ralph/asset-permission-system",
+            to: "/dapps/concepts/asset-permission-system",
+          },
+          {
+            from: "/The%20Bridge",
+            to: "/infrastructure/the-bridge"
+          },
+          {
+            from: "/ralph/getting-started",
+            to: "/dapps/ralph/getting-started"
+          },
+          {
+            from: "/ralph/built-in-functions",
+            to: "/dapps/ralph/built-in-functions"
+          }
         ],
       },
     ],
