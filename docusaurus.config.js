@@ -26,10 +26,9 @@ const config = {
           routeBasePath: "/", // Serve the docs at the site's root
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
-            `https://github.com/alephium/wiki/tree/master${
-              locale !== "en"
-                ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
-                : `/${versionDocsDirPath}`
+            `https://github.com/alephium/wiki/tree/master${locale !== "en"
+              ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
+              : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
@@ -229,6 +228,22 @@ const config = {
             from: "/wallet/desktop-wallet-guide",
             to: "/wallet/desktop-wallet/overview",
           },
+          {
+            from: "/ralph/asset-permission-system",
+            to: "/dapps/concepts/asset-permission-system",
+          },
+          {
+            from: "/The%20Bridge",
+            to: "/infrastructure/the-bridge"
+          },
+          {
+            from: "/ralph/getting-started",
+            to: "/dapps/ralph/getting-started"
+          },
+          {
+            from: "/ralph/built-in-functions",
+            to: "/dapps/ralph/built-in-functions"
+          }
         ],
       },
     ],
