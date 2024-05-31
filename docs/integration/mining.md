@@ -66,11 +66,94 @@ After the full node verifies the block, it will send a `SubmitBlockResult` messa
 
 ### Rhone Upgrade
 
+:::note
+You need to upgrade your full node to newer than v3.0.0.
+:::
+
 The Rhone upgrade introduces the ghost algorithm similar to ETH. A mainchain block may reference uncle blocks, and both the miner of the mainchain block and the miner of the uncle block will receive rewards. Therefore, the mining pool needs to distribute rewards to the miners of the uncle blocks.
 
-Refer to the implementation [here](https://github.com/alephium/mining-pool/pull/63/commits/5e0a9ea25616bba986883940c73aef34d547f35f), which uses the `getMainChainBlockByGhostUncle` endpoint introduced in full node version v2.14.6. You need to upgrade your full node to newer than v2.14.6.
+You can use the `/blockflow/main-chain-block-by-ghost-uncle/{ghost_uncle_hash}` endpoint to check if an uncle block is referenced by a mainchain block. For example, for an uncle block on the testnet: `000000a564aee62ac46855b0a6a0736ec259e95c1252272de4fe202c371c1a20`, this endpoint will return the following mainchain block:
+
+```
+{
+  "hash":"00000076f4adf5ee7ff91e0fda7088e12c8bdd1553b3c95288c37d04ad1ee3d0",
+  "timestamp":1716261007992,
+  "chainFrom":0,
+  "chainTo":0,
+  "height":632961,
+  "deps":[
+    "00000033dad20af73f09c29f7e6333854fb44b1c8a82c0cf448fffe5eec4a1a5",
+    "00000054404bfb8fc397d95203e9d09732a284c666ff508d0f90fd96fccd067a",
+    "0000007739e8c65d39a03cb73ab1f6ae17f9de4b67e97a8b43f7e0ab8c0819ff",
+    "0000004d45095dd2114fdbda7cc20575f547e508e5599aa388d4dcee4e01be30",
+    "000000162f5f3463e8ac4a27cb7a63abafd234a234e2f956f63f5f7744f0a581",
+    "0000002151846d02557e6008cdc314a946d29216ed2930c04ecac978bd600472",
+    "00000075dcf3ed177ce0d161cc93c5f747d5f3688ba962dd928120119c4bc383"
+  ],
+  "transactions":[
+    {
+      "unsigned":{
+        "txId":"962824b20728946ac70baa5f054093fee184950c3066ff5daf5b90157fdefcdb",
+        "version":0,
+        "networkId":1,
+        "gasAmount":20000,
+        "gasPrice":"1000000000",
+        "inputs":[],
+        "fixedOutputs":[
+          {
+            "hint":-14043139,
+            "key":"b5cc3300e327c75dafd9851a3799fccd42e4b832b716de2ba2cc6294e5fa1047",
+            "attoAlphAmount":"516356574480410178",
+            "address":"1AuWeE5Cwt2ES3473qnpKFV96z57CYL6mbTY7hva9Xz3h",
+            "tokens":[],
+            "lockTime":1716261607992,
+            "message":"00000000018f9920b27801000000a564aee62ac46855b0a6a0736ec259e95c1252272de4fe202c371c1a2000932ce688608b3f6e50ddfc62d97c683c03ab86c4c8fae33adca144f1d5bec3b0"
+          },
+          {
+            "hint":-14043139,
+            "key":"d875416baa71ded86a8ea251334c7bdefae3215a8052ae3ffe5b42d04f5a66f1",
+            "attoAlphAmount":"378398711069613566",
+            "address":"1AuWeE5Cwt2ES3473qnpKFV96z57CYL6mbTY7hva9Xz3h",
+            "tokens":[],
+            "lockTime":1716261607992,
+            "message":""
+          }
+        ]
+      },
+      "scriptExecutionOk":true,
+      "contractInputs":[],
+      "generatedOutputs":[],
+      "inputSignatures":[],
+      "scriptSignatures":[]
+    }
+  ],
+  "nonce":"c04744ecf7889f3de49a1cef5fa994931dc7b95b607893be",
+  "version":0,
+  "depStateHash":"3bbd325821f969797b5284d47dfca956feced089aa69420027601c1817a77573",
+  "txsHash":"015be6536b6e97da140151cbadd75f6c2768ed7854c3632b86f88ec0a473218e",
+  "target":"1de4161a",
+  "ghostUncles":[
+    {
+      "blockHash":"000000a564aee62ac46855b0a6a0736ec259e95c1252272de4fe202c371c1a20",
+      "miner":"1AuWeE5Cwt2ES3473qnpKFV96z57CYL6mbTY7hva9Xz3h"
+    }
+  ]
+}
+```
+
+In the `ghostUncles` field, we can see that this mainchain block references the uncle block. And there are two outputs in the coinbase tx: the first output is the reward for the mainchain block, and the second is the reward for the uncle block.
+
+A mainchain block can reference up to two uncle blocks. The first output of the coinbase transaction is the reward for the mainchain block, and the subsequent outputs are the uncle rewards. The order of uncle rewards in `fixedOutputs` is the same as the order of uncles in `ghostUncles`. You can refer to the implementation [here](https://github.com/alephium/mining-pool/blob/9b87dc4eceaab90911998a2ac36165bdfa30572f/lib/shareProcessor.js#L149).
 
 You may need to wait for a while to confirm whether an orphan block is an uncle block. If the height of the orphan block is `h`, it can be referenced by a mainchain block with a height in the range of `[h+1, h+7]`. Therefore, you need to wait about `7 * 16s`. However, due to variability in block time, you may need to wait longer to ensure that the uncle block miners receive their rewards.
+
+If an uncle block is not referenced by any mainchain block, it means that the uncle block is an orphan block and will not receive any rewards. In this case, the `/blockflow/main-chain-block-by-ghost-uncle/{ghost_uncle_hash}` endpoint will return a 404 error with the following error message:
+
+```json
+{
+  "detail": "The mainchain block that references the ghost uncle block {ghost_uncle_hash} not found"
+}
+```
 
 ## Miner
 
