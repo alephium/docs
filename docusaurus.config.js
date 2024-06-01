@@ -234,7 +234,7 @@ const config = {
             to: "/dapps/concepts/asset-permission-system",
           },
           {
-            from: "/The%20Bridge",
+            from: "/The Bridge",
             to: "/infrastructure/the-bridge"
           },
           {
