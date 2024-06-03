@@ -8,10 +8,10 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-You can run your Alephium full node in two ways: using
-[Docker](#using-docker) or directly with [Java](#using-java). This
-guide begins by demonstrating how to run the Alephium full node on the
-`Mainnet`, followed by a discussion on the differences for `Testnet` and
+You can run your Alephium full node using either
+[Docker](#using-docker) or [Java](#using-java). This
+guide will first demonstrate how to run the Alephium full node on the
+`Mainnet`, and then discuss the differences for `Testnet` and
 `Devnet` setups.
 
 ## Using Docker
@@ -24,7 +24,7 @@ guide begins by demonstrating how to run the Alephium full node on the
 ### Start your node
 
 1. Open search and type in `Terminal` (for Mac or Linux) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, run the following command:
+2. In the Terminal/Command Prompt, run the following command:
 
 ```shell
 > cd $path-to-alephium-stack/mainnet
@@ -35,17 +35,17 @@ guide begins by demonstrating how to run the Alephium full node on the
 
 ### Prerequisites
 
-- Ensure that Java (11 or 17 is recommended) is
+- Ensure that Java (11 or 17 recommended) is
 [installed](https://docs.oracle.com/en/java/javase/17/install/overview-jdk-installation.html)
 on your computer.
 - Download file `alephium-x.x.x.jar` from [Github
   release](https://github.com/alephium/alephium/releases/latest) (do
-  not double click on it, it can not be launched this way).
+  not double-click it, as it can not be launched this way).
 
 ### Start your node
 
 1. Open search and type in `Terminal` (for Mac or Linux) or `Command Prompt` (for Windows).
-2. In the Terminal/Command Prompt program, run the following command:
+2. In the Terminal/Command Prompt, run the following command:
 
 ```shell
 > cd $your-jar-file-path
@@ -54,15 +54,14 @@ on your computer.
 
 🎉 _**Tada, your node is running**_
 
-- Your node will start to sync with the network. It might take long the first time. Your node has been fully synced once the block height in the terminal logs is equal to the one found in the latest blocks of the [explorer](https://explorer.alephium.org).
+- Your node will start to sync with the network. The initial sync may take some time. Your node is fully synced once the block heights in the terminal logs matches the latest block heights on the [explorer](https://explorer.alephium.org).
 - If you close the terminal the node will be turned off.
 - All of the blockchain data is stored in `.alephium` under your home folder[^1].
 
 ## Testnet
 
 Full node on `Testnet` can be launched using the same steps as
-`Mainnet`. Compared to `Mainnet`, the following configurations needs
-to be updated in the `${ALEPHIUM_HOME}/user.conf` file:
+`Mainnet`. However, update the following configurations in the `${ALEPHIUM_HOME}/user.conf` file:
 
 ```conf
 alephium.network.network-id = 1
@@ -70,17 +69,16 @@ alephium.network.network-id = 1
 
 You can use [extension wallet](/wallet/Basic%20functions#request-testnet-alph-using-extension-wallet)
 or [desktop wallet](/wallet/Basic%20functions#request-testnet-alph-using-desktop-wallet)
-to get some `ALPH` from the testnet faucet.
+to obtain some `ALPH` from the testnet faucet.
 
 ### Mining
 
-To maintain the stability of the testnet, we only allow [specific addresses](https://github.com/alephium/alephium/blob/fb4c4947ee0d0c57424d74ea197f19e72dc46c60/protocol/src/main/scala/org/alephium/protocol/ALPH.scala#L104) to mine blocks on the testnet. If you need to test mining, you can set up your own testnet using [this config](https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet).
+To maintain the stability of the testnet, only [specific addresses](https://github.com/alephium/alephium/blob/fb4c4947ee0d0c57424d74ea197f19e72dc46c60/protocol/src/main/scala/org/alephium/protocol/ALPH.scala#L104) are allowed to mine blocks. If you need to test mining, you can set up your own testnet using [this docker project](https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet).
 
 ## Devnet
 
-Local devnet is essential to develop and test your dApps. It can be
-launched using similar steps as `Mainnet` using Docker or with Java
-directly.
+Local devnet is essential for developing and testing your dApps. It can be
+launched using similar steps as `Mainnet` with Docker or Java.
 
 ### Using Docker
 
