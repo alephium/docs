@@ -11,8 +11,8 @@ Standard](/dapps/standards/non-fungible-tokens).
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
-- Understand how to [compile](/dapps/sdk/work-with-project/getting-started#compile-your-contract)
-  and [deploy](/dapps/sdk/work-with-project/getting-started#deploy-your-contract)
+- Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
+  and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
   contracts in a project using [Web3 SDK](/dapps/sdk/getting-started)
 
 ## Create the NFT contract
@@ -69,7 +69,7 @@ with the following schema:
 ```
 
 After the NFT contract is created, we should
-[deploy](/dapps/sdk/work-with-project/getting-started#deploy-your-contract)
+[deploy](/dapps/tutorials/quick-start#deploy-your-contract)
 a dummy version of it as template contract which we can use to create
 NFT collection contract more efficiently. A concrete example of
 deploying a NFT template contract can be found
@@ -185,7 +185,7 @@ the `AwesomeNFT` template and issued exactly `1` token for it. It also
 increments the total supply of the collection by one.
 
 That's all for creating a NFT collection contract! You can
-now [deploy](/dapps/sdk/work-with-project/getting-started#deploy-your-contract)
+now [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
 this contract and get its contract id back.
 
 ## Mint NFT

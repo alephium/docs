@@ -132,7 +132,7 @@ ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALP
 Alephium is public, fully open source and decentralized. Discover and contribute to Alephium's main projects on [GitHub][github].
 
 If you are building a dApp, get start from
-[here](/dapps/sdk/work-with-project/getting-started). Once released, let everyone know by
+[here](/dapps/tutorials/quick-start). Once released, let everyone know by
 sending a PR to add your project to the [awesome-alephium][awesome] repo. The
 Alephium [Brand Guide][brand-guide] might also come in handy.
 

@@ -8,7 +8,7 @@ If you are a bottom-up learner who prefers a hands-on approach, the
 following tutorials will help you become familiar with building dApps
 on Alephium.
 
-### [Quick Start](/dapps/tutorials/first-dapp)
+### [Quick Start](/dapps/tutorials/quick-start)
 
 Learn how to build a simple faucet dApp with the Typescript SDK.
 

@@ -17,8 +17,8 @@ using the [Web3 SDK](/dapps/sdk/getting-started).
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
-- Understand how to [compile](/dapps/sdk/work-with-project/getting-started#compile-your-contract)
-  and [deploy](/dapps/sdk/work-with-project/getting-started#deploy-your-contract)
+- Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
+  and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
   contracts in a project using [Web3 SDK](/dapps/sdk/getting-started)
 
 ## Create token contract
