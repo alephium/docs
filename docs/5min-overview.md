@@ -21,31 +21,31 @@ import {
 
 <CardSection
   id="Quickstart"
-  description="Welcome to Alephium, the first operational sharded blockchain bringing scalability, ETH-inspired smart contracts, and dApps capabilities to Bitcoin's proven core technologies while ensuring better performance and improved energy efficiency."
+  description="Welcome to Alephium, the first operational sharded blockchain that brings scalability and smart contracts to Bitcoin's proven core technologies, delivering enhanced performance and improved energy efficiency."
 >
   <Card
     title="Build dApps"
     icon={<PhoneDesktopRegular />}
     to="/dapps"
-    description="Get started with building dApps on Alephium using Ralph programming language and SDK."
+    description="Begin building dApps on Alephium using the Ralph programming language and SDK."
   />
   <Card
     title="Learn Ralph"
     icon={<LocalLanguageRegular />}
     to="/dapps/ralph/getting-started"
-    description="Learn Ralph, the smart contract programming language for Alephium that focuses on security, simplicity and efficiency."
+    description="Explore Ralph, the smart contract programming language for Alephium, focused on security, simplicity and efficiency."
   />
   <Card
     title="Run Nodes"
     icon={<RocketRegular />}
     to="/full-node/getting-started"
-    description="Running Alephium full node is important for the security and decentralization of the network."
+    description="Running Alephium full node is crucial for the security and decentralization of the network."
   />
   <Card
     title="Wallets"
     icon={<WalletRegular />}
     to="/wallet"
-    description="Alephium offers a suite of wallets which are designed for ease-of-use, to make Alephium’s technology accessible for all."
+    description="Alephium offers a suite of user-friendly wallets to make its technology accessible to everyone."
   />
   <Card
     title="Mining"
@@ -67,29 +67,29 @@ import {
 
 **Scalable for devs. Secure for users. Decentralized for all.**
 
-Innovative sharding meets expressive sUTXO and efficient Proof-of-Less-Work to secure scalable dApps for real-world use cases.
+Alephium combines innovative sharding, expressive sUTXO, and efficient Proof-of-Less-Work to secure scalable dApps for real-world applications.
 
 ## Why is Alephium special?
 
 On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
 
-**It scales through sharding**. Alephium is built on a novel and complete sharding algorithm called BlockFlow. It improves on the UTXO model of BTC to make it scalable, and uses DAG data structure to reach consensus between different shards. This will allow up to 10’000 Transactions Per Second (currently more than 400 TPS vs Bitcoins 7 TPS).
+**Scalable Through Sharding**. Alephium utilizes a novel sharding algorithm called BlockFlow. It enhances the UTXO model of BTC to achieve scalability and uses a DAG data structure to reach consensus among different shards, enabling up to 10’000 Transactions Per Second (currently more than 400 TPS vs Bitcoins 7 TPS).
 
-**It is programmable & secure**. Alephium proposes a stateful UTXO model offering layer-1 scalability and the same level of programmability as the account model implemented on ETH, whilst being more secure.
+**Programmable & Secure**. Alephium offers a stateful UTXO model that ensures layer-1 scalability and high programmability similar to Ethereum's account model, but with enhanced security.
 
-**It is less energy consuming thanks to POLW**. Proof of Less Work combines physical work and Coin economics to dynamically adjust the work required to mine new blocks. Given the same network conditions, Alephium only uses ⅛ of the energy compared to Bitcoin.
+**Energy Efficiency with PoLW**. Proof of Less Work (PoLW) combines physical work and token economics to dynamically adjust the work required to mine new blocks. Given the same network conditions, Alephium only uses 1/8 of the energy compared to Bitcoin.
 
-**It improves on chain structure with its own custom VM (Alphred)**. It resolves many of the critical issues of the current dApps platforms with huge improvements on security, development experience and introductions of new paradigms such as trustless P2P smart contracts transactions.
+**Custom VM (Alphred)**. Alephium's custom virtual machine addresses critical issues in current dApp platforms, offering significant improvements in security and development experience, and introducing new paradigms like trustless P2P smart contract transactions.
 
-**It has its own programming language for dApps**. Ralph is similar to the Rust syntax, hence its name. It allows to build efficient and secure smart contracts easier than Solidity for example. It is specifically designed to facilitate the creation of Decentralized Finance applications!
+**Dedicated Programming Language (Ralph)**. Ralph is similar to the Rust syntax, hence its name. Ralph simplifies the creation of efficient and secure smart contracts, particularly for decentralized finance applications.
 
-Putting all these innovations together, Alephium delivers a highly demanded solution in the industry: a scalable blockchain improving on mature ideas from Bitcoin to deliver reliable, powerful and secure DeFi and dApps capabilities. And we’re live!
+Combining these innovations, Alephium delivers a highly demanded solution in the industry: a scalable blockchain improving on mature ideas from Bitcoin to deliver reliable, powerful and secure DeFi and dApps capabilities. And we’re live!
 
 **Check out our [whitepapers][whitepaper]!**
 
 ## Tokenomics
 
-The token supply on Alephium is limited with a hardcap of 1 billion. At Mainnet Launch (Nov. 8th, 2021), an initial supply of 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining supply of ALPH tokens will be mined over the next ~80 years. Of these 140M tokens:
+Alephium's token supply is capped at 1 billion. At Mainnet Launch (Nov. 8th, 2021), 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining ALPH tokens will be mined over the next ~80 years. The initial 140M tokens are allocated as follows:
 
 80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
 
