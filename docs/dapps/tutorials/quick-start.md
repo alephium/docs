@@ -57,7 +57,7 @@ Next, change the workspace to the tutorial project:
 cd alephium-tutorial
 ```
 
-Have a look in the `contracts/` folder, you can find `token.ral` and `withdraw.ral`:
+In the `contracts/` folder, you will find `token.ral` and `withdraw.ral`:
 
 <details>
 <summary>token.ral</summary>
@@ -153,19 +153,17 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 
 </p></details>
 
- To compile your contracts, run:
+To compile your contracts, run:
 
 ```
 npx @alephium/cli@latest compile
 ```
 
-The compiled artifacts are in the directory `artifacts`.
-
-This command also generates typescript code based on the compiled artifacts. The generated typescript code are in the directory `artifacts/ts`. You can interact with the alephium blockchain more conveniently by using the generated typescript code.
+The compiled artifacts are in the `artifacts` directory. This command also generates Typescript code based on the compiled artifacts, which is in the `artifacts/ts` directory. You can use the generated Typescript code to interact with the alephium blockchain more conveniently.
 
 ## Test your contract
 
-The sample project comes with tests `test/unit/token.test.ts` for your contract:
+The sample project comes with tests in `test/unit/token.test.ts` for your contract:
 
 <details>
 <summary>token.test.ts</summary>
@@ -215,7 +213,7 @@ describe('unit tests', () => {
 
 </p></details>
 
-You can run them with:
+You can run the tests with:
 
 ```
 npm run test
@@ -229,7 +227,7 @@ npx @alephium/cli@latest test
 
 ## Deploy your contract
 
-Next, to deploy the contract we will use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
+To deploy the contract, use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
 
 <details>
 <summary>0_deploy_faucet.ts</summary>
@@ -269,7 +267,7 @@ export default deployFaucet
 
 </p></details>
 
-You can run it using:
+You can run the deployment script with:
 
 ```
 npx @alephium/cli@latest deploy
@@ -283,7 +281,7 @@ npx @alephium/cli@latest deploy --network testnet
 
 ## Interact with the deployed contract
 
-Now, you can build the source code `src/token.ts` :
+Now, build the source code `src/token.ts` :
 
 <details>
 <summary>token.ts</summary>
@@ -358,14 +356,14 @@ node dist/src/token.js
 dApps require wallet integration to allow users to authenticate and interact with the Alephium blockchain,
 such as transactions signing. Currently dApps can be integrated with
 all [official wallets](/wallet). For a more concrete example,
-please take a look at the example in [Build dApp with
+please look at the example in [Build dApp with
 Nextjs](/dapps/sdk/work-with-project/build-dapp-from-scratch).
 
 ## Learn more
 
 If you want to learn more about how the sample project is set up,
 please take a look at the step-by-step guide to [Build dApp from
-scratch](/dapps/sdk/work-with-project/build-dapp-from-scratch).
+scratch](/dapps/tutorials/deep-dive).
 
 - [Ecosystem](/dapps/ecosystem)
 - [Web3 SDK](/dapps/sdk/getting-started)
