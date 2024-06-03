@@ -8,10 +8,10 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-This is a continuation of the [getting started](/dapps/sdk/work-with-project/getting-started)
+This is a continuation of the [getting started](/dapps/tutorials/quick-start)
 guide. By the end of this guide, you should be able to build a simple
 [Nextjs](https://nextjs.org/) dApp that interacts with the token faucet
-smart contracts discussed in the [getting started](/dapps/sdk/work-with-project/getting-started) guide
+smart contracts discussed in the [getting started](/dapps/tutorials/quick-start) guide
 
 Prerequisites:
 
@@ -20,7 +20,7 @@ Prerequisites:
 - [npm](https://www.npmjs.com/) and
   [npx](https://www.npmjs.com/package/npx) installed on your machine
 - Get familiar with the token faucet tutorial project in the [getting
-  started](/dapps/sdk/work-with-project/getting-started) guide.
+  started](/dapps/tutorials/quick-start) guide.
 - Install the [extension wallet](/wallet/extension-wallet/overview)
 - Install docker and docker-compose
 
@@ -47,11 +47,11 @@ This will start both the Alephium full node and the [explorer
 backend](https://github.com/alephium/explorer-backend) on
 `devnet`. Explorer backend is needed for extension wallet to work.
 
-Now you can [compile](/dapps/sdk/work-with-project/getting-started#compile-your-contract),
-[test](/dapps/sdk/work-with-project/getting-started#test-your-contract) and
-[deploy](/dapps/sdk/work-with-project/getting-started#deploy-your-contract) your token
+Now you can [compile](/dapps/tutorials/quick-start#compile-your-contract),
+[test](/dapps/tutorials/quick-start#test-your-contract) and
+[deploy](/dapps/tutorials/quick-start#deploy-your-contract) your token
 faucet contracts just as described in the [getting
-started](/dapps/sdk/work-with-project/getting-started) guide.
+started](/dapps/tutorials/quick-start) guide.
 
 Make sure the contract is deployed before proceeding to the next step.
 

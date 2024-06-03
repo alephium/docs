@@ -206,7 +206,7 @@ const config = {
           },
           {
             from: "/Smart-Contract-Guide.html",
-            to: "/dapps/sdk/work-with-project/getting-started",
+            to: "/dapps/tutorials/quick-start",
           },
           {
             from: "/Smart-Contract-More.html",

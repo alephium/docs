@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 50
 title: Deep Dive
 sidebar_label: Deep dive
 ---
@@ -8,7 +8,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-In the [getting started](/dapps/sdk/work-with-project/getting-started) guide, we set up a
+In the [getting started](/dapps/tutorials/quick-start) guide, we set up a
 sample project and walk through common development tasks without
 diving into much details. In this guide, we will build the same dApp
 from scratch to explore the basics of creating a dApp on Alephium.
@@ -23,7 +23,7 @@ Prerequisites:
 ## Create a new project
 
 Let's create a token faucet dApp. The smart contract code is taken
-from our [getting started](/dapps/sdk/work-with-project/getting-started) guide. 
+from our [getting started](/dapps/tutorials/quick-start) guide. 
 
 First, create a new project folder and navigate into it:
 

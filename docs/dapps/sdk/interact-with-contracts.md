@@ -24,7 +24,7 @@ tedious. Alephium's [Web3 SDK](/dapps/sdk/getting-started) abstracts away
 many details by generating wrapper code for contracts and transaction
 scripts. Let's demonstrate its usefulness using the
 [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)
-contract discussed in the [Getting started](/dapps/sdk/work-with-project/getting-started)
+contract discussed in the [Getting started](/dapps/tutorials/quick-start)
 guide:
 
 <details>
@@ -109,7 +109,7 @@ the contract states: `getTotalSupply`, `getSymbol`, `getName`,
 which not only updates the contract state, but also transfers assets.
 
 After `TokenFaucet` contract is
-[compiled](/dapps/sdk/work-with-project/getting-started#compile-your-contract), a
+[compiled](/dapps/tutorials/quick-start#compile-your-contract), a
 corresponding Typescript class is generated. We can get an instance of
 this class after deploying it to devnet:
 
@@ -187,7 +187,7 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 
 Alephium's SDK also generates a corresponding typescript class for the
 `Withdraw` transaction script after
-[compilation](/dapps/sdk/work-with-project/getting-started#compile-your-contract), which we
+[compilation](/dapps/tutorials/quick-start#compile-your-contract), which we
 can use execute the transaction:
 
 ```typescript
