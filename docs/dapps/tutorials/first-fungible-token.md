@@ -4,12 +4,12 @@ title: First Fungible Token
 sidebar_label: First fungible token
 ---
 
-In Alephium, when deploying a new contract, we can issue a specified
-amount of tokens and optionally send them to a recipient. The id of
-the newly issued token is the same as the id of the contract that
+In Alephium, when deploying a new contract, you can issue a specified
+amount of tokens and optionally send them to a recipient. The ID of
+the newly issued token is the same as the ID of the contract that
 issues it.
 
-In this guide, we will learn how to issue a token that complies with
+In this guide, you will learn how to issue a token that complies with
 the [Fungible Token
 Standard](/dapps/standards/fungible-tokens#fungible-token-standard)
 using the [Web3 SDK](/dapps/sdk/getting-started).
@@ -27,7 +27,7 @@ A contract that complies with the [Fungible Token
 Standard](/dapps/standards/fungible-tokens#fungible-token-standard)
 needs to implement the `IFungibleToken` interface, which
 defines methods to get the `name`, `symbol`, `decimals` as well as the
-`totalSupply` of the token. `IFungibleToken` interface is available
+`totalSupply` of the token. The `IFungibleToken` interface is available
 automatically from the SDK:
 
 
@@ -61,6 +61,7 @@ using Web3 SDK:
 ```typescript
 import { PrivateKeyWallet } from '@alephium/web3-wallet'
 import { getSigner } from '@alephium/web3-test'
+import { ShinyToken } from '../artifacts/ts'
 
 const signer: PrivateKeyWallet = await getSigner()
 
@@ -77,17 +78,17 @@ const signerBalance = await web3.getCurrentNodeProvider().addresses.getAddresses
 const signerShinyTokenBalance = signerBalance.tokenBalances!.find((token) => token.id === shinyTokenId)
 expect(BigInt(signerShinyTokenBalance!.amount)).toEqual(issueTokenAmount)
 ```
-In this case the `ShinyToken` token contract will be deployed along
+In this example, the `ShinyToken` token contract will be deployed along
 with `10000` tokens, all of which are immediately sent to
 `signer.address`. Note that if `signer.address` is not specified, the
 newly issued tokens will be owned by the `ShinyToken` contract.
 
 ## Interact with the token
 
-Congratulations! You now have issued your first fungible token. Since
+Congratulations! You have issued your first fungible token. Since
 the newly issued token adheres to the [Fungible Token
 Standard](/dapps/standards/fungible-tokens#fungible-token-standard),
-it is also compatible with wallets, explorer and other services. It
+it is compatible with wallets, explorer and other services. It
 also enables SDK to get its information in a standard way:
 
 ```typescript

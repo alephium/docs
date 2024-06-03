@@ -1,5 +1,5 @@
 ---
-sidebar_position: 50
+sidebar_position: 6
 title: Deep Dive
 sidebar_label: Deep dive
 ---
@@ -8,8 +8,8 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-In the [getting started](/dapps/tutorials/quick-start) guide, we set up a
-sample project and walk through common development tasks without
+In the [Quick Start](/dapps/tutorials/quick-start) guide, we set up a
+sample project and walked through common development tasks without
 diving into much details. In this guide, we will build the same dApp
 from scratch to explore the basics of creating a dApp on Alephium.
 
@@ -84,8 +84,8 @@ pub fn withdraw(amount: U256) -> () {
 
 With the `assert` we make sure no one takes more than 2 tokens at a
 time. `transferTokenFromSelf` does the actual transferring of the
-tokens from the token faucet contract to the caller. `balance` field
-is updated with the new value, in case of underflow, an error will be
+tokens from the token faucet contract to the caller. The `balance` field
+is updated with the new value, and in case of underflow, an error will be
 raised and the transaction won't be performed. `callerAddress` and
 `selfTokenId` are built-in functions, you can read more about them in
 our [built-in functions page](/dapps/ralph/built-in-functions).
@@ -310,11 +310,11 @@ const configuration: Configuration<void> = {
 ```
 
 :::caution
-For production we should use environment variables or similiar techniques for senstivie information like `privateKeys`.
+For production, we should use environment variables or similar techniques for sensitive information like `privateKeys`.
 Do not commit your private keys to source control.
 :::
 
-and try to re-deploy:
+And try to re-deploy:
 
 ```sh
 npx @alephium/cli@latest deploy
@@ -420,10 +420,10 @@ We'll need to install our `cli` package and the `typescript`
 dependency if it's not yet the case:
 
 ```
-npm install @alephium/cli typescript
+npm install -D @alephium/cli typescript
 ```
 
-We will now see a different option to interact with the blockchain. Previously we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
+We will now see a different option to interact with the blockchain. Previously, we were using the `DeployFunction` with our `scripts/<number>_*` files which are automatically deployed with the CLI tool.
 
 Another way is to use a simple typescript application. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
 

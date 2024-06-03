@@ -26,6 +26,8 @@ the `INFT` interface, which defines the following two methods:
   collection to which this NFT belongs, as well as the index of this
   specific NFT within the collection
 
+Here is an example of the AwesomeNFT contract:
+
 ```rust
 import "std/nft_interface"
 
@@ -70,8 +72,7 @@ with the following schema:
 
 After the NFT contract is created, we should
 [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-a dummy version of it as template contract which we can use to create
-NFT collection contract more efficiently. A concrete example of
+a dummy version of it as a template contract. This template can be used to create an NFT collection contract more efficiently. A concrete example of
 deploying a NFT template contract can be found
 [here](https://github.com/alephium/alephium-nft/blob/master/scripts/02_deploy_nft_template.ts).
 
