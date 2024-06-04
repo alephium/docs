@@ -197,6 +197,8 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 
 ## Ecosystem Updates
 
+🧬 Weekly #EcosystemUpdate - 03/06/24 - https://x.com/alephium/status/1797631025071505690
+
 🧬 Weekly #EcosystemUpdate - 26/05/24 - https://x.com/alephium/status/1794765797635874877
 
 🧬 Weekly #EcosystemUpdate - 12/05/24 - https://x.com/alephium/status/1790027743759126770
@@ -300,6 +302,10 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #2 - Rhone 
 
+May/24 Rhône Network Upgrade Activation Date is Announced! - https://x.com/alephium/status/1796164992410263987
+
+May/24 Rhône Network Upgrade 🗞️ #7 - Final Testnet Edition! - https://x.com/alephium/status/1795460036342227173
+
 May/24 Rhône Network Upgrade Mainnet activation preparation - https://x.com/alephium/status/1793682101684130099
 
 May/24 Rhône Network Upgrade on Testnet - https://twitter.com/alephium/status/1788855300230922500
@@ -324,7 +330,7 @@ Mar/23 - The Leman Network Upgrade is Live! - https://medium.com/@alephium/the-l
 
 Mar/23 - Leman Network Upgrade Activation - https://medium.com/@alephium/leman-network-upgrade-activation-on-march-30th-606884904c0c
 
-Mar/23 - The Leman Network Upgrade : Time to Check your nodes! - https://medium.com/@alephium/the-leman-network-upgrade-time-to-check-your-nodes-5f8a9297a4dd
+Mar/23 - The Leman Network Upgrade: Time to Check your nodes! - https://medium.com/@alephium/the-leman-network-upgrade-time-to-check-your-nodes-5f8a9297a4dd
 
 Jan/23 - AMA Leman Upgrade - https://www.youtube.com/watch?v=n7ycJUIfbVg&t
 
@@ -335,6 +341,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+May/24 - 6 months of bridging recap! - https://x.com/alephium/status/1788921145720467888
 
 May/24 - Ambassador Program Starts - https://x.com/alephium/status/1794046844563292582
 
