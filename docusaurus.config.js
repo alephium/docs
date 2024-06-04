@@ -146,8 +146,8 @@ const config = {
         additionalLanguages: ["bash", "rust"],
       },
       algolia: {
-        appId: "FZTHKMBSEE",
-        apiKey: "3465cd1cf18d2515a57fcd6dbdcc775b",
+        appId: "9BBPVRH6NS",
+        apiKey: "ac80b7ba74123ae9265eac5e84576e37",
         indexName: "alephium",
       },
       zoom: {
