@@ -12,6 +12,10 @@ on Alephium.
 
 Learn how to build a simple faucet dApp with the Typescript SDK.
 
+### [Deep Dive](/dapps/tutorials/deep-dive)
+
+Explore the details of the faucet dApp introduced in the Quick Start guide.
+
 ### [Your First Transaction](/dapps/tutorials/first-transaction)
 
 Learn how to create, sign and submit a transaction on Alephium.
@@ -30,10 +34,6 @@ Learn how to build your first dApp with web interface using Nextjs,
 and connect wallets to your dApp using the
 [@alephium/web3-react](https://github.com/alephium/alephium-web3/tree/master/packages/web3-react)
 package.`
-
-### [Deep Dive](/dapps/tutorials/deep-dive)
-
-Let's dive into the details of building a dApp on Alephium.
 
 ### [Dapp Recipes](/dapps/tutorials/dapp-recipes)
 

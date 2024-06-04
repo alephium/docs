@@ -4,7 +4,7 @@ title: First Transaction
 sidebar_label: First transaction
 ---
 
-In this guide, you will learn how to transfer `ALPH` or another tokens
+In this guide, you will learn how to transfer `ALPH` or other tokens
 and check the status of the transaction.
 
 Prerequisites:
@@ -14,16 +14,17 @@ Prerequisites:
 
 ## Transfer ALPH
 
-Here is an example of transferring `ALPH` from one address to another
-using [Web3 SDK](/dapps/sdk/getting-started), wait for the transaction
+Below is an example of how to transfer `ALPH` from one address to another
+using [Web3 SDK](/dapps/sdk/getting-started). The code waits for the transaction
 to be confirmed and then verify the balance of the recipient:
 
 ```typescript
-import { ONE_ALPH } from '@alephium/web3'
+import { ONE_ALPH, waitForTxConfirmation } from '@alephium/web3'
 import { getSigner } from '@alephium/web3-test'
-import { waitTxConfirmed } from '@alephium/cli'
 
+web3.setCurrentNodeProvider('localhost:22973') // local devnet
 const nodeProvider = web3.getCurrentNodeProvider()
+
 const [sender, receiver] = await getSigners(2)
 const { balance: receiverBalanceBefore } = await nodeProvider.addresses.getAddressesAddressBalance(receiver.address)
 
@@ -33,7 +34,7 @@ const transferResult = await sender.signAndSubmitTransferTx({
   destinations: [ { address: receiver.address, attoAlphAmount: 10n * ONE_ALPH } ]
 })
 
-waitTxConfirmed(nodeProvider, transferResult.txId, 1, 1000)
+waitForTxConfirmation(nodeProvider, transferResult.txId, 1, 1000)
 const { balance: receiverBalanceAfter } = await nodeProvider.addresses.getAddressesAddressBalance(receiver.address)
 
 expect(BigInt(receiverBalanceAfter)).toEqual(BigInt(receiverBalanceBefore) + 10n * ONE_ALPH)
@@ -57,4 +58,3 @@ const transferResult = await sender.signAndSubmitTransferTx({
 
 In fact, you have the flexibility to send multiple tokens to multiple
 recipients within the same transaction!
-
