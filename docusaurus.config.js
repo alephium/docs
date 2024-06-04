@@ -245,6 +245,14 @@ const config = {
           {
             from: "/ralph/built-in-functions",
             to: "/dapps/ralph/built-in-functions"
+          },
+          {
+            from: "/tokens/fungible-tokens",
+            to: "/dapps/standards/fungible-tokens"
+          },
+          {
+            from: "/tokens/non-fungible-tokens",
+            to: "/dapps/standards/non-fungible-tokens"
           }
         ],
       },
