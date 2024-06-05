@@ -1,5 +1,5 @@
 ---
-sidebar_position: 30
+sidebar_position: 60
 title: Work with Events
 sidebar_label: Work with Events
 ---

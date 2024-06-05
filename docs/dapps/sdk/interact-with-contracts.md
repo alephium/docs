@@ -1,5 +1,5 @@
 ---
-sidebar_position: 10
+sidebar_position: 40
 title: Interact with Contracts
 sidebar_label: Interact with contracts
 ---
