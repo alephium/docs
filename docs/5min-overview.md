@@ -32,7 +32,7 @@ import {
   <Card
     title="Learn Ralph"
     icon={<LocalLanguageRegular />}
-    to="/ralph/getting-started"
+    to="/ralph"
     description="Explore Ralph, the smart contract programming language for Alephium, focused on security, simplicity and efficiency."
   />
   <Card

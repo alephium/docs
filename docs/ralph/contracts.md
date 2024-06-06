@@ -11,7 +11,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 ## Contracts
 
-:::info
+:::tip note
 Each Alephium's contract has 3 forms of unique identification:
 
 1. **Address**: each contract has a unique address
@@ -168,7 +168,7 @@ Contract Foo(barTemplateId: ByteVec) {
 }
 ```
 
-:::note
+:::tip note
 Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph, it will be reduced to 0.1 alph after the Rhone upgrade is activated), so creating a large number of sub-contracts is not practical.
 :::
 
@@ -240,7 +240,7 @@ Contract Baz(a: U256, b: ByteVec) extends Foo(a), Bar(b) {
 }
 ```
 
-:::note
+:::tip note
 In Ralph, abstract contracts are not instantiable, which means the following code is invalid:
 
 ```rust

@@ -211,7 +211,7 @@ const config = {
           },
           {
             from: "/Smart-Contract-More.html",
-            to: "/ralph/getting-started",
+            to: "/ralph",
           },
           {
             from: "/Explorer-Backend-Starter-Guide.html",
@@ -237,14 +237,6 @@ const config = {
           {
             from: "/The Bridge",
             to: "/infrastructure/the-bridge"
-          },
-          {
-            from: "/ralph/getting-started",
-            to: "/ralph/getting-started"
-          },
-          {
-            from: "/ralph/built-in-functions",
-            to: "/ralph/built-in-functions"
           },
           {
             from: "/tokens/fungible-tokens",

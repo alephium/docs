@@ -7,7 +7,7 @@ sidebar_label: Programming model
 Compared to other blockchains, Alephium's programming model is heavily
 influenced by its [sUTXO](/misc/content/#stateful-utxo) model, its sharding
 architecture, as well as numerous innovations and design decisions
-made in the [Ralph language](/ralph/getting-started) and [Alphred
+made in the [Ralph language](/ralph) and [Alphred
 VM](/misc/content/#alphred-virtual-machine).
 
 Under [sUTXO](/misc/content/#stateful-utxo) model, assets are managed by

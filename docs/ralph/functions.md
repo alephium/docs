@@ -116,11 +116,11 @@ fn foo() -> () {
 }
 ```
 
-:::note
+:::tip note
 `break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert function](/ralph/built-in-functions#assert).
 :::
 
-:::note
+:::tip note
 In Ralph, each function has only one scope, so you can not define duplicated variables in the `while` or `for` block:
 
 ```rust

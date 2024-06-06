@@ -36,7 +36,7 @@ Set of tools to interact to and develop dApps on Alephium
 Alephium's programming language for dApps development
 
 - Github: [https://github.com/alephium/ralphc](https://github.com/alephium/ralphc)
-- Docs:  [https://docs.alephium.org/ralph/getting-started](https://docs.alephium.org/ralph/getting-started)
+- Docs:  [https://docs.alephium.org/ralph](https://docs.alephium.org/ralph)
 
 ### dApps Prototypes
 
@@ -82,7 +82,7 @@ You can connect to the testnet and interact with the following applications & to
 
 ### **Extension Wallet**
 
-- Docs: https://docs.alephium.org/wallet/extension-wallet/overview
+- Docs: https://docs.alephium.org/wallet/extension-wallet
 ⬇️ Download the extension wallet
 🔵 [Google Chrome store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
 🟠 [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
