@@ -17,7 +17,7 @@ import {
   <Card
     title="Desktop Wallet"
     icon={<DesktopRegular />}
-    to="/wallet/desktop-wallet/overview"
+    to="/wallet/desktop-wallet"
     description="Alephium’s flagship wallet. Ready for everything,
     from daily management tasks to smart contracts deployment, privacy & DeFi."
   />

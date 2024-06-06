@@ -228,7 +228,7 @@ const config = {
           },
           {
             from: "/wallet/desktop-wallet-guide",
-            to: "/wallet/desktop-wallet/overview",
+            to: "/wallet/desktop-wallet",
           },
           {
             from: "/ralph/asset-permission-system",
