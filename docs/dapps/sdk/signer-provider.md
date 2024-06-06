@@ -29,24 +29,6 @@ const nodeProvider = new NodeProvider('http://127.0.0.1:22973')
 const wallet = new PrivateKeyWallet({ privateKey: testPrivateKey })
 ```
 
-### NodeWallet
-
-You can follow this [guide](/wallet/node-wallet-guide) to create a full node wallet, and then use the full node wallet to sign and submit transactions:
-
-```typescript
-import { NodeProvider } from '@alephium/web3'
-import { NodeWallet } from '@alephium/web3-wallet'
-
-const nodeProvider = new NodeProvider('http://127.0.0.1:22973')
-const wallet = new NodeWallet('alephium-web3-test-only-wallet', nodeProvider)
-// wallet must be unlocked before it can sign and send transactions
-await wallet.unlock('alph')
-```
-
-:::note
-Both `PrivateKeyWallet` and `NodeWallet` are used for contract development and deployment, please don't use them to store large amount of tokens.
-:::
-
 ### Extension Wallet
 
 You need to install `@alephium/get-extension-wallet` first:
@@ -101,6 +83,24 @@ await provider.disconnect()
 ```
 
 For the convenience of dApp development, we offer `React` wrappers for extension wallet and `WalletConnect`. You can refer to the documentation [here](./web3-react.md) for more details.
+
+### NodeWallet
+
+You can follow this [guide](/wallet/node-wallet-guide) to create a full node wallet, and then use the full node wallet to sign and submit transactions:
+
+```typescript
+import { NodeProvider } from '@alephium/web3'
+import { NodeWallet } from '@alephium/web3-wallet'
+
+const nodeProvider = new NodeProvider('http://127.0.0.1:22973')
+const wallet = new NodeWallet('alephium-web3-test-only-wallet', nodeProvider)
+// wallet must be unlocked before it can sign and send transactions
+await wallet.unlock('alph')
+```
+
+:::note
+Both `PrivateKeyWallet` and `NodeWallet` are used for contract development and deployment, please don't use them to store large amount of tokens.
+:::
 
 ## Usage of SignerProvider
 

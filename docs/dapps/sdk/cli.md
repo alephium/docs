@@ -74,7 +74,10 @@ In most cases, you only need to specify the `networks` config, and the other opt
   * `errorOnWarnings`: Compiler warnings will be treated as errors if this config is enabled
 * `skipRecompile`: This config is used to specify whether contract code needs to be recompiled when deploying contracts, it is `false` by default
 * `enableDebugMode`: If this config is enabled, it will print out network requests and error stack traces
-* `forceRecompile`: The purpose of this config is to maintain backward compatibility. If this config is disabled and the contract code has already been deployed to the testnet/mainnet without any updates, then no new bytecode will be generated for the contract. This config is disabled by default.
+* `forceRecompile`: The purpose of this config is to maintain backward compatibility, it is disabled by default.
+  * If this config is disabled and the contract code has already been deployed to the testnet/mainnet without any updates, then no new bytecode will be generated for the contract
+  * If this config is disabled and the contract code has already been deployed to the testnet/mainnet but the contract code has been updated, then new bytecode will be generated for the contract
+  * If this config is enabled or the contract code has not been deployed to the testnet/mainnet, then new bytecode will be generated for the contract
 
 ## Compile Project
 
