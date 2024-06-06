@@ -127,11 +127,13 @@ After choosing the desired options, a new account will be created and
 ready to be used.
 
 #### Edit Account
-You can also edit the name of an existing account, export its private
+You can also edit the name of an existing account, export its public key and private
 key, delete an account, etc:
 
 <img src={require("./media/manage-accounts-4.png").default} alt="Account List" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("./media/manage-accounts-5.png").default} alt="Edit Account" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/manage-accounts-6.png").default} alt="Export Private Key" width="250"/>
+<img src={require("./media/manage-accounts-6.png").default} alt="Export Public Key" width="250"/>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<img src={require("./media/manage-accounts-7.png").default} alt="Export Private Key" width="250"/>
