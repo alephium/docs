@@ -6,7 +6,7 @@ sidebar_label: SignerProvider
 
 The `SignerProvider` is an abstraction of an Alephium account. It can be used to sign messages and transactions, as well as send signed transactions to the Alephium blockchain.
 
-## Creating SignerProvider
+## Create SignerProvider
 
 The SDK offers four types of signer providers, each designed for specific use cases. Below is a guide on how to create each type of `SignerProvider`.
 

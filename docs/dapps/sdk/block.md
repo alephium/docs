@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
-title: Block API Guide
-sidebar_label: Block API Guide
+title: Work with Block
+sidebar_label: Work with Block
 ---
 
 ## Block Structure
@@ -51,7 +51,7 @@ const result = await nodeProvider.blockflow.getBlockflowBlocks({ fromTs, toTs })
 for (let fromGroup = 0; fromGroup < TOTAL_NUMBER_OF_GROUPS; fromGroup += 1) {
   for (let toGroup = 0; toGroup < TOTAL_NUMBER_OF_GROUPS; toGroup += 1) {
     const chainIndex = fromGroup * TOTAL_NUMBER_OF_GROUPS + toGroup
-    const blocks = result.blocks[chainIndex]
+    console.log(`blocks for chain index ${fromGroup} -> ${toGroup} is `, result.blocks[chainIndex])
   }
 }
 ```
@@ -63,7 +63,7 @@ const result = await nodeProvider.blockflow.getBlockflowBlocksWithEvents({ fromT
 for (let fromGroup = 0; fromGroup < TOTAL_NUMBER_OF_GROUPS; fromGroup += 1) {
   for (let toGroup = 0; toGroup < TOTAL_NUMBER_OF_GROUPS; toGroup += 1) {
     const chainIndex = fromGroup * TOTAL_NUMBER_OF_GROUPS + toGroup
-    const blocksAndEvents = result.blocksAndEvents[chainIndex]
+    console.log(`blocks and events for chain index ${fromGroup} -> ${toGroup} is `, result.blocksAndEvents[chainIndex])
   }
 }
 ```
@@ -79,6 +79,26 @@ const chainInfo = await nodeProvider.blockflow.getBlockflowChainInfo({
   toGroup: 0 // the to group of chain index
 })
 const latestHeight = chainInfo.currentHeight
+```
+
+## Get Blocks Between Heights
+
+Currently, Alephium has 16 chains, and each has a different height. If you need to get blocks between specific heights, you'll need to fetch them separately from each chain.
+
+```typescript
+import { NodeProvider, node } from '@alephium/web3'
+
+const nodeProvider = new NodeProvider('http://127.0.0.1:22973')
+
+async function getBlocksBetweenHeight(fromGroup: number, toGroup: number, fromHeight: number, toHeight: number): Promise<node.BlockEntry[]> {
+  const blocks: node.BlockEntry[] = []
+  for (let height = fromHeight; height <= toHeight; fromHeight += 1) {
+    const hashes = await nodeProvider.blockflow.getBlockflowHashes({ fromGroup, toGroup, height })
+    const block = await nodeProvider.blockflow.getBlockflowBlocksBlockHash(hashes[0])
+    blocks.push(block)
+  }
+  return blocks
+}
 ```
 
 ## Block Subscription

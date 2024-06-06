@@ -81,3 +81,7 @@ By clicking on a specific address, you'll see the address details including its 
 Using the Settings wheel at the top of the application, you will be able to edit the Address label, choose it as your default address or sweep all its unlocked funds to an address of your choice.
 
 <img src={require("./media/gs13.png").default} alt="Prompt to configure address options" width="auto" style={{ height: '200px' }} />
+
+## 5. Export Public Key and Private Key
+
+<img src={require("./media/gs14.png").default} alt="Export public key and private key" width="auto" style={{ height: '200px' }} />
