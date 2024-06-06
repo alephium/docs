@@ -45,7 +45,7 @@ function extractCategory(json) {
 function writeHeader(stream, categories) {
   stream.write(`
 ---
-sidebar_position: 20
+sidebar_position: 90
 title: Built-in Functions
 sidebar_label: Built-in functions
 ---
