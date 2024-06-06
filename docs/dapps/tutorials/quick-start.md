@@ -357,7 +357,7 @@ dApps require wallet integration to allow users to authenticate and interact wit
 such as transactions signing. Currently dApps can be integrated with
 all [official wallets](/wallet). For a more concrete example,
 please look at the example in [Build dApp with
-Nextjs](/dapps/sdk/work-with-project/build-dapp-from-scratch).
+Nextjs](/dapps/tutorials/first-dapp-with-nextjs).
 
 ## Learn more
 
@@ -366,6 +366,6 @@ please take a look at the step-by-step guide to [Build dApp from
 scratch](/dapps/tutorials/deep-dive).
 
 - [Ecosystem](/dapps/ecosystem)
-- [Web3 SDK](/dapps/sdk/getting-started)
+- [Web3 SDK](/sdk/getting-started)
 - [Ralph](/dapps/ralph/getting-started)
 - [Build dApp with Nextjs](/dapps/tutorials/first-dapp-with-nextjs)

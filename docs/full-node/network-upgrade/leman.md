@@ -40,7 +40,7 @@ Alephium's programming language for dApps development
 
 ### dApps Prototypes
 
-Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/dapps/sdk/work-with-project/build-dapp-from-scratch
+Build stuff now! How to build dApps on Alephium: https://docs.alephium.org/sdk/work-with-project/build-dapp-from-scratch
 
 Examples of dApps already built:
 

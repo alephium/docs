@@ -12,7 +12,7 @@ software, and bugs in them can potentially lead to significant
 financial losses.
 
 Testing is a very complex topic. Alephium's [Web3
-SDK](/dapps/sdk/getting-started) makes the following opinionated design
+SDK](/sdk/getting-started) makes the following opinionated design
 decisions when it comes to its testing framework:
 
 - Unit tests and integration tests are both important. Even though in
@@ -20,7 +20,7 @@ decisions when it comes to its testing framework:
   by the test framework is whether the smart contracts under test are
   required to be deployed or not.
 - Test code is also code, it should be clean and maintainable as
-  well. [Web3 SDK](/dapps/sdk/getting-started) automatically generates
+  well. [Web3 SDK](/sdk/getting-started) automatically generates
   testing boilerplates to make writing and maintaining test cases much
   easier.
 - Tests are run against the Alephium full node in
@@ -52,7 +52,7 @@ Contract Math(mut counter: U256) {
 The `Math` contract has a `add` function that adds two numbers
 together. Every time it's called, it also increments the `counter` and
 emits an `Add` event. Here is how we can test it using [Web3
-SDK](/dapps/sdk/getting-started):
+SDK](/sdk/getting-started):
 
 ```typescript
 const result = await Math.tests.add({
@@ -225,13 +225,13 @@ expect(events[0].fields).toEqual([{ type: 'U256', value: '1' }, { type: 'U256', 
 
 After `AddScript` is executed, we can verify the state, balance and
 events of the `Math` contract. Please refer to [Interact with
-contracts](/dapps/sdk/interact-with-contracts) for more details.
+contracts](/sdk/interact-with-contracts) for more details.
 
 ## Debugging
 
 Debug statement in Alephium supports string interpolation. Printing
 debug messages has the same syntax as emitting [contract
-events](/dapps/sdk/events#contract-events). For example:
+events](/sdk/events#contract-events). For example:
 
 ```rust
 Contract Math(mut counter: U256) {
@@ -261,5 +261,5 @@ will still be printed out in both the terminal console and the full
 node log.
 
 Under the hood, `Debug` is a special [system
-events](/dapps/sdk/events#system-events) which is only available in
+events](/sdk/events#system-events) which is only available in
 [devnet](/full-node/getting-started#devnet).

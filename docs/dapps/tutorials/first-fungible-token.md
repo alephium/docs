@@ -12,14 +12,14 @@ issues it.
 In this guide, you will learn how to issue a token that complies with
 the [Fungible Token
 Standard](/dapps/standards/fungible-tokens#fungible-token-standard)
-using the [Web3 SDK](/dapps/sdk/getting-started).
+using the [Web3 SDK](/sdk/getting-started).
 
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
   and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-  contracts in a project using [Web3 SDK](/dapps/sdk/getting-started)
+  contracts in a project using [Web3 SDK](/sdk/getting-started)
 
 ## Create token contract
 

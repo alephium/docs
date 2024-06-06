@@ -58,7 +58,7 @@ applications to update their user interfaces or for auditing.
 
 You can subscribe to all events emitted from a contract, or a specific
 event emitted from a contract using Alephium's [Web3
-SDK](/dapps/sdk/getting-started):
+SDK](/sdk/getting-started):
 
 ```typescript
 // `adminInstance` is a contract instance of the Admin contract
@@ -105,7 +105,7 @@ contract fields, which is why `#00` is passed in as arguments to the
 `ContractCreatedEvent` system event is emitted after the `Foo`
 contract is created.
 
-Alephium's [Web3 SDK](/dapps/sdk/getting-started) provides a helper function
+Alephium's [Web3 SDK](/sdk/getting-started) provides a helper function
 to subscribe to the `ContractCreatedEvent` event:
 
 ```typescript
@@ -147,7 +147,7 @@ In the example above, after the `destroy` function is called, `Foo`
 contract will be destroyed and a `ContractDestroyedEvent` system event
 will be emitted by the Alephium full node.
 
-Alephium's [Web3 SDK](/dapps/sdk/getting-started) provides a helper function
+Alephium's [Web3 SDK](/sdk/getting-started) provides a helper function
 to subscribe to the `ContractDestroyedEvent` event:
 
 ```typescript
@@ -184,8 +184,8 @@ alephium.node.event-log.enabled=true
 ```
 
 This allows us to query [contract
-events](/dapps/sdk/events#contract-events) and [system
-events](/dapps/sdk/events#system-events) based on the contract
+events](/sdk/events#contract-events) and [system
+events](/sdk/events#system-events) based on the contract
 address.
 
 To enable querying events based on transaction id and block hash, you
@@ -210,11 +210,11 @@ the events emitted from the contracts specified here.
 ## Further Reading
 
 The event subscription functions in Alephium's [Web3
-SDK](/dapps/sdk/getting-started) are built on top of Alephium's full node
+SDK](/sdk/getting-started) are built on top of Alephium's full node
 APIs. For more details about the APIs please refer to the [OpenAPI
 Documentation](https://node.mainnet.alephium.org/docs).
 
 Other than `ContractEvent` and `SystemEvent`, there is in fact another
 (special) system event called `DebugEvent`, please refer to
-[Debugging](/dapps/sdk/testing-and-debugging#debugging) for more
+[Debugging](/sdk/testing-and-debugging#debugging) for more
 information.

@@ -46,7 +46,7 @@ To make it easier to work with tokens in the Alephium ecosystem:
 - Standards are defined for both [fungible
   tokens](/dapps/standards/fungible-tokens) and [non-fungible
   tokens](/dapps/standards/non-fungible-tokens).
-- [Web3 SDK](/dapps/sdk/getting-started) offers a set of utility
+- [Web3 SDK](/sdk/getting-started) offers a set of utility
   functions to help dApps and wallets to interact with the tokens,
   such as guessing token types and extracting token metadata.
 - [Token list](https://github.com/alephium/token-list) is created as a

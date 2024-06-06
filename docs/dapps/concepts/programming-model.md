@@ -70,7 +70,7 @@ TxScript Donate(dex1: Dex, dex2: Dex, charity: Charity) {
 ```
 
 Please see
-[here](/dapps/sdk/interact-with-contracts#txscript-transactions) for a
+[here](/sdk/interact-with-contracts#txscript-transactions) for a
 more concrete example of how to interact with smart contract using
 `TxScript`. To better understand how assets flow from the inputs
 through `Txscript` into the (fixed/generated) outputs, please read

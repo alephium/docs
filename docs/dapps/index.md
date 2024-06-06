@@ -8,7 +8,7 @@ Alephium offers a scalable, secure and decentralized platform for
 building decentralized applications (DApps). In this section, you can
 learn about [Ralph](/dapps/ralph/getting-started), the smart contract
 programming language for Alephium, and the [Web3
-SDK](/dapps/sdk/getting-started), which offers powerful tools to
+SDK](/sdk/getting-started), which offers powerful tools to
 interact with the blockchain and a developer friendly framework
 for compiling, testing and deploying smart contracts.
 

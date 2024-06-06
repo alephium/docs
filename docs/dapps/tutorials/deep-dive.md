@@ -562,6 +562,6 @@ with a web interface, please take a look at the guide to [Build dApp
 with Nextjs](/dapps/tutorials/first-dapp-with-nextjs).
 
 - [Ecosystem](/dapps/ecosystem)
-- [Web3 SDK](/dapps/sdk/getting-started)
+- [Web3 SDK](/sdk/getting-started)
 - [Ralph](/dapps/ralph/getting-started)
 

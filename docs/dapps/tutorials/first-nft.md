@@ -13,7 +13,7 @@ Prerequisites:
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
   and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-  contracts in a project using [Web3 SDK](/dapps/sdk/getting-started)
+  contracts in a project using [Web3 SDK](/sdk/getting-started)
 
 ## Create the NFT contract
 
@@ -193,7 +193,7 @@ this contract and get its contract id back.
 
 If we have prepared the metadata URI for the NFT, we can mint it by
 calling the `mint` function in `AwesomeNFTCollection` contract using
-[TxScript](/dapps/sdk/interact-with-contracts#txscript-transactions).
+[TxScript](/sdk/interact-with-contracts#txscript-transactions).
 
 ```rust
 TxScript MintAwesomeNFT(
@@ -207,7 +207,7 @@ TxScript MintAwesomeNFT(
 ## Interact with the NFT
 
 For contracts that implement `INFTCollection` and `INFT` interfaces,
-[Web3 SDK](/dapps/sdk/getting-started) offers a canonical way to fetch their respective metadata:
+[Web3 SDK](/sdk/getting-started) offers a canonical way to fetch their respective metadata:
 
 ```typescript
 // NFT Collection Metadata
