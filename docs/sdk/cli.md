@@ -91,7 +91,7 @@ The `compile` command compiles contract code, saves the compiled artifacts, and 
 
 ## Deploy Contracts
 
-To deploy contracts, you need to write contract deployment scripts. The filenames of deployment scripts must follow this regular expression pattern: `^([0-9]+)_.*.(ts|js)$`. Deployment scripts are executed in the order determined by the numerical prefix in their filenames. You can refer to the documentation [here](../tutorials/quick-start.md#deploy-your-contract) for writing deployment scripts.
+To deploy contracts, you need to write contract deployment scripts. The filenames of deployment scripts must follow this regular expression pattern: `^([0-9]+)_.*.(ts|js)$`. Deployment scripts are executed in the order determined by the numerical prefix in their filenames. You can refer to the documentation [here](/dapps/tutorials/quick-start#deploy-your-contract) for writing deployment scripts.
 
 You can use the `deploy` command to deploy contracts, the `-n` parameter is used to specify the network type:
 

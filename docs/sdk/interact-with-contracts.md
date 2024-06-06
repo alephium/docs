@@ -20,7 +20,7 @@ transactions are mined with only the transaction ids returned to the
 caller.
 
 Interacting with contracts directly through the full node API can be
-tedious. Alephium's [Web3 SDK](/dapps/sdk/getting-started) abstracts away
+tedious. Alephium's [Web3 SDK](/sdk/getting-started) abstracts away
 many details by generating wrapper code for contracts and transaction
 scripts. Let's demonstrate its usefulness using the
 [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)
@@ -228,7 +228,7 @@ emit Withdraw(callerAddress!(), amount)
 ```
 
 Events like this are very useful for dApps to track contract
-activities. Alephium's [Web3 SDK](/dapps/sdk/getting-started) provides a set
+activities. Alephium's [Web3 SDK](/sdk/getting-started) provides a set
 of functions to interact with contract's events, here is how we can
 subscribe to the `Withdraw` event emitted from the `withdraw` function
 in `TokenFaucet` contract:
@@ -262,7 +262,7 @@ contract/script source code, please refer to the [Load contract/script
 from
 artifacts](/dapps/tutorials/dapp-recipes#load-contractscript-from-artifacts) giude.
 
-Alephium's [Web3 SDK](/dapps/sdk/getting-started) builds developer friendly
+Alephium's [Web3 SDK](/sdk/getting-started) builds developer friendly
 abstractions on top of Alephium's full node APIs. For more details
 about the APIs please refer to the [OpenAPI
 Documentation](https://node.mainnet.alephium.org/docs).
@@ -273,4 +273,4 @@ Alephium that is a more flexible and efficient way of creating
 transactions that interact with smart contracts.
 
 Events are crucial to build dApps, more information can be found
-[here](/dapps/sdk/events). 
+[here](/sdk/events). 

@@ -51,7 +51,7 @@ Pour le tutoriel sur le minage, vous pouvez suivre notre [Guide du minage en sol
 
 Vous pouvez télécharger le wallet de bureau à partir d'ici [GitHub](https://github.com/alephium/desktop-wallet/releases/latest).
 
-Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](../wallet/desktop-wallet/overview) pour apprendre à l'utiliser.
+Alternativement, notre noeud complet possède un wallet intégré avec des fonctionnalités avancées, vous pouvez suivre notre [Guide du wallet](../wallet/desktop-wallet) pour apprendre à l'utiliser.
 
 [^1]: Le dossier d'accueil dépend de votre système : `C:\Users\<votre-username>` sous Windows, `/Users/<votre-username>` sous macOS, `/home/<votre-username>` sous Linux.
 

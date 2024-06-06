@@ -39,7 +39,7 @@ import { publicKeyFromPrivateKey } from '@alephium/web3'
 const publicKey = publicKeyFromPrivateKey('your-private-key')
 ```
 
-You can also export the public key from your [extension wallet](../../wallet/extension-wallet/getting-started.md#edit-account) or [desktop wallet](../../wallet/desktop-wallet/getting-started.md#5-export-public-key-and-private-key).
+You can also export the public key from your [extension wallet](/wallet/extension-wallet/getting-started#edit-account) or [desktop wallet](/wallet/desktop-wallet/getting-started.md#5-export-public-key-and-private-key).
 
 ### Building Transfer Transactions
 
