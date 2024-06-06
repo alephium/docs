@@ -101,7 +101,7 @@ TxScript Deploy(fooByteCode: ByteVec) {
 In the example above, the `Deploy` transaction script creates a new
 `Foo` contract from its contract bytecode. `Foo` contract has no
 contract fields, which is why `#00` is passed in as arguments to the
-[createContract](/dapps/ralph/built-in-functions#createcontract) function. A
+[createContract](/ralph/built-in-functions#createcontract) function. A
 `ContractCreatedEvent` system event is emitted after the `Foo`
 contract is created.
 

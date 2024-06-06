@@ -88,7 +88,7 @@ tokens from the token faucet contract to the caller. The `balance` field
 is updated with the new value, and in case of underflow, an error will be
 raised and the transaction won't be performed. `callerAddress` and
 `selfTokenId` are built-in functions, you can read more about them in
-our [built-in functions page](/dapps/ralph/built-in-functions).
+our [built-in functions page](/ralph/built-in-functions).
 
 ## Compile your contract
 
@@ -563,5 +563,5 @@ with Nextjs](/dapps/tutorials/first-dapp-with-nextjs).
 
 - [Ecosystem](/dapps/ecosystem)
 - [Web3 SDK](/sdk/getting-started)
-- [Ralph](/dapps/ralph/getting-started)
+- [Ralph](/ralph/getting-started)
 

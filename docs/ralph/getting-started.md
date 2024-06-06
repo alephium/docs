@@ -168,7 +168,7 @@ In Ralph, Maps are defined as global contract attributes, eliminating the need f
 
 Under the hood, each Map entry is constructed as a subcontract of the current contract. Therefore, creating a map entry entails a minimal contract deposit, easily done using the built-in function `mapEntryDeposit!()`.
 
-There are 3 essential built-in map methods `insert!, remove!, contains!` (see [doc](https://docs.alephium.org/dapps/ralph/built-in-functions/#map-functions)). Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository and the [unit tests here](https://github.com/alephium/alephium-web3/blob/master/test/contract.test.ts#L448-L477).
+There are 3 essential built-in map methods `insert!, remove!, contains!` (see [doc](https://docs.alephium.org/ralph/built-in-functions/#map-functions)). Map values can be accessed and updated with the bracket syntax `map[key] = newValue`. Below are some examples illustrating their usage. For more comprehensive examples, refer to the [blind-auction](https://github.com/alephium/ralph-example/tree/master/blind-auction) repository and the [unit tests here](https://github.com/alephium/alephium-web3/blob/master/test/contract.test.ts#L448-L477).
 
 ```rust
 Contract Counters() {
@@ -397,7 +397,7 @@ fn foo() -> () {
 ```
 
 :::note
-`break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert function](/dapps/ralph/built-in-functions#assert).
+`break` and `continue` statements are not supported in `for-loop` and `while-loop` because they may be bad practice in some cases. It's recommended to replace them with early `return` or [assert function](/ralph/built-in-functions#assert).
 :::
 
 :::note
@@ -416,7 +416,7 @@ This is an on-purpose design since variable shadowing is generally not a good pr
 
 ### Error Handling
 
-Ralph provides two builtin assertion functions for error handling: [assert!](/dapps/ralph/built-in-functions#assert) and [panic!](/dapps/ralph/built-in-functions#panic). Assertion failure will revert all changes made to the world state by the transaction and stop the execution of the transaction immediately.
+Ralph provides two builtin assertion functions for error handling: [assert!](/ralph/built-in-functions#assert) and [panic!](/ralph/built-in-functions#panic). Assertion failure will revert all changes made to the world state by the transaction and stop the execution of the transaction immediately.
 
 ```rust
 enum ErrorCodes {
@@ -482,7 +482,7 @@ Contract Foo() {
 
 ### Builtin Functions
 
-Ralph provides lots of builtin functions, you can refer to [here](/dapps/ralph/built-in-functions).
+Ralph provides lots of builtin functions, you can refer to [here](/ralph/built-in-functions).
 
 ### Braces Syntax for Asset Approval
 
@@ -623,7 +623,7 @@ The compiler will skip the checking for simple view functions. A simple view fun
 2. It cannot use any assets.
 3. All sub-function calls must also be simple view functions.
 
-To check the caller of a function, the built-in function [checkCaller!](/dapps/ralph/built-in-functions#checkcaller) has to be used.
+To check the caller of a function, the built-in function [checkCaller!](/ralph/built-in-functions#checkcaller) has to be used.
 
 ```rust
 Contract Foo(barId: ByteVec, mut b: Boolean) {
@@ -845,7 +845,7 @@ Deploying a contract requires depositing a certain amount of ALPH in the contrac
 
 ### Contract Creation inside a Contract
 
-Ralph supports creating contracts programmatically within contracts, Ralph provides some builtin functions to create contracts, you can find more information at [here](/dapps/ralph/built-in-functions#contract-functions).
+Ralph supports creating contracts programmatically within contracts, Ralph provides some builtin functions to create contracts, you can find more information at [here](/ralph/built-in-functions#contract-functions).
 
 If you want to create multiple instances of a contract, then you should use the `copyCreateContract!` builtin functions, which will reduce a lot of on-chain storage and transaction gas fee.
 
@@ -865,7 +865,7 @@ TxScript CreateFoo(fooTemplateId: ByteVec, a: ByteVec, b: Address, c: U256) {
 
 ### Migration
 
-Alephium's contracts can be upgraded with two migration functions: [migrate!](/dapps/ralph/built-in-functions#migrate) and [migrateWithFields!](/dapps/ralph/built-in-functions#migratewithfields). Here are the three typical ways to use them:
+Alephium's contracts can be upgraded with two migration functions: [migrate!](/ralph/built-in-functions#migrate) and [migrateWithFields!](/ralph/built-in-functions#migratewithfields). Here are the three typical ways to use them:
 
 ```Rust
 fn upgrade(newCode: ByteVec) -> () {

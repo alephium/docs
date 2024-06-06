@@ -367,5 +367,5 @@ scratch](/dapps/tutorials/deep-dive).
 
 - [Ecosystem](/dapps/ecosystem)
 - [Web3 SDK](/sdk/getting-started)
-- [Ralph](/dapps/ralph/getting-started)
+- [Ralph](/ralph/getting-started)
 - [Build dApp with Nextjs](/dapps/tutorials/first-dapp-with-nextjs)
