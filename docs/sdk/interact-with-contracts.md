@@ -1,7 +1,7 @@
 ---
-sidebar_position: 40
+sidebar_position: 30
 title: Interact with Contracts
-sidebar_label: Interact with contracts
+sidebar_label: Work with contract
 ---
 
 import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
@@ -12,7 +12,7 @@ Alephium's full node provides a set of
 [APIs](https://node.mainnet.alephium.org/docs/#/Contracts) to
 interact with the deployed contracts. These interactions can be
 divided into two categories depending on whether they intend to update
-the state of the blockchain: *Contract calls* are read-only
+the state of the blockchain: *Contract views* are read-only
 interactions that are gas free, executed straight away with result
 returned to the caller immediately. *TxScript transactions* on the
 other hand update the blockchain state, require gas, get executed when
@@ -20,7 +20,7 @@ transactions are mined with only the transaction ids returned to the
 caller.
 
 Interacting with contracts directly through the full node API can be
-tedious. Alephium's [Web3 SDK](/sdk/getting-started) abstracts away
+tedious. Alephium's [Typescript SDK](/sdk/getting-started) abstracts away
 many details by generating wrapper code for contracts and transaction
 scripts. Let's demonstrate its usefulness using the
 [TokenFaucet](https://github.com/alephium/nextjs-template/blob/main/contracts/token.ral)
@@ -137,25 +137,28 @@ script source code**, please refer to the [Load contract/script from
 artifacts](/dapps/tutorials/dapp-recipes#load-contractscript-from-artifacts)
 guide.
 
-## Contract Call
+## Contract Views
 
-Inside of the `TokenFaucet` typescript class, Alephium SDK generates
-methods for all of the pure functions in the `TokenFaucet`
-contract. They can be called just like regular typescript functions:
+Inside of the `TokenFaucet` typescript class, [Typescript
+SDK](/sdk/getting-started) generates the read-only `view` methods for
+all functions in the `TokenFaucet` contract. `view` methods do not
+update the blockchan state, they can be called just like regular
+typescript functions:
 
 ```typescript
-const getNameResult = await tokenFaucet.methods.getName()
+const getNameResult = await tokenFaucet.view.getName()
 console.log(`name: ${hexToString(getNameResult.returns)}`)  // name: TokenFaucet
 
-const getDecimalsResult = await tokenFaucet.methods.getDecimals()
+const getDecimalsResult = await tokenFaucet.view.getDecimals()
 console.log(`decimals: ${getDecimalsResult.returns)}`)      // decimals: 18
 ```
 
-Note that results of the contract calls are returned immediately and
+Note that results of the `view` methods are returned immediately and
 there is no gas or signatures required.
 
-Alephium SDK also generates code for calling multiple pure
-functions at the same time, reducing the number of network requests:
+[Typescript SDK](/sdk/getting-started) also generates code for calling
+multiple functions at the same time, reducing the number of network
+requests:
 
 ```typescript
 const result = await tokenFaucet.multicall({
@@ -176,7 +179,7 @@ console.log(`total supply: ${result.getTotalSupply.returns}`)     // total suppl
 `TokenFaucet` contract also has a function called `withdraw`, which
 transfers the token from the faucet to the caller and updates the
 balance. When calling `withdraw` function we'll need to execute it as
-a transaction using TxScript:
+a transaction using `TxScript`:
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -185,10 +188,10 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 }
 ```
 
-Alephium's SDK also generates a corresponding typescript class for the
-`Withdraw` transaction script after
-[compilation](/dapps/tutorials/quick-start#compile-your-contract), which we
-can use execute the transaction:
+[Typescript SDK](/sdk/getting-started) also generates a corresponding
+typescript class for the `Withdraw` transaction script after
+[compilation](/dapps/tutorials/quick-start#compile-your-contract),
+which we can use execute the transaction:
 
 ```typescript
 const signer = await getSigner()
@@ -218,6 +221,28 @@ non-deterministic depending on the future state of the blockchain when
 the transaction is mined. `Events` are instead often used to gain insights
 into the contract activities.
 
+### Contract Transact Methods
+
+[Typescript SDK](/sdk/getting-started) also generates the `transact`
+methods for all functions in the `TokenFaucet` contract to simplify
+the scenario where user wants to perform a `TxScript` transaction by
+only calling a function in the contract. For example, the following
+code is equivalent to writing and executing the `Withdraw` `TxScript`
+above:
+
+```typescript
+const withdrawResult = await faucet.transact.withdraw({
+  args: { amount: 2n },
+  signer,
+  attoAlphAmount: DUST_AMOUNT * 2n
+})
+```
+
+Under the hood, [Typescript SDK](/sdk/getting-started) automatically
+generates bytecode for the corresponding `TxScript` and executes
+it. Note that `TxScript` is still required for more complicated
+scenarios.
+
 ## Events Subscription
 
 The `withdraw` function for `TokenFaucet` contract emits a `Withdraw`
@@ -228,7 +253,7 @@ emit Withdraw(callerAddress!(), amount)
 ```
 
 Events like this are very useful for dApps to track contract
-activities. Alephium's [Web3 SDK](/sdk/getting-started) provides a set
+activities. Alephium's [Typescript SDK](/sdk/getting-started) provides a set
 of functions to interact with contract's events, here is how we can
 subscribe to the `Withdraw` event emitted from the `withdraw` function
 in `TokenFaucet` contract:
@@ -262,7 +287,7 @@ contract/script source code, please refer to the [Load contract/script
 from
 artifacts](/dapps/tutorials/dapp-recipes#load-contractscript-from-artifacts) giude.
 
-Alephium's [Web3 SDK](/sdk/getting-started) builds developer friendly
+Alephium's [Typescript SDK](/sdk/getting-started) builds developer friendly
 abstractions on top of Alephium's full node APIs. For more details
 about the APIs please refer to the [OpenAPI
 Documentation](https://node.mainnet.alephium.org/docs).
