@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
 title: Work with Transaction
-sidebar_label: Work with Transaction
+sidebar_label: Work with transaction
 ---
 
 ## Unsigned Transaction Structure

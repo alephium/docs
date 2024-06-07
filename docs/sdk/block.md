@@ -1,7 +1,7 @@
 ---
 sidebar_position: 20
 title: Work with Block
-sidebar_label: Work with Block
+sidebar_label: Work with block
 ---
 
 ## Block Structure

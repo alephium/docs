@@ -1,7 +1,7 @@
 ---
-sidebar_position: 60
+sidebar_position: 35
 title: Work with Events
-sidebar_label: Work with Events
+sidebar_label: Work with events
 ---
 
 Events are immutable, verifiable objects emitted by the smart
