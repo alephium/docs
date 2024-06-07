@@ -24,7 +24,7 @@ import {
   <Card
     title="Extension Wallet"
     icon={<CommunicationRegular />}
-    to="/wallet/extension-wallet/overview"
+    to="/wallet/extension-wallet"
     description="works right inside of your browser. Get access to the
     latest features with a focus on DeFi."
   />

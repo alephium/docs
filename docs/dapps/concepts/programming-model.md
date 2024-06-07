@@ -7,7 +7,7 @@ sidebar_label: Programming model
 Compared to other blockchains, Alephium's programming model is heavily
 influenced by its [sUTXO](/misc/content/#stateful-utxo) model, its sharding
 architecture, as well as numerous innovations and design decisions
-made in the [Ralph language](/dapps/ralph/getting-started) and [Alphred
+made in the [Ralph language](/ralph) and [Alphred
 VM](/misc/content/#alphred-virtual-machine).
 
 Under [sUTXO](/misc/content/#stateful-utxo) model, assets are managed by
@@ -158,11 +158,11 @@ fn mint_(minter: Address, index: U256) -> ByteVec {
 
 As we can see, NFT collection contract creates a NFT sub-contract
 using the
-[copyCreateSubContractWithToken](/dapps/ralph/built-in-functions#copycreatesubcontractwithtoken)
+[copyCreateSubContractWithToken](/ralph/built-in-functions#copycreatesubcontractwithtoken)
 built-in function. The NFT sub-contract is created with one issued
 token to represent the NFT, and the NFT sub-contract can be referenced
 from the NFT collection contract using the
-[subContractId](/dapps/ralph/built-in-functions#subcontractid) function.
+[subContractId](/ralph/built-in-functions#subcontractid) function.
 
 ## AssetScript
 
@@ -187,7 +187,7 @@ AssetScript Schnorr(publicKey: ByteVec) {
 As you can see, the script takes in a public key as parameter,
 verifies if the transaction signature is a valid Schnorr signature
 using the built-in function
-[verifyBIP340Schnorr](/dapps/ralph/built-in-functions#verifybip340schnorr). In
+[verifyBIP340Schnorr](/ralph/built-in-functions#verifybip340schnorr). In
 order to spend a UTXO constructed using the hash of the script
 bytecode, a public key needs to be provided and the transaction
 needs to be signed with a valid Schnorr signature by its corresponding

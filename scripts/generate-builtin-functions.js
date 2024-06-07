@@ -45,7 +45,7 @@ function extractCategory(json) {
 function writeHeader(stream, categories) {
   stream.write(`
 ---
-sidebar_position: 20
+sidebar_position: 90
 title: Built-in Functions
 sidebar_label: Built-in functions
 ---
@@ -68,7 +68,7 @@ async function main() {
   const json = await response.json()
   //const json = require('./builtin.json')
 
-  const stream = fs.createWriteStream('./docs/dapps/ralph/built-in-functions.md')
+  const stream = fs.createWriteStream('./docs/ralph/built-in-functions.md')
   const [categories, map] = extractCategory(json)
   writeHeader(stream, categories)
   categories.forEach(category => {

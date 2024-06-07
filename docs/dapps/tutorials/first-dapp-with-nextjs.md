@@ -21,7 +21,7 @@ Prerequisites:
   [npx](https://www.npmjs.com/package/npx) installed on your machine
 - Get familiar with the token faucet tutorial project in the [getting
   started](/dapps/tutorials/quick-start) guide.
-- Install the [extension wallet](/wallet/extension-wallet/overview)
+- Install the [extension wallet](/wallet/extension-wallet)
 - Install docker and docker-compose
 
 ## Create a dApp project using the Nextjs template
@@ -157,4 +157,4 @@ For more implementation details, please take a look at the
 - Nextjs template is deployed on testnet and available at [https://alephium.github.io/nextjs-template](https://alephium.github.io/nextjs-template/)
 - To learn more about the ecosystem, please visit the [overview of ecosystem](/dapps/ecosystem).
 - To learn more about the web3 SDK, please visit the [guide of web3 SDK](/sdk/getting-started).
-- To learn more about Ralph language, please visit the [guide of Ralph](/dapps/ralph/getting-started).
+- To learn more about Ralph language, please visit the [guide of Ralph](/ralph).

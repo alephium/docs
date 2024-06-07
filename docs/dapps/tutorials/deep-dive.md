@@ -58,7 +58,7 @@ The first four fields are immutable values required to serve the [IFungibleToken
 `balance` is a mutable value that keeps track of how many tokens are left in this faucet.
 
 You can see that our contract emits an `event` and defines an `error`
-code. For more information please read [events](https://wiki.alephium.org/ralph/getting-started#events) and [error handling](https://wiki.alephium.org/ralph/getting-started#error-handling).
+code. For more information please read [events](https://wiki.alephium.org/ralph#events) and [error handling](https://wiki.alephium.org/ralph#error-handling).
 
 This is followed by 5 access methods for each of the contract's fields.
 
@@ -88,7 +88,7 @@ tokens from the token faucet contract to the caller. The `balance` field
 is updated with the new value, and in case of underflow, an error will be
 raised and the transaction won't be performed. `callerAddress` and
 `selfTokenId` are built-in functions, you can read more about them in
-our [built-in functions page](/dapps/ralph/built-in-functions).
+our [built-in functions page](/ralph/built-in-functions).
 
 ## Compile your contract
 
@@ -488,7 +488,7 @@ async function withdraw() {
 withdraw()
 ```
 
-For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph/getting-started#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
+For the attentive people, you'll see something new coming from our `artifacts`: [`Withdraw`](https://github.com/alephium/nextjs-template/blob/main/contracts/withdraw.ral) which is a [`TxScript`](https://wiki.alephium.org/ralph#txscript) required to interact with the `TokenFaucet` contract. Its code is quite simple. Create a file called `withdraw.ral` in the `contracts` folder and paste the following code:
 
 ```rust
 TxScript Withdraw(token: TokenFaucet, amount: U256) {
@@ -563,5 +563,5 @@ with Nextjs](/dapps/tutorials/first-dapp-with-nextjs).
 
 - [Ecosystem](/dapps/ecosystem)
 - [Web3 SDK](/sdk/getting-started)
-- [Ralph](/dapps/ralph/getting-started)
+- [Ralph](/ralph)
 
