@@ -4,7 +4,7 @@ title: Utils
 sidebar_label: Utils
 ---
 
-The Web3 SDK also provides many utility functions to simplify
+Typescript SDK also provides many utility functions to simplify
 developers' tasks. Here are a few examples:
 
 ## Conversion between contract id and contract address
@@ -82,7 +82,7 @@ prettifyAttoAlphAmount(1230000000000000000n) // '1.23'
 number256ToNumber(1230000000000000000n, 18) // 1.23
 ```
 
-## Rate limit
+## Rate limiting
 
 `NodeProvider` is used to communicate with the full node when developing a dApp,
 and you can use the public [API services](/infrastructure/public-services.md) provided by Alephium. 

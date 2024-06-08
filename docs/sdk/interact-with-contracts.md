@@ -1,6 +1,6 @@
 ---
 sidebar_position: 30
-title: Interact with Contracts
+title: Work with Contract
 sidebar_label: Work with contract
 ---
 
