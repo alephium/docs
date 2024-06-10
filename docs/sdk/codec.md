@@ -4,9 +4,17 @@ title: Codec
 sidebar_label: Codec
 ---
 
-The SDK provides `codec` for encoding and decoding transactions, contracts and scripts.
+[Typescript SDK](/sdk/getting-started) provides `codec` for encoding
+and decoding transactions, contracts and transaction scripts. `codec`
+can be helpful in many scenarios: it is useful to debug transactions
+and contracts, inspect security risks of existing dApps, efficiently
+construct bytecode, etc.
 
-## Encode/Decode Unsigned Transaction
+In this guide we will learn how to use `codec` to encode and decode
+transaction, contract and transaction script.
+
+## Transaction
+### Unsigned Transaction
 
 ```typescript
 import { codec, node } from '@alephium/web3'
@@ -16,7 +24,7 @@ const encoded = codec.unsignedTxCodec.encodeApiUnsignedTx(unsignedTx)
 const decoded = codec.unsignedTxCodec.decodeApiUnsignedTx(encoded)
 ```
 
-## Encode/Decode Signed Transaction
+### Signed Transaction
 
 ```typescript
 import { codec, node } from '@alephium/web3'
@@ -26,7 +34,7 @@ const encoded = codec.transactionCodec.encodeApiTransaction(tx)
 const decoded = codec.transactionCodec.decodeApiTransaction(encoded)
 ```
 
-## Encode/Decode Contract
+## Contract
 
 ```typescript
 import { codec } from '@alephium/web3'
@@ -45,7 +53,7 @@ const artifact: Contract = // contract artifact
 const decoded = codec.contract.contractCodec.decodeContract(artifact.bytecode)
 ```
 
-## Encode/Decode Script
+## Transaction Script
 
 ```typescript
 import { codec } from '@alephium/web3'

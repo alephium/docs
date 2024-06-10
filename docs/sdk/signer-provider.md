@@ -4,7 +4,7 @@ title: SignerProvider
 sidebar_label: SignerProvider
 ---
 
-The `SignerProvider` is an abstraction of an Alephium account. It can be used to sign messages and transactions, as well as send signed transactions to the Alephium blockchain.
+The `SignerProvider` is an abstraction of an Alephium account. It can be used to sign messages and transactions, as well as submit signed transactions to the Alephium blockchain.
 
 ## Create SignerProvider
 
@@ -12,7 +12,7 @@ The SDK offers four types of signer providers, each designed for specific use ca
 
 ### PrivateKeyWallet
 
-You need to install `@alephium/web3-wallet` first:
+You need to install the [@alephium/web3-wallet](https://www.npmjs.com/package/@alephium/web3-wallet) package first:
 
 ```shell
 npm install --save @alephium/web3-wallet
@@ -31,13 +31,13 @@ const wallet = new PrivateKeyWallet({ privateKey: testPrivateKey })
 
 ### Extension Wallet
 
-You need to install `@alephium/get-extension-wallet` first:
+You need to install the [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet) package first:
 
 ```shell
 npm install --save @alephium/get-extension-wallet
 ```
 
-The `@alephium/get-extension-wallet` package helps to detect and interact with browser extension wallet:
+The [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet) package helps to detect and interact with browser extension wallet:
 
 ```typescript
 import { getDefaultAlephiumWallet } from '@alephium/get-extension-wallet'
@@ -56,13 +56,13 @@ await wallet?.disconnect()
 
 ### WalletConnect
 
-You need to install `@alephium/walletconnect-provider` first:
+You need to install the [@alephium/walletconnect-provider](https://www.npmjs.com/package/@alephium/walletconnect-provider) package first:
 
 ```shell
 npm install --save @alephium/walletconnect-provider
 ```
 
-The `@alephium/walletconnect-provider` package provides a bridge to connect dApps with wallets using the `WalletConnect` protocol:
+The [@alephium/walletconnect-provider](https://www.npmjs.com/package/@alephium/walletconnect-provider) package provides a bridge to connect dApps with wallets using the `WalletConnect` protocol:
 
 ```typescript
 import QRCodeModal from '@alephium/walletconnect-qrcode-modal'
@@ -82,7 +82,12 @@ const account = provider.account
 await provider.disconnect()
 ```
 
-For the convenience of dApp development, we offer `React` wrappers for extension wallet and `WalletConnect`. You can refer to the documentation [here](./web3-react.md) for more details.
+For the convenience of dApp development, Typescript SDK includes a set
+of React components and hooks to integrate extension wallet and
+`WalletConnect` in the
+[@alephium/web3-react](https://www.npmjs.com/package/@alephium/web3-react)
+package. You can refer to the documentation [here](./web3-react.md)
+for more details.
 
 ### NodeWallet
 
@@ -102,17 +107,13 @@ await wallet.unlock('alph')
 Both `PrivateKeyWallet` and `NodeWallet` are used for contract development and deployment, please don't use them to store large amount of tokens.
 :::
 
-## Usage of SignerProvider
+## Use SignerProvider
 
 ### Sign and Submit Transaction
 
-When sending transactions, it's typical to perform the steps of building, signing, and submitting the transaction. The `SignerProvider` provides several `signAndSubmit` methods that combine these three steps into a single call to simplify the entire process.
-
-* `signAndSubmitTransferTx`: build, sign, and submit transfer transactions
-* `signAndSubmitDeployContractTx`: build, sign, and submit deploy contract transactions
-* `signAndSubmitExecuteScriptTx`: build, sign, and submit execute script transactions
-
-You can also first build unsigned transactions, and then sign and submit the transactions. You can refer to the documentation [here](./transaction.md#transaction-builder) for building transactions.
+After you [build](./transaction.md#build-unsigned-transaction) the
+transactions, you can use the `SignerProvider` to sign and submit the
+them. Here is an example:
 
 ```typescript
 import { NodeProvider, TransactionBuilder } from '@alephium/web3'
@@ -129,7 +130,17 @@ const result = await signer.signAndSubmitUnsignedTx({
 const txId = result.txId
 ```
 
+`SignerProvider` also provides several `signAndSubmit` methods that
+combine the building, signing and submitting of the transaction
+together, namely:
+
+* `signAndSubmitTransferTx`: build, sign, and submit transfer transactions
+* `signAndSubmitDeployContractTx`: build, sign, and submit deploy contract transactions
+* `signAndSubmitExecuteScriptTx`: build, sign, and submit execute script transactions
+
 ### Sign Messages
+
+You can also use `SignerProvider` to sign a message:
 
 ```typescript
 const signer = new PrivateKeyWallet({ privateKey: testPrivateKey })
