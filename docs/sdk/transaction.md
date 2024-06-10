@@ -200,7 +200,7 @@ transaction from its serialized format:
 ```typescript
 const nodeProvider = new NodeProvider('http://127.0.0.1:22973')
 const decodedUnsignedTx = await nodeProvider.transactions.postTransactionsDecodeUnsignedTx({ unsignedTx })
-console.log('decoded unsigned transaction, decodedUnsignedTx)
+console.log('decoded unsigned transaction ', decodedUnsignedTx)
 ```
 
 You can also use the [codec](./codec.md) to decode unsigned
