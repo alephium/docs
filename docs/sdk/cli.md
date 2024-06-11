@@ -41,9 +41,6 @@ const configuration: Configuration = {
       // the maximum length of `privateKeys` is 4, and each group can have at most one private key.
       // If you only need to deploy contracts to one group, you only need to specify one private key.
       privateKeys: ['a642942e67258589cd2b1822c631506632db5a12aabcf413604e785300d762a5'],
-      // The `deploymentFile` field is an optional config. If it is not specified, the default path
-      // is `<project_root>/artifacts/.deployment.<network_id>.json`.
-      deploymentFile: './deployments/.deployment.devnet.json',
       // The `confirmations` field is used to specify the number of block confirmations to wait for
       // after contract deployment. This is an optional config. If it is not specified, it defaults
       // to 1 for devnet and 2 for testnet and mainnet.
@@ -83,6 +80,10 @@ In most cases, we only need to specify the `networks` config. The other optional
    <tr>
      <td>deploymentScriptDir</td>
      <td>Location for deployment scripts, it is `<project_root>/scripts` by default</td>
+   </tr>
+   <tr>
+     <td>deploymentsDir</td>
+     <td>Location for contract deployments, it is `<project_root>/deployments` by default</td>
    </tr>
    <tr>
      <td rowspan={8}>compilerOptions</td>
