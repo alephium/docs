@@ -1,0 +1,25 @@
+sidebar_position: 50
+title: En İyi Uygulamalar
+---
+
+:::caution
+Bu sayfa, dApp yığınımız daha kararlı olana kadar yapım aşamasındadır 🚧
+:::
+
+Her dilin kendi deyimleri vardır ve Ralph da bundan farklı değildir. Kodunuzu anlayabilen diğerlerinin, Ralph'i okuyabilen diğerlerinin kodunuzu anlayabilmesi için bu deyimleri izlemek önemlidir. Özet, güvenli ve uzman kod genellikle izlenecektir.
+
+## Genel tavsiyeler
+
+Akıllı kontrat programları yazarken, kullanılacak depolama miktarını ve kontratınızın yapacağı hesaplamayı hesaba katmak gerekir. Alan ve hesaplama arttıkça, kontratın maliyeti artar. Bu nedenle, kontratı mümkün olduğunca basit tutmayı ve alanı ve hesaplamayı mümkün olduğunca dışarıda tutmayı hedeflemelisiniz.
+
+Örneğin, tam bir belgeyi saklamak yerine, belgenin varlığına dair bir kanıt olarak hash'ini saklayabilirsiniz.
+
+Başka bir örnek, tam bir cümle saklamak yerine, dış bir sözlüğe indeksler saklayabilir ve daha sonra tam cümleyi yeniden oluşturabilirsiniz.
+
+Para ile etkileşim kuran kod, yüksek risk olarak kabul edilmelidir. Herhangi bir yüksek riskli kod, hatalar için denetim yapmayı kolaylaştırmak için bir araya getirilmiş birçok assert ve onay çağrısı kullanmalıdır.
+
+## Güvenlik Teknikleri
+
+:::note
+TODO
+:::

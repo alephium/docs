@@ -1,0 +1,62 @@
+{
+    "current": [
+        {
+            "from": "https://wallet.mainnet.alephium.org",
+            "to": "https://wallet-v20.mainnet.alephium.org"
+        },
+        {
+            "from": "https://wallet.testnet.alephium.org",
+            "to": "https://wallet-v20.testnet.alephium.org"
+        },
+        {
+            "from": "https://mainnet-wallet.alephium.org",
+            "to": "https://wallet-v20.mainnet.alephium.org"
+        },
+        {
+            "from": "https://testnet-wallet.alephium.org",
+            "to": "https://wallet-v20.testnet.alephium.org"
+        },
+        {
+            "from": "https://backend.mainnet.alephium.org",
+            "to": "https://backend-v113.mainnet.alephium.org"
+        },
+        {
+            "from": "https://backend.testnet.alephium.org",
+            "to": "https://backend-v113.testnet.alephium.org"
+        },
+        {
+            "from": "https://mainnet-backend.alephium.org",
+            "to": "https://backend-v113.mainnet.alephium.org"
+        },
+        {
+            "from": "https://testnet-backend.alephium.org",
+            "to": "https://backend-v113.testnet.alephium.org"
+        },
+        {
+            "from": "https://explorer.mainnet.alephium.org",
+            "to": "https://explorer-v113.mainnet.alephium.org"
+        },
+        {
+            "from": "https://explorer.testnet.alephium.org",
+            "to": "https://explorer-v113.testnet.alephium.org"
+        },
+        {
+            "from": "https://explorer.alephium.org",
+            "to": "https://explorer-v113.mainnet.alephium.org"
+        },
+        {
+            "from": "https://testnet.alephium.org",
+            "to": "https://explorer-v113.testnet.alephium.org"
+        }
+    ],
+    "deprecated": [
+        {
+            "from": "https://wallet-v17.mainnet.alephium.org",
+            "to": "https://wallet-v20.mainnet.alephium.org"
+        },
+        {
+            "from": "https://wallet-v17.testnet.alephium.org",
+            "to": "https://wallet-v20.testnet.alephium.org"
+        }
+    ]
+}

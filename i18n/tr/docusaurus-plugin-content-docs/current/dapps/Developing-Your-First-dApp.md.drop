@@ -1,0 +1,74 @@
+---
+sidebar_position: 40
+title: İlk dApp'inizi Geliştirme
+---
+
+:::caution
+Bu sayfa, dApps yığını daha istikrarlı hale gelene kadar WIP durumundadır 🚧
+:::
+
+Belge, akıllı sözleşmelerin geliştirilmesini iki bölüme ayırır: sunucu
+ve istemci.
+
+Sözleşme etkileşimini, web geliştirmenin istemci-sunucu mimarisine benzer şekilde hayal edebilirsiniz. Blockchain'deki sözleşme sunucudur ve çağrılmayı bekler. Web tarayıcısı, kodu kullanarak sözleşmeyi çağırır. Sözleşmeler, HTTP ve JSON'ı desteklediği sürece herhangi bir şeyden çağrılabilir. Ancak etkileşimli bir dApp için, arayüzü oluşturmak ve sözleşme (ler) ile iletişim kurmak için web teknolojilerini kullanacağız.
+
+## Gereksinimler
+
+Bir dApp yazıp dağıtmak için **sadece iki gereksinim** vardır:
+
+- alephium/desktop-wallet:cheng-walletconnect
+- nodejs
+
+ve hardfork gerçekleşene kadar geçici olarak bir gereksinim:
+
+- alephium/alephium:1.4.x
+
+### Kurulum
+
+- Masaüstü cüzdanını başlatın
+- Cüzdanın testnet'i kullandığından emin olun
+- Yeni bir cüzdan oluşturun
+- Testnet ALPH talep edin veya Discord'dan alın
+
+## Akıllı sözleşmenin parçaları
+
+Kalbinde gerçekten yalnızca bir akıllı sözleşme parçası vardır ve bu da
+**TxContract**'tir. Ancak, onu kullanmak için bir parça daha gereklidir: **TxScript**. Bu ilişkiyi görmek için bir yol, TxContract'in bir paket / kütüphane olduğu ve TxScript'in onu kullanan program olduğudur. Daha ilginç ve karmaşık sözleşmeler, sonuçta TxContract'ların diğer TxContract'ları kullanmasından oluşabilir! Ancak sonunda işlemde gönderildiğinde yürütmenin başlatılmasını TxScript yapar.
+
+Devam ederken semantikleri biraz daha iyi anlamak için [dil referansı] 'nı yanınızda açmanız iyi bir fikirdir. Semantikler her şeyin yanında açıklansaydı, öğrenilecek çok fazla yeni bilgi eklerdi.
+
+### TxContract
+
+:::note
+YAPILACAK
+:::
+
+### TxScript
+
+:::note
+YAPILACAK
+:::
+
+## Web tarayıcısı, akıllı sözleşme ve cüzdan üçlüsü
+
+:::note
+YAPILACAK
+:::
+
+### @alephium
+
+:::note
+YAPILACAK
+:::
+
+### WalletConnect
+
+:::note
+YAPILACAK
+:::
+
+### Birlikte oluşturmak (geliştirme ve etkileşim)
+
+:::note
+YAPILACAK
+:::

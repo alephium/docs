@@ -1,0 +1,387 @@
+{
+  "untranslated-page-text": {
+    "message": "Bu sayfa çevrilmedi. Lütfen sayfanın altındaki bağlantıyı kullanarak çeviriye yardımcı olun."
+  },
+  "theme.ErrorPageContent.title": {
+    "message": "Sayfa çöktü.",
+    "description": "Sayfa çöktüğü zaman gösterilecek fallback (yedek) sayfanın başlığı."
+  },
+  "theme.ErrorPageContent.tryAgain": {
+    "message": "Yeniden dene",
+    "description": "Sayfa çöktüğü zaman 'yeniden dene' butonunda yazacak metin."
+  },
+  "theme.NotFound.title": {
+    "message": "Sayfa Bulunamadı",
+    "description": "404 hata sayfasının başlığı"
+  },
+  "theme.NotFound.p1": {
+    "message": "Aradığınız şeyi bulamadık.",
+    "description": "404 hata sayfasının ilk paragrafı"
+  },
+  "theme.NotFound.p2": {
+    "message": "Lütfen sizi orijinal URL'ye yönlendiren sitenin sahibiyle iletişime geçin ve bağlantısının bozuk olduğunu bildirin.",
+    "description": "404 hata sayfasının ikinci paragrafı"
+  },
+  "theme.admonition.note": {
+    "message": "not",
+    "description": "Not uyarı bloğu (:::note) için varsayılan olarak kullanılan etiket"
+  },
+  "theme.admonition.tip": {
+    "message": "ipucu",
+    "description": "İpucu uyarı bloğu (:::tip) için varsayılan olarak kullanılan etiket"
+  },
+  "theme.admonition.danger": {
+    "message": "tehlike",
+    "description": "Tehlike uyarı bloğu (:::danger) için varsayılan olarak kullanılan etiket"
+  },
+  "theme.admonition.info": {
+    "message": "bilgi",
+    "description": "Bilgi uyarı bloğu (:::info) için varsayılan olarak kullanılan etiket"
+  },
+  "theme.admonition.caution": {
+    "message": "dikkat",
+    "description": "Dikkat uyarı bloğu (:::caution) için varsayılan olarak kullanılan etiket"
+  },
+  "theme.BackToTopButton.buttonAriaLabel": {
+    "message": "Sayfa başına dön",
+    "description": "Sayfa başına dön butonunun ARIA etiketi"
+  },
+  "theme.blog.archive.title": {
+    "message": "Arşiv",
+    "description": "Blog arşiv sayfasının başlığı"
+  },
+  "theme.blog.archive.description": {
+    "message": "Arşiv",
+    "description": "Blog arşiv sayfasının açıklaması"
+  },
+  "theme.blog.paginator.navAriaLabel": {
+    "message": "Blog gönderi sayfası navigasyonu",
+    "description": "Blog sayfalama işlemi için ARIA etiketi"
+  },
+  "theme.blog.paginator.newerEntries": {
+    "message": "Yeni Girdiler",
+    "description": "Daha yeni blog gönderileri sayfasına (önceki sayfa) gitmek için kullanılan etiket"
+  },
+  "theme.blog.paginator.olderEntries": {
+    "message": "Eski Girdiler",
+    "description": "Daha eski blog gönderileri sayfasına (sonraki sayfa) gitmek için kullanılan etiket"
+  },
+  "theme.blog.post.paginator.navAriaLabel": {
+    "message": "Blog gönderi sayfası navigasyonu",
+    "description": "Blog gönderileri sayfalaması için ARIA etiketi"
+  },
+  "theme.blog.post.paginator.newerPost": {
+    "message": "Daha Yeni Gönderi",
+    "description": "Daha yeni/önceki gönderiye gitmek için kullanılan blog gönderisi buton etiketi"
+  },
+  "theme.blog.post.paginator.olderPost": {
+    "message": "Daha Eski Gönderi",
+    "description": "Daha eski/sonraki gönderiye gitmek için kullanılan blog gönderisi buton etiketi"
+  },
+  "theme.blog.post.plurals": {
+    "message": "Bir gönderi|{count} gönderi",
+    "description": "\"{count} gönderi\" için çoğul etiket.  Dilinizin desteklediği kadar çoğul biçimini (\"|\" ile ayrılmış) kullanın. (https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)" 
+  },
+  "theme.blog.tagTitle": {
+    "message": "\"{tagName}\" ile etiketlenmiş {nPosts}",
+    "description": "Blog etiketi sayfası başlığı"
+  },
+  "theme.tags.tagsPageLink": {
+    "message": "Tüm Etiketleri Görüntüle",
+    "description": "Etiket listesi sayfasına yönlendiren linkin etiketi"
+  },
+  "theme.colorToggle.ariaLabel": {
+    "message": "Koyu ve açık mod arasında geçiş yap (şu anda {mode})",
+    "description": "Navbar renk modu değiştirici için ARIA etiketi"
+  },
+  "theme.colorToggle.ariaLabel.mode.dark": {
+    "message": "koyu mod",
+    "description": "Koyu renk modu için isim"
+  },
+  "theme.colorToggle.ariaLabel.mode.light": {
+    "message": "açık mod",
+    "description": "Açık renk modu için isim"
+  },
+  "theme.docs.breadcrumbs.home": {
+    "message": "Ana Sayfa",
+    "description": "Ekmek kırıntıları navigasyonunda ana sayfa için ARIA etiketi"
+  },
+  "theme.docs.breadcrumbs.navAriaLabel": {
+    "message": "Ekmek Kırıntıları",
+    "description": "Ekmek kırıntıları navigasyonu için ARIA etiketi"
+  },
+  "theme.docs.DocCard.categoryDescription": {
+    "message": "{count} öğe",
+    "description": "Kategoride kaç öğe olduğunu gösteren varsayılan kategori kartı açıklaması"
+  },
+  "theme.docs.paginator.navAriaLabel": {
+    "message": "Dokümanlar sayfası navigasyonu",
+    "description": "Dokümanlar sayfalama işlemi için ARIA etiketi"
+  },
+  "theme.docs.paginator.previous": {
+    "message": "Önceki",
+    "description": "Önceki dokümana gitmek için kullanılan etiket"
+  },
+  "theme.docs.paginator.next": {
+    "message": "Sonraki",
+    "description": "Sonraki dokümana gitmek için kullanılan etiket"
+  },
+  "theme.docs.tagDocListPageTitle.nDocsTagged": {
+    "message": "Bir doküman etiketlendi|{count} doküman etiketlendi",
+    "description": "\"{count} doküman etiketlendi\" için çoğul etiket.  Dilinizin desteklediği kadar çoğul biçimini (\"|\" ile ayrılmış) kullanın. (https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)" 
+  },
+  "theme.docs.tagDocListPageTitle": {
+    "message": "\"{tagName}\" ile etiketlenmiş {nDocsTagged}",
+    "description": "Dokümanlar etiketi sayfası başlığı"
+  },
+  "theme.docs.versionBadge.label": {
+    "message": "Versiyon: {versionLabel}"
+  }, 
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "Bu, {siteTitle} {versionLabel} sürümü için yayınlanmamış dokümantasyondur.",
+    "description": "Kullanıcılara yayınlanmamış bir döküman sürümünde olduklarını söyleyen etiket"
+  },
+  "theme.docs.versions.unmaintainedVersionLabel": {
+    "message": "Bu, {siteTitle} {versionLabel} dokümantasyonudur ve bakımı sonlanmıştır.",
+    "description": "Kullanıcılara bakımı yapılmayan bir döküman sürümünde olduklarını söyleyen etiket"
+  },  "theme.docs.versions.latestVersionLinkLabel": {
+    "message": "en son sürüm",
+    "description": "En son sürüm önerisi linki için kullanılan etiket"
+  },
+  "theme.common.editThisPage": {
+    "message": "Bu sayfayı düzenle",
+    "description": "Mevcut sayfayı düzenlemek için kullanılan link etiketi"
+  },
+  "theme.common.headingLinkTitle": {
+    "message": "Başlığa doğrudan bağlantı",
+    "description": "Başlığa yönlendiren linkin başlığı"
+  },
+  "theme.lastUpdated.atDate": {
+    "message": " {date} tarihinde",
+    "description": "Bir sayfanın en son ne zaman güncellendiğini açıklamak için kullanılan ifade"
+  },
+  "theme.lastUpdated.byUser": {
+    "message": " {user} tarafından",
+    "description": "Bir sayfanın en son kim tarafından güncellendiğini açıklamak için kullanılan ifade"
+  },
+  "theme.lastUpdated.lastUpdatedAtBy": {
+    "message": "En son{atDate}{byUser} güncellendi",
+    "description": "Bir sayfanın en son ne zaman ve kim tarafından güncellendiğini açıklayan cümle"
+  },
+  "theme.navbar.mobileVersionsDropdown.label": {
+    "message": "Versiyonlar",
+    "description": "Mobil görünümde navigasyon versiyonları açılır menüsü için etiket"
+  },
+  "theme.common.skipToMainContent": {
+    "message": "Ana içeriğe geç",
+    "description": "Klavye (Tab/Enter) kullanarak ana içeriğe hızla gitmeyi sağlayan erişilebilirlik etiketi"
+  },
+  "theme.tags.tagsListLabel": {
+    "message": "Etiketler:",
+    "description": "Etiket listesi başlığı"
+  },
+  "theme.AnnouncementBar.closeButtonAriaLabel": {
+    "message": "Kapat",
+    "description": "Duyuru çubuğunun kapatma tuşunun ARIA etiketi"
+  },
+  "theme.blog.sidebar.navAriaLabel": {
+    "message": "Blog son gönderiler navigasyonu",
+    "description": "Blog kenar çubuğundaki son gönderilerin ARIA etiketi"
+  },
+  "theme.CodeBlock.copied": {
+    "message": "Kopyalandı",
+    "description": "Kod bloklarındaki 'kopyalandı' butonunun etiketi"
+  },
+  "theme.CodeBlock.copyButtonAriaLabel": {
+    "message": "Kodu panoya kopyala",
+    "description": "Kod bloğu kopyalama butonunun ARIA etiketi"
+  },
+  "theme.CodeBlock.copy": {
+    "message": "Kopyala",
+    "description": "Kod bloklarındaki 'kopyala' butonunun etiketi"
+  },
+  "theme.CodeBlock.wordWrapToggle": {
+    "message": "Satır kaydırma özelliğini aç/kapat",
+    "description": "Kod bloğu satırı kaydırma butonunun başlık (title) özelliği"
+  },
+  "theme.DocSidebarItem.toggleCollapsedCategoryAriaLabel": {
+    "message": "Daraltılabilir kenar çubuğu kategorisi olan '{label}' öğesinin durumunu değiştir",
+    "description": "Daraltılabilir kenar çubuğu kategorisini açmak/kapatmak için kullanılan ARIA etiketi"
+  },
+  "theme.navbar.mobileLanguageDropdown.label": {
+    "message": "Diller",
+    "description": "Mobil dil değiştirici açılır menüsünün etiketi"
+  },
+  "theme.TOCCollapsible.toggleButtonLabel": {
+    "message": "Bu sayfada",
+    "description": "Daraltılabilir İçindekiler (TOC) bileşeninin üzerindeki butonun etiketi"
+  },
+  "theme.blog.post.readMore": {
+    "message": "Daha Fazla",
+    "description": "Blog gönderisi kesitlerinden tam blog gönderilerine bağlanmak için kullanılan etiket"
+  },
+  "theme.blog.post.readMoreLabel": {
+    "message": "{title} hakkında daha fazla oku", 
+    "description": "Kesitlerden tam blog gönderilerine bağlanan bağlantının ARIA etiketi"
+  },
+  "theme.blog.post.readingTime.plurals": {
+    "message": "{readingTime} dakikalık okuma|{readingTime} dakikalık okuma",
+    "description": "\"{readingTime} dakikalık okuma\" için çoğul etiket.  Dilinizin desteklediği kadar çoğul biçimini (\"|\" ile ayrılmış) kullanın. (https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)" 
+  } ,
+  "theme.docs.sidebar.collapseButtonTitle": {
+    "message": "Kenar çubuğunu daralt",
+    "description": "Dokümanlar kenar çubuğunu daraltma butonu için 'title' niteliği"
+  },
+  "theme.docs.sidebar.collapseButtonAriaLabel": {
+    "message": "Kenar çubuğunu daralt",
+    "description": "Dokümanlar kenar çubuğunu daraltma butonu için ARIA etiketi"
+  },
+  "theme.navbar.mobileSidebarSecondaryMenu.backButtonLabel": {
+    "message": "← Ana menüye dön",
+    "description": "Mobil navigasyon çubuğu ikincil menüsündeki (dokümanlar kenar çubuğunu görüntülemek için kullanılır) ana menüye dönmek için kullanılan geri butonunun etiketi"
+  },
+  "theme.docs.sidebar.expandButtonTitle": {
+    "message": "Kenar çubuğunu genişlet",
+    "description": "Dokümanlar kenar çubuğunu genişletme butonu için ARIA etiketi ve 'title' niteliği"
+  },
+  "theme.docs.sidebar.expandButtonAriaLabel": {
+    "message": "Kenar çubuğunu genişlet",
+    "description": "Dokümanlar kenar çubuğunu genişletme butonu için ARIA etiketi ve 'title' niteliği"
+  },
+  "theme.SearchBar.seeAll": {
+    "message": "{count} sonuçları gör",
+    "description":  "Dolu bir arama sonucu için \"Tümünü gör\" butonu etiketi"
+  },
+  "theme.SearchPage.documentsFound.plurals": {
+    "message": "Bir döküman bulundu|{count} döküman bulundu",
+    "description": "\"{count} döküman bulundu\" için çoğul etiket.  Dilinizin desteklediği kadar çoğul biçimini (\"|\" ile ayrılmış) kullanın. (https://www.unicode.org/cldr/cldr-aux/charts/34/supplemental/language_plural_rules.html)" 
+  },
+  "theme.SearchPage.existingResultsTitle": {
+    "message": "Arama sonuçları",
+    "description": "Boş olmayan sorgu için arama sayfası başlığı"
+  },
+  "theme.SearchPage.emptyResultsTitle": {
+    "message": "Dokümanlarda ara",
+    "description": "Boş sorgu için arama sayfası başlığı"
+  },
+  "theme.SearchPage.inputPlaceholder": {
+    "message": "Aramanızı buraya yazın",
+    "description": "Arama sayfası giriş alanının yer tutucusu (placeholder)"
+  },
+  "theme.SearchPage.inputLabel": {
+    "message": "Ara",
+    "description": "Arama sayfası giriş alanının ARIA etiketi"
+  },
+  "theme.SearchPage.algoliaLabel": {
+    "message": "Algolia ile Ara",
+    "description": "Algolia'dan bahsedildiğinde kullanılan ARIA etiketi"
+  },
+  "theme.SearchPage.noResultsText": {
+    "message": "Hiçbir sonuç bulunamadı",
+    "description": "Boş arama sonuçları için gösterilen paragraf"
+  },
+  "theme.SearchPage.fetchingNewResults": {
+    "message": "Yeni sonuçlar getiriliyor...",
+    "description": "Yeni arama sonuçları getirilirken gösterilen paragraf"
+  },
+  "theme.SearchBar.label": {
+    "message": "Ara",
+    "description": "Arama butonu için ARIA etiketi ve yer tutucusu (placeholder)"
+  },
+  "theme.SearchModal.searchBox.resetButtonTitle": {
+    "message": "Sorguyu temizle",
+    "description": "Arama kutusunun temizle düğmesi için kullanılan etiket ve ARIA etiketi"
+  },
+  "theme.SearchModal.searchBox.cancelButtonText": {
+    "message": "İptal",
+    "description": "Arama kutusunun iptal düğmesi için kullanılan etiket ve ARIA etiketi"
+  },
+  "theme.SearchModal.startScreen.recentSearchesTitle": {
+    "message": "Son Aramalar", 
+    "description": "Son aramalar için başlık"
+  },
+  "theme.SearchModal.startScreen.noRecentSearchesText": {
+    "message": "Son arama yok",
+    "description": "Son arama olmadığında gösterilen metin"
+  },
+  "theme.SearchModal.startScreen.saveRecentSearchButtonTitle": {
+    "message": "Bu aramayı kaydet",
+    "description": "Son aramayı kaydetme butonu için kullanılan etiket"
+  },
+  "theme.SearchModal.startScreen.removeRecentSearchButtonTitle": {
+    "message": "Bu aramayı geçmişten kaldır",
+    "description": "Son aramayı geçmişten kaldırma butonu için kullanılan etiket"
+  },
+  "theme.SearchModal.startScreen.favoriteSearchesTitle": {
+    "message": "Favoriler",
+    "description": "Favori aramalar için başlık"
+  },
+  "theme.SearchModal.startScreen.removeFavoriteSearchButtonTitle": {
+    "message": "Bu aramayı favorilerden kaldır",
+    "description": "Favori aramayı favorilerden kaldırma butonu için kullanılan etiket"
+  },
+  "theme.SearchModal.errorScreen.titleText": {
+    "message": "Sonuçlar getirilemiyor",
+    "description": "Arama modalinin hataata ekranının başlığı"
+  },
+  "theme.SearchModal.errorScreen.helpText": {
+    "message": "İnternet bağlantınızı kontrol etmek isteyebilirsiniz.",
+    "description": "Arama modalinin hata ekranının yardımcı metni"
+  },
+  "theme.SearchModal.footer.selectText": {
+    "message": "seçmek için",
+    "description": "Enter (giriş) tuşu ile seçim yapmak için açıklayıcı metin"
+  },
+  "theme.SearchModal.footer.selectKeyAriaLabel": {
+    "message": "Enter tuşu",
+    "description": "Seçim yapan Enter tuşu butonu için ARIA etiketi"
+  },
+  "theme.SearchModal.footer.navigateText": {
+    "message": "gezinmek için",
+    "description": "Yukarı ve Aşağı ok tuşları ile gezinmeyi açıklayan metin"
+  },
+  "theme.SearchModal.footer.navigateUpKeyAriaLabel": {
+    "message": "Yukarı ok tuşu",
+    "description": "Gezinme yaptıran Yukarı ok tuşu butonu için ARIA etiketi"
+  },
+  "theme.SearchModal.footer.navigateDownKeyAriaLabel": {
+    "message": "Aşağı ok tuşu",
+    "description": "Gezinme yaptıran Aşağı ok tuşu butonu için ARIA etiketi"
+  },
+  "theme.SearchModal.footer.closeText": {
+    "message": "kapatmak için",
+    "description": "Escape (çıkış) tuşu ile kapatmayı açıklayan metin"
+  },
+  "theme.SearchModal.footer.closeKeyAriaLabel": {
+    "message": "Escape tuşu",
+    "description": "Modali kapatan Escape tuşu butonunun ARIA etiketi"
+  },
+  "theme.SearchModal.footer.searchByText": {
+    "message": "Arama sağlayan",
+    "description": "Aramanın Algolia tarafından gerçekleştirildiğini açıklayan metin"
+  },
+  "theme.SearchModal.noResultsScreen.noResultsText": {
+    "message": "Aşağıdakiler için sonuç yok", 
+    "description": "Yapılan arama sonucunda sonuç çıkmadığını açıklayan metin"
+  },
+  "theme.SearchModal.noResultsScreen.suggestedQueryText": {
+    "message": "Şunları aramayı deneyin",
+    "description": "Yapılan aramayla ilgili önerilen sorgu metni"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsText": {
+    "message": "Bu sorgu sonuç döndürmeli mi?",
+    "description": "Kullanıcın sonuc çıkmadıgını düşündüğü yerdeaki metin"
+  },
+  "theme.SearchModal.noResultsScreen.reportMissingResultsLinkText": {
+    "message": "Bize iletin.",
+    "description": "Sonuç çıkmadıgını iletmeye yarayanan bağlantı metni"
+  },
+  "theme.SearchModal.placeholder": {
+    "message": "Dokümanlarda ara", 
+    "description": "DocSearch açılır modalindeki girdinin yer tutucusu (placeholderceholder)"
+  },
+  "theme.tags.tagsPageTitle": {
+    "message": "Etiketler",
+    "description": "Etiket liste sayfasının başlığı"
+  } 
+}
