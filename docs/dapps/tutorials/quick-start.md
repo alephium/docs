@@ -8,7 +8,7 @@ import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
 
 <UntranslatedPageText />
 
-Alephium's Web3 SDK offers a comprehensive suite of developer tools
+Alephium's Typescript SDK offers a comprehensive suite of developer tools
 and libraries designed to assist in building your dApps. This guide
 will help you get started with an example dApp project, walking you
 through essential development tasks such as smart contract
@@ -366,6 +366,6 @@ please take a look at the step-by-step guide to [Build dApp from
 scratch](/dapps/tutorials/deep-dive).
 
 - [Ecosystem](/dapps/ecosystem)
-- [Web3 SDK](/sdk/getting-started)
+- [Typescript SDK](/sdk/getting-started)
 - [Ralph](/ralph)
 - [Build dApp with Nextjs](/dapps/tutorials/first-dapp-with-nextjs)

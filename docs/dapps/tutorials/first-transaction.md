@@ -10,12 +10,12 @@ and check the status of the transaction.
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
-- [Web3 SDK](/sdk/getting-started) installed
+- [Typescript SDK](/sdk/getting-started) installed
 
 ## Transfer ALPH
 
 Below is an example of how to transfer `ALPH` from one address to another
-using [Web3 SDK](/sdk/getting-started). The code waits for the transaction
+using [Typescript SDK](/sdk/getting-started). The code waits for the transaction
 to be confirmed and then verify the balance of the recipient:
 
 ```typescript
