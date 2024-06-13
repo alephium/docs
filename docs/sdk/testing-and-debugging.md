@@ -20,7 +20,7 @@ decisions when it comes to its testing framework:
   by the test framework is whether the smart contracts under test are
   required to be deployed or not.
 - Test code is also code, it should be clean and maintainable as
-  well. [Web3 SDK](/sdk/getting-started) automatically generates
+  well. [Typescript SDK](/sdk/getting-started) automatically generates
   testing boilerplates to make writing and maintaining test cases much
   easier.
 - Tests are run against the Alephium full node in

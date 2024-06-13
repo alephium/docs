@@ -13,7 +13,7 @@ Prerequisites:
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
   and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-  contracts in a project using [Web3 SDK](/sdk/getting-started)
+  contracts in a project using [Typescript SDK](/sdk/getting-started)
 
 ## Create the NFT contract
 
@@ -207,7 +207,7 @@ TxScript MintAwesomeNFT(
 ## Interact with the NFT
 
 For contracts that implement `INFTCollection` and `INFT` interfaces,
-[Web3 SDK](/sdk/getting-started) offers a canonical way to fetch their respective metadata:
+[Typescript SDK](/sdk/getting-started) offers a canonical way to fetch their respective metadata:
 
 ```typescript
 // NFT Collection Metadata
