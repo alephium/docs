@@ -1,14 +1,13 @@
 ---
 sidebar_position: 55
-title: Constants
+title: Protocol-level Constants
 sidebar_label: Constants
 ---
 
-There are some protocol level constants that we should be aware of
-when building dApps on Alephium, such as the minimal required gas,
-maximal numbers of tokens per contract, etc. This guide is a
-compilation of some of the important constants on Alephium.
-
+When building dApps on Alephium, it's important to be aware of certain
+protocol-level constants, such as the minimum required gas and the
+maximum number of tokens allowed per contract. This guide compiles
+some of the key constants for Alephium.
 
 | Description                                       | Value            |
 |---------------------------------------------------|------------------|
