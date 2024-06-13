@@ -15,6 +15,16 @@ Prerequisites:
   and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
   contracts in a project using [Web3 SDK](/sdk/getting-started)
 
+You can clone the example in this guide and run it like this:
+
+```shell
+git clone git@github.com:alephium/ralph-example.git
+cd ralph-example/your-firsts
+npm install
+npm compile
+npx ts-node src/non-fungible-token.ts
+```
+
 ## Create the NFT contract
 
 An NFT contract that complies with the [Non-fungible Token
@@ -69,12 +79,7 @@ with the following schema:
     }
 }
 ```
-
-After the NFT contract is created, we should
-[deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-a dummy version of it as a template contract. This template can be used to create an NFT collection contract more efficiently. A concrete example of
-deploying a NFT template contract can be found
-[here](https://github.com/alephium/alephium-nft/blob/master/scripts/02_deploy_nft_template.ts).
+That is all for creating a NFT contract!
 
 ## Create NFT collection contract
 
@@ -124,7 +129,7 @@ Contract AwesomeNFTCollection(
       assert!(nftId == contractId!(expectedTokenContract), ErrorCodes.NFTNotPartOfCollection)
   }
 
-  @using(preapprovedAssets = true, updateFields = true)
+  @using(preapprovedAssets = true, updateFields = true, checkExternalCaller = false)
   pub fn mint(nftUri: ByteVec) -> (ByteVec) {
     let minter = callerAddress!()
 
@@ -185,29 +190,57 @@ creates a
 the `AwesomeNFT` template and issued exactly `1` token for it. It also
 increments the total supply of the collection by one.
 
-That's all for creating a NFT collection contract! You can
-now [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-this contract and get its contract id back.
+That's all for creating a NFT collection contract!
 
-## Mint NFT
+## Deploy NFT collection and mint NFT
 
-If we have prepared the metadata URI for the NFT, we can mint it by
-calling the `mint` function in `AwesomeNFTCollection` contract using
-[TxScript](/sdk/interact-with-contracts#txscript-transactions).
+First, we should deploy a dummy version of the `AwesomeNFT` contract
+as a template contract. This template will be used by the
+`AwesomeNFTCollection` contract to create `AwesomeNFT`
+[sub-contracts](/dapps/concepts/programming-model#sub-contract)
+more efficiently.
 
-```rust
-TxScript MintAwesomeNFT(
-    awesomeNFTCollection: AwesomeNFTCollection,
-    nftUri: ByteVec
-) {
-  awesomeNFTCollection.mint{callerAddress!() -> ALPH: 1 alph}(nftUri)
+After `AwesomeNFTCollection` is deployed, we can use the
+`nftCollection.transact.mint` function to mint new `AwesomeNFT`s:
+
+```typescript
+async function nonFungibleToken() {
+  web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
+  const signer = await testNodeWallet()
+
+  // Deploy a template contract for AwesomeNFT, we need to use its id in the
+  // NFT collection contract to efficiently create AwesomeNFT sub-contracts
+  const { contractInstance: awesomeNFTTemplate } = await AwesomeNFT.deploy(
+    signer,
+    { initialFields: { collectionId: '', nftIndex: 0n, uri: '' } }
+  )
+
+  // Create the NFT collection contract
+  const { contractInstance: nftCollection } = await AwesomeNFTCollection.deploy(
+    signer,
+    {
+      initialFields: {
+        nftTemplateId: awesomeNFTTemplate.contractId,
+        collectionUri: stringToHex('https://alephium-nft.infura-ipfs.io/ipfs/QmdobfsES5tx6tdgiyiXiC5pqwyd7WQRZ8gJcM3eMHenYJ'),
+        totalSupply: 0n
+      },
+    }
+  )
+
+  // Mint the NFT
+  await nftCollection.transact.mint({
+    signer,
+    args: { nftUri: stringToHex('https://ipfs.io/ipfs/QmSeS5DQgu7Nwm5cmwhnPnRjGgA4YZYUoJJ1vRVwB3Z8iA/1') },
+    attoAlphAmount: ONE_ALPH / 10n + DUST_AMOUNT
+  })
 }
 ```
 
 ## Interact with the NFT
 
 For contracts that implement `INFTCollection` and `INFT` interfaces,
-[Web3 SDK](/sdk/getting-started) offers a canonical way to fetch their respective metadata:
+[Typescript SDK](/sdk/getting-started) offers a canonical way to fetch
+their respective metadata:
 
 ```typescript
 // NFT Collection Metadata

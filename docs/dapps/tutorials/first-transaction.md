@@ -14,47 +14,72 @@ Prerequisites:
 
 ## Transfer ALPH
 
-Below is an example of how to transfer `ALPH` from one address to another
-using [Web3 SDK](/sdk/getting-started). The code waits for the transaction
-to be confirmed and then verify the balance of the recipient:
+Here is an example of how to transfer `ALPH` from one address to
+another using [Typescript SDK](/sdk/getting-started). You can execute the
+code by:
+
+```shell
+git clone git@github.com:alephium/ralph-example.git
+cd ralph-example/your-firsts
+npm install
+npx ts-node src/transfer-alph.ts
+```
+
+The code transfers `10` ALPH
+from the sender to the recipient and print out the balance of the
+recipient before and after the transfer:
 
 ```typescript
 import { ONE_ALPH, waitForTxConfirmation } from '@alephium/web3'
 import { getSigner } from '@alephium/web3-test'
 
-web3.setCurrentNodeProvider('localhost:22973') // local devnet
-const nodeProvider = web3.getCurrentNodeProvider()
+async function transferAlph() {
+  web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
+  const nodeProvider = web3.getCurrentNodeProvider()
 
-const [sender, receiver] = await getSigners(2)
-const { balance: receiverBalanceBefore } = await nodeProvider.addresses.getAddressesAddressBalance(receiver.address)
+  const [sender, receiver] = await getSigners(2)
+  const { balance: receiverBalanceBefore } = await nodeProvider.addresses.getAddressesAddressBalance(receiver.address)
 
-// Transfer ALPH from sender to receiver
-const transferResult = await sender.signAndSubmitTransferTx({
-  signerAddress: sender.address,
-  destinations: [ { address: receiver.address, attoAlphAmount: 10n * ONE_ALPH } ]
-})
+  // Transfer ALPH from sender to receiver
+  await sender.signAndSubmitTransferTx({
+    signerAddress: sender.address,
+    destinations: [{ address: receiver.address, attoAlphAmount: 10n * ONE_ALPH }]
+  })
 
-waitForTxConfirmation(nodeProvider, transferResult.txId, 1, 1000)
-const { balance: receiverBalanceAfter } = await nodeProvider.addresses.getAddressesAddressBalance(receiver.address)
+  const { balance: receiverBalanceAfter } = await nodeProvider.addresses.getAddressesAddressBalance(receiver.address)
 
-expect(BigInt(receiverBalanceAfter)).toEqual(BigInt(receiverBalanceBefore) + 10n * ONE_ALPH)
+  console.log(`receiver balance before: ${receiverBalanceBefore}, after: ${receiverBalanceAfter}`)
+}
+
+transferAlph()
 ```
 
 ## Transfer Tokens
 
+Here is an example of how to transfer a token from one address to
+another using [Typescript SDK](/sdk/getting-started). You can execute the
+code by:
+
+```shell
+git clone git@github.com:alephium/ralph-example.git
+cd ralph-example/your-firsts
+npm install
+npx ts-node src/transfer-token.ts
+```
+
 Transferring tokens is as straightforward as transferring `ALPH`: in
-the `signAndSubmitTransferTx` function, we can also specify the tokens
-to be transferred:
+the `signAndSubmitTransferTx` function, we can also specify the token
+to be transferred and its amount:
 
 ```typescript
-// Transfer ALPH from sender to receiver
-const transferResult = await sender.signAndSubmitTransferTx({
+// Transfer token from sender to receiver
+await sender.signAndSubmitTransferTx({
   signerAddress: sender.address,
   destinations: [
-    { address: receiver.address, attoAlphAmount: 10n * ONE_ALPH, tokens: [{id: tokenId, amount: 10n}] }
+    { address: receiver.address, attoAlphAmount: DUST_AMOUNT, tokens: [{ id: tokenId, amount: 10n }] }
   ]
 })
 ```
 
-In fact, you have the flexibility to send multiple tokens to multiple
+In fact, we have the flexibility to send multiple tokens to multiple
 recipients within the same transaction!
