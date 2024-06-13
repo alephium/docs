@@ -13,7 +13,7 @@ Prerequisites:
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
   and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-  contracts in a project using [Web3 SDK](/sdk/getting-started)
+  contracts in a project using [Typescript SDK](/sdk/getting-started)
 
 You can clone the example in this guide and run it like this:
 

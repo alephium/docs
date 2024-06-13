@@ -105,7 +105,7 @@ contract fields, which is why `#00` is passed in as arguments to the
 `ContractCreatedEvent` system event is emitted after the `Foo`
 contract is created.
 
-Alephium's [Web3 SDK](/sdk/getting-started) provides a helper function
+Alephium's [Typescript SDK](/sdk/getting-started) provides a helper function
 to subscribe to the `ContractCreatedEvent` event:
 
 ```typescript
@@ -147,7 +147,7 @@ In the example above, after the `destroy` function is called, `Foo`
 contract will be destroyed and a `ContractDestroyedEvent` system event
 will be emitted by the Alephium full node.
 
-Alephium's [Web3 SDK](/sdk/getting-started) provides a helper function
+Alephium's [Typescript SDK](/sdk/getting-started) provides a helper function
 to subscribe to the `ContractDestroyedEvent` event:
 
 ```typescript

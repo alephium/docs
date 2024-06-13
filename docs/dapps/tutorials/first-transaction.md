@@ -10,7 +10,7 @@ and check the status of the transaction.
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
-- [Web3 SDK](/sdk/getting-started) installed
+- [Typescript SDK](/sdk/getting-started) installed
 
 ## Transfer ALPH
 

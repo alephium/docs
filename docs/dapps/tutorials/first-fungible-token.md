@@ -12,14 +12,14 @@ issues it.
 In this guide, you will learn how to issue a token that complies with
 the [Fungible Token
 Standard](/dapps/standards/fungible-tokens#fungible-token-standard)
-using the [Web3 SDK](/sdk/getting-started).
+using the [Typescript SDK](/sdk/getting-started).
 
 Prerequisites:
 
 - Write code in [Typescript](https://www.typescriptlang.org/)
 - Understand how to [compile](/dapps/tutorials/quick-start#compile-your-contract)
   and [deploy](/dapps/tutorials/quick-start#deploy-your-contract)
-  contracts in a project using [Web3 SDK](/sdk/getting-started)
+  contracts in a project using [Typescript SDK](/sdk/getting-started)
 
 You can clone the example in this guide and run it like this:
 
@@ -66,7 +66,7 @@ Contract ShinyToken() {
 ## Issue token
 
 Once the token contract is created and compiled, it can be deployed
-using Web3 SDK:
+using Typescript SDK:
 
 ```typescript
 import { web3 } from '@alephium/web3'
