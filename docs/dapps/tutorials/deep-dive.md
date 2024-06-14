@@ -153,7 +153,7 @@ mkdir test
 and create the `test/token.test.ts` minimalistic test file with the following contents:
 
 ```typescript
-import { web3, Project, addressFromContractId } from '@alephium/web3'
+import { web3, addressFromContractId } from '@alephium/web3'
 import { randomContractId, testAddress } from '@alephium/web3-test'
 import { TokenFaucet } from '../artifacts/ts'
 
@@ -162,7 +162,6 @@ describe('unit tests', () => {
 
     // Use the correct host and port
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
-    await Project.build()
 
     const testContractId = randomContractId()
     const testParams = {
@@ -429,7 +428,7 @@ Another way is to use a simple typescript application. Create a `src` folder in 
 
 ```typescript
 import { Deployments } from '@alephium/cli'
-import { DUST_AMOUNT, web3, Project, NodeProvider } from '@alephium/web3'
+import { DUST_AMOUNT, web3, NodeProvider } from '@alephium/web3'
 import { PrivateKeyWallet} from '@alephium/web3-wallet'
 import configuration from '../alephium.config'
 import { TokenFaucet, Withdraw } from '../artifacts/ts'
@@ -447,9 +446,6 @@ async function withdraw() {
 
   //Connect our wallet, typically in a real application you would connect your web-extension or desktop wallet
   const wallet = new PrivateKeyWallet({privateKey: '672c8292041176c9056bb0dd1d91d34711ceed2493b5afc83f2012b27df2c559' })
-
-  // Compile the contracts of the project if they are not compiled
-  Project.build()
 
   //.deployments contains the info of our `TokenFaucet` deployement, as we need to now the contractId and address
   //This was auto-generated with the `cli deploy` of our `scripts/0_deploy_faucet.ts`
