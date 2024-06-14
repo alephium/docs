@@ -52,7 +52,8 @@ Transfer your funds to this address for bridging.
 
 ### Mobile:
 
-The mobile app will generate the address for you.
+When connecting through WalletConnect, after scanning the QR code, the wallet will ask you to generate the wallet in "Group 0" 
+Click on “connect to dapp” and hit confirm/accept the transaction. 
 Fund the generated address.
 Proceed with the bridge process.
 
