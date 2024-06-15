@@ -170,7 +170,7 @@ The sample project comes with tests in `test/unit/token.test.ts` for your contra
 <p>
 
 ```typescript
-import { web3, Project, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
+import { web3, TestContractParams, addressFromContractId, AssetOutput, DUST_AMOUNT } from '@alephium/web3'
 import { expectAssertionError, randomContractId, testAddress, testNodeWallet } from '@alephium/web3-test'
 import { deployToDevnet } from '@alephium/cli'
 import { TokenFaucet, TokenFaucetTypes, Withdraw } from '../artifacts/ts'
@@ -184,7 +184,6 @@ describe('unit tests', () => {
   // We initialize the fixture variables before all tests
   beforeAll(async () => {
     web3.setCurrentNodeProvider('http://127.0.0.1:22973')
-    await Project.build()
     testContractId = randomContractId()
     testTokenId = testContractId
     testContractAddress = addressFromContractId(testContractId)
@@ -289,15 +288,13 @@ Now, build the source code `src/token.ts` :
 
 ```typescript
 import { Deployments } from '@alephium/cli'
-import { DUST_AMOUNT, web3, Project } from '@alephium/web3'
+import { DUST_AMOUNT, web3 } from '@alephium/web3'
 import { testNodeWallet } from '@alephium/web3-test'
 import configuration from '../alephium.config'
 import { TokenFaucet, Withdraw } from '../artifacts/ts'
 
 async function withdraw() {
   web3.setCurrentNodeProvider('http://127.0.0.1:22973')
-  // Compile the contracts of the project if they are not compiled
-  Project.build()
 
   // Attention: test wallet is used for demonstration purpose
   const signer = await testNodeWallet()
