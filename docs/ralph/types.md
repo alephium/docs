@@ -130,7 +130,7 @@ Contract Bar() {
 }
 ```
 
-Ralph also supports struct destruction, and the syntax is similar to TypeScript:
+Ralph also supports destructuring struct, and the syntax is similar to TypeScript:
 
 ```rust
 struct Foo { x: U256, y: U256 }
