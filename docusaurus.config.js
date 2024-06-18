@@ -27,9 +27,7 @@ const config = {
           sidebarPath: require.resolve("./sidebars.js"),
           editUrl: ({ locale, versionDocsDirPath, docPath }) =>
             `https://github.com/alephium/wiki/tree/master${
-              locale !== "en"
-                ? `/i18n/${locale}/docusaurus-plugin-content-docs/current`
-                : `/${versionDocsDirPath}`
+              locale !== "en" ? `/i18n/${locale}/docusaurus-plugin-content-docs/current` : `/${versionDocsDirPath}`
             }/${docPath}`,
         },
         blog: false,
@@ -236,25 +234,25 @@ const config = {
           },
           {
             from: "/The Bridge",
-            to: "/infrastructure/the-bridge"
+            to: "/infrastructure/the-bridge",
           },
           {
             from: "/tokens/fungible-tokens",
-            to: "/dapps/standards/fungible-tokens"
+            to: "/dapps/standards/fungible-tokens",
           },
           {
             from: "/tokens/non-fungible-tokens",
-            to: "/dapps/standards/non-fungible-tokens"
-          }
+            to: "/dapps/standards/non-fungible-tokens",
+          },
         ],
       },
     ],
     require.resolve("docusaurus-plugin-image-zoom"),
   ],
-  // i18n: {
-  //   defaultLocale: "en",
-  //   locales: ["en", "fr"],
-  // },
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "fr"],
+  },
 };
 
 module.exports = config;
