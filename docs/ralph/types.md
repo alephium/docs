@@ -67,7 +67,7 @@ let b = b`World`
 let c = a ++ b` ` ++ b
 ```
 
-#### Tuple
+### Tuple
 
 Ralph supports tuples, which are values that contain fixed number of
 elements, each with its own type.
