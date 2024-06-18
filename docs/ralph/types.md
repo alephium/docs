@@ -67,6 +67,22 @@ let b = b`World`
 let c = a ++ b` ` ++ b
 ```
 
+#### Tuple
+
+Ralph supports tuples, which are values that contain fixed number of
+elements, each with its own type.
+
+```rust
+// Function that returns a tuple of 3 elements
+fn foo() -> (U256, Boolean, ByteVec) {
+  return 1, false, #00
+}
+
+// Destructure the tuple, `a` is immutable, `b` is mutable.
+// `_` is the anonymous variable to ignore the unnecessary variable
+let (a, mut b, _) = foo()
+```
+
 ### Fixed Size Array
 
 The syntax for fixed-size arrays is influenced by Rust.
