@@ -98,7 +98,7 @@ Contract Bar() {
 }
 ```
 
-In the Rhone upgrade, we support utilizing contract fields after deploying the contract in the same transaction. With the above example, you can call the `foo.update` after deploying the contract `Foo`:
+In Ralph, you can read or write contract fields within the same transaction after deploying the contract. With the above example, you can call the `foo.update` after deploying the contract `Foo`:
 
 ```rust
 @using(preapprovedAssets = true)
@@ -169,7 +169,7 @@ Contract Foo(barTemplateId: ByteVec) {
 ```
 
 :::tip note
-Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 1 alph, it will be reduced to 0.1 alph after the Rhone upgrade is activated), so creating a large number of sub-contracts is not practical.
+Deploying a contract requires depositing a certain amount of ALPH in the contract(currently 0.1 alph), so creating a large number of sub-contracts is not practical.
 :::
 
 ### Contract Creation inside a Contract
@@ -293,7 +293,7 @@ Foo(bazId).foo()
 let _ = Bar(bazId).bar()
 ```
 
-In the Rhone upgrade, we introduced the `@using(methodSelector = true/false)` annotation to support multiple interfaces inheritance. You can set the `methodSelector` to `true` if your contract needs to inherit from multiple interfaces:
+In Ralph, you can use the `methodSelector` annotation if your contract needs to inherit from multiple interfaces:
 
 ```rust
 @using(methodSelector = true)
@@ -342,7 +342,7 @@ TxScript Main(fooId: ByteVec) {
 
 ## Gasless Transaction
 
-In the Rhone upgrade, we introduced support for gasless transactions. We can use the built-in `payGasFee` to pay transaction gas fees on behalf of the user, for example:
+In Ralph, you can use the built-in `payGasFee` to pay transaction gas fees on behalf of the user, for example:
 
 ```rust
 Contract Foo() {

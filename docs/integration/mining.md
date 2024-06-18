@@ -19,7 +19,7 @@ This document references the code from the [mining-pool](https://github.com/alep
 
 :::tip Test Environment
 
-Due to difficulty instability on the testnet, mining has become permissioned since the Rhone upgrade. To assist with pool and miner testing, we have prepared a local testnet environment. You can check it out here: [Local Testnet Environment for Mining Pools](https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet).
+Due to difficulty instability on the testnet, mining has become permissioned. To assist with pool and miner testing, we have prepared a local testnet environment. You can check it out here: [Local Testnet Environment for Mining Pools](https://github.com/alephium/alephium-stack/tree/master/mining-pool-local-testnet).
 
 :::
 
@@ -64,13 +64,13 @@ Then, refer to the code [here](https://github.com/alephium/mining-pool/blob/mast
 
 After the full node verifies the block, it will send a `SubmitBlockResult` message to inform the mining pool whether the block is valid. Refer to the code [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) to parse the `SubmitBlockResult` message.
 
-### Rhone Upgrade
+### Uncle Block Reward
 
 :::info Node Version
 You need to upgrade your full node to newer than v3.0.0.
 :::
 
-The Rhone upgrade introduces the ghost algorithm similar to ETH. A mainchain block may reference uncle blocks, and both the miner of the mainchain block and the miner of the uncle block will receive rewards. Therefore, the mining pool needs to distribute rewards to the miners of the uncle blocks.
+Alephium uses the ghost algorithm similar to ETH. A mainchain block may reference uncle blocks, and both the miner of the mainchain block and the miner of the uncle block will receive rewards. Therefore, the mining pool needs to distribute rewards to the miners of the uncle blocks.
 
 You can use the `/blockflow/main-chain-block-by-ghost-uncle/{ghost_uncle_hash}` endpoint to check if an uncle block is referenced by a mainchain block. For example, for an uncle block on the testnet: `000000a564aee62ac46855b0a6a0736ec259e95c1252272de4fe202c371c1a20`, this endpoint will return the following mainchain block:
 

@@ -34,10 +34,8 @@ Please read the [load snapshot](/full-node/loading-snapshot) guide.
 
 ### Block producing rate
 
-Currently the average network block production rate is 1 block every 4sec.
-This is because the network currently has 16 chains each with a blocktime of 64sec. (64/16=4s in average).
-
-The next network upgrade will reduce blocktime to 16s for all 16 chains resulting in the average network block production rate to be 1s.
+Currently the average network block production rate is 1 block every 1sec.
+This is because the network currently has 16 chains each with a blocktime of 16sec. (16/16=1s in average).
 
 ### Configure file directory
 
@@ -148,9 +146,6 @@ Alephium implemented the same 51% attack protection as [Ravencoin](https://tronb
 
 ### What is the maximum reorg/rollback possible on Alephium?
 
-The maximum allowed reorg size is 100 blocks. It is recommend to check 110 blocks for higher safety.
-
-After Rhone upgrade, blocktime is reduced from 64 seconds to 16
-seconds, and the maximum allowed reorg size is adjusted to 200 blocks.
+The maximum allowed reorg size is 200 blocks. It is recommend to check 210 blocks for higher safety.
 
 [^1]: By default it is under `C:\Users\<your-username>` in Windows, `/Users/<your-username>` in macOS, and `/home/<your-username>` in Linux.
