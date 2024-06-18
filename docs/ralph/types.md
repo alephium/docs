@@ -146,7 +146,7 @@ Contract Bar() {
 }
 ```
 
-### Map (Rhone Upgrade Only)
+### Map
 
 The map data structure is currently available in the [devnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) and the [testnet release](https://github.com/alephium/alephium-stack/tree/master/devnet) of the full node.
 

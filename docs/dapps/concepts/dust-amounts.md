@@ -88,7 +88,7 @@ set in the Alephium system.
 
 Each contract has exactly one UTXO in the Alephium system. The dust
 amount for contract UTXOs (also known as **contract deposit**) is
-currently set as `1` ALPH (`0.1` ALPH after Rhone upgrade). Compared
+currently set as `0.1` ALPH. Compared
 to the dust amount in the regular UTXOs, it puts a much more
 aggressive upper bound to the number of contracts in the system, which
 limits not only the size of the contract UTXO set, but also the size
@@ -98,12 +98,12 @@ destroyed, it aims to create the right incentives for developers to
 keep the size of the contract state at a healthy level.
 
 From the UX perspective, this means that creating a contract requires
-at least `1` ALPH (`0.1` ALPH after Rhone) as contract
+at least `0.1` ALPH as contract
 deposit. Concretely, if the mint price of an NFT is `100` ALPH, the
-total cost might be `101` ALPH (`100.1` ALPH after Rhone) after
+total cost might be `100.1` ALPH after
 taking contract deposit into consideration. It also means that any
-transactions that reduce the balance of the contract to below `1` ALPH
-(`0.1` ALPH after Rhone) will fail.
+transactions that reduce the balance of the contract to below `0.1` ALPH
+will fail.
 
 In summary, while it does create some UX challenges, **dust amount**
 for UTXOs (and by extension **contract deposit**) is a pivotal to the

@@ -289,7 +289,7 @@ You can find more information about asset permission at [here](/dapps/concepts/a
 
 ### Pay To Contract Only
 
-In the Rhone upgrade, we introduced the `@using(payToContractOnly = true/false)` annotation. You can set this annotation to `true` when the contract only accepts transfers. Functions annotated with `@using(payToContractOnly = true)` can be called multiple times within a single transaction.
+You can set the `payToContractOnly` annotation to `true` when the contract only accepts transfers. Functions annotated with `@using(payToContractOnly = true)` can be called multiple times within a single transaction.
 
 ```rust
 Contract Foo() {

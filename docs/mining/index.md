@@ -9,10 +9,9 @@ with [mining pools](/mining/pool-mining-guide). Here is some basic
 information that the miners should know:
 
 - Alephium currently has `4` address groups and `16` chains.
-- Target block time is `64` seconds. (Adjust to `16` seconds after Rhone
-  upgrade).
-- `21600` blocks are mined on average everyday (`24 * 60 * 60 / 64 * 16`).
-- Block rewards are `3` ALPH right now.
+- Target block time is `16` seconds.
+- `86400` blocks are mined on average everyday (`24 * 60 * 60 / 16 * 16`).
+- Block rewards are `0.5` ALPH right now.
 - Mined coins are locked for `500` minutes.
 
 For more information about mining rewards, please read the [Block
