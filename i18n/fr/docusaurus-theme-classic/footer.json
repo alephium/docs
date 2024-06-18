@@ -56,7 +56,7 @@
     "description": "The label of footer link with label=Blog linking to https://medium.com/@alephium"
   },
   "copyright": {
-    "message": "Some rights reserved 2022 Alephium. Built with Docusaurus.",
+    "message": "Some rights reserved 2024 Alephium. Built with Docusaurus.",
     "description": "The footer copyright"
   }
 }
