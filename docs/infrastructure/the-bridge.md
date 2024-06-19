@@ -33,32 +33,34 @@ If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
 ### 2. The Bridge alerted me that I need to create a new wallet address! What does that mean? 
 
-To interact with most dapps on Alephium, you need to create a Group 0 address. Here's how:
+To interact with most dapps on Alephium, you need to create an address in Group 0. Here's how:
 
-### Desktop:
+### Desktop wallet
 
 Go to the addresses tab and click on "+ New address".
 Tick the advanced options and select "Group 0".
-Click on generate to create the address.
+Click on "Generate" to create the address.
 Transfer your funds to this address for bridging.
 
-### Extension:
+### Extension wallet
 
 Click on your current wallet in the top left corner of the app.
-Select the plus icon to add a new address.
-Choose the desired group for the new address.
+Select the "+" icon to add a new address.
+Choose the desired group for the new address (Group 0).
 Transfer your funds to this address for bridging.
 
+### Mobile wallet
 
-### Mobile:
+To connect to the bridge using the mobile wallet you need to connect via WalletConnect.
 
-When connecting through WalletConnect, after scanning the QR code, the wallet will ask you to generate the wallet in "Group 0" 
-Click on “connect to dapp” and hit confirm/accept the transaction. 
-Fund the generated address.
-Proceed with the bridge process.
+If you are using the bridge on your **laptop or your desktop**, click the "WalletConnect" option. Scan the QR code with your mobile app.
 
+If you are using the bridge on your phone through your **phone's browser**, follow these steps:
 
-Remember to transfer your funds to the newly created addresses for bridging.
+- **Android:** Simply click on the "Connect" button after choosing "WalletConnect". This will redirect you to the mobile app if it is installed on your Android phone.
+- **iOS:** We are working on improving the UX on iOS. In the meantime, you can copy the WalletConnect URI, open the mobile app, click on the WalletConnect icon at the top and paste the URL.
+
+If you don't already have an address in group 0 the app will ask you to generate one. Simply click "Generate" and then "Connect". Transfer some funds to it and proceed with the bridge process.
 
 ### 3. I am getting “failed to fetch” errors! 
 
