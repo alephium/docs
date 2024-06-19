@@ -10,8 +10,8 @@ A mining wallet is slightly different and needs to have **one address per group*
 
 To do this, simply unfold the `Advanced Settings` in the welcome screen at the end of the wallet creation process.
 
-<img src={require("./media/mw1.png").default} alt="Prompt to create a new wallet" width="auto" style={{ height: '200px' }} />
+<img src={require("/img/mw1.png").default} alt="Prompt to create a new wallet" width="auto" style={{ height: '200px' }} />
 
 Alternatively, you can create additional addresses manually after you log into your wallet by going to the `Addresses` tab, click on the `Advanced operations` icon and choose `Generate one address per group`
 
-<img src={require("./media/af4.png").default} alt="Advanced management section" width="auto" style={{ height: '200px' }} />
+<img src={require("/img/af4.png").default} alt="Advanced management section" width="auto" style={{ height: '200px' }} />

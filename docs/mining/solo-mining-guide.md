@@ -4,9 +4,6 @@ title: Solo Mining Guide
 sidebar_label: Solo mining guide
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## Prerequisites
 
@@ -18,19 +15,19 @@ First, we need to create a dedicated wallet for mining. Compared to a regular wa
 
 ### Create miner wallet
 
-<img src={require("./media/miner-wallet-create-query.png").default}/>
+<img src={require("/img/miner-wallet-create-query.png").default}/>
 
 The server will return the new wallet mnemonic. Please backup and store it securely.
 
-<img src={require("./media/miner-wallet-create-response.png").default}/>
+<img src={require("/img/miner-wallet-create-response.png").default}/>
 
 ### List miner addresses
 
-<img src={require("./media/miner-wallet-list-addresses-query.png").default}/>
+<img src={require("/img/miner-wallet-list-addresses-query.png").default}/>
 
 The server will return `4` addresses which are required in later steps:
 
-<img src={require("./media/miner-wallet-list-addresses-response.png").default}/>
+<img src={require("/img/miner-wallet-list-addresses-response.png").default}/>
 
 ## Configure miner addresses
 
@@ -56,7 +53,7 @@ endpoint because they are sorted according to their corresponding groups.
 
 You could verify that by executing this endpoint:
 
-<img src={require("./media/full-node-synced-query.png").default}/>
+<img src={require("/img/full-node-synced-query.png").default}/>
 
 If you see `"synced": true` in the response, then you are ready to go.
 

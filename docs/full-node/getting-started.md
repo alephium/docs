@@ -4,9 +4,6 @@ title: Getting Started
 sidebar_label: Getting started
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 You can run your Alephium full node using either
 [Docker](#using-docker) or [Java](#using-java). This

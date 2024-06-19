@@ -4,9 +4,6 @@ title: Work with Contract
 sidebar_label: Work with contract
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 Alephium's full node provides a set of
 [APIs](https://node.mainnet.alephium.org/docs/#/Contracts) to

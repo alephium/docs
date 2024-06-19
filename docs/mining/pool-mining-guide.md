@@ -4,9 +4,6 @@ title: Pool Mining Guide
 sidebar_label: Pool mining guide
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## For Miner
 

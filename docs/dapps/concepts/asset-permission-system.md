@@ -4,9 +4,6 @@ title: Asset Permission System
 sidebar_label: Asset permission system
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 The Asset Permission System (APS) is one of Ralph's unique
 features. It explicitly stipulates the flow of assets at code level,

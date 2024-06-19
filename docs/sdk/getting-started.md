@@ -4,9 +4,6 @@ title: Getting Started
 sidebar_label: Getting started
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 Alephium offers a powerful [Typescript
 SDK](https://github.com/alephium/alephium-web3) that makes it easy to

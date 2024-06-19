@@ -4,9 +4,6 @@ title: Public Services
 sidebar_label: Public services
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## Testnet Faucet
 

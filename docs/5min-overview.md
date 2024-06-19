@@ -5,9 +5,6 @@ slug: /
 title: Alephium Overview
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## Quickstart
 import {

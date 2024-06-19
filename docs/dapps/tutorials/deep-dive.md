@@ -4,9 +4,6 @@ title: Deep Dive
 sidebar_label: Deep dive
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 In the [Quick Start](/dapps/tutorials/quick-start) guide, we set up a
 sample project and walked through common development tasks without

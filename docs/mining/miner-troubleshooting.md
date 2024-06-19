@@ -3,9 +3,6 @@ sidebar_position: 40
 title: Troubleshooting
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ### Why I can only restore 1 of my 4 miner addresses ?
 

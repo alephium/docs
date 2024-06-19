@@ -4,8 +4,6 @@ title: HowTos
 sidebar_label: HowTos
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
 # Wallet HOWTOs
 
 ### Create new address in a group using Extension Wallet

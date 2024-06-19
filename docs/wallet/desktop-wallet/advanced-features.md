@@ -18,13 +18,13 @@ To make sure this doesn't happen, the wallet allows you to easily consolidate yo
 
 In the `Addresses` tab, click on the `Advanced operations` icon and choose `Consolidate UTXOs`.
 
-<img src={require("./media/af1.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
+<img src={require("/img/af1.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
 
-<img src={require("./media/af4.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
+<img src={require("/img/af4.png").default} alt="UTXO consolidation" width="auto" style={{ height: '200px' }} />
 
 Select the address from which you want to consolidate the UTXOs and select the destination address (it can be the same address). Click on `Consolidate` and your UTXOs will be consolidated.
 
-<img src={require("./media/af2.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
+<img src={require("/img/af2.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
 
 ## 2. Passphrase (ADVANCED SECURITY FEATURE)
 
@@ -56,7 +56,7 @@ It is important to remember that any unique Passphrase will generate and give ac
 
 To use a Passphrase, simply tick the `Use optional passphrase (advanced)` and enter the optional Passphrase of your choice.
 
-<img src={require("./media/af5.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
+<img src={require("/img/af5.png").default} alt="Landing page" width="auto" style={{ height: '200px' }} />
 
 ### 3. Limitations of Passphrase-enabled wallets
 

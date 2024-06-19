@@ -49,7 +49,7 @@ async function tryConnect() {
 Users will be prompted to connect to the current dApp when
 `windowAlephium?.enable()` method is called:
 
-<img src={require("./media/connect-dapp.png").default} alt="Connect dApp" width="250" />
+<img src={require("/img/connect-dapp.png").default} alt="Connect dApp" width="250" />
 
 After user clicks the `Connect` button, dApp is connected with users
 extension wallet.
@@ -81,7 +81,7 @@ This will place a button in your dApp with the `retro` built-in
 theme. Once user clicks the button, a pop-up window will show up to
 ask user to select a wallet:
 
-<img src={require("./media/connect-dapp-2.png").default} alt="Connect dApp Web3 React" />
+<img src={require("/img/connect-dapp-2.png").default} alt="Connect dApp Web3 React" />
 
 If user selects `Extension Wallet`, user will again be prompted to
 connect to the current dApp. After user clicks the `Connect` button,
@@ -116,7 +116,7 @@ The following is an example of a transaction for token transfer: user
 is transferring `2` `TokenFaucet` token from `Salary` account to
 `Saving` account.
 
-<img src={require("./media/transaction-signing-transfer.png").default} alt="Transaction Signing Transfer" width="250" />
+<img src={require("/img/transaction-signing-transfer.png").default} alt="Transaction Signing Transfer" width="250" />
 
 After user clicks the `Sign` button, the transction will be signed and
 submitted to the Alephium blockchain by the extension wallet.

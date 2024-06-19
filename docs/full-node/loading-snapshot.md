@@ -4,9 +4,6 @@ title: Load from a snapshot
 sidebar_label: Load from snapshot
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 The initial run of a full node, as outlined in the [get
 started](./getting-started) guide, takes ~20 hours to fully sync

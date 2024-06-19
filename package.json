@@ -16,15 +16,15 @@
     "generate-builtin-functions": "node scripts/generate-builtin-functions.js"
   },
   "dependencies": {
-    "@docusaurus/core": "3.3.2",
-    "@docusaurus/plugin-client-redirects": "3.3.2",
-    "@docusaurus/preset-classic": "3.3.2",
+    "@docusaurus/core": "^3.4.0",
+    "@docusaurus/plugin-client-redirects": "^3.4.0",
+    "@docusaurus/preset-classic": "^3.4.0",
+    "@fluentui/react-icons": "^2.0.204",
+    "clsx": "^1.2.1",
     "docusaurus-plugin-image-zoom": "^0.1.1",
     "prism-react-renderer": "1.2.1",
     "react": "^18.0.1",
-    "react-dom": "^18.0.1",
-    "clsx": "^1.2.1",
-    "@fluentui/react-icons": "^2.0.204"
+    "react-dom": "^18.0.1"
   },
   "browserslist": {
     "production": [

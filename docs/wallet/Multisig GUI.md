@@ -4,9 +4,6 @@ title: Multisig GUI
 sidebar_label: Multisig GUI
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## The Alephium Toolkit: A Guide to Creating a Multisig Wallet
 

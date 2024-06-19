@@ -126,7 +126,7 @@ Following is an example of displaying and transfering a NFT in the
 `Imagine Collection` in the extension wallet:
 
 <img
-src={require("./media/show-nft-collection-extension-wallet.png").default} alt="Show collection" width="250"/>
+src={require("/img/show-nft-collection-extension-wallet.png").default} alt="Show collection" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-nft-collection-extension-wallet.png").default} alt="Transfer NFT" width="250" />
+<img src={require("/img/transfer-nft-collection-extension-wallet.png").default} alt="Transfer NFT" width="250" />
 

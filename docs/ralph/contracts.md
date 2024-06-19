@@ -4,9 +4,6 @@ title: Contracts
 sidebar_label: Contracts
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 
 ## Contracts

@@ -5,9 +5,6 @@ sidebar_label: FAQ
 title: Frequently Asked Questions
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 :::info
 📚 Learn everything about Alephium in this [5min overview](/).

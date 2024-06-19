@@ -4,9 +4,6 @@ title: Full Node on Flux
 sidebar_label: On Flux
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 This guide assumes that you are familiar with
 [Flux](https://runonflux.io/), otherwise please refer to Flux's
@@ -26,18 +23,18 @@ By default, the Full Node App only has the P2P port (`39973` on Flux nodes) expo
 
 1. Manage your application
 
-<img src={require("./media/flux1.png").default} alt="Manage your application"/>
+<img src={require("/img/flux1.png").default} alt="Manage your application"/>
 
 2. Update the specifications
 
-<img src={require("./media/flux2.png").default} alt="Update specifications"/>
+<img src={require("/img/flux2.png").default} alt="Update specifications"/>
 
 3. Configure the connectivity to expose the container port `12973`. In the screenshot below the port `42973` has been arbitrariliy choosen and will be exposing the API. Any other valid port would work. Compute the signing message and follow the signing process to broadcast the specifications update across the network.
 
-<img src={require("./media/flux3.png").default} alt="Configure connectivity"/>
+<img src={require("/img/flux3.png").default} alt="Configure connectivity"/>
 
 4. Softly redeploy your application to take into account the specifications update.
 
-<img src={require("./media/flux4.png").default} alt="Soft redeploy the app"/>
+<img src={require("/img/flux4.png").default} alt="Soft redeploy the app"/>
 
 That's it, your API is now exposed through the automatic endpoint containing `_42973` (or the different port your specified), you can easily validate with the API endpoint `/infos/version`, i.e. something like `https://alephiumnode1708292985626_42973.app.runonflux.io/infos/version`.

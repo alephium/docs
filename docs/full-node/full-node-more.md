@@ -4,9 +4,6 @@ title: Troubleshooting
 sidebar_label: Troubleshooting
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## API Key
 
@@ -36,11 +33,11 @@ cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w 48 | head -n 1
 
 1. Click on the `Authorize` button on the top right of your Swagger UI:
 
-<img src={require("./media/full-node-api-key-auth0.png").default}/>
+<img src={require("/img/full-node-api-key-auth0.png").default}/>
 
 2. Fill in the value box with your key and click the authorize button:
 
-<img src={require("./media/full-node-api-key-auth1.png").default}/>
+<img src={require("/img/full-node-api-key-auth1.png").default}/>
 
 Now you could use Swagger UI as if there is no API key.
 
