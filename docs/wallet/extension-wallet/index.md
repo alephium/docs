@@ -10,7 +10,7 @@ on the Alephium blockchain.  It also enables dApps to securely
 interact with the wallets, allowing dApp users to sign transactions,
 interact with the smart contracts, etc right from the browser.
 
-<img src={require("./media/landing.png").default} alt="Execute Transction Script" />
+<img src={require("/img/landing.png").default} alt="Execute Transction Script" />
 
 In the [Getting Started](/wallet/extension-wallet/getting-started)
 page, you can find out the installation guide as well as some common

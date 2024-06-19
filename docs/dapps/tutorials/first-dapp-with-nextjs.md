@@ -68,7 +68,7 @@ npm run dev
 Open [http://localhost:3000](http://localhost:3000) with your browser
 to see the token faucet application.
 
-<img src={require("./media/nextjs-template-connect.png").default}
+<img src={require("/img/nextjs-template-connect.png").default}
 alt="Connect button" width="300"/>
 
 As illustrated above, the token faucet dApp shows a `Connect Alephium`
@@ -76,21 +76,21 @@ button before it is connected with a wallet. Click the button and
 choose the `Extension Wallet` option to open the extension
 wallet. `WalletConnect` will be supported soon.
 
-<img src={require("./media/nextjs-template-open-connect.png").default} alt="Landing page" width="250"/>
+<img src={require("/img/nextjs-template-open-connect.png").default} alt="Landing page" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/nextjs-template-connect-click-extensonwallet.png").default} alt="Create wallet" width="250" />
+<img src={require("/img/nextjs-template-connect-click-extensonwallet.png").default} alt="Create wallet" width="250" />
 
 Review the approval screen of the extension wallet and click
 `Connect`, the token faucet dApp will be connected to the extension
 wallet. 
 
-<img src={require("./media/nextjs-template-connected.png").default} alt="Landing page" width="520"/>
+<img src={require("/img/nextjs-template-connected.png").default} alt="Landing page" width="520"/>
 
 Input the number of tokens to be withdrawn (maximum 2), and click
 the `Send Me Token` button. Review the transaction details and click
 `Confirm`.
 
-<img src={require("./media/nextjs-template-send-token.png").default} alt="Landing page" width="520"/>
+<img src={require("/img/nextjs-template-send-token.png").default} alt="Landing page" width="520"/>
 
 Congratulations, you have just transferred some tokens from the token
 faucet to your account!

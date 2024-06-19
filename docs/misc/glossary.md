@@ -120,7 +120,7 @@ This difference is offered by actors referred to as “searchers” that analyze
 
 ### Mining Reward
 
-![](media/Block%20reward.png)
+![](/img/Block-reward.png)
 
 Alephium’s reward for newly generated blocks is also called Mining Reward (MR). After distribution, the [block rewards](#block-reward) are locked for 500 minutes.
 
@@ -204,7 +204,7 @@ Tokens can also be categorized by their intended function: Utility, Security, or
 
 ### Transaction Fee 
 
-![image](media/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
+![image](/img/186886291-79745fc1-25dc-4307-a752-400ce1ff2d31.png)
 
 When someone does a transaction in Alephium, there’s a price to be paid to the miners for including it in a block. 
 

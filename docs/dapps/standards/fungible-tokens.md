@@ -46,9 +46,9 @@ for proper display in wallets, explorers, and other ecosystem
 interfaces. Here is how extension wallet displays a token before and
 after it is added into the token list.
 
-<img src={require("./media/unknown-token.png").default} alt="Unknown" width="250"/>
+<img src={require("/img/unknown-token.png").default} alt="Unknown" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/verified-token.png").default} alt="Verified" width="250"/>
+<img src={require("/img/verified-token.png").default} alt="Verified" width="250"/>
 
 Currently, a pull request is needed to add the token metadata to token
 list.
@@ -72,8 +72,8 @@ fungible tokens.
 Following is an example of displaying and transfering the `PACA` token
 using extesion wallet:
 
-<img src={require("./media/transfer-alphpaca-1.png").default} alt="Token Overview" width="250"/>
+<img src={require("/img/transfer-alphpaca-1.png").default} alt="Token Overview" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alphpaca-2.png").default} alt="Send Token" width="250" />
+<img src={require("/img/transfer-alphpaca-2.png").default} alt="Send Token" width="250" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-<img src={require("./media/transfer-alphpaca-3.png").default} alt="Sign Tx" width="250" />
+<img src={require("/img/transfer-alphpaca-3.png").default} alt="Sign Tx" width="250" />
