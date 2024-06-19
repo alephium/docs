@@ -1,0 +1,68 @@
+{
+    "current": [
+        {
+            "from": "https://node-v20.mainnet.alephium.org",
+            "to": "https://node.mainnet.alephium.org"
+        },
+        {
+            "from": "https://wallet-v20.mainnet.alephium.org",
+            "to": "https://node.mainnet.alephium.org"
+        },
+        {
+            "from": "https://node-v20.testnet.alephium.org",
+            "to": "https://node.testnet.alephium.org"
+        },
+        {
+            "from": "https://node-v210.testnet.alephium.org",
+            "to": "https://node.testnet.alephium.org"
+        },
+        {
+            "from": "https://wallet-v20.testnet.alephium.org",
+            "to": "https://node.testnet.alephium.org"
+        },
+        {
+            "from": "https://mainnet-wallet.alephium.org",
+            "to": "https://node.mainnet.alephium.org"
+        },
+        {
+            "from": "https://testnet-wallet.alephium.org",
+            "to": "https://node.testnet.alephium.org"
+        },
+        {
+            "from": "https://backend-v113.mainnet.alephium.org",
+            "to": "https://backend.mainnet.alephium.org"
+        },
+        {
+            "from": "https://backend-v113.testnet.alephium.org",
+            "to": "https://backend.testnet.alephium.org"
+        },
+        {
+            "from": "https://backend-v117.testnet.alephium.org",
+            "to": "https://backend.testnet.alephium.org"
+        },
+        {
+            "from": "https://mainnet-backend.alephium.org",
+            "to": "https://backend.mainnet.alephium.org"
+        },
+        {
+            "from": "https://testnet-backend.alephium.org",
+            "to": "https://backend.testnet.alephium.org"
+        },
+        {
+            "from": "https://explorer.mainnet.alephium.org",
+            "to": "https://explorer.alephium.org"
+        },
+        {
+            "from": "https://explorer.testnet.alephium.org",
+            "to": "https://testnet.alephium.org"
+        },
+        {
+            "from": "https://explorer-v113.mainnet.alephium.org",
+            "to": "https://explorer.alephium.org"
+        },
+        {
+            "from": "https://explorer-v113.testnet.alephium.org",
+            "to": "https://testnet.alephium.org"
+        }
+    ]
+}
