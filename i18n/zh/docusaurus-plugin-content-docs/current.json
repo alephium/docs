@@ -1,0 +1,66 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.tutorialSidebar.category.Run Nodes": {
+    "message": "Run Nodes",
+    "description": "The label for category Run Nodes in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Network Upgrade": {
+    "message": "Network Upgrade",
+    "description": "The label for category Network Upgrade in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Build dApps": {
+    "message": "Build dApps",
+    "description": "The label for category Build dApps in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Tutorials": {
+    "message": "Tutorials",
+    "description": "The label for category Tutorials in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Concepts": {
+    "message": "Concepts",
+    "description": "The label for category Concepts in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Standards": {
+    "message": "Standards",
+    "description": "The label for category Standards in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Ralph Language": {
+    "message": "Ralph Language",
+    "description": "The label for category Ralph Language in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.TypeScript SDK": {
+    "message": "TypeScript SDK",
+    "description": "The label for category TypeScript SDK in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Wallet": {
+    "message": "Wallet",
+    "description": "The label for category Wallet in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Desktop wallet": {
+    "message": "Desktop wallet",
+    "description": "The label for category Desktop wallet in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Extension wallet": {
+    "message": "Extension wallet",
+    "description": "The label for category Extension wallet in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Mining": {
+    "message": "Mining",
+    "description": "The label for category Mining in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Integration": {
+    "message": "Integration",
+    "description": "The label for category Integration in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Infrastructure": {
+    "message": "Infrastructure",
+    "description": "The label for category Infrastructure in sidebar tutorialSidebar"
+  },
+  "sidebar.tutorialSidebar.category.Misc": {
+    "message": "Misc",
+    "description": "The label for category Misc in sidebar tutorialSidebar"
+  }
+}
