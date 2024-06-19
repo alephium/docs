@@ -4,9 +4,6 @@ title: Multisig Guide
 sidebar_label: Multisig guide
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 Alephium is supporting `m-of-n` multi-signature addresses.
 

@@ -4,9 +4,6 @@ title: Troubleshooting
 sidebar_label: Troubleshooting
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## API Key
 

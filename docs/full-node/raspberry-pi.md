@@ -4,9 +4,6 @@ title: Full Node on Raspberry Pi
 sidebar_label: On Raspberry Pi
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 In this guide we'll learn:
 

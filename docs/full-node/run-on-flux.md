@@ -4,9 +4,6 @@ title: Full Node on Flux
 sidebar_label: On Flux
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 This guide assumes that you are familiar with
 [Flux](https://runonflux.io/), otherwise please refer to Flux's

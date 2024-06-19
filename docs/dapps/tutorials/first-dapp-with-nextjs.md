@@ -4,9 +4,6 @@ title: First dApp with Nextjs
 sidebar_label: First dApp with Nextjs
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 This is a continuation of the [getting started](/dapps/tutorials/quick-start)
 guide. By the end of this guide, you should be able to build a simple

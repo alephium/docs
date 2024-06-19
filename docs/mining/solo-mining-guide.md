@@ -4,9 +4,6 @@ title: Solo Mining Guide
 sidebar_label: Solo mining guide
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## Prerequisites
 

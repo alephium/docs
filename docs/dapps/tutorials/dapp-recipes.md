@@ -4,9 +4,6 @@ title: Dapp Recipes
 sidebar_label: Dapp recipes
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## Token
 

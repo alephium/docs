@@ -4,9 +4,6 @@ title: Quick Start
 sidebar_label: Quick start
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 Alephium's Typescript SDK offers a comprehensive suite of developer tools
 and libraries designed to assist in building your dApps. This guide

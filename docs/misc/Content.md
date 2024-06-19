@@ -4,9 +4,6 @@ sidebar_label: Content repo
 title: Content Repo
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 

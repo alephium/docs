@@ -4,9 +4,6 @@ title: Mining
 sidebar_label: Mining
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 This document aims to simplify the integration of Alephium for mining pools and miners. It covers:
 

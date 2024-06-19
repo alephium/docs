@@ -5,9 +5,6 @@ slug: /glossary
 title: Glossary
 ---
 
-import UntranslatedPageText from "@site/src/components/UntranslatedPageText";
-
-<UntranslatedPageText />
 
 This is a list of useful concepts for understanding Alephium in particular and Blockchains in general.
 
