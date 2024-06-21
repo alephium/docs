@@ -263,3 +263,17 @@ node log.
 Under the hood, `Debug` is a special [system
 events](/sdk/events#system-events) which is only available in
 [devnet](/full-node/getting-started#devnet).
+
+## Checking Assertion Error
+
+To check for assertion errors during contract execution, use the helper function `expectAssertionError(p, address, errorCode)`. This function verifies that a specific assertion error occurs.
+
+* `p`: The execution promise
+* `address`: The address of the contract where the error occurred
+* `errorCode`: The error code at the position of failure
+
+Example usage:
+
+```
+    await expectAssertionError(TokenFaucet.tests.withdraw(testParams), testContractAddress, 0)
+```
