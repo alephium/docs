@@ -27,15 +27,15 @@ fn foo(a: U256, b: Boolean) -> (U256, ByteVec, Address)
 
 ### Local Variables
 
-A function cannot have duplicate variable definitions, and the variable name in the function cannot be the same as the contract field name.
+In Ralph, local variables can be either immutable or mutable.
 
 ```rust
 fn foo() -> () {
-  // `a` is immutable, and it cannot be reassigned
+  // `a` is immutable and cannot be reassigned
   let a = 10
-  a = 9 // ERROR
+  a = 9 // ERROR: Cannot reassign
 
-  // `b` is mutable, and it can be reassigned
+  // `b` is mutable and can be reassigned
   let mut b = 10
   b = 9
 }
@@ -43,7 +43,11 @@ fn foo() -> () {
 fn bar() -> (U256, Boolean) {
   return 1, false
 }
+```
 
+You could also create multiple variables in one statement when calling functions that return multiple values.
+
+```rust
 fn baz() -> () {
   // Both `a` and `b` are immutable
   let (a, b) = bar()
@@ -54,9 +58,22 @@ fn baz() -> () {
 }
 ```
 
+For security reasons, variable shadowing is not allowed. The following example will fail to compile.
+
+```rust
+// This won't compile
+fn foo() -> () {
+  if (true) {
+    let a = 1
+  } else {
+    let a = 2
+  }
+}
+```
+
 #### Anonymous variables
 
-You could use anonymous variables to use the unused variables with underscore.
+You could use anonymous variables to ignore unused variables with underscore.
 
 ```rust
 let _ = foo()
