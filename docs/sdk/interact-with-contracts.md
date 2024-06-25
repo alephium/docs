@@ -134,6 +134,14 @@ script source code**, please refer to the [Load contract/script from
 artifacts](/dapps/tutorials/dapp-recipes#load-contractscript-from-artifacts)
 guide.
 
+## Fetching Contract State
+
+You can use `<contractInstance>.fetchState()` to get the current fields of the target contract.
+
+```typescript
+const state = await tokenFaucet.fetchState()
+```
+
 ## Contract Views
 
 Inside of the `TokenFaucet` typescript class, [Typescript
@@ -218,7 +226,7 @@ non-deterministic depending on the future state of the blockchain when
 the transaction is mined. `Events` are instead often used to gain insights
 into the contract activities.
 
-### Contract Transact Methods
+## Contract Transact Methods
 
 [Typescript SDK](/sdk/getting-started) also generates the `transact`
 methods for all functions in the `TokenFaucet` contract to simplify
