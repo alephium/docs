@@ -137,6 +137,48 @@ const buildTxResult = await builder.buildDeployContractTx(
 console.log('unsigned transaction', buildTxResult.unsignedTx)
 ```
 
+## Gas Estimation
+
+On Alephium, each transaction involves two key parameters related to gas: `gasAmount` and `gasPrice`.
+
+- **`gasAmount`**: This represents the amount of gas required for on-chain computation and storage.
+- **`gasPrice`**: This is the amount of ALPH (Alephium's native token) that the user is willing to pay per unit of gas consumed during transaction execution.
+
+### Specifying `gasPrice`
+
+Users can set the `gasPrice` as long as it meets the [minimum required amount](/dapps/constants). 
+
+### Estimating `gasAmount`
+
+Estimating `gasAmount` is an integral part of building the transaction. The full node can accurately estimate the gas required based on the current state of the blockchain. However, this estimation can sometimes fail if the contract state changes due to other pending transactions in the mempool.
+
+### Using `gasEstimationMultiplier` (Optional)
+
+To mitigate the potential estimation errors for dApp transactions, a parameter called `gasEstimationMultiplier` can be used to scale up the estimated gas amount, providing a buffer to handle gas requirement changes.
+
+### Example
+
+Here’s how you can use extract the estimated `gasAmount` and optionally use `gasEstimationMultiplier` in your code:
+
+```typescript
+import { unsignedTxCodec } from '@alephium/web3/codec';
+
+const buildTxResult = await builder.buildExecuteScriptTx(
+  {
+    signerAddress: account.address,
+    bytecode,
+    gasEstimationMultiplier: 1.05 // Scale up the estimated gas amount by 5%
+  },
+  senderPublicKey
+);
+
+const decodedTx = unsignedTxCodec.decodeApiUnsignedTx(hexToBinUnsafe(buildTxResult.unsignedTx));
+
+console.log(decodedTx.gasAmount); // This is the scaled-up gas amount used in the transaction
+```
+
+By following this approach, you can ensure that your transactions are more robust against estimation errors, providing a smoother and more reliable user experience on the Alephium network.
+
 ## Sign and Submit Transaction
 
 We need the [SignerProvider](./signer-provider.md) to sign and submit
@@ -154,6 +196,7 @@ const txResult = await signer.signAndSubmitUnsignedTx({
 })
 console.log('transaction id', txResult.txId)
 ```
+
 ## Query Transaction
 
 ### Transaction Status
