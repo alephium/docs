@@ -154,7 +154,7 @@ Estimating `gasAmount` is an integral part of building the transaction. The full
 
 ### Using `gasEstimationMultiplier` (Optional)
 
-To mitigate the potential estimation errors for dApp transactions, a parameter called `gasEstimationMultiplier` can be used to scale up the estimated gas amount, providing a buffer to handle gas requirement changes.
+To mitigate the potential estimation errors for dApp transactions, a parameter called `gasEstimationMultiplier` can be used to scale up the estimated gas amount, providing a buffer to handle gas requirement changes. Note that the multiplier must be between 1.0 and 2.0.
 
 ### Example
 
