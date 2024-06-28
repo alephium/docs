@@ -132,7 +132,7 @@ At this stage, the wallet has been created, a transaction has been built and dis
 
 And that’s it!
 
-You have successfully created and created and used a Multisig wallet to send a transaction on Alephium. For those who value both security and flexibility and need a way to share the funds ownership with others, a Multisig wallet is a powerful tool to have in your crypto arsenal. Remember, the future of finance is not just about owning digital assets but [securing them smartly](https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444).
+You have successfully created and used a Multisig wallet to send a transaction on Alephium. For those who value both security and flexibility and need a way to share the funds ownership with others, a Multisig wallet is a powerful tool to have in your crypto arsenal. Remember, the future of finance is not just about owning digital assets but [securing them smartly](https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444).
 
 *Let us know what you think, follow the evolution of the code on [Github](https://github.com/alephium), follow the news on [Twitter](https://twitter.com/alephium) & [Medium](https://medium.com/@alephium) or come interact onboard on [Discord](https://discord.com/invite/GEbcpajCJG) & [Telegram](https://t.me/alephiumgroup)!*
 

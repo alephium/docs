@@ -103,7 +103,7 @@ const config = {
               },
               {
                 label: "Get the wallet",
-                href: "https://github.com/alephium/desktop-wallet/releases/latest",
+                href: "https://github.com/alephium/alephium-frontend/releases/latest",
               },
               {
                 label: "Tokenomics",

@@ -319,7 +319,7 @@ In theory, yes. Predicting the future of technologies beyond 10, let alone 80 ye
 
 ### How is the maximum supply cap implemented?
 
-The maximum supply cap of 1 billion ALPH is an estimate. The protocol implements a cap on emissions based on a timestamp of approximately 80 years. This is because computing the sum of emissions for a shared chain within the protocol is computationally expensive. The emission rate is determined by the time and varies depending on the hash rate.  
+The maximum supply cap of 1 billion ALPH is an estimate. The protocol implements a cap on emissions based on a timestamp of approximately 80 years. This is because computing the sum of emissions for a sharded chain within the protocol is computationally expensive. The emission rate is determined by the time and varies depending on the hash rate.  
 It's worth noting that the 1 billion cap was estimated before the implementation of the improved [DAA](https://github.com/alephium/alephium/blob/master/docs/proposals/lemanDAA.md). With the current code, the actual cap on emission and maximum supply of ALPH is expected to be less than 1 billion in 80 years, even without taking into account the POLW mechanism's fee burning.
 
 ## Wallet
@@ -328,9 +328,11 @@ It's worth noting that the 1 billion cap was estimated before the implementation
 
 Alephium currently offers:
 
-- a [desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
+- a [desktop wallet](https://github.com/alephium/alephium-frontend/releases/latest)
 - a [web extension wallet](https://github.com/alephium/extension-wallet) available on [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
-- a [mobile wallet](https://github.com/alephium/mobile-wallet) is currently being worked on.
+- a mobile wallet:
+  - [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
+  - [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
 In addition to the official wallets, there are a number of third-party wallets available.
 
@@ -370,6 +372,8 @@ On Twitter, the following community accounts translate Alephium tweets:
 - [French](https://twitter.com/Alephiumfr)
 - [Bulgarian](https://twitter.com/alephiumbg)
 - [Indonesian](https://twitter.com/Alephium_id)
+- [Greek](https://x.com/AlephiumGreece)
+- [Arabic](https://x.com/AlephiumArabia)
 
 Translators are encouraged to use the following hashtag structure when they publish translated content: #Alephium\[i18n\]
 You can find translation on Medium, Twitter and other channels with the following hashtags:
@@ -388,9 +392,17 @@ On Telegram, the following community-managed groups are available:
 - [Vietnamese](https://t.me/alephiumvn)
 - [Russian](https://t.me/alephiumgroup_ru)
 - [Portugese](https://t.me/Alephium_pt)
-- [Turkish](https://t.me/alephiumturkiye)
+- [Turkish](https://t.me/AlephiumTurkey)
 - [Dutch](https://t.me/AlephiumgroupNL)
 - [Chinese](https://t.me/alephiumCN)
+- [Spanish](https://t.me/minerosAlephium)
+- [Indonesian](https://t.me/AlephiumID)
+- [French](https://t.me/Alephiumfr)
+- [Polish](https://t.me/alephiumPL)
+- [Greek](https://t.me/AlephiumGreece)
+- [Indian](https://t.me/AlephiumIndia)
+- [Italian](https://t.me/Alephium_it)
+- [Arabic](https://t.me/AlephiumArabia)
 
 ### What's new?
 

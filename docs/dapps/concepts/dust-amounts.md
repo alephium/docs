@@ -8,7 +8,7 @@ Alephium's unique
 [sUTXO](https://medium.com/@alephium/an-introduction-to-the-stateful-utxo-model-8de3b0f76749)
 model combines security of the UTXO model and the expressiveness of
 the account model. All assets in Alephium, including the native ALPH
-and other [tokes](/dapps/concepts/tokens), are managed by UTXOs. Even though
+and other [tokens](/dapps/concepts/tokens), are managed by UTXOs. Even though
 UTXO model brings many of the security benefits on to the table
 (e.g. see [Asset Permission
 System](http://localhost:3000/ralph/asset-permission-system)), it also

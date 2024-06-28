@@ -45,7 +45,7 @@ Block Time is the time needed to compute the transactions inside a block and sen
 
 Transactions are gathered inside a block and checked by the miners (or validators on PoS blockchains). Usually, the Block Time is impacted by the mining difficulty, as it is adjusted to reflect the network's computational capacity (hashrate) over a given time.
 
-Alephium network has a difficulty adjustment on every block and has an expected block time of **64 seconds**.
+Alephium network has a difficulty adjustment on every block and has an expected block time of **16 seconds**.
 
 Additional resources: [Block Time and Block Size Article](https://medium.com/@alephium/block-time-and-block-size-16e37292444f)
 

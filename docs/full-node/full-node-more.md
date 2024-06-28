@@ -49,7 +49,7 @@ Specify the `X-API-KEY` header, e.g.
 curl -H "X-API-KEY: ${your-api-key}" ${your-full-node-host}/infos/version
 ```
 
-## How to make the full node API publicly accessible ?
+## How to make the full node API publicly accessible?
 
 1. Set up your API key properly following the guide above.
 
@@ -59,7 +59,7 @@ curl -H "X-API-KEY: ${your-api-key}" ${your-full-node-host}/infos/version
 alephium.api.network-interface = "0.0.0.0"
 ```
 
-## How to access the Swagger UI of my full node on another computer in the same subnet ?
+## How to access the Swagger UI of my full node on another computer in the same subnet?
 
 1. Add the following to your `user.conf` and restart your full node.
 

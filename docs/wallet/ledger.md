@@ -122,7 +122,7 @@ All the steps here are the usual ones we have seen before using the extension wa
 
 ** 8 — Use the Ledger Device to interact with dApps in Alephium** 
 
-Now that you have a already sign a transaction with yout Ledger Device, it is time to connect it to a dApp. This process is also straightforward.
+Now that you have a already sign a transaction with your Ledger Device, it is time to connect it to a dApp. This process is also straightforward.
 
 Access the [Alephium DEX on Testnet](https://alephium.github.io/alephium-dex). Click in the “Connect Alephium” button on the top right. Select the extension wallet in the prompt and the Ledger account.
 
