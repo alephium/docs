@@ -372,6 +372,7 @@ On Twitter, the following community accounts translate Alephium tweets:
 - [French](https://twitter.com/Alephiumfr)
 - [Bulgarian](https://twitter.com/alephiumbg)
 - [Indonesian](https://twitter.com/Alephium_id)
+- [Greek](https://x.com/AlephiumGreece)
 
 Translators are encouraged to use the following hashtag structure when they publish translated content: #Alephium\[i18n\]
 You can find translation on Medium, Twitter and other channels with the following hashtags:
@@ -390,9 +391,17 @@ On Telegram, the following community-managed groups are available:
 - [Vietnamese](https://t.me/alephiumvn)
 - [Russian](https://t.me/alephiumgroup_ru)
 - [Portugese](https://t.me/Alephium_pt)
-- [Turkish](https://t.me/alephiumturkiye)
+- [Turkish](https://t.me/AlephiumTurkey)
 - [Dutch](https://t.me/AlephiumgroupNL)
 - [Chinese](https://t.me/alephiumCN)
+- [Spanish](https://t.me/minerosAlephium)
+- [Indonesian](https://t.me/AlephiumID)
+- [French](https://t.me/Alephiumfr)
+- [Polish](https://t.me/alephiumPL)
+- [Greek](https://t.me/AlephiumGreece)
+- [Indian](https://t.me/AlephiumIndia)
+- [Italian](https://t.me/Alephium_it)
+- [Arabic](https://t.me/AlephiumArabia)
 
 ### What's new?
 
