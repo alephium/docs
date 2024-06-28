@@ -29,7 +29,7 @@ By default, the Full Node App only has the P2P port (`39973` on Flux nodes) expo
 
 <img src={require("/img/flux2.png").default} alt="Update specifications"/>
 
-3. Configure the connectivity to expose the container port `12973`. In the screenshot below the port `42973` has been arbitrariliy choosen and will be exposing the API. Any other valid port would work. Compute the signing message and follow the signing process to broadcast the specifications update across the network.
+3. Configure the connectivity to expose the container port `12973`. In the screenshot below the port `42973` has been arbitrarily choosen and will be exposing the API. Any other valid port would work. Compute the signing message and follow the signing process to broadcast the specifications update across the network.
 
 <img src={require("/img/flux3.png").default} alt="Configure connectivity"/>
 

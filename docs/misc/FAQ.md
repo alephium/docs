@@ -319,7 +319,7 @@ In theory, yes. Predicting the future of technologies beyond 10, let alone 80 ye
 
 ### How is the maximum supply cap implemented?
 
-The maximum supply cap of 1 billion ALPH is an estimate. The protocol implements a cap on emissions based on a timestamp of approximately 80 years. This is because computing the sum of emissions for a shared chain within the protocol is computationally expensive. The emission rate is determined by the time and varies depending on the hash rate.  
+The maximum supply cap of 1 billion ALPH is an estimate. The protocol implements a cap on emissions based on a timestamp of approximately 80 years. This is because computing the sum of emissions for a sharded chain within the protocol is computationally expensive. The emission rate is determined by the time and varies depending on the hash rate.  
 It's worth noting that the 1 billion cap was estimated before the implementation of the improved [DAA](https://github.com/alephium/alephium/blob/master/docs/proposals/lemanDAA.md). With the current code, the actual cap on emission and maximum supply of ALPH is expected to be less than 1 billion in 80 years, even without taking into account the POLW mechanism's fee burning.
 
 ## Wallet

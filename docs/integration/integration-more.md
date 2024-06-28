@@ -139,7 +139,7 @@ Alephium is a UTXO-based blockchain, recharging can be avoided by ensuring the s
 
 You can get the current height using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Blockflow/getBlockflowChain-info)`, you need to replace the `fromGroup` and `toGroup` params as needed, which can be any value of [0, 1, 2, 3].
 
-### What mechanism is in place to protect Alephium against 51% attack or to avoid chain forking ?
+### What mechanism is in place to protect Alephium against 51% attack or to avoid chain forking?
 
 It’s recommended to wait for 110 block confirmations (about 2 hours currently) for each deposit as it’s a PoW chain.
 Alephium implemented the same 51% attack protection as [Ravencoin](https://tronblack.medium.com/ravencoin-building-the-immune-system-23d077b65f71) and other PoW coins when the number of reorg is larger than 100.
