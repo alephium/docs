@@ -330,7 +330,9 @@ Alephium currently offers:
 
 - a [desktop wallet](https://github.com/alephium/alephium-frontend/releases/latest)
 - a [web extension wallet](https://github.com/alephium/extension-wallet) available on [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
-- a [mobile wallet](https://github.com/alephium/mobile-wallet) is currently being worked on.
+- a mobile wallet:
+  - [Android](https://play.google.com/store/apps/details?id=org.alephium.wallet)
+  - [Apple](https://apps.apple.com/us/app/alephium-wallet/id6469043072)
 
 In addition to the official wallets, there are a number of third-party wallets available.
 
