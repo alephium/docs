@@ -328,7 +328,7 @@ It's worth noting that the 1 billion cap was estimated before the implementation
 
 Alephium currently offers:
 
-- a [desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
+- a [desktop wallet](https://github.com/alephium/alephium-frontend/releases/latest)
 - a [web extension wallet](https://github.com/alephium/extension-wallet) available on [Chrome](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj) and [Firefox](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
 - a [mobile wallet](https://github.com/alephium/mobile-wallet) is currently being worked on.
 

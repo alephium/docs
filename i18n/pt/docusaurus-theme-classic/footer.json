@@ -33,7 +33,7 @@
   },
   "link.item.label.Get the wallet": {
     "message": "Get the wallet",
-    "description": "The label of footer link with label=Get the wallet linking to https://github.com/alephium/desktop-wallet/releases/latest"
+    "description": "The label of footer link with label=Get the wallet linking to https://github.com/alephium/alephium-frontend/releases/latest"
   },
   "link.item.label.Tokenomics": {
     "message": "Tokenomics",

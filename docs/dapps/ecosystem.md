@@ -27,7 +27,7 @@ sidebar_label: Ecosystem
 - [Vim plugin ](https://github.com/tdroxler/ralph.vim)
 
 ## Wallets
-- [Desktop wallet](https://github.com/alephium/desktop-wallet/releases/latest)
+- [Desktop wallet](https://github.com/alephium/alephium-frontend/releases/latest)
 - Extension wallet:
   - [Google Chrome Store](https://chrome.google.com/webstore/detail/alephium-extension-wallet/gdokollfhmnbfckbobkdbakhilldkhcj)
   - [Firefox Store](https://addons.mozilla.org/en-US/firefox/addon/alephiumextensionwallet/)
