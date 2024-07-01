@@ -50,7 +50,7 @@ By default, the wallet will be connected to the Alephium public node. Should you
 
 <img src={require("/img/gs9.png").default} alt="Prompt to enter destination address and amount of transaction" width="auto" style={{ height: '200px' }} />
 
-1. To send ALPH, simply click on the `Send` button in the left menu.
+1. To send ALPH, simply click on the `Send` button.
 
 2. Enter the amount of ALPH (e.g. 100) and recipient's address.
 
