@@ -325,10 +325,10 @@ Contract Foo() {
 @using(preapprovedAssets = false)
 // `TxScript` fields are more like function parameters, and these
 // fields need to be specified every time the script is executed.
-TxScript Main(fooId: ByteVec) {
+TxScript Main(foo: Foo) {
   // The body of `TxScript` consists of statements
   bar()
-  Foo(fooId).foo(0)
+  foo.foo(0)
 
   // You can also define functions in `TxScript`
   fn bar() -> () {
@@ -336,6 +336,25 @@ TxScript Main(fooId: ByteVec) {
   }
 }
 ```
+
+### Implicit and Explicit Main Function
+
+The `main` function in `TxScript` serves as the entry point for contract code execution. TxScript supports both implicit and explicit definitions of the `main` function:
+
+1. Implicit definition: When Ralph statements are present in the script body,, the compiler automatically generates a `main` function for the `TxScript`.
+2. Explicit definition:
+
+```rust
+TxScript Main(foo: Foo) {
+  @using(preapprovedAssets = false)
+  pub fn main() -> () {
+    bar()
+    foo.foo(0)
+  }
+}
+```
+
+In an explicit definition, the `main` function cannot accept parameters directly. If parameters are needed, they should be passed as fields of the `TxScript`.
 
 ## Gasless Transaction
 
