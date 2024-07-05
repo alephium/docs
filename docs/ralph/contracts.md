@@ -337,10 +337,12 @@ TxScript Main(foo: Foo) {
 }
 ```
 
-The `main` function of `TxScript` serves as the entry point for contract code execution. It supports both explicit and implicit definitions of the `main` function:
+### Implicit and Explicit Main Function
 
-1. Implicit definition of the `main` function, in the example above, the compiler automatically generates a `main` function for the `TxScript`.
-2. Explicit definition of the `main` function:
+The `main` function in `TxScript` serves as the entry point for contract code execution. TxScript supports both implicit and explicit definitions of the `main` function:
+
+1. Implicit definition: When Ralph statements are present in the script body,, the compiler automatically generates a `main` function for the `TxScript`.
+2. Explicit definition:
 
 ```rust
 TxScript Main(foo: Foo) {
@@ -352,7 +354,7 @@ TxScript Main(foo: Foo) {
 }
 ```
 
-The explicitly defined `main` function cannot have parameters. If you need to specify parameters, you can pass them as parameters of the `TxScript`.
+In an explicit definition, the `main` function cannot accept parameters directly. If parameters are needed, they should be passed as fields of the `TxScript`.
 
 ## Gasless Transaction
 

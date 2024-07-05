@@ -105,6 +105,8 @@ the contract states: `getTotalSupply`, `getSymbol`, `getName`,
 `getDecimals` and `balance`. It also has a function called `withdraw`,
 which not only updates the contract state, but also transfers assets.
 
+## Deploying Contracts
+
 After `TokenFaucet` contract is
 [compiled](/dapps/tutorials/quick-start#compile-your-contract), a
 corresponding Typescript class is generated. We can get an instance of
@@ -142,44 +144,11 @@ You can use `<contractInstance>.fetchState()` to get the current fields of the t
 const state = await tokenFaucet.fetchState()
 ```
 
-## Contract Views
+## Interact With Contracts
 
-Inside of the `TokenFaucet` typescript class, [Typescript
-SDK](/sdk/getting-started) generates the read-only `view` methods for
-all functions in the `TokenFaucet` contract. `view` methods do not
-update the blockchan state, they can be called just like regular
-typescript functions:
+We can interact with contracts either by sending transactions or by calling contract methods locally without publishing anything onchain.
 
-```typescript
-const getNameResult = await tokenFaucet.view.getName()
-console.log(`name: ${hexToString(getNameResult.returns)}`)  // name: TokenFaucet
-
-const getDecimalsResult = await tokenFaucet.view.getDecimals()
-console.log(`decimals: ${getDecimalsResult.returns)}`)      // decimals: 18
-```
-
-Note that results of the `view` methods are returned immediately and
-there is no gas or signatures required.
-
-[Typescript SDK](/sdk/getting-started) also generates code for calling
-multiple functions at the same time, reducing the number of network
-requests:
-
-```typescript
-const result = await tokenFaucet.multicall({
-  getSymbol: {},
-  getName: {},
-  getDecimals: {},
-  getTotalSupply: {}
-})
-
-console.log(`name: ${hexToString(result.getName.returns)}`)       // name: TokenFaucet
-console.log(`symbol: ${hexToString(result.getSymbol.returns)}`)   // symbol: TF
-console.log(`decimals: ${result.getDecimals.returns}`)            // decimals: 18
-console.log(`total supply: ${result.getTotalSupply.returns}`)     // total supply: 10
-```
-
-## TxScript Transactions
+### TxScript Transactions
 
 `TokenFaucet` contract also has a function called `withdraw`, which
 transfers the token from the faucet to the caller and updates the
@@ -226,9 +195,10 @@ non-deterministic depending on the future state of the blockchain when
 the transaction is mined. `Events` are instead often used to gain insights
 into the contract activities.
 
-## Contract Transact Methods
+### Transact Methods
 
-[Typescript SDK](/sdk/getting-started) also generates the `transact`
+Inside of the `TokenFaucet` typescript class, [Typescript
+SDK](/sdk/getting-started) generates the `transact`
 methods for all functions in the `TokenFaucet` contract to simplify
 the scenario where user wants to perform a `TxScript` transaction by
 only calling a function in the contract. For example, the following
@@ -247,6 +217,90 @@ Under the hood, [Typescript SDK](/sdk/getting-started) automatically
 generates bytecode for the corresponding `TxScript` and executes
 it. Note that `TxScript` is still required for more complicated
 scenarios.
+
+### View Methods
+
+[Typescript SDK](/sdk/getting-started) also generates the read-only `view` methods for
+all functions in the `TokenFaucet` contract. `view` methods do not
+update the blockchain state, they can be called just like regular
+typescript functions:
+
+```typescript
+const getNameResult = await tokenFaucet.view.getName()
+console.log(`name: ${hexToString(getNameResult.returns)}`)  // name: TokenFaucet
+
+const getDecimalsResult = await tokenFaucet.view.getDecimals()
+console.log(`decimals: ${getDecimalsResult.returns}`)      // decimals: 18
+```
+
+Note that results of the `view` methods are returned immediately and
+there is no gas or signatures required.
+
+[Typescript SDK](/sdk/getting-started) also generates code for calling
+multiple functions at the same time, reducing the number of network
+requests:
+
+```typescript
+const result = await tokenFaucet.multicall({
+  getSymbol: {},
+  getName: {},
+  getDecimals: {},
+  getTotalSupply: {}
+})
+
+console.log(`name: ${hexToString(result.getName.returns)}`)       // name: TokenFaucet
+console.log(`symbol: ${hexToString(result.getSymbol.returns)}`)   // symbol: TF
+console.log(`decimals: ${result.getDecimals.returns}`)            // decimals: 18
+console.log(`total supply: ${result.getTotalSupply.returns}`)     // total supply: 10
+```
+
+### Call TxScript Locally
+
+The `Call TxScript` feature allows interaction with smart contracts on Alephium without consuming gas and modifying the on-chain state. Instead, it executes scripts and returns updated contract states and the return values of the `TxScript` entry function.
+
+```rust
+Contract Foo(mut value: U256) {
+  pub fn foo() -> U256 {
+    value = value + 1
+    return value
+  }
+}
+
+Contract Bar(value: ByteVec) {
+  pub fn bar() -> ByteVec {
+    return value
+  }
+}
+
+// This TxScript uses explicit main function. In most cases, the main functions are implicit
+TxScript Main(foo: Foo, bar: Bar) {
+  pub fn main() -> (U256, ByteVec) {
+    return foo.foo(), bar.bar()
+  }
+}
+```
+
+Implicit `main` functions do not allow for return values, so an explicit definition of the `main` function is required here.
+More info about `main` function can be found [here](/ralph/contracts#implicit-and-explicit-main-function).
+
+You can use the generated `TypeScript` code to call `TxScript` locally:
+
+```typescript
+import { getSigner } from '@alephium/web3-test'
+
+const signer = await getSigner()
+const deployFooResult = await Foo.deploy(signer, { initialFields: { value: 0n } })
+const deployBarResult = await Bar.deploy(signer, { initialFields: { value: '0011' } })
+const fooInstance = deployFooResult.contractInstance
+const barInstance = deployBarResult.contractInstance
+const callResult = await MainForCall.call({
+  initialFields: { foo: fooInstance.contractId, bar: barInstance.contractId },
+  interestedContracts: [ fooInstance.address, barInstance.address ]
+})
+expect(callResult.contracts[0].fields.value).toEqual(1n)
+expect(callResult.contracts[1].fields.value).toEqual('0011')
+expect(callResult.returns).toEqual([0n, '0011'])
+```
 
 ## Events Subscription
 
