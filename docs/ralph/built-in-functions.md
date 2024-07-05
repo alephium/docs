@@ -859,6 +859,20 @@ Returns the group of the input address.
 
 ---
 
+### len
+
+```Rust
+fn len!(array) -> (U256)
+```
+
+Get the length of an array
+
+> @param **an** *array*
+>
+> @returns *the length of an array*
+
+---
+
 ### nullContractAddress
 
 ```Rust
