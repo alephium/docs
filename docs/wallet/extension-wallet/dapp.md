@@ -13,7 +13,7 @@ transactions, etc.
 
 ### Basic Setup
 
-To detect the `window.alephiumProviders.alephium` object, we recommand
+To detect the `window.alephiumProviders.alephium` object, we recommend
 to use the
 [@alephium/get-extension-wallet](https://www.npmjs.com/package/@alephium/get-extension-wallet)
 package.
