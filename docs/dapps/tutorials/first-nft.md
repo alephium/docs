@@ -248,8 +248,8 @@ const collectionMetadata = await web3.getCurrentNodeProvider().fetchNFTCollectio
 console.log("NFT Collection URI, totalSupply", collectionMetadata.collectionUri, collectionMetadata.totalSupply)
 
 // NFT Metadata
-const nftMetadata = await web3.getCurrentNodeProvider().fetchNFTMetadata(nft.contractId)
-console.log("NFT Token URI, collection address", nftMetadata.tokenUri, nftMetadata.collectionAddress)
+const nftMetadata = await web3.getCurrentNodeProvider().fetchNFTMetaData(address)
+console.log('NFT Token URI, collection address', nftMetadata.tokenUri, nftMetadata.collectionId)
 ```
 
 These interfaces also enable SDK to guess their types, so that dApps
