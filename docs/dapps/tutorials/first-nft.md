@@ -59,7 +59,7 @@ Contract AwesomeNFT(
 The NFT metadata pointed to by the token URI should return a json file
 with the following schema:
 
-```json
+```typescript
 {
     "title": "NFT Metadata",
     "type": "object",
@@ -70,15 +70,58 @@ with the following schema:
         },
         "description": {
             "type": "string",
-            "description": "General description of the NFT"
+            "description": "General description of the NFT",
+            "nullable": true
         },
         "image": {
             "type": "string",
             "description": "A URI to the image that represents the NFT"
+        },
+        "attributes": {
+          "type": "array",
+          "description": "An array of attributes for the NFT",
+          "items": {
+            "type": "object",
+            "properties": {
+              "trait_type": {
+                "type": "string",
+                "description": "The type of trait"
+              },
+              "value": {
+                "type": ["string", "number", "boolean"],
+                "description": "The value of the trait"
+              }
+            }
+          },
+          "nullable": true
         }
     }
 }
 ```
+
+Here is a concrete example of the NFT metadata:
+
+```typescript
+{
+  "name": "#0001",
+  "image": "https://ipfs.io/ipfs/QmaEdvjx5gRBU3m6jxJT4DDc4DDZsbcKLqgS6rmeqHH9pq/0002.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Aged leather"
+    },
+    {
+      "trait_type": "Intricate Processes",
+      "value": "deep texture"
+    },
+    {
+      "trait_type": "Behavioral Patterns",
+      "value": "worn patina"
+    }
+  ]
+}
+```
+
 That is all for creating a NFT contract!
 
 ## Create NFT collection contract
@@ -162,7 +205,7 @@ The `INFTCollection` interface defines four methods:
 The metadata of the NFT collection pointed to by collection URI should
 return a json file with the following schema:
 
-```json
+```typescript
 {
     "title": "NFT Collection Metadata",
     "type": "object",
@@ -180,6 +223,16 @@ return a json file with the following schema:
             "description": "A URI to the image that represents the NFT collection"
         }
     }
+}
+```
+
+Here is a concrete example of the NFT collection metadata:
+
+```typescript
+{
+  "name": "ALEPHIUM EVERYWHERE",
+  "description": "ALPH is everywhere,\nWill you know how to find its trace?\nIn your heart, it’s there.",
+  "image": "https://alephium-nft.infura-ipfs.io/ipfs/Qmb8kEPPW4E17nzyZ691bgQAMbMEgRcNZxuH3wXgByfzvt"
 }
 ```
 
