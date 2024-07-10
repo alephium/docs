@@ -124,6 +124,8 @@ Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
 🛠️ DevX Series lsp edition - https://twitter.com/alephium/status/1780265948790002132
 
+🛠️ DevX Series - Struct - https://x.com/alephium/status/1802758970417061946
+
 🧰 The Tools Thread - https://vxtwitter.com/alephium/status/1774812802265559313
 
 🚨 Dev Tool Alert🚨 - https://vxtwitter.com/alephium/status/1758526298539098233
@@ -143,6 +145,8 @@ Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter
 Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
 
 Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
+
+🛠️ Tech Series - Merkle tries! 🌲 - https://x.com/alephium/status/1782440860631888065
 
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
 
@@ -174,8 +178,6 @@ NFTs on Alephium #1 - https://twitter.com/alephium/status/1648310497756999680
 
 NFTs on Alephium #2 - https://twitter.com/alephium/status/1673657929831190528
 
-Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
-
 Security checklist - https://twitter.com/alephium/status/1785691530566770864
 
 Beware of Scams #1 - https://twitter.com/alephium/status/1777716807539032430?t=LEZ6Dgls39JF4XibDjYSqw&s=19
@@ -184,15 +186,17 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 
 ⚠️ About the token list - https://twitter.com/alephium/status/1779882118241456175
 
-You can access the whole list of Twitter Threads here: https://twitter.com/alephium/status/1648310455725883393
+💣 Hashrate Series . Proof of Less Work - https://x.com/alephium/status/1809222847027695667
 
-## Monthly Retrospective
-
-Jun/23 "June was a Busy Month!" Let's look at what happened on alephium! - https://twitter.com/alephium/status/1674785579123507202?s=20
-
-Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitter.com/alephium/status/1686349117499604992?s=20
+💣 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
 
 ## Ecosystem Updates
+
+🧬 Weekly #EcosystemUpdate - 04/07/24 - https://x.com/alephium/status/1808884404095435029
+
+🧬 Weekly #EcosystemUpdate - 18/06/24 - https://x.com/alephium/status/1803114814644027702 
+
+🧬 Weekly #EcosystemUpdate - 10/06/24 - https://x.com/alephium/status/1800221759725248544
 
 🧬 Weekly #EcosystemUpdate - 03/06/24 - https://x.com/alephium/status/1797631025071505690
 
@@ -217,6 +221,12 @@ Jul/23 "Today is Swiss National Day" See What Happened in July! - https://twitte
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+Jul/24 - Monsieur TK X Space - https://x.com/MiningTk/status/1810369767444017311
+
+Jul/24 - Web3 Global Talks X Space - https://x.com/i/spaces/1ZkJzjZjNBqJv
+
+Jun/24 - Alephium Gazette X Space - https://x.com/AlephiumGazette/status/1800501994446266863
 
 May/24 - Nym Community call - https://www.youtube.com/watch?v=7AA7xJzEEuY
 
@@ -299,6 +309,8 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #2 - Rhone 
 
+Jun/24 Rhône Network Upgrade Activation - https://medium.com/@alephium/rh%C3%B4ne-network-upgrade-activated-cbeb298585fe
+
 May/24 Rhône Network Upgrade Activation Date is Announced! - https://x.com/alephium/status/1796164992410263987
 
 May/24 Rhône Network Upgrade 🗞️ #7 - Final Testnet Edition! - https://x.com/alephium/status/1795460036342227173
@@ -338,6 +350,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+May/24 - Rhône Network Upgrade Activation - https://x.com/alephium/status/1800924385890685016
 
 May/24 - 6 months of bridging recap! - https://x.com/alephium/status/1788921145720467888
 
@@ -426,7 +440,7 @@ May/19 Initial description - First article -  https://medium.com/@alephium/aleph
 
 ## Hackathon 
 
-Hackathon Website : https://alephium.org/hackathon/
+Hackathon Website: https://alephium.org/hackathon/
 
 Hackathon winners - https://medium.com/@alephium/hackathon-winners-announced-68d55711b99d
 
