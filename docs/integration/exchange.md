@@ -330,7 +330,7 @@ To get the group of an address, you can refer to the web3 SDK function [groupOfA
 
 ### Gas computation
 
-Alephium's transaction fees are determined by the amount of gas allocated and the gas price. A maximum gas amount of 625,000 can be assigned to each transaction.
+Alephium's transaction fees are determined by the amount of gas allocated and the gas price. A maximum gas amount of 5,000,000 can be assigned to each transaction.
 The default gas price is set at `1e11` attoALPH per gas unit. When conducting a simple transfer transaction, the gas amount can be computed using the following pseudo code:
 
 ```Typescript
