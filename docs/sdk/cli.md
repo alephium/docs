@@ -142,7 +142,7 @@ In most cases, we only need to specify the `networks` config. The other optional
 After project is created, we can use the `compile` command to compile contract code, the `-n` parameter is used to specify the network type:
 
 ```shell
-npx @alephium/cli compile -n devent
+npx @alephium/cli compile -n devnet
 ```
 
 The `compile` command compiles contract code, saves the compiled artifacts, and generates `TypeScript` code based on the artifacts. We can use the generated `TypeScript` code to [interact with the contracts](./interact-with-contracts.md).
