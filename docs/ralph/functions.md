@@ -286,7 +286,7 @@ Contract Foo() {
   // Function `foo` uses the contract assets, and it will transfer 1 alph to the caller
   @using(assetsInContract = true)
   fn foo(caller: Address) -> () {
-    transferAlphFromSelf!(caler, 1 alph)
+    transferAlphFromSelf!(caller, 1 alph)
   }
 
   // Function `bar` must NOT be annotated with `@using(assetsInContract = true)`
