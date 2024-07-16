@@ -663,6 +663,16 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
+This Upgrade makes Alephium One of THE BEST L1 - https://www.youtube.com/watch?v=LB14NUZyVLI
+
+Comment fonctionne le modèle de sharding d'Alephium (ALPH)? - https://coinacademy.fr/academie/sharding-alephium-alph/
+
+What Is Alephium, the Rhône Upgrade, and the Alephium Ecosystem | CoinGecko - https://www.coingecko.com/learn/what-is-alephium-rhone-upgrade-alephium-ecosystem?utm_source=twitter&utm_medium=social 
+
+Qu'est-ce qu'Alephium (ALPH) ? Découvrez cette blockchain à la croisée de Bitcoin et d'Ethereum - https://cryptoast.fr/alephium-alph-blocckhain-croisee-bitcoin-ethereum/
+
+Alephium, une blockchain suisse qui fait parler d’elle - Le Temps - https://www.letemps.ch/cyber/alephium-une-blockchain-suisse-qui-fait-parler-d-elle
+
 Alephium’s Game-Changing Tech and Vision for a Decentralized World - https://beincrypto.com/alephium-tech-vision-for-decentralized-world/
 
 Alephium: Eine sichere und skalierbare Layer 1 Blockchain - https://www.btc-echo.de/news/alephium-eine-sichere-und-skalierbare-layer-1-blockchain-sponsored-178777/
