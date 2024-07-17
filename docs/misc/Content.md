@@ -44,7 +44,7 @@ Medium - https://medium.com/@alephium
 
 Linkedin - https://www.linkedin.com/company/74304166
 
-## Tech Series
+## Our tech explained
 
 ### Stateful UTXO
 
@@ -66,12 +66,18 @@ An Introduction to Stateful UTXO - https://twitter.com/alephium/status/169000428
 
 An Introduction to Stateful UTXO - https://twitter.com/alephium/status/1692177660389314905
 
+💡 Understanding the sUTXO model - https://vxtwitter.com/alephium/status/1749827565634855028
+
 ### Proof-of-Less-Work
 Proof-of-Less-Work - https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
 
 Proof-of-Less-Work - AMA - https://medium.com/@alephium/tech-talk-1-proof-of-less-work-ama-3d5afbf78c71
 
 Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
+
+Short explainer - https://x.com/alephium/status/1792609476551557392
+
+💣 Hashrate Series - https://x.com/alephium/status/1809222847027695667
 
 ### Alphred Virtual Machine
 Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
@@ -106,9 +112,9 @@ Asset Permission System - https://medium.com/@alephium/alephiums-aps-eliminating
 
 Asset Permission System - https://twitter.com/alephium/status/1673354565801091074
 
-## Explainer Series
+Asset Permission System - https://x.com/alephium/status/1812125163489788239
 
-💡 Understanding the sUTXO model - https://vxtwitter.com/alephium/status/1749827565634855028
+## Other
 
 Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
 
@@ -186,8 +192,6 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 
 ⚠️ About the token list - https://twitter.com/alephium/status/1779882118241456175
 
-💣 Hashrate Series . Proof of Less Work - https://x.com/alephium/status/1809222847027695667
-
 💣 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
 
 ## Ecosystem Updates
@@ -221,6 +225,8 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+Jul/24 - DXB Crypto AMA - https://www.youtube.com/live/txxKGq1oT6s
 
 Jul/24 - Monsieur TK X Space - https://x.com/MiningTk/status/1810369767444017311
 
