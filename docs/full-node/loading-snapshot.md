@@ -60,14 +60,3 @@ docker run -p 39973:39973 -p 127.0.0.1:12973:12973 \
   -v ${ALEPHIUM_HOME}:/alephium-home/.alephium \
   -e ALEPHIUM_NETWORK=${ALEPHIUM_NETWORK} touilleio/alephium-standalone:latest
 ```
-
-# Explorer database
-
-Alephium [archives repository](https://archives.alephium.org) also
-contain the snapshots for explorer backend database. The snapshot
-can be loaded in the postgresql database of the explorer backend at the first run, using the command below:
-
-```shell
-ALEPHIUM_NETWORK=mainnet
-curl -L $(curl -L -s https://archives.alephium.org/archives/${ALEPHIUM_NETWORK}/explorer-db/_latest.txt) | gunzip -c | psql -U $pg_user -d $database
-```
