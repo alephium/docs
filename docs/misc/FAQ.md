@@ -78,7 +78,7 @@ Alephium has a [DEX prototype](https://alephium.github.io/alephium-dex/#/swap) r
 
 The [DEX contracts](https://github.com/alephium/alephium-dex/tree/master/contracts) have been thoroughly tested by the core developers, making them reliable and efficient. They can easily be forked and used for projects.
 
-Alephium’s DeFi is continuously expanding and you can check all deployed DEXes on [Coingecko ](https://www.coingecko.com/en/coins/alephium) and on [Alph.land](alph.land).
+Alephium’s DeFi is continuously expanding and you can check all deployed DEXes on [Coingecko](https://www.coingecko.com/en/coins/alephium) and on [Alph.land](alph.land).
 
 
 ### [Is there any dApps on Alephium?](https://docs.alephium.org/frequently-asked-questions#is-there-any-dapps-on-alephium)
