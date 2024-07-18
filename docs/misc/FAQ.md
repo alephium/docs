@@ -58,7 +58,7 @@ In addition, you can find the wrapped ALPH/erc20 holders at [etherscan.io](https
 Currently, the minimum transaction fee is set at `0.002` ALPH to prevent network DoS attacks. In the future, this minimum fee can be lowered, with the lowest possible minimum transaction fee being `0.00000000000001` ALPH on Alephium. The exact fee charged depends on the number of inputs (UTXOs) and signers involved in the transaction.
 
 
-### How many Transactions Per Second (TPS) are possible on Alephium?](https://docs.alephium.org/frequently-asked-questions#how-many-transactions-per-second-tps-are-possible-on-alephium)
+### [How many Transactions Per Second (TPS) are possible on Alephium?](https://docs.alephium.org/frequently-asked-questions#how-many-transactions-per-second-tps-are-possible-on-alephium)
 
 Alephium Mainnet can currently support over 400 TPS with 16 shards. It can scale up over 10,000+ TPS by increasing the number of shards as necessary.
 Read more about [the concept of TPS](https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39).
