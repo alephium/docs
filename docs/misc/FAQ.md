@@ -39,8 +39,8 @@ It is calculated according to [CoinMarketCap's methodology](https://support.coin
 
 The circulating supply is equal to number existing ALPH minus:
 
-* The full balance (locked & unlocked) of private sale participants, project and team-controlled addresses. According to CMC: _"tokens are generally only counted as circulating after they leave the original reserve wallet (i.e. outbound transfers are more representative of an intent to bring the coin into circulation rather than a mere unlock)"_.
-* All locked ALPH from other addresses.
+- The full balance (locked & unlocked) of private sale participants, project and team-controlled addresses. According to CMC: _"tokens are generally only counted as circulating after they leave the original reserve wallet (i.e. outbound transfers are more representative of an intent to bring the coin into circulation rather than a mere unlock)"_.
+- All locked ALPH from other addresses.
 
 ### [How can I check wallets balances and which are the top holding addresses?](https://docs.alephium.org/frequently-asked-questions#how-can-i-check-wallets-balances-and-which-are-the-top-holding-addresses)
 
