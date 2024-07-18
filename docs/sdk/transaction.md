@@ -94,18 +94,33 @@ console.log('unsigned transaction', buildTxResult.unsignedTx)
 
 ### Execute Script Transaction
 
-Let's build an unsigned transaction that executes `TxScript`. After
-your `TxScript` is
-[compiled](/dapps/tutorials/quick-start#compile-your-contract), its
-bytecode can be obtained by using the
-[Script.buildByteCodeToDeploy](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/contract/contract.ts#L712-L719)
-function. The following example assumes the `bytecode` is already
-created:
+Let's build an unsigned transaction to execute a transaction script.
+
+Once your `TxScript` is [compiled](/dapps/tutorials/quick-start#compile-your-contract), its
+bytecode can be returned by calling the
+[buildByteCodeToDeploy](https://github.com/alephium/alephium-web3/blob/master/packages/web3/src/contract/contract.ts#L712-L719)
+function. For instance, consider the following `TxScript`:
+
+```
+TxScript LockAlph(amount: U256) {
+   let caller = callerAddress!()
+   lockApprovedAssets!{caller -> ALPH: amount}(caller, blockTimeStamp!() + 86400000)
+}
+```
+
+You can obtain the bytecode of `LockAlph` by:
+
+```typescript
+const bytecode = LockAlph.script.buildByteCodeToDeploy({ amount: ONE_ALPH })
+```
+
+After obtaining the bytecode for your `TxScript`, you can create an
+unsigned transaction as follows:
 
 ```typescript
 const senderAddress = '1DrDyTr9RpRsQnDnXo2YRiPzPW4ooHX5LLoqXrqfMrpQH'
 const senderPublicKey = '0381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b0'
-const bytecode = '010103000000040c0c1440205f3a18d50689521ddc9eec9472976c5495301169ae2d21af662e0836fb87f6ff0100'
+const bytecode = '0101030001000ab41700160013c40de0b6b3a7640000a21600561385265c002abe'
 const buildTxResult = await builder.buildExecuteScriptTx(
   {
     signerAddress: account.address,
