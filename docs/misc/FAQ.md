@@ -174,7 +174,7 @@ No, Alephium is designed to be ASIC friendly, just like Bitcoin. Maintaining ASI
 
 ### [Which miners can I use to mine ALPH?](https://docs.alephium.org/frequently-asked-questions#which-miners-can-i-use-to-mine-alph)
 
-Below is a list of known Alephium miners. Please note the list may be incomplete as it is difficult to keep track of new miners coming out, feel free to submit a Pull Re[quest to add to the list.
+Below is a list of known Alephium miners. Please note the list may be incomplete as it is difficult to keep track of new miners coming out, feel free to submit a Pull Request to add to the list.
 
 - [https://www.bzminer.com/guides/how-to-mine-alephium/](https://www.bzminer.com/guides/how-to-mine-alephium/)
 - [https://lolminer.site/](https://lolminer.site/) [https://github.com/Lolliedieb/lolMiner-releases](https://github.com/Lolliedieb/lolMiner-releases)
@@ -366,6 +366,24 @@ On Twitter, the following community accounts translate Alephium tweets:
 - [Arabic](https://x.com/AlephiumArabia)
 - [Italian](https://x.com/Alephium_it)
 
+Translators are encouraged to use the following hashtag structure when they publish translated content: #Alephium[i18n] You can find translation on Medium, Twitter and other channels with the following hashtags:
+
+- Spanish: "#AlephiumES"
+- Portuguese: "#AlephiumPT"
+- French: "#AlephiumFR"
+- German: "#AlephiumDE"
+- Bulgarian: "#AlephiumBG"
+- Arabic: “#AlephiumAR”
+- Vietnamese: “#AlephiumVN”
+- Italian: “#AlephiumIT”
+- Turkish: “#AlephiumTR”
+- Greek: “#AlephiumGR”
+- Chinese: “#AlephiumCN”
+- Polish: “#AlephiumPL”
+- Indonesian: “#AlephiumID”
+- Russian: “#AlephiumRU”
+- Dutch: “#AlephiumNL”
+
 On its [Discord server](https://alephium.org/discord), Alephium has dedicated international channels.
 
 On Telegram, the following community-managed groups are available:
@@ -479,7 +497,7 @@ _Browser Extension:_
 4. Simply click on “Create new Alephium Account”.
 5. Click “Connect”.
 
-    _Alternatively:_
+ _Alternatively:_
 
 1. Click on your account TOP LEFT of your Extension Wallet.
 2. Click on the “+” icon TOP RIGHT.
