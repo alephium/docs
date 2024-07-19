@@ -366,24 +366,6 @@ On Twitter, the following community accounts translate Alephium tweets:
 - [Arabic](https://x.com/AlephiumArabia)
 - [Italian](https://x.com/Alephium_it)
 
-Translators are encouraged to use the following hashtag structure when they publish translated content: #Alephium[i18n] You can find translation on Medium, Twitter and other channels with the following hashtags:
-
-- Spanish: "#AlephiumES"
-- Portuguese: "#AlephiumPT"
-- French: "#AlephiumFR"
-- German: "#AlephiumDE"
-- Bulgarian: "#AlephiumBG"
-- Arabic: “#AlephiumAR”
-- Vietnamese: “#AlephiumVN”
-- Italian: “#AlephiumIT”
-- Turkish: “#AlephiumTR”
-- Greek: “#AlephiumGR”
-- Chinese: “#AlephiumCN”
-- Polish: “#AlephiumPL”
-- Indonesian: “#AlephiumID”
-- Russian: “#AlephiumRU”
-- Dutch: “#AlephiumNL”
-
 On its [Discord server](https://alephium.org/discord), Alephium has dedicated international channels.
 
 On Telegram, the following community-managed groups are available:
