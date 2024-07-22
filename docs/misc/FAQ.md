@@ -98,8 +98,8 @@ You will find the roadmap on the [website](https://alephium.org/#next) and on th
 
 You can monitor Alephium's public service for:
 
-- the mainnet on [https://status.mainnet.alephium.org](https://status.mainnet.alephium.org/)
-- the testnet on [https://status.testnet.alephium.org](https://status.testnet.alephium.org/)
+- the mainnet on https://status.mainnet.alephium.org
+- the testnet on https://status.testnet.alephium.org
 
 ### Where can I query an API?
 
