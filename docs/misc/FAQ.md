@@ -13,7 +13,7 @@ Before diving in deeper, we recommend that you check the following resources as 
 
 - [Official Website](https://alephium.org)
 - [Official Twitter][alephium-twitter-link]
-- [Official Discord](https://alephium.org/discord)
+- [Official Discord][alephium-discord-link]
 - [Official Telegram](https://t.me/alephiumgroup)
 - [Official Reddit](https://reddit.com/r/Alephium)
 - [Official Medium](https://medium.com/@alephium), specifically:
@@ -92,7 +92,7 @@ Note that this is only required when using dApps. Normal transfers have similar 
 
 ### Where is the roadmap?
 
-You will find the roadmap on the [website](https://alephium.org/#next) and on the [docs](/#milestones--roadmap). You can also follow the weekly development updates on [Discord](https://alephium.org/discord), [Twitter][alephium-twitter-link] or [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1).
+You will find the roadmap on the [website](https://alephium.org/#next) and on the [docs](/#milestones--roadmap). You can also follow the weekly development updates on [Discord][alephium-discord-link], [Twitter][alephium-twitter-link] or [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1).
 
 ### Where can I monitor the status of Alephium maintained public service?
 
@@ -381,7 +381,7 @@ Translators are encouraged to use the following hashtag structure when they publ
 - Russian: “#AlephiumRU”
 - Dutch: “#AlephiumNL”
 
-On its [Discord server](https://alephium.org/discord), Alephium has dedicated international channels.
+On its [Discord server][alephium-discord-link], Alephium has dedicated international channels.
 
 On Telegram, the following community-managed groups are available:
 
@@ -403,7 +403,7 @@ On Telegram, the following community-managed groups are available:
 
 ### What's new?
 
-Check Alephium's announcement channels on [Discord](https://alephium.org/discord) and [Telegram](https://t.me/Alephium_Announcement). We also have developments update every week on [Discord](https://alephium.org/discord), [Reddit](https://www.reddit.com/r/Alephium) & [Twitter][alephium-twitter-link].
+Check Alephium's announcement channels on [Discord][alephium-discord-link] and [Telegram](https://t.me/Alephium_Announcement). We also have developments update every week on [Discord][alephium-discord-link], [Reddit](https://www.reddit.com/r/Alephium) & [Twitter][alephium-twitter-link].
 
 ### Why is the project named Alephium?
 
@@ -586,3 +586,4 @@ And that's not all! To learn more, read the following threads: Twitter/X [link ]
 [alph-land-link]: https://www.alph.land/
 [coingecko-alph-link]: https://www.coingecko.com/en/coins/alephium
 [alephium-twitter-link]: https://twitter.com/alephium
+[alephium-discord-link]: https://alephium.org/discord
