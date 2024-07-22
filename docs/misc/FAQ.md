@@ -243,7 +243,7 @@ There are two types of states in blockchain technology: mutable state (as seen i
 
 No, Alephium does not have this limitation. Alephium's stateful UTXO model combines the classic UTXO model with the account model and supports mutable states. This ensures that dApps can access mutable contract states in parallel, eliminating any possibility of a concurrency issue.
 
-Alephium Mainnet can scale up over 10k TPS by increasing the number of shards as necessary.
+Alephium Mainnet can scale up over 10,000+ TPS by increasing the number of shards as necessary.
 
 ### Why not have 1M shards?
 
