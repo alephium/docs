@@ -477,7 +477,7 @@ _Browser Extension:_
 
 If your wallets are up-to-date & synced you should always be able to see your balances update the second you refresh.
 
-### When connecting to a dApp, my wallet says '_There are no accounts on <span style="text-decoration:underline;">Mainnet </span>for <span style="text-decoration:underline;">group 0</span>. Please generate a new account first._' Is this normal?
+### When connecting to a dApp, my wallet says "There are no accounts on Mainnet for group 0. Please generate a new account first." Is this normal?
 
 Yes, that is normal. Depending on the dApp you are interacting with, you might need to create an address in a different "group" than the one you currently have.
 
@@ -489,7 +489,7 @@ _Browser Extension:_
 
 1. Connect to a dApp and select “Browser Extension”.
 2. If you’ve got a group 0 already, it will ask you to connect it.
-3. If not, your Wallet Extension would tell you “ _There are no accounts on <span style="text-decoration:underline;">Mainnet </span>for <span style="text-decoration:underline;">group 0</span>. Please generate a new account first._”
+3. If not, your Wallet Extension would tell you _“There are no accounts on Mainnet for group 0. Please generate a new account first.”_
 4. Simply click on “Create new Alephium Account”.
 5. Click “Connect”.
 
