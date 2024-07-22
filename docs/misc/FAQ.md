@@ -173,10 +173,10 @@ No, Alephium is designed to be ASIC friendly, just like Bitcoin. Maintaining ASI
 
 Below is a list of known Alephium miners. Please note the list may be incomplete as it is difficult to keep track of new miners coming out, feel free to submit a Pull Request to add to the list.
 
-- [https://www.bzminer.com/guides/how-to-mine-alephium/](https://www.bzminer.com/guides/how-to-mine-alephium/)
-- [https://lolminer.site/](https://lolminer.site/) [https://github.com/Lolliedieb/lolMiner-releases](https://github.com/Lolliedieb/lolMiner-releases)
-- [https://www.srbminer.com/](https://www.srbminer.com/) [https://github.com/doktor83/SRBMiner-Multi/releases](https://github.com/doktor83/SRBMiner-Multi/releases)
-- [https://trex-miner.com/](https://trex-miner.com/) [https://github.com/trexminer/T-Rex](https://github.com/trexminer/T-Rex)
+- [BzMiner](https://www.bzminer.com/guides/how-to-mine-alephium/)
+- [lolMiner](https://lolminer.site) ([lolMiner releases](https://github.com/Lolliedieb/lolMiner-releases))
+- [SBRMINER](https://www.srbminer.com) ([SBRMINER releases](https://github.com/doktor83/SRBMiner-Multi/releases))
+- [T-Rex](https://trex-miner.com) ([T-Rex GitHub](https://github.com/trexminer/T-Rex))
 
 You can also use [Alephium's gpu-miner](https://github.com/alephium/gpu-miner) but it is not as efficient as the others in this list.
 
