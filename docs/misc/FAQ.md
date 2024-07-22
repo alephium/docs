@@ -29,7 +29,7 @@ Before diving in deeper, we recommend that you check the following resources as 
 
 ### How much ALPH are in circulation?
 
-You can find the circulating supply on Alephium [Explorer](https://explorer.alephium.org/) or by using the [circulating ALPH endpoint](https://backend.mainnet.alephium.org/infos/supply/circulating-alph).
+You can find the circulating supply on Alephium [Explorer][explorer-link] or by using the [circulating ALPH endpoint](https://backend.mainnet.alephium.org/infos/supply/circulating-alph).
 
 ### How is the circulating supply calculated?
 
@@ -68,13 +68,13 @@ Alephium has a [DEX prototype](https://alephium.github.io/alephium-dex/#/swap) r
 
 The [DEX contracts](https://github.com/alephium/alephium-dex/tree/master/contracts) have been thoroughly tested by the core developers, making them reliable and efficient. They can easily be forked and used for projects.
 
-Alephium’s DeFi is continuously expanding and you can check all deployed DEXes on [Coingecko](https://www.coingecko.com/en/coins/alephium) and on [Alph.land](alph.land).
+Alephium’s DeFi is continuously expanding and you can check all deployed DEXes on [Coingecko][coingecko-alph-link] and on [Alph.land][alph-land-link].
 
 ### Is there any dApps on Alephium?
 
 Most of what has been built on Alephium so far is listed on the [Awesome Alephium repository](https://github.com/alephium/awesome-alephium). To add your contribution, submit a Pull Request!
 
-There’s also [Alph.land](alph.land), a community-made platform that contains a list of most dApps deployed on the Mainnet.
+There’s also [Alph.land][alph-land-link], a community-made platform that contains a list of most dApps deployed on the Mainnet.
 
 Alephium is still at a very early stage and the infrastructure (including a [bridge](https://github.com/alephium/wormhole-fork)) and documentation to ease the development of dApps is continuously being worked on. Alephium has a number of [well-maintained prototypes](https://docs.alephium.org/dapps/ecosystem#prototypes) that can be used as a basis or inspiration for your project.
 
@@ -88,7 +88,7 @@ So, when you connect to a dApp, it will specifically ask to connect with address
 
 Note that this is only required when using dApps. Normal transfers have similar user experience as non-sharded blockchains. The core team is committed to improve the assets management across different groups to make it more friendly for dApp users.
 
-## [Development](https://docs.alephium.org/frequently-asked-questions#development)
+## Development
 
 ### Where is the roadmap?
 
@@ -115,7 +115,7 @@ Alephium offers a [Grants and Rewards program](https://github.com/alephium/commu
 
 Most of what has been built on Alephium so far is listed on the [Awesome Alephium repository](https://github.com/alephium/awesome-alephium) & community ran platform Alph.Land. If you'd like to showcase what you've built, submit a Pull Request to add it to the list.
 
-## [Full node](https://docs.alephium.org/frequently-asked-questions#full-node)
+## Full node
 
 ### Is there a reward for running a fullnode?
 
@@ -129,7 +129,7 @@ Alephium's full node is lightweight and can run on most devices, including Raspb
 
 Alephium does not offer native staking on its blockchain, as it does not operate on a PoS consensus mechanism. However, DeFi liquidity pools on DEXs within Alephium’s Mainnet may provide staking opportunities.
 
-## [Listings & Exchanges](https://docs.alephium.org/frequently-asked-questions#listings--exchanges)
+## Listings & Exchanges
 
 ### What is your token ticker?
 
@@ -141,9 +141,9 @@ Exchanges usually require a higher number of confirmation for PoW chains to ensu
 
 ### What exchanges is Alephium currently listed on?
 
-You can find the list of available Alephium markets on [CoinMarketCap](https://coinmarketcap.com/currencies/alephium/markets/) or [CoinGecko](https://www.coingecko.com/en/coins/alephium).
+You can find the list of available Alephium markets on [CoinMarketCap](https://coinmarketcap.com/currencies/alephium/markets/) or [CoinGecko][coingecko-alph-link].
 
-## [Mining](https://docs.alephium.org/frequently-asked-questions#mining)
+## Mining
 
 ### What is the Mining Reward?
 
@@ -180,7 +180,7 @@ Below is a list of known Alephium miners. Please note the list may be incomplete
 
 You can also use [Alephium's gpu-miner](https://github.com/alephium/gpu-miner) but it is not as efficient as the others in this list.
 
-## [Tech](https://docs.alephium.org/frequently-asked-questions#tech)
+## Tech
 
 ### Why another L1 blockchain? Isn't there too many already?
 
@@ -290,7 +290,7 @@ By creating its own VM and smart contract language, Alephium was able to propose
 
 Similar to Bitcoin and Ethereum, Alephium does not view quantum computers as an immediate concern. The hashing and signing algorithms, as well as address construction, can be updated. The issue of quantum computing will be addressed when it becomes a more significant threat.
 
-## [Tokenomics](https://docs.alephium.org/frequently-asked-questions#tokenomics)
+## Tokenomics
 
 ### What is the lowest possible GAS fee?
 
@@ -312,7 +312,7 @@ In theory, yes. Predicting the future of technologies beyond 10, let alone 80 ye
 The maximum supply cap of 1 billion ALPH is an estimate. The protocol implements a cap on emissions based on a timestamp of approximately 80 years. This is because computing the sum of emissions for a sharded chain within the protocol is computationally expensive. The emission rate is determined by the time and varies depending on the hash rate.
 It's worth noting that the 1 billion cap was estimated before the implementation of the improved [DAA](https://github.com/alephium/alephium/blob/master/docs/proposals/lemanDAA.md). With the current code, the actual cap on emission and maximum supply of ALPH is expected to be less than 1 billion in 80 years, even without taking into account the PoLW mechanism's fee burning.
 
-## [Wallet](https://docs.alephium.org/frequently-asked-questions#wallet)
+## Wallet
 
 ### What type of wallet does Alephium offer?
 
@@ -347,7 +347,7 @@ The `0.001` ALPH is the minimal requirement per UTXO to avoid UTXO spamming. Thi
 Backing up your secret recovery phrase is crucial because it acts as the master key to your wallet. If you lose access to your wallet (e.g., due to device loss, malfunction, or app deletion), the secret recovery phrase is the only way to restore and access your funds.
 Without it, any assets stored in the wallet could be permanently lost. Treat it with utmost care, and store it securely and privately.
 
-## [Miscellaneous](https://docs.alephium.org/frequently-asked-questions#miscellaneous)
+## Miscellaneous
 
 ### How can I find translated content?
 
@@ -448,7 +448,7 @@ Ensure the following:
 1. Your wallet is up to date.
 2. You are connected to Mainnet, not "testnet" or "devnet."
 3. You’re using the same Secret Recovery Phrase as the intended wallet.
-4. You can alternatively scan it on [https://explorer.alephium.org/](https://explorer.alephium.org/) to verify that your assets are indeed on the address you’re checking.
+4. You can alternatively scan it on [https://explorer.alephium.org/][explorer-link] to verify that your assets are indeed on the address you’re checking.
 
 If your wallet is up to date but you still can’t find your balance, your previous balance might be in a different group than the ones currently loaded in your wallet.
 
@@ -581,3 +581,7 @@ And that's not all! To learn more, read the following threads: Twitter/X [link ]
 ### WHEN MOON?
 
 1ALPH is always worth 1ALPH.
+
+[explorer-link]: https://explorer.alephium.org/
+[alph-land-link]: https://www.alph.land/
+[coingecko-alph-link]: https://www.coingecko.com/en/coins/alephium
