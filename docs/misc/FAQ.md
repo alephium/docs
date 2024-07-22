@@ -12,7 +12,7 @@ title: Frequently Asked Questions
 Before diving in deeper, we recommend that you check the following resources as they provide useful information about Alephium:
 
 - [Official Website](https://alephium.org)
-- [Official Twitter](https://twitter.com/alephium)
+- [Official Twitter][alephium-twitter-link]
 - [Official Discord](https://alephium.org/discord)
 - [Official Telegram](https://t.me/alephiumgroup)
 - [Official Reddit](https://reddit.com/r/Alephium)
@@ -70,15 +70,15 @@ The [DEX contracts](https://github.com/alephium/alephium-dex/tree/master/contrac
 
 Alephium’s DeFi is continuously expanding and you can check all deployed DEXes on [Coingecko][coingecko-alph-link] and on [Alph.land][alph-land-link].
 
-### Is there any dApps on Alephium?
+### Are there any dApps on Alephium?
 
 Most of what has been built on Alephium so far is listed on the [Awesome Alephium repository](https://github.com/alephium/awesome-alephium). To add your contribution, submit a Pull Request!
 
 There’s also [Alph.land][alph-land-link], a community-made platform that contains a list of most dApps deployed on the Mainnet.
 
-Alephium is still at a very early stage and the infrastructure (including a [bridge](https://github.com/alephium/wormhole-fork)) and documentation to ease the development of dApps is continuously being worked on. Alephium has a number of [well-maintained prototypes](https://docs.alephium.org/dapps/ecosystem#prototypes) that can be used as a basis or inspiration for your project.
+Alephium is still at a very early stage and the infrastructure (including a [bridge](https://github.com/alephium/wormhole-fork)) and documentation to ease the development of dApps is continuously being worked on. Alephium has a number of [well-maintained prototypes](/dapps/ecosystem#prototypes) that can be used as a basis or inspiration for your project.
 
-If you want to build a dApp, check out our [dApps Getting Started guide](https://docs.alephium.org/dapps/getting-started).
+If you want to build a dApp, check out our [dApps Getting Started guide](/dapps/getting-started).
 
 ### Why can the dApp only connect to one of my addresses?
 
@@ -92,7 +92,7 @@ Note that this is only required when using dApps. Normal transfers have similar 
 
 ### Where is the roadmap?
 
-You will find the roadmap on the [website](https://alephium.org/#next) and on the [docs](https://docs.alephium.org/#milestones--roadmap). You can also follow the weekly development updates on [Discord](https://alephium.org/discord), [Twitter](https://twitter.com/alephium) or [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1).
+You will find the roadmap on the [website](https://alephium.org/#next) and on the [docs](/#milestones--roadmap). You can also follow the weekly development updates on [Discord](https://alephium.org/discord), [Twitter][alephium-twitter-link] or [Reddit](https://www.reddit.com/r/Alephium/search?q=flair_name%3A%22Development%22&restrict_sr=1).
 
 ### Where can I monitor the status of Alephium maintained public service?
 
@@ -103,7 +103,7 @@ You can monitor Alephium's public service for:
 
 ### Where can I query an API?
 
-In order to query an API you need to be running a full node ([instructions](https://docs.alephium.org/full-node/getting-started)).
+In order to query an API you need to be running a full node ([instructions](/full-node/getting-started)).
 Alephium uses OpenAPI to interact with the full node. You can directly open your local Swagger UI through `127.0.0.1:12973/docs` once your full node is running.
 Alternatively, you can use any OpenAPI client to import the [openapi.json](https://raw.githubusercontent.com/alephium/alephium/master/api/src/main/resources/openapi.json) file from Alephium's repository.
 
@@ -123,7 +123,7 @@ Alephium uses a Proof of (Less) Work consensus mechanism, which means there is n
 
 ### What do I need to run a full node?
 
-Alephium's full node is lightweight and can run on most devices, including Raspberry-Pi or phones. To set-up and run your own node, please follow the [Full-node Getting Started guide](https://docs.alephium.org/full-node/getting-started/).
+Alephium's full node is lightweight and can run on most devices, including Raspberry-Pi or phones. To set-up and run your own node, please follow the [Full-node Getting Started guide](/full-node/getting-started/).
 
 ### Is it possible to stake on Alephium?
 
@@ -403,7 +403,7 @@ On Telegram, the following community-managed groups are available:
 
 ### What's new?
 
-Check Alephium's announcement channels on [Discord](https://alephium.org/discord) and [Telegram](https://t.me/Alephium_Announcement). We also have developments update every week on [Discord](https://alephium.org/discord), [Reddit](https://www.reddit.com/r/Alephium) & [Twitter](https://twitter.com/alephium).
+Check Alephium's announcement channels on [Discord](https://alephium.org/discord) and [Telegram](https://t.me/Alephium_Announcement). We also have developments update every week on [Discord](https://alephium.org/discord), [Reddit](https://www.reddit.com/r/Alephium) & [Twitter][alephium-twitter-link].
 
 ### Why is the project named Alephium?
 
@@ -421,7 +421,7 @@ Activated on March 30th, 2023, the [Leman Upgrade](https://medium.com/@alephium/
 
 ### Where can I learn everything about Alephium in 5min?
 
-A good overview is available on the [docs](https://docs.alephium.org/) and additional resources are available at the top of this FAQ.
+A good overview is available on the [docs](/) and additional resources are available at the top of this FAQ.
 
 ### What is Alephium’s APS?
 
@@ -433,7 +433,7 @@ APS offers protection from attacks such as Reentrancy attack, Bitflip attack, Sm
 
 APS enhances user experience when signing, APS with UTXO allows predefined approvals and asset transfers in a single TxScript-based transaction, enhancing both efficiency and security for the user.
 
-Read more about APS: [DOCS](https://docs.alephium.org/dapps/concepts/asset-permission-system/) , [ARTICLE](https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33)
+Read more about APS: [DOCS](/dapps/concepts/asset-permission-system/) , [ARTICLE](https://medium.com/@alephium/alephiums-aps-eliminating-evm-token-approval-risks-5407e7e70a33)
 
 ### How do I Revoke a Smart Contract on Alephium?
 
@@ -448,7 +448,7 @@ Ensure the following:
 1. Your wallet is up to date.
 2. You are connected to Mainnet, not "testnet" or "devnet."
 3. You’re using the same Secret Recovery Phrase as the intended wallet.
-4. You can alternatively scan it on [https://explorer.alephium.org/][explorer-link] to verify that your assets are indeed on the address you’re checking.
+4. You can alternatively scan it on the [Explorer][explorer-link] to verify that your assets are indeed on the address you’re checking.
 
 If your wallet is up to date but you still can’t find your balance, your previous balance might be in a different group than the ones currently loaded in your wallet.
 
@@ -528,7 +528,7 @@ _Mobile_:
 
 Please note that the mobile WalletConnect feature is experimental, use it at your own risk.
 
-### What does “_Export Current Wallet_” do?
+### What does “Export Current Wallet” do?
 
 In the Desktop Wallet settings, the 'Export current wallet' option allows you to export your wallet via a QR code, which you can then scan with your Mobile wallet to import it.
 
@@ -555,7 +555,7 @@ There could be a few reasons for this error, from desynchronized wallet/browser 
 
 - Refresh your browser if you’re getting this error in a dApp.
 - Disconnect & re-connect your wallet.
-- Consolidate UTXO, follow [this guide here](https://docs.alephium.org/wallet/desktop-wallet/advanced-features/#1-utxo-consolidation).
+- Consolidate UTXO, follow [this guide here](/wallet/desktop-wallet/advanced-features/#1-utxo-consolidation).
 
 ### What makes PoLW special?
 
@@ -563,7 +563,7 @@ Similar to Proof-of-Work for Bitcoin, or Proof-of-Stake for Ethereum (post-merge
 
 PoLW reduces energy consumption by over 87% compared to traditional PoW systems, offering great energy optimization without compromising security or decentralization.
 
-Learn more about PoLW & how it achieves that here: [DOCS](https://docs.alephium.org/glossary/#proof-of-less-work-or-polw), “Tech Talk” [Article](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301).
+Learn more about PoLW & how it achieves that here: [DOCS](/glossary/#proof-of-less-work-or-polw), “Tech Talk” [Article](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301).
 
 ### What is the Rhône Upgrade?
 
@@ -585,3 +585,4 @@ And that's not all! To learn more, read the following threads: Twitter/X [link ]
 [explorer-link]: https://explorer.alephium.org/
 [alph-land-link]: https://www.alph.land/
 [coingecko-alph-link]: https://www.coingecko.com/en/coins/alephium
+[alephium-twitter-link]: https://twitter.com/alephium
