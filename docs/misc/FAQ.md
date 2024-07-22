@@ -5,7 +5,6 @@ sidebar_label: FAQ
 title: Frequently Asked Questions
 ---
 
-
 :::info
 📚 Learn everything about Alephium in this [5min overview](https://docs.alephium.org/).
 :::
@@ -445,7 +444,7 @@ Thanks to Alephium APS, there's no need to manually revoke your smart contract o
 
 ### I’ve imported my wallet using the same Secret Recovery Phrase, why is my balance missing?
 
-If you have your Secret Recovery Phrase, there's no need to worry! 
+If you have your Secret Recovery Phrase, there's no need to worry!
 
 Ensure the following:
 
@@ -463,12 +462,12 @@ _Desktop:_
 1. Refresh your wallet. Simply click on the “Refresh Data” button top right.
 2. On the Main Page overview:
 3. Go to "Addresses" or click "See More" in the "Your Addresses" window.
-4.  Click the wrench icon for "Advanced Operations"
-5.  Select "Discover Active Addresses" by clicking “Search”.
+4. Click the wrench icon for "Advanced Operations"
+5. Select "Discover Active Addresses" by clicking “Search”.
 
 _Mobile:_
 
-1. Swipe down from the Main Page overview to Refresh. 
+1. Swipe down from the Main Page overview to Refresh.
 2. Click on the Gear icon on top right, to access “Settings”.
 3. In Settings, scroll down to “Wallet” category, and click on “Scan for active addresses”.
 4. Click “Start Scanning”.
@@ -492,12 +491,12 @@ This can all be done under the same secret recovery phrase. To create a new grou
 _Browser Extension:_
 
 1. Connect to a dApp and select “Browser Extension”.
-2. If you’ve got a group 0 already, it will ask  you to connect it.
+2. If you’ve got a group 0 already, it will ask you to connect it.
 3. If not, your Wallet Extension would tell you “ _There are no accounts on <span style="text-decoration:underline;">Mainnet </span>for <span style="text-decoration:underline;">group 0</span>. Please generate a new account first._”
 4. Simply click on “Create new Alephium Account”.
 5. Click “Connect”.
 
- _Alternatively:_
+_Alternatively:_
 
 1. Click on your account TOP LEFT of your Extension Wallet.
 2. Click on the “+” icon TOP RIGHT.
@@ -511,7 +510,6 @@ _Desktop & Mobile:_
 3. Turn on “Advanced options”.
 4. Select your address group as needed.
 5. Click on “Generate”.
-
 
 ### How do I use WalletConnect?
 
@@ -543,7 +541,7 @@ How to use:
 
 1. On Desktop, go to “Settings” by clicking the gear Icon at bottom left of the screen.
 2. Click on “Wallets” & scroll down. _(Notice: Treat it with the same care as your secret recovery phrase; ensure no one else is watching.)_
-3. Click on Export current wallet. 
+3. Click on Export current wallet.
 4. This will create a QR code for you to scan on your mobile device.
 5. Install Alephium wallet app on Mobile using the official links only.
 6. Click on “Import Wallet”.
@@ -581,7 +579,7 @@ Rhône, Alephium's second network upgrade, was activated on _June 12 2024_. This
 - PoLW address type.
 - Mapping and APS enhancement.
 
-And that's not all! To learn more, read the following threads: Twitter/X [link ](https://x.com/alephium/status/1795460039659884898), Medium Article [link](https://medium.com/@alephium/rh%C3%B4ne-network-upgrade-activated-cbeb298585fe). 
+And that's not all! To learn more, read the following threads: Twitter/X [link ](https://x.com/alephium/status/1795460039659884898), Medium Article [link](https://medium.com/@alephium/rh%C3%B4ne-network-upgrade-activated-cbeb298585fe).
 
 ### [WHEN MOON?](https://docs.alephium.org/frequently-asked-questions#when-moon)
 
