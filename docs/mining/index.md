@@ -16,10 +16,13 @@ information that the miners should know:
 
 For more information about mining rewards, please read the [Block
 Rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
-article. For code references, please refer to
+article. 
+For code references, please refer to
 [gpu-miner](https://github.com/alephium/gpu-miner),
 [fpga-miner](https://github.com/alephium/fpga-miner) and
 [mining-pool](https://github.com/alephium/mining-pool) repositories.
+
+We have built a simple [ROI calculator](https://alephium.github.io/alph-mining-roi/) to help miners estimate their revenues.
 
 Please join the dedicated mining channel on [discord](https://alephium.org/discord) for
 more discussions.
