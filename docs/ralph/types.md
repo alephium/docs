@@ -256,6 +256,8 @@ Contract Token() {
 }
 ```
 
+#### Enum
+
 Similar to constant definitions, Ralph supports both global and local enum definitions:
 
 ```rust
