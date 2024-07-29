@@ -32,12 +32,12 @@ Contract MyToken(supply: U256, name: ByteVec) {
   event Transfer(to: Address, amount: U256)
 
   // Constant variables should be named in upper camel case.
-  const Version = 0
+  const VERSION = 0
 
   // Enums can be used to create a finite set of constant values.
   enum ErrorCodes {
     // Enum constants should be named in upper camel case.
-    InvalidCaller = 0
+    INVALID_CALLER = 0
   }
 
   // Functions, parameters, and local variables should be named in lower camel case.

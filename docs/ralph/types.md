@@ -210,3 +210,67 @@ TxScript CreateCounter(counters: Counters) {
   counters.insert{from -> ALPH: mapEntryDeposit!()}() // Approve minimal deposit for creating the map entry
 }
 ```
+
+### Constants
+
+Ralph supports defining constants of primitive types. Constant names must start with an uppercase letter. We recommend using the SCREAMING_SNAKE_CASE naming convention for constants:
+
+```rust
+const TOTAL_SUPPLY = 1e18
+```
+
+Ralph also supports compile-time evaluation of constants:
+
+```rust
+const A = 10
+const B = 20
+const C = A * B // A and B must be defined before C
+```
+
+Ralph allows you to define global constants that can be used in any contracts or scripts:
+
+```rust
+const TOTAL_SUPPLY = 1e18
+const ERROR_CODE = 0
+
+Contract Token() {
+  pub fn getTotalSupply() -> U256 {
+    return TOTAL_SUPPLY
+  }
+}
+
+TxScript Main(token: Token) {
+  assert!(token.getTotalSupply() == TOTAL_SUPPLY, ERROR_CODE)
+}
+```
+
+You can also define contract-specific local constants. These constants can only be used within the contract and **must not** have the same names as global constants:
+
+```rust
+Contract Token() {
+  const TOTAL_SUPPLY = 1e18
+
+  pub fn getTotalSupply() -> U256 {
+    return TOTAL_SUPPLY
+  }
+}
+```
+
+Similar to constant definitions, Ralph supports both global and local enum definitions:
+
+```rust
+enum GlobalErrorCode {
+  INVALID_CALLER_CONTRACT = 0
+}
+
+Contract Foo(owner: Address, parentId: ByteVec) {
+  enum LocalErrorCode {
+    INVALID_OWNER = 1
+  }
+
+  pub fn foo(caller: Address) -> () {
+    assert!(callerContractId!() == parentId, GlobalErrorCode.INVALID_CALLER_CONTRACT)
+    assert!(caller == owner, LocalErrorCode.INVALID_OWNER)
+  }
+}
+```
