@@ -86,7 +86,7 @@ Combining these innovations, Alephium delivers a highly demanded solution in the
 
 ## Tokenomics
 
-Alephium's token supply is capped at 1 billion. At Mainnet Launch (Nov. 8th, 2021), 140M tokens (14% of the hardcap) was mined with the genesis block. The remaining ALPH tokens will be mined over the next ~80 years. The initial 140M tokens are allocated as follows:
+Alephium's token supply is capped at 1 billion. At Mainnet Launch (Nov. 8th, 2021), 140M tokens (14% of the hardcap) were minted with the genesis block. The remaining ALPH tokens will be mined over the next ~80 years. The initial 140M tokens are allocated as follows:
 
 80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
 
