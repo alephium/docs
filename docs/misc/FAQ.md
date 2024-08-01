@@ -164,8 +164,11 @@ Currently, Alephium has 4 groups and 16 chains on its mainnet. Therefore, 4 mini
 To know how many coins are mined per day, you can use the formula below. As the block reward changes dynamically with each block, the formula will only give you an approximation.
 
 3'600 seconds / 16 seconds (Alephium block time) == 225 blocks per hour, per shard.
+
 225 x 16 shards == 3'600 blocks total per hour.
+
 3'600 x 24 hours == 86'400 blocks per day.
+
 86'400 x  ALPH reward per block ~= number of ALPH mined per day.
 
 At the time this entry was last updated the average block reward was: `0.7175` ALPH which results in approximately `61'992` ALPH mined per day.
