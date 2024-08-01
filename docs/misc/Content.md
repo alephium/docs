@@ -7,7 +7,7 @@ title: Content Repo
 
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 
-* [Tech Series](#tech-series)
+* [Our tech explained](#our-tech-explained)
 * [Explainer Series](#explainer-series)
 * [Ecosystem Updates](#ecosystem-updates)
 * [TechTalks & AMAs](#techtalks--amas)
@@ -114,7 +114,7 @@ Asset Permission System - https://twitter.com/alephium/status/167335456580109107
 
 Asset Permission System - https://x.com/alephium/status/1812125163489788239
 
-## Other
+### Other
 
 Bridge Thread #6 - https://vxtwitter.com/alephium/status/1729149731761537296
 
