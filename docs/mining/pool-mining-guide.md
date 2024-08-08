@@ -20,7 +20,7 @@ For `HiveOS`, `RaveOS` or `OKMiner` related questions, these resources might hel
 
 ### Build your own Pool
 
-If you want to host your own mining pool, please checkout [the repo here](https://github.com/alephium/mining-pool/). If you create a pool, feel free to send a Pull Request to add your pool the [list](#community-pools).
+If you want to host your own mining pool, please check out [the repo here](https://github.com/alephium/mining-pool/). If you create a pool, feel free to send a Pull Request to add your pool to the [list](#community-pools).
 
 ### Example node configuration for mining pool:
 
@@ -57,21 +57,22 @@ Below is a list of mining pools in alphabetic order. We encourage you to [send a
 
 You can also check [https://miningpoolstats.stream/alephium](https://miningpoolstats.stream/alephium).
 
+
+#### ANTPOOL
+
+- Website: https://www.antpool.com/home
+- Email: support@antpool.com
+- Guide: https://antpoolsupport-hc.zendesk.com/hc/en-us/articles/33026304706841-ANTPOOL-ALPH-Alephium-Mining-Tutorial
+- Telegram: https://t.me/AntPoolOffical
+- Twitter/X: https://x.com/AntPoolofficial
+- Youtube: https://www.youtube.com/@antpooltech
+
 #### Alephium-pool (Community pool)
 
 - Website: https://alephium-pool.com/
-- Telegram: https://t.me/alephium_pool
 - Discord: https://discord.gg/ZXYU2NGx
-
-#### ALPH.city
-
-- Website: https://alph.city/
-- Telegram: https://t.me/alphcity
-
-#### ALPH-pool.com
-
-- Website: https://alph-pool.com/
-- Telegram: https://t.me/ALPH_pool_chat
+- Guide: https://alephium-pool.com/instruction.html
+- Telegram: https://t.me/alephium_pool
 
 #### Alph2Mine.com
 
@@ -79,51 +80,82 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Email: alph2mine@gmail.com
 
 #### Cedric-CRISPIN.com
+
 - Website: https://alephium.cedric-crispin.com/
-- Twitter: https://twitter.com/Cedric_Crispin
+- Discord: https://discord.gg/8sTGZf3Kpm
 - Email: webmaster@cedric-crispin.com
+- Guide: https://alephium.cedric-crispin.com/start-mining/
+- Twitter: https://twitter.com/Cedric_Crispin
 
 #### Cloudiko Pool
 
-- Website: [https://cloudiko.io/](https://cloudiko.io/)
-- Twitter: [https://twitter.com/Cloudiko_io](https://twitter.com/Cloudiko_io)
-- Discord: [https://discord.gg/8sTGZf3Kpm](https://discord.gg/8sTGZf3Kpm)
+- Website: https://cloudiko.io/
+- Discord: https://discord.gg/8sTGZf3Kpm
+- Twitter: https://twitter.com/Cloudiko_io
 
-#### Coinhunters Pool
+#### Coinmore.io
 
-- Website: https://alph.coinhunters.space
-- Telegram (EN): https://t.me/alph_coinhunters_en
-- Telegram (RU): https://t.me/alph_gravitsapapool_ru
+- Website: https://coinmore.io/coin/alephium/
+- Calculator: https://coinmore.io/calculator/?coin=alephium
+- Discord: https://discord.com/invite/FSXWEUGmEK
+- Guide: https://coinmore.io/coin/alephium/instructions/
 
-#### e4pool ALPH Pool 
+#### DXPool
+
+- Website: https://www.dxpool.com/
+- Discord: https://discord.gg/SD3wYt5AaJ
+- Email: support@dxpool.com
+- Github: https://github.com/dxpool
+- Guide: https://www.dxpool.com/help/en/alph-mining-tutorial
+- Telegram: https://t.me/globaldxpool 
+- Twitter/X: https://x.com/dxpoolofficial
+
+#### E4pool ALPH Pool 
 
 - Website: https://e4pool.com/alph
-- Telegram: https://t.me/E4piko
-- Support: https://t.me/e4pool_howto
 - Forum: https://forum.e4pool.com/
+- Support: https://t.me/e4pool_howto
+- Telegram: https://t.me/E4piko
 
-#### Enigma Pool
+#### F2Pool
 
-- Website: https://enigmapool.com/
-- Discord: https://discord.com/invite/enigmapool
-- Calculator: https://enigmapool.com/tools/calculator
+- Website: https://www.f2pool.com/
+- Discord: https://discord.com/invite/A4CfrUUxY6
+- Email: support@f2pool.com
+- Guide: https://f2pool.zendesk.com/hc/en-us/articles/29518911466265-How-to-mine-Alephium
+- Reddit: https://www.reddit.com/r/f2pool/
+- Telegram: https://t.me/f2poolreal
+- Twitter/X: https://x.com/f2pool_official
 
 #### Herominers Pool
 
 - Website: https://alephium.herominers.com/
 - Discord: https://discord.com/invite/gvWSs84
 - Telegram: https://t.me/HeroMinersPool
+- Twitter: https://x.com/herominerss
+
+#### HumPool
+
+- Website: https://humpool.com/
+- Discord: https://discord.gg/NYaK98qXxn
+- Guide: https://www.humpool.com/pool/help?type=alph
+- Telegram: https://t.me/HumPoolOfficial
+
+#### JJPool
+
+- Website: https://jjpool.fr/#/alph
+- Discord: https://discord.gg/X7UsCQTy73
 
 #### Kryptex Pool
 
 - Website: https://pool.kryptex.com/alph
-- How to mine ALPH: https://pool.kryptex.com/en/articles/how-to-mine-alephium-en
-- How to create wallet: https://pool.kryptex.com/en/articles/alephium-wallet-en
 - Calculator: https://www.kryptex.com/en/mining-calculator
 - Discord: https://discord.gg/ejyx9PkCW3
+- How to create wallet: https://pool.kryptex.com/en/articles/alephium-wallet-en
+- How to mine ALPH: https://pool.kryptex.com/en/articles/how-to-mine-alephium-en
+- Table of the best GPUs for mining ALPH: https://www.kryptex.com/best-gpus-for-mining
 - Telegram: https://t.me/kryptex_chat_en
 - Twitter: https://www.twitter.com/KryptexMining
-- Table of the best GPUs for mining ALPH: https://www.kryptex.com/best-gpus-for-mining
 
 #### Okminer 
 
@@ -132,27 +164,29 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Telegram (CN): https://t.me/okminer_CN
 - Telegram (EN): https://t.me/okminer_support
 
-#### p1pool.com
+#### P1pool.com
 
 - Website: https://p1pool.com/
-- Telegram: https://t.me/p1pool_com
 - Discord: https://discord.gg/U8dh97XHk8
 - Email: info@p1pool.com
-
-#### Soloblocks
-
-- Website: https://soloblocks.org/alph/
+- Telegram: https://t.me/p1pool_com
 
 #### Solopool.org
 
 - Website: https://alph.solopool.org/
+- Email: support@solopool.org
+- Guide: https://alph.solopool.org/help
 - Telegram: https://t.me/solopool_org
 - Twitter: https://twitter.com/solopool_org
-- Email: support@solopool.org
+
+#### Tw-pool.com
+
+- Website (CN): https://tw-pool.com/stats/alephium
+- Discord: https://discord.gg/UT65Tctm9t
 
 #### Vipor.net
 
-- Website: https://vipor.net
+- Website: https://vipor.net/mine/alph
 - Discord: https://discord.gg/4tQU83Yq3Z
 - Telegram: https://t.me/vipornet
 
@@ -162,6 +196,9 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
+
+
+
 
 ⚠️ **Make sure you use the latest version of the mining software**
 
