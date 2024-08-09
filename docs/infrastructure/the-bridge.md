@@ -22,7 +22,7 @@ Please bear in mind that:
 
 - Bridging from ETH to ALPH takes an average of 15-20 minutes.
 
-- Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 105 blocks and at least 112 minutes. If one of the conditions is not met, redemption is not possible (yet).
+- Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet).
 
 In most cases, waiting a little bit longer to redeem your tokens is enough. 
 
