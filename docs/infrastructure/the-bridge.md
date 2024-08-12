@@ -80,9 +80,9 @@ Usually that means that one of your wallets has locked itself. Please copy your 
 
 
 
-### 5. Transaction has over 105 confirmations and I can't redeem!
+### 5. Transaction has over 205 confirmations and I can't redeem!
 
-Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 105 blocks and at least 112 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
+Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
 
 - “Issue 1. I have waited long enough, and it is not letting me redeem! What do I do?”
 - “Issue 6. I am getting a VAA error! And I can't redeem.” 
