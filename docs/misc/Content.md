@@ -14,6 +14,7 @@ title: Content Repo
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
 * [Milestones](#milestones)
+* [Athens Builders Meetup](#athens-builders-meetup)
 * [Hackathon](#hackathon)
 * [Community & Social](#community--social)
 * [External Podcasts & Publications](#external-podcasts--publications)
@@ -194,7 +195,13 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 
 💣 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
 
+🍭 UX Series - Did you know...You can send multiple assets in one transaction? - https://x.com/alephium/status/1820863372839293094
+
 ## Ecosystem Updates
+
+🧬 Bi-Weekly #EcosystemUpdate - 02/08/24 - https://x.com/alephium/status/1819411645476773950
+
+🧬 Bi-Weekly #EcosystemUpdate - 19/07/24 - https://x.com/alephium/status/1814325552817615120 
 
 🧬 Weekly #EcosystemUpdate - 04/07/24 - https://x.com/alephium/status/1808884404095435029
 
@@ -225,6 +232,10 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+Aug/24 - Alephium x Bitmain x Antpool - To PoLW & beyond! - https://x.com/i/spaces/1kvJpbDeQnMKE
+
+Jul/24 - HouseofChimera's Ecosystem Talks: Alephium - https://x.com/i/spaces/1mrGmMqzRmMGy
 
 Jul/24 - DXB Crypto AMA - https://www.youtube.com/live/txxKGq1oT6s
 
@@ -444,6 +455,42 @@ Aug/21 Introducing ALPH Q3 2021 - https://medium.com/@alephium/introducing-alph-
 
 May/19 Initial description - First article -  https://medium.com/@alephium/alephium-pushes-the-boundaries-of-blockchain-performance-scalability-1ab619038daa
 
+## Athens Builders Meetup
+
+All presentations article - https://medium.com/@alephium/all-the-athens-meetup-presentations-f419195640ce
+
+Youtube playlist - https://www.youtube.com/playlist?list=PL8q8n0BHJS1NxQF4pHtyB678usviIsLvF
+
+Thread about the presentations - https://x.com/alephium/status/1811777705165127863
+
+⚡ Athens Talks Series #1 - Cheng Wang - https://x.com/alephium/status/1812871245429387569
+
+⚡ Athens Talks Series #2 - Mgpai - https://x.com/alephium/status/1812880145562148954
+
+⚡ Athens Talks Series #3 - Hearst - https://x.com/alephium/status/1813141123214323934
+
+⚡ Athens Talks Series #4 - Hongchao - https://x.com/alephium/status/1813215312831021262
+
+⚡ Athens Talks Series #5 - Dimfred - https://x.com/alephium/status/1813510978845200839
+
+⚡ Athens Talks Series #6 - Thomas - https://x.com/alephium/status/1813541092668674385
+
+⚡ Athens Talks Series #7 - Alphbanx - https://x.com/alephium/status/1813915139290382444
+
+⚡ Athens Talks Series #8 - Reed - https://x.com/alephium/status/1813933975687278607
+
+⚡ Athens Talks Series #9 - Mobula - https://x.com/alephium/status/1815325765413581264
+
+⚡ Athens Talks Series #10 - IgMos - https://x.com/alephium/status/1815418073274266017
+
+⚡ Athens Talks Series #11 - Benoit - https://x.com/alephium/status/1815679934813122721
+
+⚡ Athens Talks Series #12 - Hux - https://x.com/alephium/status/1815747832432762909
+
+⚡ Athens Talks Series #13 - Mika - https://x.com/alephium/status/1816037557139882208
+
+⚡ Athens Talks Series #14 - Vlad - https://x.com/alephium/status/1816102868375511394
+
 ## Hackathon 
 
 Hackathon Website: https://alephium.org/hackathon/
@@ -484,13 +531,15 @@ Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1
 
 ## Community & Social 
 
+💣 Hashrate Series #1 - NiceHash - https://medium.com/@alephium/hashrate-series-1-nicehash-ee0936adf899
+
 ⛏ Miners' Highlight # 4 - Nick Dimondi 🔥 - https://vxtwitter.com/alephium/status/1765787279736680475
 
-⛏🖥 Miners Highlight # 3 - Bokiko - https://vxtwitter.com/alephium/status/1753459274783887393
+⛏ Miners Highlight # 3 - Bokiko - https://vxtwitter.com/alephium/status/1753459274783887393
 
-Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
+⛏ Miners' Highlight #2 - @Dr. Hiram Abiff .’. | ℵ  🔥 - https://vxtwitter.com/alephium/status/1745484268585820567
 
-Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
+⛏ Miners' Highlight #1 - Cedric Crispin 🔥 - https://vxtwitter.com/alephium/status/1738185723264840078
 
 Builders Highlight #13: Phoenix Finance 
 https://medium.com/@alephium/builders-highlight-13-phoenix-finance-5fb19d782614
