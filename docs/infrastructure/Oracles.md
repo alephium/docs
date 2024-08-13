@@ -44,7 +44,7 @@ The Alephium oracle includes the following price feeds. Use the Query Symbol as 
 | ----------- | ----------- | ------|
 | Bitcoin (BTC) | BTC/USD | [BTC Sources](https://www.diadata.org/app/price/asset/Bitcoin/0x0000000000000000000000000000000000000000/) |
 | USD Coin (USDC) | USDC/USD | [USDC Sources](https://www.diadata.org/app/price/asset/Ethereum/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/) |
-| Ether (ETH) | ETH/USD | [ETH Sources](https://www.diadata.org/app/price/asset/Ethereum/0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48/) |
+| Ether (ETH) | ETH/USD | [ETH Sources](https://www.diadata.org/app/price/asset/Ethereum/0x0000000000000000000000000000000000000000/) |
 | Wrapped Bitcoin (WBTC) | WBTC/USD | [WBTC Sources](https://www.diadata.org/app/price/asset/Ethereum/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/) |
 | Tether USD (USDT) | USDT/USD | [USDT Sources](https://www.diadata.org/app/price/asset/Ethereum/0xdAC17F958D2ee523a2206206994597C13D831ec7/) |
 | Alephium (ALPH) | ALPH/USD | [ALPH Sources](https://www.diadata.org/app/price/asset/Alephium/tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq/) |
