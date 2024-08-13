@@ -17,6 +17,6 @@ Here, you'll find information on high-level
 [standards](/dapps/standards/fungible-tokens), as well as practical
 tutorials to help you get hands-on experience.
 
-You can also find information about Oracles [here](/docs/docs/infrastructure/Oracles).
+You can also find information about Oracles [here].
 
 Dive in to explore and build innovative DApps on Alephium!
