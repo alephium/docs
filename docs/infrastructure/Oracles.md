@@ -69,6 +69,6 @@ You can find a deployment example [here](https://github.com/alephium/ralph-examp
 
 ## Support
 
-For developer assistance, connect with the DIA team directly on [Discord](https://chat.openai.com/c/d2ca764b-00d6-4de7-8555-0cc30ac416b1#) or [Telegram](https://t.me/diadata_org).
+For developer assistance, connect with the DIA team directly on [Discord](https://discord.gg/ZvGjVY5uvs) or [Telegram](https://t.me/diadata_org).
 
 Developers seeking other specialized, production-grade oracle with tailored price feeds and configurations can initiate the request by [contacting the DIA BD Team via Telegram](https://t.me/diabdteam).
