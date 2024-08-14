@@ -48,6 +48,7 @@ The Alephium oracle includes the following price feeds. Use the Query Symbol as 
 | Wrapped Bitcoin (WBTC) | WBTC/USD | [WBTC Sources](https://www.diadata.org/app/price/asset/Ethereum/0x2260FAC5E5542a773Aa44fBCfeDf7C193bc2C599/) |
 | Tether USD (USDT) | USDT/USD | [USDT Sources](https://www.diadata.org/app/price/asset/Ethereum/0xdAC17F958D2ee523a2206206994597C13D831ec7/) |
 | Alephium (ALPH) | ALPH/USD | [ALPH Sources](https://www.diadata.org/app/price/asset/Alephium/tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq/) |
+| Ayin (AYIN) | AYIN/USD | [AYIN Sources](https://www.diadata.org/app/price/asset/Alephium/vT49PY8ksoUL6NcXiZ1t2wAmC7tTPRfFfER8n3UCLvXy/) |
 
 Learn more about DIA’s [data sourcing](https://docs.diadata.org/introduction/dia-technical-structure/data-sourcing) and [data computation](https://docs.diadata.org/introduction/dia-technical-structure/data-computation) architecture.
 
@@ -68,6 +69,6 @@ You can find a deployment example [here](https://github.com/alephium/ralph-examp
 
 ## Support
 
-For developer assistance, connect with the DIA team directly on[Discord](https://chat.openai.com/c/d2ca764b-00d6-4de7-8555-0cc30ac416b1#) or [Telegram](https://t.me/diadata_org).
+For developer assistance, connect with the DIA team directly on [Discord](https://discord.gg/ZvGjVY5uvs) or [Telegram](https://t.me/diadata_org).
 
 Developers seeking other specialized, production-grade oracle with tailored price feeds and configurations can initiate the request by [contacting the DIA BD Team via Telegram](https://t.me/diabdteam).
