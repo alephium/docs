@@ -70,10 +70,7 @@ In the latest full node, the mining protocol introduces some breaking changes:
 2. The `Job` message includes a block height field.
 3. The `SubmitResult` message includes a block hash field.
 
-To migrate to the latest full node:
-
-* For mining pool developers, please refer to the changes in [this commit](https://github.com/alephium/mining-pool/pull/66/commits/eacc46188b2f34245d510e59d1bf1e9f256ec611).
-* For miner developers, please refer to the changes in [this commit](https://github.com/alephium/gpu-miner/pull/61/commits/1715dbf3fe7115abadfce1eae51651637dc243c1).
+To migrate to the latest full node, please refer to the changes in [this commit](https://github.com/alephium/mining-pool/pull/66/commits/eacc46188b2f34245d510e59d1bf1e9f256ec611).
 
 ### Uncle Block Reward
 
