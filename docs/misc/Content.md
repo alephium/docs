@@ -766,6 +766,8 @@ Cheng Wang at EthCC 2022 - Account Model meets UTXO: a new paradigm for secure d
 
 Cheng Wang - Blockchain sharding at CDC 36th C3 - https://youtu.be/_SjtXp6F43k
 
+Cheng Wang - Proof of Less Work at CDC 36th C3 - https://youtu.be/r3rTrgoXjAU?si=l2DGT121IBVFeI7j
+
 Ethcc Paris 2022 - https://www.youtube.com/watch?v=VVYH9rBJAdA
 
 CVC/CVA 2023 - https://www.youtube.com/watch?v=8DiMSar3HOw / https://twitter.com/alephium/status/1673692785457897472
