@@ -108,9 +108,9 @@ also enables SDK to get its information in a standard way:
 
 ```typescript
 // Use SDK to call methods individually
-const getDecimalResult = await shinyToken.methods.getDecimals()
-const getTotalSupplyResult = await shinyToken.methods.getTotalSupply()
-const getNameResult = await shinyToken.methods.getName()
+const getDecimalResult = await shinyToken.view.getDecimals()
+const getTotalSupplyResult = await shinyToken.view.getTotalSupply()
+const getNameResult = await shinyToken.view.getName()
 console.log("TokenFaucet name, decimals, totalSupply", getNameResult.returns, getDecimalResult.returns, getTotalSupplyResult.returns)
 
 // Use SDK to call all multiple methods at the same time
