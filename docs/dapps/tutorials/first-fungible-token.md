@@ -77,7 +77,7 @@ async function fungibleToken() {
   web3.setCurrentNodeProvider('http://127.0.0.1:22973', undefined, fetch)
   const signer = await testNodeWallet()
   const issueTokenAmount = 10000n
-  // Deoloy `ShinyToken` contract and issue `10000` shiny tokens to `issueTokenTo` address.
+  // Deploy `ShinyToken` contract and issue `10000` shiny tokens to `issueTokenTo` address.
   const shinyToken = await ShinyToken.deploy(signer, {
     initialFields: {},
     issueTokenAmount,
