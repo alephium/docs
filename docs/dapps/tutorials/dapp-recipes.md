@@ -79,7 +79,7 @@ web3.setCurrentNodeProvider(nodeProvider)
 
 const tokenFaucetAddress = 'y1btMZHTvMvHEqLTdx1JHvEXq3tmVfqsY2rwM669upiT'
 const tokenFaucet = TokenFaucet.at(tokenFaucetAddress)
-const totalSupply = await tokenFaucet.methods.getTotalSupply()
+const totalSupply = await tokenFaucet.view.getTotalSupply()
 ```
 
 ### Subscribe to contract events
