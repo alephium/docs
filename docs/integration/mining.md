@@ -42,6 +42,7 @@ Currently, Alephium has 16 chains, so there will be 16 block templates in each `
 - `headerBlob`: serialized binary data of the [BlockHeader](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/BlockHeader.scala#L28), excluding the first 24 bytes (nonce).
 - `txsBlob`: serialized binary data of the transactions, usually empty and encoded as `#00`.
 - `targetBlob`: serialized binary data of the [Target](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/model/Target.scala#L32).
+- `height`: the height of the block template.
 
 Refer to the code [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js) to learn more about the format and parsing of the `Jobs` message.
 
@@ -59,7 +60,17 @@ Once the mining pool receives a valid `nonce` from the miner, it can send the bl
 
 Then, refer to the code [here](https://github.com/alephium/mining-pool/blob/master/lib/daemon.js#L49) to construct a valid `SubmitBlock` message and send it to the full node.
 
-After the full node verifies the block, it will send a `SubmitBlockResult` message to inform the mining pool whether the block is valid. Refer to the code [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L72) to parse the `SubmitBlockResult` message.
+After the full node verifies the block, it will send a `SubmitBlockResult` message to inform the mining pool whether the block is valid. Refer to the code [here](https://github.com/alephium/mining-pool/blob/master/lib/messages.js#L77) to parse the `SubmitBlockResult` message.
+
+### Migrate to the Latest Mining Protocol
+
+In the latest full node, the mining protocol introduces some breaking changes:
+
+1. Each message type includes a version number. The current mining protocol version is `1`.
+2. The `Job` message includes a block height field.
+3. The `SubmitResult` message includes a block hash field.
+
+To migrate to the latest full node, please refer to the changes in [this commit](https://github.com/alephium/mining-pool/pull/66/commits/eacc46188b2f34245d510e59d1bf1e9f256ec611).
 
 ### Uncle Block Reward
 
