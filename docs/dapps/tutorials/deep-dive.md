@@ -509,7 +509,6 @@ import { Configuration } from '@alephium/cli'
 export type Settings = {}
 
 const configuration: Configuration<Settings> = {
-  defaultNetwork: 'devnet',
   networks: {
     devnet: {
       nodeUrl: 'http://localhost:22973',
