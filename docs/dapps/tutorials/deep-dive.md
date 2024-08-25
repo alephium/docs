@@ -446,7 +446,7 @@ async function withdraw() {
 
   //.deployments contains the info of our `TokenFaucet` deployement, as we need to now the contractId and address
   //This was auto-generated with the `cli deploy` of our `scripts/0_deploy_faucet.ts`
-  const deployments = await Deployments.from('.deployments.devnet.json')
+  const deployments = await Deployments.load(configuration, 'devnet')
 
   //Make sure it match your address group
   const accountGroup = 1
