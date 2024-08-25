@@ -424,7 +424,7 @@ We will now see a different option to interact with the blockchain. Previously, 
 Another way is to use a simple typescript application. Create a `src` folder in the root folder of the project and a file called `tokens.ts` in it with the following contents.
 
 ```typescript
-import { Deployments, getDeploymentFilePath } from '@alephium/cli'
+import { Deployments } from '@alephium/cli'
 import { DUST_AMOUNT, web3, NodeProvider } from '@alephium/web3'
 import { PrivateKeyWallet} from '@alephium/web3-wallet'
 import configuration from '../alephium.config'
@@ -446,7 +446,7 @@ async function withdraw() {
 
   //.deployments contains the info of our `TokenFaucet` deployement, as we need to now the contractId and address
   //This was auto-generated with the `cli deploy` of our `scripts/0_deploy_faucet.ts`
-  const deployments = await Deployments.from(getDeploymentFilePath(configuration, 'devnet'))
+  const deployments = await Deployments.load(configuration, 'devnet')
 
   //Make sure it match your address group
   const accountGroup = 1
