@@ -96,6 +96,12 @@ Turkish 🇹🇷 - https://t.me/AlephiumTurkey
 Vietnamese 🇻🇳 - https://t.me/alephiumvn
 
 
+Arabic 🇦🇪 - https://t.me/AlephiumArabia
+
+India 🇮🇳 - https://t.me/AlephiumIndia
+
+Greece 🇬🇷 - https://t.me/AlephiumGreece
+
 Topical groups
 
 Mining https://t.me/alephium_mining
