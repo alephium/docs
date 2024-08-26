@@ -24,16 +24,35 @@ To support development and operation of dApps, it's recommended to
 enable persistence of [contract events](/sdk/events/#contract-events):
 
 ```
-alephium.node.event-log.enabled=true
+alephium.node.event-log.enabled = true
 alephium.node.event-log.index-by-tx-id = true
 alephium.node.event-log.index-by-block-hash = true
 ```
 
 You can read more about the events configuration
-[here](/sdk/events/#configuration). By default, contract events are
-turned off to improve storage efficiency.
+[here](/sdk/events/#configuration).
 
-For public nodes, it is also recommended to enable [API
+It is also recommended to enable the following node indexes:
+
+```
+alephium.node.indexes.subcontract-index = true
+alephium.node.indexes.tx-output-ref-index = true
+```
+
+Setting `alephium.node.indexes.subcontract-index = true` enables
+querying of a contract's subcontracts or its parent contract.
+
+Setting `alephium.node.indexes.tx-output-ref-index = true` allows for
+querying transaction id from the reference of a transaction output. In
+a transaction, each input only contains the reference of the output it
+spends. This index is useful to figure out the details of the
+referenced transaction output. You can read more about the transaction
+data structure [here](/sdk/transaction/).
+
+By default, contract events and node indexes are turned off to improve
+storage efficiency.
+
+For public nodes, it is also advised to enable [API
 key](/full-node/full-node-more#api-key) to control access to your full
 node's rest endpoints:
 
