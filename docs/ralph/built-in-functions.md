@@ -212,10 +212,16 @@ Returns the contract id of the caller.
 ```Rust
 fn callerAddress!() -> (Address)
 ```
+1. When used in a `TxScript`, returns the transaction caller, which
+   is the first input address when all input addresses are the
+   same. If not all input addresses are the same, `callAddress!()`
+   function fails.
+2. When used in a contract function called directly from `TxScript`,
+   returns the transaction caller as explained in 1)
+3. When used in a contract function called from another contract,
+   returns the address of the calling contract.
 
-Returns the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails.
-
-> @returns *the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails*
+> @returns *the address of the caller*
 
 ---
 
