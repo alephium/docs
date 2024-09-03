@@ -70,7 +70,7 @@ Official [wallets](/wallet) and explorer have native support for
 fungible tokens.
 
 Following is an example of displaying and transfering the `PACA` token
-using extesion wallet:
+using extension wallet:
 
 <img src={require("/img/transfer-alphpaca-1.png").default} alt="Token Overview" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
