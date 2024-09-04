@@ -44,7 +44,7 @@ automatically from the SDK:
 ```rust
 import "std/fungible_token_interface"
 
-Contract ShinyToken() {
+Contract ShinyToken() implements IFungibleToken {
   pub fn getTotalSupply() -> U256 {
       return 10000
   }
