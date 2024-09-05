@@ -171,7 +171,7 @@ To know how many coins are mined per day, you can use the formula below. As the 
 
 86'400 x  ALPH reward per block ~= number of ALPH mined per day.
 
-At the time this entry was last updated the average block reward was: `0.7175` ALPH which results in approximately `61'992` ALPH mined per day.
+At the time this entry was last updated the average block reward was: `0.4952` ALPH which results in approximately `42,785.28` ALPH mined per day.
 
 ### Is Alephium ASIC resistant?
 
