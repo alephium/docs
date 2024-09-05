@@ -78,7 +78,7 @@ Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
 
 Short explainer - https://x.com/alephium/status/1792609476551557392
 
-💣 Hashrate Series - https://x.com/alephium/status/1809222847027695667
+💣 Hashrate Series - Hashrate -  https://x.com/alephium/status/1809222847027695667
 
 ### Alphred Virtual Machine
 Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
@@ -155,6 +155,12 @@ Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
 🛠️ Tech Series - Merkle tries! 🌲 - https://x.com/alephium/status/1782440860631888065
 
+🛠️ Tech Thread - TxScripts and Smart Contracts - https://x.com/alephium/status/1824483080398327840
+
+🛠️ Tech Thread - MEV resistance - https://x.com/alephium/status/1826974702868332938
+
+Security 🧵 - Reentrancy edition! - https://x.com/alephium/status/1815446708048064701
+
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
 
 Bridge #1 - https://twitter.com/alephium/status/1579824159273541632
@@ -197,7 +203,19 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 
 🍭 UX Series - Did you know...You can send multiple assets in one transaction? - https://x.com/alephium/status/1820863372839293094
 
+🍭 UX Series - Did you know... The mobile wallet has a light & dark mode? - https://x.com/alephium/status/1830638602847715606
+
+🍭 UX Series - Did you know... You can enable password-secured transactions on the Alephium Wallets? - https://x.com/alephium/status/1828089848630255731
+
+🍭 UX Series - Did you know... You can get testnet $ALPH directly from the wallets! - https://x.com/alephium/status/1825536444754264354
+
+🍭 UX Series - Did you know... You can export a CSV file for your taxes? - https://x.com/alephium/status/1823034477481955444
+
 ## Ecosystem Updates
+
+🧬 Bi-Weekly #EcosystemUpdate - 03/09/24 - https://x.com/alephium/status/1830967553457287481
+
+🧬 Bi-Weekly #EcosystemUpdate - 19/08/24 - https://x.com/alephium/status/1825572951300980796
 
 🧬 Bi-Weekly #EcosystemUpdate - 02/08/24 - https://x.com/alephium/status/1819411645476773950
 
@@ -232,6 +250,12 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+Sep/24 - Alephium $ALPH-A with Houdini Swap - https://x.com/i/spaces/1PlJQbqPqPNxE
+
+Aug/24 - UTXO Alliance x Alephium - https://x.com/i/spaces/1PlKQbgwdWDGE
+
+Aug/24 - ⛓️Chain in Focus #8: Diving into Alephium’s Proof-of-Less-Work - https://x.com/i/spaces/1BdGYEzqXyvGX
 
 Aug/24 - Alephium x Bitmain x Antpool - To PoLW & beyond! - https://x.com/i/spaces/1kvJpbDeQnMKE
 
@@ -368,6 +392,10 @@ Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/annou
 
 ## Milestones 
 
+Aug/24 - 🧨 Oracles are now available on mainnet - https://x.com/alephium/status/1823725159771202027
+
+Jun/24 - Athens Builders Meetup #1 - https://x.com/alephium/status/1804407530845831194 
+
 May/24 - Rhône Network Upgrade Activation - https://x.com/alephium/status/1800924385890685016
 
 May/24 - 6 months of bridging recap! - https://x.com/alephium/status/1788921145720467888
@@ -463,6 +491,8 @@ Youtube playlist - https://www.youtube.com/playlist?list=PL8q8n0BHJS1NxQF4pHtyB6
 
 Thread about the presentations - https://x.com/alephium/status/1811777705165127863
 
+### Athens Talks Series
+
 ⚡ Athens Talks Series #1 - Cheng Wang - https://x.com/alephium/status/1812871245429387569
 
 ⚡ Athens Talks Series #2 - Mgpai - https://x.com/alephium/status/1812880145562148954
@@ -490,6 +520,22 @@ Thread about the presentations - https://x.com/alephium/status/18117777051651278
 ⚡ Athens Talks Series #13 - Mika - https://x.com/alephium/status/1816037557139882208
 
 ⚡ Athens Talks Series #14 - Vlad - https://x.com/alephium/status/1816102868375511394
+
+### Builders Uncut Series
+
+🛠️ Builders Uncut Series #1 - Reed - https://x.com/alephium/status/1823359810831561210
+
+🛠️ Builders Uncut Series #2 - Mobula - https://x.com/alephium/status/1823756823872024959
+
+🛠️ Builders Uncut Series #3 - Linx Labs - https://x.com/alephium/status/1824798476875473254
+
+🛠️ Builders Uncut Series #4 - Alphaga - https://x.com/alephium/status/1825872957551333703
+
+🛠️ Builders Uncut Series #5 - Ulam Labs - https://x.com/alephium/status/1826622077924790520
+
+🛠️ Builders Uncut Series #6 - GoldenCastleClub & Swapa - https://x.com/alephium/status/1828431063418577310
+
+🛠️ Builders Uncut Series #7 - Sezame - https://x.com/alephium/status/1829181197697606027
 
 ## Hackathon 
 
@@ -530,6 +576,8 @@ Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alep
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
 ## Community & Social 
+
+💣 Hashrate Series #2 - Goldshell - https://medium.com/@alephium/hashrate-series-2-goldshell-93cc51a86640
 
 💣 Hashrate Series #1 - NiceHash - https://medium.com/@alephium/hashrate-series-1-nicehash-ee0936adf899
 
@@ -717,6 +765,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## External Podcasts & Publications
+
+In 5 years, Alephium will improve POW performance to the extreme - https://www.theblockbeats.info/en/news/54838 and chinese version - https://www.theblockbeats.info/news/54838
 
 Alephium’s Game-Changing Tech and Vision for a Decentralized World - https://beincrypto.com/alephium-tech-vision-for-decentralized-world/
 
