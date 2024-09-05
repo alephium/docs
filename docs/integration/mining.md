@@ -142,6 +142,10 @@ In Alephium, the `nonce` is 24 bytes, and the block hash is `blake3(blake3(seria
 
 In addition to checking the target, the miner also needs to check the chain index of the block, as Alephium encodes the chain index into the block hash. Refer to the code [here](https://github.com/alephium/gpu-miner/blob/master/src/blake3/original-blake.hpp#LL303C2-L303C2) to verify whether the chain index of the block hash is correct.
 
+### Modify the TimeStamp of Jobs
+
+If you need to adjust the timestamp of your jobs to create variants for different miners, you could use this [utility function](https://github.com/alephium/mining-pool/blob/80d252e6fcb5b1182a69b5fb4f06f9f5806f1144/lib/messages.js#L91-L99). Please note that the timestamp of mined blocks should not be too far ahead of the network timestamp. It's recommended to keep the delta under 4 seconds to avoid issues.
+
 ## UTXO Management
 
 Due to the limited number of inputs that can be included in each transaction, withdrawals may fail if a miner's wallet is filled with small UTXOs. Some miners tend to send mining rewards directly to exchange addresses. If that's the case, please follow the guide [here](/integration/exchange#utxo-management).
