@@ -146,6 +146,17 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website: https://jjpool.fr/#/alph
 - Discord: https://discord.gg/X7UsCQTy73
 
+
+#### K1Pool
+
+- Website: https://k1pool.com/
+- Calculator: https://k1pool.com/dashboard
+- Discord: https://discord.com/invite/gSdJXFk
+- Email: contact@k1pool.com
+- Guide: https://k1pool.com/pool/alph/how-to-start
+- Telegram: https://t.me/k1pool
+- Twitter: https://twitter.com/K1Pool
+
 #### Kryptex Pool
 
 - Website: https://pool.kryptex.com/alph
