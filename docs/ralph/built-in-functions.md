@@ -213,9 +213,9 @@ Returns the contract id of the caller.
 fn callerAddress!() -> (Address)
 ```
 
-Returns the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails.
+<ol><li>When used in a TxScript, returns the transaction caller, which is the first input address when all input addresses are the same. If not all input addresses are the same, `callAddress!()` function fails.</li><li>When used in a contract function called directly from TxScript, returns the transaction caller as explained in 1)</li><li>When used in a contract function called from another contract, returns the address of the calling contract.</li></ol>
 
-> @returns *the address of the caller. When used in a TxScript, it returns the unique input address if the input addresses are the same, otherwise it fails*
+> @returns *the address of the caller*
 
 ---
 
@@ -931,7 +931,7 @@ fn blockTimeStamp!() -> (U256)
 
 Returns the block timestamp in milliseconds.
 
-> @returns *the block timestamp*
+> @returns *the block timestamp in milliseconds*
 
 ---
 
@@ -1027,7 +1027,7 @@ Returns the current transaction gas fee.
 fn verifyAbsoluteLocktime!(lockUntil:U256) -> ()
 ```
 
-Verifies that the absolute locktime is before the block timestamp, otherwise it fails.
+Verifies that the absolute locktime is before the block timestamp (milliseconds), otherwise it fails.
 
 > @param **lockUntil** *the timestamp until which the lock is valid*
 >
@@ -1041,7 +1041,7 @@ Verifies that the absolute locktime is before the block timestamp, otherwise it 
 fn verifyRelativeLocktime!(txInputIndex:U256, lockDuration:U256) -> ()
 ```
 
-Verifies that the input's creation timestamp + lock duration is before the block timestamp, otherwise it fails.
+Verifies that the input's creation timestamp + lock duration is before the block timestamp (milliseconds), otherwise it fails.
 
 > @param **txInputIndex** *the index of the transaction input*
 >
