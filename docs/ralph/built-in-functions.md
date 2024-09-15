@@ -929,7 +929,7 @@ Returns the network id (a single byte).
 fn blockTimeStamp!() -> (U256)
 ```
 
-Returns the block timestamp.
+Returns the block timestamp in milliseconds.
 
 > @returns *the block timestamp*
 
