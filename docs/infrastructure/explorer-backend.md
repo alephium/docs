@@ -1,8 +1,14 @@
 ---
-sidebar_position: 1
-title: Getting Started
-sidebar_label: Getting started
+sidebar_position: 15
+title: Explorer Backend
+sidebar_label: Explorer backend
 ---
+
+Alephium's explorer backend is an indexer that provides a RESTful API to query the Alephium blockchain.
+
+It serves https://explorer.alephium.org/ as well as our wallets.
+
+Find more information in the [Alephium Explorer Backend repository](https://github.com/alephium/explorer-backend/)
 
 ## Prerequisites
 
@@ -41,7 +47,7 @@ Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.
 java -jar explorer-backend-x.x.x.jar
 ```
 
-Your explorer-backend will start to sync with the full node. It might take long the first time or [start from a snapshot](explorer-backend/loading-snapshot.md).
+Your explorer-backend will start to sync with the full node. It might take long the first time or start from a snapshot.
 
 
 ## Configuration
@@ -69,4 +75,19 @@ Every value has a corresponding environment variable, you can find all of them i
 ```shell
 export EXPLORER_PORT=9191
 
+```
+
+## Start from a snapshot
+
+Alephium [archives repository](https://archives.alephium.org) also contain the snapshots for explorer backend database.
+The snapshot can be loaded in the postgresql database of the explorer backend at the first run, using the command below.
+
+* Make sure to use the network you want to load the snapshot for, and the correct database name and user.
+* The database must be created before running the command and must be empty.
+
+```shell
+alephium_network=mainnet
+pg_user=postgres
+database=explorer
+curl -L $(curl -L -s https://archives.alephium.org/archives/${alephium_network}/explorer-db/_latest.txt) | gunzip -c | psql -U $pg_user -d $database
 ```
