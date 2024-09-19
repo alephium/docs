@@ -215,6 +215,10 @@ const config = {
             from: "/Explorer-Backend-Starter-Guide.html",
             to: "/infrastructure/explorer-backend",
           },
+          {
+            from: "/full-node/explorer-backend",
+            to: "/infrastructure/explorer-backend",
+          },
           { from: "/Roadmap.html", to: "/" },
           {
             from: "/5min-overview",
