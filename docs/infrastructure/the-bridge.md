@@ -105,15 +105,9 @@ If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
 No. For example, you can also bridge USDC, ETH, DAI, WBTC & ALPH. Using the provided UI, you can bridge all tokens from [1inch list](https://tokenlists.org/token-list?url=tokens.1inch.eth)
 
-And if you interact with the smart contract directly, you can bridge all erc20 tokens you want.
+And if you interact with the smart contract directly, you can bridge all erc20 tokens you want
 
-
-### 8. I bridged ETH and/or USDC, and there’s no liquidity on AYIN pools, what can I do?
-
-Before bridging any token, please check that there is enough liquidity available, otherwise you might have to bridge those tokens back.
-
-
-### 9. How do I add the ALPH ERC-20 token to my Metamask? 
+### 8. How do I add the ALPH ERC-20 token to my Metamask? 
 
 In order to have the ALPH ERC-20 token show in your Metamask wallet you are going to need to do the following : 
 
@@ -125,7 +119,7 @@ In order to have the ALPH ERC-20 token show in your Metamask wallet you are goin
 - Press "Next" & then "Import"
 
 
-### 10. I got an error when redeeming from Ethereum to Alephium, even after waiting enough time. What to do?
+### 9. I got an error when redeeming from Ethereum to Alephium, even after waiting enough time. What to do?
 
 - On Metamask, click on the "..." on the top right
 - Click on "connected site"
