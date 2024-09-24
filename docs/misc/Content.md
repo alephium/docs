@@ -8,7 +8,6 @@ title: Content Repo
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 
 * [Our tech explained](#our-tech-explained)
-* [Explainer Series](#explainer-series)
 * [Ecosystem Updates](#ecosystem-updates)
 * [TechTalks & AMAs](#techtalks--amas)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
@@ -177,6 +176,8 @@ BIP39 Passphrase Implementation - https://medium.com/@alephium/bip39-passphrase-
 
 BIP39 Thread - https://twitter.com/alephium/status/1557019434979512327
 
+🔐 Did you know? - You can use a passphrase to enhance the security of your ALPH addresses! - https://x.com/alephium/status/1832056986793566335
+
 The Road to self Custody - https://medium.com/@alephium/ttxoo-2-the-road-to-self-custody-cfea4ae89444
 
 Self-custody - https://twitter.com/alephium/status/1557763279123992577
@@ -210,6 +211,8 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 🍭 UX Series - Did you know... You can get testnet $ALPH directly from the wallets! - https://x.com/alephium/status/1825536444754264354
 
 🍭 UX Series - Did you know... You can export a CSV file for your taxes? - https://x.com/alephium/status/1823034477481955444
+
+🍭 UX Series - Did you know... You can use a passphrase to enhance your security? - https://x.com/alephium/status/1836072293694644492
 
 ## Ecosystem Updates
 
@@ -537,6 +540,12 @@ Thread about the presentations - https://x.com/alephium/status/18117777051651278
 
 🛠️ Builders Uncut Series #7 - Sezame - https://x.com/alephium/status/1829181197697606027
 
+🛠️ Builders Uncut Series #8 - Alephium Battle - https://x.com/alephium/status/1832751827873382700
+
+🛠️ Builders Uncut Series #9 - Alphbanx - https://x.com/alephium/status/1835647895220941006
+
+🛠️ Builders Uncut Series #10 - Pyreplay - https://x.com/alephium/status/1837112726612529269
+
 ## Hackathon 
 
 Hackathon Website: https://alephium.org/hackathon/
@@ -576,6 +585,8 @@ Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alep
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
 ## Community & Social 
+
+💣 Hashrate Series #3 - Cruyptohall24 - https://x.com/alephium/status/1835581466018730110
 
 💣 Hashrate Series #2 - Goldshell - https://medium.com/@alephium/hashrate-series-2-goldshell-93cc51a86640
 
@@ -843,6 +854,8 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & PRs
+
+Flux - https://www.youtube.com/live/HX5SzftUDFM
 
 DappNode - Announcement - https://medium.com/@alephium/pushing-for-decentralization-alephium-and-dappnode-join-forces-c98845d9a9da
 
