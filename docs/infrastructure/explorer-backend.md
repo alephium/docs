@@ -8,7 +8,7 @@ Alephium's explorer backend is an indexer that provides a RESTful API to query t
 
 It serves https://explorer.alephium.org/ as well as our wallets.
 
-Find more information in the [Alephium Explorer Backend repository](https://github.com/alephium/explorer-backend/)
+Find more information in the [Alephium Explorer Backend repository](https://github.com/alephium/explorer-backend/).
 
 ## Prerequisites
 
@@ -20,7 +20,7 @@ Find more information in the [Alephium Explorer Backend repository](https://gith
 
 Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.com/alephium/explorer-backend/releases/latest).
 
-## Create the database:
+## Create the database
 
 1. Start the `postgresql` service.
 2. Login to the PostgreSQL shell with the default `postgres` user:
@@ -68,7 +68,7 @@ alephium {
 }
 ```
 
-### Environment variables:
+### Environment variables
 
 Every value has a corresponding environment variable, you can find all of them in the [application.conf](https://github.com/alephium/explorer-backend/blob/master/app/src/main/resources/application.conf).  e.g:
 
