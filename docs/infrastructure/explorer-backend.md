@@ -58,7 +58,7 @@ Everything can be overridden in two ways:
 
 ### `user.conf` file
 
-You can change the config with the `~/.alephium-explorer-backend/user.conf` file. e.g:
+You can change the config in the `~/.alephium-explorer-backend/user.conf` file. e.g:
 
 ```conf
 alephium {
