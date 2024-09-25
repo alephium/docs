@@ -47,7 +47,7 @@ Download file `explorer-backend-x.x.x.jar` from [Github release](https://github.
 java -jar explorer-backend-x.x.x.jar
 ```
 
-Your explorer-backend will start to sync with the full node. It might take long the first time or start from a snapshot.
+Your explorer-backend will start to sync with the full node. When syncing for the first time the process might take long. To speed it up you can [start from a snapshot](#start-from-a-snapshot).
 
 
 ## Configuration
