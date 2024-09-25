@@ -82,8 +82,12 @@ export EXPLORER_PORT=9191
 Alephium [archives repository](https://archives.alephium.org) also contain the snapshots for explorer backend database.
 The snapshot can be loaded in the postgresql database of the explorer backend at the first run, using the command below.
 
+:::warning
+
 * Make sure to use the network you want to load the snapshot for, and the correct database name and user.
 * The database must be created before running the command and must be empty.
+
+:::
 
 ```shell
 alephium_network=mainnet
