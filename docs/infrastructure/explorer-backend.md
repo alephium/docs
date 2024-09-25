@@ -54,7 +54,7 @@ Your explorer-backend will start to sync with the full node. When syncing for th
 
 The default configuration is available in [application.conf](https://github.com/alephium/explorer-backend/blob/master/app/src/main/resources/application.conf).
 
-Everything can be override with two ways:
+Everything can be overridden in two ways:
 
 ### `user.conf` file
 
