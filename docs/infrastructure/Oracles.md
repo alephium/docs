@@ -22,7 +22,7 @@ The DIA oracle on Alephium is free of use. dApps built on Alephium can leverage 
 
 The main oracle contracts on Group 0 are deployed at the following addresses: 
 
-- **Testnet**: vKdWgyqtQZzAV7eoMXxQCkyiNtceViGZheXC1iHbKFDZ
+- **Testnet**: 216wgM3Xi5uBFYwwiw2T7iZoCy9vozPJ4XjToW74nQjbV
 - **Mainnet:** 285zrkZTPpUCpjKg9E3z238VmpUBQEAbESGsJT6yX7Rod
 
 (New groups will be added in the near future).
