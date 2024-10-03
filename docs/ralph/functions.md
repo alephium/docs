@@ -304,7 +304,7 @@ For the `assetsInContract` annotation, the compiler will do the following checks
 
 You can find more information about asset permission at [here](/dapps/concepts/asset-permission-system).
 
-### Pay To Contract Only
+#### Pay To Contract Only
 
 You can set the `payToContractOnly` annotation to `true` when the contract only accepts transfers. Functions annotated with `@using(payToContractOnly = true)` can be called multiple times within a single transaction.
 
