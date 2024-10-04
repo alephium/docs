@@ -537,6 +537,16 @@ Thread about the presentations - https://x.com/alephium/status/18117777051651278
 
 🛠️ Builders Uncut Series #7 - Sezame - https://x.com/alephium/status/1829181197697606027
 
+🛠️ Builders Uncut Series #8 - Alephium Battle - https://x.com/alephium/status/1832751827873382700
+
+🛠️ Builders Uncut Series #9 - AlphbanX - https://x.com/alephium/status/1834973976344379857
+
+🛠️ Builders Uncut Series #10 - Pyreplay - https://x.com/alephium/status/1837112726612529269
+
+🛠️ Builders Uncut Series #11 - Notrustverif - https://x.com/alephium/status/1839648749846409668
+
+🛠️ Builders Uncut Series #12 - Phoenix Finance - https://x.com/alephium/status/1841891641700864481
+
 ## Hackathon 
 
 Hackathon Website: https://alephium.org/hackathon/
@@ -576,6 +586,8 @@ Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alep
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
 ## Community & Social 
+
+💣 Hashrate Series #3 - Cryptohall24 - https://medium.com/@alephium/hashrate-series-3-cryptohall-24-7ad1533701f4 
 
 💣 Hashrate Series #2 - Goldshell - https://medium.com/@alephium/hashrate-series-2-goldshell-93cc51a86640
 
@@ -765,6 +777,16 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## External Podcasts & Publications
+
+Defiant - What is Alephium? Unpacking UTXO Sharding, Proof of Less Work, and DeFi Security - https://www.youtube.com/watch?v=zA85kP0ttMs
+
+DXB Crypto - Exclusive AMA with Alephium COO Maud Bannwart: Unveiling the Future of PoLW! - https://www.youtube.com/watch?v=txxKGq1oT6s
+
+Wavect - Alephium: Scalable for devs. Secure for users. Decentralized for all - https://www.youtube.com/watch?v=F-jeK--88Mw 
+
+Jax Dwyer - Alephium: Scalable Web3 Blockchain with Smart Contracts & Energy-Efficient Consensus - https://www.youtube.com/watch?v=w3BkyQaDFLs
+
+WEB3 INSIGHTS: Podcast Series - Alephium: Scaling Blockchain with Energy-Efficient Sharding & Secure Smart Contracts - https://www.youtube.com/watch?v=_3Vqgg1j-aM
 
 In 5 years, Alephium will improve POW performance to the extreme - https://www.theblockbeats.info/en/news/54838 and chinese version - https://www.theblockbeats.info/news/54838
 
