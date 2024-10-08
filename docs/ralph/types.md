@@ -207,7 +207,7 @@ Contract Counters() {
 
 TxScript CreateCounter(counters: Counters) {
   let from = callerAddress!()
-  counters.insert{from -> ALPH: mapEntryDeposit!()}() // Approve minimal deposit for creating the map entry
+  counters.insert!{from -> ALPH: mapEntryDeposit!()}() // Approve minimal deposit for creating the map entry
 }
 ```
 
