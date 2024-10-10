@@ -18,7 +18,7 @@ Prerequisites:
 You can clone the example in this guide and run it like this:
 
 ```shell
-git clone git@github.com:alephium/ralph-example.git
+git clone https://github.com/alephium/ralph-example.git
 cd ralph-example/your-firsts
 npm install
 npm compile
