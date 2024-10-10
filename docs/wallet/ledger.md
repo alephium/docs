@@ -1,5 +1,5 @@
 ---
-sidebar_position: 50
+sidebar_position: null
 title: Ledger
 sidebar_label: Ledger
 ---
