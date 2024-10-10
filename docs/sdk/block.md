@@ -166,12 +166,17 @@ subscription.unsubscribe()
 
 ### WebSocket Support
 
+:::warning
+WebSocket feature is under active development, breaking changes might
+be expected
+:::
+
 Alephium full node also supports streaming blocks using
 WebSocket. Here is an example using
 [wscat](https://github.com/websockets/wscat) from terminal:
 
 ```bash
-$ wscat -c wss://node.mainnet.alephium.org/events
+$ wscat -c ws://127.0.0.1:21973/events
 Connected (press CTRL+C to quit)
 < {"method":"block_notify","params":{"hash":"0000000000002bc06aac6acb3bf983bd6d97d3c85e22ede07d55d59d108ef165","timestamp":1728544859844,"chainFrom":1,"chainTo":1,"height":1826597,"deps":["0000000000001de862d80529c1f539c96f8b9dcb42482edf68da5e3e42f7e480","00000000000011f838f9bd5e5be68b865c5c6b5acffd0af0d38f710ad69097aa","0000000000001f88535dda19bf72dcaf94f29c9067e5fa822c736c7c2731901f","000000000000168caff24e31a69817cd795d42b0b07fbb334957bc0cae0c61b4","00000000000032dafa8539cc52740a26c310a5fc6b9d1700242ffb3671936df5","0000000000003376aed6f7183c6abae082040b0e2a535685c03fc78b00776926","00000000000031bdaae0b4b9847f37a104a46b5de87b42f6a8f53ae7c3fe0857"],"transactions":[{"unsigned":{"txId":"11552292f3738a7e5f6decb31ac6ef688942828cf5688093050722779b4e9a87","version":0,"networkId":0,"gasAmount":20000,"gasPrice":"1000000000","inputs":[],"fixedOutputs":[{"hint":11663143,"key":"34f1fa6533b03f2ca8c4bb59d4dc0694277d2c8093cffb42d63d969d363c1072","attoAlphAmount":"485591478228368529","address":"1ANu47GYWwprmQJUgPpBsYb1mDoqxTDyVkCSg2C4NbtDp","tokens":[],"lockTime":1728574859844,"message":"010100000192754d66c400"}]},"scriptExecutionOk":true,"contractInputs":[],"generatedOutputs":[],"inputSignatures":[],"scriptSignatures":[]}],"nonce":"17a50000000000000000000000000000000602f633e2f5e4","version":0,"depStateHash":"a9f5ae1e71270952df22595efd0d43030f311a2c044006ef98af10bfb310402c","txsHash":"2171272f353e30871ffe87808798c2de38aa2d21b82cd938a4695084a7e4c6ca","target":"1a3bca56","ghostUncles":[]},"jsonrpc":"2.0"}
 < {"method":"block_notify","params":{"hash":"000000000000014f3963fc99219e35dfaf2fb78f38c40c9610e21a65cb2e6885","timestamp":1728544861236,"chainFrom":1,"chainTo":1,"height":1826598,"deps":["0000000000001de862d80529c1f539c96f8b9dcb42482edf68da5e3e42f7e480","00000000000011f838f9bd5e5be68b865c5c6b5acffd0af0d38f710ad69097aa","0000000000001f88535dda19bf72dcaf94f29c9067e5fa822c736c7c2731901f","000000000000247e2264fd2118df85c574193b00e2ad664acc9474b8748187d4","0000000000002bc06aac6acb3bf983bd6d97d3c85e22ede07d55d59d108ef165","0000000000003376aed6f7183c6abae082040b0e2a535685c03fc78b00776926","00000000000031bdaae0b4b9847f37a104a46b5de87b42f6a8f53ae7c3fe0857"],"transactions":[{"unsigned":{"txId":"428fff327e8903ada7da54b691d66bab9d4efdaba206b4b88ce52658e0618115","version":0,"networkId":0,"gasAmount":20000,"gasPrice":"1000000000","inputs":[],"fixedOutputs":[{"hint":11663143,"key":"5cd06a6c145038abc461af62b3e7a7aa8d5e2b086a3a9d4741e708a9f519367c","attoAlphAmount":"485591478228368529","address":"1ANu47GYWwprmQJUgPpBsYb1mDoqxTDyVkCSg2C4NbtDp","tokens":[],"lockTime":1728574861236,"message":"010100000192754d6c3400"}]},"scriptExecutionOk":true,"contractInputs":[],"generatedOutputs":[],"inputSignatures":[],"scriptSignatures":[]}],"nonce":"afd0d72cd25dd99c00000000000000000000000000000000","version":0,"depStateHash":"a8b7c9509288c35cc9b4a7aa839196742c025428d763346d51ac264846b9b492","txsHash":"8a649a2e51f327dd61430d8ad3d2d7028178019566fc362c872a5286057d6ac9","target":"1a3bca56","ghostUncles":[]},"jsonrpc":"2.0"}
@@ -184,7 +189,7 @@ Here is an example of how to interact with it using the
 ```typescript
 import WebSocket from 'ws';
 
-const ws = new WebSocket('wss://node.mainnet.alephium.org/events');
+const ws = new WebSocket('ws://127.0.0.1:21973/events');
 
 ws.on('error', console.error);
 ws.on('open', function open() {
