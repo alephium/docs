@@ -31,7 +31,7 @@ ALEPHIUM_HOME=~/.alephium
 ALEPHIUM_NETWORK=mainnet       # Possible values: `mainnet`, `testnet`
 INDEXES_CONFIG=with-indexes    # Possible values: `with-indexes`, `without-indexes`
 NODE_TYPE=full                 # Possible values: `full`, `pruned`
-curl -L "$(curl -sL https://archives.alephium.org/archives/$ALEPHIUM_NETWORK/$NODE_TYPE-node-data/_latest-$INDEXES_CONFIG.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
+curl -L "$(curl -sL https://archives.alephium.org/archives/$ALEPHIUM_NETWORK/$NODE_TYPE-node-data/_latest_$INDEXES_CONFIG.txt)" | tar xf - -C "$ALEPHIUM_HOME/"
 ```
 
 A snapshot is created with [advanced node
