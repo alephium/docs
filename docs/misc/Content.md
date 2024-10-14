@@ -96,7 +96,7 @@ About Sharding - https://vxtwitter.com/alephium/status/1747255798034796657
 
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
 
-Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
+Blockflow ELI5 - https://x.com/alephium/status/1668272076992413697
 
 Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
