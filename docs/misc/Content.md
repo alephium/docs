@@ -793,6 +793,11 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
+Blockbeats - Interview of Cheng Wang & Maud Bannwart on their respective itinerary in crypto!
+
+CN: https://www.theblockbeats.info/news/55317
+EN: https://www.theblockbeats.info/en/news/55317
+
 Defiant - What is Alephium? Unpacking UTXO Sharding, Proof of Less Work, and DeFi Security - https://www.youtube.com/watch?v=zA85kP0ttMs
 
 DXB Crypto - Exclusive AMA with Alephium COO Maud Bannwart: Unveiling the Future of PoLW! - https://www.youtube.com/watch?v=txxKGq1oT6s
