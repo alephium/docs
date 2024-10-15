@@ -12,6 +12,16 @@ SDK](/sdk/getting-started), which offers powerful tools to
 interact with the blockchain and a developer friendly framework
 for compiling, testing and deploying smart contracts.
 
+## Getting Started with a template
+
+The easiest way to get started with building dApps on Alephium is to use one of the available templates.
+
+* [Node.js template](https://github.com/alephium/nodejs-dapp-template): A simple faucet dApp built with Node.js.
+* [Next.js template](https://github.com/alephium/nextjs-dapp-template): A simple faucet dApp built with Next.js.
+* [React template](https://github.com/alephium/react-dapp-template): A simple react template.
+
+## Concepts and Standards
+
 Here, you'll find information on high-level
 [concepts](/dapps/concepts/overview) and
 [standards](/dapps/standards/fungible-tokens), as well as practical
