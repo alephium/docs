@@ -96,7 +96,7 @@ About Sharding - https://vxtwitter.com/alephium/status/1747255798034796657
 
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
 
-Blockflow ELI5 - https://twitter.com/alephium/status/1669007441764270080
+Blockflow ELI5 - https://x.com/alephium/status/1668272076992413697
 
 Sharding - https://medium.com/@alephium/sharding-d50968b8b229
 
@@ -158,6 +158,8 @@ Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 
 🛠️ Tech Thread - MEV resistance - https://x.com/alephium/status/1826974702868332938
 
+⚒️ Tech Thread - Uncle blocks - https://x.com/alephium/status/1844762425876508908
+
 Security 🧵 - Reentrancy edition! - https://x.com/alephium/status/1815446708048064701
 
 Scala - https://twitter.com/alephium/status/1592536671177699328?s=20&t=RpVl_j3Mi6NmcEGv8zDl8Q
@@ -215,6 +217,8 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 🍭 UX Series - Did you know... You can use a passphrase to enhance your security? - https://x.com/alephium/status/1836072293694644492
 
 ## Ecosystem Updates
+
+🧬 Bi-Weekly #EcosystemUpdate - 07/10/24 - https://x.com/alephium/status/1843326216943910935
 
 🧬 Bi-Weekly #EcosystemUpdate - 03/09/24 - https://x.com/alephium/status/1830967553457287481
 
@@ -395,6 +399,8 @@ Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/annou
 
 ## Milestones 
 
+Oct/24 - Ledger x Alephium - https://x.com/alephium/status/1844415349632139664
+
 Aug/24 - 🧨 Oracles are now available on mainnet - https://x.com/alephium/status/1823725159771202027
 
 Jun/24 - Athens Builders Meetup #1 - https://x.com/alephium/status/1804407530845831194 
@@ -550,6 +556,8 @@ Thread about the presentations - https://x.com/alephium/status/18117777051651278
 
 🛠️ Builders Uncut Series #12 - Phoenix Finance - https://x.com/alephium/status/1841891641700864481
 
+🛠️ Builders Uncut Series #13 - Invariant Labs - https://x.com/alephium/status/1845414138014568949
+
 ## Hackathon 
 
 Hackathon Website: https://alephium.org/hackathon/
@@ -588,7 +596,9 @@ Jan/24 🛠️ Buidl on Alephium #1 - Pioneers 🔥 - https://vxtwitter.com/alep
 
 Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1743950076953690180?s=20
 
-## Community & Social 
+## Community & Social
+
+💣 Hashrate Series #4 - IceRiver - https://medium.com/@alephium/hashrate-series-4-iceriver-063f52b7c431
 
 💣 Hashrate Series #3 - Cryptohall24 - https://medium.com/@alephium/hashrate-series-3-cryptohall-24-7ad1533701f4 
 
@@ -752,6 +762,8 @@ DJ Fetamin Mix at Chainflip Party during Ethcc - https://www.youtube.com/watch?v
 
 ## Tutorials & Workshops
 
+Ledger Hardware Wallet - https://docs.alephium.org/wallet/ledger
+
 Alephium Bridge: The Written Tutorial - https://medium.com/@alephium/alephiumalephium-bridge-the-tutorial-28e7b92b339a
 
 🎦Bridge Tutorial!📺 - https://www.youtube.com/watch?v=xoYVzbwBAjg
@@ -780,6 +792,11 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## External Podcasts & Publications
+
+Blockbeats - Interview of Cheng Wang & Maud Bannwart on their respective itinerary in crypto!
+
+CN: https://www.theblockbeats.info/news/55317
+EN: https://www.theblockbeats.info/en/news/55317
 
 Defiant - What is Alephium? Unpacking UTXO Sharding, Proof of Less Work, and DeFi Security - https://www.youtube.com/watch?v=zA85kP0ttMs
 
