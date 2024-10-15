@@ -11,7 +11,7 @@ Many language communities host their own channels, offering unique insights and 
 
 ## Twitter/X
 
-Localized pages (these are non-official pages, created and modded by independant third-parties Alephium has no control on)
+Localized pages (these are non-official pages, created and modded by independent third-parties Alephium has no control over)
 
 Africa 🌍 - https://x.com/alephiumafrique
 
@@ -96,13 +96,7 @@ Turkish 🇹🇷 - https://t.me/AlephiumTurkey
 Vietnamese 🇻🇳 - https://t.me/alephiumvn
 
 
-Arabic 🇦🇪 - https://t.me/AlephiumArabia
-
-India 🇮🇳 - https://t.me/AlephiumIndia
-
-Greece 🇬🇷 - https://t.me/AlephiumGreece
-
-Topical groups
+### Topical groups
 
 Mining https://t.me/alephium_mining
 
