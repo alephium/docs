@@ -10,6 +10,9 @@ sidebar_label: Ledger
 
 A Ledger Device is a hardware wallet considered one of the most secure ways to store your digital assets. Ledger uses an offline, or cold storage, method of generating private keys, making it a preferred method for many crypto users. This guide will help you to connect your Ledger device to the Alephium Browser Extension. The Alephium Browser Extension enables you to Send and Receive ALPH with your Ledger Device.
 
+**Note:** This integration allows users to securely store, send tokens, and interact with decentralized applications (dApps) while keeping their assets protected offline with the full suite of Ledger HW (Nano S+ / Nano X / Stax / Flex)
+
+
 ### BEFORE YOU START, MAKE SURE:
 
 1. You’ve initialized your Ledger Device.
@@ -30,6 +33,7 @@ A Ledger Device is a hardware wallet considered one of the most secure ways to s
    b.  Your device will display **Processing…**
    
    c.  The app installation is confirmed.
+   
 
 ![image](https://github.com/user-attachments/assets/5e278065-6611-450a-9e41-020834879224)
 
@@ -50,7 +54,7 @@ Go to the browser where you installed the browser extension wallet, and open it.
 
 Create a new address in your extension wallet: Click on the current address name, and then in the “+” icon. That will lead you to the Ledger Connection page:
 
-![image](https://github.com/user-attachments/assets/c1a2ecfb-cd95-4af0-8b08-d488de26e1a2)
+![create address](https://github.com/user-attachments/assets/a5688765-d28d-4116-9be8-b8bacebf5f43)
 
 
 4. Verify that the address on the Alephium Browser Extension Wallet matches the address on your Ledger Device. Click on “Add funds” and then on “Verify with Ledger”
@@ -64,7 +68,8 @@ For Ledger Nano X: Press the right button to scroll to “Display Account”. Th
 
 For Ledger Flex/Stax: Swipe & confirm.
 
-![image](https://github.com/user-attachments/assets/a6d900d1-8302-47d1-8340-fa537322d1f4)
+![address](https://github.com/user-attachments/assets/18285864-1fb6-4604-88ab-afbb16e6b604)
+
 
 
 ### VIEW ACCOUNT BALANCE
@@ -104,19 +109,15 @@ Your account balance is shown on the main screen Browser Extension Wallet denomi
 
 ![image](https://github.com/user-attachments/assets/b288b2a6-4958-4e68-881e-929b6fb70590)
 
-5. Review the Details on your Ledger Device.
+5. Review the Details on your Ledger Device and sign the transaction.
 
-For Ledger Flex/Stax: 
-
-Swipe right your Ledger Device to review the outputs (Amount and Address).
-
-6. Sign the transaction in your Ledger Device.
 
 For Ledger Flex/Stax
 
 Swipe right on your Ledger Device to review the outputs (Amount and Address). Review the transaction fees until you see **“Sign Transaction to send assets”** then press and hold to sign the transaction.
 
-![image](https://github.com/user-attachments/assets/0a4710c5-e7e5-406b-a394-12c372836e46)
+![review tx (1)](https://github.com/user-attachments/assets/56dc5bac-fcd4-4f1b-b7ab-4badcc979bab)
+
 
 Once you sign the Transaction on the Ledger Device, you can follow its completion in “Activity” section (Please wait a few seconds for the transaction to confirm)
 
@@ -133,7 +134,8 @@ For Ledger Flex/Stax:
 
 **Click on the “gear” at the top right.** In the new page, turn the toggle on. Click on the arrow to go back to the main page.
 
-![image](https://github.com/user-attachments/assets/50b03aa0-de05-438f-80b9-3c9966893010)
+![enabling blind signing](https://github.com/user-attachments/assets/eeb12bd5-ef67-4b1b-ba95-ae0a75cc6351)
+
 
 ### INTERACTING WITH SMART CONTRACTS WITH THE EXTENSION WALLET AND LEDGER
 
@@ -145,7 +147,8 @@ For Ledger Flex/Stax:
 
 For Ledger Flex/Stax:
 
-![image](https://github.com/user-attachments/assets/fc4d0b05-f2bb-4c23-a4c6-6c477c8cda66)
+![blind signing (1)](https://github.com/user-attachments/assets/1cc4bcc3-3f63-454c-b439-efc0fa719a55)
+
 
 ### SUPPORT
 
