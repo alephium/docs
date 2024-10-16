@@ -13,7 +13,8 @@ sidebar_label: Ecosystem
 ## Templates
 
 - [Node.js template](https://github.com/alephium/nodejs-dapp-template)
-- [Next.js template](https://github.com/alephium/nextjs-dapp-template)
+- [Next.js template with app router](https://github.com/alephium/nextjs-app-dapp-template)
+- [Next.js template with pages router](https://github.com/alephium/nextjs-pages-dapp-template)
 - [React template](https://github.com/alephium/react-dapp-template)
 
 ## dApp SDK

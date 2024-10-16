@@ -29,7 +29,7 @@ If you experience slowness with `npm` and `npx`, consider give
 To create the tutorial project, open a new terminal and run:
 
 ```shell
-git clone https://github.com/alephium/nodejs-dapp-template alephium-tutorial
+git clone https://github.com/alephium/nextjs-app-dapp-template alephium-tutorial
 ```
 
 This will create a new directory `alephium-tutorial` and initialize a sample project inside that directory.
