@@ -29,7 +29,7 @@ If you experience slowness with `npm` and `npx`, consider give
 To create the tutorial project, open a new terminal and run:
 
 ```shell
-npx @alephium/cli@latest init alephium-tutorial
+git clone https://github.com/alephium/nodejs-dapp-template alephium-tutorial
 ```
 
 This will create a new directory `alephium-tutorial` and initialize a sample project inside that directory.
@@ -51,7 +51,7 @@ through REST endpoints.
 Next, change the workspace to the tutorial project:
 
 ```
-cd alephium-tutorial
+cd alephium-tutorial && npm install
 ```
 
 In the `contracts/` folder, you will find `token.ral` and `withdraw.ral`:
@@ -153,7 +153,7 @@ TxScript Withdraw(token: TokenFaucet, amount: U256) {
 To compile your contracts, run:
 
 ```
-npx @alephium/cli@latest compile
+npm run compile
 ```
 
 The compiled artifacts are in the `artifacts` directory. This command also generates Typescript code based on the compiled artifacts, which is in the `artifacts/ts` directory. You can use the generated Typescript code to interact with the alephium blockchain more conveniently.
@@ -215,12 +215,6 @@ You can run the tests with:
 npm run test
 ```
 
-or
-
-```
-npx @alephium/cli@latest test
-```
-
 ## Deploy your contract
 
 To deploy the contract, use Alephium CLI and a deployment script `scripts/0_deploy_faucet.ts`:
@@ -266,13 +260,13 @@ export default deployFaucet
 You can run the deployment script with:
 
 ```
-npx @alephium/cli@latest deploy
+npm run deploy
 ```
 
 This will deploy the token faucet to group 0 of devnet. To deploy on testnet (or any other network), update your `alephium.config.ts` and use the `--network` option:
 
 ```
-npx @alephium/cli@latest deploy --network testnet
+npm run deploy --network testnet
 ```
 
 ## Interact with the deployed contract

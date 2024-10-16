@@ -10,6 +10,12 @@ sidebar_label: Ecosystem
 - [Local Devnet](https://github.com/alephium/alephium-stack#devnet) (explorer included)
 - Public APIs for mainnet and testnet are documented [here](/infrastructure/public-services#api-aliases)
 
+## Templates
+
+- [Node.js template](https://github.com/alephium/nodejs-dapp-template)
+- [Next.js template](https://github.com/alephium/nextjs-dapp-template)
+- [React template](https://github.com/alephium/react-dapp-template)
+
 ## dApp SDK
 - [@alephium/web3](https://www.npmjs.com/package/@alephium/web3)
 - [@alephium/web3-wallet](https://www.npmjs.com/package/@alephium/web3-wallet) 
