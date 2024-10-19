@@ -129,6 +129,6 @@ Here are the steps to prune the Alephium full node:
 ### Using Docker
 
 1. Make sure the Alephium full node is stopped
-2. Run the following command `docker run -it -v ${YOUR_ALEPHIUM_HOME}:/alephium-home/.alephium alephium/alephium-tools:x.y.z org.alephium.tools.PruneStorage`
+2. Run the following command `docker run -it -v ${YOUR_ALEPHIUM_HOME}:/alephium-home/.alephium alephium/alephium-tools org.alephium.tools.PruneStorage`
 3. Wait until the command finishes execution, the disk space should be reduced to around 20 GB
 4. Restart the Alephium full node
