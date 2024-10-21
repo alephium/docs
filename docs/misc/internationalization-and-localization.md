@@ -93,7 +93,7 @@ India                  🇮🇳           https://t.me/AlephiumIndia
 
 Italia                  🇮🇹           https://t.me/Alephium_it
 
-Arabia               🇦🇪           https://t.me/AlephiumArabia
+Arabic               🇦🇪           https://t.me/AlephiumArabia
 
 Nigeria              🇳🇬           https://t.me/AlephiumNigeria
 
