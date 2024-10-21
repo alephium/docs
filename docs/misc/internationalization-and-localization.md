@@ -65,35 +65,37 @@ Find the following languages in [the official Discord](https://alephium.org/disc
 
 Localized groups (these are non-official groups, created and modded by independant third-parties Alephium has no control on)
 
-Arabia 🇦🇪 - https://t.me/AlephiumArabia
+Russian                🇷🇺         https://t.me/alephiumgroup_ru
 
-Chinese 🇨🇳 - https://t.me/alephiumCN
+Spanish                🇪🇦         https://t.me/minerosAlephium
 
-French 🇫🇷 - https://t.me/Alephiumfr
+Chinese                🇨🇳         https://t.me/alephiumCN
 
-German (DACH) 🇩🇪 - https://t.me/alphgermanofficial
+German (DACH)  🇩🇪         https://t.me/alphgermanofficial
 
-Greece 🇬🇷 - https://t.me/AlephiumGreece
+Turkish                🇹🇷          https://t.me/AlephiumTurkey
 
-Holland 🇳🇱 - https://t.me/AlephiumgroupNL
+Holland               🇳🇱          https://t.me/AlephiumgroupNL
 
-India 🇮🇳 - https://t.me/AlephiumIndia
+Portuguese   🇵🇹🇧🇷          https://t.me/Alephium_pt
 
-Indonesian 🇮🇩 - https://t.me/AlephiumID
+Vietnamese       🇻🇳           https://t.me/alephiumvn
 
-Italia 🇮🇹 - https://t.me/Alephium_it
+Indonesian        🇮🇩           https://t.me/AlephiumID
 
-Poland 🇵🇱 - https://t.me/alephiumPL
+French               🇫🇷           https://t.me/Alephiumfr
 
-Portuguese 🇵🇹🇧🇷 - https://t.me/Alephium_pt
+Poland               🇵🇱           https://t.me/alephiumPL
 
-Russian 🇷🇺 - https://t.me/alephiumgroup_ru
+Greece              🇬🇷           https://t.me/AlephiumGreece
 
-Spanish 🇪🇦 - https://t.me/minerosAlephium
+India                  🇮🇳           https://t.me/AlephiumIndia
 
-Turkish 🇹🇷 - https://t.me/AlephiumTurkey
+Italia                  🇮🇹           https://t.me/Alephium_it
 
-Vietnamese 🇻🇳 - https://t.me/alephiumvn
+Arabic               🇦🇪           https://t.me/AlephiumArabia
+
+Nigeria              🇳🇬           https://t.me/AlephiumNigeria
 
 
 ### Topical groups
