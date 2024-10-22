@@ -11,7 +11,7 @@ some of the key constants for Alephium.
 
 | Description                                       | Value            |
 |---------------------------------------------------|------------------|
-| Maximal transactions per block                    | 2000             |
+| Maximal transactions per block                    | 500              |
 | Minimal gas per transaction                       | 20000            |
 | Minimal gas price per transaction                 | 0.0000001 `ALPH` |
 | Minimal gas fee per transaction                   | 0.002 `ALPH`     |
