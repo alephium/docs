@@ -79,6 +79,18 @@ Short explainer - https://x.com/alephium/status/1792609476551557392
 
 💣 Hashrate Series - Hashrate -  https://x.com/alephium/status/1809222847027695667
 
+💣 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
+
+💣 Hashrate Series #5 - Hearst - https://medium.com/@alephium/hashrate-series-5-hearst-6abf6f694bc2
+
+💣 Hashrate Series #4 - IceRiver - https://medium.com/@alephium/hashrate-series-4-iceriver-063f52b7c431
+
+💣 Hashrate Series #3 - Cryptohall24 - https://medium.com/@alephium/hashrate-series-3-cryptohall-24-7ad1533701f4 
+
+💣 Hashrate Series #2 - Goldshell - https://medium.com/@alephium/hashrate-series-2-goldshell-93cc51a86640
+
+💣 Hashrate Series #1 - NiceHash - https://medium.com/@alephium/hashrate-series-1-nicehash-ee0936adf899
+
 ### Alphred Virtual Machine
 Alphred Virtual Machine - https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025
 
@@ -201,8 +213,6 @@ Beware of Scams #1 - https://twitter.com/alephium/status/1777716807539032430?t=L
 Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=ERLAvH9Dan8O7FZ0cVnrdA&s=19
 
 ⚠️ About the token list - https://twitter.com/alephium/status/1779882118241456175
-
-💣 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
 
 🍭 UX Series - Did you know...You can send multiple assets in one transaction? - https://x.com/alephium/status/1820863372839293094
 
@@ -598,14 +608,6 @@ Jan/24 Alephium Hackathon Announcement - https://vxtwitter.com/alephium/status/1
 
 ## Community & Social
 
-💣 Hashrate Series #4 - IceRiver - https://medium.com/@alephium/hashrate-series-4-iceriver-063f52b7c431
-
-💣 Hashrate Series #3 - Cryptohall24 - https://medium.com/@alephium/hashrate-series-3-cryptohall-24-7ad1533701f4 
-
-💣 Hashrate Series #2 - Goldshell - https://medium.com/@alephium/hashrate-series-2-goldshell-93cc51a86640
-
-💣 Hashrate Series #1 - NiceHash - https://medium.com/@alephium/hashrate-series-1-nicehash-ee0936adf899
-
 ⛏ Miners' Highlight # 4 - Nick Dimondi 🔥 - https://vxtwitter.com/alephium/status/1765787279736680475
 
 ⛏ Miners Highlight # 3 - Bokiko - https://vxtwitter.com/alephium/status/1753459274783887393
@@ -746,7 +748,7 @@ Welcome to the Blockflow Alliance DAO! - https://medium.com/@alephium/welcome-bl
 
 Alpehium's community creativity is fantastic! Toolkit Design Contest Winners - https://medium.com/@alephium/toolkit-design-contest-winners-announced-6cc5e304cd8b
 
-UI & UX wizardry from our latest techtalk! - https://medium.com/@alephium/techtalk-11-how-to-onboard-the-next-billion-people-to-crypto-d1f4904b3eea
+UI & UX wizardry from our latest tech talk! - https://medium.com/@alephium/techtalk-11-how-to-onboard-the-next-billion-people-to-crypto-d1f4904b3eea
 
 Alephium Toolkit GUI design contest! - https://medium.com/@alephium/design-contest-a-logo-for-the-toolkit-website-f7bf7801b03c
 
