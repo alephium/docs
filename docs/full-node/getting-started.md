@@ -148,8 +148,6 @@ alephium.api.network-interface = "0.0.0.0"
 alephium.api.api-key-enabled = false
 alephium.mining.api-interface = "0.0.0.0"
 alephium.network.bind-address  = "0.0.0.0:19973"
-alephium.network.internal-address  = "alephium:19973"
-alephium.network.coordinator-address  = "alephium:19973"
 
 # arbitrary mining addresses
 alephium.mining.miner-addresses = [
