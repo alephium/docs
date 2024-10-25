@@ -51,6 +51,15 @@ parameter is optional. If specified, the wallet provider will connect
 to an address in the specified group, otherwise the wallet provider
 will connect to address from any group.
 
+Note: When interacting with a deployed smart contract, use the same `addressGroup` that was specified during deployment. To identify the `addressGroup` of a deployed contract, use the following code:
+
+```typescript
+import { groupOfAddress } from '@alephium/web3';
+const index = groupOfAddress(contractAddress);
+```
+
+This code retrieves the group index associated with the contract, confirming the correct `addressGroup`.
+
 The `displayAccount` parameter in the `AlephiumConnectButton`
 component is used to specify the content displayed after the wallet is
 connected. By default, the connected address will be displayed.
