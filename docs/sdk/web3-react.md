@@ -54,8 +54,8 @@ will connect to address from any group.
 Note: When interacting with a deployed smart contract, use the same `addressGroup` that was specified during deployment. To identify the `addressGroup` of a deployed contract, use the following code:
 
 ```typescript
-const nftCollection = NFTCollection.at(contractAddress);
-const index = await nftCollection.groupIndex;
+import { groupOfAddress } from '@alephium/web3';
+const index = groupOfAddress(contractAddress);
 ```
 
 This code retrieves the group index associated with the contract, confirming the correct `addressGroup`.
