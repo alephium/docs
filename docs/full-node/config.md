@@ -94,7 +94,7 @@ volumes:
 
 | Setting                                     | Description                                                                                                                                                                       |
 |---------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| alephium.network.network-id                 | `0` for Mainnet, `1` for Testnet, `2` for Devnet. Default is `0`.                                                                                                                 |
+| alephium.network.network-id                 | `0` for Mainnet, `1` for Testnet, `4` for Devnet. Default is `0`.                                                                                                                 |
 | alephium.network.external-address           | External address of the full node to enhance discoverability                                                                                                                      |
 | alephium.api.api-key-enabled                | `true` to enable API key for full node's API endpoints.                                                                                                                           |
 | alephium.api.api-key                        | 32+ characters API key.                                                                                                                                                           |
