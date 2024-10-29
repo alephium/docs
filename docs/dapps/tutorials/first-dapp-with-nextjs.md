@@ -33,10 +33,9 @@ initialize a sample Nextjs project inside that directory.
 
 ## Launch a local development network
 
-Go to the `alephium-nextjs-tutorial/docker` directory and run
-
 ```sh
-cd alephium-nextjs-tutorial/docker
+git clone git@github.com:alephium/alephium-stack.git
+cd alephium-stack/devnet
 docker-compose up -d
 ```
 
