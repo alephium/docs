@@ -195,6 +195,15 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website (CN): https://tw-pool.com/stats/alephium
 - Discord: https://discord.gg/UT65Tctm9t
 
+#### ViaBTC
+
+- Website: https://www.viabtc.com/
+- Guide: https://support.viabtc.com/hc/en-us/articles/10958245835535-ALPH-Mining
+- Support: support@viabtc.com
+- Calculator: https://www.viabtc.com/tools/calculator?symbol=ALPH
+- Twitter: https://x.com/ViaBTC
+- Telegram: https://t.me/TheViaBTC
+
 #### Vipor.net
 
 - Website: https://vipor.net/mine/alph
