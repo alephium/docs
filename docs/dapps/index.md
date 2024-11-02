@@ -19,6 +19,7 @@ The easiest way to get started with building dApps on Alephium is to use one of 
 * [Node.js template](https://github.com/alephium/nodejs-dapp-template): A simple faucet dApp built with Node.js.
 * [Next.js template with app router](https://github.com/alephium/nextjs-app-dapp-template): A simple faucet dApp built with Next.js app router.
 * [Next.js template with pages router](https://github.com/alephium/nextjs-pages-dapp-template): A simple faucet dApp built with Next.js pages router.
+* [Remix template](https://github.com/alephium/remix-dapp-template): A simple remix template.
 * [React template](https://github.com/alephium/react-dapp-template): A simple react template.
 
 ## Concepts and Standards
