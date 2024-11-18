@@ -77,6 +77,8 @@ Consensus Algorithm - https://twitter.com/alephium/status/1562066898904158208
 
 Short explainer - https://x.com/alephium/status/1792609476551557392
 
+💣 Hashrate Series - ASIC - Friendliness - https://x.com/alephium/status/1858165614847909916
+
 💣 Hashrate Series - Hashrate -  https://x.com/alephium/status/1809222847027695667
 
 💣 Hashrate Series - Blake3 - https://twitter.com/alephium/status/1783859399783756241
@@ -150,6 +152,8 @@ Bridge Thread #1 - https://twitter.com/alephium/status/1721940517657952450
 
 Alephium Tokenomics - Updated Article - https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c
 
+🚫 Privacy Matters - https://x.com/alephium/status/1857041999334932677
+
 TxScripts and Smart Contracts - https://twitter.com/alephium/status/1688907382615945218?s=20 
 
 Do you know what "Magic Numbers" are? And which ones Alephium has? : https://twitter.com/alephium/status/1701604666847666397
@@ -212,6 +216,10 @@ Beware of Scams #1 - https://twitter.com/alephium/status/1777716807539032430?t=L
 
 Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=ERLAvH9Dan8O7FZ0cVnrdA&s=19
 
+Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
+
+🚨 The Ledger "Beware of scammers!" 🧵 - https://x.com/alephium/status/1853863727105474891
+
 ⚠️ About the token list - https://twitter.com/alephium/status/1779882118241456175
 
 🍭 UX Series - Did you know...You can send multiple assets in one transaction? - https://x.com/alephium/status/1820863372839293094
@@ -227,6 +235,8 @@ Beware of Scams #2 - https://twitter.com/alephium/status/1765071532928467276?t=E
 🍭 UX Series - Did you know... You can use a passphrase to enhance your security? - https://x.com/alephium/status/1836072293694644492
 
 ## Ecosystem Updates
+
+🧬 Bi-Weekly #EcosystemUpdate - 26/10/24 - https://x.com/alephium/status/1850226983302787241
 
 🧬 Bi-Weekly #EcosystemUpdate - 07/10/24 - https://x.com/alephium/status/1843326216943910935
 
@@ -365,6 +375,10 @@ https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-wor
 
 Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
+## Network Upgrade #3 - Danube
+
+Roadmap Update - https://x.com/wachmc/status/1851307848031957191
+
 ## Network Upgrade #2 - Rhone 
 
 Jun/24 Rhône Network Upgrade Activation - https://medium.com/@alephium/rh%C3%B4ne-network-upgrade-activated-cbeb298585fe
@@ -408,6 +422,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Nov/24 - 3 years on mainnet - https://x.com/alephium/status/1854956861943869924
 
 Oct/24 - Ledger x Alephium - https://x.com/alephium/status/1844415349632139664
 
@@ -567,6 +583,8 @@ Thread about the presentations - https://x.com/alephium/status/18117777051651278
 🛠️ Builders Uncut Series #12 - Phoenix Finance - https://x.com/alephium/status/1841891641700864481
 
 🛠️ Builders Uncut Series #13 - Invariant Labs - https://x.com/alephium/status/1845414138014568949
+
+🛠️ Builders Uncut Series #14 - BlockflowDAO - https://x.com/alephium/status/1856011073238741273
 
 ## Hackathon 
 
@@ -795,6 +813,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
+Alephium (ALPH): A Comprehensive overview of the first Proof of Work smart contract blockchain - https://oakresearch.io/en/reports/protocols/alephium-alph-comprehensive-overview
+
 Blockbeats - Interview of Cheng Wang & Maud Bannwart on their respective itinerary in crypto!
 
 CN: https://www.theblockbeats.info/news/55317
@@ -851,6 +871,8 @@ Heidi News - https://www.heidi.news/cyber/alephium-une-blockchain-3-0-developpee
 Token Insights - https://tokeninsight.medium.com/project-research-paper-of-alephium-8001323353e7
 
 ## Events, presentations & conferences 
+
+🎓 Back to school! -  Technical intro to Alephium at the EPFL - https://x.com/alephium/status/1848401917459706166
 
 What is Alephium? - https://www.youtube.com/watch?v=v2L4jEvoSIU
 
