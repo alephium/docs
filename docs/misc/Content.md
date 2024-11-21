@@ -423,6 +423,8 @@ Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/annou
 
 ## Milestones 
 
+Nov/24 - OneKey's Alephium Edition - https://x.com/alephium/status/1856349729619083379
+
 Nov/24 - 3 years on mainnet - https://x.com/alephium/status/1854956861943869924
 
 Oct/24 - Ledger x Alephium - https://x.com/alephium/status/1844415349632139664
@@ -813,7 +815,12 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
-Alephium (ALPH): A Comprehensive overview of the first Proof of Work smart contract blockchain - https://oakresearch.io/en/reports/protocols/alephium-alph-comprehensive-overview
+W3J - Cheng Wang: The Architect of Alephium’s Vision - https://thew3journal.com/cheng-wang-the-architect-of-alephiums-vision
+
+Alephium (ALPH): A Comprehensive overview of the first Proof of Work smart contract blockchain.
+
+EN: https://oakresearch.io/en/reports/protocols/alephium-alph-comprehensive-overview
+FR: https://oakresearch.io/fr/reports/protocols/alephium-alph-presentation-complete
 
 Blockbeats - Interview of Cheng Wang & Maud Bannwart on their respective itinerary in crypto!
 
