@@ -24,9 +24,13 @@ Please bear in mind that:
 
 - Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet).
 
+- Bridging from BSC to ALPH takes roughly 20 minutes.
+
+-  Bridging from ALPH to BSC, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet).
+
 In most cases, waiting a little bit longer to redeem your tokens is enough. 
 
-If it still doesn’t work, please try to disconnect & reconnect your wallets to the bridge, and try to redeem again (see
+If it still doesn’t work, please try to disconnect & reconnect your wallets to the bridge, and try to redeem again.
 
 If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
@@ -82,7 +86,7 @@ Usually that means that one of your wallets has locked itself. Please copy your 
 
 ### 5. Transaction has over 205 confirmations and I can't redeem!
 
-Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
+Bridging from ALPH to ETH or BSC, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
 
 - “Issue 1. I have waited long enough, and it is not letting me redeem! What do I do?”
 - “Issue 6. I am getting a VAA error! And I can't redeem.” 
@@ -105,9 +109,13 @@ If that doesn’t work, open an issue [here](https://discord.gg/FCN5bgGMuG).
 
 No. For example, you can also bridge USDC, ETH, DAI, WBTC & ALPH. Using the provided UI, you can bridge all tokens from [1inch list](https://tokenlists.org/token-list?url=tokens.1inch.eth)
 
-And if you interact with the smart contract directly, you can bridge all erc20 tokens you want
+And if you interact with the smart contract directly, you can bridge all erc20 tokens you want.
 
-### 8. How do I add the ALPH ERC-20 token to my Metamask? 
+### 8. Can we only bridge USDT from BSC to ALPH? 
+
+No. At launch, $BNB, $USDT, and $USDC will be bridgeable on Alephium’s front-end bridge UI. They will also appear as “verified” on Alephium’s family of wallets (desktop, mobile, and browser extension). If you want to bridge another token, you’ll need to register it. You can register all tokens on this [list](https://tokens.coingecko.com/binance-smart-chain/all.json).
+
+### 9. How do I add the ALPH ERC-20 token to my Metamask? 
 
 In order to have the ALPH ERC-20 token show in your Metamask wallet you are going to need to do the following : 
 
@@ -118,11 +126,21 @@ In order to have the ALPH ERC-20 token show in your Metamask wallet you are goin
 - Copy & Paste the contract into the first field. 
 - Press "Next" & then "Import"
 
+### 10. How do I add the ALPH BEP-20 token to my Metamask? 
 
-### 9. I got an error when redeeming from Ethereum to Alephium, even after waiting enough time. What to do?
+The process is quite similar. have the ALPH BEP-20 token show in your Metamask wallet you are going to need to do the following : 
+
+- Get the Token Contract from [here](https://bscscan.com/token/0x8683BA2F8b0f69b2105f26f488bADe1d3AB4dec8)
+- Open & Unlock your metamask
+- Click on "Import Token"
+- Select "Custom Token" 
+- Copy & Paste the contract into the first field. 
+- Press "Next" & then "Import"
+
+### 11. I got an error when redeeming from Ethereum/BSC to Alephium, even after waiting enough time. What to do?
 
 - On Metamask, click on the "..." on the top right
 - Click on "connected site"
 - You will see the bridge as one of the dApps connected. Click on it to disconnect.
 - Refresh the [redeem page](https://bridge.alephium.org/#/redeem)
-- Now select Ethereum as the source chain and reconnect your metamask wallet.
+- Now select Ethereum/BSC as the source chain and reconnect your metamask wallet.
