@@ -290,15 +290,13 @@ Foo(bazId).foo()
 let _ = Bar(bazId).bar()
 ```
 
-In Ralph, you can use the `methodSelector` annotation if your contract needs to inherit from multiple interfaces:
+Ralph also supports inheritance from multiple interfaces:
 
 ```rust
-@using(methodSelector = true)
 Interface Foo {
   pub fn foo() -> ()
 }
 
-@using(methodSelector = true)
 Interface Bar {
   pub fn bar() -> ()
 }
@@ -308,6 +306,57 @@ Contract Baz() implements Foo, Bar {
   pub fn bar() -> () {}
 }
 ```
+
+## Contract Method Calls
+
+In Ralph, there are two ways to call contract methods:
+
+1. method index: The index of the method in the contract code.
+2. method selector: Calculated from `hash("methodName(methodParamTypes)->(methodReturnTypes)")`, introduced in the Rhone upgrade. This allows a contract to inherit multiple interfaces.
+
+Calls made directly using the contract will use the method index, while calls using an interface will use the method selector, for example:
+
+```rust
+Interface IFoo {
+  pub fn foo() -> ()
+}
+
+Contract Foo() implements IFoo {
+  pub fn foo() -> () {}
+}
+
+let fooId = #...
+IFoo(fooId).foo() // This will use the method selector to call the contract
+Foo(fooId).foo()  // This will use the method index to call the contract
+```
+
+To maintain compatibility with contracts already deployed on the chain that do not support method selector calls, we introduced the `@using(methodSelector = true/false)` annotation. This annotation can only be applied to interfaces:
+
+```rust
+@using(methodSelector = false)
+Interface IFoo {
+  pub fn foo() -> ()
+}
+
+IFoo(fooId).foo() // This will not use the method selector to call the contract method, but will use the method index instead
+```
+
+In addition, Ralph also supports specifying the method index at compile time:
+
+```rust
+Interface IFoo {
+  @using(methodIndex = 2)
+  pub fn foo() -> ()
+}
+
+Contract Foo() implements IFoo {
+  pub fn foo() -> () {}
+  pub fn bar() -> () {}
+  pub fn baz() -> () {}
+}
+```
+
+Since the method index for method `foo` is specified as `2` in the `IFoo` interface, the method order in the compiled `Foo` contract will be: `bar, baz, foo`. Specifying the method index is especially useful when calling a contract in cases where the contract does not support method selectors, or when there is no contract source code and only contract artifacts are available.
 
 ## TxScript
 
