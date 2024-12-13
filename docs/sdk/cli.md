@@ -110,25 +110,22 @@ In most cases, we only need to specify the `networks` config. The other optional
      <td><i>errorOnWarnings</i><br/>Compiler warnings will be treated as errors if this config is enabled</td>
    </tr>
    <tr>
-     <td>skipRecompile</td>
-     <td>Specify whether contract code should be recompiled when deploying contracts, it is `false` by default</td>
+     <td>skipRecompileOnDeployment</td>
+     <td>Specify whether contract code should be recompiled when deploying contracts. It is `false` by default</td>
    </tr>
    <tr>
      <td>forceRecompile</td>
+     <td>The `forceRecompile` flag is used to recompile all contracts. It is `false` by default.</td>
+   </tr>
+   <tr>
+     <td>skipRecompileIfDeployedOnMainnet</td>
      <td>
-       The purpose of this config is to maintain backward compatibility, it is disabled by default. More concretely:
-       <ul>
-         <li>
-           If this config is disabled and the contract code has already been deployed to the testnet/mainnet without any updates, then no new bytecode will be generated for the contract
-         </li>
-         <li>
-           If this config is disabled and the contract code has already been deployed to the testnet/mainnet but the contract code has been updated, then new bytecode will be generated for the contract
-         </li>
-         <li>
-           If this config is enabled or the contract code has not been deployed to the testnet/mainnet, then new bytecode will be generated for the contract
-         </li>
-       </ul>
+       When this flag is enabled, it checks whether the contract has been deployed to the mainnet using the contract code hash. If it has been deployed, the contract will not be recompiled. It is `false` by default.
      </td>
+   </tr>
+   <tr>
+     <td>skipRecompileContracts</td>
+     <td>This list specifies the contracts you do not want to recompile. It is an empty list by default.</td>
    </tr>
    <tr>
      <td>enableDebugMode</td>
