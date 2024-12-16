@@ -1,5 +1,5 @@
 ---
-sidebar_position: 60
+sidebar_position: 70
 title: More and Troubleshooting
 sidebar_label: More and troubleshooting
 ---

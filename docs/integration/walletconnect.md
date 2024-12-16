@@ -1,7 +1,7 @@
 ---
-sidebar_position: 100
-title: WalletConnect Integration
-sidebar_label: WalletConnect Integration
+sidebar_position: 60
+title: WalletConnect
+sidebar_label: WalletConnect
 ---
 
 WalletConnect is a protocol that enables dApps to connect with various wallets. This document describes how to integrate WalletConnect into your dApp and wallet within the Alephium ecosystem.
