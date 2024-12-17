@@ -92,6 +92,25 @@ const buildTxResult = await builder.buildTransferTx(
 console.log('unsigned transaction', buildTxResult.unsignedTx)
 ```
 
+You can also use `builtTransferTx` to build a token transfer transaction:
+
+```typescript
+const buildTxResult = await builder.buildTransferTx(
+  {
+    signerAddress: senderAddress,
+    destinations: [{
+      address: receiverAddress,
+      tokens: [{
+        id: '19246e8c2899bc258a1156e08466e3cdd3323da756d8a543c7fc911847b96f00',
+        amount: 1000000000000000000n
+      }]
+    }]
+  },
+  senderPublicKey
+)
+console.log('unsigned transaction', buildTxResult.unsignedTx)
+```
+
 ### Execute Script Transaction
 
 Let's build an unsigned transaction to execute a transaction script.

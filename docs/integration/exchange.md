@@ -145,6 +145,69 @@ curl -X 'POST' \
 # }
 ```
 
+You can also use the `/transactions/build` endpoint to build a token transfer transaction:
+
+```shell
+curl -X 'POST' \
+  'http://127.0.0.1:22973/transactions/build' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "fromPublicKey": "0381818e63bd9e35a5489b52a430accefc608fd60aa2c7c0d1b393b5239aedf6b0",
+  "destinations": [
+    {
+      "address": "1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3",
+      "tokens": [
+        {
+          "id": "19246e8c2899bc258a1156e08466e3cdd3323da756d8a543c7fc911847b96f00",
+          "amount": "1000000000000000000"
+        }
+      ],
+    }
+  ]
+}'
+```
+
+In addition to using the raw endpoint, you can also refer to [this guide](../sdk/transaction.md) on how to use the `@alephium/web3` SDK to build and send transactions.
+
+The `@alephium/web3` SDK also provides APIs to extract ALPH and token deposits from a transaction:
+
+```typescript
+import { getALPHDepositInfo, getDepositInfo, getSenderAddress } from '@alephium/web3'
+
+// extract ALPH deposit info from a transaction
+const alphDepositInfo = getALPHDepositInfo(tx)
+// [
+//   {
+//     targetAddress: '1khyjTYdKEyCSyg6SqyDf97Vq3EmSJF9zPugb3KYERP8',
+//     depositAmount: 1000000000000000000n
+//   }
+// ]
+
+// get the sender address of the deposit transaction
+const senderAddress = getSenderAddress(tx)
+
+// extract ALPH and token deposit info from a transaction
+const depositInfo = getDepositInfo(tx)
+// {
+//   alph: [
+//     {
+//       targetAddress: '1khyjTYdKEyCSyg6SqyDf97Vq3EmSJF9zPugb3KYERP8',
+//       depositAmount: 1000000000000000000n
+//     }
+//   ],
+//   tokens: [
+//     {
+//       tokenId: '19246e8c2899bc258a1156e08466e3cdd3323da756d8a543c7fc911847b96f00',
+//       targetAddress: '1khyjTYdKEyCSyg6SqyDf97Vq3EmSJF9zPugb3KYERP8',
+//       depositAmount: 1000000000000000000n
+//     }
+//   ]
+// }
+```
+
+You can filter the deposit information sent to your exchange address by `targetAddress` and `tokenId`.
+
 ## Block APIs
 
 ### Get block hash with transaction ID
