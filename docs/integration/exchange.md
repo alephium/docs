@@ -157,6 +157,7 @@ curl -X 'POST' \
   "destinations": [
     {
       "address": "1C2RAVWSuaXw8xtUxqVERR7ChKBE1XgscNFw73NSHE1v3",
+      "attoAlphAmount": "10000000000000000",
       "tokens": [
         {
           "id": "19246e8c2899bc258a1156e08466e3cdd3323da756d8a543c7fc911847b96f00",
