@@ -209,6 +209,92 @@ const depositInfo = getDepositInfo(tx)
 
 You can filter the deposit information sent to your exchange address by `targetAddress` and `tokenId`.
 
+## Fetching Fungible Token Metadata
+
+You can use the API provided by the `@alephium/web3 SDK` to fetch fungible token metadata:
+
+```typescript
+import { NodeProvider } from '@alephium/web3'
+
+const tokenId = '1a281053ba8601a658368594da034c2e99a0fb951b86498d05e76aedfe666800'
+const nodeProvider = new NodeProvider('http://127.0.0.1:12973')
+const metadata = await nodeProvider.fetchFungibleTokenMetaData(tokenId)
+// {
+//   symbol: '4159494e',
+//   name: '4159494e',
+//   decimals: 18,
+//   totalSupply: 1693518090594172274149304n
+// }
+```
+
+The `symbol` and `name` are hex-encoded UTF-8 strings.
+
+You can also use the raw endpoint to fetch fungible token metadata:
+
+```shell
+curl -X 'POST' \
+  'http://127.0.0.1:12973/contracts/multicall-contract' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "calls": [
+    {
+      "group": 0,
+      "address": "vT49PY8ksoUL6NcXiZ1t2wAmC7tTPRfFfER8n3UCLvXy",
+      "methodIndex": 0
+    },
+    {
+      "group": 0,
+      "address": "vT49PY8ksoUL6NcXiZ1t2wAmC7tTPRfFfER8n3UCLvXy",
+      "methodIndex": 1
+    },
+    {
+      "group": 0,
+      "address": "vT49PY8ksoUL6NcXiZ1t2wAmC7tTPRfFfER8n3UCLvXy",
+      "methodIndex": 2
+    },
+    {
+      "group": 0,
+      "address": "vT49PY8ksoUL6NcXiZ1t2wAmC7tTPRfFfER8n3UCLvXy",
+      "methodIndex": 3
+    }
+  ]
+}'
+```
+
+All contracts that follow the fungible token standard can use this request to fetch the token metadata. This request calls the contract methods indexed at 0, 1, 2, and 3, which respectively return the token symbol, token name, token decimals, and token total supply.
+
+This request uses the token address instead of the token ID. You can refer to the code below to convert the token ID to the token address:
+
+```typescript
+const tokenAddress = base58.encode([0x03, ...hexToBytes(tokenId)])
+```
+
+The following includes part of the response information for simplicity:
+
+```json
+{
+  "results": [
+    {
+      "type": "CallContractSucceeded",
+      "returns": [{ "type": "ByteVec", "value": "4159494e" }]
+    },
+    {
+      "type": "CallContractSucceeded",
+      "returns": [{ "type": "ByteVec", "value": "4159494e" }]
+    },
+    {
+      "type": "CallContractSucceeded",
+      "returns": [{ "type": "U256", "value": "18" }],
+    },
+    {
+      "type": "CallContractSucceeded",
+      "returns": [{ "type": "U256", "value": "1693518090594172274149304" }]
+    }
+  ]
+}
+```
+
 ## Block APIs
 
 ### Get block hash with transaction ID

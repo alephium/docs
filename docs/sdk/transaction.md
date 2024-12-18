@@ -95,11 +95,14 @@ console.log('unsigned transaction', buildTxResult.unsignedTx)
 You can also use `builtTransferTx` to build a token transfer transaction:
 
 ```typescript
+import { DUST_AMOUNT } from '@alephium/web3'
+
 const buildTxResult = await builder.buildTransferTx(
   {
     signerAddress: senderAddress,
     destinations: [{
       address: receiverAddress,
+      attoAlphAmount: DUST_AMOUNT,
       tokens: [{
         id: '19246e8c2899bc258a1156e08466e3cdd3323da756d8a543c7fc911847b96f00',
         amount: 1000000000000000000n
