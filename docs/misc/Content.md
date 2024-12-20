@@ -106,6 +106,8 @@ Alphred VM #3 - https://twitter.com/alephium/status/1648310489045405696
 
 An Introduction to Blockflow: Alephium’s sharding algorithm - https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402
 
+🌿 How Alephium scales - Blockflow Sharding Algorithm Detailed — an interview - https://x.com/alephium/status/1860725091882914030
+
 About Sharding - https://vxtwitter.com/alephium/status/1747255798034796657
 
 Blockflow - https://twitter.com/alephium/status/1541711510178758658
@@ -162,6 +164,8 @@ First Developer Workshop — Build a Token Faucet ( Article ) - https://medium.c
 
 Block Time and Block Size - https://medium.com/@alephium/block-time-and-block-size-16e37292444f
 
+⛓ Did you know? About block size - https://x.com/alephium/status/1865088773626962215
+
 Back to Basics: What is block time? Why is it 64s on Alephium? - https://twitter.com/alephium/status/1676257717303005185
 
 Transactions Per Second (TPS) - https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39
@@ -175,6 +179,8 @@ Time to Finality - https://medium.com/@alephium/time-to-finality-17d64eeffd25
 🛠️ Tech Thread - MEV resistance - https://x.com/alephium/status/1826974702868332938
 
 ⚒️ Tech Thread - Uncle blocks - https://x.com/alephium/status/1844762425876508908
+
+🛠️ Tech Series - Single-step cross-group TX - https://x.com/alephium/status/1862526953414434971
 
 Security 🧵 - Reentrancy edition! - https://x.com/alephium/status/1815446708048064701
 
@@ -277,6 +283,16 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+Dec/24 - Monsieur TK X Space - https://x.com/i/spaces/1jMKgBwrBrlxL
+
+Dec/24 - gTrade x Alephium X Space - https://x.com/i/spaces/1yoJMyjeEWkJQ
+
+Nov/24 - SafePal Community Call - https://x.com/i/broadcasts/1ZkKzRkdEqwKv
+
+Nov/24 - BSC Daily X Space - https://x.com/i/spaces/1kvKpbadgLgJE
+
+Oct/24 . House of Chimera - https://x.com/i/spaces/1RDGlyYBOOdJL
 
 Sep/24 - Alephium $ALPH-A with Houdini Swap - https://x.com/i/spaces/1PlJQbqPqPNxE
 
@@ -422,6 +438,14 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Dec/24 - GIGA x Hearst x Alephium partnership - https://x.com/alephium/status/1866814018494833055
+
+Dec/24 - GIGA announcement - https://x.com/alephium/status/1866075353506349133
+
+Dec/24 - SafePal Integration - https://x.com/isafepal/status/1864291363660988799?s=46&t=m7GODPTFppc526dkNJuFdQ
+
+Nov/24 - BSC Bridge is Live - https://x.com/alephium/status/1859235479473844383 
 
 Nov/24 - OneKey's Alephium Edition - https://x.com/alephium/status/1856349729619083379
 
@@ -815,9 +839,35 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
+GIGATON partnership announcement
+
+- Cointelegraph - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
+
+- Coinmarketcap - https://coinmarketcap.com/community/articles/6757d1850044587a89b512fe
+
+- Binance - https://www.binance.com/en/square/post/17338408816426
+
+- Benzinga - https://www.benzinga.com/pressreleases/24/12/g42390866/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
+
+- AP News - https://apnews.com/press-release/globenewswire-mobile/abu-dhabi-united-arab-emirates-government-united-kingdom-electric-vehicles-4608154ce981d3ec2413aedc2f20ee09
+
+- Business Insider - https://markets.businessinsider.com/news/stocks/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution-1034113856
+
+- Market Research https://www.marketwatch.com/press-release/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution-968c108c?mod=search_headline
+
+- Street Insider - https://www.streetinsider.com/Globe+Newswire/Alephium%3A+the+next-gen+PoW+blockchain+chosen+to+drive+GIGATONS%27+billion-dollar+climate+revolution/24080648.html
+
+- SkyNews Arabia - https://www.snabusiness.com/video/1760884
+
+Coinwirez - Alephium: An Extensive Exploration of the Sharded Frontier of Blockchain - https://coinwirez.com/alephium-an-extensive-exploration-of-the-sharded-frontier-of-blockchain/
+
+BSCDaily - Alephium Overview - https://x.com/bsc_daily/status/1862174993624572401
+
+BTCTKVR Magazine - Alephium: The Future of privacy tech on a scalable PoW blockchain - https://x.com/alephium/status/1857041999334932677
+
 W3J - Cheng Wang: The Architect of Alephium’s Vision - https://thew3journal.com/cheng-wang-the-architect-of-alephiums-vision
 
-Alephium (ALPH): A Comprehensive overview of the first Proof of Work smart contract blockchain.
+OAK Reasearch - Alephium (ALPH): A Comprehensive overview of the first Proof of Work smart contract blockchain.
 
 EN: https://oakresearch.io/en/reports/protocols/alephium-alph-comprehensive-overview
 FR: https://oakresearch.io/fr/reports/protocols/alephium-alph-presentation-complete
