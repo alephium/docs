@@ -248,6 +248,10 @@ const config = {
             from: "/tokens/non-fungible-tokens",
             to: "/dapps/standards/non-fungible-tokens",
           },
+          {
+            from: "/full-node/devnet",
+            to: "/full-node/getting-started#devnet",
+          }
         ],
       },
     ],
