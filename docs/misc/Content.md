@@ -439,6 +439,8 @@ Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/annou
 
 ## Milestones 
 
+Dec/24 - 50k followers on Twitter - https://x.com/alephium/status/1873740686677401742
+
 Dec/24 - GIGA x Hearst x Alephium partnership - https://x.com/alephium/status/1866814018494833055
 
 Dec/24 - GIGA announcement - https://x.com/alephium/status/1866075353506349133
@@ -455,7 +457,13 @@ Oct/24 - Ledger x Alephium - https://x.com/alephium/status/1844415349632139664
 
 Aug/24 - 🧨 Oracles are now available on mainnet - https://x.com/alephium/status/1823725159771202027
 
+Jul/24 - Bitmain miner - https://x.com/BITMAINtech/status/1814265352743694760
+
+Jul/24 - Iceriver miner - https://x.com/icerivereu/status/1816075249722520000
+
 Jun/24 - Athens Builders Meetup #1 - https://x.com/alephium/status/1804407530845831194 
+
+May/24 - Biconomy listing - https://x.com/BiconomyCom/status/1790302716809388113
 
 May/24 - Rhône Network Upgrade Activation - https://x.com/alephium/status/1800924385890685016
 
@@ -464,6 +472,16 @@ May/24 - 6 months of bridging recap! - https://x.com/alephium/status/17889211457
 May/24 - Ambassador Program Starts - https://x.com/alephium/status/1794046844563292582
 
 May/24 - Rhône Network Upgrade on the Testnet - https://twitter.com/alephium/status/1788855300230922500
+
+Apr/24 - Goldshell miner - https://x.com/goldshellminer/status/1775342476167200777
+
+Apr/24 - Nicehash - https://x.com/NiceHashMining/status/1780235227110986229
+
+Apr/24 - Bitget listing - https://x.com/bitgetglobal/status/1781231847609098517
+
+Mar/24 - Bitrue listing - https://x.com/BitrueOfficial/status/1772826769462280665
+
+Feb/24 - Coinex listing - https://x.com/coinexcom/status/1755132762267459788
 
 Feb/24 💜 x 30'000 Twitter Followers - https://vxtwitter.com/alephium/status/1757430069817974869?s=20
 
@@ -510,6 +528,8 @@ Sep/23 NFT Marketplace v3 is here! - https://twitter.com/alephium/status/1704167
 Sep/23 Alephium Bridge Update - https://twitter.com/alephium/status/1700164822619582535
 
 Sep/23 Zealy quests are now available! - https://t.co/49nM9If9p1
+
+Sep/23 - Xeggex listing - https://xeggex.com/post/new_listing_alephium_alph
 
 Sep/23 Multisig GUI is officially launched! - https://twitter.com/alephium/status/1697611394471121118
 
@@ -841,23 +861,7 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 GIGATON partnership announcement
 
-- Cointelegraph - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
-
-- Coinmarketcap - https://coinmarketcap.com/community/articles/6757d1850044587a89b512fe
-
-- Binance - https://www.binance.com/en/square/post/17338408816426
-
-- Benzinga - https://www.benzinga.com/pressreleases/24/12/g42390866/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
-
-- AP News - https://apnews.com/press-release/globenewswire-mobile/abu-dhabi-united-arab-emirates-government-united-kingdom-electric-vehicles-4608154ce981d3ec2413aedc2f20ee09
-
-- Business Insider - https://markets.businessinsider.com/news/stocks/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution-1034113856
-
-- Market Research https://www.marketwatch.com/press-release/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution-968c108c?mod=search_headline
-
-- Street Insider - https://www.streetinsider.com/Globe+Newswire/Alephium%3A+the+next-gen+PoW+blockchain+chosen+to+drive+GIGATONS%27+billion-dollar+climate+revolution/24080648.html
-
-- SkyNews Arabia - https://www.snabusiness.com/video/1760884
+- Cointelegraph - GIGATON partnership announcement - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
 
 Coinwirez - Alephium: An Extensive Exploration of the Sharded Frontier of Blockchain - https://coinwirez.com/alephium-an-extensive-exploration-of-the-sharded-frontier-of-blockchain/
 
@@ -965,13 +969,71 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
-## Partnerships & PRs
+## Partnerships & Integration
+
+GIGATON partnership announcement
+
+- Cointelegraph - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
+
+- Coinmarketcap - https://coinmarketcap.com/community/articles/6757d1850044587a89b512fe
+
+- Binance - https://www.binance.com/en/square/post/17338408816426
+
+- Benzinga - https://www.benzinga.com/pressreleases/24/12/g42390866/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
+
+- AP News - https://apnews.com/press-release/globenewswire-mobile/abu-dhabi-united-arab-emirates-government-united-kingdom-electric-vehicles-4608154ce981d3ec2413aedc2f20ee09
+
+- Business Insider - https://markets.businessinsider.com/news/stocks/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution-1034113856
+
+- Market Research https://www.marketwatch.com/press-release/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution-968c108c?mod=search_headline
+
+- Street Insider - https://www.streetinsider.com/Globe+Newswire/Alephium%3A+the+next-gen+PoW+blockchain+chosen+to+drive+GIGATONS%27+billion-dollar+climate+revolution/24080648.html
+
+- SkyNews Arabia - https://www.snabusiness.com/video/1760884
+
+GIGA x Hearst x Alephium partnership - https://x.com/alephium/status/1866814018494833055
+
+SafePal Integration - https://x.com/isafepal/status/1864291363660988799?s=46&t=m7GODPTFppc526dkNJuFdQ
+
+OneKey's Alephium Edition - https://x.com/alephium/status/1856349729619083379
+
+Ledger x Alephium - https://x.com/alephium/status/1844414972819890221
+
+Alephium x NOWNodes - https://nownodes.medium.com/how-to-access-an-alephium-node-an-easy-guide-0bbd7b239398
+
+Alephium x Bitmain - https://x.com/BITMAINtech/status/1814265352743694760
+
+Alephium x Iceriver - https://x.com/icerivereu/status/1816075249722520000
+
+Alephium x Goldshell - https://x.com/goldshellminer/status/1775342476167200777
+
+Alephium x DIA - Oracles - https://www.theblockbeats.info/en/flash/260079
 
 Flux - https://www.youtube.com/live/HX5SzftUDFM
+
+Zelcore - https://x.com/zelcore_io/status/1829182976674148705
+
+Nicehash - https://x.com/NiceHashMining/status/1780235227110986229
 
 DappNode - Announcement - https://medium.com/@alephium/pushing-for-decentralization-alephium-and-dappnode-join-forces-c98845d9a9da
 
 DappNode - Tutorial -  https://medium.com/@alephium/alephium-dappnode-collab-tech-talk-and-ama-80b34dfd1e9f
+
+Mexc - https://x.com/MEXC_Official/status/1740674309763596753
+
+Bitget - https://x.com/bitgetglobal/status/1781231847609098517
+
+Coinex - https://x.com/coinexcom/status/1755132762267459788
+
+Bitrue - https://x.com/BitrueOfficial/status/1772826769462280665
+
+Biconomy - https://x.com/BiconomyCom/status/1790302716809388113
+
+Coinmetro - https://x.com/CoinMetro/status/1735350497693900842
+
+Xeggex - https://xeggex.com/post/new_listing_alephium_alph
+
+Bitmart - https://x.com/BitMartExchange/status/1647789530240393216
 
 Ergo - Announcement - https://medium.com/@alephium/ergohack-v-alephium-sponsors-ergos-hackathon-with-flux-djed-alliance-to-foster-innovation-in-eae9c8bd7e97
 
