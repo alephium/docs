@@ -453,7 +453,13 @@ Nov/24 - OneKey's Alephium Edition - https://x.com/alephium/status/1856349729619
 
 Nov/24 - 3 years on mainnet - https://x.com/alephium/status/1854956861943869924
 
+Nov/24 - gTrade x Alephium - https://x.com/GainsNetwork_io/status/1861863331637920178 
+
 Oct/24 - Ledger x Alephium - https://x.com/alephium/status/1844415349632139664
+
+Oct/24 - EPFL Blockchain Student Association x Alpehium - https://x.com/bsa_epfl/status/1842630762111086633
+
+Aug/24 - HoudiniSwap - https://x.com/HoudiniSwap/status/1828802883279622409
 
 Aug/24 - 🧨 Oracles are now available on mainnet - https://x.com/alephium/status/1823725159771202027
 
@@ -859,9 +865,7 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## External Podcasts & Publications
 
-GIGATON partnership announcement
-
-- Cointelegraph - GIGATON partnership announcement - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
+Cointelegraph - GIGATON partnership announcement - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
 
 Coinwirez - Alephium: An Extensive Exploration of the Sharded Frontier of Blockchain - https://coinwirez.com/alephium-an-extensive-exploration-of-the-sharded-frontier-of-blockchain/
 
@@ -993,9 +997,17 @@ GIGATON partnership announcement
 
 GIGA x Hearst x Alephium partnership - https://x.com/alephium/status/1866814018494833055
 
+BNB Chain - BSC Bridge is Live - https://x.com/alephium/status/1859235479473844383 
+
 SafePal Integration - https://x.com/isafepal/status/1864291363660988799?s=46&t=m7GODPTFppc526dkNJuFdQ
 
+gTrade - https://x.com/GainsNetwork_io/status/1861863331637920178
+
+EPFL Blockchain Student Association - https://x.com/bsa_epfl/status/1842630762111086633
+
 OneKey's Alephium Edition - https://x.com/alephium/status/1856349729619083379
+
+HoudiniSwap - https://x.com/HoudiniSwap/status/1828802883279622409
 
 Ledger x Alephium - https://x.com/alephium/status/1844414972819890221
 
