@@ -284,6 +284,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## TechTalks & AMAs
 
+Jan/25 - Quai Network - https://x.com/i/spaces/1OdJrXqWVqzKX
+
 Dec/24 - Monsieur TK X Space - https://x.com/i/spaces/1jMKgBwrBrlxL
 
 Dec/24 - gTrade x Alephium X Space - https://x.com/i/spaces/1yoJMyjeEWkJQ
@@ -996,6 +998,8 @@ GIGATON partnership announcement
 - SkyNews Arabia - https://www.snabusiness.com/video/1760884
 
 GIGA x Hearst x Alephium partnership - https://x.com/alephium/status/1866814018494833055
+
+OnlyDust - https://blog.onlydust.com/odhack-10-0/
 
 BNB Chain - BSC Bridge is Live - https://x.com/alephium/status/1859235479473844383 
 
