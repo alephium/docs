@@ -856,10 +856,6 @@ Second Developer Workshop - Re-implementing Friend.Tech’s Smart Contract in Ra
 
 First Developer Workshop — Build a Token Faucet ( Video ) - https://www.youtube.com/watch?v=YblUxEcXQuY
 
-How to use Alephium's app on Ledger? A Tutorial - https://www.youtube.com/watch?v=YBQy_siZh6w&t
-
-How to use Alephium's app on Ledger? Written Tutorial - https://medium.com/@alephium/browser-wallet-extension-v0-7-0-has-been-released-c81842c63c01
-
 How to use the Alephium Bridge (testnet) - part 1 - https://www.youtube.com/watch?v=cwv28divQrA&t
 
 How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watch?v=TziFpCgM3-0&t

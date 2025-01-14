@@ -336,7 +336,11 @@ In addition to the official wallets, there are a number of third-party wallets a
 
 ### Is it planned for Alephium to be supported on hardware wallets?
 
-Offering hardware wallet support is an important priority for Alephium. A Ledger integration is currently being worked on and will be available in developer mode with the web extension wallet `v0.7.0`. Official publication on Ledger is a lengthy process with multiple stages that will take time to complete.
+Offering hardware wallet support is an important priority for Alephium. Several HW integrations are available. You can find more information below:
+
+Ledger - https://x.com/alephium/status/1844414972819890221
+OneKey - https://x.com/OneKeyHQ/status/1852681675421147595
+SafePal - https://x.com/isafepal/status/1864291363660988799
 
 ### When importing my seed into the desktop wallet, is there a way to import all generated addresses with it?
 
