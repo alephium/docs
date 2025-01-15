@@ -59,9 +59,9 @@ Learn more about DIA’s [data sourcing](https://docs.diadata.org/introduction/d
 
 The final price point for each asset is calculated by computing the assets' trade information across multiple DEXs and CEXs. This is done using a [Volume Weighted Average Price with Interquartile Range (VWAPIR) methodology](https://docs.diadata.org/products/token-price-feeds/exchangeprices/vwapir-volume-weighted-average-price-with-interquartile-range-filter).
 
-#### Update frequency: 0.5% deviation + 1-hour heartbeat
+#### Update frequency: 0.2% deviation + 10 minutes heartbeat
 
-Each asset is updated every two minutes if the new price deviates from the old one by more than 0.5%. Additionally, a heartbeat of 1 hour is applied, which means that each price is updated at least once per day even if it moves by less than 0.5%.
+Each asset is updated every two minutes if the new price deviates from the old one by more than 0.2%. Additionally, a heartbeat of 10 minutes is applied, which means that each price is updated at least once per day even if it moves by less than 0.2%.
 
 ## Example
 
