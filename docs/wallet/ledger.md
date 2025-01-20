@@ -41,7 +41,7 @@ A Ledger Device is a hardware wallet considered one of the most secure ways to s
    
 ### CREATING A NEW ACCOUNT ON THE ALEPHIUM BROWSER EXTENSION WALLET
 
-If you are using the Desktop wallet, jump to [this section]()
+If you are using the Desktop wallet, jump to [this section](ledger.md#CREATING-A-NEW-ACCOUNT-ON-THE-ALEPHIUM-DESKTOP-WALLET)
 
 1. First, connect and unlock your Ledger Device.
 2. Open the Alephium App on your Ledger Device
