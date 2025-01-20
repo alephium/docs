@@ -101,7 +101,8 @@ No.
 
 ### Simple asset transfer
 
-Simple transfer can be created using this [endpoint](./exchange#create-a-transaction).
+Simple transfer can be created using this [endpoint](../exchange/#create-a-transaction).
+
 
 ### Transfer process: sign transaction offline and broadcast it online
 
