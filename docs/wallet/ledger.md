@@ -4,11 +4,11 @@ title: Ledger
 sidebar_label: Ledger
 ---
 
-# How To Use Your Ledger Device With The Alephium Browser Extension
+# How To Use Your Ledger Device With Alephium Wallets
 
 ### **INTRODUCTION**
 
-A Ledger Device is a hardware wallet considered one of the most secure ways to store your digital assets. Ledger uses an offline, or cold storage, method of generating private keys, making it a preferred method for many crypto users. This guide will help you to connect your Ledger device to the Alephium Browser Extension. The Alephium Browser Extension enables you to Send and Receive ALPH with your Ledger Device.
+A Ledger Device is a hardware wallet considered one of the most secure ways to store your digital assets. Ledger uses an offline, or cold storage, method of generating private keys, making it a preferred method for many crypto users. This guide will help you connect your Ledger device to the Alephium Browser Extension and Desktop Wallet. The Alephium Wallets enable you to Send and Receive ALPH with your Ledger Device.
 
 **Note:** This integration allows users to securely store, send tokens, and interact with decentralized applications (dApps) while keeping their assets protected offline with the full suite of Ledger HW (Nano S+ / Nano X / Stax / Flex)
 
@@ -18,7 +18,7 @@ A Ledger Device is a hardware wallet considered one of the most secure ways to s
 1. You’ve initialized your Ledger Device.
 2. The latest firmware has been installed.
 3. Ledger Live is [ready to use](https://support.ledger.com/article/4404389606417-zd).
-4. You have the latest [Alephium Browser Extension Wallet](https://alephium.org/#wallets) installed.
+4. You have the latest [Alephium Browser Extension Wallet or Desktop Wallet](https://alephium.org/#wallets) installed.
 
 ### INSTALL THE ALEPHIUM APP
 
@@ -40,6 +40,8 @@ A Ledger Device is a hardware wallet considered one of the most secure ways to s
 6. Close Ledger Live.
    
 ### CREATING A NEW ACCOUNT ON THE ALEPHIUM BROWSER EXTENSION WALLET
+
+If you are using the Desktop wallet, jump to [this section]()
 
 1. First, connect and unlock your Ledger Device.
 2. Open the Alephium App on your Ledger Device
@@ -143,12 +145,22 @@ For Ledger Flex/Stax:
 
 ![image](https://github.com/user-attachments/assets/b085ae30-566d-4844-8c5e-ec10c270b50e)
 
-2. Click on Sign with Ledger. Review all inputs you your Ledger Device and sign the transaction.
+2. Click on Sign with Ledger. Review all inputs in your Ledger Device and sign the transaction.
 
 For Ledger Flex/Stax:
 
 ![blind signing (1)](https://github.com/user-attachments/assets/1cc4bcc3-3f63-454c-b439-efc0fa719a55)
 
+
+### ### CREATING A NEW ACCOUNT ON THE ALEPHIUM DESKTOP WALLET
+
+To create a new account, open your Desktop Aallet and click on "Connect with Ledger".
+
+![ledgerdesktopwallet-1online-video-cutter com-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/f1dbc332-f9df-4065-8b8c-ff99d2e445cb)
+
+Click on the "Addresses" tab in the left menu, and after opening the page, click on the button "+ New Address". If you want to choose the group of this new address, enable the "Advanced options" toggle to select the group (hint: most dApps are in the "Group 0")
+
+That is it! Now, you can interact with the Alephium blockchain using your Ledger and Desktop Wallet!
 
 ### SUPPORT
 
