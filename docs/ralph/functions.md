@@ -276,7 +276,7 @@ Contract Foo() {
 
 For the `preapprovedAssets` annotation, the compiler will do the following checks:
 
-1. If a function is annotated `preapprovedAssets = true` but don't use the braces syntax, the compiler will report an error
+1. If a function is annotated `preapprovedAssets = true` but is called without using the braces syntax, the compiler will report an error
 2. If a function call uses the braces syntax but the function is not annotated `preapprovedAssets = true`, the compiler will report an error
 
 #### Using Contract Assets
