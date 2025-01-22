@@ -150,7 +150,7 @@ For Ledger Flex/Stax:
 ![blind signing (1)](https://github.com/user-attachments/assets/1cc4bcc3-3f63-454c-b439-efc0fa719a55)
 
 
-### ### CREATING A NEW ACCOUNT ON THE ALEPHIUM DESKTOP WALLET
+### CREATING A NEW ACCOUNT ON THE ALEPHIUM DESKTOP WALLET
 
 To create a new account, open your Desktop Aallet and click on "Connect with Ledger".
 
