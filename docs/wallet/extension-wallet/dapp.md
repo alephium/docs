@@ -70,7 +70,7 @@ A minimal example is shown below:
 ```typescript
 const App = () => {
   return (
-    <AlephiumWalletProvider useTheme="retro">
+    <AlephiumWalletProvider theme="retro">
       /* Your App */
       <AlephiumConnectButton />
     </AlephiumWalletProvider>
