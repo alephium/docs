@@ -161,3 +161,14 @@ After contracts are well tested, we can deploy them to the `Mainnet` by simply s
 ```shell
 npx @alephium/cli deploy -n mainnet
 ```
+
+## Gen Interfaces
+
+The `gen-interfaces` command is used to generate Ralph interfaces from contract artifacts. This is particularly useful when the contract source code is not open-source, but the artifacts are available. It allows other projects to easily interact with the contract without needing access to the original source code.
+
+```shell
+npx @alephium/cli gen-interfaces -a <artifactDir> -o <outputDir>
+```
+
+* `-a <artifactDir>`: Specifies the directory containing contract artifacts.
+* `-o <outputDir>`: Specifies the output directory where the generated interfaces will be stored.
