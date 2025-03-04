@@ -278,8 +278,8 @@ const withdrawTxParams = await Withdraw.script.txParamsForExecution(wallet, {
 })
 
 const [depositResult, withdrawResult] = await wallet.signAndSubmitChainedTx([
-  { ...depositTxParams, type: 'ExecuteScript' },
   { ...withdrawTxParams, type: 'ExecuteScript' },
+  { ...depositTxParams, type: 'ExecuteScript' }
 ])
 ```
 
