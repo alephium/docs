@@ -174,6 +174,118 @@ const buildTxResult = await builder.buildDeployContractTx(
 console.log('unsigned transaction', buildTxResult.unsignedTx)
 ```
 
+### Chained Transactions
+
+Chained transactions is a powerful feature of the Alephium blockchain that allows users to build a sequence
+of transactions that can be signed and submitted together. The subsequent transaction can potentially
+use the outputs of the previous transaction as inputs. This can unlock some interesting use cases, such as:
+
+- If a user interacts with a dApp but the connected account doesn't have enough assets, the wallet can
+  build chained transactions to first transfer the required assets to the connected account from other
+  accounts in the wallet, and then interact with the dApp. This provides a seamless experience where
+  the user only needs to review and sign once.
+- If a DEX wants to migrate user's liquidity from one pool to another, it can build a chained transaction
+  that first withdraws liquidity from the current pool and then deposits it to the new pool. User only needs
+  to review and sign once, rather than executing multiple separate transactions.
+
+Here are a few examples of how to build chained transactions:
+
+#### Transfer Assets and Execute Script
+
+Let's say we want to lock 1 ALPH by executing the `LockAlph` transaction script as shown in the
+[Execute Script Transaction](#execute-script-transaction) section, but the connnected account doesn't
+have enough ALPH to be locked, so we need to transfer some ALPH from another account in the wallet first.
+We can build chained transactions as follows:
+
+```typescript
+const wallet = new HDWallet({ mnemonic })          // Just for testing, could be any wallets
+const account1 = wallet.deriveAndAddNewAccount(1)  // Group 1
+const account2 = wallet.deriveAndAddNewAccount(2)  // Group 2
+
+// Assuming that account1 doesn't have enough ALPH, but account2 does
+await wallet.setSelectedAccount(account1.address)
+
+const lockAlphTxParams = await LockAlph.script.txParamsForExecution(wallet, {
+  initialFields: { amount: ONE_ALPH },
+  attoAlphAmount: ONE_ALPH
+})
+
+const transferTxParams = {
+  signerAddress: account2.address,
+  destinations: [ { address: account1.address, attoAlphAmount: 2n * ONE_ALPH } ]
+}
+
+const [transferResult, lockAlphResult] = await wallet.signAndSubmitChainedTx([
+  { ...transferTxParams, type: 'Transfer' },
+  { ...lockAlphTxParams, type: 'ExecuteScript' },
+])
+```
+
+After the chained transactions are built, the wallet signs and submits them together using the `signAndSubmitChainedTx` function.
+This function returns an array of transaction results in the same order as the input transactions.
+
+#### Transfer Assets and Deploy Contract
+
+If we need to deploy a contract but the connected account lacks sufficient ALPH for gas fees and the minimum contract deposit,
+we can create chained transactions to first transfer ALPH from another account in the wallet:
+
+```typescript
+const wallet = new HDWallet({ mnemonic })          // Just for testing, could be any wallets
+const account1 = wallet.deriveAndAddNewAccount(1)  // Group 1
+const account2 = wallet.deriveAndAddNewAccount(2)  // Group 2
+
+// Assuming that account1 doesn't have enough ALPH, but account2 does
+await wallet.setSelectedAccount(account1.address)
+
+// Deploy a TestContract
+const deployTxParams = await TestContract.contract.txParamsForDeployment(wallet, {
+  initialAttoAlphAmount: ONE_ALPH,
+  initialFields: {}
+})
+
+const transferTxParams = {
+  signerAddress: account2.address,
+  destinations: [ { address: account1.address, attoAlphAmount: 2n * ONE_ALPH } ]
+}
+
+const [transferResult, deployResult] = await wallet.signAndSubmitChainedTx([
+  { ...transferTxParams, type: 'Transfer' },
+  { ...deployTxParams, type: 'DeployContract' },
+])
+```
+
+Similar to the previous example, the wallet signs and submits the transactions together using the `signAndSubmitChainedTx` function.
+
+#### Chained dApp Transactions
+
+In a hypothetical example where a connected account lacks sufficient ALPH to deposit to a contract, we can use chained transactions to
+first withdraw ALPH from another contract and then make the deposit:
+
+```typescript
+const wallet = new HDWallet({ mnemonic })          // Just for testing, could be any wallets
+const account1 = wallet.deriveAndAddNewAccount(1)  // Group 1
+
+await wallet.setSelectedAccount(account1.address)
+
+// Assuming that account1 doesn't have enough ALPH to deposit
+const depositTxParams = await Deposit.script.txParamsForExecution(wallet, {
+  initialFields: { contract: depositContractId, amount: ONE_ALPH },
+  attoAlphAmount: ONE_ALPH
+})
+
+const withdrawTxParams = await Withdraw.script.txParamsForExecution(wallet, {
+  initialFields: { contract: withdrawContractId, amount: ONE_ALPH * 2n }
+})
+
+const [depositResult, withdrawResult] = await wallet.signAndSubmitChainedTx([
+  { ...depositTxParams, type: 'ExecuteScript' },
+  { ...withdrawTxParams, type: 'ExecuteScript' },
+])
+```
+
+After the wallet signs and submits the transactions together successfully using the `signAndSubmitChainedTx` function,
+the deposit contract will receive 1 ALPH.
+
 ## Gas Estimation
 
 On Alephium, each transaction involves two key parameters related to gas: `gasAmount` and `gasPrice`.
