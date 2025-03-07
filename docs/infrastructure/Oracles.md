@@ -83,7 +83,7 @@ Testnet    | 217k7FMPgahEQWCfSA1BN5TaxPsFovjPagpujkyxKDvS3
 
 DIA leverages [drand](https://drand.love/)’s distributed randomness beacon, enabling verifiable, unpredictable, and unbiased random numbers.
 
-![image2](https://github.com/user-attachments/assets/85485b42-4216-41c4-baf9-bc8ad43b8425)
+![DIA xRandom Alephium](https://github.com/user-attachments/assets/8f11cf93-87a5-4333-86ce-b129623aee0a)
 
 The drand network's nodes collaborate every 30 seconds to produce a verifiable random number, which DIA's oracle system then captures and publishes to its smart contract, making this randomness readily available for on-chain applications. 
 
