@@ -336,11 +336,13 @@ In addition to the official wallets, there are a number of third-party wallets a
 
 ### Is it planned for Alephium to be supported on hardware wallets?
 
-Offering hardware wallet support is an important priority for Alephium. Several HW integrations are available. You can find more information below:
+Offering hardware wallet support is an important priority for Alephium. Several HW integrations are available:
 
-Ledger - https://x.com/alephium/status/1844414972819890221
-OneKey - https://x.com/OneKeyHQ/status/1852681675421147595
-SafePal - https://x.com/isafepal/status/1864291363660988799
+* [Ledger](https://www.ledger.com/)
+* [OneKey](https://onekey.so/)
+* [Safepal](https://safepal.com/)
+* [Tangem](https://tangem.com/)
+* [Goldshell Wallet](https://wallet.goldshell.com/)
 
 ### When importing my seed into the desktop wallet, is there a way to import all generated addresses with it?
 
