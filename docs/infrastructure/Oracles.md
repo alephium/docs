@@ -22,8 +22,11 @@ The DIA oracle on Alephium is free of use. dApps built on Alephium can leverage 
 
 The main oracle contracts on Group 0 are deployed at the following addresses: 
 
-- **Testnet**: 216wgM3Xi5uBFYwwiw2T7iZoCy9vozPJ4XjToW74nQjbV
-- **Mainnet:** 285zrkZTPpUCpjKg9E3z238VmpUBQEAbESGsJT6yX7Rod
+Network    | Address
+-----------|--------------------------------------------------------------
+Mainnet    | 285zrkZTPpUCpjKg9E3z238VmpUBQEAbESGsJT6yX7Rod
+Testnet    | 216wgM3Xi5uBFYwwiw2T7iZoCy9vozPJ4XjToW74nQjbV
+
 
 (New groups will be added in the near future).
 
@@ -62,6 +65,69 @@ The final price point for each asset is calculated by computing the assets' trad
 #### Update frequency: 0.2% deviation + 10 minutes heartbeat
 
 Each asset is updated every two minutes if the new price deviates from the old one by more than 0.2%. Additionally, a heartbeat of 10 minutes is applied, which means that each price is updated at least once per day even if it moves by less than 0.2%.
+
+---
+
+## Randomness Oracles
+
+### Deployed contracts
+
+The Randomness oracle contracts on Group 0 are deployed at the following addresses: 
+
+Network    | Address
+-----------|--------------------------------------------------------------
+Mainnet    | v1v4cBXP9L7M9ryZZCx7tuXuNb9pnDLGb3JJkPBpbR1Z
+Testnet    | 217k7FMPgahEQWCfSA1BN5TaxPsFovjPagpujkyxKDvS3
+
+### How the Randomness Oracle Works
+
+DIA leverages [drand](https://drand.love/)’s distributed randomness beacon, enabling verifiable, unpredictable, and unbiased random numbers.
+
+![image2](https://github.com/user-attachments/assets/85485b42-4216-41c4-baf9-bc8ad43b8425)
+
+The drand network's nodes collaborate every 30 seconds to produce a verifiable random number, which DIA's oracle system then captures and publishes to its smart contract, making this randomness readily available for on-chain applications. 
+
+You can learn more about the full publishing process [here](https://docs.diadata.org/use-nexus-product/readme/randomness-oracle/data-source#on-chain-publishing-process).
+
+### How to Access Data  
+
+#### Accessing the oracle on-chain  
+
+To consume randomness data, you’ll need to use the `IDIARandomOracle` interface to
+
+1. Invoke the **`getLastRound`** method to get the round ID of the latest randomness data update.
+2. Use the round ID to invoke the **`getRandomValue`** method to get the randomness value, the round ID, and the BLS signature.
+
+The `RandomnessFetcher` contract below is a simple example to fetch and store the randomness value from the randomness oracle:
+
+```rust
+struct DIARandomValue {
+    mut randomness: ByteVec,
+    mut signature: ByteVec,
+    mut round: U256
+}
+
+Interface IDIARandomOracle {
+    pub fn getLastRound() -> U256
+    pub fn getRandomValue(round: U256) -> DIARandomValue
+}
+
+Contract RandomnessFetcher(
+  oracle: IDIARandomOracle,
+  mut randomValue: DIARandomValue
+) {
+  @using(updateFields = true, checkExternalCaller = false)
+  pub fn update() -> () {
+    let lastRound = oracle.getLastRound()
+    let value = oracle.getRandomValue(lastRound)
+    randomValue = value
+  }
+}
+```
+
+When deploying the `RandomnessFetcher` contract, you'll need to pass in the address of the [deployed oracle contract](#deployed-contracts) depending on the network.
+
+Please note that round IDs are used round-robin and will repeat after **1000 iterations**.
 
 ## Example
 
