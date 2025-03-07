@@ -93,68 +93,41 @@ You can learn more about the full publishing process [here](https://docs.diadata
 
 #### Accessing the oracle on-chain  
 
-To consume randomness data, you’ll need to invoke the **`getLastRound`** method on the oracle contract. It will return the round ID of the latest update.  
+To consume randomness data, you’ll need to use the `IDIARandomOracle` interface to
 
-Using this round ID, you can call **`getRandomValue`** and will receive a return value of that randomness, the round ID, and the BLS signature from the drand API.  
+1. Invoke the **`getLastRound`** method to get the round ID of the latest randomness data update.
+2. Use the round ID to invoke the **`getRandomValue`** method to get the randomness value, the round ID, and the BLS signature.
 
-Please note that round IDs are used round-robin and will repeat after **1000 iterations**.  
+The `RandomnessFetcher` contract below is a simple example to fetch and store the randomness value from the randomness oracle:
 
-Below is the **DIARandomOracle** contract implementation in Ralph:  
+```rust
+struct DIARandomValue {
+    mut randomness: ByteVec,
+    mut signature: ByteVec,
+    mut round: U256
+}
 
-```  
-Contract DIARandomOracle(
-    mut admin: Address,
-    mut lastRound: U256
-) extends DIAOracleBase(admin) implements IDIARandomOracle {
+Interface IDIARandomOracle {
+    pub fn getLastRound() -> U256
+    pub fn getRandomValue(round: U256) -> DIARandomValue
+}
 
-    mapping[U256, DIARandomValue] randomValues
-
-    event OracleUpdate(
-        round: U256,
-        randomness: ByteVec,
-        signature: ByteVec
-    )
-
-    const MaxSlot = 1000
-
-    enum ErrorCodes {
-        InvalidRound = 1
-        RoundKeyNotExist = 2
-        RoundIsExpired = 3
-    }
-
-    pub fn getLastRound() -> U256 {
-        return lastRound
-    }
-
-    pub fn getRandomValue(realRound: U256) -> DIARandomValue {
-        let roundKey = realRound % MaxSlot
-        assert!(randomValues.contains!(roundKey), ErrorCodes.RoundKeyNotExist)
-
-        let randomValue = randomValues[roundKey]
-        assert!(randomValue.round == realRound, ErrorCodes.RoundIsExpired)
-        return randomValue
-    }
-
-    @using(preapprovedAssets = true, updateFields = true)
-    pub fn setRandomValue(value: DIARandomValue) -> () {
-        checkAdmin(callerAddress!())
-        assert!(value.round > lastRound, ErrorCodes.InvalidRound)
- 
-        let roundKey = value.round % MaxSlot
-        lastRound = value.round
-
-        if (randomValues.contains!(roundKey)) {
-            randomValues[roundKey] = value
-        } else {
-            randomValues.insert!(admin, roundKey, value)
-        }
-
-        emit OracleUpdate(value.round, value.randomness, value.signature)
-    }
+Contract RandomnessFetcher(
+  oracle: IDIARandomOracle,
+  mut randomValue: DIARandomValue
+) {
+  @using(updateFields = true, checkExternalCaller = false)
+  pub fn update() -> () {
+    let lastRound = oracle.getLastRound()
+    let value = oracle.getRandomValue(lastRound)
+    randomValue = value
+  }
 }
 ```
 
+When deploying the `RandomnessFetcher` contract, you'll need to pass in the address of the [deployed oracle contract](#deployed-contracts) depending on the network.
+
+Please note that round IDs are used round-robin and will repeat after **1000 iterations**.
 
 ## Example
 
