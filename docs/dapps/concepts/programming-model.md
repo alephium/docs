@@ -145,7 +145,7 @@ contract:
 @using(preapprovedAssets = true)
 fn mint_(minter: Address, index: U256) -> ByteVec {
   let (encodeImmutableFields, encodeMutableFields) = NFT.encodeFields!(getNFTUri(index), selfContractId!(), index)
-  return copyCreateSubContractWithToken!{minter -> ALPH: 1 alph}(
+  return copyCreateSubContractWithToken!{minter -> ALPH: 1 alph / 10}(
       toByteVec!(index),
       nftTemplateId,
       encodeImmutableFields,
