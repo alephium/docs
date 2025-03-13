@@ -147,7 +147,7 @@ Contract Foo(barTemplateId: ByteVec) {
     // Create a sub contract from the given key and value.
     // The sub contract id is `blake2b(blake2b(selfContractId!() ++ path))`.
     // It will fail if the sub contract already exists.
-    let contractId = copyCreateSubContract!{caller -> ALPH: 1 alph}(
+    let contractId = copyCreateSubContract!{caller -> ALPH: minimalContractDeposit!()}(
       path,
       barTemplateId,
       encodedImmFields,
