@@ -178,7 +178,7 @@ Contract AwesomeNFTCollection(
 
     let (initialImmState, initialMutState) = AwesomeNFT.encodeFields!(selfContractId!(), totalSupply, nftUri)
 
-    let contractId = copyCreateSubContractWithToken!{minter -> ALPH: 1 alph / 10}(
+    let contractId = copyCreateSubContractWithToken!{minter -> ALPH: minimalContractDeposit!()}(
         toByteVec!(totalSupply),
         nftTemplateId,
         initialImmState,
