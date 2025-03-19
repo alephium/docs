@@ -929,9 +929,9 @@ Returns the network id (a single byte).
 fn blockTimeStamp!() -> (U256)
 ```
 
-Returns the block timestamp in milliseconds.
+Returns the timestamp of the current block in milliseconds since the Unix epoch.
 
-> @returns *the block timestamp in milliseconds*
+> @returns *the timestamp of the current block in milliseconds since the Unix epoch*
 
 ---
 
