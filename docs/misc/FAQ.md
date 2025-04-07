@@ -592,6 +592,24 @@ Rhône, Alephium's second network upgrade, was activated on _June 12 2024_. This
 
 And that's not all! To learn more, read the following threads: Twitter/X [link ](https://x.com/alephium/status/1795460039659884898), Medium Article [link](https://medium.com/@alephium/rh%C3%B4ne-network-upgrade-activated-cbeb298585fe).
 
+### Why do some blocks or transactions appear with a 2009 timestamp?
+
+The genesis block of Alephium is timestamped **January 3rd, 2009**, the same date as Bitcoin’s genesis block. This is an intentional and symbolic design choice made as both a **tribute** and an **homage** to the launch of Bitcoin and the beginning of decentralized blockchain technology.
+
+Alephium’s actual mainnet launch took place on **November 8, 2021**. The 2009 timestamp applies only to the genesis block and does not affect consensus, block validation, or any network operations.
+
+This behavior is defined in the source code:
+
+```scala
+val GenesisHeight: Int          = 0
+val GenesisWeight: Weight       = Weight.zero
+val GenesisTimestamp: TimeStamp = TimeStamp.unsafe(1231006505000L) // BTC genesis timestamp
+val LaunchTimestamp: TimeStamp  = TimeStamp.unsafe(1636379973000L) // 2021-11-08T11:20:06+00:00
+```
+
+📄 [View on GitHub](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/ALPH.scala#L32-L33)
+
+
 ### WHEN MOON?
 
 1ALPH is always worth 1ALPH.
