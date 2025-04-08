@@ -6,6 +6,16 @@ sidebar_label: Danube Features
 
 The Danube upgrade introduced several new features to the Ralph language to improve its developer experience. This section aims to help you understand these new features with code examples.
 
+### TLDR
+
+Danube upgrade simplifies Ralph development with these key improvements:
+
+- **Automatic handling of dust amounts and deposits**: No need to manually handle ALPH dust amounts (0.001 ALPH), contract deposits (0.1 ALPH), or map entry deposits (0.1 ALPH)
+- **Chained contract call in TxScript**: Use assets received from one contract call in subsequent calls within the same transaction script
+- **Better caller identification**: New `externalCallerAddress!()` function and `@preserveCaller` annotation for more flexible and accurate caller tracking
+- **Immediate use of assets from new contracts**: Assets from newly created contracts can be used within the same transaction
+- **Improved syntax**: Simplified if statements and return syntax, with optional parentheses and block-style branches
+
 ### Minimal UTXO Amounts
 
 In Alephium, minimal UTXO amount is important to maintain the sustainability of the network by preventing the creation of tiny, uneconomical outputs that can bloat the state of the blockchain.
