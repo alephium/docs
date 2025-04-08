@@ -10,7 +10,7 @@ The Danube upgrade introduced several new features to the Ralph language to impr
 
 In Alephium, minimal UTXO amount is important to maintain the sustainability of the network by preventing the creation of tiny, uneconomical outputs that can bloat the state of the blockchain.
 
-For regular UTXOs, the minimal amount is called dust amount (0.001 ALPH). For contract UTXOs, it's called minimal contract deposit (0.1 ALPH). Since maps in Ralph is implemented via sub-contracts, each new map entry requires map entry deposit, which has the same value as minimal contract deposit (0.1 ALPH).
+For regular UTXOs, the minimal amount is called dust amount (0.001 ALPH). For contract UTXOs, it's called minimal contract deposit (0.1 ALPH). Since maps in Ralph are implemented via sub-contracts, each new map entry requires a map entry deposit, which has the same value as the minimal contract deposit (0.1 ALPH). These values are accessible in Ralph code through the built-in functions `dustAmount!()`, `minimalContractDeposit!()`, and `mapEntryDeposit!()` respectively.
 
 While minimal UTXO amounts are necessary for network sustainability, they previously created friction for developers. The Danube upgrade simplifies this by handling them automatically by default.
 
@@ -18,9 +18,9 @@ While minimal UTXO amounts are necessary for network sustainability, they previo
 
 When a dApp transfers an asset to a recipient, it must ensure that the recipient's UTXO contains at least the `dustAmount!()` of ALPH.
 
-In the `DustAmounts` contract below, the `transferBeforeDanube` function demonstrates how token transfers worked before Danube. It transfers one token to the recipient while also sending the required `dustAmount!()` of ALPH. Without this explicit ALPH transfer, the transaction would fail because recipient's UTXO must contain the minimum dust amount.
+Before Danube, dust amounts needed explicit handling. The `transferBeforeDanube` function below shows how token transfers required sending the minimum `dustAmount!()` of ALPH alongside the token. Without this explicit ALPH transfer, the transaction would fail because recipient's UTXO must contain at least the dust amount.
 
-In the `transferAfterDanube` function, the explicit transfer of `dustAmount!()` is no longer necessary. The transaction caller will automatically cover the dust amount for the recipient. This change also eliminates the need for the `preapprovedAssets = true` annotation.
+In the `transferAfterDanube` function, the explicit transfer of `dustAmount!()` of ALPH is no longer necessary. The transaction caller will automatically cover the dust amount for the recipient. This change also eliminates the need for the `preapprovedAssets = true` annotation.
 
 ```rust
 Contract DustAmounts() {
@@ -41,7 +41,7 @@ Contract DustAmounts() {
 
 Before the Danube upgrade, dApp developers had to explicitly specify who would pay for the minimal contract deposit when creating a contract. For example, in the `createBeforeDanube` function below, the transaction caller approves the `minimalContractDeposit!()` amount of ALPH to create the contract.
 
-In contrast, the `createAfterDanube` function demonstrates how this process has been simplified after the Danube upgrade. The VM now automatically deducts the required contract deposit from the transaction caller if no explicit asset approval is specified. It also eliminates the need for the `preapprovedAssets = true` annotation that was previously required in the `createBeforeDanube` function, making contract creation more straightforward for developers.
+In contrast, the `createAfterDanube` function shows how this process has been simplified after the Danube upgrade. The VM now automatically deducts the required contract deposit from the transaction caller if no explicit asset approval is specified. It also eliminates the need for the `preapprovedAssets = true` annotation that was previously required in the `createBeforeDanube` function, further reducing the boilerplate code.
 
 ```rust
 Contract ContractDeposits() {
@@ -61,7 +61,7 @@ Contract ContractDeposits() {
 
 Maps in Alephium are implemented using sub-contracts, with each map entry requiring `mapEntryDeposit!()` of ALPH to prevent state bloat. Before the Danube upgrade, developers had to explicitly specify who would pay this deposit when creating a new map entry. After the Danube upgrade, this process is simplified as the deposit is automatically deducted from the transaction caller if not specified explicitly.
 
-When removing map entries before Danube, developers needed to specify a refund address for the map entry deposit. After Danube, this deposit is automatically refunded to the transaction caller when no refund address is specified.
+Similarly, when removing map entries before Danube, developers needed to specify a refund address for the map entry deposit. After Danube, this deposit is automatically refunded to the transaction caller when no refund address is specified.
 
 Here is an example to demonstrate the difference:
 
@@ -160,9 +160,9 @@ The ability to determine the caller of a function is important for implementing 
 
 Despite being very useful, there are two limitations with how these two built-in functions work:
 
-First, when a function calls another function within the same contract, `callerAddress!()` in the called function returns the contract's own address, not the external caller's address. This limits dApps that need to identify the external caller, whether its is a user or another contract.
+First, when a function calls another function within the same contract, `callerAddress!()` in the called function returns the contract's own address. This limits dApps that need to identify the external caller of the current contract.
 
-Second, in a chain of function calls, `callerAddress!()` only returns the immediate caller. However, functions sometimes need to preserve the identity of the caller. This is particularly useful for contracts implementing the routing patterns where maintaining the identity of the original caller is essential for proper access control and authorization.
+Second, in a chain of function calls, `callerAddress!()` returns the immediate caller. However, sometimes functions want to preserve the identity of the caller and pass it along to the next function in the call chain. This is particularly useful for contracts implementing the routing patterns where maintaining the identity of the original caller is essential for proper access control and authorization.
 
 The Danube upgrade provides solutions to address both of these limitations.
 
@@ -191,13 +191,13 @@ Contract InternalContract() {
 }
 ```
 
-When the `callInternal` function from the `ExternalContract` is called, the returned tuple contains two addresses: First, the address of the `InternalContract` (returned by `callerAddress!()`) because it's the immediate caller of the `internalCall` function. Second, the address of the `ExternalContract` (returned by `externalCallerAddress!()`) because it's the first external caller outside of the current contract.
+When the `callInternal` function is called, the returned tuple contains two addresses: First, the address of the `InternalContract` (returned by `callerAddress!()`) because `InternalContract.call` is the immediate caller of the `internalCall` function. Second, the address of the `ExternalContract` (returned by `externalCallerAddress!()`) because `ExternalContract.callInternal` is the first external caller outside of the current contract.
 
 #### PreserveCaller Function Annotation
 
 The Danube upgrade introduces the `@preserveCaller` function annotation. When a function is annotated with `@preserveCaller`, the caller information is preserved for the next function call in the chain.
 
-More specifically, if a `@preserveCaller` annotated function calls another function, the `callerAddress!()` in the called function will return the caller address of the annotated function rather than its immediate caller. This feature is particularly valuable for implementing routing patterns in smart contracts, where maintaining the identity of the original caller is essential for proper access control and authorization.
+More specifically, if a `@preserveCaller` annotated function calls another function, the `callerAddress!()` in the called function will return the caller address of the annotated function rather than the annotated function itself. This feature is particularly valuable for implementing routing patterns in smart contracts, where maintaining the identity of the original caller is essential for proper access control and authorization.
 
 Here's an example of how `@preserveCaller` works:
 
@@ -220,7 +220,7 @@ Contract PreserveCallerInternal() {
 }
 ```
 
-When `PreserveCaller.default` is called, it returns the address of the `PreserveCaller` contract since that's the immediate caller of `PreserveCallerInternal.call()`. However, when `PreserveCaller.preserveCaller` is called from a TxScript, it returns the address of the transaction caller instead, because the `@preserveCaller` annotation passes the information of its caller to the next function in the call chain.
+When `PreserveCaller.default` is called, it returns the address of the `PreserveCaller` contract since `PreserveCaller.default` is the caller of `PreserveCallerInternal.call()`. However, when `PreserveCaller.preserveCaller` is called from a TxScript, it returns the address of the transaction caller instead, because the `@preserveCaller` annotation preserves the information of its caller and makes it available to the next function in the call chain.
 
 ### Syntax Improvements
 
