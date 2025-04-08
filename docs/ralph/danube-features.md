@@ -224,6 +224,36 @@ Contract Internal() {
 
 When `Router.default` is called, it returns the address of the `Router` contract since `Router.default` is the caller of `Internal.call()`. However, when `Router.preserveCaller` is called from a TxScript, it returns the address of the transaction caller instead, because the `@preserveCaller` annotation preserves the information of its caller and makes it available to the next function in the call chain.
 
+### Assets for New Contracts
+
+In Alephium, when creating a new contract, you can issue new tokens or transfer existing assets to it. Before the Danube upgrade, assets from the newly created contracts can not be used within the same transaction. The Danube upgrade removes this limitation, allowing immediate use of these assets.
+
+In the `FancyTokenFactory.mint` function below, when a new `FancyToken` contract is created, two tokens are issued and one of them is immediately transferred to the caller within the same transaction. Before the Danube upgrade, this immediate use of newly created contract assets would not have been possible.
+
+```rust
+Contract FancyToken(name: ByteVec) {
+    pub fn getName() -> ByteVec {
+        return name
+    }
+
+    @using(assetsInContract = true, checkExternalCaller = false)
+    pub fn transferTokens(recipient: Address, amount: U256) -> () {
+       transferTokenFromSelf!(recipient, selfTokenId!(), amount)
+    }
+}
+
+Contract FancyTokenFactory(fancyTokenTemplateId: ByteVec) {
+  @using(checkExternalCaller = false)
+  pub fn mint(name: ByteVec) -> () {
+    let (immFields, mutFields) = FancyToken.encodeFields!(name)
+    let fancyTokenContractId = copyCreateSubContractWithToken!(
+        name, fancyTokenTemplateId, immFields, mutFields, 2
+    )
+    FancyToken(fancyTokenContractId).transferTokens(callerAddress!(), 1)
+  }
+}
+```
+
 ### Syntax Improvements
 
 Danube also improves the Ralph syntax to make it more developer friendly, as demonstrated by the examples below:
