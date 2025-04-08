@@ -101,7 +101,7 @@ After the Danube upgrade, this limitation is relaxed in TxScript, which can now 
 
 There are a few things worth emphasizing here:
 
-- TxScript can only chain the asset outputs from the contract call, contract output cannot be chained
+- TxScript can only chain transaction caller's asset outputs from the contract call. Asset ouputs owned by other addresses as well as the contract outputs cannot be chained
 - At the contract level, the same UTXO restrictions still apply, preserving the security properties of the UTXO model
 
 Here's an example of using chained transactions in a TxScript to perform token swaps across multiple liquidity pools in a single transaction:
@@ -199,12 +199,12 @@ When the `callInternal` function is called, the returned tuple from `internal.ca
 
 The Danube upgrade introduces the `@preserveCaller` function annotation. When a function is annotated with `@preserveCaller`, the caller information is preserved for the next function call in the chain.
 
-More specifically, if a `@preserveCaller` annotated function calls another function, the `callerAddress!()` in the called function will return the caller address of the annotated function rather than the annotated function itself. This feature is particularly valuable for implementing routing patterns in smart contracts, where maintaining the identity of the original caller is essential for proper access control and authorization.
+More specifically, if a `@preserveCaller` annotated function calls another function, the `callerAddress!()` in the called function will return the caller address of the annotated function rather than the annotated function itself. This feature is particularly valuable for implementing routing patterns in smart contracts, where maintaining the identity of the original caller is essential for proper access control and authorization. The same caller preservation mechanism also applies to `callerContractId!()`, `externalCallerAddress!()` and `externalCallerContractId!()` built-in functions.
 
 Here's an example of how `@preserveCaller` works:
 
 ```rust
-Contract PreserveCaller(internal: PreserveCallerInternal) {
+Contract Router(internal: Internal) {
     pub fn default() -> Address {
         return internal.call()
     }
@@ -215,14 +215,14 @@ Contract PreserveCaller(internal: PreserveCallerInternal) {
     }
 }
 
-Contract PreserveCallerInternal() {
+Contract Internal() {
     pub fn call() -> Address {
         return callerAddress!()
     }
 }
 ```
 
-When `PreserveCaller.default` is called, it returns the address of the `PreserveCaller` contract since `PreserveCaller.default` is the caller of `PreserveCallerInternal.call()`. However, when `PreserveCaller.preserveCaller` is called from a TxScript, it returns the address of the transaction caller instead, because the `@preserveCaller` annotation preserves the information of its caller and makes it available to the next function in the call chain.
+When `Router.default` is called, it returns the address of the `Router` contract since `Router.default` is the caller of `Internal.call()`. However, when `Router.preserveCaller` is called from a TxScript, it returns the address of the transaction caller instead, because the `@preserveCaller` annotation preserves the information of its caller and makes it available to the next function in the call chain.
 
 ### Syntax Improvements
 
@@ -233,7 +233,13 @@ Contract SyntaxImprovements() {
     pub fn ifStmts(x: U256, y: U256) -> U256 {
         let num1 = if (x > y) 1 else 0
         let num2 = if x > y 1 else 0
-        let num3 = if x > y { log(x) 1 } else { log(x) 0 }
+        let num3 = if x > y {
+            log(x)
+            1
+        } else {
+            log(x)
+            0
+        }
         return num1 + num2 + num3
     }
 
