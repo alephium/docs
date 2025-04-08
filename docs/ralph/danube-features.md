@@ -52,7 +52,7 @@ Contract ContractDeposits() {
 
     @using(checkExternalCaller = false)
     pub fn createAfterDanube(bytecode: ByteVec) -> () {
-        let _ = createContract!(bytecode, #00, #00)
+      let _ = createContract!(bytecode, #00, #00)
     }
 }
 ```
@@ -81,7 +81,7 @@ Contract MapEntryDeposits() {
 
     @using(checkExternalCaller = false, updateFields = true)
     pub fn insertAfterDanube(key: U256, value: U256) -> () {
-        map.insert!(key, value)
+      map.insert!(key, value)
     }
 
     @using(checkExternalCaller = false, updateFields = true)
@@ -176,7 +176,9 @@ The following example demonstrates how `externalCallerAddress!()` works, `extern
 ```rust
 Contract ExternalContract(internal: InternalContract) {
     pub fn callInternal() -> (Address, Address) {
-        return internal.call()
+        let (caller, externalCaller) = internal.call()
+        assert!(caller == contractAddress!(internal), 0)
+        assert!(externalCaller == selfAddress!(), 0)
     }
 }
 
@@ -191,7 +193,7 @@ Contract InternalContract() {
 }
 ```
 
-When the `callInternal` function is called, the returned tuple contains two addresses: First, the address of the `InternalContract` (returned by `callerAddress!()`) because `InternalContract.call` is the immediate caller of the `internalCall` function. Second, the address of the `ExternalContract` (returned by `externalCallerAddress!()`) because `ExternalContract.callInternal` is the first external caller outside of the current contract.
+When the `callInternal` function is called, the returned tuple from `internal.call()` contains two addresses: First, the address of the `InternalContract` (returned by `callerAddress!()`) because `InternalContract.call` is the immediate caller of the `internalCall` function. Second, the address of the `ExternalContract` (returned by `externalCallerAddress!()`) because `ExternalContract.callInternal` is the first external caller outside of the current contract.
 
 #### PreserveCaller Function Annotation
 
