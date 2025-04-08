@@ -137,7 +137,7 @@ Alephium is a UTXO-based blockchain, recharging can be avoided by ensuring the s
 
 ### Get highest blocks
 
-You can get the current height using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Blockflow/getBlockflowChain-info)`, you need to replace the `fromGroup` and `toGroup` params as needed, which can be any value of [0, 1, 2, 3].
+You can get the current height using this [endpoint](https://wallet.mainnet.alephium.org/docs/#/Blockflow/getBlockflowChain-info), you need to replace the `fromGroup` and `toGroup` params as needed, which can be any value of [0, 1, 2, 3].
 
 ### What mechanism is in place to protect Alephium against 51% attack or to avoid chain forking?
 
