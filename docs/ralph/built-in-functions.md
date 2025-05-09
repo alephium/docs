@@ -201,9 +201,9 @@ Returns the address of the contract
 fn callerContractId!() -> (ByteVec)
 ```
 
-Returns the contract id of the caller.
+Returns the contract id of the immediate caller, which could be the current contract in case of recursive calls.
 
-> @returns *the contract id of the caller*
+> @returns *the contract id of the immediate caller, which could be the current contract in case of recursive calls*
 
 ---
 
@@ -213,9 +213,41 @@ Returns the contract id of the caller.
 fn callerAddress!() -> (Address)
 ```
 
-<ol><li>When used in a TxScript, returns the transaction caller, which is the first input address when all input addresses are the same. If not all input addresses are the same, `callAddress!()` function fails.</li><li>When used in a contract function called directly from TxScript, returns the transaction caller as explained in 1)</li><li>When used in a contract function called from another contract, returns the address of the calling contract.</li></ol>
+<ol>
+<li>When used in a TxScript, returns the transaction caller's address. The transaction must have identical input addresses, otherwise the call fails.</li>
+<li>When used in a contract function called from a TxScript, returns the transaction caller's address.</li>
+<li>When used in a contract function called from another contract, returns the address of the calling contract.</li>
+</ol>
 
 > @returns *the address of the caller*
+
+---
+
+### externalCallerContractId
+
+```Rust
+fn externalCallerContractId!() -> (ByteVec)
+```
+
+Returns the contract id of the first external contract in the call stack (different from the current contract).
+
+> @returns *the contract id of the first external contract in the call stack (different from the current contract)*
+
+---
+
+### externalCallerAddress
+
+```Rust
+fn externalCallerAddress!() -> (Address)
+```
+
+<ol>
+<li>When used in a TxScript, returns the transaction caller's address. The transaction must have identical input addresses, otherwise the call fails.</li>
+<li>When used in a contract function called from a TxScript, returns the transaction caller's address.</li>
+<li>When used in a contract function called from another contract, returns the address of the first external calling contract in the call stack (different from the current contract). If multiple calls come from the same contract, it skips intermediate frames to find the first external contract caller.</li>
+</ol>
+
+> @returns *the address of the external caller*
 
 ---
 
@@ -291,7 +323,7 @@ Checks whether the contract exists with the given id.
 fn destroySelf!(refundAddress:Address) -> ()
 ```
 
-Destroys the contract and transfer the remaining assets to a designated address.
+Destroys the contract and transfer the remaining assets to a designated address. The function will return immediately once the contract is destroyed. Returning value following the contract destruction is not supported.
 
 > @param **refundAddress** *the address to receive the remaining assets in the contract*
 >
@@ -496,12 +528,12 @@ Returns the id of the sub contract.
 ### map.insert
 
 ```Rust
-fn <map>.insert!(depositorAddress: Address, key: <Bool | U256 | I256 | Address | ByteVec>, value: Any) -> ()
+fn <map>.insert!(depositorAddress?: Address, key: <Bool | U256 | I256 | Address | ByteVec>, value: Any) -> ()
 ```
 
 Insert a key/value pair into the map. No brace syntax is required, as the minimal storage deposit will be deducted from the approved assets by the VM
 
-> @param **depositorAddress** *the address to pay the minimal storage deposit (0.1 ALPH) for the new map entry*
+> @param **depositorAddress** *the address to pay the minimal storage deposit (0.1 ALPH) for the new map entry. If not provided, minimal storage deposit will be paid by the transaction caller*
 >
 > @param **key** *the key to insert*
 >
@@ -514,12 +546,12 @@ Insert a key/value pair into the map. No brace syntax is required, as the minima
 ### map.remove
 
 ```Rust
-fn <map>.remove!(depositRecipient: Address, key: <Bool | U256 | I256 | Address | ByteVec>) -> ()
+fn <map>.remove!(refundRecipient?: Address, key: <Bool | U256 | I256 | Address | ByteVec>) -> ()
 ```
 
 Remove a key from the map
 
-> @param **depositRecipient** *the address to receive the redeemed minimal storage deposit*
+> @param **refundRecipient** *the address to receive the redeemed minimal storage deposit. If not provided, minimal storage deposit will be received by the transaction caller*
 >
 > @param **key** *the key to remove*
 >
@@ -603,7 +635,7 @@ Transfers token from the input assets of the function.
 fn transferTokenFromSelf!(toAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Transfers the contract's token from the input assets of the function.
+Transfers the contract's token from the input assets of the function. The toAddress must not be the same as the contract address.
 
 > @param **toAddress** *the address to transfer token to*
 >
@@ -621,7 +653,7 @@ Transfers the contract's token from the input assets of the function.
 fn transferTokenToSelf!(fromAddress:Address, tokenId:ByteVec, amount:U256) -> ()
 ```
 
-Transfers token to the contract from the input assets of the function.
+Transfers token to the contract from the input assets of the function. The fromAddress must not be the same as the contract address.
 
 > @param **fromAddress** *the address to transfer token from*
 >
@@ -1558,6 +1590,74 @@ Recovers the ETH account that signed the data.
 > @param **signature** *the signature value*
 >
 > @returns *the ETH account that signed the data*
+
+---
+
+### verifySignature
+
+```Rust
+fn verifySignature!(data:ByteVec, publicKey:ByteVec, signature:ByteVec, publicKeyType:ByteVec) -> ()
+```
+
+(Deprecated) Verifies the signature of the input and public key. This function is deprecated, please use the other specific verify functions instead.
+
+> @param **data** *the data that was supposed to have been signed*
+>
+> @param **publicKey** *the public key of the signer*
+>
+> @param **signature** *the signature value*
+>
+> @param **publicKeyType** *the type of the public key*
+>
+> @returns
+
+---
+
+### verifySecP256R1
+
+```Rust
+fn verifySecP256R1!(data:ByteVec, publicKey:ByteVec, signature:ByteVec) -> ()
+```
+
+Verifies the SecP256R1 signature of the input data using the provided public key.
+
+> @param **data** *the data (32 bytes) that was supposed to have been signed*
+>
+> @param **publicKey** *the public key (33 bytes) of the signer*
+>
+> @param **signature** *the signature value (64 bytes)*
+>
+> @returns
+
+---
+
+### verifyWebAuthn
+
+```Rust
+fn verifyWebAuthn!(challenge:ByteVec, publicKey:ByteVec, payload:ByteVec) -> ()
+```
+
+Verifies a WebAuthn signature for the input challenge using the provided public key.
+
+> @param **challenge** *The challenge (32 bytes) in the webauthn client data that was supposed to have been signed*
+>
+> @param **publicKey** *the public key (33 bytes) of the signer*
+>
+> @param **payload** *the WebAuthn payload containing the signature and authenticator data*
+>
+> @returns
+
+---
+
+### getSegregatedWebAuthnSignature
+
+```Rust
+fn getSegregatedWebAuthnSignature!() -> (ByteVec)
+```
+
+Retrieves the segregated WebAuthn signature payload from the current transaction
+
+> @returns *the segregated WebAuthn payload containing the signature and authenticator data*
 
 ---
 
