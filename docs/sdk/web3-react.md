@@ -32,7 +32,7 @@ const App = () => {
   }
 
   return (
-    <AlephiumWalletProvider theme="retro" network='devnet' addressGroup=0>
+    <AlephiumWalletProvider theme="retro" network='devnet' addressGroup={0}>
       /* Our App */
       <AlephiumConnectButton displayAccount={displayAccount} />
     </AlephiumWalletProvider>
