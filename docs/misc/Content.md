@@ -242,6 +242,12 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Ecosystem Updates
 
+🧬 Bi-Weekly #EcosystemUpdate - 4/2/25 - https://x.com/alephium/status/1886845122106589679
+
+🧬 Bi-Weekly #EcosystemUpdate 26/12/24 - https://x.com/alephium/status/1872301809018261560
+
+🧬 Bi-Weekly #EcosystemUpdate 10/12/24 - https://x.com/alephium/status/1866508047612588489
+
 🧬 Bi-Weekly #EcosystemUpdate - 26/10/24 - https://x.com/alephium/status/1850226983302787241
 
 🧬 Bi-Weekly #EcosystemUpdate - 07/10/24 - https://x.com/alephium/status/1843326216943910935
@@ -283,6 +289,18 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## TechTalks & AMAs
+
+Apr/25 - Chain In Focus with DIA - https://x.com/i/spaces/1dRKZYrglpgxB
+
+Apr/25 - Andy and friends Podcast - https://www.youtube.com/watch?v=q7yu3FfXd3Q
+
+Apr/25 - DJ Mines - https://www.youtube.com/watch?v=PFfWbw_Glyo
+
+Mar/25 -  CryptoXR FR Panel - https://www.youtube.com/watch?v=BBuJN7122mc
+
+Jan/25 - Cryptoast Media - https://x.com/alephium/status/1882407218248900856
+
+Jan/25 - House of Chimera - https://x.com/i/spaces/1YqJDkoDXgYGV
 
 Jan/25 - Quai Network - https://x.com/i/spaces/1OdJrXqWVqzKX
 
@@ -395,7 +413,15 @@ Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-
 
 ## Network Upgrade #3 - Danube
 
-Roadmap Update - https://x.com/wachmc/status/1851307848031957191
+May/25  Danube Network Upgrade 🧵#5 Chained Transactions - https://x.com/alephium/status/1924822227771363784
+
+May/25 Danube Network Upgrade 🧵#4 Groupless Addresses - https://x.com/alephium/status/1921997183533903986
+
+May/25 Danube Network Upgrade 🧵#3 Danube Upgrade: One Step Closer to The Web3 We Were Promised: https://x.com/alephium/status/1920780688313233634
+
+May/25 Danube Network Upgrade 🧵#2 Danube 60 Seconds Tour - https://x.com/alephium/status/1920178471990362276
+
+Oct/24 Danube Network Upgrade 🧵#1 Announcement & Roadmap Update - https://x.com/wachmc/status/1851306613430530518
 
 ## Network Upgrade #2 - Rhone 
 
@@ -440,6 +466,14 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Apr/25 - TransFi x Alephium - https://x.com/alephium/status/1913326826681971076
+
+Mar/25 - Onramper x Alephium - https://x.com/alephium/status/1899529139331481881
+
+Mar/25 - Verifiable Random Function (VRF) Oracles on Mainnet - https://x.com/alephium/status/1898041931315220488
+
+Mar/25 - Tangem Wallet Integration - https://x.com/Tangem/status/1898065676964679883
 
 Dec/24 - 50k followers on Twitter - https://x.com/alephium/status/1873740686677401742
 
