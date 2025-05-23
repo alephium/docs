@@ -506,6 +506,8 @@ Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/annou
 
 ## Milestones 
 
+May/25 - Banxa USA x Alephium - https://x.com/BanxaOfficial/status/1922932418119434398
+
 Apr/25 - TransFi x Alephium - https://x.com/alephium/status/1913326826681971076
 
 Mar/25 - Onramper x Alephium - https://x.com/alephium/status/1899529139331481881
