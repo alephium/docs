@@ -9,16 +9,16 @@ title: Content Repo
 * [Official links & accounts](#official-links--accounts) 
 * [Our tech explained](#our-tech-explained)
 * [Ecosystem Updates](#ecosystem-updates)
-* [TechTalks & AMAs](#techtalks--amas)
+* [Spaces, Podcasts & Videos](#spaces-podcasts--videos)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
 * [Milestones](#milestones)
 * [Athens Builders Meetup](#athens-builders-meetup)
 * [Hackathon](#hackathon)
 * [Community & Social](#community--social)
-* [External Podcasts & Publications](#external-podcasts--publications)
+* [Publication & Press](#publication--press)
 * [Events, presentations & conferences](#events-presentations--conferences)
-* [Partnerships & PRs](#partnerships--prs)
+* [Partnerships & Integration](#partnerships--integration)
 * [Reading Lists](#reading-lists)
 * [People to follow](#people-to-follow)
 * [Libraries & Developer Resources](#libraries--developer-resources)
@@ -240,6 +240,10 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 🍭 UX Series - Did you know... You can use a passphrase to enhance your security? - https://x.com/alephium/status/1836072293694644492
 
+🛠️ Tech Talk #1 The Ultimate guide to Proof of Less Work https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
+
+🎙️ First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
+
 ## Ecosystem Updates
 
 🧬 Bi-Weekly #EcosystemUpdate - 4/2/25 - https://x.com/alephium/status/1886845122106589679
@@ -288,7 +292,7 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
-## TechTalks & AMAs
+## Spaces, Podcasts & Videos
 
 Apr/25 - Chain In Focus with DIA - https://x.com/i/spaces/1dRKZYrglpgxB
 
@@ -312,9 +316,17 @@ Nov/24 - SafePal Community Call - https://x.com/i/broadcasts/1ZkKzRkdEqwKv
 
 Nov/24 - BSC Daily X Space - https://x.com/i/spaces/1kvKpbadgLgJE
 
-Oct/24 . House of Chimera - https://x.com/i/spaces/1RDGlyYBOOdJL
+Oct/24 - House of Chimera - https://x.com/i/spaces/1RDGlyYBOOdJL
+
+Oct/24 - Defiant - What is Alephium? Unpacking UTXO Sharding, Proof of Less Work, and DeFi Security - https://www.youtube.com/watch?v=zA85kP0ttMs 
 
 Sep/24 - Alephium $ALPH-A with Houdini Swap - https://x.com/i/spaces/1PlJQbqPqPNxE
+
+Sep/24 - WEB3 INSIGHTS: Podcast Series - Alephium: Scaling Blockchain with Energy-Efficient Sharding & Secure Smart Contracts - https://www.youtube.com/watch?v=_3Vqgg1j-aM
+
+Sep/24 - Jax Dwyer - Alephium: Scalable Web3 Blockchain with Smart Contracts & Energy-Efficient Consensus - https://www.youtube.com/watch?v=w3BkyQaDFLs
+
+Aug/24 - Wavect - Alephium: Scalable for devs. Secure for users. Decentralized for all - https://www.youtube.com/watch?v=F-jeK--88Mw 
 
 Aug/24 - UTXO Alliance x Alephium - https://x.com/i/spaces/1PlKQbgwdWDGE
 
@@ -386,13 +398,23 @@ Jun/23 - Bitmart X ALPH Twitter Space AMA - https://x.com/alephium/status/167006
 
 Jun/23 - NYM - https://www.youtube.com/watch?v=pImANSvO6WQ&t
 
+May/23 - UTXO Alliance Roundtable - https://www.youtube.com/watch?v=1XcBWJRRp-E&list=PL8q8n0BHJS1MWfqe1OIz4EWz9RKNrCiu6&index=1&pp=iAQB
+
 Apr/23 - POW Roundtable - https://www.youtube.com/watch?v=17Rx27PwADI
 
 Apr/23 - Wolfram - https://www.youtube.com/live/v_7aiIAs6pQ?feature=share
 
 Apr/23 - Proof of less work AMA - https://x.com/alephium/status/1646113444461178882?s=20
 
+Mar/23 - Alephium | A New Era of Possibilities - https://youtu.be/0jmo-WYhwWc  Mar/23 
+
+Feb/23 - Uncovering the Secrets of the Next Generation Blockchain Network Alephium - https://youtu.be/UzqZ4npA2w4 
+
 Feb/23 - Benoit - https://www.youtube.com/watch?v=At2JIAHaa10
+
+Feb/23 - Cheng Wang: Founder of Alephium, Distributed Consensus, Proof of Less Work | Wolfram Blockchain Labs - https://youtu.be/8XYa288lIg0 
+
+Feb/23 - Maud Bannwart: Chief Operating Officer of Alephium | Operations of Blockchain Development - https://youtu.be/3CYsjwIkI_c
 
 Jan/23 - Nervos - https://www.youtube.com/watch?v=FLmxAHolDMc
 
@@ -402,26 +424,43 @@ Oct/22 - DappNode - https://www.youtube.com/watch?v=wzobAlPR11s&t
 
 Sep/22 - Ergo - https://www.youtube.com/watch?v=GCDo3V7HTb0
 
+Sep/22 - Sigma Prism - Meet Alephium | A New Scalable UTXO Paradigm | Episode #19 - https://youtu.be/vBVbKIuHbLc
+
 Aug/22 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
 
 Jul/22 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
 
-Jul/22 - Tech Talk #1 The Ultimate guide to Proof of Less Work
-https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301
-
-Nov/21 - First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
+Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc 
 
 ## Network Upgrade #3 - Danube
 
-May/25  Danube Network Upgrade 🧵#5 Chained Transactions - https://x.com/alephium/status/1924822227771363784
+May/25  Danube Network Upgrade 🧵#14 Chained Transactions - https://x.com/alephium/status/1924822227771363784
 
-May/25 Danube Network Upgrade 🧵#4 Groupless Addresses - https://x.com/alephium/status/1921997183533903986
+May/25 Danube Network Upgrade 🧵#13 Groupless Addresses - https://x.com/alephium/status/1921997183533903986
 
-May/25 Danube Network Upgrade 🧵#3 Danube Upgrade: One Step Closer to The Web3 We Were Promised: https://x.com/alephium/status/1920780688313233634
+May/25 Danube Network Upgrade 📖✨#12 Medium Overview Article - Danube Upgrade: One Step Closer to The Web3 We Were Promised: [LINK](https://medium.com/@alephium/danube-upgrade-one-step-closer-to-the-web3-we-were-promised-b38adeb3f353)
 
-May/25 Danube Network Upgrade 🧵#2 Danube 60 Seconds Tour - https://x.com/alephium/status/1920178471990362276
+May/25 Danube Network Upgrade 📖✨#11 Twitter Overview Article - Danube Upgrade: One Step Closer to The Web3 We Were Promised: [LINK](https://x.com/alephium/status/1920780688313233634)
 
-Oct/24 Danube Network Upgrade 🧵#1 Announcement & Roadmap Update - https://x.com/wachmc/status/1851306613430530518
+May/25 Danube Network Upgrade 📣#10 Danube Upgrade live on Testnet - https://x.com/wachmc/status/1919377769638604948
+
+May/25 Danube Network Upgrade 📣#9 Danube Testnet upgrade release announcement - https://x.com/wachmc/status/1918290191950794758
+
+May/25 Danube Network Upgrade 🧵#8 Danube 60 Seconds Tour - https://x.com/alephium/status/1920178471990362276
+
+Apr/25 Danube Network Upgrade 📖#7 Danube Features TLDR - https://docs.alephium.org/ralph/danube-features/#tldr
+
+Mar/25 Danube Network Upgrade 🔍#6 DevX improvement showcase - https://x.com/wachmc/status/1905541114100093098
+
+Jan/25 Danube Network Upgrade 🔍#5 Danube Sync Protocol V2 efficiency showcase - https://x.com/hongchao/status/1878740787988512885
+
+Jan/25 Danube Network Upgrade 📖✨#4 Danube Upgrade in Detail - https://x.com/alephium/status/1883882597660733449
+
+Dec/24 Danube Network Upgrade 🧵#3 Groupless Address: Single-Address Cross-Shard Abstraction - https://x.com/wachmc/status/1864319275630260539
+
+Dec/24 Danube Network Upgrade 🧵#2 Automatic contract deposit and dust handling in Danube - https://x.com/wachmc/status/1873794077021384711
+
+Oct/24 Danube Network Upgrade 📣🗺️#1 Announcement & Roadmap Update - https://x.com/wachmc/status/1851306613430530518
 
 ## Network Upgrade #2 - Rhone 
 
@@ -895,7 +934,7 @@ How to use the Alephium Bridge (testnet) - part 1 - https://www.youtube.com/watc
 How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watch?v=TziFpCgM3-0&t
 
 
-## External Podcasts & Publications
+## Publication & Press
 
 Cointelegraph - GIGATON partnership announcement - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
 
@@ -917,16 +956,6 @@ Blockbeats - Interview of Cheng Wang & Maud Bannwart on their respective itinera
 CN: https://www.theblockbeats.info/news/55317
 EN: https://www.theblockbeats.info/en/news/55317
 
-Defiant - What is Alephium? Unpacking UTXO Sharding, Proof of Less Work, and DeFi Security - https://www.youtube.com/watch?v=zA85kP0ttMs
-
-DXB Crypto - Exclusive AMA with Alephium COO Maud Bannwart: Unveiling the Future of PoLW! - https://www.youtube.com/watch?v=txxKGq1oT6s
-
-Wavect - Alephium: Scalable for devs. Secure for users. Decentralized for all - https://www.youtube.com/watch?v=F-jeK--88Mw 
-
-Jax Dwyer - Alephium: Scalable Web3 Blockchain with Smart Contracts & Energy-Efficient Consensus - https://www.youtube.com/watch?v=w3BkyQaDFLs
-
-WEB3 INSIGHTS: Podcast Series - Alephium: Scaling Blockchain with Energy-Efficient Sharding & Secure Smart Contracts - https://www.youtube.com/watch?v=_3Vqgg1j-aM
-
 In 5 years, Alephium will improve POW performance to the extreme - https://www.theblockbeats.info/en/news/54838 and chinese version - https://www.theblockbeats.info/news/54838
 
 Alephium’s Game-Changing Tech and Vision for a Decentralized World - https://beincrypto.com/alephium-tech-vision-for-decentralized-world/
@@ -937,23 +966,7 @@ Alephium Qu’est-ce que c’est, comment ça fonctionne et comment en acheter ?
 
 Nym Project's blog post about the Alephium wallet built by @Mika and @nop33! - https://twitter.com/alephium/status/1710291031759982803
 
-UTXO Alliance Roundtable - https://www.youtube.com/watch?v=1XcBWJRRp-E&list=PL8q8n0BHJS1MWfqe1OIz4EWz9RKNrCiu6&index=1&pp=iAQB
-
-Cheng Wang: Founder of Alephium, Distributed Consensus, Proof of Less Work | Wolfram Blockchain Labs - https://youtu.be/8XYa288lIg0
-
 Didier Borel - SwissRoadCrypto - https://www.buzzsprout.com/2058047/11607475
-
-Cheng Wang AMA @ERGO - https://www.youtube.com/watch?v=GCDo3V7HTb0
-
-Uncovering the Secrets of the Next Generation Blockchain Network Alephium - https://youtu.be/UzqZ4npA2w4
-
-Sigma Prism - Meet Alephium | A New Scalable UTXO Paradigm | episode #19 - https://youtu.be/vBVbKIuHbLc (Notes)
-
-Alephium | A New Era of Possibilities - https://youtu.be/0jmo-WYhwWc
-
-Maud Bannwart: Chief Operating Officer of Alephium | Operations of Blockchain Development - https://youtu.be/3CYsjwIkI_c
-
-NiceHash - NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 Hackernoon - https://twitter.com/hackernoon/status/1557622890450886659
 
@@ -1006,6 +1019,12 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & Integration
+
+Banxa USA x Alephium - https://x.com/BanxaOfficial/status/1922932418119434398
+
+Onramper x Alephium x FIAT Ramps - https://x.com/alephium/status/1899529139331481881
+
+Tangem Wallet Integration - https://x.com/Tangem/status/1898065676964679883
 
 GIGATON partnership announcement
 
