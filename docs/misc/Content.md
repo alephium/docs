@@ -294,6 +294,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+May/25 - House of Chimera - https://x.com/i/spaces/1nAKEgepQgvJL
+
 Apr/25 - Chain In Focus with DIA - https://x.com/i/spaces/1dRKZYrglpgxB
 
 Apr/25 - Andy and friends Podcast - https://www.youtube.com/watch?v=q7yu3FfXd3Q
