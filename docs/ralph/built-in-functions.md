@@ -17,7 +17,8 @@ The built-in functions are divided into several categories:
 [Chain](#chain-functions),
 [Conversion](#conversion-functions),
 [ByteVec](#bytevec-functions),
-[Cryptography](#cryptography-functions).
+[Cryptography](#cryptography-functions),
+[Test](#test-functions).
 All built-in functions are suffixed with `!`.
 All of the byte encoding use Big Endian byte order.
 
@@ -1658,6 +1659,92 @@ fn getSegregatedWebAuthnSignature!() -> (ByteVec)
 Retrieves the segregated WebAuthn signature payload from the current transaction
 
 > @returns *the segregated WebAuthn payload containing the signature and authenticator data*
+
+---
+
+## Test Functions
+---
+### testCheck
+
+```Rust
+fn testCheck!(condition:Bool) -> ()
+```
+
+Tests the condition or checks invariants.
+
+> @param **condition** *the condition to be checked*
+>
+> @returns
+
+---
+
+### testEqual
+
+```Rust
+fn testEqual!(left: <Bool | U256 | I256 | Address | ByteVec>, right: <Bool | U256 | I256 | Address | ByteVec>) -> ()
+```
+
+Asserts that the given values are equal.
+
+> @param **left** *the first value to compare*
+>
+> @param **right** *the second value to compare; must be the same type as `left`*
+>
+> @returns
+
+---
+
+### testFail
+
+```Rust
+fn testFail!(expr) -> ()
+```
+
+Asserts that the given expression throws an exception during execution.
+
+> @param **expr** *the expression to be executed*
+>
+> @returns
+
+---
+
+### testError
+
+```Rust
+fn testError!(expr, errorCode: U256) -> ()
+```
+
+Asserts that the given expression throws an exception with the expected error code.
+
+> @param **expr** *the expression to be executed*
+>
+> @param **errorCode** *the expected error code*
+>
+> @returns
+
+---
+
+### randomU256
+
+```Rust
+fn randomU256!() -> U256
+```
+
+Generates a random U256 value
+
+> @returns *a randomly generated U256 value for testing purposes*
+
+---
+
+### randomI256
+
+```Rust
+fn randomI256!() -> I256
+```
+
+Generates a random I256 value
+
+> @returns *a randomly generated I256 value for testing purposes*
 
 ---
 
