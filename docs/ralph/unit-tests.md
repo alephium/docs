@@ -120,7 +120,7 @@ Contract TokenVault() {
     after
         Self{ALPH: 3 alph}()
     {
-        deposit{callerAddress -> ALPH: 2 alph}()
+        deposit{callerAddress!() -> ALPH: 2 alph}()
     }
 }
 ```
@@ -139,22 +139,19 @@ Contract Bank(mut totalDeposits: U256) {
 
 Contract Customer() {
     pub fn makeDeposit(bank: Bank) -> () {
-        bank.deposit{callerAddress -> ALPH: 1 alph}()
+        bank.deposit{callerAddress!() -> ALPH: 1 alph}()
     }
-}
 
-Contract IntegratedTest() {
     test "customer should be able to make deposit to bank"
     before
         Bank{ALPH: 0 alph}(0)@bankId
-        Customer()@customerId
+        Self()
     after
         Bank{ALPH: 1 alph}(1 alph)@bankId
-        Customer()@customerId
+        Self()
     {
         let bank = Bank(bankId)
-        let customer = Customer(customerId)
-        customer.makeDeposit(bank)
+        makeDeposit(bank)
     }
 }
 ```
