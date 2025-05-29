@@ -4,125 +4,168 @@ title: Unit Tests
 sidebar_label: Unit Tests
 ---
 
-Ralph offers built-in functions that let you write unit tests directly within your smart contracts, these functions let you assert conditions, compare values, and test for errors.
+Ralph provides an experimental testing framework for writing unit tests directly within smart contracts.
 
-### `testCheck!`
+:::info
+The Ralph testing framework is currently experimental and evolving. It's particularly well-suited for testing pure functions. [Testing with TypesScript SDK](/sdk/testing-and-debugging) is recommended for complex contract interactions.
+:::
 
-It accepts an expression of type `Bool`. This function checks if a given **condition** evaluates to `true`. If `condition` is `false`, the test fails.
+## Basic Test Syntax
 
-**Usage:**
-
-```rust
-Contract Foo() {
-  fn foo(a: U256, b: U256) -> U256 {
-    return a + b
-  }
-
-  test "foo" {
-    testCheck!(foo(1, 2) == 3) // This passes
-    testCheck!(foo(1, 2) == 4) // This fails
-  }
-}
-```
-
-### `testEqual!`
-
-This function accepts two values of **primitive type**, `a` and `b`. It compares them for equality. If `a` is not equal to `b`, the test fails.
-
-**Usage:**
+Tests are written in `test` blocks with descriptive text explaining what is being tested:
 
 ```rust
-Contract Foo() {
-  fn foo(a: U256, b: U256) -> U256 {
-    return a + b
-  }
-
-  test "foo" {
-    testEqual!(foo(1, 2), 3) // This passes
-    testEqual!(foo(1, 2), 4) // This fails
-  }
-}
-```
-
-### `testError!`
-
-This function accepts an **expression** and an `errorCode` of type `U256`. It's used when you expect the expression to throw a specific error during its execution. The test passes if the `expr` executes and throws the exact `errorCode`. It fails if `expr` does not throw an error, or if it throws a different error code.
-
-**Usage:**
-
-```rust
-Contract Foo() {
-  fn foo(number: U256) -> () {
-    if (number > 10) {
-      assert!(number < 15, 0)
-    } else if (number < 5) {
-      assert!(number > 2, 1)
-    } else {
-      return
+Contract Calculator() {
+    fn add(a: U256, b: U256) -> U256 {
+        return a + b
     }
-  }
 
-  test "foo" {
-    testError!(foo(17), 0) // This passes
-    testError!(foo(17), 1) // This fails because the wrong error code is thrown
-    testError!(foo(0), 1) // This passes
-    testError!(foo(0), 0) // This fails because the wrong error code is thrown
-    testError!(foo(7), 1) // This fails because no error is thrown
-  }
+    test "should add two numbers correctly" {
+        testEqual!(add(2, 3), 5)
+        testEqual!(add(0, 10), 10)
+        testEqual!(add(100, 200), 300)
+    }
 }
 ```
 
-### `testFail!`
+## Assertion Functions
 
-This function accepts an **expression**. It's used when you expect the expression to throw *any* exception during its execution. The test passes if `expr` throws an error and fails if it completes successfully without one.
-
-**Usage:**
+### `testEqual!` - Equality Testing
+Compares two values for exact equality:
 
 ```rust
-Contract Foo() {
-  fn foo(a: U256, b: U256) -> U256 {
-    return a / b
-  }
-
-  test "foo" {
-    testFail!(foo(1, 0)) // This passes
-    testFail!(foo(1, 2)) // This fails because no error is thrown
-  }
+test "should return correct fibonacci numbers" {
+    testEqual!(fibonacci(0), 0)
+    testEqual!(fibonacci(5), 5)
+    testEqual!(fibonacci(10), 55)
 }
 ```
 
-Ralph also provides `randomU256!` and `randomI256!` functions, which respectively generate random `U256` and `I256` values for use in tests.
-
-Note that all these testing functions can only be used within unit tests; using them outside of a test context will result in a compiler error.
-
-Besides pure functions, Ralph also supports testing contract state and asset changes.
+### `testCheck!` - Boolean Assertions
+Verifies boolean conditions:
 
 ```rust
-Contract Foo(bar: Bar) {
-  @using(checkExternalCaller = false, assetsInContract = enforced)
-  pub fn foo() -> () {
-    bar.bar()
-  }
-
-  test "foo"
-  before
-    Bar{ALPH: 10 alph}(0)@barId
-    Self(barId)
-  after
-    Bar{ALPH: 9 alph}(1)@barId
-    Self{ALPH: 1.1 alph}(barId)
-  {
-    foo()
-  }
-}
-
-Contract Bar(mut count: U256) {
-  @using(checkExternalCaller = false, assetsInContract = true)
-  pub fn bar() -> () {
-    count += 1
-    transferTokenFromSelf!(callerAddress!(), ALPH, 1 alph)
-  }
+test "should validate age correctly" {
+    testCheck!(isValidAge(25))
+    testCheck!(!isValidAge(17))
 }
 ```
 
-In the tests above, `before` represents the contract's assets and state before test execution, while `after` represents its state after test execution. If the contract's state after execution differs from the expected state, the test will fail.
+### `testError!` - Specific Error Testing
+Tests that a function throws a specific error code:
+
+```rust
+test "should throw insufficient funds error" {
+    testError!(withdraw(balance + 1), ErrorCodes.InsufficientFunds)
+    testError!(withdraw(0), ErrorCodes.InvalidAmount)
+}
+```
+
+### `testFail!` - General Error Testing
+Tests that a function throws any error:
+
+```rust
+test "should fail on division by zero" {
+    testFail!(divide(10, 0))
+    testFail!(divide(0, 0))
+}
+```
+
+### Random Value Generation
+Use random values for property-based testing:
+
+```rust
+test "addition should be commutative" {
+    let a = randomU256!()
+    let b = randomU256!()
+    testEqual!(add(a, b), add(b, a))
+}
+```
+
+## State and Asset Testing
+
+Use `before` and `after` blocks to test state changes and asset transfers.
+
+### State Testing
+
+```rust
+Contract Counter(mut count: U256) {
+    pub fn increment() -> () {
+        count = count + 1
+    }
+
+    test "should increment count by one"
+    before
+        Self(5)  // Initial state: count = 5
+    after
+        Self(6)  // Expected state: count = 6
+    {
+        increment()
+    }
+}
+```
+
+### Asset Transfer Testing
+
+```rust
+Contract TokenVault() {
+    @using(assetsInContract = true, checkExternalCaller = false)
+    pub fn deposit() -> () {
+        // Contract receives tokens
+    }
+
+    test "should increase contract balance on deposit"
+    before
+        Self{ALPH: 1 alph}()
+    after
+        Self{ALPH: 3 alph}()
+    {
+        deposit{callerAddress!() -> ALPH: 2 alph}()
+    }
+}
+```
+
+### Multi-Contract Testing
+
+Test interactions between multiple contracts:
+
+```rust
+Contract Bank(mut totalDeposits: U256) {
+    @using(assetsInContract = true, checkExternalCaller = false)
+    pub fn deposit() -> () {
+        totalDeposits = totalDeposits + 1 alph
+    }
+}
+
+Contract Customer() {
+    pub fn makeDeposit(bank: Bank) -> () {
+        bank.deposit{callerAddress!() -> ALPH: 1 alph}()
+    }
+
+    test "customer should be able to make deposit to bank"
+    before
+        Bank{ALPH: 0 alph}(0)@bankId
+        Self()
+    after
+        Bank{ALPH: 1 alph}(1 alph)@bankId
+        Self()
+    {
+        let bank = Bank(bankId)
+        makeDeposit(bank)
+    }
+}
+```
+
+## Best Practices
+
+- Use descriptive test descriptions that explain what is being tested
+- Test both success and failure scenarios
+- Group related tests logically within contracts
+- Use random values for property-based testing
+- Keep tests focused on single behaviors
+
+## Running Tests
+
+```bash
+npx @alephium/cli test
+```
