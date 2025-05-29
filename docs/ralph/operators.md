@@ -6,7 +6,7 @@ sidebar_label: Operators
 
 ### Arithmetic operators
 
-There are arithmetic operators such as `+`, `-`, `*`, `/`, `**`, and `%` available for `I256` and `U256` types, and these operators will check for overflow at runtime.
+There are arithmetic operators such as `+`, `-`, `*`, `/`, `\`, `**`, and `%` available for `I256` and `U256` types, and these operators will check for overflow at runtime.
 
 For example, the following expressions will cause the VM to throw an error at runtime:
 
@@ -15,6 +15,18 @@ u256Max!() + 1  // overflow
 0 - 1           // overflow
 i256Max!() + 1i // overflow
 i256Min!() - 1i // overflow
+```
+
+Ralph provides two division operators: `/` for round-down division and `\` for round-up division. Here are some examples:
+
+```rust
+5 / 3 == 1
+5 \ 3 == 2
+
+5i / 3i == 1i
+5i / -3i == -2i
+5i \ 3i == 2i
+5i \ -3i == -1i
 ```
 
 #### Modulo 2^256 operators
