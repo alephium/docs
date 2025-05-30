@@ -109,9 +109,9 @@ Contract Counter(mut count: U256) {
 
 ```rust
 Contract TokenVault() {
-    @using(assetsInContract = true, checkExternalCaller = false)
+    @using(preapprovedAssets = true, assetsInContract = true, checkExternalCaller = false)
     pub fn deposit() -> () {
-        // Contract receives tokens
+        transferTokenToSelf!(externalCallerAddress!(), ALPH, 2 alph)
     }
 
     test "should increase contract balance on deposit"
@@ -119,6 +119,7 @@ Contract TokenVault() {
         Self{ALPH: 1 alph}()
     after
         Self{ALPH: 3 alph}()
+    approve{address -> ALPH: 2 alph}
     {
         deposit{callerAddress!() -> ALPH: 2 alph}()
     }
@@ -131,27 +132,30 @@ Test interactions between multiple contracts:
 
 ```rust
 Contract Bank(mut totalDeposits: U256) {
-    @using(assetsInContract = true, checkExternalCaller = false)
-    pub fn deposit() -> () {
+    @using(preapprovedAssets = true, assetsInContract = true, checkExternalCaller = false)
+    pub fn deposit(depositor: Address) -> () {
         totalDeposits = totalDeposits + 1 alph
+        transferTokenToSelf!(depositor, ALPH, 1 alph)
     }
 }
 
 Contract Customer() {
+    @using(preapprovedAssets = true, checkExternalCaller = false)
     pub fn makeDeposit(bank: Bank) -> () {
-        bank.deposit{callerAddress!() -> ALPH: 1 alph}()
+        let depositor = externalCallerAddress!()
+        bank.deposit{depositor -> ALPH: 1 alph}(depositor)
     }
 
     test "customer should be able to make deposit to bank"
     before
-        Bank{ALPH: 0 alph}(0)@bankId
+        Bank{ALPH: 0 alph}(0)@bank
         Self()
     after
-        Bank{ALPH: 1 alph}(1 alph)@bankId
+        Bank{ALPH: 1 alph}(1 alph)@bank
         Self()
+    approve{address -> ALPH: 1 alph}
     {
-        let bank = Bank(bankId)
-        makeDeposit(bank)
+        makeDeposit{callerAddress!() -> ALPH: 1 alph}(bank)
     }
 }
 ```
