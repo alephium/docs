@@ -167,5 +167,11 @@ Contract Customer() {
 ## Running Tests
 
 ```bash
-npx @alephium/cli test
+npx @alephium/cli compile
+```
+
+You can add the `--skipTests` flag to skip running tests:
+
+```bash
+npx @alephium/cli compile --skipTests
 ```
