@@ -1,0 +1,49 @@
+---
+sidebar_position: 30
+title: Danube Upgrade
+sidebar_label: Danube Upgrade
+---
+
+## Overview
+
+The Danube upgrade is a [major upgrade](https://github.com/alephium/alephium/blob/master/docs/danube-upgrade.md) to the Alephium network. It will be activated on mainnet on **XXX, 2025** and is already activated on testnet.
+
+## How to upgrade
+
+The upgrade is mostly backward compatible. Users do not need to take any action. However, ecosystem services need to pay attention to the following changes.
+
+### Full node
+
+If your service runs with a full node, you must upgrade the full node to the new version before the upgrade activation. To do this, simply upgrade your full node to version `4.x.x`.
+
+### New Address Types
+
+Danube introduces several new address types in addition to the existing ones. If your service validates addresses, you need to update your address validation logic to support the new address formats.
+
+You can refer to the validation function in the [TypeScript SDK](https://github.com/alephium/alephium-typescript-sdk/blob/main/src/utils/address.ts) for reference.
+
+For a simple regex to perform sanity checks on addresses, you can use `^[1-9A-HJ-NP-Za-km-z]+(?:\:[0-9])?$`.
+
+### TypeScript SDK
+
+To take advantage of the new features in the Danube upgrade, you need to upgrade the TypeScript SDK to version `2.x.x`. However, we will continue to maintain version `1.x.x` for compatibility purposes.
+
+We recommend upgrading the TypeScript SDK to version `2.x.x`, but you can also remain on version `1.x.x`.
+
+## Ecosystem Services
+
+We expect other ecosystem services to work well with the new version. The only thing you likely need to pay attention to is the [new address types](#new-address-types). Below are some special notes for specific ecosystem services.
+
+### Mining pools
+
+In the Danube upgrade, the target block time is reduced from 16 seconds to 8 seconds, which means the block production rate is doubled. However, we have optimized the block assembly algorithm, so the actual block production rate will likely be similar to the previous version. We expect mining pools to work well with the new version. Please don't hesitate to reach out if you have any questions.
+
+### Wallets
+
+Danube introduces groupless addresses to improve the user experience of Alephium wallets. Using this new address type is optional. We recommend upgrading to this feature only after the official wallets have completed their integration.
+
+## Additional Resources
+
+For detailed technical information and code examples of the new features in Ralph, please refer to the [Danube Features documentation](/ralph/danube-features/).
+
+For the complete list of improvements and their implications, see the [official Danube upgrade documentation](https://github.com/alephium/alephium/blob/master/docs/danube-upgrade.md).
