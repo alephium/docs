@@ -294,6 +294,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+May/25 - House of Chimera - https://x.com/i/spaces/1nAKEgepQgvJL
+
 Apr/25 - Chain In Focus with DIA - https://x.com/i/spaces/1dRKZYrglpgxB
 
 Apr/25 - Andy and friends Podcast - https://www.youtube.com/watch?v=q7yu3FfXd3Q
@@ -505,6 +507,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+May/25 - Banxa USA x Alephium - https://x.com/BanxaOfficial/status/1922932418119434398
 
 Apr/25 - TransFi x Alephium - https://x.com/alephium/status/1913326826681971076
 
