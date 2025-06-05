@@ -22,7 +22,7 @@ If your service runs with a full node, you must upgrade the full node to the new
 
 Danube introduces several new address types in addition to the existing ones. If your service validates addresses, you need to update your address validation logic to support the new address formats.
 
-You can refer to the validation function in the [TypeScript SDK](https://github.com/alephium/alephium-typescript-sdk/blob/main/src/utils/address.ts) for reference.
+You can refer to the validation function in the [TypeScript SDK](https://github.com/alephium/alephium-web3/blob/48878adeae9b6f9543dc5569d38c2f077c4e6a9c/packages/web3/src/address/address.ts#L48-L59) for reference.
 
 For a simple regex to perform sanity checks on addresses, you can use `^[1-9A-HJ-NP-Za-km-z]+(?:\:[0-9])?$`.
 
