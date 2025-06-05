@@ -8,9 +8,11 @@ sidebar_label: Danube Upgrade
 
 The Danube upgrade is a [major upgrade](https://github.com/alephium/alephium/blob/master/docs/danube-upgrade.md) to the Alephium network. It will be activated on mainnet on **XXX, 2025** and is already activated on testnet.
 
+If you encounter any issues with the upgrade, please don't hesitate to reach out to the core developers on Discord/Telegram.
+
 ## How to upgrade
 
-The upgrade is mostly backward compatible. Users do not need to take any action. However, ecosystem services need to pay attention to the following changes.
+The upgrade is mostly backward compatible, so users do not need to take any action. However, ecosystem services need to pay attention to the following changes.
 
 ### Full node
 
@@ -32,7 +34,7 @@ We recommend upgrading the TypeScript SDK to version `2.x.x`, but you can also r
 
 ## Ecosystem Services
 
-We expect other ecosystem services to work well with the new version. The only thing you likely need to pay attention to is the [new address types](#new-address-types). Below are some special notes for specific ecosystem services.
+We expect other ecosystem services to work well with the new version. The only thing you likely need to pay attention to is the [new address types](#new-address-types). Below are some specific notes for particular ecosystem services.
 
 ### Mining pools
 
