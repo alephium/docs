@@ -38,11 +38,15 @@ We expect other ecosystem services to work well with the new version. The only t
 
 ### Mining pools
 
-In the Danube upgrade, the target block time is reduced from 16 seconds to 8 seconds, which means the block production rate is doubled. However, we have optimized the block assembly algorithm, so the actual block production rate will likely be similar to the previous version. We expect mining pools to work well with the new version. Please don't hesitate to reach out if you have any questions.
+In the Danube upgrade, the target block time is reduced from 16 seconds to 8 seconds, which means the average block production rate is doubled. However, we have optimized the block assembly algorithm, so the actual mining task load will likely be similar to the previous version. We expect mining pools to work well with the new version. Please don't hesitate to reach out if you have any questions.
 
 ### Wallets
 
 Danube introduces groupless addresses to improve the user experience of Alephium wallets. Using this new address type is optional. We recommend upgrading to this feature only after the official wallets have completed their integration.
+
+### Chain indexing
+
+The new address types will affect the way chain indexing services store and query addresses. If your service indexes the blockchain, you need to update your indexing logic to support the [new address types](#new-address-types).
 
 ## Additional Resources
 
