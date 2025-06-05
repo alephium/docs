@@ -244,7 +244,9 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 🎙️ First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
-## Ecosystem Updates
+## Ecosystem Highlights / Ecosystem Updates
+
+🌱 May Ecosystem Highlights - 30/5/25 - https://x.com/alephium/status/1928488913791791517
 
 🧬 Bi-Weekly #EcosystemUpdate - 4/2/25 - https://x.com/alephium/status/1886845122106589679
 
