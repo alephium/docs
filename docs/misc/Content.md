@@ -8,7 +8,7 @@ title: Content Repo
 ## Table of Contents
 * [Official links & accounts](#official-links--accounts) 
 * [Our tech explained](#our-tech-explained)
-* [Ecosystem Updates](#ecosystem-updates)
+* [Ecosystem Highlights and Ecosystem Updates](#ecosystem-highlights-and-ecosystem-updates)
 * [Spaces, Podcasts & Videos](#spaces-podcasts--videos)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
@@ -244,7 +244,9 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 🎙️ First Live AMA - https://medium.com/@alephium/alephiums-first-live-ama-761a90d3f672
 
-## Ecosystem Updates
+## Ecosystem Highlights and Ecosystem Updates
+
+🌱 May Ecosystem Highlights - 30/5/25 - https://x.com/alephium/status/1928488913791791517
 
 🧬 Bi-Weekly #EcosystemUpdate - 4/2/25 - https://x.com/alephium/status/1886845122106589679
 
