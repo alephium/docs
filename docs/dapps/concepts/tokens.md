@@ -1,7 +1,7 @@
 ---
 sidebar_position: 30
-title: Tokens
-sidebar_label: Tokens
+title: Token
+sidebar_label: Token
 ---
 
 Tokens are first class citizens in Alephium. Just like the native
