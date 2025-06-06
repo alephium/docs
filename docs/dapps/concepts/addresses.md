@@ -157,7 +157,7 @@ content bytes = blake2b(address type || public keys || multisig threshold) | che
 ```
 
 The content of the `P2HMPK` address is constructed by first computing a
-`Blake2b` hash over the concatenation of the address type (`06`), all
+`Blake2b` hash over the concatenation of the address type (`05`), all
 public keys and the multisig threshold. This hash is then followed by
 a 4-byte `djb2` checksum of the hash and finally a single byte
 indicating the group.
