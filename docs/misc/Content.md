@@ -438,6 +438,8 @@ Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 ## Network Upgrade #3 - Danube
 
+Jun/25 Danube Network Upgrade 🧵#17 Simplified Smart Contracts & Smarter Developer Tools - https://x.com/alephium/status/1931293538219676132
+
 Jun/25 Danube Network Upgrade 🧵#16 Passkeys on Alephium - https://x.com/alephium/status/1930569636560396475
 
 May/25 Danube Network Upgrade 🧵#15 Sync v2 and BlockFlow Tuning - https://x.com/alephium/status/1927327384736329855
