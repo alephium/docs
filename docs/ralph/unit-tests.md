@@ -16,7 +16,7 @@ Tests are written in `test` blocks with descriptive text explaining what is bein
 
 ```rust
 Contract Calculator() {
-    fn add(a: U256, b: U256) -> U256 {
+    pub fn add(a: U256, b: U256) -> U256 {
         return a + b
     }
 
