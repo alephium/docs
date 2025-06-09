@@ -4,7 +4,7 @@ title: Unit Tests
 sidebar_label: Unit Tests
 ---
 
-Ralph provides an experimental testing framework for writing unit tests directly within smart contracts.
+Ralph offers an experimental testing framework for writing unit tests directly within smart contracts. This feature requires Alephium full node version `3.15.2` or higher and the web3 SDK version `2.0.0-rc.2` or above.
 
 :::info
 The Ralph testing framework is currently experimental and evolving. It's particularly well-suited for testing pure functions. [Testing with TypesScript SDK](/sdk/testing-and-debugging) is recommended for complex contract interactions.
