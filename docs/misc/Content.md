@@ -444,7 +444,7 @@ Jun/25 Danube Network Upgrade 🧵#16 Passkeys on Alephium - https://x.com/aleph
 
 May/25 Danube Network Upgrade 🧵#15 Sync v2 and BlockFlow Tuning - https://x.com/alephium/status/1927327384736329855
 
-May/25 Danube Network Upgrade 🧵#14 Chained Transactions - https://x.com/alephium/status/1924822227771363784
+May/25 Danube Network Upgrade 🧵#14 Chained Contract Calls - https://x.com/alephium/status/1924822227771363784
 
 May/25 Danube Network Upgrade 🧵#13 Groupless Addresses - https://x.com/alephium/status/1921997183533903986
 
