@@ -103,7 +103,7 @@ Contract MapEntryDeposits() {
 
 The effect of calling `insertBeforeDanube` and `removeBeforeDanube` is the same as `insertAfterDanube` and `removeAfterDanube`.
 
-### Chained Transaction in TxScript
+### Chained Contract Calls in TxScript
 
 Alephium follows the stateful UTXO (sUTXO) model, where transaction outputs created within a transaction cannot be spent in the same transaction. This design provides important security benefits. For example flashloans are disabled by default because assets cannot be borrowed and returned within the same transaction.
 
@@ -114,7 +114,7 @@ There are a few things worth emphasizing here:
 - TxScript can only chain transaction caller's asset outputs from the contract call. Asset ouputs owned by other addresses as well as the contract outputs cannot be chained
 - At the contract level, the same UTXO restrictions still apply, preserving the security properties of the UTXO model
 
-Here's an example of using chained transactions in a TxScript to perform token swaps across multiple liquidity pools in a single transaction:
+Here's an example of using chained contract calls in a TxScript to perform token swaps across multiple liquidity pools in a single transaction:
 
 ```rust
 Contract Swap(tokenId1: ByteVec, tokenId2: ByteVec, mut token1Reserve: U256, mut token2Reserve: U256) {
