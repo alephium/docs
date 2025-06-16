@@ -9,6 +9,7 @@ title: Content Repo
 * [Official links & accounts](#official-links--accounts) 
 * [Our tech explained](#our-tech-explained)
 * [Ecosystem Highlights and Ecosystem Updates](#ecosystem-highlights-and-ecosystem-updates)
+* [Weekly Dev Updates](#weekly-dev-updates)
 * [Spaces, Podcasts & Videos](#spaces-podcasts--videos)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
@@ -293,6 +294,12 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 🧬 Weekly #EcosystemUpdate - 24/03/24 - https://twitter.com/alephium/status/1771894664813269375
 
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
+
+## Weekly Dev Updates
+
+⚙️ Weekly #DevUpdate! 🛠 - Jun/16/25 - https://x.com/alephium/status/1934543365267222646
+
+⚙️ Weekly #DevUpdate! 🛠 - Jun/11/25 -https://x.com/alephium/status/1932768251580162093
 
 ## Spaces, Podcasts & Videos
 
