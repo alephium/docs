@@ -303,6 +303,12 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Jun/25 - Interview with Geek of All Trades - https://www.youtube.com/watch?v=VfEbQvSlSPA
+
+Jun/25 - Blockchain Addict (FR) - https://www.youtube.com/watch?v=QFFQdVM6AIw
+
+Jun/25 - Alephium Danube AMA - https://x.com/i/spaces/1lPJqMkWanMJb
+
 May/25 - House of Chimera - https://x.com/i/spaces/1nAKEgepQgvJL
 
 Apr/25 - Chain In Focus with DIA - https://x.com/i/spaces/1dRKZYrglpgxB
@@ -444,6 +450,8 @@ Jul/22 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHN
 Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc 
 
 ## Network Upgrade #3 - Danube
+
+Jun/25 Danube Network Upgrade 🎙#18 Alephium Danube AMA - https://x.com/i/spaces/1lPJqMkWanMJb
 
 Jun/25 Danube Network Upgrade 🧵#17 Simplified Smart Contracts & Smarter Developer Tools - https://x.com/alephium/status/1931293538219676132
 
