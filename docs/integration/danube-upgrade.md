@@ -6,7 +6,7 @@ sidebar_label: Danube Upgrade
 
 ## Overview
 
-The Danube upgrade is a [major upgrade](https://github.com/alephium/alephium/blob/master/docs/danube-upgrade.md) to the Alephium network. It will be activated on mainnet on **XXX, 2025** and is already activated on testnet.
+The Danube upgrade is a [major upgrade](https://github.com/alephium/alephium/blob/master/docs/danube-upgrade.md) to the Alephium network. It will be activated on mainnet on **Tue Jul 15 2025 12:00 GMT+0200** and is already activated on testnet.
 
 If you encounter any issues with the upgrade, please don't hesitate to reach out to the core developers on Discord/Telegram.
 
