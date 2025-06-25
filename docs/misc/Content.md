@@ -455,6 +455,10 @@ Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 ## Network Upgrade #3 - Danube
 
+Jun/25 Danube Network Upgrade 📖✨#20 Danube Mainnet Upgrade: Official Date Revealed Article! - https://x.com/alephium/status/1937805806780465502
+
+Jun/25 Danube Network Upgrade 📚#19 Step-by-step instructions on how to upgrade to Danube - https://docs.alephium.org/integration/danube-upgrade/#how-to-upgrade
+
 Jun/25 Danube Network Upgrade 🎙#18 Alephium Danube AMA - https://x.com/i/spaces/1lPJqMkWanMJb
 
 Jun/25 Danube Network Upgrade 🧵#17 Simplified Smart Contracts & Smarter Developer Tools - https://x.com/alephium/status/1931293538219676132
