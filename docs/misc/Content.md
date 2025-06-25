@@ -307,6 +307,10 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Jun/25 - Cointribune (FR) - https://www.youtube.com/watch?v=UTgZPhpd2xg
+
+Jun/25 - Uphold Institutional - https://x.com/i/spaces/1nAKEgZpgXyJL
+
 Jun/25 - Interview with Geek of All Trades - https://www.youtube.com/watch?v=VfEbQvSlSPA
 
 Jun/25 - Blockchain Addict (FR) - https://www.youtube.com/watch?v=QFFQdVM6AIw
