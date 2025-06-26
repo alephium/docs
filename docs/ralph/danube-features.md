@@ -12,7 +12,7 @@ Danube upgrade simplifies Ralph development with these key improvements:
 
 - **Automatic handling of dust amounts and deposits**: No need to manually handle ALPH dust amounts (0.001 ALPH), contract deposits (0.1 ALPH), or map entry deposits (0.1 ALPH)
 - **Chained contract call in TxScript**: Use assets received from one contract call in subsequent calls within the same transaction script
-- **Better caller identification**: New `externalCallerAddress!()` function and `@preserveCaller` annotation for more flexible and accurate caller tracking
+- **Better caller identification**: New `externalCallerAddress!()` function
 - **Immediate use of assets from new contracts**: Assets from newly created contracts can be used within the same transaction
 - **Improved syntax**: Simplified if statements and return syntax, with optional parentheses and block-style branches
 
@@ -170,11 +170,10 @@ The ability to determine the caller of a function is important for implementing 
 
 Despite being very useful, there are two limitations with how these two built-in functions work:
 
-First, when a function calls another function within the same contract, `callerAddress!()` in the called function returns the contract's own address. This limits dApps that need to identify the external caller of the current contract.
+When a function calls another function within the same contract, `callerAddress!()` in the called function returns the contract's own address. This limits dApps that need to identify the external caller of the current contract.
 
-Second, in a chain of function calls, `callerAddress!()` returns the immediate caller. However, sometimes functions want to preserve the identity of the caller and pass it along to the next function in the call chain. This is particularly useful for contracts implementing the routing patterns where maintaining the identity of the original caller is essential for proper access control and authorization.
 
-The Danube upgrade provides solutions to address both of these limitations.
+The Danube upgrade provides solutions to address this limitation.
 
 #### External Caller Address
 
@@ -205,34 +204,6 @@ Contract InternalContract() {
 
 When the `callInternal` function is called, the returned tuple from `internal.call()` contains two addresses: First, the address of the `InternalContract` (returned by `callerAddress!()`) because `InternalContract.call` is the immediate caller of the `internalCall` function. Second, the address of the `ExternalContract` (returned by `externalCallerAddress!()`) because `ExternalContract.callInternal` is the first external caller outside of the current contract.
 
-#### PreserveCaller Function Annotation
-
-The Danube upgrade introduces the `@preserveCaller` function annotation. When a function is annotated with `@preserveCaller`, the caller information is preserved for the next function call in the chain.
-
-More specifically, if a `@preserveCaller` annotated function calls another function, the `callerAddress!()` in the called function will return the caller address of the annotated function rather than the annotated function itself. This feature is particularly valuable for implementing routing patterns in smart contracts, where maintaining the identity of the original caller is essential for proper access control and authorization. The same caller preservation mechanism also applies to `callerContractId!()`, `externalCallerAddress!()` and `externalCallerContractId!()` built-in functions.
-
-Here's an example of how `@preserveCaller` works:
-
-```rust
-Contract Router(internal: Internal) {
-    pub fn default() -> Address {
-        return internal.call()
-    }
-
-    @using(preserveCaller = true)
-    pub fn preserveCaller() -> Address {
-        return internal.call()
-    }
-}
-
-Contract Internal() {
-    pub fn call() -> Address {
-        return callerAddress!()
-    }
-}
-```
-
-When `Router.default` is called, it returns the address of the `Router` contract since `Router.default` is the caller of `Internal.call()`. However, when `Router.preserveCaller` is called from a TxScript, it returns the address of the transaction caller instead, because the `@preserveCaller` annotation preserves the information of its caller and makes it available to the next function in the call chain.
 
 ### Assets for New Contracts
 
