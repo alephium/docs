@@ -1059,6 +1059,8 @@ Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & Integration
 
+Uphold Institutional integration - https://x.com/UpholdInc/status/1937970176445845707
+
 Banxa USA x Alephium - https://x.com/BanxaOfficial/status/1922932418119434398
 
 Onramper x Alephium x FIAT Ramps - https://x.com/alephium/status/1899529139331481881
