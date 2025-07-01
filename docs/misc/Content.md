@@ -11,6 +11,7 @@ title: Content Repo
 * [Ecosystem Highlights and Ecosystem Updates](#ecosystem-highlights-and-ecosystem-updates)
 * [Weekly Dev Updates](#weekly-dev-updates)
 * [Spaces, Podcasts & Videos](#spaces-podcasts--videos)
+* [Network Upgrade #3 - Danube](#network-upgrade-3---danube)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
 * [Milestones](#milestones)
