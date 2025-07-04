@@ -75,7 +75,7 @@ To migrate to the latest full node, please refer to the changes in [this commit]
 ### Uncle Block Reward
 
 :::info Node Version
-You need to upgrade your full node to newer than v3.0.0.
+You need to upgrade your full node to newer than v4.0.0.
 :::
 
 Alephium uses the ghost algorithm similar to ETH. A mainchain block may reference uncle blocks, and both the miner of the mainchain block and the miner of the uncle block will receive rewards. Therefore, the mining pool needs to distribute rewards to the miners of the uncle blocks.
