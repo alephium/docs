@@ -27,7 +27,7 @@ The mining pool needs to connect to the Alephium full node to get mining jobs. T
 The mining pool communicates with the full node through a binary TCP protocol, formatted as follows:
 
 ```
-MessageSize(4 bytes) + Message(1 byte MessageType + Payload)
+MessageSize(4 bytes) + Message(1 byte ProtocolVersion + 1 byte MessageType + Payload)
 ```
 
 ### Get Jobs From Full Node
@@ -64,7 +64,7 @@ After the full node verifies the block, it will send a `SubmitBlockResult` messa
 
 ### Migrate to the Latest Mining Protocol
 
-In the latest full node, the mining protocol introduces some breaking changes:
+Since full node `v3.6.0`, the mining protocol introduces some breaking changes:
 
 1. Each message type includes a version number. The current mining protocol version is `1`.
 2. The `Job` message includes a block height field.
