@@ -62,7 +62,8 @@ import {
 
 ## What is Alephium?
 
-**Scalable for devs. Secure for users. Decentralized for all.**
+**The Web3 you were promised.**
+**Scalability, smart contracts, and real decentralization without the tradeoffs.**
 
 Alephium combines innovative sharding, expressive sUTXO, and efficient Proof-of-Less-Work to secure scalable dApps for real-world applications.
 
@@ -70,59 +71,78 @@ Alephium combines innovative sharding, expressive sUTXO, and efficient Proof-of-
 
 On top of an awesome team, an outstanding community and a lot of energy, here are our technical specificities:
 
-**Scalable Through Sharding**. Alephium utilizes a novel sharding algorithm called BlockFlow. It enhances the UTXO model of BTC to achieve scalability and uses a DAG data structure to reach consensus among different shards, enabling up to 10’000 Transactions Per Second (currently more than 400 TPS vs Bitcoins 7 TPS).
 
-**Programmable & Secure**. Alephium offers a stateful UTXO model that ensures layer-1 scalability and high programmability similar to Ethereum's account model, but with enhanced security.
+**⚡Fast:** 8 second block time, 2 BPS network throughput.
+Each chain on Alephium now produces a block every 8 seconds. With parallel processing across the network, Alephium achieves 2 blocks per second on average, matching the speed of leading PoS networks without sacrificing decentralization.
 
-**Energy Efficiency with PoLW**. Proof of Less Work (PoLW) combines physical work and token economics to dynamically adjust the work required to mine new blocks. Given the same network conditions, Alephium only uses 1/8 of the energy compared to Bitcoin.
+**⛓️Scalable:** 20,000+ tps, single-chain experience.
+Alephium's BlockFlow sharding processes over 20,000 transactions per second while eliminating cross-chain complexity, delivering high throughput and the simplicity of a single-chain environment.
 
-**Custom VM (Alphred)**. Alephium's custom virtual machine addresses critical issues in current dApp platforms, offering significant improvements in security and development experience, and introducing new paradigms like trustless P2P smart contract transactions.
+**🔒Secure:** Security by design.
+Alephium offers a robust, developer-friendly environment with built-in protections against common vulnerabilities. Its MEV-aware architecture and native safeguards prevent threats like reentrancy attacks, unlimited approvals, and flash loan exploits.
 
-**Dedicated Programming Language (Ralph)**. Ralph is similar to the Rust syntax, hence its name. Ralph simplifies the creation of efficient and secure smart contracts, particularly for decentralized finance applications.
+**🌱Sustainable:** The best of PoW, 87% less energy.
+Alephium's Proof-of-Less-Work consensus delivers true decentralization with a fraction of the energy. It retains the security and simplicity of traditional PoW while cutting energy use by over 87%.
 
-Combining these innovations, Alephium delivers a highly demanded solution in the industry: a scalable blockchain improving on mature ideas from Bitcoin to deliver reliable, powerful and secure DeFi and dApps capabilities. And we’re live!
+**🧩Programmable:** Stateful UTXO, the best of Bitcoin and Ethereum.
+Alephium's stateful UTXO model combines Ethereum's flexibility with Bitcoin's security. It enables powerful smart contracts with mutable state while ensuring robust, UTXO-based asset protection.
+
+**🧑‍💻Dev-friendly:** Custom VM & language built for performance.
+Alephium empowers developers with its purpose-built Virtual Machine (Alphred), intuitive SDK, and high-performance programming language (RALPH), enabling efficient development and unlocking new possibilities for smart contracts, dApps, and tokens.
+
+
+All of this runs natively on a single Layer 1, with no dependence on bridges, sequencers, L2s, or rollups,  avoiding complexity, fragmentation, and UX tradeoffs.
+Alephium unites the best of both worlds: the decentralized, censorship-resistant security of Proof-of-Work, and the speed, scalability, and usability expected from modern smart contract chains.
+
+Alephium delivers the Web3 you were promised.
 
 **Check out our [whitepapers][whitepaper]!**
 
+## Built on Alephium 
+
+Alephium powers a diverse ecosystem of innovative dApps. [Dive in!](https://www.alph.land/)
+
+
 ## Tokenomics
 
-Alephium's token supply is capped at 1 billion. At Mainnet Launch (Nov. 8th, 2021), 140M tokens (14% of the hardcap) were minted with the genesis block. The remaining ALPH tokens will be mined over the next ~80 years. The initial 140M tokens are allocated as follows:
+Since the Danube upgrade, ALPH emissions are no longer capped and the supply is unlimited.
 
-80M tokens (8%) 🤝 **Pre-sales and future strategic private sales**. Vesting periods varying from 2 to 4 years.
-
-30M tokens (3%) 💡 **Community and ecosystem development**. Locked on-chain for 4 years and vested quarterly.
-
-30M tokens (3%) 🧑‍💻 **Treasury & Team**. Locked on-chain for 3 years, and vested quarterly.
-
-860M tokens (86%) 🌊 **Mining Rewards**. These tokens will be used for mining rewards over the next ~80 years. They ensure the processing of transactions and the execution of smart contracts on the Alephium blockchain.
-
-In addition, all the transaction fees are burned with each block and Proof of Less Work enables internal mining cost through burning when the hashrate and energy consumption are significantly high.
-
-
-### Total Supply and Circulating Supply
-
-The Total Supply is calculated by adding the tokens mined at the Genesis Block (see breakdown above) and the block rewards since the Mainnet Launch.
-
-Alephium uses the CMC method to calculate the circulating supply of ALPH. It consists of: the total number of existing ALPH from which is subtracted the balance (locked & unlocked) from the private sale investors, the treasury, ecosystem, the advisors/contractors, the project-controlled assets and all locked ALPH from other addresses.
-In general, you can find our circulating supply on the front page of our [explorer](https://explorer.alephium.org). If you want a more in-depth explanation of the Coin Market Cap methodology, find it [here.](https://support.coinmarketcap.com/hc/en-us/articles/360043396252-Supply-Circulating-Total-Max-)
+| **Category**                | **Allocation** | **Vesting/Lock**                      |
+|-----------------------------|:--------------:|---------------------------------------|
+| Mining Emissions            | Unlimited      | 500 minutes lock                      |
+| Burned                      | - All transaction fees<br>- Proof of Less Work | None                                  |
+| Seed/Private Sales Allocation | 80M           | Unlock quarterly over 2 to 4 years    |
+| Ecosystem Allocation        | 30M            | Unlock quarterly over 4 years         |
+| Treasury Allocation         | 30M            | Unlock quarterly over 3 years         |
+<sub>Tokenomics emission and vesting schedule</sub>
 
 If you need the endpoints, find them here: [Total Supply](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Circulating Supply](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserved Supply](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Locked ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
 
-**Find more details in our [Tokenomics Medium article][tokenomics-medium].**
+**For more information on current and historical emissions, read the full Tokenomics article [here](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)**
 
-## Milestones & Roadmap
+## Get ALPH
 
-Please read the roadmap [here][roadmap] and completed milestones [here][milestones].
+The native token of Alephium. You can get it through your wallet, exchanges, other networks or your peers.
 
-## Exchanges
+### On-Ramps
+You can get ALPH directly from the Alephium mobile and desktop wallets with a debit/credit card, bank transfer, or even Apple Pay. Geographical restrictions apply. [See announcement.](https://x.com/alephium/status/1899529139331481881)
 
-### CEXs
+### Centralised Exchanges
+
+Centralised Exchanges (CEX) are platforms where ALPH is available using traditional currencies. They maintain custody over the ALPH you get until you transfer it to a wallet under your control.
 The full list of centralized exchanges is available on [CoinMarketCap][CoinMarketCap] and [Coingecko][Coingecko].
 
 ### DEXs
-ALPH is available on Alephium's native DEX [AYIN][AYIN] and Uniswap (wrapped ALPH). Full list of decentralized exchanges available on [Coingecko][Coingecko].
+ALPH is available natively on [Elexium](https://elexium.finance), [Ayin](https://www.ayin.app/), and [Nightshade](https://nightshade.finance), as well as on [Uniswap](https://app.uniswap.org/) (wrapped ALPH via the Ethereum Bridge) and [PancakeSwap](https://pancakeswap.finance/) (via the BSC Bridge). For a full list of decentralized exchanges, see [Coingecko](https://www.coingecko.com/en/coins/alephium).
 
 ⚠️ Some pairs have low liquidity, always check liquidity before choosing a venue or bridging an asset.
+
+### Bridged ALPH
+ALPH is also available on other networks such as Ethereum (via [Uniswap](https://app.uniswap.org/)) and BSC (via [PancakeSwap](https://pancakeswap.finance/)). You can use the [Alephium Token Bridge](https://docs.alephium.org/infrastructure/the-bridge/) to move bridged ALPH between these networks and the native Alephium network.
+
+## From your peers
+
+Once you have an Alephium wallet, you just need to share your address to start sending and receiving ALPH and other tokens directly with others. [Get a wallet here.](https://alephium.org/wallets/)
 
 ## Contribute as Developers
 
@@ -163,7 +183,7 @@ Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](h
 Not moderated, endorsed or managed by Alephium
 :::
 
-You will find the complete list of internationalized channel [here](/misc/Internationalization-and-Localization)
+You will find the complete list of international communities [here](https://alephium.org/communities/).
 
 ### Youtube
 
@@ -180,17 +200,6 @@ You will find the complete list of internationalized channel [here](/misc/Intern
 - [Youtube 🇹🇭](https://www.youtube.com/playlist?list=PL8q8n0BHJS1MhpbWV3PI4xoXhjB06az_M)
 - [Youtube 🇹🇷](https://www.youtube.com/playlist?list=PL8q8n0BHJS1OJIUOh0yANAEKdSUG8DdDG)
 - [Youtube 🇻🇳](https://www.youtube.com/playlist?list=PL8q8n0BHJS1PJq68hRBfw3xeXGlfVDWVr)
-
-## Partners
-
-- [Bitcoin Association Switzerland](https://medium.com/@alephium/alephium-becomes-a-member-of-bitcoin-association-switzerland-2293fec16fc9)
-- [Cetacean Capital](https://cetacean.capital/)
-- [Crypto Valley Association](https://cryptovalley.swiss/)
-- [Dappnode](https://dappnode.io)
-- [Ergo](https://ergoplatform.org/)
-- [Flux Labs](https://runonflux.io/fluxlabs.html)
-- [Hodling SA](https://www.hodling.ch/)
-- [UTXO Alliance](https://utxo-alliance.org/)
 
 
 [whitepaper]: https://github.com/alephium/white-paper
