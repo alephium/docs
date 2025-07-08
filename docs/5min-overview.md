@@ -18,7 +18,7 @@ import {
 
 <CardSection
   id="Quickstart"
-  description="Welcome to Alephium, the first operational sharded blockchain that brings scalability and smart contracts to Bitcoin's proven core technologies, delivering enhanced performance and improved energy efficiency."
+  description={<div><h3>Welcome to Alephium!</h3><div> Fast & Scalable Proof-of-Work and secure Smart Contracts.</div></div>}
 >
   <Card
     title="Build dApps"
@@ -65,7 +65,7 @@ import {
 **The Web3 you were promised.**
 **Scalability, smart contracts, and real decentralization without the tradeoffs.**
 
-Alephium combines innovative sharding, expressive sUTXO, and efficient Proof-of-Less-Work to secure scalable dApps for real-world applications.
+Alephium unites the best of both worlds: the decentralized, censorship-resistant security of Proof-of-Work & UTXO, and the speed, scalability, and usability expected from modern smart contract platforms.
 
 ## Why is Alephium special?
 
@@ -73,22 +73,22 @@ On top of an awesome team, an outstanding community and a lot of energy, here ar
 
 
 **⚡Fast:** 8 second block time, 2 BPS network throughput.
-Each chain on Alephium now produces a block every 8 seconds. With parallel processing across the network, Alephium achieves 2 blocks per second on average, matching the speed of leading PoS networks without sacrificing decentralization.
+Each chain on Alephium now produces a block every 8 seconds. With parallel processing across the network, Alephium achieves 2 blocks per second on average, **matching the speed of leading PoS networks without sacrificing decentralization.**
 
 **⛓️Scalable:** 20,000+ tps, single-chain experience.
-Alephium's BlockFlow sharding processes over 20,000 transactions per second while eliminating cross-chain complexity, delivering high throughput and the simplicity of a single-chain environment.
+Alephium's BlockFlow sharding processes over 20,000 transactions per second while eliminating cross-chain complexity, **delivering high throughput and the simplicity of a single-chain environment.**
 
 **🔒Secure:** Security by design.
-Alephium offers a robust, developer-friendly environment with built-in protections against common vulnerabilities. Its MEV-aware architecture and native safeguards prevent threats like reentrancy attacks, unlimited approvals, and flash loan exploits.
+Alephium offers a robust, developer-friendly environment with **built-in protections against common vulnerabilities.** Its MEV-aware architecture and native safeguards **prevent threats like reentrancy attacks, unlimited approvals, and flash loan exploits.**
 
 **🌱Sustainable:** The best of PoW, 87% less energy.
-Alephium's Proof-of-Less-Work consensus delivers true decentralization with a fraction of the energy. It retains the security and simplicity of traditional PoW while cutting energy use by over 87%.
+Alephium's **Proof-of-Less-Work** consensus delivers true decentralization with a fraction of the energy. **It retains the security and simplicity of traditional PoW while cutting energy use by over 87%.**
 
 **🧩Programmable:** Stateful UTXO, the best of Bitcoin and Ethereum.
-Alephium's stateful UTXO model combines Ethereum's flexibility with Bitcoin's security. It enables powerful smart contracts with mutable state while ensuring robust, UTXO-based asset protection.
+**Alephium's stateful UTXO model combines Ethereum's flexibility with Bitcoin's security.** It enables powerful smart contracts with mutable state while ensuring robust, UTXO-based asset protection.
 
 **🧑‍💻Dev-friendly:** Custom VM & language built for performance.
-Alephium empowers developers with its purpose-built Virtual Machine (Alphred), intuitive SDK, and high-performance programming language (RALPH), enabling efficient development and unlocking new possibilities for smart contracts, dApps, and tokens.
+Alephium empowers developers with its **purpose-built Virtual Machine (Alphred), intuitive SDK, and high-performance programming language (RALPH)**, enabling efficient development and unlocking new possibilities for smart contracts, dApps, and tokens.
 
 
 All of this runs natively on a single Layer 1, with no dependence on bridges, sequencers, L2s, or rollups,  avoiding complexity, fragmentation, and UX tradeoffs.
@@ -116,6 +116,7 @@ Since the Danube upgrade, ALPH emissions are no longer capped and the supply is 
 | Treasury Allocation         | 30M            | Unlock quarterly over 3 years         |
 <sub>Tokenomics emission and vesting schedule</sub>
 
+<br/><br/>
 If you need the endpoints, find them here: [Total Supply](https://mainnet-backend.alephium.org/infos/supply/total-alph) = [Circulating Supply](https://mainnet-backend.alephium.org/infos/supply/circulating-alph) + [Reserved Supply](https://mainnet-backend.alephium.org/infos/supply/reserved-alph) + [Locked ALPH](https://mainnet-backend.alephium.org/infos/supply/locked-alph)
 
 **For more information on current and historical emissions, read the full Tokenomics article [here](https://medium.com/@alephium/tokenomics-of-alephium-61d59b51029c)**
@@ -168,7 +169,6 @@ Alephium has both a [Grant & Rewards][reward-grant] program and a [Bug Bounty](h
 
 - [Twitter][twitter]
 - [LinkedIn][linkedin]
-- [Facebook][facebook]
 
 ### Read, setup, explore, contribute
 
