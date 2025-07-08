@@ -110,10 +110,11 @@ Since the Danube upgrade, ALPH emissions are no longer capped and the supply is 
 | **Category**                | **Allocation** | **Vesting/Lock**                      |
 |-----------------------------|:--------------:|---------------------------------------|
 | Mining Emissions            | Unlimited      | 500 minutes lock                      |
-| Burned                      | - All transaction fees<br>- Proof of Less Work | None                                  |
+| Burned                      | - All transaction fees  <br/> - Proof of Less Work | None                                  |
 | Seed/Private Sales Allocation | 80M           | Unlock quarterly over 2 to 4 years    |
 | Ecosystem Allocation        | 30M            | Unlock quarterly over 4 years         |
 | Treasury Allocation         | 30M            | Unlock quarterly over 3 years         |
+
 <sub>Tokenomics emission and vesting schedule</sub>
 
 <br/><br/>
