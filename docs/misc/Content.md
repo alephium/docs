@@ -1028,7 +1028,7 @@ Token Insights - https://tokeninsight.medium.com/project-research-paper-of-aleph
 
 ## Events, presentations & conferences 
 
-Jul/25 - Bitmain WDMS Las Vegas - https://www.youtube.com/live/lqE4HwI0qfI?si=Wy9w6zsC6EPpPYhs&t=27895
+May/25 - Bitmain WDMS Las Vegas - https://www.youtube.com/live/lqE4HwI0qfI?si=Wy9w6zsC6EPpPYhs&t=27895
 
 🎓 Back to school! -  Technical intro to Alephium at the EPFL - https://x.com/alephium/status/1848401917459706166
 
