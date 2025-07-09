@@ -312,6 +312,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Jul/25 - ChangeNOW "The MultiChain Future" with Alephium, TON, Avalanche, NEAR, OpenWallet & NOWnodes. - https://x.com/i/spaces/1OdKrDVRZRQJX
+
 Jun/25 - Cointribune (FR) - https://www.youtube.com/watch?v=UTgZPhpd2xg
 
 Jun/25 - Uphold Institutional - https://x.com/i/spaces/1nAKEgZpgXyJL
@@ -1025,6 +1027,8 @@ Heidi News - https://www.heidi.news/cyber/alephium-une-blockchain-3-0-developpee
 Token Insights - https://tokeninsight.medium.com/project-research-paper-of-alephium-8001323353e7
 
 ## Events, presentations & conferences 
+
+May/25 - Bitmain WDMS Las Vegas - https://www.youtube.com/live/lqE4HwI0qfI?si=Wy9w6zsC6EPpPYhs&t=27895
 
 🎓 Back to school! -  Technical intro to Alephium at the EPFL - https://x.com/alephium/status/1848401917459706166
 
