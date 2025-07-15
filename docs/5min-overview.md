@@ -90,10 +90,6 @@ Alephium's **Proof-of-Less-Work** consensus delivers true decentralization with 
 **🧑‍💻Dev-friendly:** Custom VM & language built for performance.
 Alephium empowers developers with its **purpose-built Virtual Machine (Alphred), intuitive SDK, and high-performance programming language (RALPH)**, enabling efficient development and unlocking new possibilities for smart contracts, dApps, and tokens.
 
-
-All of this runs natively on a single Layer 1, with no dependence on bridges, sequencers, L2s, or rollups,  avoiding complexity, fragmentation, and UX tradeoffs.
-Alephium unites the best of both worlds: the decentralized, censorship-resistant security of Proof-of-Work, and the speed, scalability, and usability expected from modern smart contract chains.
-
 Alephium delivers the Web3 you were promised.
 
 **Check out our [whitepapers][whitepaper]!**
