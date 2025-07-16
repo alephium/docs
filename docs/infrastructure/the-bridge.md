@@ -22,11 +22,11 @@ Please bear in mind that:
 
 - Bridging from ETH to ALPH takes an average of 15-20 minutes.
 
-- Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet).
+- Bridging from ALPH to ETH, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 28 minutes. If one of the conditions is not met, redemption is not possible (yet).
 
 - Bridging from BSC to ALPH takes roughly 20 minutes.
 
--  Bridging from ALPH to BSC, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet).
+-  Bridging from ALPH to BSC, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 28 minutes. If one of the conditions is not met, redemption is not possible (yet).
 
 In most cases, waiting a little bit longer to redeem your tokens is enough. 
 
@@ -86,7 +86,7 @@ Usually that means that one of your wallets has locked itself. Please copy your 
 
 ### 5. Transaction has over 205 confirmations and I can't redeem!
 
-Bridging from ALPH to ETH or BSC, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 55 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
+Bridging from ALPH to ETH or BSC, will take a bit more time. The transaction needs to meet two conditions: at least 205 blocks and at least 28 minutes. If one of the conditions is not met, redemption is not possible (yet). If the problem persists, try the solutions provided in the following: 
 
 - “Issue 1. I have waited long enough, and it is not letting me redeem! What do I do?”
 - “Issue 6. I am getting a VAA error! And I can't redeem.” 
