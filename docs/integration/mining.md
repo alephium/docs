@@ -50,6 +50,8 @@ Once the mining pool receives the `Jobs` message from the full node, it can dist
 
 ### Job Distribution
 
+Since full node `v4.0.2`, we have introduced a `min-task-broadcast-interval` config to allow mining pools to customize the broadcast interval of mining tasks, which defaults to 250 millis. You can configure this by adding `alephium.mining.min-task-broadcast-interval = xxx milli` to the `user.conf` file.
+
 Some miner software works on a single job, while others support exactly 16 jobs received from the pool. To maximize compatibility, the pool can send a single job to each miner.
 
 The simplest approach is to send a random job from the 16 available jobs to each miner. The ideal approach is to distribute the 16 jobs evenly to miners based on their hashrate, ensuring each chain receives the same amount of hashrate. While this method is more efficient, it will take more time to implement.
