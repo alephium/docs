@@ -472,6 +472,10 @@ Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 ## Network Upgrade #3 - Danube
 
+Jul/25 Danube Network Upgrade 📣#22 Danube Network Upgrade Activation - https://x.com/alephium/status/1945060774503645463
+
+Jul/25 Danube Network Upgrade 📖✨#21 Medium Article - Danube Upgrade: Everything You Need To Know FAQ - [LINK](https://medium.com/@alephium/danube-upgrade-everything-you-need-to-know-faq-b6038cf61017)
+
 Jun/25 Danube Network Upgrade 📖✨#20 Danube Mainnet Upgrade: Official Date Revealed Article! - https://x.com/alephium/status/1937805806780465502
 
 Jun/25 Danube Network Upgrade 📚#19 Step-by-step instructions on how to upgrade to Danube - https://docs.alephium.org/integration/danube-upgrade/#how-to-upgrade
@@ -555,6 +559,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Jul/25 - Danube Network Upgrade Activation - https://x.com/alephium/status/1945060774503645463
 
 May/25 - Banxa USA x Alephium - https://x.com/BanxaOfficial/status/1922932418119434398
 
