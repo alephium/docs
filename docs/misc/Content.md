@@ -316,6 +316,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Jul/25 - LaylaMining "Alephium: Proof of Work security meets Proof of Stake speed " - https://x.com/i/spaces/1nAKEgrnNqOJL
+
 Jul/25 - XXIM Podcast - https://www.youtube.com/watch?v=dmnPw1gZSJU
 
 Jul/25 - ChangeNOW "The MultiChain Future" with Alephium, TON, Avalanche, NEAR, OpenWallet & NOWnodes. - https://x.com/i/spaces/1OdKrDVRZRQJX
