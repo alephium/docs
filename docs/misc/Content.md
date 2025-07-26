@@ -564,6 +564,8 @@ Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/annou
 
 ## Milestones 
 
+Jul/25 - PrimeVault x Alephium: Unlocking Institutional Capital to Alephium’s Expanding Ecosystem - https://x.com/alephium/status/1948699788465131604
+
 Jul/25 - Danube Network Upgrade Activation - https://x.com/alephium/status/1945060774503645463
 
 May/25 - Banxa USA x Alephium - https://x.com/BanxaOfficial/status/1922932418119434398
@@ -998,6 +1000,12 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## Publication & Press
 
+Bitcoin.com - Alephium's Danube Network Upgrade - https://news.bitcoin.com/alephiums-danube-upgrade-goes-live-a-major-leap-for-web3-on-proof-of-work/
+
+The Defiant - Alephium's Danube Network Upgrade Goes Live: A Major Leap for Web3 on Proof of Work - https://thedefiant.io/news/blockchains/alephium-s-danube-upgrade-goes-live-a-major-leap-for-web3-on-proof-of-work 
+
+BlockBeats - Alephium's  Danube Network Upgrade (CN) - https://www.theblockbeats.info/news/58994
+
 Cointelegraph - GIGATON partnership announcement - https://cointelegraph.com/press-releases/alephium-the-next-gen-pow-blockchain-chosen-to-drive-gigatons-billion-dollar-climate-revolution
 
 Coinwirez - Alephium: An Extensive Exploration of the Sharded Frontier of Blockchain - https://coinwirez.com/alephium-an-extensive-exploration-of-the-sharded-frontier-of-blockchain/
@@ -1083,6 +1091,8 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & Integration
+
+PrimeVault x Alephium: Unlocking Institutional Capital to Alephium’s Expanding Ecosystem - https://x.com/alephium/status/1948699788465131604
 
 Uphold Institutional integration - https://x.com/UpholdInc/status/1937970176445845707
 
