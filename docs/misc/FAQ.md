@@ -149,7 +149,7 @@ You can find the list of available Alephium markets on [CoinMarketCap](https://c
 
 There is a [detailed article explaining Alephium's block rewards](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33).
 
-### What is the reason for holding the block reward for 500 minutes, given the block time is only 16 seconds?
+### What is the reason for holding the block reward for 500 minutes, given the block time is only 8 seconds?
 
 The 500-minute lock is designed to prevent re-org attacks, much like Bitcoin's ~1000 minute lock for mined rewards.
 
@@ -163,7 +163,7 @@ Currently, Alephium has 4 groups and 16 chains on its mainnet. Therefore, 4 mini
 
 To know how many coins are mined per day, you can use the formula below. As the block reward changes dynamically with each block, the formula will only give you an approximation.
 
-3'600 seconds / 16 seconds (Alephium block time) == 225 blocks per hour, per shard.
+3'600 seconds / 8 seconds (Alephium block time) == 450 blocks per hour, per shard.
 
 225 x 16 shards == 3'600 blocks total per hour.
 
@@ -205,7 +205,7 @@ In addition, there were a few key technological motivations for building Alephiu
 
 Yes, Alephium supports smart contracts. It was specifically designed to be a scalable and secure network for smart contracts and decentralized applications.
 
-### Why is the blocktime 16 seconds? Is there a particular reason for that?
+### Why is the blocktime 8 seconds? Is there a particular reason for that?
 
 Finality on Proof-of-Work (PoW) blockchains is based on the amount of work accumulated in new blocks, rather than the block time. This means that if a transaction needs N blocks with block time T to be confirmed, then it will need 2N blocks to be confirmed if the block time is halved to T/2, which would result in the same amount of time for confirmation.
 
@@ -214,13 +214,13 @@ While shorter block times provide a better user experience, they also come with 
 - More orphan blocks are produced. The rate of uncle blocks on PoW Ethereum is 10% or higher, while Bitcoin's orphan rate is less than 1%.
 - Increased overhead in the P2P network. This problem is more severe for PoS blockchains, as reports suggest up to 90% of transactions on Solana are validator messages.
 
-To ensure a lightweight and efficient chain in the long term, these types of overheads should be avoided. Therefore, Alephium now has a block time of 16 seconds, which strikes a balance between Bitcoin and newer blockchains with shorter block times.
+To ensure a lightweight and efficient chain in the long term, these types of overheads should be avoided. Therefore, Alephium now has a block time of 8 seconds, which strikes a balance between Bitcoin and newer blockchains with shorter block times.
 
 For those who prioritize block times and instant finality, Layer 2 solutions can be built on top of Alephium. Ultimately, a lightweight, scalable, and efficient Layer 1 is essential for the cryptocurrency space.
 
 ### How long does it take for a transaction to go through?
 
-1 second should be enough to see the incoming transaction in the mempool. Alephium's block time is currently 16 seconds. Economic finality depends on the amount and your risk management. For a small transaction, the mempool is probably enough, and 1-4 blocks are enough for most transactions. However, if you are an exchange and dealing with large amounts, you will probably wait for a few dozen to hundreds of blocks.
+1 second should be enough to see the incoming transaction in the mempool. Alephium's block time is currently 8 seconds. Economic finality depends on the amount and your risk management. For a small transaction, the mempool is probably enough, and 1-4 blocks are enough for most transactions. However, if you are an exchange and dealing with large amounts, you will probably wait for a few dozen to hundreds of blocks.
 
 You can read more about the concept of block time and time to finality in these articles:
 
