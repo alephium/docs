@@ -11,7 +11,7 @@ information that the miners should know:
 - Alephium currently has `4` address groups and `16` chains.
 - Target block time is `8` seconds.
 - `172800` blocks are mined on average everyday (`24 * 60 * 60 / 8 * 16`).
-- Block rewards are `0.19` ALPH right now.
+- Block rewards are `0.1915` ALPH right now.
 - Mined coins are locked for `500` minutes.
 
 For more information about mining rewards, please read the [Block
