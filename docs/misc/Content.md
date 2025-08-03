@@ -320,6 +320,12 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Aug/25 - The Bitcoin Takeover Podcast, hosted by TheVladCostea featuring founder Cheng Wang & COO Maud Bannwart - https://www.youtube.com/live/Jeyx2soTE_8?feature=share
+
+Jul/25 - WeMine x Alephium - https://x.com/i/spaces/1dRJZYdmbAMGB
+
+Jul/25 - PrimeVault & Alephium: Unlocking Institutional Capital to Alephium’s Expanding Ecosystem - https://x.com/i/spaces/1MnxnwDakNyKO
+
 Jul/25 - LaylaMining "Alephium: Proof of Work security meets Proof of Stake speed " - https://x.com/i/spaces/1nAKEgrnNqOJL
 
 Jul/25 - XXIM Podcast - https://www.youtube.com/watch?v=dmnPw1gZSJU
