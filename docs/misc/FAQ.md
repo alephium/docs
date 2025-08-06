@@ -53,7 +53,7 @@ Currently, the minimum transaction fee is set at `0.002` ALPH to prevent network
 
 ### How many Transactions Per Second (TPS) are possible on Alephium?
 
-Alephium Mainnet can currently support over 400 TPS with 16 shards. It can scale up over 10,000+ TPS by increasing the number of shards as necessary.
+Alephium Mainnet can currently support over 800 TPS with 16 shards. It can scale up over 20,000+ TPS by increasing the number of shards as necessary.
 Read more about [the concept of TPS](https://medium.com/@alephium/transactions-per-second-tps-f13217a49e39).
 
 ### What is Alephium's smallest denomination?
