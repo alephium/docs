@@ -311,15 +311,6 @@ Alephium does not have halving like Bitcoin. Its emission schedule depends on th
 - [Block Reward](https://medium.com/@alephium/alephium-block-rewards-72d9fb9fde33)
 - [Proof of Less Work](https://medium.com/@alephium/tech-talk-1-the-ultimate-guide-to-proof-of-less-work-the-universe-and-everything-ba70644ab301)
 
-### If tokens are burnt, will there be a time in the future where the amount of existing ALPH will be close to zero?
-
-In theory, yes. Predicting the future of technologies beyond 10, let alone 80 years is difficult. For blockchains like Alephium, it is not unusual for policies, such as emission schedule, to change as technologies evolve. If the consensus agrees to a change in the emission schedule, the change will happen.
-
-### How is the maximum supply cap implemented?
-
-The maximum supply cap of 1 billion ALPH is an estimate. The protocol implements a cap on emissions based on a timestamp of approximately 80 years. This is because computing the sum of emissions for a sharded chain within the protocol is computationally expensive. The emission rate is determined by the time and varies depending on the hash rate.
-It's worth noting that the 1 billion cap was estimated before the implementation of the improved [DAA](https://github.com/alephium/alephium/blob/master/docs/proposals/lemanDAA.md). With the current code, the actual cap on emission and maximum supply of ALPH is expected to be less than 1 billion in 80 years, even without taking into account the PoLW mechanism's fee burning.
-
 ## Wallet
 
 ### What type of wallet does Alephium offer?
