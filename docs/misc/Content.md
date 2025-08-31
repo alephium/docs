@@ -332,6 +332,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Aug/25 - DXB Crypto & the Future of Layer 1 with Alephium - https://www.youtube.com/watch?v=CO4nNaSbQ_w
+
 Aug/25 - The Bitcoin Takeover Podcast, hosted by TheVladCostea featuring founder Cheng Wang & COO Maud Bannwart - https://www.youtube.com/live/Jeyx2soTE_8?feature=share
 
 Jul/25 - WeMine x Alephium - https://x.com/i/spaces/1dRJZYdmbAMGB
@@ -583,6 +585,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Aug/25 - RWA Oracles on Mainnet - https://x.com/DIAdata_org/status/1961413574330581332
 
 Jul/25 - PrimeVault x Alephium: Unlocking Institutional Capital to Alephium’s Expanding Ecosystem - https://x.com/alephium/status/1948699788465131604
 
@@ -1111,6 +1115,8 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & Integration
+
+RWA Oracles on Mainnet - https://x.com/DIAdata_org/status/1961413574330581332
 
 PrimeVault x Alephium: Unlocking Institutional Capital to Alephium’s Expanding Ecosystem - https://x.com/alephium/status/1948699788465131604
 
