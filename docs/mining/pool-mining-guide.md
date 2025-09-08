@@ -67,18 +67,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Twitter/X: https://x.com/AntPoolofficial
 - Youtube: https://www.youtube.com/@antpooltech
 
-#### Alephium-pool (Community pool)
-
-- Website: https://alephium-pool.com/
-- Discord: https://discord.gg/ZXYU2NGx
-- Guide: https://alephium-pool.com/instruction.html
-- Telegram: https://t.me/alephium_pool
-
-#### Alph2Mine.com
-
-- Website: https://alph2mine.com/
-- Email: alph2mine@gmail.com
-
 #### Cedric-CRISPIN.com
 
 - Website: https://alephium.cedric-crispin.com/
@@ -86,12 +74,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Email: webmaster@cedric-crispin.com
 - Guide: https://alephium.cedric-crispin.com/start-mining/
 - Twitter: https://twitter.com/Cedric_Crispin
-
-#### Cloudiko Pool
-
-- Website: https://cloudiko.io/
-- Discord: https://discord.gg/8sTGZf3Kpm
-- Twitter: https://twitter.com/Cloudiko_io
 
 #### Coinmore.io
 
@@ -109,13 +91,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Guide: https://www.dxpool.com/help/en/alph-mining-tutorial
 - Telegram: https://t.me/globaldxpool 
 - Twitter/X: https://x.com/dxpoolofficial
-
-#### E4pool ALPH Pool 
-
-- Website: https://e4pool.com/alph
-- Forum: https://forum.e4pool.com/
-- Support: https://t.me/e4pool_howto
-- Telegram: https://t.me/E4piko
 
 #### F2Pool
 
@@ -146,7 +121,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website: https://jjpool.fr/#/alph
 - Discord: https://discord.gg/X7UsCQTy73
 
-
 #### K1Pool
 
 - Website: https://k1pool.com/
@@ -174,13 +148,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Calculator: https://okminer.com/tools
 - Telegram (CN): https://t.me/okminer_CN
 - Telegram (EN): https://t.me/okminer_support
-
-#### P1pool.com
-
-- Website: https://p1pool.com/
-- Discord: https://discord.gg/U8dh97XHk8
-- Email: info@p1pool.com
-- Telegram: https://t.me/p1pool_com
 
 #### Solopool.org
 
