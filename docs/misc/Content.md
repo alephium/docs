@@ -306,6 +306,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Weekly Dev Updates
 
+⚙️ Weekly #DevUpdate! 🛠 - Sep/8/25 - https://x.com/alephium/status/1965037760219324782
+
 ⚙️ Weekly #DevUpdate! 🛠 - Sep/1/25 - https://x.com/alephium/status/1962459696801141081
 
 ⚙️ Weekly #DevUpdate! 🛠 - Aug/25/25 - https://x.com/alephium/status/1959902938962223601
