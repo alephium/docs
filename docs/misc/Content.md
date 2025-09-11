@@ -336,6 +336,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Sep/25 - Alephium Phase 2 / Core dApp AMA - https://x.com/i/spaces/1rmGPvdaPOqxN
+
 Aug/25 - DXB Crypto & the Future of Layer 1 with Alephium - https://www.youtube.com/watch?v=CO4nNaSbQ_w
 
 Aug/25 - The Bitcoin Takeover Podcast, hosted by TheVladCostea featuring founder Cheng Wang & COO Maud Bannwart - https://www.youtube.com/live/Jeyx2soTE_8?feature=share
