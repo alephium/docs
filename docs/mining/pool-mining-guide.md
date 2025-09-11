@@ -116,6 +116,12 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Guide: https://www.humpool.com/pool/help?type=alph
 - Telegram: https://t.me/HumPoolOfficial
 
+#### ICMiners
+
+- Website: https://icminers.com/
+- Discord: https://discord.gg/D8tns58zC3
+- Guide: https://icminers.com/connect?pool=alph-shared
+
 #### JJPool
 
 - Website: https://jjpool.fr/#/alph
@@ -142,6 +148,11 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Telegram: https://t.me/kryptex_chat_en
 - Twitter: https://www.twitter.com/KryptexMining
 
+#### NTMiner Pool
+
+- Website(CN): https://ntminerpool.com/
+- QQ: https://qm.qq.com/q/hQy1bqODJe
+
 #### Okminer 
 
 - Website (CN): https://okminer.com
@@ -165,21 +176,20 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website (CN): https://tw-pool.com/stats/alephium
 - Discord: https://discord.gg/UT65Tctm9t
 
-#### ViaBTC
-
-- Website: https://www.viabtc.com/
-- Guide: https://support.viabtc.com/hc/en-us/articles/10958245835535-ALPH-Mining
-- Support: support@viabtc.com
-- Calculator: https://www.viabtc.com/tools/calculator?symbol=ALPH
-- Twitter: https://x.com/ViaBTC
-- Telegram: https://t.me/TheViaBTC
-
 #### Vipor.net
 
 - Website: https://vipor.net/mine/alph
 - Discord: https://discord.gg/4tQU83Yq3Z
 - Telegram: https://t.me/vipornet
 - Twitter/X: https://twitter.com/vipornet
+
+#### WhalePool
+
+- Website: https://www.whalepool.com/
+- Discord: https://discord.gg/zsuAQJRKJK
+- Email: contact@whalepool.com
+- Telegram: https://t.me/whalepool_com
+- Twitter/X: https://x.com/whalepool_com
 
 #### Wooly Pooly
 
