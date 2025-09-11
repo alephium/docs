@@ -146,8 +146,11 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 
 - Website (CN): https://okminer.com
 - Calculator: https://okminer.com/tools
+- Discord: https://discord.gg/h2BmRCejXJ
 - Telegram (CN): https://t.me/okminer_CN
 - Telegram (EN): https://t.me/okminer_support
+- Twitter/X: https://x.com/okminer_pool
+- Youtube: https://www.youtube.com/@Okminercom
 
 #### Solopool.org
 
@@ -176,6 +179,7 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Website: https://vipor.net/mine/alph
 - Discord: https://discord.gg/4tQU83Yq3Z
 - Telegram: https://t.me/vipornet
+- Twitter/X: https://twitter.com/vipornet
 
 #### Wooly Pooly
 
@@ -183,6 +187,7 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Calculator: https://woolypooly.com/en/calc/what-to-mine-gpu
 - Discord: https://woolypooly.com/discord
 - Telegram: https://woolypooly.com/telegram
+- Medium: https://woolypooly.medium.com/
 
 
 
