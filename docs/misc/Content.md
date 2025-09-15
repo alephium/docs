@@ -1122,6 +1122,8 @@ Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & Integration
 
+EMCD x Alephium: Integration & Listing - https://x.com/emcd_io/status/1966101640198688974
+
 RWA Oracles on Mainnet - https://x.com/DIAdata_org/status/1961413574330581332
 
 PrimeVault x Alephium: Unlocking Institutional Capital to Alephium’s Expanding Ecosystem - https://x.com/alephium/status/1948699788465131604
