@@ -271,10 +271,6 @@ Alephium, on the other hand, addressed it with its Blockflow algorithm. Mining w
 
 On Alephium, tokens are atomically composable across shards, which means that it is possible to transfer tokens from one shard to another shard atomically in one transaction. However, while smart contracts have token and state components in Alephium's stateful UTXO model, only tokens have cross-shard atomicity; states are sharded and thus not composable. This design decision reflects Alephium's token-centric approach and allows for a simpler state design resembling a partitioned database. This tradeoff is more favorable than the current Layer 2 trends that lack token atomicity, and there is currently no practical solution for complete state composability.
 
-### Are flash loans possible on Alephium?
-
-No, flash loans are not available by design on [Alephium's virtual machine, Alphred](https://medium.com/@alephium/meet-alphred-a-virtual-machine-like-no-others-85ce86540025).
-
 ### How are Alephium addresses generated? Is there a way to distinguish between a Bitcoin legacy address and an Alephium address?
 
 Alephium uses the same curve as Bitcoin (secp256k1 curve) to generate addresses, but a different hashing algorithm (blake2b). However, Alephium addresses are typically longer than Bitcoin addresses since it uses a 32-byte hash instead of a 20-byte hash.
