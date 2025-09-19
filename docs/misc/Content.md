@@ -338,7 +338,7 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
-Sep/25 - MonsieurTK x Alephium with Maud & Carla (FR) - https://x.com/i/spaces/1dRJZaoyEWNGB
+Sep/25 - MonsieurTK x Alephium with Maud & Carlita (FR) - https://x.com/i/spaces/1dRJZaoyEWNGB
 
 Sep/25 - Alephium Phase 2 / Core dApp AMA - https://x.com/i/spaces/1rmGPvdaPOqxN
 
