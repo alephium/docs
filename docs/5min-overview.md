@@ -79,7 +79,7 @@ Each chain on Alephium now produces a block every 8 seconds. With parallel proce
 Alephium's BlockFlow sharding processes over 20,000 transactions per second while eliminating cross-chain complexity, **delivering high throughput and the simplicity of a single-chain environment.**
 
 **🔒Secure:** Security by design.
-Alephium offers a robust, developer-friendly environment with **built-in protections against common vulnerabilities.** Its MEV-aware architecture and native safeguards **prevent threats like reentrancy attacks, unlimited approvals, and flash loan exploits.**
+Alephium offers a robust, developer-friendly environment with **built-in protections against common vulnerabilities.** Its MEV-aware architecture and native safeguards **prevent threats like reentrancy attacks and unlimited approvals.**
 
 **🌱Sustainable:** The best of PoW, 87% less energy.
 Alephium's **Proof-of-Less-Work** consensus delivers true decentralization with a fraction of the energy. **It retains the security and simplicity of traditional PoW while cutting energy use by over 87%.**
