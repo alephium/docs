@@ -338,6 +338,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Sep/25 - MonsieurTK x Alephium with Maud & Carlita (FR) - https://x.com/i/spaces/1dRJZaoyEWNGB
+
 Sep/25 - Alephium Phase 2 / Core dApp AMA - https://x.com/i/spaces/1rmGPvdaPOqxN
 
 Aug/25 - DXB Crypto & the Future of Layer 1 with Alephium - https://www.youtube.com/watch?v=CO4nNaSbQ_w
@@ -898,62 +900,6 @@ https://medium.com/@alephium/builders-highlight-sezame-wallet-ddb4aeb61881
 
 Builders Highlight #0 - Sahhar
 https://medium.com/@alephium/builders-highlight-sahhar-10f4cc8746
-
-Community Highlight #18, Mowreez 
-https://medium.com/@alephium/community-highlight-18-mowreez-086215ca3e7e
-
-Community Highlight #17, AlexandrianWisdom
-https://medium.com/@alephium/community-highlight-17-alexandrianwisdom-df44c791961f
-
-Community Highlight #16 - Mikael
-https://medium.com/@alephium/446980141ee3
-
-Community Highlight #16 - mikaelpacc
-https://vxtwitter.com/alephium/status/1763238162082767097?s=20
-
-Community Highlight #15 - Chris45
-https://medium.com/@alephium/community-highlight-15-yulius-aka-chris45-036ae41a8037
-
-Community Highlight #14 - AnimalManJan
-https://medium.com/@alephium/community-highlight-14-animalmanjan-da8fd051bc38
-
-Community Highlight #13 - Ryann
-https://medium.com/@alephium/community-highlight-13-ryan-5dbbeaf859e4
-
-Community Highlight #12 - energy45
-https://medium.com/@alephium/community-highlight-12-sam-a-k-a-energy45-610005a9219b
-
-Community Highlight #11 - Dr. Jekyll
-https://medium.com/@alephium/community-highlight-11-dr-jekyll-165ab9a51880
-
-Community Highlight 10 - Lx, aka Lix
-https://medium.com/@alephium/community-highlight-10-lx-aka-lix-fde724cf8d81
-
-Community Highlight 9 - dZHEMSH
-https://medium.com/@alephium/community-highlight-9-dzhemsh-a0a4a98a8489
-
-Community Highlight 8 - Jorge
-https://medium.com/@alephium/community-highlight-8-jorge-438510785041
-
-Community Highlight 7 - Oheka
-https://medium.com/@alephium/community-highlight-7-oheka-13d8b4ae025e
-
-Community Highlight 6 - Waldi — Zkit/beats
-https://medium.com/@alephium/community-highlight-6-waldi-zkit-beats-37af1f6df3b8
-
-Community Highlight 5 - TxN
-https://medium.com/@alephium/community-highlight-5-txn-71c4fd76ffe8
-
-Community Highlight 4 - Montail
-https://medium.com/@alephium/community-highlight-4-montail-e24fd88882a0
-
-Community Highlight 3 - DigDug
-https://medium.com/@alephium/community-highlight-3-digdug-48a7ec868504
-
-Community Highlight 2 - cgi-bin - https://medium.com/@alephium/community-highlight-cgi-bin-c102cc106f19
-
-Community Highlight 1 - Wilhelm Källström aka “Oracleuggla” - 
-https://medium.com/@alephium/community-highlight-wilhelm-k%C3%A4llstr%C3%B6m-aka-oracleuggla-81d3938c5692
 
 🧬 Quick Ecosystem Update 🔥 - https://vxtwitter.com/alephium/status/1766120940847694329?s=20
 
