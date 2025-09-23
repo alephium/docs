@@ -29,3 +29,4 @@ jobs:
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
+          args: --exclude-all-private --exclude '^file:' --accept '100..=103,200..=299,403,429' './**/*'
