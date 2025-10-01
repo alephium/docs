@@ -19,14 +19,10 @@ jobs:
         # The build script checks for dead links
         run: npm ci && npm run build
 
-  linkChecker:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
       - name: Link Checker
         id: lychee
         uses: lycheeverse/lychee-action@v2
         with:
           fail: true
-          args: --exclude-all-private --exclude '^file:' --accept '100..=103,200..=299,403,429' './**/*'
+          args: --base-url https://docs.alephium.org --exclude-all-private --exclude '^file:' --accept '100..=103,200..=299,403,429' './**/*.html'
+          workingDirectory: build
