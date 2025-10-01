@@ -105,7 +105,7 @@ The effect of calling `insertBeforeDanube` and `removeBeforeDanube` is the same 
 
 ### Chained Contract Calls in TxScript
 
-Alephium follows the stateful UTXO (sUTXO) model, where transaction outputs created within a transaction cannot be spent in the same transaction. This design provides important security benefits. For example flashloans are disabled by default because assets cannot be borrowed and returned within the same transaction.
+Alephium follows the stateful UTXO (sUTXO) model, where transaction outputs created within a transaction cannot be spent in the same transaction. This design provides important security benefits.
 
 After the Danube upgrade, this limitation is relaxed in TxScript, which can now call multiple contracts and chain the asset outputs. This enhancement improves composability and enables more sophisticated contract interactions, allowing developers to build more complex dApps and DeFi protocols.
 
