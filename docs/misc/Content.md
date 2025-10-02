@@ -248,6 +248,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Ecosystem Highlights and Ecosystem Updates
 
+🎥 Alephium Assemble - Oct/1/25 - https://x.com/alephium/status/1973372334535856480
+
 🎥 Alephium Assemble - Sep/17/25 - https://x.com/alephium/status/1968298759236034961
 
 🌱 August 1-29 Ecosystem Highlights - Aug/29/25 - https://x.com/alephium/status/1961399150160822571
