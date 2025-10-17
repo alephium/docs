@@ -354,6 +354,12 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Oct/17 - The Crypto Radio, Proof-of-Work Isn't Dead - https://www.youtube.com/watch?v=Q1XhFSHAwl4
+
+Oct/16 - Unlocking Alephium with XXIM - https://www.youtube.com/watch?v=IBDKzG-DscI
+
+Oct/14 - Alephium Post-Token2049 AMA - https://x.com/i/spaces/1OdKrOmWOqAGX
+
 Sep/25 - MonsieurTK x Alephium with Maud & Carlita (FR) - https://x.com/i/spaces/1dRJZaoyEWNGB
 
 Sep/25 - Alephium Phase 2 / Core dApp AMA - https://x.com/i/spaces/1rmGPvdaPOqxN
