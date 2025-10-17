@@ -92,6 +92,13 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Telegram: https://t.me/globaldxpool 
 - Twitter/X: https://x.com/dxpoolofficial
 
+#### EMCD
+
+- Website: https://emcd.io/
+- Email: support@emcd.io
+- Telegram: https://t.me/+S-aFcX0aK-hjMDky
+- Twitter/X: https://x.com/emcd_io
+
 #### F2Pool
 
 - Website: https://www.f2pool.com/
