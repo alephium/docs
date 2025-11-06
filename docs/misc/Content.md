@@ -370,7 +370,7 @@ Oct/30 - OlympusX Reserve AMA - https://x.com/i/spaces/1MYxNlOWoBNGw
 
 Oct/29 - Who's Building the Backbone of Web3 with IOPn - https://x.com/i/spaces/1djxXWYVXQRJZ
 
-Oct/21 - Alephium's CMO Joseph Kennedy speaks at ChainCulture 2025
+Oct/21 - Alephium's CMO Joseph Kennedy speaks at ChainCulture 2025 - https://www.youtube.com/live/7N8wGzzRYqw?t=4740s
 
 Oct/17 - The Crypto Radio, Proof-of-Work Isn't Dead - https://www.youtube.com/watch?v=Q1XhFSHAwl4
 
