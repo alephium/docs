@@ -368,6 +368,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
+Nov/13 - Alephium Team Talks w/ Core Developer Hongchao - https://x.com/alephium/status/1988939088582578504
+
 Nov/2 - Interview Series featuring Alephium's CPO Mikael - https://x.com/alephium/status/1984970512699961846
 
 Oct/31 - BitNasdaq X Space With Alephium & Linx - https://x.com/i/spaces/1LyGBXOlWvrxN
