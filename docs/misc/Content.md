@@ -374,9 +374,13 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Spaces, Podcasts & Videos
 
-Nov/13 - Alephium Team Talks w/ Core Developer Hongchao - https://x.com/alephium/status/1988939088582578504
+Dec/2 - Alephium Team Talks w/ Core Contributor baby - https://alephium.org/news/post/alephium-team-talk-baby/
 
-Nov/2 - Interview Series featuring Alephium's CPO Mikael - https://x.com/alephium/status/1984970512699961846
+Nov/29 - Alephium Team Talks w/ Core Frontend Developer Ilias - https://www.youtube.com/watch?v=yOJvD42Irus
+
+Nov/13 - Alephium Team Talks w/ Core Developer Hongchao - https://www.youtube.com/watch?v=M4WnLTAKg28
+
+Nov/2 - Interview Series featuring Alephium's CPO Mikael - https://www.youtube.com/watch?v=wK5WBuN2Wzg
 
 Oct/31 - BitNasdaq X Space With Alephium & Linx - https://x.com/i/spaces/1LyGBXOlWvrxN
 
