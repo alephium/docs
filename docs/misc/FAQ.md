@@ -597,6 +597,15 @@ val LaunchTimestamp: TimeStamp  = TimeStamp.unsafe(1636379973000L) // 2021-11-08
 📄 [View on GitHub](https://github.com/alephium/alephium/blob/master/protocol/src/main/scala/org/alephium/protocol/ALPH.scala#L32-L33)
 
 
+### What are the first blocks on the Alephium blockchain?
+
+The Alephium blockchain began with the genesis block:
+
+- **Genesis Block:** [`9de358fd188ce5c2ec7fef45e00974435da7e22992653a7ee828a441634cb950`](https://explorer.alephium.org/blocks/9de358fd188ce5c2ec7fef45e00974435da7e22992653a7ee828a441634cb950)
+- **Second Block:** [`0000000003192d50fff87253215a18b48031e94e47b25de98b62a5eba5b90780`](https://explorer.alephium.org/blocks/0000000003192d50fff87253215a18b48031e94e47b25de98b62a5eba5b90780)
+
+You can explore any block using the [Alephium Explorer](https://explorer.alephium.org/).
+
 ### WHEN MOON?
 
 1ALPH is always worth 1ALPH.
