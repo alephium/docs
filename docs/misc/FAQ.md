@@ -601,10 +601,46 @@ val LaunchTimestamp: TimeStamp  = TimeStamp.unsafe(1636379973000L) // 2021-11-08
 
 The Alephium blockchain began with the genesis block:
 
-- **Genesis Block:** [`9de358fd188ce5c2ec7fef45e00974435da7e22992653a7ee828a441634cb950`](https://explorer.alephium.org/blocks/9de358fd188ce5c2ec7fef45e00974435da7e22992653a7ee828a441634cb950)
-- **Second Block:** [`0000000003192d50fff87253215a18b48031e94e47b25de98b62a5eba5b90780`](https://explorer.alephium.org/blocks/0000000003192d50fff87253215a18b48031e94e47b25de98b62a5eba5b90780)
+**Genesis Blocks**
+| Chain | Block Hash | Explorer Link |
+|-------|------------|---------------|
+| 0 → 0 | `9de358fd188ce5c2ec7fef45e00974435da7e22992653a7ee828a441634cb950` | [View](https://explorer.alephium.org/blocks/9de358fd188ce5c2ec7fef45e00974435da7e22992653a7ee828a441634cb950) |
+| 0 → 1 | `ee844e9c74fb23466e4b6d09f6ce83998f87b32594768c846e2e8a802c637231` | [View](https://explorer.alephium.org/blocks/ee844e9c74fb23466e4b6d09f6ce83998f87b32594768c846e2e8a802c637231) |
+| 0 → 2 | `be0161ff546a3f566529613692d010006aaf4ddcc1aa5c22a2d9a4792a7b9072` | [View](https://explorer.alephium.org/blocks/be0161ff546a3f566529613692d010006aaf4ddcc1aa5c22a2d9a4792a7b9072) |
+| 0 → 3 | `06c2fd9d958b35a6153737bdc7ae5fa2a26d7c4c488d307857a8f6a2077cd3d3` | [View](https://explorer.alephium.org/blocks/06c2fd9d958b35a6153737bdc7ae5fa2a26d7c4c488d307857a8f6a2077cd3d3) |
+| 1 → 0 | `1780b65ad28998851c45c64ebb8b69d4ca6ab20244e595222e5010f1c9844184` | [View](https://explorer.alephium.org/blocks/1780b65ad28998851c45c64ebb8b69d4ca6ab20244e595222e5010f1c9844184) |
+| 1 → 1 | `af93a663e7196e3cf7f007d950767d743b96081628c4a1cea30669d8ecb22a45` | [View](https://explorer.alephium.org/blocks/af93a663e7196e3cf7f007d950767d743b96081628c4a1cea30669d8ecb22a45) |
+| 1 → 2 | `b5d8d2cc41b6ccb9768cb1613d79355dee5a303d83a55b8da67b6a57d63f3b36` | [View](https://explorer.alephium.org/blocks/b5d8d2cc41b6ccb9768cb1613d79355dee5a303d83a55b8da67b6a57d63f3b36) |
+| 1 → 3 | `ef5439e3b08bf38656fee8688f6769fc907562c1bcfa02b69192c29ed392ac97` | [View](https://explorer.alephium.org/blocks/ef5439e3b08bf38656fee8688f6769fc907562c1bcfa02b69192c29ed392ac97) |
+| 2 → 0 | `2002a0cfb4f72bc4fc65129bd3aebba1f37a8bd80dc0840c3845d1912c9d4d28` | [View](https://explorer.alephium.org/blocks/2002a0cfb4f72bc4fc65129bd3aebba1f37a8bd80dc0840c3845d1912c9d4d28) |
+| 2 → 1 | `6e6d40f109741d689ac8760ec2516839948d49e24695bad16a4c614d08906609` | [View](https://explorer.alephium.org/blocks/6e6d40f109741d689ac8760ec2516839948d49e24695bad16a4c614d08906609) |
+| 2 → 2 | `6178ba54c80619c66fea289101c25aec972b7ad74271b51f2ac63afeced88aaa` | [View](https://explorer.alephium.org/blocks/6178ba54c80619c66fea289101c25aec972b7ad74271b51f2ac63afeced88aaa) |
+| 2 → 3 | `94f70b4d959302a40efcda82a19fe95f66abf3229ee3785b9a7b1745b7f0541b` | [View](https://explorer.alephium.org/blocks/94f70b4d959302a40efcda82a19fe95f66abf3229ee3785b9a7b1745b7f0541b) |
+| 3 → 0 | `50606b91d885a234ac18b821ea482afd12599d222893e5beceb7e6f45f78e23c` | [View](https://explorer.alephium.org/blocks/50606b91d885a234ac18b821ea482afd12599d222893e5beceb7e6f45f78e23c) |
+| 3 → 1 | `5dc033b570740202e19e9930827eb2572abf26f36b6f5822a290b75ac7a2b25d` | [View](https://explorer.alephium.org/blocks/5dc033b570740202e19e9930827eb2572abf26f36b6f5822a290b75ac7a2b25d) |
+| 3 → 2 | `464b330d853259921939b1e428fcadd17c01d33ab609d410d8c3c1d86b8cdade` | [View](https://explorer.alephium.org/blocks/464b330d853259921939b1e428fcadd17c01d33ab609d410d8c3c1d86b8cdade) |
+| 3 → 3 | `e51aad475c5d4a3d485e75cfe2537731fb2cf4c257642a4a47cfe3f16fedfc7f` | [View](https://explorer.alephium.org/blocks/e51aad475c5d4a3d485e75cfe2537731fb2cf4c257642a4a47cfe3f16fedfc7f) |
 
-You can explore any block using the [Alephium Explorer](https://explorer.alephium.org/).
+**Second Blocks** 
+| Chain | Block Hash | Explorer Link |
+|-------|------------|---------------|
+| 0 → 0 | `0000000003192d50fff87253215a18b48031e94e47b25de98b62a5eba5b90780` | [View](https://explorer.alephium.org/blocks/0000000003192d50fff87253215a18b48031e94e47b25de98b62a5eba5b90780) |
+| 0 → 1 | `0000000004daffa661434f81203d3103075f4c9914b83e71a1c2a7f8bf90e141` | [View](https://explorer.alephium.org/blocks/0000000004daffa661434f81203d3103075f4c9914b83e71a1c2a7f8bf90e141) |
+| 0 → 2 | `00000000046d4fd6cbddd36deff26fcb17b836920339677ccc67d161a06060c2` | [View](https://explorer.alephium.org/blocks/00000000046d4fd6cbddd36deff26fcb17b836920339677ccc67d161a06060c2) |
+| 0 → 3 | `0000000006c14e3f70d03fd0952f6003fc8eac677a8f1bf20efc093061143f93` | [View](https://explorer.alephium.org/blocks/0000000006c14e3f70d03fd0952f6003fc8eac677a8f1bf20efc093061143f93) |
+| 1 → 0 | `00000000030caa7d6765f580204bcd20fcf89de75145e7bea241a32582edff04` | [View](https://explorer.alephium.org/blocks/00000000030caa7d6765f580204bcd20fcf89de75145e7bea241a32582edff04) |
+| 1 → 1 | `0000000003a9a60c0141ac772c814b085f4a7cf7ad8c35d5c61ecc64a2a78265` | [View](https://explorer.alephium.org/blocks/0000000003a9a60c0141ac772c814b085f4a7cf7ad8c35d5c61ecc64a2a78265) |
+| 1 → 2 | `0000000004bc78802a603c3c74fdf0d1f843ff099ca2e2a503f8856fe8e25ba6` | [View](https://explorer.alephium.org/blocks/0000000004bc78802a603c3c74fdf0d1f843ff099ca2e2a503f8856fe8e25ba6) |
+| 1 → 3 | `000000000055fff557a716d02090cc6c512b9b7f55e2cae9e82a4e6a7a1bf647` | [View](https://explorer.alephium.org/blocks/000000000055fff557a716d02090cc6c512b9b7f55e2cae9e82a4e6a7a1bf647) |
+| 2 → 0 | `0000000006e83a0a5290a8e91c094cb4af24205a53ee40bb5975b5d65d1364a8` | [View](https://explorer.alephium.org/blocks/0000000006e83a0a5290a8e91c094cb4af24205a53ee40bb5975b5d65d1364a8) |
+| 2 → 1 | `0000000000f205da9c4aab60c3c53a6b8db5923c574525d7be2eb61faf615449` | [View](https://explorer.alephium.org/blocks/0000000000f205da9c4aab60c3c53a6b8db5923c574525d7be2eb61faf615449) |
+| 2 → 2 | `0000000007c6583bb0ee31770ddb5bbbb5c94b8337900e3ef1925e1528e7ca7a` | [View](https://explorer.alephium.org/blocks/0000000007c6583bb0ee31770ddb5bbbb5c94b8337900e3ef1925e1528e7ca7a) |
+| 2 → 3 | `00000000007d0cc6f2fe87996390473c80500961f39e9ee43ff57e617e2e5a9b` | [View](https://explorer.alephium.org/blocks/00000000007d0cc6f2fe87996390473c80500961f39e9ee43ff57e617e2e5a9b) |
+| 3 → 0 | `00000000011f044f57b7d08ae2421f1daaf764ee2ce00bb4a4a68633e4f5001c` | [View](https://explorer.alephium.org/blocks/00000000011f044f57b7d08ae2421f1daaf764ee2ce00bb4a4a68633e4f5001c) |
+| 3 → 1 | `00000000006339a17fa7d33553778b5426bc90c7c77a71ad699e9a2d06303f1d` | [View](https://explorer.alephium.org/blocks/00000000006339a17fa7d33553778b5426bc90c7c77a71ad699e9a2d06303f1d) |
+| 3 → 2 | `0000000005eb2fcbeab3ac962c2117fbcf00f2d3a43a8aeb548bede3bc74821e` | [View](https://explorer.alephium.org/blocks/0000000005eb2fcbeab3ac962c2117fbcf00f2d3a43a8aeb548bede3bc74821e) |
+| 3 → 3 | `0000000000648941a15022a00a28e652d1073f4c49b88f4f0b60782be6b2eb1f` | [View](https://explorer.alephium.org/blocks/0000000000648941a15022a00a28e652d1073f4c49b88f4f0b60782be6b2eb1f) |
+
 
 ### WHEN MOON?
 
