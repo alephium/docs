@@ -248,6 +248,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Ecosystem Highlights and Ecosystem Updates
 
+🎥 Alephium Assemble - Dec/10/25 - https://x.com/alephium/status/1998686854355292321
+
 🎥 Alephium Assemble - Nov/26/25 - https://x.com/alephium/status/1993613291667796238
 
 🎥 Alephium Assemble - Nov/12/25 - https://x.com/alephium/status/1988525160748781666
@@ -322,6 +324,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Weekly Dev Updates
 
+⚙️ Core dApp Weekly #DevUpdate! 🛠 - Dec/19/25 - https://x.com/alephium/status/2001985869033439315
+
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Dec/12/25 - https://x.com/alephium/status/1999385603662839945
 
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Dec/5/25 - https://x.com/alephium/status/1996871731106267191
@@ -377,6 +381,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 ⚙️ Weekly #DevUpdate! 🛠 - Jun/11/25 -https://x.com/alephium/status/1932768251580162093
 
 ## Spaces, Podcasts & Videos
+
+Dec/18 - Christmas AMA with NOWNodes - https://x.com/i/spaces/1gqGvrnoLLkGB
 
 Dec/2 - Alephium Team Talks w/ Core Contributor baby - https://alephium.org/news/post/alephium-team-talk-baby/
 
