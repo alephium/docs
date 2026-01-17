@@ -115,6 +115,8 @@ A fully sync-ed Alephium full node requires more than 80 GB of disk space to sto
 version `2.6.1` the Alephium full node supports storage pruning which can significantly reduce the storage
 requirement.
 
+**Note: The node must be stopped before running the pruning process.**
+
 Here are the steps to prune the Alephium full node:
 
 ### Using Jar File
