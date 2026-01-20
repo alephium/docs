@@ -170,14 +170,6 @@ You can also check [https://miningpoolstats.stream/alephium](https://miningpools
 - Twitter/X: https://x.com/okminer_pool
 - Youtube: https://www.youtube.com/@Okminercom
 
-#### Solopool.org
-
-- Website: https://alph.solopool.org/
-- Email: support@solopool.org
-- Guide: https://alph.solopool.org/help
-- Telegram: https://t.me/solopool_org
-- Twitter: https://twitter.com/solopool_org
-
 #### Tw-pool.com
 
 - Website (CN): https://tw-pool.com/stats/alephium
