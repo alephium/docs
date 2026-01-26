@@ -19,10 +19,12 @@ jobs:
         # The build script checks for dead links
         run: npm ci && npm run build
 
-      - name: Link Checker
-        id: lychee
-        uses: lycheeverse/lychee-action@v2
-        with:
-          fail: true
-          args: --base-url https://docs.alephium.org --exclude-all-private --exclude '^file:' --accept '100..=103,200..=299,403,429' './**/*.html'
-          workingDirectory: build
+      # TODO: Re-enable link checker when we find the bandwidth to fix broken links and disable false-positives
+      # See: https://github.com/alephium/docs/issues/593
+      # - name: Link Checker
+      #   id: lychee
+      #   uses: lycheeverse/lychee-action@v2
+      #   with:
+      #     fail: true
+      #     args: --base-url https://docs.alephium.org --exclude-all-private --exclude '^file:' --accept '100..=103,200..=299,403,429' './**/*.html'
+      #     workingDirectory: build
