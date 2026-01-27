@@ -73,7 +73,7 @@ Interface INFT {
 ### NFT Collection
 
 An NFT collection has its own metadata such as `name`, `description`
-and `image`. It also contain a set of NFTs. The
+and `image`. It also contains a set of NFTs. The
 [INFTCollection](https://github.com/alephium/alephium-web3/blob/master/packages/web3/std/nft_collection_interface.ral)
 interface defines methods to return URI for the NFT collection
 metadata and the total supply of the collection. It also defines
@@ -141,7 +141,7 @@ Interface INFTCollectionWithRoyalty extends INFTCollection {
 Official [wallets](/wallet) and explorer have native support for
 non-fungible tokens.
 
-Following is an example of displaying and transfering a NFT in the
+Following is an example of displaying and transferring a NFT in the
 `Imagine Collection` in the extension wallet:
 
 <img
