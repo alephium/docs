@@ -332,6 +332,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Weekly Dev Updates
 
+⚙️ Core dApp Weekly #DevUpdate! 🛠 - Jan/23/26 - https://x.com/alephium/status/2014609054748791032
+
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Jan/16/26 - https://x.com/alephium/status/2012087434805473621
 
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Dec/19/25 - https://x.com/alephium/status/2001985869033439315
@@ -391,6 +393,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 ⚙️ Weekly #DevUpdate! 🛠 - Jun/11/25 -https://x.com/alephium/status/1932768251580162093
 
 ## Spaces, Podcasts & Videos
+
+Jan/28 - Alephium x AuraMarkets - https://x.com/i/spaces/1vOxwdyYrlqKB
 
 Dec/18 - Christmas AMA with NOWNodes - https://x.com/i/spaces/1gqGvrnoLLkGB
 
