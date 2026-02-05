@@ -248,6 +248,10 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Ecosystem Highlights and Ecosystem Updates
 
+🌱 January Ecosystem Highlights - https://x.com/alephium/status/2019382756694691892
+
+🎥 Alephium Assemble - Feb/4/26 - https://x.com/alephium/status/2019018109642817850
+
 🎥 Alephium Assemble - Jan/21/26 - https://x.com/alephium/status/2013894800945357096 
 
 🎥 Alephium Assemble - Jan/7/26 -  https://x.com/alephium/status/2008839069028221148
@@ -395,6 +399,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 ⚙️ Weekly #DevUpdate! 🛠 - Jun/11/25 -https://x.com/alephium/status/1932768251580162093
 
 ## Spaces, Podcasts & Videos
+
+Feb/2 - Maud appears on XXIM to talk about exchange listings and market making - https://www.youtube.com/watch?v=d8FcmM8Og-Q
 
 Jan/28 - Alephium x AuraMarkets - https://x.com/i/spaces/1vOxwdyYrlqKB
 
