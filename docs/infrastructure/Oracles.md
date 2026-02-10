@@ -14,7 +14,7 @@ title: Oracles
 
 The DIA oracle on Alephium is free of use. dApps built on Alephium can leverage the oracles to access up-to-date asset price information. This oracles are designed for production environments and comes with a predefined list of feeds and settings.
 
-**If dApps require a custom oracle with different assets and configurations, please [contact DIA on Telegram](https://t.me/diabdteam).**
+**If dApps require a custom oracle with different assets and configurations, please [contact the DIA team](https://www.diadata.org/docs/guides/how-to-guides/request-a-custom-oracle).**
 
 ## Price Oracles
 
@@ -39,6 +39,8 @@ This will return two values:
 1. The price of the asset, with 8 decimals.
 2. The timestamp of the last update in Unix time format, in UTC timezone.
 
+View complete integration guide on Alephium [here](https://www.diadata.org/docs/guides/chain-specific-guide/alephium).
+
 ### Included price feeds
 
 The Alephium oracle includes the following price feeds. Use the Query Symbol as a parameter in the `get-value` function to receive the latest price information for any of these assets.
@@ -53,14 +55,11 @@ The Alephium oracle includes the following price feeds. Use the Query Symbol as 
 | Alephium (ALPH) | ALPH/USD | [ALPH Sources](https://www.diadata.org/app/price/asset/Alephium/tgx7VNFoP9DJiFMFgXXtafQZkUvyEdDHT9ryamHJYrjq/) |
 | Ayin (AYIN) | AYIN/USD | [AYIN Sources](https://www.diadata.org/app/price/asset/Alephium/vT49PY8ksoUL6NcXiZ1t2wAmC7tTPRfFfER8n3UCLvXy/) |
 
-Learn more about DIA’s [data sourcing](https://docs.diadata.org/introduction/dia-technical-structure/data-sourcing) and [data computation](https://docs.diadata.org/introduction/dia-technical-structure/data-computation) architecture.
-
-
 ### Oracle configuration settings
 
 #### Methodology: VWAPIR
 
-The final price point for each asset is calculated by computing the assets' trade information across multiple DEXs and CEXs. This is done using a [Volume Weighted Average Price with Interquartile Range (VWAPIR) methodology](https://docs.diadata.org/products/token-price-feeds/exchangeprices/vwapir-volume-weighted-average-price-with-interquartile-range-filter).
+The final price point for each asset is calculated by computing the assets' trade information across multiple DEXs and CEXs. This is done using a [Volume Weighted Average Price with Interquartile Range (VWAPIR) methodology](https://www.diadata.org/docs/guides/methodologies/pricing-methodologies/vwapir-volume-weighted-average-price-with-interquartile-range-filter).
 
 #### Update frequency: 0.2% deviation + 10 minutes heartbeat
 
@@ -87,7 +86,7 @@ DIA leverages [drand](https://drand.love/)’s distributed randomness beacon, en
 
 The drand network's nodes collaborate every 30 seconds to produce a verifiable random number, which DIA's oracle system then captures and publishes to its smart contract, making this randomness readily available for on-chain applications. 
 
-You can learn more about the full publishing process [here](https://docs.diadata.org/use-nexus-product/readme/randomness-oracle/data-source#on-chain-publishing-process).
+You can learn more about the full publishing process [here](https://www.diadata.org/docs/dia-stack/architecture/data-sources/randomness#on-chain-publishing-process).
 
 ### How to Access Data  
 
@@ -133,8 +132,13 @@ Please note that round IDs are used round-robin and will repeat after **1000 ite
 
 You can find a deployment example [here](https://github.com/alephium/ralph-example/tree/master/call-oracle/contracts).
 
-## Support
+## Request a Custom Oracle
+For assets not currently available or dApps requiring specific configurations, DIA deploys production-grade custom oracles tailored to your requirements with configurable data sources, pricing methodologies, update triggers, and coverage for any of 20,000+ supported assets.
 
-For developer assistance, connect with the DIA team directly on [Discord](https://discord.gg/ZvGjVY5uvs) or [Telegram](https://t.me/diadata_org).
+→ [Request a Custom Oracle](https://www.diadata.org/docs/guides/how-to-guides/request-a-custom-oracle)
 
-Developers seeking other specialized, production-grade oracle with tailored price feeds and configurations can initiate the request by [contacting the DIA BD Team via Telegram](https://t.me/diabdteam).
+## Resources
+
+- Developer Support: [Discord](https://discord.com/invite/ZvGjVY5uvs) | [Telegram](https://t.me/diadata_org)
+- [Alephium Integration Guide](https://www.diadata.org/docs/guides/chain-specific-guide/alephium)
+- [DIA Documentation](https://www.diadata.org/docs)
