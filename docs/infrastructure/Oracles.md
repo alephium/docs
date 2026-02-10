@@ -14,7 +14,7 @@ title: Oracles
 
 The DIA oracle on Alephium is free of use. dApps built on Alephium can leverage the oracles to access up-to-date asset price information. This oracles are designed for production environments and comes with a predefined list of feeds and settings.
 
-**If dApps require a custom oracle with different assets and configurations, please [contact DIA on Telegram](https://t.me/DIAOracles_Support_Bot).**
+**If dApps require a custom oracle with different assets and configurations, please [contact the DIA team](https://www.diadata.org/docs/guides/how-to-guides/request-a-custom-oracle).**
 
 ## Price Oracles
 
