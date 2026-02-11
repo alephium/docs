@@ -336,6 +336,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Weekly Dev Updates
 
+⚙️ Core dApp Weekly #DevUpdate! 🛠 - Feb/6/26 - https://x.com/alephium/status/2019742874464850354
+
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Jan/30/26 - https://x.com/alephium/status/2017206168330842165
 
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Jan/23/26 - https://x.com/alephium/status/2014609054748791032
