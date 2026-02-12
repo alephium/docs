@@ -31,7 +31,7 @@ sidebar_label: Ecosystem
 
 ## Ralph Tools
 - [Language server](https://github.com/alephium/ralph-lsp)
-- [Vscode extension](https://marketplace.visualstudio.com/items?itemName=alephium.ralph-vscode-alephium)
+- [Vscode extension](https://marketplace.visualstudio.com/items?itemName=alephium.ralph-lsp)
 - [Vim plugin ](https://github.com/tdroxler/ralph.vim)
 
 ## Wallets
