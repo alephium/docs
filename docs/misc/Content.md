@@ -248,6 +248,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Ecosystem Highlights and Ecosystem Updates
 
+🎥 Alephium Assemble - Feb/18/26 - https://x.com/alephium/status/2024046305698582874
+
 🌱 January Ecosystem Highlights - https://x.com/alephium/status/2019382756694691892
 
 🎥 Alephium Assemble - Feb/4/26 - https://x.com/alephium/status/2019018109642817850
@@ -401,6 +403,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 ⚙️ Weekly #DevUpdate! 🛠 - Jun/11/25 -https://x.com/alephium/status/1932768251580162093
 
 ## Spaces, Podcasts & Videos
+
+Feb/16 - Alephium's Growth Machine, Core dApp Testnet - https://x.com/i/spaces/1jMJgRRORaeGL
 
 Feb/2 - Maud appears on XXIM to talk about exchange listings and market making - https://www.youtube.com/watch?v=d8FcmM8Og-Q
 
@@ -687,6 +691,10 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Feb/26 - Powfi (Alephium Core dApp) Public Testnet Launch - https://x.com/alephium/status/2023729170715697641
+
+Jan/26 - DAA Network Upgrade Activation - https://x.com/alephium/status/2011387657696493938
 
 Aug/25 - RWA Oracles on Mainnet - https://x.com/DIAdata_org/status/1961413574330581332
 
