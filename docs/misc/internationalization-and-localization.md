@@ -13,51 +13,45 @@ Many language communities host their own channels, offering unique insights and 
 
 Localized pages (these are non-official pages, created and modded by independent third-parties Alephium has no control over)
 
-Africa 🌍 - https://x.com/alephiumafrique
+Russia 🇷🇺 - https://x.com/AlephiumRU
+
+Vietnam 🇻🇳 - https://x.com/AlephiumVN
 
 Arabic 🇦🇪 - https://x.com/AlephiumArabia
 
-China 🇨🇳 - https://x.com/FanAlph
+Nigeria 🇳🇬 - https://x.com/alephiumng
+
+Turkey 🇹🇷 - https://x.com/TurkeyAlephium
+
+Finland 🇫🇮 - https://x.com/AlephiumFinland/
+
+China 🇨🇳 - https://x.com/ALPH_CNintern
 
 France 🇫🇷 - https://x.com/Alephiumfr
 
-Germany 🇩🇪 - https://x.com/Alephiumde
-
-Greece 🇬🇷 - https://x.com/AlephiumGreece
-
 Indonesia 🇮🇩 - https://x.com/AlephiumID
 
-Italy 🇮🇹 - https://x.com/Alephium_it
-
-Netherlands 🇳🇱 - https://x.com/AlephiumNL
-
-Poland 🇵🇱 - https://x.com/AlephiumPoland
-
 Portugal/Brazil 🇵🇹🇧🇷 - https://x.com/Alephium_pt
-
-Russia 🇷🇺 - https://x.com/AlephiumRU
-
-Turkey 🇹🇷 - https://x.com/AlphTurkey
-
-Ukraine 🇺🇦 - https://x.com/Alephiumua
-
-Vietnam 🇻🇳 - https://x.com/AlephiumVN
 
 
 ## Discord
 
 Find the following languages in [the official Discord](https://alephium.org/discord)
 
+- [RU](https://discord.com/channels/747741246667227157/1473599733099663522) 🐻 русский
+- [VN](https://discord.com/channels/747741246667227157/1476150836601294918) 🇻🇳 tiếngviệt
 - [AR](https://discord.com/channels/747741246667227157/938131961866776646) 🌙العربية
-- [CN](https://discord.com/channels/747741246667227157/908043080773566474) 🐼 中文
-- [CZ](https://discord.com/channels/747741246667227157/926505567458050098) 🏒 czech-slovakia
-- [DE](https://discord.com/channels/747741246667227157/908086677245919252) 🌭 deutsch
-- [FR](https://discord.com/channels/747741246667227157/908086349641445436) 🥖 français
-- [IT](https://discord.com/channels/747741246667227157/1261348572712931500) 🍕 italian
-- [RU](https://discord.com/channels/747741246667227157/910086877724438528) 🐻 русский
-- [SP](https://discord.com/channels/747741246667227157/929476045948731432) 🌮 español
+- [NG](https://discord.com/channels/747741246667227157/1437386062157844490) 🇳🇬 naija
 - [TR](https://discord.com/channels/747741246667227157/932275739028496434) 🐺 türkçe
+- [CN](https://discord.com/channels/747741246667227157/908043080773566474) 🐼 中文
+- [FR](https://discord.com/channels/747741246667227157/908086349641445436) 🥖 français
+- [FI](https://discord.com/channels/747741246667227157/1437723672017109063) 🦌 suomiी
+- [PT](https://discord.com/channels/747741246667227157/908086677245919252) 🌭 deutsch
+- [IT](https://discord.com/channels/747741246667227157/1261348572712931500) 🍕 italian
+- [CZ](https://discord.com/channels/747741246667227157/926505567458050098) 🏒 czech-slovakia
+- [SP](https://discord.com/channels/747741246667227157/929476045948731432) 🌮 español
 - [UA](https://discord.com/channels/747741246667227157/1110946315367624835) Україна
+- [IN](https://discord.com/channels/747741246667227157/1397973810203988048) 🇮🇳 हिंद
 
 ## Known localized community driven user-groups
 
@@ -65,37 +59,25 @@ Find the following languages in [the official Discord](https://alephium.org/disc
 
 Localized groups (these are non-official groups, created and modded by independant third-parties Alephium has no control on)
 
-Russian                🇷🇺         https://t.me/alephiumgroup_ru
+Russian 🇷🇺 - https://t.me/alephiumgroup_ru
 
-Spanish                🇪🇦         https://t.me/minerosAlephium
+Vietnamese 🇻🇳 - https://t.me/alephiumvn
 
-Chinese                🇨🇳         https://t.me/alephiumCN
+Arabic 🇦🇪 - https://t.me/AlephiumArabia
 
-German (DACH)  🇩🇪         https://t.me/alphgermanofficial
+Nigeria 🇳🇬 - https://t.me/alephiumng
 
-Turkish                🇹🇷          https://t.me/AlephiumTurkey
+Turkish 🇹🇷 - https://t.me/AlephiumTurkey
 
-Holland               🇳🇱          https://t.me/AlephiumgroupNL
+Finnish 🇫🇮 - https://t.me/alephiumfinland
 
-Portuguese   🇵🇹🇧🇷          https://t.me/Alephium_pt
+Chinese 🇨🇳 - https://t.me/alephiumCN
 
-Vietnamese       🇻🇳           https://t.me/alephiumvn
+French 🇫🇷 - https://t.me/Alephiumfr
 
-Indonesian        🇮🇩           https://t.me/AlephiumID
+Indonesian 🇮🇩 - https://t.me/AlephiumID
 
-French               🇫🇷           https://t.me/Alephiumfr
-
-Poland               🇵🇱           https://t.me/alephiumPL
-
-Greece              🇬🇷           https://t.me/AlephiumGreece
-
-India                  🇮🇳           https://t.me/AlephiumIndia
-
-Italia                  🇮🇹           https://t.me/Alephium_it
-
-Arabic               🇦🇪           https://t.me/AlephiumArabia
-
-Nigeria              🇳🇬           https://t.me/AlephiumNigeria
+Portuguese 🇵🇹🇧🇷 - https://t.me/Alephium_pt
 
 
 ### Topical groups
