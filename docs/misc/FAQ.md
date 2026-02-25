@@ -356,51 +356,31 @@ You can find a lot of international and translated content on Medium, Twitter an
 
 On Twitter, the following community accounts translate Alephium tweets:
 
-- [German](https://twitter.com/Alephiumde)
-- [French](https://twitter.com/Alephiumfr)
-- [Bulgarian](https://twitter.com/alephiumbg)
-- [Indonesian](https://twitter.com/Alephium_id)
-- [Greek](https://x.com/AlephiumGreece)
-- [Arabic](https://x.com/AlephiumArabia)
-- [Italian](https://x.com/Alephium_it)
-
-Translators are encouraged to use the following hashtag structure when they publish translated content: #Alephium[i18n] You can find translation on Medium, Twitter and other channels with the following hashtags:
-
-- Spanish: "#AlephiumES"
-- Portuguese: "#AlephiumPT"
-- French: "#AlephiumFR"
-- German: "#AlephiumDE"
-- Bulgarian: "#AlephiumBG"
-- Arabic: “#AlephiumAR”
-- Vietnamese: “#AlephiumVN”
-- Italian: “#AlephiumIT”
-- Turkish: “#AlephiumTR”
-- Greek: “#AlephiumGR”
-- Chinese: “#AlephiumCN”
-- Polish: “#AlephiumPL”
-- Indonesian: “#AlephiumID”
-- Russian: “#AlephiumRU”
-- Dutch: “#AlephiumNL”
+- [Russian](https://x.com/AlephiumRU)
+- [Vietnamese](https://x.com/AlephiumVN)
+- [Arabia](https://x.com/AlephiumArabia)
+- [Nigeria](https://x.com/alephiumng)
+- [Turkish](https://x.com/TurkeyAlephium)
+- [Chinese](https://x.com/ALPH_CNintern)
+- [French](https://x.com/Alephiumfr)
+- [Finland](https://x.com/AlephiumFinland/)
+- [Indonesian](https://x.com/AlephiumID)
+- [Portuguese](https://x.com/Alephium_pt)
 
 On its [Discord server][alephium-discord-link], Alephium has dedicated international channels.
 
 On Telegram, the following community-managed groups are available:
 
-- [German](https://t.me/alphgermanofficial)
-- [Vietnamese](https://t.me/alephiumvn)
 - [Russian](https://t.me/alephiumgroup_ru)
-- [Portuguese](https://t.me/Alephium_pt)
+- [Vietnamese](https://t.me/alephiumvn)
+- [Arabia](https://t.me/AlephiumArabia)
+- [Nigeria](https://t.me/alephiumng)
 - [Turkish](https://t.me/AlephiumTurkey)
-- [Dutch](https://t.me/AlephiumgroupNL)
 - [Chinese](https://t.me/alephiumCN)
-- [Spanish](https://t.me/minerosAlephium)
-- [Indonesian](https://t.me/AlephiumID)
 - [French](https://t.me/Alephiumfr)
-- [Polish](https://t.me/alephiumPL)
-- [Greek](https://t.me/AlephiumGreece)
-- [Indian](https://t.me/AlephiumIndia)
-- [Italian](https://t.me/Alephium_it)
-- [Arabic](https://t.me/AlephiumArabia)
+- [Finland](https://t.me/alephiumfinland)
+- [Indonesian](https://t.me/AlephiumID)
+- [Portuguese](https://t.me/Alephium_pt)
 
 ### What's new?
 
