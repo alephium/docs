@@ -338,6 +338,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Weekly Dev Updates
 
+⚙️ Weekly #DevUpdate! 🛠 - Feb/27/26 - https://x.com/alephium/status/2027322828635217970
+
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Feb/6/26 - https://x.com/alephium/status/2019742874464850354
 
 ⚙️ Core dApp Weekly #DevUpdate! 🛠 - Jan/30/26 - https://x.com/alephium/status/2017206168330842165
@@ -691,6 +693,8 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Feb/26 - Alphland In House Rebuild and Platform Expansion - https://x.com/alephium/status/2027049046263689397
 
 Feb/26 - Powfi (Alephium Core dApp) Public Testnet Launch - https://x.com/alephium/status/2023729170715697641
 
