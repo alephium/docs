@@ -11,6 +11,7 @@ title: Content Repo
 * [Ecosystem Highlights and Ecosystem Updates](#ecosystem-highlights-and-ecosystem-updates)
 * [Weekly Dev Updates](#weekly-dev-updates)
 * [Spaces, Podcasts & Videos](#spaces-podcasts--videos)
+* [Powfi](#powfi)
 * [Network Upgrade #3 - Danube](#network-upgrade-3---danube)
 * [Network Upgrade #2 - Rhone](#network-upgrade-2---rhone)
 * [Network Upgrade #1 - Leman](#network-upgrade-1---leman)
@@ -248,6 +249,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Ecosystem Highlights and Ecosystem Updates
 
+🎥 Alephium Assemble - Mar/4/26 - https://x.com/alephium/status/2029119837595898246
+
 🎥 Alephium Assemble - Feb/18/26 - https://x.com/alephium/status/2024046305698582874
 
 🌱 January Ecosystem Highlights - https://x.com/alephium/status/2019382756694691892
@@ -337,6 +340,10 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 🧬 Weekly #EcosystemUpdate - 16/03/24 - https://twitter.com/alephium/status/1769032453883363335
 
 ## Weekly Dev Updates
+
+⚙️ Weekly #DevUpdate! 🛠 - Mar/13/26 - https://x.com/alephium/status/2032449098964697251
+
+⚙️ Weekly #DevUpdate! 🛠 - Mar/6/26 - https://x.com/alephium/status/2029904835852578895
 
 ⚙️ Weekly #DevUpdate! 🛠 - Feb/27/26 - https://x.com/alephium/status/2027322828635217970
 
@@ -603,6 +610,14 @@ Aug/22 - AMA POLW - https://www.youtube.com/watch?v=Oi4AsqVY0YA
 Jul/22 - Polto (the road to self custody) - https://www.youtube.com/watch?v=McHNeE2ciFk
 
 Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc 
+
+## Powfi
+
+Mar/26 - 📣🧵 Revamped Staking Is Live on Powfi Testnet - https://x.com/alephium/status/2033830709803290853
+
+Feb/26 - 📖✨ Alephium's Core dApp Powfi Is Live on Testnet - https://alephium.org/news/post/alephium-core-dapp-%E2%80%9Cpowfi%E2%80%9D-launches-on-testnet/
+
+Feb/26 - 📣🧵 Powfi Updates Master Thread - https://x.com/alephium/status/2023729170715697641
 
 ## Network Upgrade #3 - Danube
 
