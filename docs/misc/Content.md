@@ -343,6 +343,8 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 ## Weekly Dev Updates
 
+⚙️ Weekly #DevUpdate! 🛠 - Mar/20/26 - https://x.com/alephium/status/2034978268961808513
+
 ⚙️ Weekly #DevUpdate! 🛠 - Mar/13/26 - https://x.com/alephium/status/2032449098964697251
 
 ⚙️ Weekly #DevUpdate! 🛠 - Mar/6/26 - https://x.com/alephium/status/2029904835852578895
@@ -615,7 +617,7 @@ Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 ## Powfi
 
-Mar/26 - 📣🧵 Revamped Staking Is Live on Powfi Testnet - https://x.com/alephium/status/2033830709803290853
+Mar/26 - 📣🧵 Liquid Staking Is Live on Powfi Testnet - https://x.com/alephium/status/2033830709803290853
 
 Feb/26 - 📖✨ Alephium's Core dApp Powfi Is Live on Testnet - https://alephium.org/news/post/alephium-core-dapp-%E2%80%9Cpowfi%E2%80%9D-launches-on-testnet/
 
