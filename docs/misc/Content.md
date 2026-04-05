@@ -252,7 +252,7 @@ Beware of Scams #3 - https://x.com/alephium/status/1856716333607526512
 
 🌱 February-March Ecosystem Highlights - https://x.com/alephium/status/2038503148512219165
 
-🎥 Alephium Assemble - April/1/26 - https://x.com/alephium/status/2039326924640858388
+🎥 Alephium Assemble - Apr/1/26 - https://x.com/alephium/status/2039326924640858388
 
 🎥 Alephium Assemble - Mar/18/26 - https://x.com/alephium/status/2034253486980735257
 
