@@ -61,14 +61,6 @@ If your application is built with the React framework, you can leverage the ["SW
 
 The following endpoints are provided and maintained by third parties or community members independently of Alephium. Availability, reliability, and rate limits may vary. Use them at your own discretion.
 
-### NOWNodes
-
-[NOWNodes](https://nownodes.io/nodes/alephium-alph) is a third party node provider offering a free public Alephium RPC node for mainnet.
-
-* `https://public-alephium.nownodes.io` for mainnet node API ([Docs](https://nownodes.gitbook.io/alph-alephium))
-
-The free public endpoint does not require an API key and is rate limited to 5 requests per second. For higher limits, an API key is available via [NOWNodes](https://nownodes.io/nodes/alephium-alph).
-
 ### Flux
 
 [Flux](https://runonflux.io/) is a decentralized cloud infrastructure platform that allows anyone to deploy and run their own Alephium full node. For instructions on how to get started, see [Full Node on Flux](https://docs.alephium.org/full-node/run-on-flux).
