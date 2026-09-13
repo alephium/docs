@@ -272,7 +272,7 @@ the arguments for our `TokenFaucet` contract.
 With `issueTokenAmount` you can define how many tokens you want to
 issue, this is required if you want to create a token, otherwise no
 tokens will be created. You can also use `issueTokenTo` to send the
-issued token to an recipient.
+issued token to a recipient.
 
 
 Now, let's deploy!
@@ -444,7 +444,7 @@ async function withdraw() {
   //Connect our wallet, typically in a real application you would connect your web-extension or desktop wallet
   const wallet = new PrivateKeyWallet({privateKey: '672c8292041176c9056bb0dd1d91d34711ceed2493b5afc83f2012b27df2c559' })
 
-  //.deployments contains the info of our `TokenFaucet` deployement, as we need to now the contractId and address
+  //.deployments contains the info of our `TokenFaucet` deployment, as we need to know the contractId and address
   //This was auto-generated with the `cli deploy` of our `scripts/0_deploy_faucet.ts`
   const deployments = await Deployments.load(configuration, 'devnet')
 
@@ -458,7 +458,7 @@ async function withdraw() {
     const tokenAddress = deployed.contractInstance.address
 
     // Submit a transaction to use the transaction script
-    // It uses our `wallet` to sing the transaction.
+    // It uses our `wallet` to sign the transaction.
     await Withdraw.execute(wallet, {
       initialFields: { token: tokenId, amount: 1n },
       attoAlphAmount: DUST_AMOUNT
