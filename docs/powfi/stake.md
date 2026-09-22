@@ -1,7 +1,7 @@
 ---
 sidebar_position: 70
-title: Stake
-sidebar_label: Stake
+title: Stake ALPH
+sidebar_label: Stake ALPH
 ---
 
 A simple guide to staking ALPH on Powfi. Learn how staking works, what xALPH represents, how rewards accrue, and how you can use xALPH in supported pools and applications.
