@@ -8,31 +8,17 @@ sidebar_label: FAQ
 
 Rewards deposited into the xALPH contract increase the ALPH backing each xALPH.
 
-The Staking APY is the estimated annual percentage rate of rewards you can earn by staking ALPH.
+The Staking APR is the estimated annual percentage rate of rewards you can earn by staking ALPH.
 
-xALPH holders do not receive a separate ALPH payment. Instead, each xALPH represents more ALPH as rewards are deposited. Rewards may come from:
+xALPH holders do not receive a separate ALPH payment. Instead, each xALPH represents more ALPH as rewards are deposited.
 
-- Powfi DEX fees after fee collection and distribution are configured.
+Rewards come from:
 
-- Funded campaign rewards while a campaign is active.
+- Powfi’s share of the DEX fees.
 
-The exact APY can change over time depending on network activity and protocol fees.
+- Funded staking campaign rewards while a campaign is active.
 
-No 5% return is currently guaranteed. The Powfi interface displays estimated APR, which does not include compounding; APY would assume compounding.
-
-- Campaign status: Not active. No campaign rewards are paid until the campaign is funded and enabled.
-
-- Start date: Not announced.
-
-- End date: Not announced.
-
-- Total reward budget: Not announced.
-
-- Distribution frequency: Not announced.
-
-- Participation limit: Not announced.
-
-- When the budget is exhausted: Campaign distributions stop unless a new budget is announced.
+The exact APR will change over time depending on network activity, protocol fees and on-going campaigns.
 
 ## **Why does xALPH increase in value?**
 
