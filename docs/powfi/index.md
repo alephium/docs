@@ -34,7 +34,8 @@ For eligible CLMM swaps, 75% of the trading fee goes to liquidity providers and 
 
 ### **Incentives**
 
-The ALPH × USDTeth farming and xALPH staking campaigns are planned but are not active on mainnet. Their start and end dates, reward budgets, distribution frequency, limits, and budget-exhaustion rules must be published before rewards begin.
+Two incentives campaigns, ALPH × USDTeth farming and xALPH staking, have been live since the launch of Powfi on mainnet, details below.
+Round 0 started on September 22nd 2026, and will be re-evaluated on a monthly basis.
 
 **ALPH × USDTeth CLMM Round 0 farming overview:**
 
