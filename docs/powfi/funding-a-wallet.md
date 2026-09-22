@@ -6,7 +6,7 @@ sidebar_label: Funding a Wallet
 
 There are several simple ways to get **ALPH** into your Alephium wallet: buy it directly through a supported wallet, withdraw it from a centralized exchange, bridge ALPH from another network, or receive it from another wallet.
 
-**TL;DR.** If you are new to crypto, the easiest option is usually to **buy ALPH directly in the Alephium Mobile or Desktop Wallet**. If you already have ALPH on an exchange, you can withdraw it directly to your Alephium wallet. If you hold ALPH on **Ethereum or BSC**, you can use the **Alephium Bridge** to move it to the native Alephium network.
+**TL;DR.** If you are new to crypto, the easiest option is usually to **buy ALPH directly in the Alephium Mobile or Desktop Wallet**. If you already have ALPH on an exchange, you can withdraw it directly to your Alephium wallet. If you hold ALPH on **Ethereum or BSC**, you can use the [**Alephium Bridge**](https://powfi.alephium.org/bridge/) to move it to the native Alephium network.
 
 ## **The main funding paths**
 
