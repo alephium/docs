@@ -14,7 +14,7 @@ Alephium provides its own **Mobile, Desktop and Browser Extension wallets**.
 
 The **Alephium Mobile Wallet** is available on iOS and Android and is designed for everyday use.
 
-<img width="494" height="1002" alt="wallet-mobile-app" src="https://github.com/user-attachments/assets/c5d43636-67f5-455e-b1bc-0d30395abe77" />
+![wallet-mobile-app](https://github.com/user-attachments/assets/c5d43636-67f5-455e-b1bc-0d30395abe77)
 
 - Manage ALPH on the go
 
@@ -36,7 +36,7 @@ Download from:
 
 ### Desktop Wallet
 
-<img width="1600" height="1112" alt="wallet-desktop-app" src="https://github.com/user-attachments/assets/045c50b4-4823-4cee-96d5-12af22d8f545" />
+![wallet-desktop-app](https://github.com/user-attachments/assets/045c50b4-4823-4cee-96d5-12af22d8f545)
 
 The **Alephium Desktop Wallet** is available for Windows, macOS and Linux. It provides a more comprehensive interface for managing ALPH and accessing advanced functionality.
 
@@ -56,7 +56,7 @@ Access the latest version from the official GitHub releases: [download.](https:/
 
 ### Browser Extension Wallet
 
-<img width="596" height="998" alt="wallet-browser-extension" src="https://github.com/user-attachments/assets/06c57120-bd12-42a7-bc18-4bd1fb1f15b6" />
+![wallet-browser-extension](https://github.com/user-attachments/assets/06c57120-bd12-42a7-bc18-4bd1fb1f15b6)
 
 The **Alephium Extension Wallet** is available for Chrome, Brave and Firefox and is designed for connecting to web-based dApps such as Powfi.
 
