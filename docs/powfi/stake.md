@@ -94,7 +94,9 @@ Each xALPH is backed by locked ALPH and represents your staked position.
 
 xALPH does not replace ALPH. It lets you use your staked position in supported pools and applications while the underlying ALPH stays locked.
 
-## **How do staking rewards work?**
+## FAQ
+
+### **How do staking rewards work?**
 
 Rewards deposited into the xALPH contract increase the ALPH backing each xALPH.
 
@@ -124,7 +126,7 @@ No 5% return is currently guaranteed. The Powfi interface displays estimated APR
 
 - When the budget is exhausted: Campaign distributions stop unless a new budget is announced.
 
-## **Why does xALPH increase in value?**
+### **Why does xALPH increase in value?**
 
 As staking rewards accumulate, the amount of ALPH backing xALPH increases.
 
@@ -136,7 +138,7 @@ In simple terms:
 
 The conversion rate changes whenever ALPH rewards are deposited into the xALPH contract. No separate ALPH payment is sent to holders; each xALPH becomes backed by more ALPH.
 
-## **How can I use xALPH?**
+### **How can I use xALPH?**
 
 xALPH keeps your staked position liquid where xALPH is explicitly supported.
 
@@ -152,11 +154,11 @@ You can use xALPH for activities such as:
 
 xALPH does not automatically work in every DeFi application.
 
-## **Can I convert xALPH back to ALPH?**
+### **Can I convert xALPH back to ALPH?**
 
 Yes. There are two ways to convert xALPH back to ALPH.
 
-### **Official unstaking**
+#### **Official unstaking**
 
 You can use the official **Unstaking** process.
 
@@ -166,44 +168,10 @@ You can use the official **Unstaking** process.
 
 - Your ALPH becomes claimable linearly during the unlock period.
 
-### **DEX**
+#### **DEX**
 
 You can also swap xALPH for ALPH through a DEX such as Powfi.
 
 - The swap is based on the live market price.
 
-- The conversion is immediate.
-
-- The amount you receive depends on available liquidity and slippage.
-
-## **xALPH and ALPH conversion rate**
-
-At launch, the conversion rate starts at:
-
-**1 xALPH = 1 ALPH**
-
-The conversion rate changes whenever ALPH rewards are deposited into the xALPH contract. xALPH holders do not receive a separate ALPH payment; each xALPH becomes backed by more ALPH.
-
-## **What happens to my ALPH when I stake?**
-
-Your ALPH is locked in the Powfi staking system.
-
-You receive xALPH in return, which represents your staked position.
-
-The underlying ALPH remains locked while xALPH gives you a liquid representation that can be used in supported pools and applications.
-
-## **Important things to remember**
-
-- Staking locks your underlying ALPH.
-
-- xALPH represents your staked ALPH.
-
-- The Staking APR is an estimate and can change over time.
-
-- The value represented by each xALPH can increase as rewards accumulate.
-
-- Official unstaking has a 30-day unlock period.
-
-- Swapping xALPH for ALPH on a DEX such as Powfi is subject to market price, liquidity, and slippage.
-
-- Keep some ALPH available in your wallet for transaction fees.
+- The conversion is
