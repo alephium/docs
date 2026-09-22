@@ -42,7 +42,4 @@ wallet](/wallet/node-wallet-guide), which could be useful if you are a
 developer. Alephium team is also finalizing the work for the
 [Ledger support](/wallet/ledger).
 
-Other than the wallets that are built and maintained by the team,
-there are also community built wallets such as [Sesame
-wallet](https://sezame.app/) and [Sahhar
-wallet](https://play.google.com/store/apps/details?id=com.sahhar.sahhar_wallet).
+Other than the wallets that are built and maintained by the team, there are also community built wallets such as [Sesame wallet](https://sezame.app/) and [Linx wallet](https://linxlabs.org/wallet).
