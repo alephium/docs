@@ -52,6 +52,8 @@ Before continuing, check:
 
 Keep some ALPH in your wallet for network fees.
 
+![Screenshot_176](https://github.com/user-attachments/assets/fcfa50ca-381f-4fbf-b403-e662c300dfb3)
+
 ### **4. Review and stake**
 
 Review the staking details.
