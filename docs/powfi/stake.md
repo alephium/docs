@@ -1,7 +1,7 @@
 ---
 sidebar_position: 70
-title: Stake
-sidebar_label: Stake
+title: Stake ALPH
+sidebar_label: Stake ALPH
 ---
 
 A simple guide to staking ALPH on Powfi. Learn how staking works, what xALPH represents, how rewards accrue, and how you can use xALPH in supported pools and applications.
@@ -51,6 +51,8 @@ Before continuing, check:
 - **Available to stake, which is the amount of ALPH available for staking in your wallet.**
 
 Keep some ALPH in your wallet for network fees.
+
+![Powfi staking interface](https://github.com/user-attachments/assets/fcfa50ca-381f-4fbf-b403-e662c300dfb3)
 
 ### **4. Review and stake**
 
