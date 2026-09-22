@@ -41,6 +41,7 @@ Powfi introduces an alignment mechanism where a share of protocol fees is used t
 ### **Incentives**
 
 Two incentives campaigns, ALPH × USDTeth farming and xALPH staking, have been live since the launch of Powfi on mainnet, details below.
+
 Round 0 started on September 22nd 2026, and will be re-evaluated on a monthly basis.
 
 **ALPH × USDTeth CLMM Round 0 farming overview:**
