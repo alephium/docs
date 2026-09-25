@@ -14,7 +14,7 @@ Stake ALPH and receive xALPH.
 
 When you stake ALPH, it becomes locked in the Powfi staking system and xALPH is minted to represent your staked position.
 
-**What you'll have after staking:**
+**What you’ll have after staking:**
 
 - Your ALPH is locked in the staking system.
 
@@ -80,18 +80,18 @@ At mainnet launch:
 
 Over time, staking rewards accumulate to the underlying staked ALPH, increasing the amount of ALPH represented by each xALPH.
 
-## **What is xALPH?**
+## **Important things to remember**
 
-xALPH is a liquid representation of staked ALPH.
+- Staking locks your underlying ALPH.
 
-Mainnet xALPH token ID: [6dc961b59aae53c768fe6f608e6bea30f6747041af3fd800c8c6533766e54f00](https://explorer.alephium.org/tokens/6dc961b59aae53c768fe6f608e6bea30f6747041af3fd800c8c6533766e54f00)
+- xALPH represents your staked ALPH.
 
-Mainnet xALPH staking contract: [225WevmFp5ZgzPsyVJTvyp2v2uyKrvp329HfrVmzffnWj](https://explorer.alephium.org/addresses/225WevmFp5ZgzPsyVJTvyp2v2uyKrvp329HfrVmzffnWj)
+- The Staking APR is an estimate and can change over time.
 
-When you stake ALPH:
+- The value represented by each xALPH can increase as rewards accumulate.
 
-**ALPH → locked ALPH → xALPH**
+- Official unstaking has a 30-day unlock period.
 
-Each xALPH is backed by locked ALPH and represents your staked position.
+- Swapping xALPH for ALPH on a DEX such as Powfi is subject to market price, liquidity, and slippage.
 
-xALPH does not replace ALPH. It lets you use your staked position in supported pools and applications while the underlying ALPH stays locked.
+- Keep some ALPH available in your wallet for transaction fees.
