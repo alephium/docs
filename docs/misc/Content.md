@@ -685,6 +685,10 @@ Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 ## Powfi
 
+Sep/26 - 📖 Powfi Mainnet Launch Article | Phase Two: Aligned Economics Now Begins - https://x.com/alephium/status/2102438888300327010
+
+Sep/26 - 📣🧵 Powfi Goes Live on Mainnet - https://x.com/alephium/status/2102436677050626459
+
 Sep/26 - 📣🧵 Powfi Launch Incentive Campaign - https://x.com/alephium/status/2101309131298898250
 
 Sep/26 - 📣🧵 Powfi Launch Announcement - https://x.com/alephium/status/2100930538672709935
@@ -1174,6 +1178,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 
 ## Publication & Press
+
+The Defiant - Alephium Launches Powfi, Bringing Concentrated Liquidity and Liquid Staking to Proof-of-Work - https://thedefiant.io/news/press-releases/alephium-launches-powfi-bringing-concentrated-liquidity-and-liquid-staking-to-proof-of-work
 
 Bitcoin.com - Alephium's Danube Network Upgrade - https://news.bitcoin.com/alephiums-danube-upgrade-goes-live-a-major-leap-for-web3-on-proof-of-work/
 
