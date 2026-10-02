@@ -4,6 +4,13 @@ title: Overview
 sidebar_label: Overview
 ---
 
+:::info
+The full Powfi documentation has moved to [docs.powfi.alephium.org](https://docs.powfi.alephium.org/).
+
+- [**User Guide**](https://docs.powfi.alephium.org/user-guide) — wallets, swapping, providing liquidity, staking, and FAQ.
+- [**Developer Guide**](https://docs.powfi.alephium.org/developer-guide) — integrating Powfi into your app.
+:::
+
 ## **Powfi — Core product surfaces**
 
 Launched on September 22, 2026, [Powfi](https://powfi.alephium.org/) introduces two complementary foundations for **ALPH DeFi: CLMM and xALPH**.
@@ -53,3 +60,8 @@ Round 0 started on September 22nd 2026, and will be re-evaluated on a monthly ba
 ![overview-4-staking-round-0](https://github.com/user-attachments/assets/5ae92853-80ba-4643-b789-a68fa4dbd6f2)
 
 *The images above show planning targets, not guaranteed returns. Powfi displays estimated APR; APY assumes compounding and is not interchangeable with APR.*
+
+## **Learn more**
+
+- [User Guide](https://docs.powfi.alephium.org/user-guide)
+- [Developer Guide](https://docs.powfi.alephium.org/developer-guide)
