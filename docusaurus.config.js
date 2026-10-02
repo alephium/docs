@@ -165,6 +165,13 @@ const config = {
       "@docusaurus/plugin-client-redirects",
       {
         redirects: [
+          { from: "/powfi/user-guide", to: "/powfi" },
+          { from: "/powfi/faq", to: "/powfi" },
+          { from: "/powfi/stake", to: "/powfi" },
+          { from: "/powfi/funding-a-wallet", to: "/powfi" },
+          { from: "/powfi/choosing-a-wallet", to: "/powfi" },
+          { from: "/powfi/provide-liquidity", to: "/powfi" },
+          { from: "/powfi/swap", to: "/powfi" },
           { from: "/Introduction.html", to: "/" },
           {
             from: "/Frequently-Asked-Questions.html",
