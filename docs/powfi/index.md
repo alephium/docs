@@ -1,7 +1,7 @@
 ---
 sidebar_position: 10
-title: Overview
-sidebar_label: Overview
+title: Powfi
+sidebar_label: Powfi
 ---
 
 :::info
