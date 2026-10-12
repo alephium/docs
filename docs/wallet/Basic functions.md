@@ -56,6 +56,31 @@ Once the menu appears, click the blue `Start` button in the `Generate one addres
 
 Now you have one address in each group. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
 
+### Create new address in a group using Mobile Wallet
+
+Here's a tutorial on how to create an address for a specific group. 
+Sometimes this is needed to interact with dApps on the Alephium Blockchain, or to withdraw from exchanges that do not support groupless addresses yet. (Click [here](https://twitter.com/alephium/status/1681307477961482241) to know more about groups and [sharding](https://medium.com/@alephium/an-introduction-to-blockflow-alephiums-sharding-algorithm-bbbf318c3402) in Alephium).
+
+1. Open the “Addresses” tab in the bottom menu, then press the “+” button next to “Address book”.
+
+<img src="https://github.com/user-attachments/assets/496c2915-e326-4297-b8f3-9e414351cbc2" alt="mobile01" width="300" />
+
+
+2. Optionally, choose a label and a colour for your new address. Then tap “Advanced options” to expand it, select “Grouped”, tap “Address group” and select the group you need, for example “Group 0”.
+
+<img src="https://github.com/user-attachments/assets/a4a28562-9be4-4ba2-b695-3ffd411265cd" alt="mobile02" width="300" />
+
+
+:::note
+New addresses are “Groupless (recommended)” by default. The “Address group” option only appears once you select “Grouped” (or “Schnorr”). If you leave it on “Random”, the address will be created in a random group.
+:::
+
+Press “Generate”. Your new address will appear in the “Your addresses” list.
+
+:::tip
+If an exchange or dApp asks you for a group 0 address, follow the steps above and select “Group 0” in step 2. Then use that new address to receive your funds.
+:::
+
 ### Request Testnet ALPH using Extension Wallet
 
 1. Switch from “Mainnet” to “Testnet”
