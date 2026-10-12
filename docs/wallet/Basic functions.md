@@ -63,12 +63,12 @@ Sometimes this is needed to interact with dApps on the Alephium Blockchain, or t
 
 1. Open the “Addresses” tab in the bottom menu, then press the “+” button next to “Address book”.
 
-![mobile-wallet-group-address-step1](https://github.com/user-attachments/assets/8d10a2bc-c27f-49bb-91ff-cd0fdd968fb6)
+![mobile-wallet-group-address-step1](https://github.com/user-attachments/assets/10b250fc-c55f-4210-aba7-46c95b0f69b9)
 
 
 2. Optionally, choose a label and a colour for your new address. Then tap “Advanced options” to expand it, select “Grouped”, tap “Address group” and select the group you need, for example “Group 0”.
 
-![mobile-wallet-group-address-step2](https://github.com/user-attachments/assets/2a13459c-4fe6-4354-b727-e0d04ab48fa4)
+![mobile-wallet-group-address-step2](https://github.com/user-attachments/assets/5c74d6a5-1107-4c6e-a5be-b2c11234607c)
 
 
 :::note
