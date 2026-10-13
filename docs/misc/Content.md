@@ -685,6 +685,16 @@ Apr/22 - NiceHash NiceTalk - https://www.youtube.com/watch?v=JFTxolwLduc
 
 ## Powfi
 
+Oct/26 - 📖 A Beginner's Guide to Powfi - https://alephium.org/news/post/a-beginners-guide-to-powfi/
+
+Oct/26 - 📣🧵 Powfi SDK Is Now Open Source and Documented - https://x.com/alephium/status/2107048871138308229
+
+Sep/26 - 📣🧵 Powfi x Goldshell | White Label Staking Is Live - https://x.com/goldshellminer/status/2104848655891214531 https://x.com/alephium/status/2104908428397166872
+
+Sep/26 - 📖 xALPH Staking Campaign | Round 0 - https://alephium.org/news/post/xalph-staking-campaign-round-0/
+
+Sep/26 - 📖 ALPH x USDTeth Farming Campaign | Round 0 - https://alephium.org/news/post/alph-x-usdteth-farming-campaign-round-0/
+
 Sep/26 - 📖 Powfi Mainnet Launch Article | Phase Two: Aligned Economics Now Begins - https://x.com/alephium/status/2102438888300327010
 
 Sep/26 - 📣🧵 Powfi Goes Live on Mainnet - https://x.com/alephium/status/2102436677050626459
@@ -790,6 +800,12 @@ Dec/22 - The Leman Upgrade #2 - https://medium.com/@alephium/the-leman-upgrade-2
 Mar/23 - Leman Network Upgrade Announcement - https://medium.com/@alephium/announcing-the-leman-network-upgrade-c01a81e65f0e
 
 ## Milestones 
+
+Oct/26 - Powfi SDK Open Source Release - https://x.com/alephium/status/2107048871138308229
+
+Sep/26 - Goldshell x Alephium: Powfi White Label Staking Integration - https://x.com/goldshellminer/status/2104848655891214531 https://x.com/alephium/status/2104908428397166872
+
+Sep/26 - Powfi (Alephium Core dApp) Mainnet Launch - https://x.com/alephium/status/2102436677050626459
 
 Feb/26 - Alphland In House Rebuild and Platform Expansion - https://x.com/alephium/status/2027049046263689397
 
@@ -1272,6 +1288,8 @@ Aloïs Cochard - Edcon 2019 - https://youtu.be/-tCB9sOT_UI
 Aloïs Cochard - Bitcoin 2019 - https://youtu.be/0WnmzgKTClU
 
 ## Partnerships & Integration
+
+Goldshell x Alephium: Powfi White Label Staking Integration - https://x.com/goldshellminer/status/2104848655891214531 https://x.com/alephium/status/2104908428397166872
 
 EMCD x Alephium: Integration & Listing - https://x.com/emcd_io/status/1966101640198688974
 
