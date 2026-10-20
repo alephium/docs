@@ -75,6 +75,8 @@ button before it is connected with a wallet. Click the button and
 choose the `Extension Wallet` option to open the extension
 wallet. `WalletConnect` will be supported soon.
 
+After downloading the Alephium extension and logging in. Click on "Add Funds" then under the QR code click on "+ Request ALPH".
+
 <img src={require("/img/nextjs-template-open-connect.png").default} alt="Landing page" width="250"/>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <img src={require("/img/nextjs-template-connect-click-extensonwallet.png").default} alt="Create wallet" width="250" />
