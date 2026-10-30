@@ -1197,6 +1197,8 @@ How to use the Alephium Bridge (testnet) - part 2 - https://www.youtube.com/watc
 
 ## Publication & Press
 
+MEXC Blog - Inside Powfi: Why Alephium's DeFi Architecture Routes Value Back to the Base Layer - https://blog.mexc.com/mexc-creators/inside-powfi-why-alephiums-defi-architecture-routes-value-back-to-the-base-layer/
+
 The Defiant - Alephium Launches Powfi, Bringing Concentrated Liquidity and Liquid Staking to Proof-of-Work - https://thedefiant.io/news/press-releases/alephium-launches-powfi-bringing-concentrated-liquidity-and-liquid-staking-to-proof-of-work
 
 Bitcoin.com - Alephium's Danube Network Upgrade - https://news.bitcoin.com/alephiums-danube-upgrade-goes-live-a-major-leap-for-web3-on-proof-of-work/
